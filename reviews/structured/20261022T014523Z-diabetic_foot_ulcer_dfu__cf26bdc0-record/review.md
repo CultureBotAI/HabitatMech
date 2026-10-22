@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU) in Host-associated &gt; Mammals: Human &gt; Multisystem conditions &gt; Diabetic foot ulcer (DFU), NOT_APPLICABLE/REVIEWED, 11 ORGANISM) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f (Multisystem conditions).
+The minted GOLD record habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU) in Host-associated &gt; Mammals: Human &gt; Multisystem conditions &gt; Diabetic foot ulcer (DFU), NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f (Multisystem conditions).
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.76a84af82e.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -82,10 +82,10 @@ No findings recorded within this review's declared scope.
 | E1 | data/habitats/host_associated/diabetic_foot_ulcer_dfu__cf26bdc0.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU)) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.76a84af82e, grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.25f514731f"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.76a84af82e, grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.25f514731f"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2354 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Multisystem conditions &gt; Diabetic foot ulcer (DFU)", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Diabetic foot ulcer (DFU)", "ecosystem_type": "Multisystem conditions", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6360", "leaf_label": "Diabetic foot ulcer (DFU)", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions": "0"}, "row": 2354}] |
 | EDEC | curation/decisions.tsv; TSV rows 720 | supports | [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "NOT_APPLICABLE", "grounding_status": "", "identifier": "habitatmech:GOLD.76a84af82e", "notes": "'Diabetic foot ulcer (DFU)' names a disease, an intervention, a sampling artefact or a no-value filler rather than a place. Pulled out of the class-level sweep and decided individually.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 720}] |
-| EP1 | data/habitats/host_associated/multisystem_conditions.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.25f514731f", "label": "Multisystem conditions", "parent_habitats": ["habitatmech:GOLD.cd0b0940e5"], "review_status": null, "source_attestations": [{"source": "GOLD", "source_id": "gold.ecosystem:6357", "source_label": "Multisystem conditions", "source_path": "Host-associated &gt; Mammals: Human &gt; Multisystem conditions"}]} |
+| EP1 | data/habitats/host_associated/multisystem_conditions.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.25f514731f", "label": "Multisystem conditions", "mapping_status": "SEEDED", "parent_habitats": ["habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"source": "GOLD", "source_id": "gold.ecosystem:6357", "source_label": "Multisystem conditions", "source_path": "Host-associated &gt; Mammals: Human &gt; Multisystem conditions"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'diabetic_foot_ulcer_dfu__cf26bdc0&#124;habitatmech:GOLD.76a84af82e' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -124,8 +124,9 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.76a84af82e (Diabetic foot ulcer
   (DFU) in Host-associated > Mammals: Human > Multisystem conditions > Diabetic foot
-  ulcer (DFU), NOT_APPLICABLE/REVIEWED, 11 ORGANISM) is coherently placed under the
-  NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f (Multisystem conditions).'
+  ulcer (DFU), NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions:
+  0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f
+  (Multisystem conditions).'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -503,7 +504,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:23Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.76a84af82e, grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.25f514731f"].
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.25f514731f"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -539,8 +540,8 @@ evidence:
   accessed_at: '2026-10-22T01:45:23Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.25f514731f",
-    "label": "Multisystem conditions", "parent_habitats": ["habitatmech:GOLD.cd0b0940e5"],
-    "review_status": null, "source_attestations": [{"source": "GOLD", "source_id":
+    "label": "Multisystem conditions", "mapping_status": "SEEDED", "parent_habitats":
+    ["habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"source": "GOLD", "source_id":
     "gold.ecosystem:6357", "source_label": "Multisystem conditions", "source_path":
     "Host-associated > Mammals: Human > Multisystem conditions"}]}'
   snapshot_sha256: 90a69b5f5599698da89e4e8147610a8cf4476f286c37ef16e6e29ef333398b39
@@ -607,7 +608,7 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only
+    decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only
     review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.76a84af82e

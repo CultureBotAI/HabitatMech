@@ -18,8 +18,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.34d152cb9a (Diffuse large B-cell
   lymphoma in Host-associated > Mammals: Human > Malignant tumor > Lymphoma > Diffuse
-  large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, 30 BIOSAMPLE, 1 STUDY) is coherently
-  placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718
+  large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions:
+  0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718
   (Lymphoma).'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
@@ -398,7 +398,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:28Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.34d152cb9a, grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.aaf46ad718"].
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.aaf46ad718"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -435,11 +435,11 @@ evidence:
   accessed_at: '2026-10-22T01:45:28Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NOT_APPLICABLE", "identifier":
-    "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"],
-    "review_status": null, "source_attestations": [{"notes": "2 GOLD ecosystem node
-    ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source":
-    "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma", "source_path":
-    "Host-associated > Mammals: Human > Malignant tumor > Lymphoma"}]}'
+    "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "mapping_status": "REVIEWED",
+    "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"], "source_attestations": [{"notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "source": "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma",
+    "source_path": "Host-associated > Mammals: Human > Malignant tumor > Lymphoma"}]}'
   snapshot_sha256: 98f7f5d6f5f761ee4525d3f56902320961055028edba1275942c6499cbbe5d1b
 - evidence_id: ESEARCH
   kind: search
@@ -505,7 +505,7 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only
+    decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only
     review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.34d152cb9a

@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.26a84185d3 (Digestive system in Host-associated &gt; Reptilia &gt; Digestive system, NARROW/SEEDED, 51 ORGANISM) preserves reptilian digestive-system scope and xref UBERON:0001007 (digestive system) without a false host-clade superclass, but declares skos:narrowMatch on a SourceAttestation whose record identifier is the minted GOLD path ID.
+The minted GOLD record habitatmech:GOLD.26a84185d3 (Digestive system in Host-associated &gt; Reptilia &gt; Digestive system, NARROW/SEEDED, 15 ORGANISM assertions) preserves reptilian digestive-system scope under broader ontology parent UBERON:0001007 (digestive system) and coherent host-environment parent habitatmech:GOLD.1b11698aaa (reptile-associated environment), but declares skos:narrowMatch on a SourceAttestation whose record identifier is the minted GOLD path ID.
 
 ## Scope And Provenance
 
@@ -52,7 +52,7 @@ Individual schema, strict 24-target validation, 843 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.26a84185d3.
 
-Keeping the Reptilia digestive-system bin separate from pan-metazoan UBERON:0001007 preserves host scope, and the host-clade GOLD parent (Reptilia) is already excluded (#2142), but SourceAttestation.mapping_predicate emits skos:narrowMatch on a minted GOLD path ID (#1398).
+Keeping the Reptilia digestive-system bin separate from pan-metazoan UBERON:0001007 preserves host scope, and the other parent habitatmech:GOLD.1b11698aaa (reptile-associated environment) is an associated-environment class coherent for this host context, but SourceAttestation.mapping_predicate emits skos:narrowMatch on a minted GOLD path ID (#1398).
 
 ### Source counts and retained ranking
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.26a84185d3.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NARROW; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / NARROW; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: digestive-system-mapping-endpoint-contract.
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3. No repair is performed by this read-only review.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,10 +94,10 @@ Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses th
 | E1 | data/habitats/host_associated/digestive_system.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.26a84185d3 (Digestive system) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.26a84185d3, grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.26a84185d3, grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 469 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Reptilia &gt; Digestive system", "depth": "3", "ecosystem": "Host-associated", "ecosystem_category": "Reptilia", "ecosystem_subtype": "", "ecosystem_type": "Digestive system", "gold_node_count": "3", "gold_node_ids": "gold.ecosystem:4691&#124;gold.ecosystem:4807&#124;gold.ecosystem:4808", "leaf_label": "Digestive system", "organism_count": "15", "specific_ecosystem": "", "study_count": "0", "total_assertions": "15"}, "row": 469}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12983 | supports | [{"data": {"definition": "Anatomical system that has as its parts the organs devoted to the ingestion, digestion, and assimilation of food and the discharge of residual wastes.", "deprecated": "", "directly_referenced": "FALSE", "label": "digestive system", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "alimentary system&#124;alimentary tract&#124;gastrointestinal system&#124;gut", "term_id": "UBERON:0001007"}, "row": 12983}] |
-| EP2 | data/habitats/host_associated/reptilia.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system determined by a reptile.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.1b11698aaa", "label": "reptile-associated environment", "parent_habitats": ["ENVO:01001000", "ENVO:01001002"], "review_status": null, "source_attestations": [{"assertion_count": 133, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3380", "source_label": "Reptilia", "source_path": "Host-associated &gt; Reptilia"}]} |
+| EP2 | data/habitats/host_associated/reptilia.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system determined by a reptile.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.1b11698aaa", "label": "reptile-associated environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000", "ENVO:01001002"], "source_attestations": [{"assertion_count": 133, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3380", "source_label": "Reptilia", "source_path": "Host-associated &gt; Reptilia"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'digestive_system&#124;habitatmech:GOLD.26a84185d3' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -135,10 +135,11 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: The minted GOLD record habitatmech:GOLD.26a84185d3 (Digestive system in Host-associated
-  > Reptilia > Digestive system, NARROW/SEEDED, 51 ORGANISM) preserves reptilian digestive-system
-  scope and xref UBERON:0001007 (digestive system) without a false host-clade superclass,
-  but declares skos:narrowMatch on a SourceAttestation whose record identifier is
-  the minted GOLD path ID.
+  > Reptilia > Digestive system, NARROW/SEEDED, 15 ORGANISM assertions) preserves
+  reptilian digestive-system scope under broader ontology parent UBERON:0001007 (digestive
+  system) and coherent host-environment parent habitatmech:GOLD.1b11698aaa (reptile-associated
+  environment), but declares skos:narrowMatch on a SourceAttestation whose record
+  identifier is the minted GOLD path ID.
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -515,7 +516,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:29Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.26a84185d3, grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -551,11 +552,11 @@ evidence:
   support: supports
   summary: '{"definition": "An environmental system determined by a reptile.", "grounding_status":
     "UNGROUNDED", "identifier": "habitatmech:GOLD.1b11698aaa", "label": "reptile-associated
-    environment", "parent_habitats": ["ENVO:01001000", "ENVO:01001002"], "review_status":
-    null, "source_attestations": [{"assertion_count": 133, "assertion_unit": "ORGANISM",
-    "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
-    "source": "GOLD", "source_id": "gold.ecosystem:3380", "source_label": "Reptilia",
-    "source_path": "Host-associated > Reptilia"}]}'
+    environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000",
+    "ENVO:01001002"], "source_attestations": [{"assertion_count": 133, "assertion_unit":
+    "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown.
+    See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3380",
+    "source_label": "Reptilia", "source_path": "Host-associated > Reptilia"}]}'
   snapshot_sha256: e31b4fd76f5b6b83a990601461451e0d4f2d518caa4dd3300fa8793496e7e696
 - evidence_id: ESEARCH
   kind: search
@@ -586,9 +587,10 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: Keeping the Reptilia digestive-system bin separate from pan-metazoan UBERON:0001007
-    preserves host scope, and the host-clade GOLD parent (Reptilia) is already excluded
-    (#2142), but SourceAttestation.mapping_predicate emits skos:narrowMatch on a minted
-    GOLD path ID (#1398).
+    preserves host scope, and the other parent habitatmech:GOLD.1b11698aaa (reptile-associated
+    environment) is an associated-environment class coherent for this host context,
+    but SourceAttestation.mapping_predicate emits skos:narrowMatch on a minted GOLD
+    path ID (#1398).
   target_ids:
   - habitatmech:GOLD.26a84185d3
   evidence_ids:
@@ -621,8 +623,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.26a84185d3
   evidence_ids:
@@ -638,14 +640,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3.
   target_ids:
   - habitatmech:GOLD.26a84185d3
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -681,7 +683,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.26a84185d3.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

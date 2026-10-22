@@ -11,7 +11,7 @@
 
 ## Summary
 
-The UBERON:0000412 (dermal papilla) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermal papilla' (EXACT/SEEDED) under ontology superclass UBERON:0000479 (tissue), but retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) as a superclass in parent_habitats.
+The UBERON:0000412 (dermal papilla) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermal papilla' (EXACT/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) under ontology superclass UBERON:0000479 (tissue), but retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) as a superclass in parent_habitats.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: UBERON:0000412.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / EXACT; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / EXACT; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -94,10 +94,10 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4
 | E1 | data/habitats/host_associated/dermal_papilla.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0000412 (dermal papilla) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0000412, grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0000412, grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2285 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermal papilla", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Skin", "ecosystem_type": "Integumentary system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:7040", "leaf_label": "Dermal papilla", "organism_count": "0", "specific_ecosystem": "Dermal papilla", "study_count": "0", "total_assertions": "0"}, "row": 2285}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12931,12945 | supports | [{"data": {"definition": "A mesodermal signaling center of the hair follicle consisting of closely packed specialized mesenchymal fibroblasts. Framed by the enlarged bulb matrix in anagen.", "deprecated": "", "directly_referenced": "FALSE", "label": "dermal papilla", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "dermal papilla cell&#124;dermal papillae&#124;follicular papilla&#124;hair follicle dermal papilla&#124;hair papilla&#124;papilla corii&#124;papilla dermatis&#124;papilla dermis&#124;papilla of corium&#124;papillae dermis&#124;skin papilla", "term_id": "UBERON:0000412"}, "row": 12931}, {"data": {"definition": "Multicellular anatomical structure that consists of many cells of one or a few types, arranged in an extracellular matrix such that their long-range organisation is at least partly a repetition of their short-range organisation.", "deprecated": "", "directly_referenced": "FALSE", "label": "tissue", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "portion of tissue&#124;simple tissue&#124;tissue portion", "term_id": "UBERON:0000479"}, "row": 12945}] |
-| EP2 | data/habitats/host_associated/skin__621b7871.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76", "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"], "review_status": null, "source_attestations": [{"assertion_count": 754, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin"}]} |
+| EP2 | data/habitats/host_associated/skin__621b7871.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76", "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"], "source_attestations": [{"assertion_count": 754, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dermal_papilla&#124;UBERON:0000412' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -135,9 +135,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The UBERON:0000412 (dermal papilla) record grounds GOLD ''Host-associated
-  > Mammals: Human > Integumentary system > Skin > Dermal papilla'' (EXACT/SEEDED)
-  under ontology superclass UBERON:0000479 (tissue), but retains the GOLD source-path
-  parent habitatmech:GOLD.4b37ab4b76 (human Skin) as a superclass in parent_habitats.'
+  > Mammals: Human > Integumentary system > Skin > Dermal papilla'' (EXACT/SEEDED,
+  no assertion count/unit; total_assertions: 0 in GOLD) under ontology superclass
+  UBERON:0000479 (tissue), but retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76
+  (human Skin) as a superclass in parent_habitats.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -514,7 +515,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:16Z'
   support: supports
   summary: Seed generator produces identifier=UBERON:0000412, grounding_status=EXACT,
-    review_status=None, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -557,10 +558,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:16Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76",
-    "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"],
-    "review_status": null, "source_attestations": [{"assertion_count": 754, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253",
+    "habitatmech:GOLD.dc86c8917c"], "source_attestations": [{"assertion_count": 754,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin",
     "source_path": "Host-associated > Mammals: Human > Integumentary system > Skin"}]}'
   snapshot_sha256: f12724659d174beaa094e833cb08c0d39c695e0ac9be63f4f072ae4c32a62ebf
@@ -627,8 +628,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / EXACT; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / EXACT; this read-only review
+    does not mutate generated records.
   target_ids:
   - UBERON:0000412
   evidence_ids:
@@ -652,7 +653,7 @@ findings:
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE

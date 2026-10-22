@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion, UNGROUNDED/REVIEWED, 7 ORGANISM assertions) is defined under ENVO:2100003 (skin environment), but also retains the GOLD source-path parent habitatmech:GOLD.c896f9520f (mammalian Skin) in parent_habitats.
+The minted GOLD record habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is defined under ENVO:2100003 (skin environment), but also retains the GOLD source-path parent habitatmech:GOLD.c896f9520f (mammalian Skin) in parent_habitats.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.25fd1f31a1.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / UNGROUNDED; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dermatitis-context-parent.
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f (Skin in Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis) from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment), UNGROUNDED/REVIEWED status, and 7 ORGANISM assertions.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f (Skin in Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis) from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment), UNGROUNDED/REVIEWED status, and GOLD source attestation (total_assertions: 0).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f (Skin in Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis) from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment), UNGROUNDED/REVIEWED status, and 7 ORGANISM assertions. No repair is performed by this read-only review.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f (Skin in Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis) from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment), UNGROUNDED/REVIEWED status, and GOLD source attestation (total_assertions: 0). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,13 +94,13 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c
 | E1 | data/habitats/host_associated/dermatitis.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.25fd1f31a1, grounding_status=UNGROUNDED, review_status=None, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.25fd1f31a1, grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2070 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals", "ecosystem_subtype": "Skin", "ecosystem_type": "Integumentary system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6414", "leaf_label": "Dermatitis", "organism_count": "0", "specific_ecosystem": "Dermatitis", "study_count": "0", "total_assertions": "0"}, "row": 2070}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 10376 | supports | [{"data": {"definition": "An environment determined by an area or zone of skin tissue.", "deprecated": "", "directly_referenced": "TRUE", "label": "skin environment", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "", "term_id": "ENVO:2100003"}, "row": 10376}] |
 | EDEC | curation/decisions.tsv; TSV rows 330 | supports | [{"data": {"category": "", "curator": "antigravity", "date": "2026-10-17", "decision": "CONFIRM_UNGROUNDED", "grounding_status": "", "identifier": "habitatmech:GOLD.25fd1f31a1", "notes": "Defined mammalian dermatitis skin lesion under ENVO:2100003 'skin environment'; supported by mammalian and canine dermatitis skin microbiome studies (PMID 27512056).", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 330}] |
 | ETR | curation/term_requests.tsv; TSV rows 571 | supports | [{"data": {"curator": "antigravity", "date": "2026-10-17", "definition": "A skin environment on a mammalian host affected by epidermal and dermal inflammation (dermatitis), often exhibiting barrier disruption and Staphylococcus or Malassezia overgrowth.", "exact_synonym": "dermatitic mammalian skin", "identifier": "habitatmech:GOLD.25fd1f31a1", "notes": "Defined mammalian dermatitis skin lesion under ENVO:2100003 'skin environment'; supported by mammalian and canine dermatitis skin microbiome studies (PMID 27512056).", "parent_class": "ENVO:2100003", "parent_label": "skin environment", "parent_mode": "ADD", "requested_label": "mammalian dermatitis skin lesion"}, "row": 571}] |
-| EP1 | data/habitats/other/skin_environment.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environment determined by an area or zone of skin tissue.", "grounding_status": "EXACT", "identifier": "ENVO:2100003", "label": "skin environment", "parent_habitats": ["ENVO:2100004"], "review_status": null, "source_attestations": [{"notes": "Physicochemical parameter bands from kg-microbe's environment table.", "source": "ENVIRONMENTS_TABLE", "source_id": "host_animal_endotherm_surface", "source_label": "host_animal_endotherm_surface"}, {"assertion_count": 372, "assertion_unit": "TAXON", "source": "MADIN", "source_id": "ENVO:2100003", "source_label": "skin environment"}, {"assertion_count": 39, "assertion_unit": "TAXON", "evidence_channels": "environmental_samples", "score": 4.0, "source": "PREGO", "source_id": "ENVO:2100003", "source_label": "skin environment"}]} |
-| EP2 | data/habitats/host_associated/skin__120842b3.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.c896f9520f", "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.56e0776270"], "review_status": null, "source_attestations": [{"assertion_count": 121, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6383", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin"}]} |
+| EP1 | data/habitats/other/skin_environment.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environment determined by an area or zone of skin tissue.", "grounding_status": "EXACT", "identifier": "ENVO:2100003", "label": "skin environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:2100004"], "source_attestations": [{"notes": "Physicochemical parameter bands from kg-microbe's environment table.", "source": "ENVIRONMENTS_TABLE", "source_id": "host_animal_endotherm_surface", "source_label": "host_animal_endotherm_surface"}, {"assertion_count": 372, "assertion_unit": "TAXON", "source": "MADIN", "source_id": "ENVO:2100003", "source_label": "skin environment"}, {"assertion_count": 39, "assertion_unit": "TAXON", "evidence_channels": "environmental_samples", "score": 4.0, "source": "PREGO", "source_id": "ENVO:2100003", "source_label": "skin environment"}]} |
+| EP2 | data/habitats/host_associated/skin__120842b3.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.c896f9520f", "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.56e0776270"], "source_attestations": [{"assertion_count": 121, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6383", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dermatitis&#124;habitatmech:GOLD.25fd1f31a1' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -137,10 +137,10 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The minted GOLD record habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis
-  skin lesion, UNGROUNDED/REVIEWED, 7 ORGANISM assertions) is defined under ENVO:2100003
-  (skin environment), but also retains the GOLD source-path parent habitatmech:GOLD.c896f9520f
-  (mammalian Skin) in parent_habitats.
+summary: 'The minted GOLD record habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis
+  skin lesion, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in
+  GOLD) is defined under ENVO:2100003 (skin environment), but also retains the GOLD
+  source-path parent habitatmech:GOLD.c896f9520f (mammalian Skin) in parent_habitats.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -521,7 +521,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:17Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.25fd1f31a1, grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"].
+    mapping_status=REVIEWED, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -583,7 +583,7 @@ evidence:
   support: supports
   summary: '{"definition": "An environment determined by an area or zone of skin tissue.",
     "grounding_status": "EXACT", "identifier": "ENVO:2100003", "label": "skin environment",
-    "parent_habitats": ["ENVO:2100004"], "review_status": null, "source_attestations":
+    "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:2100004"], "source_attestations":
     [{"notes": "Physicochemical parameter bands from kg-microbe''s environment table.",
     "source": "ENVIRONMENTS_TABLE", "source_id": "host_animal_endotherm_surface",
     "source_label": "host_animal_endotherm_surface"}, {"assertion_count": 372, "assertion_unit":
@@ -599,10 +599,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:17Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.c896f9520f",
-    "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.56e0776270"],
-    "review_status": null, "source_attestations": [{"assertion_count": 121, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253",
+    "habitatmech:GOLD.56e0776270"], "source_attestations": [{"assertion_count": 121,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6383", "source_label": "Skin",
     "source_path": "Host-associated > Mammals > Integumentary system > Skin"}]}'
   snapshot_sha256: d289ced090fe833fd08c77a79df5c013044dfada3603d6eb839c8da7cb9216ff
@@ -675,8 +675,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / UNGROUNDED; this read-only review
-    does not mutate generated records.
+    decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only
+    review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.25fd1f31a1
   evidence_ids:
@@ -692,10 +692,10 @@ findings:
   certainty: confirmed
   title: Whole mammalian skin is asserted as a superclass of mammalian dermatitis
     skin lesion
-  description: Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
+  description: 'Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
     (Skin in Host-associated > Mammals > Integumentary system > Skin > Dermatitis)
     from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment),
-    UNGROUNDED/REVIEWED status, and 7 ORGANISM assertions.
+    UNGROUNDED/REVIEWED status, and GOLD source attestation (total_assertions: 0).'
   target_ids:
   - habitatmech:GOLD.25fd1f31a1
   field_paths:
@@ -736,11 +736,11 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
+  description: 'Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
     (Skin in Host-associated > Mammals > Integumentary system > Skin > Dermatitis)
     from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment),
-    UNGROUNDED/REVIEWED status, and 7 ORGANISM assertions. No repair is performed
-    by this read-only review.
+    UNGROUNDED/REVIEWED status, and GOLD source attestation (total_assertions: 0).
+    No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: BTO:0000339.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / EXACT; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / EXACT; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -82,7 +82,7 @@ No findings recorded within this review's declared scope.
 | E1 | data/habitats/host_associated/dental_pulp.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for BTO:0000339 (dental pulp) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=BTO:0000339, grounding_status=EXACT, review_status=None, parent_habitats=[]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=BTO:0000339, grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[]. |
 | EPREGO | data/raw/prego_habitats.tsv; TSV rows 471 | supports | [{"data": {"biolink_category": "biolink:GrossAnatomicalStructure", "channels": "annotated_genomes_isolates", "direct_assertion_count": "2", "max_prego_score": "3", "ontology": "BTO", "prego_id": "BTO:0000339", "prego_synonyms": "dental pulp&#124;dental pulp cell&#124;dental pulp cells&#124;dental pulps", "taxon_count": "2"}, "row": 471}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 341 | supports | [{"data": {"definition": "The soft sensitive tissue that fills the central cavity of a tooth.", "deprecated": "", "directly_referenced": "TRUE", "label": "dental pulp", "label_only": "FALSE", "ontology": "BTO", "synonyms": "", "term_id": "BTO:0000339"}, "row": 341}] |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dental_pulp&#124;BTO:0000339' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
@@ -497,7 +497,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:12Z'
   support: supports
   summary: Seed generator produces identifier=BTO:0000339, grounding_status=EXACT,
-    review_status=None, parent_habitats=[].
+    mapping_status=SEEDED, parent_habitats=[].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EPREGO
   kind: database
@@ -582,8 +582,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / EXACT; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / EXACT; this read-only review
+    does not mutate generated records.
   target_ids:
   - BTO:0000339
   evidence_ids:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-The UBERON:0003672 (dentition) record grounds GOLD 'Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth' (CLOSE/REVIEWED, 1 ORGANISM) under ontology superclass UBERON:0034925 (anatomical collection), but also retains UBERON:0000167 (oral cavity) from the GOLD source path as a superclass in parent_habitats.
+The UBERON:0003672 (dentition) record grounds GOLD 'Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth' (CLOSE/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) under ontology superclass UBERON:0034925 (anatomical collection), but also retains UBERON:0000167 (oral cavity) from the GOLD source path as a superclass in parent_habitats.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: UBERON:0003672.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / CLOSE; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / CLOSE; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dentition-context-parent.
 
-Exclude only the guarded GOLD source-path parent contribution UBERON:0000167 (oral cavity from Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED status, and 1 ORGANISM assertion.
+Exclude only the guarded GOLD source-path parent contribution UBERON:0000167 (oral cavity from Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED status, and GOLD source attestation (total_assertions: 0).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude only the guarded GOLD source-path parent contribution UBERON:0000167 (oral cavity from Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED status, and 1 ORGANISM assertion. No repair is performed by this read-only review.
+Exclude only the guarded GOLD source-path parent contribution UBERON:0000167 (oral cavity from Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED status, and GOLD source attestation (total_assertions: 0). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,10 +94,10 @@ Exclude only the guarded GOLD source-path parent contribution UBERON:0000167 (or
 | E1 | data/habitats/host_associated/dentition.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0003672 (dentition) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0003672, grounding_status=CLOSE, review_status=None, parent_habitats=["UBERON:0000167", "UBERON:0034925"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0003672, grounding_status=CLOSE, mapping_status=REVIEWED, parent_habitats=["UBERON:0000167", "UBERON:0034925"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 1931 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity &gt; Teeth", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Fish", "ecosystem_subtype": "Oral/Buccal cavity", "ecosystem_type": "Digestive system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:7526", "leaf_label": "Teeth", "organism_count": "0", "specific_ecosystem": "Teeth", "study_count": "0", "total_assertions": "0"}, "row": 1931}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12911,13203,13503 | supports | [{"data": {"definition": "Anatomical cavity at the start of the digestive tract that that is enclosed by the mouth. The boundaries and contents vary depending on the species. In vertebrates, the boundaries are the oral opening, the cheeks, the palate and (if present) the palatoglossal arch - if this is not present then the mouth and pharynx form the oropharyngeal cavity. The buccal cavity contains the teeth, tongue and palate (when present).", "deprecated": "", "directly_referenced": "TRUE", "label": "oral cavity", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "bucca&#124;buccal cavity&#124;cavity of mouth", "term_id": "UBERON:0000167"}, "row": 12911}, {"data": {"definition": "A collection of teeth arranged in some pattern in the mouth or other part of the body. The arrangement may be a simple row, a collection of rows, or a more elaborate structure, such as a toooth whorl.", "deprecated": "", "directly_referenced": "FALSE", "label": "dentition", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "collection of teeth&#124;dentes&#124;set of teeth&#124;teeth&#124;teeth set", "term_id": "UBERON:0003672"}, "row": 13203}, {"data": {"definition": "A collection of anatomical structures that are alike in terms of their morphology or developmental origin.", "deprecated": "", "directly_referenced": "FALSE", "label": "anatomical collection", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "", "term_id": "UBERON:0034925"}, "row": 13503}] |
-| EP1 | data/habitats/host_associated/oral_cavity.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "Anatomical cavity at the start of the digestive tract that that is enclosed by the mouth. The boundaries and contents vary depending on the species. In vertebrates, the boundaries are the oral opening, the cheeks, the palate and (if present) the palatoglossal arch - if this is not present then the mouth and pharynx form the oropharyngeal cavity. The buccal cavity contains the teeth, tongue and palate (when present).", "grounding_status": "EXACT", "identifier": "UBERON:0000167", "label": "oral cavity", "parent_habitats": ["UBERON:0002553", "habitatmech:GOLD.8a68d0f6f5", "habitatmech:GOLD.bd1664969c", "habitatmech:GOLD.fb6caa2908"], "review_status": null, "source_attestations": [{"assertion_count": 1, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6965", "source_label": "Oral/Buccal cavity", "source_path": "Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity"}, {"mapping_predicate": "skos:closeMatch", "source": "GOLD", "source_id": "gold.ecosystem:7387", "source_label": "Buccal cavity", "source_path": "Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Buccal cavity"}, {"assertion_count": 1, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:7492", "source_label": "Oral/Buccal cavity", "source_path": "Host-associated &gt; Birds &gt; Digestive system &gt; Oral/Buccal cavity"}]} |
+| EP1 | data/habitats/host_associated/oral_cavity.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "Anatomical cavity at the start of the digestive tract that that is enclosed by the mouth. The boundaries and contents vary depending on the species. In vertebrates, the boundaries are the oral opening, the cheeks, the palate and (if present) the palatoglossal arch - if this is not present then the mouth and pharynx form the oropharyngeal cavity. The buccal cavity contains the teeth, tongue and palate (when present).", "grounding_status": "EXACT", "identifier": "UBERON:0000167", "label": "oral cavity", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0002553", "habitatmech:GOLD.8a68d0f6f5", "habitatmech:GOLD.bd1664969c", "habitatmech:GOLD.fb6caa2908"], "source_attestations": [{"assertion_count": 1, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6965", "source_label": "Oral/Buccal cavity", "source_path": "Host-associated &gt; Fish &gt; Digestive system &gt; Oral/Buccal cavity"}, {"mapping_predicate": "skos:closeMatch", "source": "GOLD", "source_id": "gold.ecosystem:7387", "source_label": "Buccal cavity", "source_path": "Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Buccal cavity"}, {"assertion_count": 1, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:7492", "source_label": "Oral/Buccal cavity", "source_path": "Host-associated &gt; Birds &gt; Digestive system &gt; Oral/Buccal cavity"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dentition&#124;UBERON:0003672' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -134,10 +134,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The UBERON:0003672 (dentition) record grounds GOLD 'Host-associated > Fish
-  > Digestive system > Oral/Buccal cavity > Teeth' (CLOSE/REVIEWED, 1 ORGANISM) under
-  ontology superclass UBERON:0034925 (anatomical collection), but also retains UBERON:0000167
-  (oral cavity) from the GOLD source path as a superclass in parent_habitats.
+summary: 'The UBERON:0003672 (dentition) record grounds GOLD ''Host-associated > Fish
+  > Digestive system > Oral/Buccal cavity > Teeth'' (CLOSE/REVIEWED, no assertion
+  count/unit; total_assertions: 0 in GOLD) under ontology superclass UBERON:0034925
+  (anatomical collection), but also retains UBERON:0000167 (oral cavity) from the
+  GOLD source path as a superclass in parent_habitats.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -514,7 +515,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:15Z'
   support: supports
   summary: Seed generator produces identifier=UBERON:0003672, grounding_status=CLOSE,
-    review_status=None, parent_habitats=["UBERON:0000167", "UBERON:0034925"].
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0000167", "UBERON:0034925"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -566,11 +567,11 @@ evidence:
     the palate and (if present) the palatoglossal arch - if this is not present then
     the mouth and pharynx form the oropharyngeal cavity. The buccal cavity contains
     the teeth, tongue and palate (when present).", "grounding_status": "EXACT", "identifier":
-    "UBERON:0000167", "label": "oral cavity", "parent_habitats": ["UBERON:0002553",
-    "habitatmech:GOLD.8a68d0f6f5", "habitatmech:GOLD.bd1664969c", "habitatmech:GOLD.fb6caa2908"],
-    "review_status": null, "source_attestations": [{"assertion_count": 1, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "UBERON:0000167", "label": "oral cavity", "mapping_status": "SEEDED", "parent_habitats":
+    ["UBERON:0002553", "habitatmech:GOLD.8a68d0f6f5", "habitatmech:GOLD.bd1664969c",
+    "habitatmech:GOLD.fb6caa2908"], "source_attestations": [{"assertion_count": 1,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6965", "source_label": "Oral/Buccal
     cavity", "source_path": "Host-associated > Fish > Digestive system > Oral/Buccal
     cavity"}, {"mapping_predicate": "skos:closeMatch", "source": "GOLD", "source_id":
@@ -646,8 +647,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / CLOSE; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce REVIEWED / CLOSE; this read-only review
+    does not mutate generated records.
   target_ids:
   - UBERON:0003672
   evidence_ids:
@@ -662,10 +663,11 @@ findings:
   status: open
   certainty: confirmed
   title: Oral cavity is asserted as a superclass of dentition
-  description: Exclude only the guarded GOLD source-path parent contribution UBERON:0000167
+  description: 'Exclude only the guarded GOLD source-path parent contribution UBERON:0000167
     (oral cavity from Host-associated > Fish > Digestive system > Oral/Buccal cavity
     > Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925
-    (anatomical collection), CLOSE/REVIEWED status, and 1 ORGANISM assertion.
+    (anatomical collection), CLOSE/REVIEWED status, and GOLD source attestation (total_assertions:
+    0).'
   target_ids:
   - UBERON:0003672
   field_paths:
@@ -703,11 +705,11 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Exclude only the guarded GOLD source-path parent contribution UBERON:0000167
+  description: 'Exclude only the guarded GOLD source-path parent contribution UBERON:0000167
     (oral cavity from Host-associated > Fish > Digestive system > Oral/Buccal cavity
     > Teeth) from dentition.yaml while preserving the valid ontology superclass UBERON:0034925
-    (anatomical collection), CLOSE/REVIEWED status, and 1 ORGANISM assertion. No repair
-    is performed by this read-only review.
+    (anatomical collection), CLOSE/REVIEWED status, and GOLD source attestation (total_assertions:
+    0). No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

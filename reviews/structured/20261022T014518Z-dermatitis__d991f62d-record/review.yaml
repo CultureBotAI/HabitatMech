@@ -17,10 +17,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.fdd6965162 (Dermatitis in Host-associated
-  > Mammals: Human > Integumentary system > Skin > Dermatitis, 581 BIOSAMPLE, 64 ORGANISM,
-  7 STUDY) is classified as NOT_APPLICABLE/REVIEWED because dermatitis is an inflammatory
-  disease state rather than the skin habitat, yet it retains the human Skin parent
-  habitatmech:GOLD.4b37ab4b76 in parent_habitats.'
+  > Mammals: Human > Integumentary system > Skin > Dermatitis, 1 ORGANISM assertion)
+  is classified as NOT_APPLICABLE/REVIEWED because dermatitis is an inflammatory disease
+  state rather than the skin habitat, yet it retains the human Skin parent habitatmech:GOLD.4b37ab4b76
+  in parent_habitats.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -397,7 +397,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:18Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.fdd6965162, grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -432,10 +432,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:18Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76",
-    "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"],
-    "review_status": null, "source_attestations": [{"assertion_count": 754, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253",
+    "habitatmech:GOLD.dc86c8917c"], "source_attestations": [{"assertion_count": 754,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin",
     "source_path": "Host-associated > Mammals: Human > Integumentary system > Skin"}]}'
   snapshot_sha256: f12724659d174beaa094e833cb08c0d39c695e0ac9be63f4f072ae4c32a62ebf
@@ -503,7 +503,7 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only
+    decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only
     review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.fdd6965162
@@ -524,7 +524,7 @@ findings:
     (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermatitis)
     from dermatitis__d991f62d.yaml so the NOT_APPLICABLE disease concept does not
     claim to be a subclass of human skin. Preserve NOT_APPLICABLE/REVIEWED status
-    and source counts.'
+    and 1 ORGANISM assertion.'
   target_ids:
   - habitatmech:GOLD.fdd6965162
   field_paths:
@@ -566,7 +566,7 @@ actions:
     (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermatitis)
     from dermatitis__d991f62d.yaml so the NOT_APPLICABLE disease concept does not
     claim to be a subclass of human skin. Preserve NOT_APPLICABLE/REVIEWED status
-    and source counts. No repair is performed by this read-only review.'
+    and 1 ORGANISM assertion. No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

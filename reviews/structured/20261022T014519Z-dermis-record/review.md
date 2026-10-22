@@ -11,7 +11,7 @@
 
 ## Summary
 
-The UBERON:0002067 (dermis) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis' (EXACT/SEEDED, 11 BIOSAMPLE, 1 STUDY) under ontology superclass UBERON:0013754 (integumentary system layer), but also retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) in parent_habitats.
+The UBERON:0002067 (dermis) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis' (EXACT/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) under ontology superclasses UBERON:0004121, UBERON:0004923, UBERON:0010314, and UBERON:0013754 (integumentary system layer), but also retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) in parent_habitats.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: UBERON:0002067.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / EXACT; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / EXACT; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dermis-context-parent.
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis) from dermis.yaml while preserving the valid ontology superclass UBERON:0013754 (integumentary system layer) and 11 BIOSAMPLE / 1 STUDY assertions.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis) from dermis.yaml while preserving the valid ontology superclasses (including UBERON:0013754 integumentary system layer) and GOLD source attestation (total_assertions: 0).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis) from dermis.yaml while preserving the valid ontology superclass UBERON:0013754 (integumentary system layer) and 11 BIOSAMPLE / 1 STUDY assertions. No repair is performed by this read-only review.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis) from dermis.yaml while preserving the valid ontology superclasses (including UBERON:0013754 integumentary system layer) and GOLD source attestation (total_assertions: 0). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,10 +94,10 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4
 | E1 | data/habitats/host_associated/dermis.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0002067 (dermis) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0002067, grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314", "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0002067, grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314", "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2286 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Dermis", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Skin", "ecosystem_type": "Integumentary system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6499", "leaf_label": "Dermis", "organism_count": "0", "specific_ecosystem": "Dermis", "study_count": "0", "total_assertions": "0"}, "row": 2286}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13103,13226,13250,13397,13458 | supports | [{"data": {"definition": "The dermis is a layer of skin between the epidermis (with which it makes up the skin) and subcutaneous tissues, and is composed of two layers, the papillary and reticular dermis[WP].", "deprecated": "", "directly_referenced": "FALSE", "label": "dermis", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "corium&#124;cutis&#124;vertebrate dermis", "term_id": "UBERON:0002067"}, "row": 13103}, {"data": {"definition": "An anatomical structure that develops (entirely or partially) from the ectoderm.", "deprecated": "", "directly_referenced": "FALSE", "label": "ectoderm-derived structure", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "ectodermal deriviative", "term_id": "UBERON:0004121"}, "row": 13226}, {"data": {"definition": "A part of a wall of an organ that forms a layer.", "deprecated": "", "directly_referenced": "FALSE", "label": "organ component layer", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "", "term_id": "UBERON:0004923"}, "row": 13250}, {"data": {"definition": "An anatomical structure that has some part that develops from the neural crest.", "deprecated": "", "directly_referenced": "FALSE", "label": "structure with developmental contribution from neural crest", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "", "term_id": "UBERON:0010314"}, "row": 13397}, {"data": {"definition": "An organ component layer that is part of a integumental system.", "deprecated": "", "directly_referenced": "FALSE", "label": "integumentary system layer", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "layer of skin&#124;skin layer", "term_id": "UBERON:0013754"}, "row": 13458}] |
-| EP5 | data/habitats/host_associated/skin__621b7871.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76", "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"], "review_status": null, "source_attestations": [{"assertion_count": 754, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin"}]} |
+| EP5 | data/habitats/host_associated/skin__621b7871.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76", "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"], "source_attestations": [{"assertion_count": 754, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin", "source_path": "Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dermis&#124;UBERON:0002067' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -135,10 +135,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The UBERON:0002067 (dermis) record grounds GOLD ''Host-associated > Mammals:
-  Human > Integumentary system > Skin > Dermis'' (EXACT/SEEDED, 11 BIOSAMPLE, 1 STUDY)
-  under ontology superclass UBERON:0013754 (integumentary system layer), but also
-  retains the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) in
-  parent_habitats.'
+  Human > Integumentary system > Skin > Dermis'' (EXACT/SEEDED, no assertion count/unit;
+  total_assertions: 0 in GOLD) under ontology superclasses UBERON:0004121, UBERON:0004923,
+  UBERON:0010314, and UBERON:0013754 (integumentary system layer), but also retains
+  the GOLD source-path parent habitatmech:GOLD.4b37ab4b76 (human Skin) in parent_habitats.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -515,7 +515,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:19Z'
   support: supports
   summary: Seed generator produces identifier=UBERON:0002067, grounding_status=EXACT,
-    review_status=None, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314",
+    mapping_status=SEEDED, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314",
     "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
@@ -565,10 +565,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:19Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.4b37ab4b76",
-    "label": "Skin", "parent_habitats": ["BTO:0001253", "habitatmech:GOLD.dc86c8917c"],
-    "review_status": null, "source_attestations": [{"assertion_count": 754, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Skin", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0001253",
+    "habitatmech:GOLD.dc86c8917c"], "source_attestations": [{"assertion_count": 754,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6114", "source_label": "Skin",
     "source_path": "Host-associated > Mammals: Human > Integumentary system > Skin"}]}'
   snapshot_sha256: f12724659d174beaa094e833cb08c0d39c695e0ac9be63f4f072ae4c32a62ebf
@@ -635,8 +635,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / EXACT; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / EXACT; this read-only review
+    does not mutate generated records.
   target_ids:
   - UBERON:0002067
   evidence_ids:
@@ -653,14 +653,14 @@ findings:
   title: Whole human skin is asserted as a superclass of dermis
   description: 'Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
     (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermis)
-    from dermis.yaml while preserving the valid ontology superclass UBERON:0013754
-    (integumentary system layer) and 11 BIOSAMPLE / 1 STUDY assertions.'
+    from dermis.yaml while preserving the valid ontology superclasses (including UBERON:0013754
+    integumentary system layer) and GOLD source attestation (total_assertions: 0).'
   target_ids:
   - UBERON:0002067
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE
@@ -696,9 +696,9 @@ actions:
     role: Maintained input or generator; never patch generated habitat YAML
   description: 'Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
     (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermis)
-    from dermis.yaml while preserving the valid ontology superclass UBERON:0013754
-    (integumentary system layer) and 11 BIOSAMPLE / 1 STUDY assertions. No repair
-    is performed by this read-only review.'
+    from dermis.yaml while preserving the valid ontology superclasses (including UBERON:0013754
+    integumentary system layer) and GOLD source attestation (total_assertions: 0).
+    No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

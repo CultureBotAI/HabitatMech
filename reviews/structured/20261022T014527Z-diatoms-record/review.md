@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.1276bea544 (diatom-associated environment, UNGROUNDED/REVIEWED, 738 BIOSAMPLE, 646 ORGANISM, 55 STUDY) preserves diatom host-associated environment scope under habitatmech:GOLD.6a14dd6b05 (algal-associated environment), but asserts the bare host taxon label 'Diatoms' as an EXACT_SYNONYM.
+The minted GOLD record habitatmech:GOLD.1276bea544 (diatom-associated environment, UNGROUNDED/REVIEWED, 218 ORGANISM assertions) preserves diatom host-associated environment scope under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.02383c20a7 (alga-associated environment), but asserts the bare host taxon label 'Diatoms' as an EXACT_SYNONYM.
 
 ## Scope And Provenance
 
@@ -52,7 +52,7 @@ Individual schema, strict 24-target validation, 843 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.1276bea544.
 
-The record is properly defined as 'An environmental system determined by a diatom (Bacillariophyta), including the phycosphere, frustule surface, and mucilage microenvironment' under habitatmech:GOLD.6a14dd6b05 (algal-associated environment), but synonyms includes EXACT_SYNONYM 'Diatoms', which equates the host taxon (NCBITaxon:2836) with its environment.
+The record is properly defined as 'An environmental system determined by an organism which is determined by a diatom or by a part of a diatom.' under ENVO:01001000 and habitatmech:GOLD.02383c20a7 (alga-associated environment) with contextual xref NCBITaxon:2836, but synonyms includes EXACT_SYNONYM 'Diatoms', which equates the host taxon with its environment.
 
 ### Source counts and retained ranking
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.1276bea544.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / UNGROUNDED; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -94,13 +94,13 @@ Remove only the bare host taxon alias 'Diatoms' from exact_synonym in curation/t
 | E1 | data/habitats/host_associated/diatoms.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.1276bea544 (diatom-associated environment) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.1276bea544, grounding_status=UNGROUNDED, review_status=None, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.1276bea544, grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 118 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Algae &gt; Diatoms", "depth": "3", "ecosystem": "Host-associated", "ecosystem_category": "Algae", "ecosystem_subtype": "", "ecosystem_type": "Diatoms", "gold_node_count": "3", "gold_node_ids": "gold.ecosystem:4673&#124;gold.ecosystem:4674&#124;gold.ecosystem:4675", "leaf_label": "Diatoms", "organism_count": "218", "specific_ecosystem": "", "study_count": "0", "total_assertions": "218"}, "row": 118}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 8489,10744 | supports | [{"data": {"definition": "An environmental system which is determined by a living organism.", "deprecated": "", "directly_referenced": "FALSE", "label": "environmental system determined by an organism", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "host-associated environment", "term_id": "ENVO:01001000"}, "row": 8489}, {"data": {"definition": "", "deprecated": "", "directly_referenced": "TRUE", "label": "Bacillariophyta", "label_only": "TRUE", "ontology": "NCBITaxon", "synonyms": "", "term_id": "NCBITaxon:2836"}, "row": 10744}] |
 | EDEC | curation/decisions.tsv; TSV rows 220 | supports | [{"data": {"category": "", "curator": "codex-gpt-5", "date": "2026-08-21", "decision": "CONFIRM_UNGROUNDED", "grounding_status": "", "identifier": "habitatmech:GOLD.1276bea544", "notes": "Non-habitat screen review (#108): Host-associated &gt; Algae &gt; Diatoms denotes diatoms acting as microbial hosts. The organism is the habitat; the taxon class is evidence about the host and remains an xref rather than the record identity.", "object_id": "NCBITaxon:2836", "object_label": "Bacillariophyta", "relation": "xref", "review_depth": "ITEM"}, "row": 220}] |
 | ETR | curation/term_requests.tsv; TSV rows 43 | supports | [{"data": {"curator": "codex-gpt-5", "date": "2026-08-24", "definition": "An environmental system determined by an organism which is determined by a diatom or by a part of a diatom.", "exact_synonym": "Diatoms&#124;diatom host environment", "identifier": "habitatmech:GOLD.1276bea544", "notes": "Definition curated from the committed alga-associated research report and cross-checked against its green- and brown-alga sibling reports. Diatoms are the 218-assertion GOLD child of Algae; ENVO has no diatom- or general alga-associated environment, plant-associated environment excludes Bacillariophyta, and the Bacillariophyta taxon remains an xref rather than a habitat identity. The GOLD hierarchy separately preserves alga-associated environment as the immediate HabitatMech parent.", "parent_class": "ENVO:01001000", "parent_label": "environmental system determined by an organism", "parent_mode": "ADD", "requested_label": "diatom-associated environment"}, "row": 43}] |
-| EP1 | data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system which is determined by a living organism.", "grounding_status": "EXACT", "identifier": "ENVO:01001000", "label": "environmental system determined by an organism", "parent_habitats": ["ENVO:01000254"], "review_status": null, "source_attestations": [{"assertion_count": 25581, "assertion_unit": "STRAIN", "mapping_predicate": "skos:exactMatch", "notes": "kg-microbe's isolation-source mapping table has no ontology target for this source; the automatic route leaves it ungrounded. The explicit curator decision GROUND overrides that route; this source is emitted on ENVO:01001000.", "source": "BACDIVE", "source_id": "bacdive.isolation_source:host", "source_label": "Host"}, {"assertion_count": 3307, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated", "source_path": "Host-associated"}]} |
-| EP2 | data/habitats/host_associated/algae.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system determined by an organism which is determined by an alga or by a part of an alga.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.02383c20a7", "label": "alga-associated environment", "parent_habitats": ["ENVO:01001000"], "review_status": null, "source_attestations": [{"assertion_count": 394, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3387", "source_label": "Algae", "source_path": "Host-associated &gt; Algae"}, {"assertion_count": 88, "assertion_unit": "TAXON", "source": "MADIN", "source_id": "ENVO:02500019", "source_label": "alga"}]} |
+| EP1 | data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system which is determined by a living organism.", "grounding_status": "EXACT", "identifier": "ENVO:01001000", "label": "environmental system determined by an organism", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01000254"], "source_attestations": [{"assertion_count": 25581, "assertion_unit": "STRAIN", "mapping_predicate": "skos:exactMatch", "notes": "kg-microbe's isolation-source mapping table has no ontology target for this source; the automatic route leaves it ungrounded. The explicit curator decision GROUND overrides that route; this source is emitted on ENVO:01001000.", "source": "BACDIVE", "source_id": "bacdive.isolation_source:host", "source_label": "Host"}, {"assertion_count": 3307, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch", "notes": "5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated", "source_path": "Host-associated"}]} |
+| EP2 | data/habitats/host_associated/algae.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system determined by an organism which is determined by an alga or by a part of an alga.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.02383c20a7", "label": "alga-associated environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000"], "source_attestations": [{"assertion_count": 394, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3387", "source_label": "Algae", "source_path": "Host-associated &gt; Algae"}, {"assertion_count": 88, "assertion_unit": "TAXON", "source": "MADIN", "source_id": "ENVO:02500019", "source_label": "alga"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'diatoms&#124;habitatmech:GOLD.1276bea544' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -138,9 +138,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: The minted GOLD record habitatmech:GOLD.1276bea544 (diatom-associated environment,
-  UNGROUNDED/REVIEWED, 738 BIOSAMPLE, 646 ORGANISM, 55 STUDY) preserves diatom host-associated
-  environment scope under habitatmech:GOLD.6a14dd6b05 (algal-associated environment),
-  but asserts the bare host taxon label 'Diatoms' as an EXACT_SYNONYM.
+  UNGROUNDED/REVIEWED, 218 ORGANISM assertions) preserves diatom host-associated environment
+  scope under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.02383c20a7
+  (alga-associated environment), but asserts the bare host taxon label 'Diatoms' as
+  an EXACT_SYNONYM.
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -521,7 +522,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:27Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.1276bea544, grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"].
+    mapping_status=REVIEWED, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -591,17 +592,17 @@ evidence:
   support: supports
   summary: '{"definition": "An environmental system which is determined by a living
     organism.", "grounding_status": "EXACT", "identifier": "ENVO:01001000", "label":
-    "environmental system determined by an organism", "parent_habitats": ["ENVO:01000254"],
-    "review_status": null, "source_attestations": [{"assertion_count": 25581, "assertion_unit":
-    "STRAIN", "mapping_predicate": "skos:exactMatch", "notes": "kg-microbe''s isolation-source
-    mapping table has no ontology target for this source; the automatic route leaves
-    it ungrounded. The explicit curator decision GROUND overrides that route; this
-    source is emitted on ENVO:01001000.", "source": "BACDIVE", "source_id": "bacdive.isolation_source:host",
-    "source_label": "Host"}, {"assertion_count": 3307, "assertion_unit": "ORGANISM",
-    "mapping_predicate": "skos:exactMatch", "notes": "5 GOLD ecosystem node ids share
-    this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD",
-    "source_id": "gold.ecosystem:3373", "source_label": "Host-associated", "source_path":
-    "Host-associated"}]}'
+    "environmental system determined by an organism", "mapping_status": "REVIEWED",
+    "parent_habitats": ["ENVO:01000254"], "source_attestations": [{"assertion_count":
+    25581, "assertion_unit": "STRAIN", "mapping_predicate": "skos:exactMatch", "notes":
+    "kg-microbe''s isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on ENVO:01001000.", "source":
+    "BACDIVE", "source_id": "bacdive.isolation_source:host", "source_label": "Host"},
+    {"assertion_count": 3307, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:exactMatch",
+    "notes": "5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "source": "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated",
+    "source_path": "Host-associated"}]}'
   snapshot_sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
 - evidence_id: EP2
   kind: record_content
@@ -612,7 +613,7 @@ evidence:
   summary: '{"definition": "An environmental system determined by an organism which
     is determined by an alga or by a part of an alga.", "grounding_status": "UNGROUNDED",
     "identifier": "habitatmech:GOLD.02383c20a7", "label": "alga-associated environment",
-    "parent_habitats": ["ENVO:01001000"], "review_status": null, "source_attestations":
+    "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000"], "source_attestations":
     [{"assertion_count": 394, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem
     node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:3387", "source_label": "Algae",
@@ -648,10 +649,10 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: The record is properly defined as 'An environmental system determined by
-    a diatom (Bacillariophyta), including the phycosphere, frustule surface, and mucilage
-    microenvironment' under habitatmech:GOLD.6a14dd6b05 (algal-associated environment),
-    but synonyms includes EXACT_SYNONYM 'Diatoms', which equates the host taxon (NCBITaxon:2836)
-    with its environment.
+    an organism which is determined by a diatom or by a part of a diatom.' under ENVO:01001000
+    and habitatmech:GOLD.02383c20a7 (alga-associated environment) with contextual
+    xref NCBITaxon:2836, but synonyms includes EXACT_SYNONYM 'Diatoms', which equates
+    the host taxon with its environment.
   target_ids:
   - habitatmech:GOLD.1276bea544
   evidence_ids:
@@ -690,8 +691,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / UNGROUNDED; this read-only review
-    does not mutate generated records.
+    decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only
+    review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.1276bea544
   evidence_ids:

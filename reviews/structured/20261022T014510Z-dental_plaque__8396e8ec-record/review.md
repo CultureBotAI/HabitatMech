@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record preserves mammalian dental plaque scope (11 ORGANISM assertions) and xref UBERON:0016482 (dental plaque), but retains the GOLD source-path parent Oral cavity (habitatmech:GOLD.92d1e65695) as a superclass and declares skos:narrowMatch against its own minted record identifier.
+The minted GOLD record preserves mammalian dental plaque scope (38 ORGANISM assertions) under broader ontology parent UBERON:0016482 (dental plaque), but retains the GOLD source-path parent Oral cavity (habitatmech:GOLD.92d1e65695) as a superclass and declares skos:narrowMatch against its own minted record identifier.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.26b1d1137f.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NARROW; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / NARROW; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,19 +72,19 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dental-plaque--8396e8ec-context-parent.
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral cavity in Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian record, xref UBERON:0016482, and 11 ORGANISM assertions.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral cavity in Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian record, broader ontology parent UBERON:0016482, and 38 ORGANISM assertions.
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
 major / open / confirmed; issue key: dental-plaque--8396e8ec-mapping-endpoint-contract.
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral cavity in Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian record, xref UBERON:0016482, and 11 ORGANISM assertions. No repair is performed by this read-only review.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral cavity in Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian record, broader ontology parent UBERON:0016482, and 38 ORGANISM assertions. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -92,7 +92,7 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.9
 
 ### ACT2
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f. No repair is performed by this read-only review.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -108,11 +108,11 @@ Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses th
 | E1 | data/habitats/host_associated/dental_plaque__8396e8ec.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.26b1d1137f (Dental plaque) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.26b1d1137f, grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.26b1d1137f, grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 325 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals", "ecosystem_subtype": "Oral cavity", "ecosystem_type": "Digestive system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:5031", "leaf_label": "Dental plaque", "organism_count": "38", "specific_ecosystem": "Dental plaque", "study_count": "0", "total_assertions": "38"}, "row": 325}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13478 | supports | [{"data": {"definition": "A soft, thin film of food debris, mucin, and dead epithelial cells deposited on the teeth, providing the medium for the growth of various bacteria. The main inorganic components are calcium and phosphorus, with small amounts of magnesium, potassium, and sodium; the organic matrix consists of polysaccharides, proteins, carbohydrates, lipids, and other components. Plaque plays an important etiologic role in the development of dental caries and periodontal and gingival diseases and provides the base for the development of materia alba; calcified plaque forms dental calculus.", "deprecated": "", "directly_referenced": "TRUE", "label": "dental plaque", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "bacterial plaque&#124;plaque", "term_id": "UBERON:0016482"}, "row": 13478}] |
-| EP1 | data/habitats/host_associated/dental_plaque__df2cbc31.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A soft, thin film of food debris, mucin, and dead epithelial cells deposited on the teeth, providing the medium for the growth of various bacteria. The main inorganic components are calcium and phosphorus, with small amounts of magnesium, potassium, and sodium; the organic matrix consists of polysaccharides, proteins, carbohydrates, lipids, and other components. Plaque plays an important etiologic role in the development of dental caries and periodontal and gingival diseases and provides the base for the development of materia alba; calcified plaque forms dental calculus.", "grounding_status": "CLOSE", "identifier": "UBERON:0016482", "label": "dental plaque", "parent_habitats": ["UBERON:0000463"], "review_status": null, "source_attestations": [{"assertion_count": 106, "assertion_unit": "STRAIN", "mapping_predicate": "skos:closeMatch", "source": "BACDIVE", "source_id": "bacdive.isolation_source:plaque", "source_label": "Plaque"}]} |
-| EP2 | data/habitats/host_associated/oral_cavity__2e0f1569.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.92d1e65695", "label": "Oral cavity", "parent_habitats": ["UBERON:0000167", "habitatmech:GOLD.c8e85f3c84"], "review_status": null, "source_attestations": [{"assertion_count": 270, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3663", "source_label": "Oral cavity", "source_path": "Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity"}]} |
+| EP1 | data/habitats/host_associated/dental_plaque__df2cbc31.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A soft, thin film of food debris, mucin, and dead epithelial cells deposited on the teeth, providing the medium for the growth of various bacteria. The main inorganic components are calcium and phosphorus, with small amounts of magnesium, potassium, and sodium; the organic matrix consists of polysaccharides, proteins, carbohydrates, lipids, and other components. Plaque plays an important etiologic role in the development of dental caries and periodontal and gingival diseases and provides the base for the development of materia alba; calcified plaque forms dental calculus.", "grounding_status": "CLOSE", "identifier": "UBERON:0016482", "label": "dental plaque", "mapping_status": "REVIEWED", "parent_habitats": ["UBERON:0000463"], "source_attestations": [{"assertion_count": 106, "assertion_unit": "STRAIN", "mapping_predicate": "skos:closeMatch", "source": "BACDIVE", "source_id": "bacdive.isolation_source:plaque", "source_label": "Plaque"}]} |
+| EP2 | data/habitats/host_associated/oral_cavity__2e0f1569.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.92d1e65695", "label": "Oral cavity", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000167", "habitatmech:GOLD.c8e85f3c84"], "source_attestations": [{"assertion_count": 270, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3663", "source_label": "Oral cavity", "source_path": "Host-associated &gt; Mammals &gt; Digestive system &gt; Oral cavity"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dental_plaque__8396e8ec&#124;habitatmech:GOLD.26b1d1137f' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -149,10 +149,10 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The minted GOLD record preserves mammalian dental plaque scope (11 ORGANISM
-  assertions) and xref UBERON:0016482 (dental plaque), but retains the GOLD source-path
-  parent Oral cavity (habitatmech:GOLD.92d1e65695) as a superclass and declares skos:narrowMatch
-  against its own minted record identifier.
+summary: The minted GOLD record preserves mammalian dental plaque scope (38 ORGANISM
+  assertions) under broader ontology parent UBERON:0016482 (dental plaque), but retains
+  the GOLD source-path parent Oral cavity (habitatmech:GOLD.92d1e65695) as a superclass
+  and declares skos:narrowMatch against its own minted record identifier.
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -532,7 +532,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:10Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.26b1d1137f, grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -579,9 +579,9 @@ evidence:
     etiologic role in the development of dental caries and periodontal and gingival
     diseases and provides the base for the development of materia alba; calcified
     plaque forms dental calculus.", "grounding_status": "CLOSE", "identifier": "UBERON:0016482",
-    "label": "dental plaque", "parent_habitats": ["UBERON:0000463"], "review_status":
-    null, "source_attestations": [{"assertion_count": 106, "assertion_unit": "STRAIN",
-    "mapping_predicate": "skos:closeMatch", "source": "BACDIVE", "source_id": "bacdive.isolation_source:plaque",
+    "label": "dental plaque", "mapping_status": "REVIEWED", "parent_habitats": ["UBERON:0000463"],
+    "source_attestations": [{"assertion_count": 106, "assertion_unit": "STRAIN", "mapping_predicate":
+    "skos:closeMatch", "source": "BACDIVE", "source_id": "bacdive.isolation_source:plaque",
     "source_label": "Plaque"}]}'
   snapshot_sha256: 2b3ebf059f71e451c8efe2feac97d5025486dd2511907f295c8cfef5d8ba9a54
 - evidence_id: EP2
@@ -591,10 +591,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:10Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.92d1e65695",
-    "label": "Oral cavity", "parent_habitats": ["UBERON:0000167", "habitatmech:GOLD.c8e85f3c84"],
-    "review_status": null, "source_attestations": [{"assertion_count": 270, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Oral cavity", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000167",
+    "habitatmech:GOLD.c8e85f3c84"], "source_attestations": [{"assertion_count": 270,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:3663", "source_label": "Oral cavity",
     "source_path": "Host-associated > Mammals > Digestive system > Oral cavity"}]}'
   snapshot_sha256: 6efe426cc7b8c2446b721bb6240be45db74f65d2bb08bc66ee943fbfe37767f3
@@ -664,8 +664,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.26b1d1137f
   evidence_ids:
@@ -684,13 +684,13 @@ findings:
     (Oral cavity in Host-associated > Mammals > Digestive system > Oral cavity > Dental
     plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located
     within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian
-    record, xref UBERON:0016482, and 11 ORGANISM assertions.
+    record, broader ontology parent UBERON:0016482, and 38 ORGANISM assertions.
   target_ids:
   - habitatmech:GOLD.26b1d1137f
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE
@@ -720,14 +720,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f.
   target_ids:
   - habitatmech:GOLD.26b1d1137f
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -767,8 +767,8 @@ actions:
     (Oral cavity in Host-associated > Mammals > Digestive system > Oral cavity > Dental
     plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located
     within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian
-    record, xref UBERON:0016482, and 11 ORGANISM assertions. No repair is performed
-    by this read-only review.
+    record, broader ontology parent UBERON:0016482, and 38 ORGANISM assertions. No
+    repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.
@@ -792,7 +792,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0016482 (dental plaque) rather than the minted record identifier habitatmech:GOLD.26b1d1137f.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

@@ -11,7 +11,7 @@
 
 ## Summary
 
-The UBERON:0001158 (descending colon) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon' (EXACT/SEEDED, 51 BIOSAMPLE, 3 ORGANISM, 4 STUDY) under ontology superclass UBERON:0000168 (proximal-distal subdivision of colon), but also retains the GOLD source-path parent habitatmech:GOLD.5b0aa7456c (human Large intestine) in parent_habitats.
+The UBERON:0001158 (descending colon) record grounds GOLD 'Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon' (EXACT/SEEDED, 3 ORGANISM assertions) under ontology superclass UBERON:0000168 (proximal-distal subdivision of colon), but also retains the GOLD source-path parent habitatmech:GOLD.5b0aa7456c (human Large intestine) in parent_habitats.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: UBERON:0001158.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / EXACT; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / EXACT; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: descending-colon-context-parent.
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c (Large intestine in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon) from descending_colon.yaml while preserving the valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon) and all source assertions.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c (Large intestine in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon) from descending_colon.yaml while preserving the valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon) and 3 ORGANISM assertions.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c (Large intestine in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon) from descending_colon.yaml while preserving the valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon) and all source assertions. No repair is performed by this read-only review.
+Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c (Large intestine in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon) from descending_colon.yaml while preserving the valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon) and 3 ORGANISM assertions. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,10 +94,10 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5
 | E1 | data/habitats/host_associated/descending_colon.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0001158 (descending colon) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0001158, grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0001158, grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 754 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Descending colon", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Large intestine", "ecosystem_type": "Digestive system", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:5028", "leaf_label": "Descending colon", "organism_count": "3", "specific_ecosystem": "Descending colon", "study_count": "0", "total_assertions": "3"}, "row": 754}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12912,13019 | supports | [{"data": {"definition": "A section dividing a colon along a proximal-distal axis.", "deprecated": "", "directly_referenced": "FALSE", "label": "proximal-distal subdivision of colon", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "segment of colon", "term_id": "UBERON:0000168"}, "row": 12912}, {"data": {"definition": "The portion of the colon between the left colic flexure and the sigmoid colon at the pelvic brim; the portion of the descending colon lying in the left iliac fossa is sometimes called the iliac colon.", "deprecated": "", "directly_referenced": "FALSE", "label": "descending colon", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "colon descendens", "term_id": "UBERON:0001158"}, "row": 13019}] |
-| EP2 | data/habitats/host_associated/large_intestine__65b4f112.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.5b0aa7456c", "label": "Large intestine", "parent_habitats": ["UBERON:0000059", "habitatmech:GOLD.f6720bccf0"], "review_status": null, "source_attestations": [{"assertion_count": 20, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3683", "source_label": "Large intestine", "source_path": "Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine"}]} |
+| EP2 | data/habitats/host_associated/large_intestine__65b4f112.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.5b0aa7456c", "label": "Large intestine", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000059", "habitatmech:GOLD.f6720bccf0"], "source_attestations": [{"assertion_count": 20, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3683", "source_label": "Large intestine", "source_path": "Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'descending_colon&#124;UBERON:0001158' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -136,7 +136,7 @@ verdict: needs_curation
 scientific_review: true
 summary: 'The UBERON:0001158 (descending colon) record grounds GOLD ''Host-associated
   > Mammals: Human > Digestive system > Large intestine > Descending colon'' (EXACT/SEEDED,
-  51 BIOSAMPLE, 3 ORGANISM, 4 STUDY) under ontology superclass UBERON:0000168 (proximal-distal
+  3 ORGANISM assertions) under ontology superclass UBERON:0000168 (proximal-distal
   subdivision of colon), but also retains the GOLD source-path parent habitatmech:GOLD.5b0aa7456c
   (human Large intestine) in parent_habitats.'
 source:
@@ -515,7 +515,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:21Z'
   support: supports
   summary: Seed generator produces identifier=UBERON:0001158, grounding_status=EXACT,
-    review_status=None, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -554,10 +554,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:21Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.5b0aa7456c",
-    "label": "Large intestine", "parent_habitats": ["UBERON:0000059", "habitatmech:GOLD.f6720bccf0"],
-    "review_status": null, "source_attestations": [{"assertion_count": 20, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Large intestine", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000059",
+    "habitatmech:GOLD.f6720bccf0"], "source_attestations": [{"assertion_count": 20,
+    "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:3683", "source_label": "Large intestine",
     "source_path": "Host-associated > Mammals: Human > Digestive system > Large intestine"}]}'
   snapshot_sha256: 2d44a35bc5550a8bc65a76972a8e1958f1abdc8b0be8fadff277d57a2948ab94
@@ -624,8 +624,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / EXACT; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / EXACT; this read-only review
+    does not mutate generated records.
   target_ids:
   - UBERON:0001158
   evidence_ids:
@@ -644,13 +644,13 @@ findings:
     (Large intestine in Host-associated > Mammals: Human > Digestive system > Large
     intestine > Descending colon) from descending_colon.yaml while preserving the
     valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon)
-    and all source assertions.'
+    and 3 ORGANISM assertions.'
   target_ids:
   - UBERON:0001158
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE
@@ -688,7 +688,7 @@ actions:
     (Large intestine in Host-associated > Mammals: Human > Digestive system > Large
     intestine > Descending colon) from descending_colon.yaml while preserving the
     valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon)
-    and all source assertions. No repair is performed by this read-only review.'
+    and 3 ORGANISM assertions. No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

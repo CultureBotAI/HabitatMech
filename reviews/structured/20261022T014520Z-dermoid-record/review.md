@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.6d07a07054 (human dermoid cyst, UNGROUNDED/REVIEWED, 1 BIOSAMPLE, 1 STUDY) is accurately defined under BTO:0000320 (cyst), with the GOLD disease-category parent Benign tumor and ambiguous bare source label 'Dermoid' already excluded (#2226).
+The minted GOLD record habitatmech:GOLD.6d07a07054 (human dermoid cyst, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is accurately defined under BTO:0000320 (cyst), with the GOLD disease-category parent Benign tumor and ambiguous bare source label 'Dermoid' already excluded (#2226).
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.6d07a07054.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / UNGROUNDED; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -82,12 +82,12 @@ No findings recorded within this review's declared scope.
 | E1 | data/habitats/host_associated/dermoid.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.6d07a07054 (human dermoid cyst) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.6d07a07054, grounding_status=UNGROUNDED, review_status=None, parent_habitats=["BTO:0000320"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.6d07a07054, grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["BTO:0000320"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2155 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Dermoid", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Dermoid", "ecosystem_type": "Benign tumor", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:6991&#124;gold.ecosystem:6992", "leaf_label": "Dermoid", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions": "0"}, "row": 2155}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 322 | supports | [{"data": {"definition": "A body resembling a cyst: as a 1: capsule formed about a minute organism going into a resting or spore stage; also: this capsule with its contents. 2: a resistant cover about a parasite produced by the parasite or the host.", "deprecated": "", "directly_referenced": "TRUE", "label": "cyst", "label_only": "FALSE", "ontology": "BTO", "synonyms": "", "term_id": "BTO:0000320"}, "row": 322}] |
 | EDEC | curation/decisions.tsv; TSV rows 669 | supports | [{"data": {"category": "", "curator": "antigravity", "date": "2026-10-17", "decision": "CONFIRM_UNGROUNDED", "grounding_status": "", "identifier": "habitatmech:GOLD.6d07a07054", "notes": "Defined human dermoid cyst under BTO:0000320 'cyst'; supported by infected dermoid cyst clinical microbiology (PMID 25841008).", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 669}] |
 | ETR | curation/term_requests.tsv; TSV rows 584 | supports | [{"data": {"curator": "antigravity", "date": "2026-10-17", "definition": "A cyst of developmental or teratoid origin in a human host lined by epidermis with cutaneous adnexal structures (such as hair follicles and sebaceous glands) and filled with sebum and keratin.", "exact_synonym": "dermoid cyst", "identifier": "habitatmech:GOLD.6d07a07054", "notes": "Defined human dermoid cyst under BTO:0000320 'cyst'; supported by infected dermoid cyst clinical microbiology (PMID 25841008); parent_mode REPLACE excludes NOT_APPLICABLE GOLD parent Benign tumor.", "parent_class": "BTO:0000320", "parent_label": "cyst", "parent_mode": "REPLACE", "requested_label": "human dermoid cyst"}, "row": 584}] |
-| EP1 | data/habitats/host_associated/cyst.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A body resembling a cyst: as a 1: capsule formed about a minute organism going into a resting or spore stage; also: this capsule with its contents. 2: a resistant cover about a parasite produced by the parasite or the host.", "grounding_status": "EXACT", "identifier": "BTO:0000320", "label": "cyst", "parent_habitats": ["BTO:0000139", "BTO:0000284"], "review_status": null, "source_attestations": [{"assertion_count": 3, "assertion_unit": "TAXON", "evidence_channels": "annotated_genomes_isolates", "score": 3.0, "source": "PREGO", "source_id": "BTO:0000320", "source_label": "cyst"}]} |
+| EP1 | data/habitats/host_associated/cyst.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A body resembling a cyst: as a 1: capsule formed about a minute organism going into a resting or spore stage; also: this capsule with its contents. 2: a resistant cover about a parasite produced by the parasite or the host.", "grounding_status": "EXACT", "identifier": "BTO:0000320", "label": "cyst", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0000139", "BTO:0000284"], "source_attestations": [{"assertion_count": 3, "assertion_unit": "TAXON", "evidence_channels": "annotated_genomes_isolates", "score": 3.0, "source": "PREGO", "source_id": "BTO:0000320", "source_label": "cyst"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dermoid&#124;habitatmech:GOLD.6d07a07054' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -124,10 +124,10 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The minted GOLD record habitatmech:GOLD.6d07a07054 (human dermoid cyst, UNGROUNDED/REVIEWED,
-  1 BIOSAMPLE, 1 STUDY) is accurately defined under BTO:0000320 (cyst), with the GOLD
-  disease-category parent Benign tumor and ambiguous bare source label 'Dermoid' already
-  excluded (#2226).
+summary: 'The minted GOLD record habitatmech:GOLD.6d07a07054 (human dermoid cyst,
+  UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is accurately
+  defined under BTO:0000320 (cyst), with the GOLD disease-category parent Benign tumor
+  and ambiguous bare source label ''Dermoid'' already excluded (#2226).'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -504,7 +504,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:20Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.6d07a07054, grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["BTO:0000320"].
+    mapping_status=REVIEWED, parent_habitats=["BTO:0000320"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -570,7 +570,7 @@ evidence:
     a minute organism going into a resting or spore stage; also: this capsule with
     its contents. 2: a resistant cover about a parasite produced by the parasite or
     the host.", "grounding_status": "EXACT", "identifier": "BTO:0000320", "label":
-    "cyst", "parent_habitats": ["BTO:0000139", "BTO:0000284"], "review_status": null,
+    "cyst", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0000139", "BTO:0000284"],
     "source_attestations": [{"assertion_count": 3, "assertion_unit": "TAXON", "evidence_channels":
     "annotated_genomes_isolates", "score": 3.0, "source": "PREGO", "source_id": "BTO:0000320",
     "source_label": "cyst"}]}'
@@ -642,8 +642,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / UNGROUNDED; this read-only review
-    does not mutate generated records.
+    decisions and executed routes reproduce REVIEWED / UNGROUNDED; this read-only
+    review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.6d07a07054
   evidence_ids:

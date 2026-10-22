@@ -18,8 +18,9 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.76a84af82e (Diabetic foot ulcer
   (DFU) in Host-associated > Mammals: Human > Multisystem conditions > Diabetic foot
-  ulcer (DFU), NOT_APPLICABLE/REVIEWED, 11 ORGANISM) is coherently placed under the
-  NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f (Multisystem conditions).'
+  ulcer (DFU), NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions:
+  0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.25f514731f
+  (Multisystem conditions).'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -397,7 +398,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:23Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.76a84af82e, grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.25f514731f"].
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.25f514731f"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -433,8 +434,8 @@ evidence:
   accessed_at: '2026-10-22T01:45:23Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.25f514731f",
-    "label": "Multisystem conditions", "parent_habitats": ["habitatmech:GOLD.cd0b0940e5"],
-    "review_status": null, "source_attestations": [{"source": "GOLD", "source_id":
+    "label": "Multisystem conditions", "mapping_status": "SEEDED", "parent_habitats":
+    ["habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"source": "GOLD", "source_id":
     "gold.ecosystem:6357", "source_label": "Multisystem conditions", "source_path":
     "Host-associated > Mammals: Human > Multisystem conditions"}]}'
   snapshot_sha256: 90a69b5f5599698da89e4e8147610a8cf4476f286c37ef16e6e29ef333398b39
@@ -501,7 +502,7 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only
+    decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only
     review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.76a84af82e

@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma in Host-associated &gt; Mammals: Human &gt; Malignant tumor &gt; Lymphoma &gt; Diffuse large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, 30 BIOSAMPLE, 1 STUDY) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718 (Lymphoma).
+The minted GOLD record habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma in Host-associated &gt; Mammals: Human &gt; Malignant tumor &gt; Lymphoma &gt; Diffuse large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718 (Lymphoma).
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.34d152cb9a.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -82,10 +82,10 @@ No findings recorded within this review's declared scope.
 | E1 | data/habitats/host_associated/diffuse_large_b_cell_lymphoma.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.34d152cb9a, grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.aaf46ad718"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.34d152cb9a, grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.aaf46ad718"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2342 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Malignant tumor &gt; Lymphoma &gt; Diffuse large B-cell lymphoma", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Lymphoma", "ecosystem_type": "Malignant tumor", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6201", "leaf_label": "Diffuse large B-cell lymphoma", "organism_count": "0", "specific_ecosystem": "Diffuse large B-cell lymphoma", "study_count": "0", "total_assertions": "0"}, "row": 2342}] |
 | EDEC | curation/decisions.tsv; TSV rows 406 | supports | [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "NOT_APPLICABLE", "grounding_status": "", "identifier": "habitatmech:GOLD.34d152cb9a", "notes": "'Diffuse large B-cell lymphoma' names a disease, an intervention, a sampling artefact or a no-value filler rather than a place. Pulled out of the class-level sweep and decided individually.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 406}] |
-| EP1 | data/habitats/host_associated/lymphoma.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NOT_APPLICABLE", "identifier": "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"], "review_status": null, "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma", "source_path": "Host-associated &gt; Mammals: Human &gt; Malignant tumor &gt; Lymphoma"}]} |
+| EP1 | data/habitats/host_associated/lymphoma.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NOT_APPLICABLE", "identifier": "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "mapping_status": "REVIEWED", "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"], "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma", "source_path": "Host-associated &gt; Mammals: Human &gt; Malignant tumor &gt; Lymphoma"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'diffuse_large_b_cell_lymphoma&#124;habitatmech:GOLD.34d152cb9a' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -124,8 +124,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.34d152cb9a (Diffuse large B-cell
   lymphoma in Host-associated > Mammals: Human > Malignant tumor > Lymphoma > Diffuse
-  large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, 30 BIOSAMPLE, 1 STUDY) is coherently
-  placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718
+  large B-cell lymphoma, NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions:
+  0 in GOLD) is coherently placed under the NOT_APPLICABLE classification parent habitatmech:GOLD.aaf46ad718
   (Lymphoma).'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
@@ -504,7 +504,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:28Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.34d152cb9a, grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.aaf46ad718"].
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.aaf46ad718"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -541,11 +541,11 @@ evidence:
   accessed_at: '2026-10-22T01:45:28Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NOT_APPLICABLE", "identifier":
-    "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"],
-    "review_status": null, "source_attestations": [{"notes": "2 GOLD ecosystem node
-    ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source":
-    "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma", "source_path":
-    "Host-associated > Mammals: Human > Malignant tumor > Lymphoma"}]}'
+    "habitatmech:GOLD.aaf46ad718", "label": "Lymphoma", "mapping_status": "REVIEWED",
+    "parent_habitats": ["habitatmech:GOLD.31d7fab4fa"], "source_attestations": [{"notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "source": "GOLD", "source_id": "gold.ecosystem:6199", "source_label": "Lymphoma",
+    "source_path": "Host-associated > Mammals: Human > Malignant tumor > Lymphoma"}]}'
   snapshot_sha256: 98f7f5d6f5f761ee4525d3f56902320961055028edba1275942c6499cbbe5d1b
 - evidence_id: ESEARCH
   kind: search
@@ -611,7 +611,7 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NOT_APPLICABLE; this read-only
+    decisions and executed routes reproduce REVIEWED / NOT_APPLICABLE; this read-only
     review does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.34d152cb9a

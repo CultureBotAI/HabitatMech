@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full 24-record category boundary and cohort review of the contiguous unreviewed host_associated slice (dental_plaque__8396e8ec.yaml through digestive_system__780e5b67.yaml) at commit 56904acf1cf24914a262495568ecd63a67f5d9c7. All 24 records represent distinct host-clade, taphonomic, anatomical, or condition concepts (retain decisions). Record-level open findings (20 total across 18 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.
+Full 24-record category boundary and cohort review of the contiguous unreviewed host_associated slice (dental_plaque__8396e8ec.yaml through digestive_system__780e5b67.yaml) at commit 56904acf1cf24914a262495568ecd63a67f5d9c7. All 24 records represent distinct host-clade, taphonomic, anatomical, or condition concepts (retain decisions). Record-level open findings (22 total across 18 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.
 
 ## Scope And Provenance
 
@@ -81,7 +81,7 @@ All 24 records represent distinct host-clade, taphonomic, anatomical-layer, or c
 
 grounding: supported. Targets: habitatmech:GOLD.26b1d1137f, UBERON:0016482, BTO:0000339, habitatmech:GOLD.0433dc9a8f, habitatmech:GOLD.7ec36a9a02, UBERON:0003672, UBERON:0000412, habitatmech:GOLD.25fd1f31a1, habitatmech:GOLD.fdd6965162, UBERON:0002067, habitatmech:GOLD.6d07a07054, UBERON:0001158, habitatmech:GOLD.1219b1a720, habitatmech:GOLD.76a84af82e, BTO:0000341, habitatmech:GOLD.a287a77880, habitatmech:GOLD.c84e967b80, habitatmech:GOLD.1276bea544, habitatmech:GOLD.34d152cb9a, habitatmech:GOLD.26a84185d3, habitatmech:GOLD.6eecdf150d, habitatmech:GOLD.d7cff86ce8, habitatmech:GOLD.8a68d0f6f5, habitatmech:GOLD.c1d7082e4b.
 
-6 records pass with limitations; 18 records have 20 open major findings recorded in their respective kind: record bundles (linked in related_reviews) and carried forward to Stage 5 grouped remediation.
+6 records pass with limitations; 18 records have 22 open major findings recorded in their respective kind: record bundles (linked in related_reviews) and carried forward to Stage 5 grouped remediation.
 
 ## Findings
 
@@ -106,30 +106,30 @@ No findings recorded within this review's declared scope.
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
 | ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator resolution routes and parent/synonym assembly verified across all 24 cohort records. |
-| EREC1 | data/habitats/host_associated/dental_plaque__8396e8ec.yaml; Entire YAML | supports | habitatmech:GOLD.26b1d1137f (Dental plaque): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"]. |
-| EREC2 | data/habitats/host_associated/dental_plaque__df2cbc31.yaml; Entire YAML | supports | UBERON:0016482 (dental plaque): grounding_status=CLOSE, review_status=None, parent_habitats=["UBERON:0000463"]. |
-| EREC3 | data/habitats/host_associated/dental_pulp.yaml; Entire YAML | supports | BTO:0000339 (dental pulp): grounding_status=EXACT, review_status=None, parent_habitats=[]. |
-| EREC4 | data/habitats/host_associated/dentin.yaml; Entire YAML | supports | habitatmech:GOLD.0433dc9a8f (Dentin): grounding_status=NARROW, review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"]. |
-| EREC5 | data/habitats/host_associated/dentin__be69daef.yaml; Entire YAML | supports | habitatmech:GOLD.7ec36a9a02 (Dentin): grounding_status=NARROW, review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"]. |
-| EREC6 | data/habitats/host_associated/dentition.yaml; Entire YAML | supports | UBERON:0003672 (dentition): grounding_status=CLOSE, review_status=None, parent_habitats=["UBERON:0000167", "UBERON:0034925"]. |
-| EREC7 | data/habitats/host_associated/dermal_papilla.yaml; Entire YAML | supports | UBERON:0000412 (dermal papilla): grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"]. |
-| EREC8 | data/habitats/host_associated/dermatitis.yaml; Entire YAML | supports | habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion): grounding_status=UNGROUNDED, review_status=None, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"]. |
-| EREC9 | data/habitats/host_associated/dermatitis__d991f62d.yaml; Entire YAML | supports | habitatmech:GOLD.fdd6965162 (Dermatitis): grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.4b37ab4b76"]. |
-| EREC10 | data/habitats/host_associated/dermis.yaml; Entire YAML | supports | UBERON:0002067 (dermis): grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314", "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"]. |
-| EREC11 | data/habitats/host_associated/dermoid.yaml; Entire YAML | supports | habitatmech:GOLD.6d07a07054 (human dermoid cyst): grounding_status=UNGROUNDED, review_status=None, parent_habitats=["BTO:0000320"]. |
-| EREC12 | data/habitats/host_associated/descending_colon.yaml; Entire YAML | supports | UBERON:0001158 (descending colon): grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"]. |
-| EREC13 | data/habitats/host_associated/diabetic_foot_ulcer_dfu.yaml; Entire YAML | supports | habitatmech:GOLD.1219b1a720 (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.4b37ab4b76"]. |
-| EREC14 | data/habitats/host_associated/diabetic_foot_ulcer_dfu__cf26bdc0.yaml; Entire YAML | supports | habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.25f514731f"]. |
-| EREC15 | data/habitats/host_associated/diaphragm.yaml; Entire YAML | supports | BTO:0000341 (diaphragm): grounding_status=EXACT, review_status=None, parent_habitats=["BTO:0000508"]. |
-| EREC16 | data/habitats/host_associated/diaphragm__3c058609.yaml; Entire YAML | supports | habitatmech:GOLD.a287a77880 (Diaphragm): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"]. |
-| EREC17 | data/habitats/host_associated/diaphragm__fbd202d9.yaml; Entire YAML | supports | habitatmech:GOLD.c84e967b80 (Diaphragm): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.fac4f63f3b"]. |
-| EREC18 | data/habitats/host_associated/diatoms.yaml; Entire YAML | supports | habitatmech:GOLD.1276bea544 (diatom-associated environment): grounding_status=UNGROUNDED, review_status=None, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"]. |
-| EREC19 | data/habitats/host_associated/diffuse_large_b_cell_lymphoma.yaml; Entire YAML | supports | habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma): grounding_status=NOT_APPLICABLE, review_status=None, parent_habitats=["habitatmech:GOLD.aaf46ad718"]. |
-| EREC20 | data/habitats/host_associated/digestive_system.yaml; Entire YAML | supports | habitatmech:GOLD.26a84185d3 (Digestive system): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"]. |
-| EREC21 | data/habitats/host_associated/digestive_system__2589c8ce.yaml; Entire YAML | supports | habitatmech:GOLD.6eecdf150d (Digestive system): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.2959225799"]. |
-| EREC22 | data/habitats/host_associated/digestive_system__46d403bb.yaml; Entire YAML | supports | habitatmech:GOLD.d7cff86ce8 (Digestive system): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.dba2a83b95"]. |
-| EREC23 | data/habitats/host_associated/digestive_system__4f205b4d.yaml; Entire YAML | supports | habitatmech:GOLD.8a68d0f6f5 (Digestive system): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"]. |
-| EREC24 | data/habitats/host_associated/digestive_system__780e5b67.yaml; Entire YAML | supports | habitatmech:GOLD.c1d7082e4b (Digestive system): grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.45a8229be1"]. |
+| EREC1 | data/habitats/host_associated/dental_plaque__8396e8ec.yaml; Entire YAML | supports | habitatmech:GOLD.26b1d1137f (Dental plaque): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"]. |
+| EREC2 | data/habitats/host_associated/dental_plaque__df2cbc31.yaml; Entire YAML | supports | UBERON:0016482 (dental plaque): grounding_status=CLOSE, mapping_status=REVIEWED, parent_habitats=["UBERON:0000463"]. |
+| EREC3 | data/habitats/host_associated/dental_pulp.yaml; Entire YAML | supports | BTO:0000339 (dental pulp): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[]. |
+| EREC4 | data/habitats/host_associated/dentin.yaml; Entire YAML | supports | habitatmech:GOLD.0433dc9a8f (Dentin): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"]. |
+| EREC5 | data/habitats/host_associated/dentin__be69daef.yaml; Entire YAML | supports | habitatmech:GOLD.7ec36a9a02 (Dentin): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"]. |
+| EREC6 | data/habitats/host_associated/dentition.yaml; Entire YAML | supports | UBERON:0003672 (dentition): grounding_status=CLOSE, mapping_status=REVIEWED, parent_habitats=["UBERON:0000167", "UBERON:0034925"]. |
+| EREC7 | data/habitats/host_associated/dermal_papilla.yaml; Entire YAML | supports | UBERON:0000412 (dermal papilla): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"]. |
+| EREC8 | data/habitats/host_associated/dermatitis.yaml; Entire YAML | supports | habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"]. |
+| EREC9 | data/habitats/host_associated/dermatitis__d991f62d.yaml; Entire YAML | supports | habitatmech:GOLD.fdd6965162 (Dermatitis): grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.4b37ab4b76"]. |
+| EREC10 | data/habitats/host_associated/dermis.yaml; Entire YAML | supports | UBERON:0002067 (dermis): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314", "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"]. |
+| EREC11 | data/habitats/host_associated/dermoid.yaml; Entire YAML | supports | habitatmech:GOLD.6d07a07054 (human dermoid cyst): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["BTO:0000320"]. |
+| EREC12 | data/habitats/host_associated/descending_colon.yaml; Entire YAML | supports | UBERON:0001158 (descending colon): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"]. |
+| EREC13 | data/habitats/host_associated/diabetic_foot_ulcer_dfu.yaml; Entire YAML | supports | habitatmech:GOLD.1219b1a720 (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.4b37ab4b76"]. |
+| EREC14 | data/habitats/host_associated/diabetic_foot_ulcer_dfu__cf26bdc0.yaml; Entire YAML | supports | habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.25f514731f"]. |
+| EREC15 | data/habitats/host_associated/diaphragm.yaml; Entire YAML | supports | BTO:0000341 (diaphragm): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["BTO:0000508"]. |
+| EREC16 | data/habitats/host_associated/diaphragm__3c058609.yaml; Entire YAML | supports | habitatmech:GOLD.a287a77880 (Diaphragm): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"]. |
+| EREC17 | data/habitats/host_associated/diaphragm__fbd202d9.yaml; Entire YAML | supports | habitatmech:GOLD.c84e967b80 (Diaphragm): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.fac4f63f3b"]. |
+| EREC18 | data/habitats/host_associated/diatoms.yaml; Entire YAML | supports | habitatmech:GOLD.1276bea544 (diatom-associated environment): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"]. |
+| EREC19 | data/habitats/host_associated/diffuse_large_b_cell_lymphoma.yaml; Entire YAML | supports | habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma): grounding_status=NOT_APPLICABLE, mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.aaf46ad718"]. |
+| EREC20 | data/habitats/host_associated/digestive_system.yaml; Entire YAML | supports | habitatmech:GOLD.26a84185d3 (Digestive system): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"]. |
+| EREC21 | data/habitats/host_associated/digestive_system__2589c8ce.yaml; Entire YAML | supports | habitatmech:GOLD.6eecdf150d (Digestive system): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.2959225799"]. |
+| EREC22 | data/habitats/host_associated/digestive_system__46d403bb.yaml; Entire YAML | supports | habitatmech:GOLD.d7cff86ce8 (Digestive system): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.dba2a83b95"]. |
+| EREC23 | data/habitats/host_associated/digestive_system__4f205b4d.yaml; Entire YAML | supports | habitatmech:GOLD.8a68d0f6f5 (Digestive system): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"]. |
+| EREC24 | data/habitats/host_associated/digestive_system__780e5b67.yaml; Entire YAML | supports | habitatmech:GOLD.c1d7082e4b (Digestive system): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.45a8229be1"]. |
 
 ## Limits And Additional Notes
 
@@ -168,7 +168,7 @@ summary: 'Full 24-record category boundary and cohort review of the contiguous u
   host_associated slice (dental_plaque__8396e8ec.yaml through digestive_system__780e5b67.yaml)
   at commit 56904acf1cf24914a262495568ecd63a67f5d9c7. All 24 records represent distinct
   host-clade, taphonomic, anatomical, or condition concepts (retain decisions). Record-level
-  open findings (20 total across 18 records) are recorded in the 24 linked kind: record
+  open findings (22 total across 18 records) are recorded in the 24 linked kind: record
   bundles for Stage 5 remediation.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
@@ -1465,7 +1465,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.26b1d1137f (Dental plaque): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0016482", "habitatmech:GOLD.92d1e65695"].'
   snapshot_sha256: 6e1575efe75a456ea1815cee1c453cb94a06c0f59bd07200aafc089a3c08a149
 - evidence_id: EREC2
   kind: record_content
@@ -1473,7 +1473,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'UBERON:0016482 (dental plaque): grounding_status=CLOSE, review_status=None,
+  summary: 'UBERON:0016482 (dental plaque): grounding_status=CLOSE, mapping_status=REVIEWED,
     parent_habitats=["UBERON:0000463"].'
   snapshot_sha256: 2b3ebf059f71e451c8efe2feac97d5025486dd2511907f295c8cfef5d8ba9a54
 - evidence_id: EREC3
@@ -1482,7 +1482,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'BTO:0000339 (dental pulp): grounding_status=EXACT, review_status=None,
+  summary: 'BTO:0000339 (dental pulp): grounding_status=EXACT, mapping_status=SEEDED,
     parent_habitats=[].'
   snapshot_sha256: c25c18b13fbca5682ade10e4ced3c0bd1520d8fc56ef2e72253e9fe83e9e5432
 - evidence_id: EREC4
@@ -1491,7 +1491,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'habitatmech:GOLD.0433dc9a8f (Dentin): grounding_status=NARROW, review_status=None,
+  summary: 'habitatmech:GOLD.0433dc9a8f (Dentin): grounding_status=NARROW, mapping_status=SEEDED,
     parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"].'
   snapshot_sha256: df79bd8bf8c8709778404626846f65edc367e40e27be6a6f50d7099d876b60d6
 - evidence_id: EREC5
@@ -1500,7 +1500,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'habitatmech:GOLD.7ec36a9a02 (Dentin): grounding_status=NARROW, review_status=None,
+  summary: 'habitatmech:GOLD.7ec36a9a02 (Dentin): grounding_status=NARROW, mapping_status=SEEDED,
     parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"].'
   snapshot_sha256: 5241500a69dddaba61cba51cde3f5308969a44c7b2e032a278d22b8564e7abd6
 - evidence_id: EREC6
@@ -1509,7 +1509,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'UBERON:0003672 (dentition): grounding_status=CLOSE, review_status=None,
+  summary: 'UBERON:0003672 (dentition): grounding_status=CLOSE, mapping_status=REVIEWED,
     parent_habitats=["UBERON:0000167", "UBERON:0034925"].'
   snapshot_sha256: 890406cb80158cf6bcf09a3fa354ac9fe236c25245b936260cf056f08253afdc
 - evidence_id: EREC7
@@ -1518,7 +1518,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'UBERON:0000412 (dermal papilla): grounding_status=EXACT, review_status=None,
+  summary: 'UBERON:0000412 (dermal papilla): grounding_status=EXACT, mapping_status=SEEDED,
     parent_habitats=["UBERON:0000479", "habitatmech:GOLD.4b37ab4b76"].'
   snapshot_sha256: 7e2e66c51abebf4a9a420183f03948e385daa930d7aa095174f580495363a3c8
 - evidence_id: EREC8
@@ -1528,7 +1528,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.25fd1f31a1 (mammalian dermatitis skin lesion): grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"].'
+    mapping_status=REVIEWED, parent_habitats=["ENVO:2100003", "habitatmech:GOLD.c896f9520f"].'
   snapshot_sha256: 90a25fe16a923592db45aadefb2992350822254b17bce07c3d0bd532b8d80f7d
 - evidence_id: EREC9
   kind: record_content
@@ -1537,7 +1537,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.fdd6965162 (Dermatitis): grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].'
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].'
   snapshot_sha256: 4db97a64903338ae7a62284917607bf032497b3f14e71145f61aa4c277c86c9c
 - evidence_id: EREC10
   kind: record_content
@@ -1545,8 +1545,9 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'UBERON:0002067 (dermis): grounding_status=EXACT, review_status=None, parent_habitats=["UBERON:0004121",
-    "UBERON:0004923", "UBERON:0010314", "UBERON:0013754", "habitatmech:GOLD.4b37ab4b76"].'
+  summary: 'UBERON:0002067 (dermis): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0004121", "UBERON:0004923", "UBERON:0010314", "UBERON:0013754",
+    "habitatmech:GOLD.4b37ab4b76"].'
   snapshot_sha256: 95e926ecad45ac21843873ef2708a6c54a6906639d1a04ed96cad2e6073106f2
 - evidence_id: EREC11
   kind: record_content
@@ -1555,7 +1556,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.6d07a07054 (human dermoid cyst): grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["BTO:0000320"].'
+    mapping_status=REVIEWED, parent_habitats=["BTO:0000320"].'
   snapshot_sha256: 609b8c0faa993a4d1101eb87d0d290a072534249ec8407b5ffcb5ef0c62c4deb
 - evidence_id: EREC12
   kind: record_content
@@ -1563,7 +1564,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'UBERON:0001158 (descending colon): grounding_status=EXACT, review_status=None,
+  summary: 'UBERON:0001158 (descending colon): grounding_status=EXACT, mapping_status=SEEDED,
     parent_habitats=["UBERON:0000168", "habitatmech:GOLD.5b0aa7456c"].'
   snapshot_sha256: 7974dc2d173a2d9f8e454c3d6fcf8a54c4b31d81719b928b150e3849cb122120
 - evidence_id: EREC13
@@ -1573,7 +1574,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.1219b1a720 (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].'
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.4b37ab4b76"].'
   snapshot_sha256: 5607add43928462aca6e464a801fbd0e310a90d40c6b49b38397aefc2478670f
 - evidence_id: EREC14
   kind: record_content
@@ -1582,7 +1583,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.76a84af82e (Diabetic foot ulcer (DFU)): grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.25f514731f"].'
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.25f514731f"].'
   snapshot_sha256: 1186d5b0d61f971b6c0717f0562993c547d13198e280cf415a64a771111673bb
 - evidence_id: EREC15
   kind: record_content
@@ -1590,7 +1591,8 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'BTO:0000341 (diaphragm): grounding_status=EXACT, review_status=None, parent_habitats=["BTO:0000508"].'
+  summary: 'BTO:0000341 (diaphragm): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000508"].'
   snapshot_sha256: 21eb71cabe04e736c6b5edef4a72e91f280d2e8e8b6b5966be2978b7720425bf
 - evidence_id: EREC16
   kind: record_content
@@ -1598,7 +1600,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'habitatmech:GOLD.a287a77880 (Diaphragm): grounding_status=NARROW, review_status=None,
+  summary: 'habitatmech:GOLD.a287a77880 (Diaphragm): grounding_status=NARROW, mapping_status=SEEDED,
     parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"].'
   snapshot_sha256: 9d4aa887a1eb6abf7a7267e5f34a740af01f2250685e06ff5b693951c7158a62
 - evidence_id: EREC17
@@ -1607,7 +1609,7 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
-  summary: 'habitatmech:GOLD.c84e967b80 (Diaphragm): grounding_status=NARROW, review_status=None,
+  summary: 'habitatmech:GOLD.c84e967b80 (Diaphragm): grounding_status=NARROW, mapping_status=SEEDED,
     parent_habitats=["UBERON:0001103", "habitatmech:GOLD.fac4f63f3b"].'
   snapshot_sha256: 35d39dd1286499e30b1d2dcfb291994d7d386770abd72ccaacc49f6471061436
 - evidence_id: EREC18
@@ -1617,7 +1619,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.1276bea544 (diatom-associated environment): grounding_status=UNGROUNDED,
-    review_status=None, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"].'
+    mapping_status=REVIEWED, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7"].'
   snapshot_sha256: a358efcab053e38f8621e445bf08675911c1a61702e4c122febaa283a7e0dd00
 - evidence_id: EREC19
   kind: record_content
@@ -1626,7 +1628,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.34d152cb9a (Diffuse large B-cell lymphoma): grounding_status=NOT_APPLICABLE,
-    review_status=None, parent_habitats=["habitatmech:GOLD.aaf46ad718"].'
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.aaf46ad718"].'
   snapshot_sha256: 2f90cd3d43d399a709c3c6c22dfe58015ac51009fa0eec1aa0054fb75d4b643d
 - evidence_id: EREC20
   kind: record_content
@@ -1635,7 +1637,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.26a84185d3 (Digestive system): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.1b11698aaa"].'
   snapshot_sha256: 74da9db7272afc818288c68c34b89e88cd76a352006fe3b47a4fba6ba6374adf
 - evidence_id: EREC21
   kind: record_content
@@ -1644,7 +1646,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.6eecdf150d (Digestive system): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.2959225799"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.2959225799"].'
   snapshot_sha256: bdaf3728a500b6956b691f5f9da8e0140f529d60b992870a5bcba2111bd4aaf1
 - evidence_id: EREC22
   kind: record_content
@@ -1653,7 +1655,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.d7cff86ce8 (Digestive system): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.dba2a83b95"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.dba2a83b95"].'
   snapshot_sha256: e8b58e033a3731b328a56df296015aee853c301a13a80079bae9fa1f2d4baeb8
 - evidence_id: EREC23
   kind: record_content
@@ -1662,7 +1664,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.8a68d0f6f5 (Digestive system): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"].'
   snapshot_sha256: 4be309cbf443304471b37ef96cb6b6243eacf6b9247c70efa710a52dfe03336c
 - evidence_id: EREC24
   kind: record_content
@@ -1671,7 +1673,7 @@ evidence:
   accessed_at: '2026-10-22T01:46:00Z'
   support: supports
   summary: 'habitatmech:GOLD.c1d7082e4b (Digestive system): grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.45a8229be1"].'
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.45a8229be1"].'
   snapshot_sha256: 1d931bfb10d8a2f8c7c16d8d6b3a46bac8dab00db8eef8838db01374116d5eb3
 assessments:
 - assessment_id: A1
@@ -1771,7 +1773,7 @@ assessments:
   area: grounding
   topic: Cohort hierarchy, synonym, and mapping-endpoint summary
   outcome: supported
-  summary: '6 records pass with limitations; 18 records have 20 open major findings
+  summary: '6 records pass with limitations; 18 records have 22 open major findings
     recorded in their respective kind: record bundles (linked in related_reviews)
     and carried forward to Stage 5 grouped remediation.'
   target_ids:

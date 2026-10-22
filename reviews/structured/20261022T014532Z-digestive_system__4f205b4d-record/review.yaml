@@ -17,10 +17,11 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: The minted GOLD record habitatmech:GOLD.8a68d0f6f5 (Digestive system in Host-associated
-  > Fish > Digestive system, NARROW/SEEDED, 616 BIOSAMPLE, 345 ORGANISM, 16 STUDY)
-  preserves fish digestive-system scope and xref UBERON:0001007 without a false host-clade
-  superclass, but declares skos:narrowMatch on a SourceAttestation whose record identifier
-  is the minted GOLD path ID.
+  > Fish > Digestive system, NARROW/SEEDED, 121 ORGANISM assertions) preserves fish
+  digestive-system scope under broader ontology parent UBERON:0001007 (digestive system)
+  and coherent host-environment parent habitatmech:GOLD.3d529a667e (fish-associated
+  environment), but declares skos:narrowMatch on a SourceAttestation whose record
+  identifier is the minted GOLD path ID.
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -397,7 +398,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:32Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.8a68d0f6f5, grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.3d529a667e"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -433,11 +434,11 @@ evidence:
   support: supports
   summary: '{"definition": "An environmental system determined by a fish.", "grounding_status":
     "UNGROUNDED", "identifier": "habitatmech:GOLD.3d529a667e", "label": "fish-associated
-    environment", "parent_habitats": ["ENVO:01001000", "ENVO:01001002"], "review_status":
-    null, "source_attestations": [{"assertion_count": 1350, "assertion_unit": "ORGANISM",
-    "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
-    "source": "GOLD", "source_id": "gold.ecosystem:3375", "source_label": "Fish",
-    "source_path": "Host-associated > Fish"}]}'
+    environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000",
+    "ENVO:01001002"], "source_attestations": [{"assertion_count": 1350, "assertion_unit":
+    "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown.
+    See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3375",
+    "source_label": "Fish", "source_path": "Host-associated > Fish"}]}'
   snapshot_sha256: 511e15b9761796b18df95ffb1befb025a6e4e8f6c68a8b85fb5ffa2710cd0308
 - evidence_id: ESEARCH
   kind: search
@@ -468,7 +469,8 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: Keeping the fish digestive-system bin separate from pan-metazoan UBERON:0001007
-    preserves host scope, and the host-clade GOLD parent is already excluded (#2142),
+    preserves host scope, and the other parent habitatmech:GOLD.3d529a667e (fish-associated
+    environment) is an associated-environment class coherent for this host context,
     but SourceAttestation.mapping_predicate emits skos:narrowMatch on a minted GOLD
     path ID (#1398).
   target_ids:
@@ -503,8 +505,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.8a68d0f6f5
   evidence_ids:
@@ -520,14 +522,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.8a68d0f6f5.
   target_ids:
   - habitatmech:GOLD.8a68d0f6f5
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -563,7 +565,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001007 (digestive system) rather than the minted record identifier habitatmech:GOLD.8a68d0f6f5.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

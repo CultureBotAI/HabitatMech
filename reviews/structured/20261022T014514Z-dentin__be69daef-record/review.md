@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record (habitatmech:GOLD.7ec36a9a02) preserves human skeletonized-remains dentin scope (54 BIOSAMPLE, 1 STUDY) and xref BTO:0003453 (dentin), but retains habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) as a superclass and declares skos:narrowMatch against its own minted record identifier.
+The minted GOLD record (habitatmech:GOLD.7ec36a9a02) preserves human skeletonized-remains dentin scope (no assertion count/unit; total_assertions: 0 in GOLD) under broader ontology parent BTO:0003453 (dentin), but retains habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) as a superclass and declares skos:narrowMatch against its own minted record identifier.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.7ec36a9a02.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NARROW; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / NARROW; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,19 +72,19 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dentin--be69daef-context-parent.
 
-Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record, xref BTO:0003453, and 54 BIOSAMPLE / 1 STUDY assertions.
+Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record, broader ontology parent BTO:0003453, and source attestation (total_assertions: 0 in GOLD).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
 major / open / confirmed; issue key: dentin--be69daef-mapping-endpoint-contract.
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record, xref BTO:0003453, and 54 BIOSAMPLE / 1 STUDY assertions. No repair is performed by this read-only review.
+Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record, broader ontology parent BTO:0003453, and source attestation (total_assertions: 0 in GOLD). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -92,7 +92,7 @@ Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba
 
 ### ACT2
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02. No repair is performed by this read-only review.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -108,10 +108,10 @@ Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses th
 | E1 | data/habitats/host_associated/dentin__be69daef.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.7ec36a9a02 (Dentin) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.7ec36a9a02, grounding_status=NARROW, review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.7ec36a9a02, grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2396 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Skeletonized remains &gt; Dentin", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Skeletonized remains", "ecosystem_type": "Remains", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6137", "leaf_label": "Dentin", "organism_count": "0", "specific_ecosystem": "Dentin", "study_count": "0", "total_assertions": "0"}, "row": 2396}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 3453 | supports | [{"data": {"definition": "The calcified tissue below the enamel, enclosing the cavity of the tooth containing the pulp chamber and root canals.", "deprecated": "", "directly_referenced": "FALSE", "label": "dentin", "label_only": "FALSE", "ontology": "BTO", "synonyms": "", "term_id": "BTO:0003453"}, "row": 3453}] |
-| EP2 | data/habitats/host_associated/skeletonized_remains.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A bone tissue assemblage from human post-mortem skeletal remains after soft tissue decomposition, colonized by osteolytic and archaeological bone-associated microorganisms.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.2f62ba7993", "label": "human skeletonized remains", "parent_habitats": ["UBERON:0002481"], "review_status": null, "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6135", "source_label": "Skeletonized remains", "source_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Skeletonized remains"}]} |
+| EP2 | data/habitats/host_associated/skeletonized_remains.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A bone tissue assemblage from human post-mortem skeletal remains after soft tissue decomposition, colonized by osteolytic and archaeological bone-associated microorganisms.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.2f62ba7993", "label": "human skeletonized remains", "mapping_status": "REVIEWED", "parent_habitats": ["UBERON:0002481"], "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6135", "source_label": "Skeletonized remains", "source_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Skeletonized remains"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dentin__be69daef&#124;habitatmech:GOLD.7ec36a9a02' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -148,11 +148,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The minted GOLD record (habitatmech:GOLD.7ec36a9a02) preserves human skeletonized-remains
-  dentin scope (54 BIOSAMPLE, 1 STUDY) and xref BTO:0003453 (dentin), but retains
-  habitatmech:GOLD.2f62ba7993 (human skeletonized remains, defined as a bone tissue
-  assemblage under UBERON:0002481 bone tissue) as a superclass and declares skos:narrowMatch
-  against its own minted record identifier.
+summary: 'The minted GOLD record (habitatmech:GOLD.7ec36a9a02) preserves human skeletonized-remains
+  dentin scope (no assertion count/unit; total_assertions: 0 in GOLD) under broader
+  ontology parent BTO:0003453 (dentin), but retains habitatmech:GOLD.2f62ba7993 (human
+  skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481 bone
+  tissue) as a superclass and declares skos:narrowMatch against its own minted record
+  identifier.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -529,7 +530,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:14Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.7ec36a9a02, grounding_status=NARROW,
-    review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"].
+    mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.2f62ba7993"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -564,9 +565,9 @@ evidence:
   summary: '{"definition": "A bone tissue assemblage from human post-mortem skeletal
     remains after soft tissue decomposition, colonized by osteolytic and archaeological
     bone-associated microorganisms.", "grounding_status": "UNGROUNDED", "identifier":
-    "habitatmech:GOLD.2f62ba7993", "label": "human skeletonized remains", "parent_habitats":
-    ["UBERON:0002481"], "review_status": null, "source_attestations": [{"notes": "2
-    GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "habitatmech:GOLD.2f62ba7993", "label": "human skeletonized remains", "mapping_status":
+    "REVIEWED", "parent_habitats": ["UBERON:0002481"], "source_attestations": [{"notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6135", "source_label": "Skeletonized
     remains", "source_path": "Host-associated > Mammals: Human > Remains > Skeletonized
     remains"}]}'
@@ -635,8 +636,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.7ec36a9a02
   evidence_ids:
@@ -651,17 +652,18 @@ findings:
   status: open
   certainty: confirmed
   title: Bone-tissue skeletonized remains parent is asserted as a dentin superclass
-  description: Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993
+  description: 'Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993
     (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481
     bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from
     skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record,
-    xref BTO:0003453, and 54 BIOSAMPLE / 1 STUDY assertions.
+    broader ontology parent BTO:0003453, and source attestation (total_assertions:
+    0 in GOLD).'
   target_ids:
   - habitatmech:GOLD.7ec36a9a02
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE
@@ -690,14 +692,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02.
   target_ids:
   - habitatmech:GOLD.7ec36a9a02
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -732,12 +734,12 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993
+  description: 'Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993
     (human skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481
     bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from
     skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record,
-    xref BTO:0003453, and 54 BIOSAMPLE / 1 STUDY assertions. No repair is performed
-    by this read-only review.
+    broader ontology parent BTO:0003453, and source attestation (total_assertions:
+    0 in GOLD). No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.
@@ -761,7 +763,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.7ec36a9a02.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

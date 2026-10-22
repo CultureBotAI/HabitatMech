@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.a287a77880 (Diaphragm in Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Diaphragm, NARROW/SEEDED) preserves human diaphragm scope and xref UBERON:0001103, but retains habitatmech:GOLD.e36ba981d1 (human Respiratory system) as a superclass in parent_habitats and declares skos:narrowMatch against its own minted record identifier.
+The minted GOLD record habitatmech:GOLD.a287a77880 (Diaphragm in Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Diaphragm, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) preserves human diaphragm scope under broader ontology parent UBERON:0001103 (diaphragm), but retains habitatmech:GOLD.e36ba981d1 (human Respiratory system) as a superclass in parent_habitats and declares skos:narrowMatch against its own minted record identifier.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.a287a77880.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NARROW; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / NARROW; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -78,7 +78,7 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.e
 
 major / open / confirmed; issue key: diaphragm--3c058609-mapping-endpoint-contract.
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -92,7 +92,7 @@ Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.e
 
 ### ACT2
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880. No repair is performed by this read-only review.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -108,10 +108,10 @@ Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses th
 | E1 | data/habitats/host_associated/diaphragm__3c058609.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.a287a77880 (Diaphragm) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.a287a77880, grounding_status=NARROW, review_status=None, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.a287a77880, grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2422 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Diaphragm", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Diaphragm", "ecosystem_type": "Respiratory system", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:6636&#124;gold.ecosystem:6637", "leaf_label": "Diaphragm", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions": "0"}, "row": 2422}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13009 | supports | [{"data": {"definition": "A thin musculomebranous barrier that separates the abdominal and thoracic cavities. Often used for breathing control.", "deprecated": "", "directly_referenced": "FALSE", "label": "diaphragm", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "diaphragm muscle&#124;diaphragm of thorax&#124;midriff&#124;phren&#124;thoracic diaphragm", "term_id": "UBERON:0001103"}, "row": 13009}] |
-| EP2 | data/habitats/host_associated/respiratory_system__c59e08b7.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.e36ba981d1", "label": "Respiratory system", "parent_habitats": ["UBERON:0001004", "habitatmech:GOLD.cd0b0940e5"], "review_status": null, "source_attestations": [{"assertion_count": 2496, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3592", "source_label": "Respiratory system", "source_path": "Host-associated &gt; Mammals: Human &gt; Respiratory system"}]} |
+| EP2 | data/habitats/host_associated/respiratory_system__c59e08b7.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.e36ba981d1", "label": "Respiratory system", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0001004", "habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"assertion_count": 2496, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3592", "source_label": "Respiratory system", "source_path": "Host-associated &gt; Mammals: Human &gt; Respiratory system"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'diaphragm__3c058609&#124;habitatmech:GOLD.a287a77880' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -149,9 +149,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.a287a77880 (Diaphragm in Host-associated
-  > Mammals: Human > Respiratory system > Diaphragm, NARROW/SEEDED) preserves human
-  diaphragm scope and xref UBERON:0001103, but retains habitatmech:GOLD.e36ba981d1
-  (human Respiratory system) as a superclass in parent_habitats and declares skos:narrowMatch
+  > Mammals: Human > Respiratory system > Diaphragm, NARROW/SEEDED, no assertion count/unit;
+  total_assertions: 0 in GOLD) preserves human diaphragm scope under broader ontology
+  parent UBERON:0001103 (diaphragm), but retains habitatmech:GOLD.e36ba981d1 (human
+  Respiratory system) as a superclass in parent_habitats and declares skos:narrowMatch
   against its own minted record identifier.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
@@ -529,7 +530,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:25Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.a287a77880, grounding_status=NARROW,
-    review_status=None, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"].
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001103", "habitatmech:GOLD.e36ba981d1"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -564,10 +565,10 @@ evidence:
   accessed_at: '2026-10-22T01:45:25Z'
   support: supports
   summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.e36ba981d1",
-    "label": "Respiratory system", "parent_habitats": ["UBERON:0001004", "habitatmech:GOLD.cd0b0940e5"],
-    "review_status": null, "source_attestations": [{"assertion_count": 2496, "assertion_unit":
-    "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem
-    node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "label": "Respiratory system", "mapping_status": "SEEDED", "parent_habitats":
+    ["UBERON:0001004", "habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"assertion_count":
+    2496, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:3592", "source_label": "Respiratory
     system", "source_path": "Host-associated > Mammals: Human > Respiratory system"}]}'
   snapshot_sha256: 0d8101ace5990d421d05f42843f07b3a7b92a348ba9625737bb0827256ab2554
@@ -636,8 +637,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.a287a77880
   evidence_ids:
@@ -661,7 +662,7 @@ findings:
   field_paths:
   - parent_habitats
   - grounding_status
-  - review_status
+  - mapping_status
   evidence_ids:
   - E1
   - ERULE
@@ -690,14 +691,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880.
   target_ids:
   - habitatmech:GOLD.a287a77880
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -760,7 +761,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     UBERON:0001103 (diaphragm) rather than the minted record identifier habitatmech:GOLD.a287a77880.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

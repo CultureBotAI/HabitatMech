@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record (habitatmech:GOLD.0433dc9a8f) preserves human fossilized-remains dentin scope (43 BIOSAMPLE, 1 STUDY) under fossilized hominin remains (habitatmech:GOLD.f1a2eca320) with xref BTO:0003453 (dentin), but declares skos:narrowMatch on a SourceAttestation whose record identifier is the minted GOLD path ID.
+The minted GOLD record (habitatmech:GOLD.0433dc9a8f) preserves human fossilized-remains dentin scope (no assertion count/unit; total_assertions: 0 in GOLD) under fossilized hominin remains (habitatmech:GOLD.f1a2eca320) and broader ontology parent BTO:0003453 (dentin), but declares skos:narrowMatch on a SourceAttestation whose record identifier is the minted GOLD path ID.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: habitatmech:GOLD.0433dc9a8f.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / NARROW; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / NARROW; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -72,13 +72,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: dentin-mapping-endpoint-contract.
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology target BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f. No repair is performed by this read-only review.
+Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses the relation between the GOLD source path and the broader ontology parent BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,10 +94,10 @@ Resolve the mapping_predicate endpoint contract so skos:narrowMatch expresses th
 | E1 | data/habitats/host_associated/dentin.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for habitatmech:GOLD.0433dc9a8f (Dentin) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.0433dc9a8f, grounding_status=NARROW, review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:GOLD.0433dc9a8f, grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"]. |
 | EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 2376 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Fossilized remains &gt; Dentin", "depth": "5", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "Fossilized remains", "ecosystem_type": "Remains", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:6673", "leaf_label": "Dentin", "organism_count": "0", "specific_ecosystem": "Dentin", "study_count": "0", "total_assertions": "0"}, "row": 2376}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 3453 | supports | [{"data": {"definition": "The calcified tissue below the enamel, enclosing the cavity of the tooth containing the pulp chamber and root canals.", "deprecated": "", "directly_referenced": "FALSE", "label": "dentin", "label_only": "FALSE", "ontology": "BTO", "synonyms": "", "term_id": "BTO:0003453"}, "row": 3453}] |
-| EP2 | data/habitats/host_associated/fossilized_remains__8b01c49f.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A fossil material consisting of mineralized bone or tooth remains of an ancient human or archaic hominin preserved in archaeological or paleoanthropological strata.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.f1a2eca320", "label": "fossilized hominin remains", "parent_habitats": ["ENVO:00002164"], "review_status": null, "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6138", "source_label": "Fossilized remains", "source_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Fossilized remains"}]} |
+| EP2 | data/habitats/host_associated/fossilized_remains__8b01c49f.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "A fossil material consisting of mineralized bone or tooth remains of an ancient human or archaic hominin preserved in archaeological or paleoanthropological strata.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.f1a2eca320", "label": "fossilized hominin remains", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:00002164"], "source_attestations": [{"notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6138", "source_label": "Fossilized remains", "source_path": "Host-associated &gt; Mammals: Human &gt; Remains &gt; Fossilized remains"}]} |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dentin&#124;habitatmech:GOLD.0433dc9a8f' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
 
 ## Limits And Additional Notes
@@ -134,10 +134,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The minted GOLD record (habitatmech:GOLD.0433dc9a8f) preserves human fossilized-remains
-  dentin scope (43 BIOSAMPLE, 1 STUDY) under fossilized hominin remains (habitatmech:GOLD.f1a2eca320)
-  with xref BTO:0003453 (dentin), but declares skos:narrowMatch on a SourceAttestation
-  whose record identifier is the minted GOLD path ID.
+summary: 'The minted GOLD record (habitatmech:GOLD.0433dc9a8f) preserves human fossilized-remains
+  dentin scope (no assertion count/unit; total_assertions: 0 in GOLD) under fossilized
+  hominin remains (habitatmech:GOLD.f1a2eca320) and broader ontology parent BTO:0003453
+  (dentin), but declares skos:narrowMatch on a SourceAttestation whose record identifier
+  is the minted GOLD path ID.'
 source:
   git_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
   state: git_commit
@@ -514,7 +515,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:13Z'
   support: supports
   summary: Seed generator produces identifier=habitatmech:GOLD.0433dc9a8f, grounding_status=NARROW,
-    review_status=None, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"].
+    mapping_status=SEEDED, parent_habitats=["BTO:0003453", "habitatmech:GOLD.f1a2eca320"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EGOLD
   kind: database
@@ -549,9 +550,9 @@ evidence:
   summary: '{"definition": "A fossil material consisting of mineralized bone or tooth
     remains of an ancient human or archaic hominin preserved in archaeological or
     paleoanthropological strata.", "grounding_status": "UNGROUNDED", "identifier":
-    "habitatmech:GOLD.f1a2eca320", "label": "fossilized hominin remains", "parent_habitats":
-    ["ENVO:00002164"], "review_status": null, "source_attestations": [{"notes": "2
-    GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "habitatmech:GOLD.f1a2eca320", "label": "fossilized hominin remains", "mapping_status":
+    "REVIEWED", "parent_habitats": ["ENVO:00002164"], "source_attestations": [{"notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
     "source": "GOLD", "source_id": "gold.ecosystem:6138", "source_label": "Fossilized
     remains", "source_path": "Host-associated > Mammals: Human > Remains > Fossilized
     remains"}]}'
@@ -621,8 +622,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / NARROW; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce SEEDED / NARROW; this read-only review
+    does not mutate generated records.
   target_ids:
   - habitatmech:GOLD.0433dc9a8f
   evidence_ids:
@@ -638,14 +639,14 @@ findings:
   certainty: confirmed
   title: Narrow mapping predicate points to a minted source-path record
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f.
   target_ids:
   - habitatmech:GOLD.0433dc9a8f
   field_paths:
   - source_attestations[0].mapping_predicate
   - identifier
-  - xrefs
+  - parent_habitats
   evidence_ids:
   - E1
   - ERULE
@@ -681,7 +682,7 @@ actions:
     path: src/habitatmech/schema/habitatmech.yaml
     role: Maintained input or generator; never patch generated habitat YAML
   description: Resolve the mapping_predicate endpoint contract so skos:narrowMatch
-    expresses the relation between the GOLD source path and the broader ontology target
+    expresses the relation between the GOLD source path and the broader ontology parent
     BTO:0003453 (dentin) rather than the minted record identifier habitatmech:GOLD.0433dc9a8f.
     No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

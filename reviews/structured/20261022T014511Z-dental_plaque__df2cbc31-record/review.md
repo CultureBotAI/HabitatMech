@@ -64,7 +64,7 @@ Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools:
 
 completeness: supported. Targets: UBERON:0016482.
 
-Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce None / CLOSE; this read-only review does not mutate generated records.
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce REVIEWED / CLOSE; this read-only review does not mutate generated records.
 
 ## Findings
 
@@ -82,7 +82,7 @@ No findings recorded within this review's declared scope.
 | E1 | data/habitats/host_associated/dental_plaque__df2cbc31.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0016482 (dental plaque) were read. |
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, not-applicable disease bins, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
-| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0016482, grounding_status=CLOSE, review_status=None, parent_habitats=["UBERON:0000463"]. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0016482, grounding_status=CLOSE, mapping_status=REVIEWED, parent_habitats=["UBERON:0000463"]. |
 | EBACDIVE | data/raw/bacdive_isolation_sources.tsv; TSV rows 69 | supports | [{"data": {"bacdive_id": "bacdive.isolation_source:plaque", "label": "Plaque", "source_slug": "plaque", "strain_count": "106", "taxon_count": "58"}, "row": 69}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12934,13478 | supports | [{"data": {"definition": "Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body.", "deprecated": "", "directly_referenced": "FALSE", "label": "organism substance", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "body fluid or substance&#124;body substance&#124;organism substance&#124;portion of body substance&#124;portion of organism substance", "term_id": "UBERON:0000463"}, "row": 12934}, {"data": {"definition": "A soft, thin film of food debris, mucin, and dead epithelial cells deposited on the teeth, providing the medium for the growth of various bacteria. The main inorganic components are calcium and phosphorus, with small amounts of magnesium, potassium, and sodium; the organic matrix consists of polysaccharides, proteins, carbohydrates, lipids, and other components. Plaque plays an important etiologic role in the development of dental caries and periodontal and gingival diseases and provides the base for the development of materia alba; calcified plaque forms dental calculus.", "deprecated": "", "directly_referenced": "TRUE", "label": "dental plaque", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "bacterial plaque&#124;plaque", "term_id": "UBERON:0016482"}, "row": 13478}] |
 | ESEARCH | Local input and review traversal; grep -rn -E 'dental_plaque__df2cbc31&#124;UBERON:0016482' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
@@ -498,7 +498,7 @@ evidence:
   accessed_at: '2026-10-22T01:45:11Z'
   support: supports
   summary: Seed generator produces identifier=UBERON:0016482, grounding_status=CLOSE,
-    review_status=None, parent_habitats=["UBERON:0000463"].
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0000463"].
   snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
 - evidence_id: EBACDIVE
   kind: database
@@ -594,8 +594,8 @@ assessments:
   topic: Parameters, mechanisms and native status
   outcome: supported
   summary: Missing optional parameters/graphs are not evidence deficits. Full source
-    decisions and executed routes reproduce None / CLOSE; this read-only review does
-    not mutate generated records.
+    decisions and executed routes reproduce REVIEWED / CLOSE; this read-only review
+    does not mutate generated records.
   target_ids:
   - UBERON:0016482
   evidence_ids:
