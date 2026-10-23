@@ -320,9 +320,133 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Marinobacter hydrocarbonoclasticus ATCC 49840
   candidate_pool: 99
+causal_graphs:
+- graph_id: petroleum_anaerobic_hydrocarbon_methanogenic_souring
+  title: Petroleum reservoir anaerobic hydrocarbon biodegradation and methanogenic
+    heavy-oil conversion mechanism
+  description: Subsurface petroleum reservoirs and entrapped microliter formation-water
+    droplets provide crude-oil n-alkanes and aromatic hydrocarbons under anoxic conditions
+    below ~80 degrees C, selecting for anaerobic hydrocarbon-degrading bacteria and
+    hydrogenotrophic methanogenic archaea at oil-water interfaces that sequentially
+    remove n-alkanes, generate stoichiometric biogenic methane, and convert light
+    crude oil into heavy oil.
+  nodes:
+  - node_id: petroleum
+    label: petroleum
+    node_type: HABITAT
+    grounding: ENVO:00002984
+    description: Naturally occurring liquid hydrocarbon mixture (crude oil) in subsurface
+      geological reservoirs, asphalt lakes, and oil-water transition zones.
+  - node_id: anoxic_oil_water_transition_and_entrapped_droplets
+    label: anoxic oil-water transition zone and entrapped water droplets (<80 C)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Anoxic oil-water transition zones and dispersed microliter water
+      droplets inside crude oil at subsurface temperatures up to ~80 degrees C.
+  - node_id: anaerobic_alkane_degrading_methanogenic_consortium
+    label: anaerobic hydrocarbon-degrading and hydrogenotrophic methanogenic consortium
+    node_type: COMMUNITY
+    description: Syntrophic anaerobic bacterial and archaeal communities inhabiting
+      oil-water interfaces and entrapped water droplets that couple preferential n-alkane
+      oxidation to hydrogenotrophic methanogenesis.
+  - node_id: sequential_alkane_removal_and_methane_generation
+    label: preferential n-alkane removal and hydrogenotrophic methanogenesis
+    node_type: COMMUNITY_PROCESS
+    description: Sequential anaerobic removal of crude-oil compound classes (starting
+      with n-alkanes) yielding near-stoichiometric biogenic methane via hydrogenotrophic
+      methanogenesis.
+  - node_id: heavy_oil_conversion_and_dry_gas_accumulation
+    label: heavy oil formation and subsurface biogenic dry gas accumulation
+    node_type: COMMUNITY_PROCESS
+    description: Geological-scale transformation of light crude oils into denser heavy
+      oils accompanied by dry methane gas accumulation.
+  edges:
+  - edge_id: petroleum_hosts_anoxic_oil_water_transition_and_entrapped_droplets
+    subject: petroleum
+    predicate: supplies
+    object: anoxic_oil_water_transition_and_entrapped_droplets
+    description: Meckenstock et al. 2014 (Science, PMID:25104386) show that both the
+      oil-water transition zone and 1-3 microliter water droplets entrapped in petroleum
+      serve as active microbial microhabitats.
+    evidence:
+    - reference: PMID:25104386
+      snippet: Anaerobic microbial degradation of hydrocarbons, typically occurring
+        at the oil-water transition zone, influences the quality of oil reservoirs.
+        In Pitch Lake, Trinidad and Tobago--the world's largest asphalt lake--we found
+        that microorganisms are metabolically active in minuscule water droplets (1
+        to 3 microliters) entrapped in oil.
+      notes: Meckenstock et al. 2014 (Science, PMID:25104386) show that both the oil-water
+        transition zone and 1-3 microliter water droplets entrapped in petroleum serve
+        as active microbial microhabitats.
+  - edge_id: anoxic_oil_water_transition_and_entrapped_droplets_selects_for_anaerobic_alkane_degrading_methanogenic_consortium
+    subject: anoxic_oil_water_transition_and_entrapped_droplets
+    predicate: selects for
+    object: anaerobic_alkane_degrading_methanogenic_consortium
+    description: Head et al. 2003 (Nature, PMID:14628064) establish the ~80 C thermal
+      boundary for anaerobic hydrocarbon-degrading microbiota in subsurface petroleum
+      reservoirs.
+    evidence:
+    - reference: PMID:14628064
+      snippet: At temperatures up to about 80 degrees C, petroleum in subsurface reservoirs
+        is often biologically degraded, over geological timescales, by microorganisms
+        that destroy hydrocarbons and other components to produce altered, denser
+        'heavy oils'.
+      notes: Head et al. 2003 (Nature, PMID:14628064) establish the ~80 C thermal
+        boundary for anaerobic hydrocarbon-degrading microbiota in subsurface petroleum
+        reservoirs.
+    - reference: PMID:25104386
+      snippet: Pyrotag sequencing of individual droplet microbiomes revealed complex
+        methanogenic microbial communities actively degrading the oil into a diverse
+        range of metabolites, as shown by nuclear magnetic resonance and Fourier transform
+        ion cyclotron resonance mass spectrometry.
+      notes: Individual water droplets entrapped in crude oil harbor complex methanogenic
+        hydrocarbon-degrading communities.
+  - edge_id: anaerobic_alkane_degrading_methanogenic_consortium_drives_sequential_alkane_removal_and_methane_generation
+    subject: anaerobic_alkane_degrading_methanogenic_consortium
+    predicate: drives
+    object: sequential_alkane_removal_and_methane_generation
+    description: Jones et al. 2008 (Nature, PMID:18075503) demonstrate that methanogenic
+      oil-degrading consortia preferentially remove n-alkanes and generate stoichiometric
+      methane via hydrogenotrophic methanogenesis.
+    evidence:
+    - reference: PMID:18075503
+      snippet: We find that crude-oil hydrocarbon degradation under methanogenic conditions
+        in the laboratory mimics the characteristic sequential removal of compound
+        classes seen in reservoir-degraded petroleum. The initial preferential removal
+        of n-alkanes generates close to stoichiometric amounts of methane, principally
+        by hydrogenotrophic methanogenesis.
+      notes: Jones et al. 2008 (Nature, PMID:18075503) demonstrate that methanogenic
+        oil-degrading consortia preferentially remove n-alkanes and generate stoichiometric
+        methane via hydrogenotrophic methanogenesis.
+  - edge_id: sequential_alkane_removal_and_methane_generation_produces_heavy_oil_conversion_and_dry_gas_accumulation
+    subject: sequential_alkane_removal_and_methane_generation
+    predicate: produces
+    object: heavy_oil_conversion_and_dry_gas_accumulation
+    description: Methanogenic alkane biodegradation produces the global signature
+      of heavy degraded oil associated with dry methane gas.
+    evidence:
+    - reference: PMID:18075503
+      snippet: Our data imply a common methanogenic biodegradation mechanism in subsurface
+        degraded oil reservoirs, resulting in consistent patterns of hydrocarbon alteration,
+        and the common association of dry gas with severely degraded oils observed
+        worldwide.
+      notes: Methanogenic alkane biodegradation produces the global signature of heavy
+        degraded oil associated with dry methane gas.
+    - reference: PMID:14628064
+      snippet: Most of the world's oil was biodegraded under anaerobic conditions,
+        with methane, a valuable commodity, often being a major by-product, which
+        suggests alternative approaches to recovering the world's vast heavy oil resource
+        that otherwise will remain largely unproduced.
+      notes: Anaerobic biodegradation converts light crude oil into heavy oil with
+        methane as a major by-product.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added petroleum_anaerobic_hydrocarbon_methanogenic_souring mechanism graph
+    for petroleum (ENVO:00002984) backed by PMID:25104386, PMID:14628064, PMID:18075503.
+  llm_assisted: true

@@ -152,6 +152,107 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Prevotella baroniae DSM 16972
   candidate_pool: 608
+causal_graphs:
+- graph_id: mouth_salivary_flow_multispecies_biofilm_succession
+  title: Oral salivary shear, surface adhesion, and multispecies biofilm coaggregation
+    mechanism
+  description: Continuous salivary secretion and swallowing clearance in the oral
+    cavity prevent persistent planktonic growth and select for surface-adherent pioneer
+    Streptococcus and Actinomyces species on tooth enamel and mucosal epithelia, initiating
+    cell-cell coaggregation, metabolic and signaling cooperation with bridging Fusobacterium
+    and Veillonella, and sugar- or inflammation-driven shifts toward cariogenic or
+    periodontal dysbiosis.
+  nodes:
+  - node_id: mouth_environment
+    label: mouth environment
+    node_type: HABITAT
+    grounding: ENVO:08000002
+    description: Oral cavity environment comprising mineralized tooth surfaces, mucosal
+      epithelia, gingival crevices, and bathing salivary secretions.
+  - node_id: salivary_flow_and_swallowing_shear
+    label: constant salivary flow and swallowing clearance
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Continuous flow of host salivary secretions and swallowing that washes
+      out non-adherent planktonic bacteria from the oral cavity.
+  - node_id: pellicle_and_epithelial_surface_adhesion
+    label: adhesion to tooth surfaces and oral epithelial tissues
+    node_type: COMMUNITY_PROCESS
+    description: Initial attachment of oral pioneer bacteria (such as Streptococcus
+      and Actinomyces spp.) to enamel pellicle and soft mucosal surfaces.
+  - node_id: polymicrobial_oral_biofilm_community
+    label: cooperative multispecies oral biofilm community
+    node_type: COMMUNITY
+    description: Spatially structured oral biofilm comprising Streptococcus, Actinomyces,
+      Veillonella, Fusobacterium, Prevotella, and Porphyromonas linked by short-range
+      metabolic cooperation and interspecies signaling.
+  - node_id: sugar_and_inflammation_dysbiotic_feedforward
+    label: dietary sugar acidogenesis and inflammatory dysbiosis loop
+    node_type: COMMUNITY_PROCESS
+    description: Feedforward loop between oral biofilm metabolism and host/dietary
+      factors (dietary sugars in dental caries and gingival inflammation in periodontitis)
+      that shifts homeostasis toward dysbiosis.
+  edges:
+  - edge_id: mouth_environment_imposes_salivary_flow_and_swallowing_shear
+    subject: mouth_environment
+    predicate: maintains
+    object: salivary_flow_and_swallowing_shear
+    description: Kolenbrander et al. 2010 (Nat Rev Microbiol) explain that constant
+      flow of host secretions and swallowing prevents unattached planktonic bacterial
+      growth in the mouth.
+    evidence:
+    - reference: PMID:20514044
+      snippet: Growth of oral bacteria in situ requires adhesion to a surface because
+        the constant flow of host secretions thwarts the ability of planktonic cells
+        to grow before they are swallowed.
+      notes: Kolenbrander et al. 2010 (Nat Rev Microbiol) explain that constant flow
+        of host secretions and swallowing prevents unattached planktonic bacterial
+        growth in the mouth.
+  - edge_id: salivary_flow_and_swallowing_shear_selects_for_pellicle_and_epithelial_surface_adhesion
+    subject: salivary_flow_and_swallowing_shear
+    predicate: selects for
+    object: pellicle_and_epithelial_surface_adhesion
+    description: Oral clearance pressure selects for bacterial surface adhesion to
+      hard tooth surfaces and soft oral epithelia.
+    evidence:
+    - reference: PMID:20514044
+      snippet: Therefore, oral bacteria evolved to form biofilms on hard tooth surfaces
+        and on soft epithelial tissues, which often contain multiple bacterial species.
+      notes: Oral clearance pressure selects for bacterial surface adhesion to hard
+        tooth surfaces and soft oral epithelia.
+  - edge_id: pellicle_and_epithelial_surface_adhesion_drives_polymicrobial_oral_biofilm_community
+    subject: pellicle_and_epithelial_surface_adhesion
+    predicate: drives
+    object: polymicrobial_oral_biofilm_community
+    description: Initial adherence to teeth and oral tissues nucleates multispecies
+      cooperation, signaling, and horizontal DNA transfer in oral biofilms.
+    evidence:
+    - reference: PMID:20514044
+      snippet: In this Review we describe the factors involved in the formation of
+        these biofilms, including the initial adherence to the oral tissues and teeth,
+        cooperation between bacterial species in the biofilm, signalling between the
+        bacteria and its role in pathogenesis, and the transfer of DNA between bacteria.
+      notes: Initial adherence to teeth and oral tissues nucleates multispecies cooperation,
+        signaling, and horizontal DNA transfer in oral biofilms.
+    - reference: PMID:30301974
+      snippet: Distinct microenvironments at oral barriers harbour unique microbial
+        communities, which are regulated through sophisticated signalling systems
+        and by host and environmental factors.
+      notes: Lamont et al. 2018 (Nat Rev Microbiol) describe how oral barrier microenvironments
+        support signaling-regulated polymicrobial communities.
+  - edge_id: polymicrobial_oral_biofilm_community_modulates_sugar_and_inflammation_dysbiotic_feedforward
+    subject: polymicrobial_oral_biofilm_community
+    predicate: drives
+    object: sugar_and_inflammation_dysbiotic_feedforward
+    description: Oral polymicrobial community function governs the balance between
+      oral homeostasis and sugar- or inflammation-driven dysbiosis.
+    evidence:
+    - reference: PMID:30301974
+      snippet: Despite different aetiologies, periodontitis and caries are each driven
+        by a feedforward loop between the microbiota and host factors (inflammation
+        and dietary sugars, respectively) that favours the emergence and persistence
+        of dysbiosis.
+      notes: Oral polymicrobial community function governs the balance between oral
+        homeostasis and sugar- or inflammation-driven dysbiosis.
 curation_history:
 - timestamp: '2026-08-15T00:00:00Z'
   curator: claude-opus-5
@@ -172,3 +273,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
     Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added mouth_salivary_flow_multispecies_biofilm_succession mechanism graph
+    for mouth environment (ENVO:08000002) backed by PMID:20514044, PMID:30301974.
+  llm_assisted: true

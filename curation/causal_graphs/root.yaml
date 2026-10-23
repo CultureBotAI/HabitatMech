@@ -1,0 +1,135 @@
+identifier: PO:0009005
+causal_graphs:
+- graph_id: root_microbiome_two_step_selection
+  title: Root microbiome two-step selection and endosphere colonization mechanism
+  description: Plant roots recruit a differentiated rhizoplane and endophytic bacterial microbiota from
+    surrounding soil through edaphic inoculum filtering, rhizosphere substrate deposition, and plant cell-wall
+    feature selection, enriching Actinobacteria, Proteobacteria, and Bacteroidetes that support nutrient
+    acquisition, pathogen protection, and plant growth.
+  nodes:
+  - node_id: root
+    label: root
+    node_type: HABITAT
+    grounding: PO:0009005
+    description: Belowground vascular plant organ that anchors the plant and takes up water and nutrients
+      while hosting distinct rhizoplane and internal endophytic microbial communities.
+  - node_id: soil_edaphic_inoculum
+    label: soil type and edaphic bacterial pool
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Surrounding soil biome and geochemical matrix that defines the source pool of bacteria
+      available for recruitment to the root.
+  - node_id: rhizosphere_substrate_recruitment
+    label: rhizodeposition substrate-driven recruitment
+    node_type: COMMUNITY_PROCESS
+    description: First selection step in which root metabolite export and rhizodeposition drive an initial
+      substrate-dependent shift in the rhizosphere bacterial community.
+  - node_id: plant_cell_wall_feature_filtering
+    label: plant cell-wall feature and host genotype filtering
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Lignocellulosic plant cell-wall structural features and metabolically active host-genotype
+      cues that selectively admit a subset of soil-borne bacteria into the root endophytic compartment.
+  - node_id: root_endophytic_microbiota
+    label: differentiated root endophytic microbiota
+    node_type: COMMUNITY
+    description: Low-complexity internal root bacterial community preferentially enriched in Actinobacteria,
+      Proteobacteria, and Bacteroidetes.
+  - node_id: soil_nutrient_acquisition_and_pathogen_protection
+    label: microbial nutrient acquisition and indirect pathogen protection
+    node_type: COMMUNITY_PROCESS
+    description: Mutualistic root microbiota functions including acquisition of soil nutrients for plant
+      growth and indirect protection against pathogens.
+  edges:
+  - edge_id: root_drives_rhizosphere_substrate_recruitment
+    subject: root
+    predicate: supplies
+    object: rhizosphere_substrate_recruitment
+    description: Lundberg et al. 2012 (Nature) document assembly of a distinct root-associated microbiota
+      in the rhizosphere and internal endophytic compartment.
+    evidence:
+    - reference: PMID:22859206
+      snippet: Land plants associate with a root microbiota distinct from the complex microbial community
+        present in surrounding soil. The microbiota colonizing the rhizosphere (immediately surrounding
+        the root) and the endophytic compartment (within the root) contribute to plant growth, productivity,
+        carbon sequestration and phytoremediation.
+      notes: Lundberg et al. 2012 (Nature) document assembly of a distinct root-associated microbiota
+        in the rhizosphere and internal endophytic compartment.
+  - edge_id: soil_edaphic_inoculum_shapes_rhizosphere_substrate_recruitment
+    subject: soil_edaphic_inoculum
+    predicate: shapes
+    object: rhizosphere_substrate_recruitment
+    description: 16S rRNA survey of >600 Arabidopsis thaliana plants shows that communities in both the
+      rhizosphere and endophytic compartment are strongly influenced by soil type.
+    evidence:
+    - reference: PMID:22859206
+      snippet: We describe different bacterial communities in two geochemically distinct bulk soils and
+        in rhizosphere and endophytic compartments prepared from roots grown in these soils. The communities
+        in each compartment are strongly influenced by soil type.
+      notes: 16S rRNA survey of >600 Arabidopsis thaliana plants shows that communities in both the rhizosphere
+        and endophytic compartment are strongly influenced by soil type.
+  - edge_id: root_hosts_plant_cell_wall_feature_filtering
+    subject: root
+    predicate: provides
+    object: plant_cell_wall_feature_filtering
+    description: Bulgarelli et al. 2012 (Nature) show that both metabolically active plant cells and inert
+      plant cell-wall features select soil bacteria for root colonization.
+    evidence:
+    - reference: PMID:22859207
+      snippet: Here we describe methodology to characterize and compare soil- and root-inhabiting bacterial
+        communities, which reveals not only a function for metabolically active plant cells but also for
+        inert cell-wall features in the selection of soil bacteria for host colonization.
+      notes: Bulgarelli et al. 2012 (Nature) show that both metabolically active plant cells and inert
+        plant cell-wall features select soil bacteria for root colonization.
+  - edge_id: rhizosphere_substrate_recruitment_contributes_to_root_endophytic_microbiota
+    subject: rhizosphere_substrate_recruitment
+    predicate: drives
+    object: root_endophytic_microbiota
+    description: Bulgarelli et al. 2013 (Annu Rev Plant Biol) synthesize the two-step selection model
+      in which rhizodeposition fuels an initial substrate-driven shift in the rhizosphere before host
+      genotype-dependent endophyte selection.
+    evidence:
+    - reference: PMID:23373698
+      snippet: A synthesis of available data suggests a two-step selection process by which the bacterial
+        microbiota of roots is differentiated from the surrounding soil biome. Rhizodeposition appears
+        to fuel an initial substrate-driven community shift in the rhizosphere, which converges with host
+        genotype-dependent fine-tuning of microbiota profiles in the selection of root endophyte assemblages.
+      notes: Bulgarelli et al. 2013 (Annu Rev Plant Biol) synthesize the two-step selection model in which
+        rhizodeposition fuels an initial substrate-driven shift in the rhizosphere before host genotype-dependent
+        endophyte selection.
+  - edge_id: plant_cell_wall_feature_filtering_selects_for_root_endophytic_microbiota
+    subject: plant_cell_wall_feature_filtering
+    predicate: selects for
+    object: root_endophytic_microbiota
+    description: Filtering into the internal root endophytic compartment yields low-complexity communities
+      markedly enriched in Actinobacteria and specific Proteobacteria families.
+    evidence:
+    - reference: PMID:22859206
+      snippet: Endophytic compartments from both soils feature overlapping, low-complexity communities
+        that are markedly enriched in Actinobacteria and specific families from other phyla, notably Proteobacteria.
+      notes: Filtering into the internal root endophytic compartment yields low-complexity communities
+        markedly enriched in Actinobacteria and specific Proteobacteria families.
+    - reference: PMID:22859207
+      snippet: We show that the roots of Arabidopsis thaliana, grown in different natural soils under
+        controlled environmental conditions, are preferentially colonized by Proteobacteria, Bacteroidetes
+        and Actinobacteria, and each bacterial phylum is represented by a dominating class or family.
+      notes: Root-inhabiting bacterial communities across natural soils are preferentially colonized by
+        Proteobacteria, Bacteroidetes, and Actinobacteria.
+  - edge_id: root_endophytic_microbiota_supports_soil_nutrient_acquisition_and_pathogen_protection
+    subject: root_endophytic_microbiota
+    predicate: produces
+    object: soil_nutrient_acquisition_and_pathogen_protection
+    description: Root microbiota members provide both indirect pathogen protection and soil nutrient acquisition
+      for plant growth.
+    evidence:
+    - reference: PMID:23373698
+      snippet: Both the leaf and root microbiota contain bacteria that provide indirect pathogen protection,
+        but root microbiota members appear to serve additional host functions through the acquisition
+        of nutrients from soil for plant growth.
+      notes: Root microbiota members provide both indirect pathogen protection and soil nutrient acquisition
+        for plant growth.
+curation_history:
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added root_microbiome_two_step_selection mechanism graph for root (PO:0009005) backed by PMID:22859206,
+    PMID:22859207, PMID:23373698.
+  llm_assisted: true

@@ -196,6 +196,137 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Sulfolobus islandicus HVE10/4
   candidate_pool: 28
+causal_graphs:
+- graph_id: volcano_geothermal_chemolithoautotrophic_colonization
+  title: Volcanic geothermal acidity, sulfide/gas geochemistry, and thermoacidophilic
+    archaeal-bacterial colonization mechanism
+  description: Active volcanic edifices, solfataric fields, and acidic hot springs
+    create high-temperature (60-85+ degrees C), low-pH (pH 0-6.4), sulfide- and proton-rich
+    geochemical regimes that select for thermoacidophilic and hyperthermophilic archaea
+    (Sulfolobus, Acidilobus, Thermoplasma, Picrophilus) and acidotolerant thermophilic
+    bacteria (Thermoanaerobacter), driving proton-coupled membrane transport, autotrophic
+    carbon fixation, and anaerobic organotrophic/lithotrophic metabolism.
+  nodes:
+  - node_id: volcano
+    label: volcano
+    node_type: HABITAT
+    grounding: ENVO:00000247
+    description: Geological landform where magma, tephra, and geothermal fluids/gases
+      erupt or vent to the surface, forming volcanic calderas, solfataric fields,
+      and acidic hot springs.
+  - node_id: geothermal_heat_and_solfataric_acidity
+    label: high-temperature (60-85+ C) and acidic (pH 0-6.4) sulfide geochemical regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Extreme geothermal temperature, high external proton concentration
+      (low pH), and sulfide/oxygen gradients across volcanic thermal sites.
+  - node_id: hyperthermophilic_and_thermoacidophilic_archaea
+    label: Sulfolobus, Acidilobus, Thermoplasma, and Picrophilus archaeal guild
+    node_type: TAXON
+    description: Thermoacidophilic and hyperthermophilic Crenarchaeota/Thermoproteota
+      and Euryarchaeota/Thermoplasmatota inhabiting volcanic hot springs and solfataric
+      fields.
+  - node_id: acidotolerant_thermophilic_anaerobic_bacteria
+    label: Thermoanaerobacter and Thermoanaerobacterium volcanic guild
+    node_type: TAXON
+    description: Acidotolerant thermophilic anaerobic bacteria cultivated from terrestrial
+      volcanic hot springs (such as Moutnovski Volcano and Uzon Caldera).
+  - node_id: proton_coupled_transport_and_geothermal_energy_conservation
+    label: proton-driven secondary transport, autotrophic, and fermentative metabolism
+    node_type: COMMUNITY_PROCESS
+    description: Geochemically tuned archaeal and bacterial energy conservation combining
+      sulfide/oxygen-linked autotrophic electron transport, proton-gradient-driven
+      secondary transport around pH 0, and anaerobic organotrophic fermentation.
+  edges:
+  - edge_id: volcano_creates_geothermal_heat_and_solfataric_acidity
+    subject: volcano
+    predicate: maintains
+    object: geothermal_heat_and_solfataric_acidity
+    description: Slobodkin et al. 2005 (Mikrobiologiia, PMID:15970992) characterize
+      acidic (pH 3.5-4.0), high-temperature (60-85 C) volcanic habitats at Moutnovski
+      Volcano, Uzon Caldera, and Kunashir Island.
+    evidence:
+    - reference: PMID:15970992
+      snippet: Anaerobic organotrophic enrichment cultures growing at pH 3.5-4.0 and
+        60 or 85 degrees C with organic energy sources were obtained from samples
+        of acidic hot springs of Kamchatka Peninsula (Pauzhetka, Moutnovski Volcano,
+        Uzon Caldera) and Kunashir Island (South Kurils) as well as from the samples
+        of chimneys of East Pacific Rise (13 degrees N).
+      notes: Slobodkin et al. 2005 (Mikrobiologiia, PMID:15970992) characterize acidic
+        (pH 3.5-4.0), high-temperature (60-85 C) volcanic habitats at Moutnovski Volcano,
+        Uzon Caldera, and Kunashir Island.
+  - edge_id: geothermal_heat_and_solfataric_acidity_selects_for_hyperthermophilic_and_thermoacidophilic_archaea
+    subject: geothermal_heat_and_solfataric_acidity
+    predicate: selects for
+    object: hyperthermophilic_and_thermoacidophilic_archaea
+    description: Inskeep et al. 2013 (Front Microbiol, PMID:23720654) show that high-temperature
+      geothermal sites across pH 2.5-6.4 select for archaeal-dominated thermophilic
+      communities.
+    evidence:
+    - reference: PMID:23720654
+      snippet: The specific objectives of the study were to use metagenome sequencing
+        to determine the structure and functional capacity of thermophilic archaeal-dominated
+        microbial communities across a pH range from 2.5 to 6.4 and to discuss specific
+        examples where the metabolic potential correlated with measured environmental
+        parameters and geochemical processes occurring in situ.
+      notes: Inskeep et al. 2013 (Front Microbiol, PMID:23720654) show that high-temperature
+        geothermal sites across pH 2.5-6.4 select for archaeal-dominated thermophilic
+        communities.
+    - reference: PMID:15184674
+      snippet: The euryarchaea Picrophilus torridus and Picrophilus oshimae are able
+        to grow around pH 0 at up to 65 degrees C, thus they represent the most thermoacidophilic
+        organisms known.
+      notes: Fütterer et al. 2004 (PNAS, PMID:15184674) characterize solfataric thermoacidophilic
+        Picrophilus species growing around pH 0 and up to 65 degrees C.
+  - edge_id: geothermal_heat_and_solfataric_acidity_selects_for_acidotolerant_thermophilic_anaerobic_bacteria
+    subject: geothermal_heat_and_solfataric_acidity
+    predicate: selects for
+    object: acidotolerant_thermophilic_anaerobic_bacteria
+    description: Volcanic thermal enrichments at 60 C select for Thermoplasma archaea
+      and acidotolerant Thermoanaerobacter and Thermoanaerobacterium species.
+    evidence:
+    - reference: PMID:15970992
+      snippet: The analyses of clone libraries obtained from terrestrial enrichment
+        cultures growing at 60 degrees C revealed the presence of archaea of genus
+        Thermoplasma and bacteria of genus Thermoanaerobacter. Bacterial isolates
+        from these enrichments were shown to belong to genera Thermoanaerobacter and
+        Thermoanaerobacterium, being acidotolerant with the pH optimum for growth
+        at 5.5-6.0 and the pH minimum at 3.0.
+      notes: Volcanic thermal enrichments at 60 C select for Thermoplasma archaea
+        and acidotolerant Thermoanaerobacter and Thermoanaerobacterium species.
+  - edge_id: hyperthermophilic_and_thermoacidophilic_archaea_drives_proton_coupled_transport_and_geothermal_energy_conservation
+    subject: hyperthermophilic_and_thermoacidophilic_archaea
+    predicate: drives
+    object: proton_coupled_transport_and_geothermal_energy_conservation
+    description: Geothermal archaeal populations deploy sulfide-, oxygen-, and pH-adapted
+      electron transport and autotrophic pathways.
+    evidence:
+    - reference: PMID:23720654
+      snippet: Analysis of protein family occurrence, particularly of those involved
+        in energy conservation, electron transport, and autotrophic metabolism, revealed
+        significant differences in metabolic strategies across sites consistent with
+        differences in major geochemical attributes (e.g., sulfide, oxygen, pH).
+      notes: Geothermal archaeal populations deploy sulfide-, oxygen-, and pH-adapted
+        electron transport and autotrophic pathways.
+    - reference: PMID:15184674
+      snippet: An exceptionally high ratio of secondary over ATP-consuming primary
+        transport systems demonstrates that the high proton concentration in the surrounding
+        medium is extensively used for transport processes.
+      notes: Thermoacidophilic Picrophilus torridus exploits the steep external proton
+        gradient via secondary transport systems.
+  - edge_id: acidotolerant_thermophilic_anaerobic_bacteria_contributes_to_proton_coupled_transport_and_geothermal_energy_conservation
+    subject: acidotolerant_thermophilic_anaerobic_bacteria
+    predicate: drives
+    object: proton_coupled_transport_and_geothermal_energy_conservation
+    description: Acidophilic and acidotolerant thermophilic prokaryotes drive fermentative
+      organic matter degradation across low-pH terrestrial volcanic habitats.
+    evidence:
+    - reference: PMID:15970992
+      snippet: These data show that fermentative degradation of organic matter may
+        occur at low pH and wide temperature range in both terrestrial and deep-sea
+        habitats and can be performed by acidophilic or acidotolerant thermophilic
+        prokaryotes.
+      notes: Acidophilic and acidotolerant thermophilic prokaryotes drive fermentative
+        organic matter degradation across low-pH terrestrial volcanic habitats.
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -232,3 +363,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added volcano_geothermal_chemolithoautotrophic_colonization mechanism graph
+    for volcano (ENVO:00000247) backed by PMID:15970992, PMID:23720654, PMID:15184674.
+  llm_assisted: true

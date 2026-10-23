@@ -1,0 +1,117 @@
+identifier: ENVO:2100003
+causal_graphs:
+- graph_id: skin_lipid_acid_mantle_commensal_colonization
+  title: Cutaneous sebaceous lipid remodeling, acid-mantle selection, and colonization resistance mechanism
+  description: The human and mammalian skin surface imposes a desiccated, acidic, and sebaceous triacylglycerol-rich
+    barrier landscape that selects for lipophilic and halotolerant Actinobacteria (Cutibacterium acnes,
+    Corynebacterium spp.) and Firmicutes (Staphylococcus epidermidis), which hydrolyze host sebaceous
+    lipids into free fatty acids and short-chain fatty acids that reinforce cutaneous acidity, modulate
+    host immunity, and inhibit opportunistic pathogens such as Streptococcus pneumoniae and Staphylococcus
+    aureus.
+  nodes:
+  - node_id: skin_environment
+    label: skin environment
+    node_type: HABITAT
+    grounding: ENVO:2100003
+    description: Exterior cutaneous barrier surface of an animal host characterized by sebaceous, moist,
+      and dry topographical microenvironments.
+  - node_id: desiccated_acidic_sebaceous_lipid_landscape
+    label: desiccated acidic surface and sebaceous triacylglycerol pool
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Harsh physical landscape of the skin combining desiccation, low pH, and abundant host-derived
+      sebaceous triacylglycerols (TAGs) and lipids.
+  - node_id: lipophilic_cutaneous_commensal_microbiota
+    label: Cutibacterium, Corynebacterium, and Staphylococcus epidermidis guild
+    node_type: COMMUNITY
+    description: Resident skin bacterial community dominated by Actinobacteria (Cutibacterium/Propionibacterium
+      acnes, Corynebacterium accolens) and coagulase-negative Staphylococci (Staphylococcus epidermidis).
+  - node_id: microbial_triacylglycerol_lipase_hydrolysis
+    label: microbial sebaceous lipid hydrolysis and free fatty acid release
+    node_type: COMMUNITY_PROCESS
+    description: Enzymatic cleavage of host sebaceous triacylglycerols by cutaneous commensal lipases
+      (such as Corynebacterium accolens LipS1 and Cutibacterium lipases) into bioactive free fatty acids
+      and short-chain fatty acids.
+  - node_id: cutaneous_immune_education_and_pathogen_resistance
+    label: cutaneous immune education and antipathogen colonization resistance
+    node_type: COMMUNITY_PROCESS
+    description: Free-fatty-acid-mediated inhibition of opportunistic pathogens and commensal education
+      of cutaneous innate and adaptive immune responses.
+  edges:
+  - edge_id: skin_environment_imposes_desiccated_acidic_sebaceous_lipid_landscape
+    subject: skin_environment
+    predicate: maintains
+    object: desiccated_acidic_sebaceous_lipid_landscape
+    description: Byrd et al. 2018 (Nat Rev Microbiol) describe the desiccated, acidic physical landscape
+      of the skin surface.
+    evidence:
+    - reference: PMID:29332945
+      snippet: The harsh physical landscape of skin, particularly the desiccated, nutrient-poor, acidic
+        environment, also contributes to the adversity that pathogens face when colonizing human skin.
+      notes: Byrd et al. 2018 (Nat Rev Microbiol) describe the desiccated, acidic physical landscape of
+        the skin surface.
+    - reference: PMID:42267822
+      snippet: The human skin microbiome exists within a lipid-rich environment that profoundly shapes
+        microbial colonization, metabolism, and interactions with the host.
+      notes: Cutaneous surface lipids form a defining resource and physicochemical constraint of the skin
+        environment.
+  - edge_id: desiccated_acidic_sebaceous_lipid_landscape_selects_for_lipophilic_cutaneous_commensal_microbiota
+    subject: desiccated_acidic_sebaceous_lipid_landscape
+    predicate: selects for
+    object: lipophilic_cutaneous_commensal_microbiota
+    description: Grice & Segre 2011 (Nat Rev Microbiol) establish that skin surface ecology drives site-specific
+      commensal colonization.
+    evidence:
+    - reference: PMID:21407241
+      snippet: Colonization is driven by the ecology of the skin surface, which is highly variable depending
+        on topographical location, endogenous host factors and exogenous environmental factors.
+      notes: Grice & Segre 2011 (Nat Rev Microbiol) establish that skin surface ecology drives site-specific
+        commensal colonization.
+    - reference: PMID:29332945
+      snippet: We discuss recent insights into skin microbial communities, including their composition
+        in health and disease, the dynamics between species and interactions with the immune system, with
+        a focus on Propionibacterium acnes, Staphylococcus epidermidis and Staphylococcus aureus.
+      notes: Propionibacterium (Cutibacterium) acnes and Staphylococcus epidermidis are hallmark resident
+        members of the cutaneous microbiota.
+  - edge_id: lipophilic_cutaneous_commensal_microbiota_drives_microbial_triacylglycerol_lipase_hydrolysis
+    subject: lipophilic_cutaneous_commensal_microbiota
+    predicate: drives
+    object: microbial_triacylglycerol_lipase_hydrolysis
+    description: Resident skin bacteria metabolize host-derived sebaceous lipids into bioactive free and
+      short-chain fatty acids.
+    evidence:
+    - reference: PMID:42267822
+      snippet: Resident microbes not only consume host-derived lipids for energy but also transform them
+        into bioactive compounds that influence microbial competition, immune responses, and skin barrier
+        function.
+      notes: Resident skin bacteria metabolize host-derived sebaceous lipids into bioactive free and short-chain
+        fatty acids.
+    - reference: PMID:26733066
+      snippet: We determined that C. accolens hydrolysis of triolein releases oleic acid, which inhibits
+        pneumococcus, as do other free fatty acids (FFAs) that might be released by LipS1 from human skin
+        surface TAGs.
+      notes: Bomar et al. 2016 (mBio) demonstrate that Corynebacterium accolens LipS1 hydrolyzes human
+        skin surface triacylglycerols (TAGs) to release antibacterial free fatty acids.
+  - edge_id: microbial_triacylglycerol_lipase_hydrolysis_supports_cutaneous_immune_education_and_pathogen_resistance
+    subject: microbial_triacylglycerol_lipase_hydrolysis
+    predicate: drives
+    object: cutaneous_immune_education_and_pathogen_resistance
+    description: Microbially generated free and short-chain fatty acids maintain cutaneous barrier homeostasis
+      and modulate microbial competition.
+    evidence:
+    - reference: PMID:42267822
+      snippet: In turn, microbially generated lipids become part of the skin lipid landscape, including
+        short-chain fatty acids and cell envelope lipids, and contribute to maintaining homeostasis or,
+        in some cases, influence disease processes such as acne and atopic dermatitis.
+      notes: Microbially generated free and short-chain fatty acids maintain cutaneous barrier homeostasis
+        and modulate microbial competition.
+    - reference: PMID:21407241
+      snippet: The cutaneous innate and adaptive immune responses can modulate the skin microbiota, but
+        the microbiota also functions in educating the immune system.
+      notes: The skin microbiota actively educates cutaneous innate and adaptive immunity.
+curation_history:
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added skin_lipid_acid_mantle_commensal_colonization mechanism graph for skin environment (ENVO:2100003)
+    backed by PMID:29332945, PMID:42267822, PMID:21407241, PMID:26733066.
+  llm_assisted: true
