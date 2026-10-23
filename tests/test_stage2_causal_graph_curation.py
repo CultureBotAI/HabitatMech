@@ -145,5 +145,57 @@ def test_cycle2_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
             for ev in edge.get("evidence", [])
         }
         assert refs == expected_refs
-        assert doc["curation_history"][-1]["action"] == "ADD_CAUSAL_GRAPH"
+        assert doc["curation_history"][0]["action"] == "ADD_CAUSAL_GRAPH"
+        for edge in graph["edges"]:
+            for ev in edge.get("evidence", []):
+                snippet = ev.get("snippet", "")
+                assert "<i>" not in snippet and "</i>" not in snippet
+                assert "\u00a0" not in snippet
+
+    volcano_nodes = {
+        n["node_id"]: n
+        for n in yaml.safe_load((CAUSAL_GRAPHS_DIR / "volcano.yaml").read_text(encoding="utf-8"))[
+            "causal_graphs"
+        ][0]["nodes"]
+    }
+    assert volcano_nodes["hyperthermophilic_and_thermoacidophilic_archaea"]["node_type"] == "COMMUNITY"
+    assert volcano_nodes["acidotolerant_thermophilic_anaerobic_bacteria"]["node_type"] == "COMMUNITY"
+
+    fecal_nodes = {
+        n["node_id"]: n
+        for n in yaml.safe_load(
+            (CAUSAL_GRAPHS_DIR / "fecal_environment.yaml").read_text(encoding="utf-8")
+        )["causal_graphs"][0]["nodes"]
+    }
+    assert fecal_nodes["keystone_amylolytic_and_cellulolytic_degraders"]["node_type"] == "COMMUNITY"
+
+    vagina_nodes = {
+        n["node_id"]: n
+        for n in yaml.safe_load((CAUSAL_GRAPHS_DIR / "vagina.yaml").read_text(encoding="utf-8"))[
+            "causal_graphs"
+        ][0]["nodes"]
+    }
+    assert (
+        vagina_nodes["epithelial_glycogen_and_mucosal_alpha_amylase"]["node_type"]
+        == "BIOLOGICAL_PROCESS"
+    )
+
+    nasopharynx_graph = yaml.safe_load(
+        (CAUSAL_GRAPHS_DIR / "nasopharynx.yaml").read_text(encoding="utf-8")
+    )["causal_graphs"][0]
+    nasopharynx_nodes = {n["node_id"]: n for n in nasopharynx_graph["nodes"]}
+    assert (
+        nasopharynx_nodes["upper_airway_mucosal_and_triacylglycerol_surface"]["node_type"]
+        == "ENVIRONMENTAL_FACTOR"
+    )
+    assert nasopharynx_nodes["commensal_airway_corynebacterium_guild"]["node_type"] == "COMMUNITY"
+    nasopharynx_edges = {e["edge_id"]: e for e in nasopharynx_graph["edges"]}
+    supply_refs = {
+        ev["reference"]
+        for ev in nasopharynx_edges[
+            "nasopharynx_provides_upper_airway_mucosal_and_triacylglycerol_surface"
+        ]["evidence"]
+    }
+    assert supply_refs == {"PMID:28316330", "PMID:26733066"}
+
 

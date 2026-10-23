@@ -22,12 +22,12 @@ causal_graphs:
       gradients across volcanic thermal sites.
   - node_id: hyperthermophilic_and_thermoacidophilic_archaea
     label: Sulfolobus, Acidilobus, Thermoplasma, and Picrophilus archaeal guild
-    node_type: TAXON
+    node_type: COMMUNITY
     description: Thermoacidophilic and hyperthermophilic Crenarchaeota/Thermoproteota and Euryarchaeota/Thermoplasmatota
       inhabiting volcanic hot springs and solfataric fields.
   - node_id: acidotolerant_thermophilic_anaerobic_bacteria
     label: Thermoanaerobacter and Thermoanaerobacterium volcanic guild
-    node_type: TAXON
+    node_type: COMMUNITY
     description: Acidotolerant thermophilic anaerobic bacteria cultivated from terrestrial volcanic hot
       springs (such as Moutnovski Volcano and Uzon Caldera).
   - node_id: proton_coupled_transport_and_geothermal_energy_conservation
@@ -124,4 +124,10 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added volcano_geothermal_chemolithoautotrophic_colonization mechanism graph for volcano (ENVO:00000247)
     backed by PMID:15970992, PMID:23720654, PMID:15184674.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped hyperthermophilic_and_thermoacidophilic_archaea and acidotolerant_thermophilic_anaerobic_bacteria
+    multi-taxon guilds to COMMUNITY (#2261).
   llm_assisted: true

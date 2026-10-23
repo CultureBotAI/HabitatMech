@@ -79,12 +79,12 @@ causal_graphs:
       tract bacteria.
   - node_id: upper_airway_mucosal_and_triacylglycerol_surface
     label: upper airway respiratory epithelium and surface triacylglycerols
-    node_type: CHEMICAL
+    node_type: ENVIRONMENTAL_FACTOR
     description: Aerated nasopharyngeal and nasal mucosal surface supplying epithelial
       attachment sites and host surface triacylglycerols (TAGs).
   - node_id: commensal_airway_corynebacterium_guild
     label: commensal Corynebacterium accolens and C. pseudodiphtheriticum guild
-    node_type: TAXON
+    node_type: COMMUNITY
     description: Benign upper-airway Corynebacterium species that colonize the nasal
       and nasopharyngeal epithelium.
   - node_id: lips1_free_fatty_acid_and_protease_secretion
@@ -105,14 +105,22 @@ causal_graphs:
     subject: nasopharynx
     predicate: supplies
     object: upper_airway_mucosal_and_triacylglycerol_surface
-    description: Man et al. 2017 (Nat Rev Microbiol) describe the niche-specific mucosal
-      habitats spanning the upper and lower respiratory tract.
+    description: Man et al. 2017 (Nat Rev Microbiol) and Bomar et al. 2016 (mBio)
+      describe the niche-specific upper-airway mucosal surface and host surface triacylglycerols
+      (TAGs) present in the nostrils and upper respiratory tract.
     evidence:
     - reference: PMID:28316330
       snippet: The human respiratory tract spans from the nostrils to the lung alveoli
         and is inhabited by niche-specific communities of bacteria.
       notes: Man et al. 2017 (Nat Rev Microbiol) describe the niche-specific mucosal
         habitats spanning the upper and lower respiratory tract.
+    - reference: PMID:26733066
+      snippet: Corynebacterium accolens, a benign lipid-requiring species, inhibits
+        pneumococcal growth during in vitro cocultivation on medium supplemented with
+        human skin surface triacylglycerols (TAGs) that are likely present in the
+        nostrils.
+      notes: Bomar et al. 2016 (mBio) attest to host surface triacylglycerols (TAGs)
+        present at the anterior nares / upper airway mucosal surface.
   - edge_id: upper_airway_mucosal_and_triacylglycerol_surface_selects_for_commensal_airway_corynebacterium_guild
     subject: upper_airway_mucosal_and_triacylglycerol_surface
     predicate: selects for
@@ -128,10 +136,10 @@ causal_graphs:
       notes: Host surface triacylglycerols in the upper airway support lipid-requiring
         commensal Corynebacterium accolens.
     - reference: PMID:39705185
-      snippet: Species of <i>Corynebacterium,</i> which are largely present as commensals
+      snippet: Species of Corynebacterium, which are largely present as commensals
         in the upper airway and other body sites, are associated with lower colonization
-        rates of opportunistic bacterial pathogens such as <i>Streptococcus pneumoniae</i>
-        and <i>Staphylococcus aureus</i>.
+        rates of opportunistic bacterial pathogens such as Streptococcus pneumoniae
+        and Staphylococcus aureus.
       notes: Commensal Corynebacterium species colonize the upper airway and inversely
         correlate with S. pneumoniae and S. aureus colonization.
   - edge_id: commensal_airway_corynebacterium_guild_drives_lips1_free_fatty_acid_and_protease_secretion
@@ -142,18 +150,18 @@ causal_graphs:
       release antipneumococcal oleic acid and free fatty acids.
     evidence:
     - reference: PMID:26733066
-      snippet: This inhibition depends on LipS1, a TAG lipase necessary for C. accolens
-        growth on TAGs such as triolein. We determined that C. accolens hydrolysis
+      snippet: This inhibition depends on LipS1, a TAG lipase necessary for C. accolens
+        growth on TAGs such as triolein. We determined that C. accolens hydrolysis
         of triolein releases oleic acid, which inhibits pneumococcus, as do other
         free fatty acids (FFAs) that might be released by LipS1 from human skin surface
         TAGs.
       notes: Corynebacterium accolens LipS1 hydrolyzes host triacylglycerols to release
         antipneumococcal oleic acid and free fatty acids.
     - reference: PMID:39705185
-      snippet: <i>Corynebacterium</i> lipase activity was bactericidal against <i>S.
-        pneumoniae</i>, but not <i>S. aureus</i>. Instead, the hemolytic activity
-        of pore-forming toxins produced by <i>S. aureus</i> was directly blocked by
-        a novel <i>Corynebacterium</i>-secreted factor with protease activity.
+      snippet: Corynebacterium lipase activity was bactericidal against S. pneumoniae,
+        but not S. aureus. Instead, the hemolytic activity of pore-forming toxins
+        produced by S. aureus was directly blocked by a novel Corynebacterium-secreted
+        factor with protease activity.
       notes: Upper airway Corynebacterium spp. combine bactericidal lipase activity
         against S. pneumoniae with secreted protease activity that neutralizes S.
         aureus hemolytic toxins.
@@ -171,9 +179,9 @@ causal_graphs:
         of pathogen colonization resistance.
     - reference: PMID:39705185
       snippet: Adherence of both pathogens to human respiratory tract epithelial cells
-        was significantly impaired following pre-exposure to C. <i>pseudodiphtheriticum</i>
-        or <i>Corynebacterium accolens</i>, and this effect was dependent on live
-        <i>Corynebacterium</i> colonizing the epithelial cells.
+        was significantly impaired following pre-exposure to C. pseudodiphtheriticum
+        or Corynebacterium accolens, and this effect was dependent on live Corynebacterium
+        colonizing the epithelial cells.
       notes: Live C. pseudodiphtheriticum and C. accolens colonization directly impairs
         S. pneumoniae and S. aureus adherence to respiratory epithelial cells.
 curation_history:
@@ -197,4 +205,12 @@ curation_history:
   changes: Added nasopharynx_corynebacterium_gatekeeper_colonization_resistance mechanism
     graph for nasopharynx (UBERON:0001728) backed by PMID:28316330, PMID:26733066,
     PMID:39705185.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped upper_airway_mucosal_and_triacylglycerol_surface to ENVIRONMENTAL_FACTOR
+    and commensal_airway_corynebacterium_guild to COMMUNITY, added PMID:26733066 support
+    for upper-airway TAG provision, and stripped HTML italic tags and non-breaking
+    spaces from snippets (#2261).
   llm_assisted: true

@@ -385,7 +385,7 @@ causal_graphs:
       notes: Resident skin bacteria metabolize host-derived sebaceous lipids into
         bioactive free and short-chain fatty acids.
     - reference: PMID:26733066
-      snippet: We determined that C. accolens hydrolysis of triolein releases oleic
+      snippet: We determined that C. accolens hydrolysis of triolein releases oleic
         acid, which inhibits pneumococcus, as do other free fatty acids (FFAs) that
         might be released by LipS1 from human skin surface TAGs.
       notes: Bomar et al. 2016 (mBio) demonstrate that Corynebacterium accolens LipS1
@@ -452,4 +452,9 @@ curation_history:
   changes: Added skin_lipid_acid_mantle_commensal_colonization mechanism graph for
     skin environment (ENVO:2100003) backed by PMID:29332945, PMID:42267822, PMID:21407241,
     PMID:26733066.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Normalized non-breaking space in PMID:26733066 snippet to ASCII space (#2261).
   llm_assisted: true

@@ -177,7 +177,7 @@ causal_graphs:
       distal colon and feces.
   - node_id: keystone_amylolytic_and_cellulolytic_degraders
     label: Ruminococcus bromii, R. champanellensis, and Bacteroidota glycan degraders
-    node_type: TAXON
+    node_type: COMMUNITY
     description: Primary polysaccharide-degrading anaerobes (such as resistant-starch
       keystone Ruminococcus bromii, cellulolytic Ruminococcus champanellensis, and
       CAZyme-rich Bacteroidota) attested in fecal microbiota.
@@ -306,4 +306,10 @@ curation_history:
   changes: Added fecal_complex_polysaccharide_fermentation_and_methanogenesis mechanism
     graph for fecal environment (ENVO:01001029) backed by PMID:22572875, PMID:22343308,
     PMID:21357460, PMID:22859731, PMID:31162794.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped keystone_amylolytic_and_cellulolytic_degraders multi-taxon guild
+    to COMMUNITY (#2261).
   llm_assisted: true
