@@ -181,6 +181,115 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 1122
+causal_graphs:
+- graph_id: rhizosphere_exudate_disease_suppressive_assembly
+  title: Rhizosphere root exudate recruitment and disease-suppressive microbiome mechanism
+  description: Root-adjacent soil receives photosynthetically fixed carbon and exported
+    metabolites via root exudates, driving chemical signaling and recruitment of plant-beneficial
+    bacteria (Proteobacteria, Firmicutes, and Actinobacteria) that suppress soil-borne
+    fungal root pathogens via γ-proteobacterial nonribosomal peptide synthetase antibiotic
+    biosynthesis.
+  nodes:
+  - node_id: rhizosphere
+    label: rhizosphere
+    node_type: HABITAT
+    grounding: ENVO:00005801
+    description: Millimeter-scale zone of soil surrounding a plant root where root-soil-microbe
+      biogeochemical and ecological interactions occur.
+  - node_id: root_exudate_carbon_flux
+    label: root metabolite export and exudate secretion
+    node_type: CHEMICAL
+    description: Organic compounds and metabolites exported by plant root transport
+      proteins into the surrounding rhizosphere soil.
+  - node_id: rhizosphere_chemotaxis_and_chemical_signaling
+    label: root-microbe chemical signaling and rhizobiome recruitment
+    node_type: COMMUNITY_PROCESS
+    description: Exudate-mediated signaling events that initiate and govern plant-microbe
+      interactions and rhizobiome assembly.
+  - node_id: rhizosphere_beneficial_bacterial_guild
+    label: rhizosphere disease-suppressive Proteobacteria, Firmicutes, and Actinobacteria
+    node_type: COMMUNITY
+    description: Rhizosphere bacterial consortium enriched in Proteobacteria, Firmicutes,
+      and Actinobacteria consistently associated with biotic stress tolerance and
+      pathogen suppression.
+  - node_id: nonribosomal_peptide_antibiotic_suppression
+    label: nonribosomal peptide synthetase-dependent pathogen suppression
+    node_type: COMMUNITY_PROCESS
+    description: Suppression of soil-borne fungal root pathogens by rhizosphere γ-Proteobacteria
+      governed by nonribosomal peptide synthetases (NRPS).
+  edges:
+  - edge_id: rhizosphere_accumulates_root_exudate_carbon_flux
+    subject: rhizosphere
+    predicate: supplies
+    object: root_exudate_carbon_flux
+    description: Bais et al. 2006 (Annu Rev Plant Biol, PMID:16669762) establish that
+      root exudates accumulate in the millimeters of rhizosphere soil surrounding
+      plant roots.
+    evidence:
+    - reference: PMID:16669762
+      snippet: The rhizosphere encompasses the millimeters of soil surrounding a plant
+        root where complex biological and ecological processes occur. This review
+        describes recent advances in elucidating the role of root exudates in interactions
+        between plant roots and other plants, microbes, and nematodes present in the
+        rhizosphere.
+      notes: Bais et al. 2006 (Annu Rev Plant Biol, PMID:16669762) establish that
+        root exudates accumulate in the millimeters of rhizosphere soil surrounding
+        plant roots.
+    - reference: PMID:29050989
+      snippet: Here, we discuss physiological factors of plants that may govern plant-microbe
+        interactions, focusing on root physiology and the role of root exudates. Given
+        that only a few plant transport proteins are known to be involved in root
+        metabolite export, we suggest novel families putatively involved in this process.
+      notes: Sasse et al. 2018 (Trends Plant Sci, PMID:29050989) detail plant transport
+        protein-mediated root metabolite export into the rhizosphere.
+  - edge_id: root_exudate_carbon_flux_drives_rhizosphere_chemotaxis_and_chemical_signaling
+    subject: root_exudate_carbon_flux
+    predicate: drives
+    object: rhizosphere_chemotaxis_and_chemical_signaling
+    description: Root exudates participate directly in the chemical signaling events
+      that initiate root-microbe interactions.
+    evidence:
+    - reference: PMID:16669762
+      snippet: Evidence indicating that root exudates may take part in the signaling
+        events that initiate the execution of these interactions is also presented.
+      notes: Root exudates participate directly in the chemical signaling events that
+        initiate root-microbe interactions.
+  - edge_id: rhizosphere_chemotaxis_and_chemical_signaling_selects_for_rhizosphere_beneficial_bacterial_guild
+    subject: rhizosphere_chemotaxis_and_chemical_signaling
+    predicate: selects for
+    object: rhizosphere_beneficial_bacterial_guild
+    description: Philippot et al. 2013 (Nat Rev Microbiol) describe how rhizosphere
+      microbial interactions govern plant growth and biotic/abiotic stress tolerance.
+    evidence:
+    - reference: PMID:24056930
+      snippet: The rhizosphere is the interface between plant roots and soil where
+        interactions among a myriad of microorganisms and invertebrates affect biogeochemical
+        cycling, plant growth and tolerance to biotic and abiotic stress.
+      notes: Philippot et al. 2013 (Nat Rev Microbiol) describe how rhizosphere microbial
+        interactions govern plant growth and biotic/abiotic stress tolerance.
+    - reference: PMID:21551032
+      snippet: By coupling PhyloChip-based metagenomics of the rhizosphere microbiome
+        with culture-dependent functional analyses, we identified key bacterial taxa
+        and genes involved in suppression of a fungal root pathogen. More than 33,000
+        bacterial and archaeal species were detected, with Proteobacteria, Firmicutes,
+        and Actinobacteria consistently associated with disease suppression.
+      notes: Mendes et al. 2011 (Science) identify Proteobacteria, Firmicutes, and
+        Actinobacteria as the core rhizosphere bacterial taxa associated with disease
+        suppression.
+  - edge_id: rhizosphere_beneficial_bacterial_guild_produces_nonribosomal_peptide_antibiotic_suppression
+    subject: rhizosphere_beneficial_bacterial_guild
+    predicate: produces
+    object: nonribosomal_peptide_antibiotic_suppression
+    description: Mendes et al. 2011 demonstrate that rhizosphere γ-Proteobacteria
+      suppress fungal root pathogens via nonribosomal peptide synthetases.
+    evidence:
+    - reference: PMID:21551032
+      snippet: Members of the γ-Proteobacteria were shown to have disease-suppressive
+        activity governed by nonribosomal peptide synthetases. Our data indicate that
+        upon attack by a fungal root pathogen, plants can exploit microbial consortia
+        from soil for protection against infections.
+      notes: Mendes et al. 2011 demonstrate that rhizosphere γ-Proteobacteria suppress
+        fungal root pathogens via nonribosomal peptide synthetases.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -205,3 +314,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added rhizosphere_exudate_disease_suppressive_assembly mechanism graph
+    for rhizosphere (ENVO:00005801) backed by PMID:16669762, PMID:29050989, PMID:24056930,
+    PMID:21551032.
+  llm_assisted: true

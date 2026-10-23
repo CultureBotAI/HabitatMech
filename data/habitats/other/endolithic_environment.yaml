@@ -40,9 +40,135 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: dry
   source: kg-microbe environments.csv (rock_endolithic)
+causal_graphs:
+- graph_id: endolithic_rock_pore_uv_desiccation_refuge
+  title: Endolithic mineral pore space UV attenuation and desiccation-buffered colonization
+    mechanism
+  description: Translucent porous rocks and evaporite minerals (sandstone, gypsum,
+    quartz, and carbonate) create subsurface endolithic and chasmoendolithic pore-space
+    microhabitats in the outer centimeters of rock that attenuate excessive solar
+    insolation and ultraviolet radiation while transmitting photosynthetically active
+    radiation and capturing episodic snowmelt or pore moisture, selecting for specialized
+    photoautotrophic cyanobacteria, eukaryotic algae, and co-occurring heterotrophic
+    bacteria.
+  nodes:
+  - node_id: endolithic_environment
+    label: endolithic environment
+    node_type: HABITAT
+    grounding: ENVO:01000303
+    description: Pore space and fissure microhabitat within the outer centimeters
+      of rocks exposed at the planetary surface.
+  - node_id: translucent_mineral_uv_shielding_and_par_transmission
+    label: mineral UV attenuation, PAR transmission, and episodic moisture retention
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Physical protection by translucent rock substrates (such as sandstone
+      and gypsum) against ultraviolet radiation and excessive insolation combined
+      with transmission of photosynthetically active radiation (PAR) and retention
+      of snowmelt/pore moisture.
+  - node_id: photoautotrophic_endolithic_cyanobacteria_and_algae
+    label: endolithic cyanobacterial and algal photoautotrophs
+    node_type: COMMUNITY
+    description: Photosynthesis-based endolithic primary producer guild composed of
+      rock-dwelling cyanobacteria and eukaryotic microalgae.
+  - node_id: endolithic_heterotrophic_bacterial_consortium
+    label: specialized lithic heterotrophic bacterial and fungal co-colonizers
+    node_type: COMMUNITY
+    description: Low-diversity, stress-selected heterotrophic bacteria (including
+      Actinobacteria and polar/desert specialists) and fungi co-inhabiting endolithic
+      and chasmoendolithic rock niches.
+  - node_id: subsurface_lithic_photosynthetic_primary_production
+    label: subsurface lithic photosynthetic primary production and colonization
+    node_type: COMMUNITY_PROCESS
+    description: Photosynthetic carbon fixation within the outer centimeters of rock
+      that sustains simple, tractable endolithic ecosystems in hyperarid hot and polar
+      deserts.
+  edges:
+  - edge_id: endolithic_environment_creates_translucent_mineral_uv_shielding_and_par_transmission
+    subject: endolithic_environment
+    predicate: maintains
+    object: translucent_mineral_uv_shielding_and_par_transmission
+    description: Walker & Pace 2007 (Annu Rev Microbiol, PMID:17506683) define the
+      endolithic pore space in the outer centimeters of rocks as a ubiquitous photic
+      microbial habitat.
+    evidence:
+    - reference: PMID:17506683
+      snippet: The endolithic environment, the pore space in rocks, is a ubiquitous
+        microbial habitat and an interface between biology and geology. Photosynthesis-based
+        endolithic communities inhabit the outer centimeters of rocks exposed to the
+        surface, and offer model systems for microbial ecology, geobiology, and astrobiology.
+      notes: Walker & Pace 2007 (Annu Rev Microbiol, PMID:17506683) define the endolithic
+        pore space in the outer centimeters of rocks as a ubiquitous photic microbial
+        habitat.
+    - reference: PMID:39228380
+      snippet: Gypsum protects the endolithic microbial communities against excessive
+        insolation and ultraviolet radiation, while allowing photosynthetically active
+        radiation to penetrate through the mineral substrate.
+      notes: Mineral substrates shield endolithic communities from UV radiation and
+        excessive insolation while transmitting PAR.
+  - edge_id: translucent_mineral_uv_shielding_and_par_transmission_selects_for_photoautotrophic_endolithic_cyanobacteria_and_algae
+    subject: translucent_mineral_uv_shielding_and_par_transmission
+    predicate: selects for
+    object: photoautotrophic_endolithic_cyanobacteria_and_algae
+    description: Pointing et al. 2009 (PNAS, PMID:19850879) show that endolithic and
+      chasmoendolithic sandstone niches support photoautotrophic communities absent
+      from exposed hyperarid soils.
+    evidence:
+    - reference: PMID:19850879
+      snippet: We demonstrate that life has adapted to form highly-specialized communities
+        in distinct lithic niches occurring concomitantly within this terrain. Endoliths
+        and chasmoliths in sandstone displayed greatest diversity, whereas soil was
+        relatively depauperate and lacked a significant photoautotrophic component,
+        apart from isolated islands of hypolithic cyanobacterial colonization on quartz
+        rocks in soil contact.
+      notes: Pointing et al. 2009 (PNAS, PMID:19850879) show that endolithic and chasmoendolithic
+        sandstone niches support photoautotrophic communities absent from exposed
+        hyperarid soils.
+    - reference: PMID:39228380
+      snippet: Gypsum colonized by microorganisms, including cyanobacteria, eukaryotic
+        algae, and diverse heterotrophic communities, occurs in hot, arid or even
+        hyperarid environments, in cold environments of the Antarctic and Arctic zones,
+        and in saline and hypersaline lakes and ponds where gypsum precipitates.
+      notes: Endolithic mineral habitats across hot, hyperarid, and polar environments
+        select for cyanobacteria, eukaryotic algae, and heterotrophic bacteria.
+  - edge_id: translucent_mineral_uv_shielding_and_par_transmission_selects_for_endolithic_heterotrophic_bacterial_consortium
+    subject: translucent_mineral_uv_shielding_and_par_transmission
+    predicate: selects for
+    object: endolithic_heterotrophic_bacterial_consortium
+    description: Strong selective pressures and episodic snowmelt moisture in endolithic
+      rock niches maintain specialized bacterial and fungal communities.
+    evidence:
+    - reference: PMID:19850879
+      snippet: Communities supported previously unreported polar bacteria and fungi,
+        but archaea were absent from all niches. Lithic community structure did not
+        vary significantly on a landscape scale and stochastic moisture input due
+        to snowmelt resulted in increases in colonization frequency without significantly
+        affecting diversity.
+      notes: Strong selective pressures and episodic snowmelt moisture in endolithic
+        rock niches maintain specialized bacterial and fungal communities.
+  - edge_id: photoautotrophic_endolithic_cyanobacteria_and_algae_drives_subsurface_lithic_photosynthetic_primary_production
+    subject: photoautotrophic_endolithic_cyanobacteria_and_algae
+    predicate: drives
+    object: subsurface_lithic_photosynthetic_primary_production
+    description: Endolithic photoautotrophs drive photosynthesis-based primary production
+      in the outer centimeters of rock.
+    evidence:
+    - reference: PMID:17506683
+      snippet: Photosynthesis-based endolithic communities inhabit the outer centimeters
+        of rocks exposed to the surface, and offer model systems for microbial ecology,
+        geobiology, and astrobiology. Endolithic ecosystems are among the simplest
+        microbial ecosystems known and as such provide tractable models for testing
+        ecological hypotheses.
+      notes: Endolithic photoautotrophs drive photosynthesis-based primary production
+        in the outer centimeters of rock.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
     EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added endolithic_rock_pore_uv_desiccation_refuge mechanism graph for endolithic
+    environment (ENVO:01000303) backed by PMID:17506683, PMID:39228380, PMID:19850879.
+  llm_assisted: true

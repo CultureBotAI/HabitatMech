@@ -150,6 +150,131 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Lactobacillus equi
   candidate_pool: 146
+causal_graphs:
+- graph_id: fecal_complex_polysaccharide_fermentation_and_methanogenesis
+  title: Fecal complex carbohydrate degradation, cross-feeding fermentation, and H2-dependent
+    methanogenesis mechanism
+  description: Distal intestinal and excreted fecal matter contains undigested dietary
+    plant cell walls, resistant starch, and host mucin glycans under strictly anoxic
+    conditions, supporting primary polysaccharide degraders (Ruminococcus bromii on
+    resistant starch, Ruminococcus champanellensis on cellulose, and CAZyme-rich Bacteroidota)
+    whose fermentation releases soluble sugars, short-chain fatty acids (acetate,
+    succinate, butyrate), and H2 that fuel syntrophic cross-feeders and H2-dependent
+    methylotrophic/hydrogenotrophic fecal methanogens (Methanomassiliicoccus luminyensis,
+    Methanosphaera stadtmanae).
+  nodes:
+  - node_id: fecal_environment
+    label: fecal environment
+    node_type: HABITAT
+    grounding: ENVO:01001029
+    description: Anoxic, nutrient-dense microbial habitat composed of distal gut digesta,
+      exfoliated host mucus/cells, and excreted fecal material.
+  - node_id: undigested_plant_polysaccharides_and_host_mucin
+    label: resistant starch, plant cell-wall cellulose, and host glycans
+    node_type: CHEMICAL
+    description: Non-digestible dietary carbohydrates (resistant starch particles,
+      microcrystalline plant cellulose) and host-derived mucin glycans reaching the
+      distal colon and feces.
+  - node_id: keystone_amylolytic_and_cellulolytic_degraders
+    label: Ruminococcus bromii, R. champanellensis, and Bacteroidota glycan degraders
+    node_type: COMMUNITY
+    description: Primary polysaccharide-degrading anaerobes (such as resistant-starch
+      keystone Ruminococcus bromii, cellulolytic Ruminococcus champanellensis, and
+      CAZyme-rich Bacteroidota) attested in fecal microbiota.
+  - node_id: fermentative_scfa_and_hydrogen_pool
+    label: soluble oligosaccharide, acetate, succinate, and H2 fermentation pool
+    node_type: CHEMICAL
+    description: Released oligosaccharides, short-chain fatty acids/organic acids
+      (acetate, succinate), and molecular hydrogen (H2) generated during anaerobic
+      polysaccharide fermentation.
+  - node_id: fecal_methylotrophic_methanogenesis
+    label: Methanomassiliicoccus and Methanosphaera H2-dependent methanogenesis
+    node_type: COMMUNITY_PROCESS
+    description: Reduction of methanol and methylamines with molecular H2 by fecal
+      methanogenic archaea (Methanomassiliicoccus luminyensis and Methanosphaera stadtmanae)
+      that consume fermentation-derived H2.
+  edges:
+  - edge_id: fecal_environment_retains_undigested_plant_polysaccharides_and_host_mucin
+    subject: fecal_environment
+    predicate: supplies
+    object: undigested_plant_polysaccharides_and_host_mucin
+    description: Flint et al. 2012 (Nat Rev Gastroenterol Hepatol) establish that
+      non-digestible dietary carbohydrates and host glycans are the primary fermentation
+      substrates in the distal gut and feces.
+    evidence:
+    - reference: PMID:22572875
+      snippet: Microbial fermentation of complex non-digestible dietary carbohydrates
+        and host-derived glycans in the human intestine has important consequences
+        for health.
+      notes: Flint et al. 2012 (Nat Rev Gastroenterol Hepatol) establish that non-digestible
+        dietary carbohydrates and host glycans are the primary fermentation substrates
+        in the distal gut and feces.
+  - edge_id: undigested_plant_polysaccharides_and_host_mucin_selects_for_keystone_amylolytic_and_cellulolytic_degraders
+    subject: undigested_plant_polysaccharides_and_host_mucin
+    predicate: selects for
+    object: keystone_amylolytic_and_cellulolytic_degraders
+    description: Insoluble plant cell walls, starch particles, and mucin select for
+      specialized primary degraders in the fecal community.
+    evidence:
+    - reference: PMID:22572875
+      snippet: Nevertheless, more nutritionally specialized bacteria appear to play
+        critical roles in the community by initiating the degradation of complex substrates
+        such as plant cell walls, starch particles and mucin.
+      notes: Insoluble plant cell walls, starch particles, and mucin select for specialized
+        primary degraders in the fecal community.
+    - reference: PMID:22343308
+      snippet: Having previously demonstrated low RS3 fermentation in vivo in two
+        individuals with undetectable populations of R. bromii-related bacteria, we
+        show here that supplementation of mixed fecal bacteria from one of these volunteers
+        with R. bromii, but not with the other three species, greatly enhanced the
+        extent of RS3 fermentation in vitro.
+      notes: Ze et al. 2012 (ISME J) demonstrate that Ruminococcus bromii is a keystone
+        primary degrader of resistant starch in mixed fecal bacteria.
+  - edge_id: keystone_amylolytic_and_cellulolytic_degraders_produces_fermentative_scfa_and_hydrogen_pool
+    subject: keystone_amylolytic_and_cellulolytic_degraders
+    predicate: produces
+    object: fermentative_scfa_and_hydrogen_pool
+    description: Chassard et al. 2012 (IJSEM) show that human fecal isolate Ruminococcus
+      champanellensis 18P13(T) ferments microcrystalline cellulose to acetate and
+      succinate.
+    evidence:
+    - reference: PMID:21357460
+      snippet: A strictly anaerobic, cellulolytic strain, designated 18P13(T), was
+        isolated from a human faecal sample. Cells were Gram-positive non-motile cocci.
+        Strain 18P13(T) was able to degrade microcrystalline cellulose but the utilization
+        of soluble sugars was restricted to cellobiose. Acetate and succinate were
+        the major end products of cellulose and cellobiose fermentation.
+      notes: Chassard et al. 2012 (IJSEM) show that human fecal isolate Ruminococcus
+        champanellensis 18P13(T) ferments microcrystalline cellulose to acetate and
+        succinate.
+    - reference: PMID:22343308
+      snippet: In co-culture, however, R. bromii proved unique in stimulating RS2
+        and RS3 utilization by the other three bacterial species, even in a medium
+        that does not permit growth of R. bromii itself.
+      notes: Primary starch breakdown by R. bromii cross-feeds secondary fermenters
+        (Bacteroides thetaiotaomicron, Eubacterium rectale, Bifidobacterium adolescentis).
+  - edge_id: fermentative_scfa_and_hydrogen_pool_drives_fecal_methylotrophic_methanogenesis
+    subject: fermentative_scfa_and_hydrogen_pool
+    predicate: drives
+    object: fecal_methylotrophic_methanogenesis
+    description: Dridi et al. 2012 (IJSEM) show that human fecal archaeon Methanomassiliicoccus
+      luminyensis B10(T) (attested in MADIN) requires H2 to reduce methanol to methane.
+    evidence:
+    - reference: PMID:22859731
+      snippet: With hydrogen as the electron donor, strain B10(T) produced methane
+        by reducing methanol. The novel strain was unable to produce methane when
+        hydrogen or methanol was the sole energy source.
+      notes: Dridi et al. 2012 (IJSEM) show that human fecal archaeon Methanomassiliicoccus
+        luminyensis B10(T) (attested in MADIN) requires H2 to reduce methanol to methane.
+    - reference: PMID:31162794
+      snippet: Methanomassiliicoccus luminyensis was originally isolated from human
+        feces and belongs to the seventh order of methanogens, the Methanomassiliicoccales,
+        which are only distantly related to other methanogenic archaea. The organism
+        forms methane from the reduction of methylamines or methanol using molecular
+        hydrogen as reductant.
+      notes: Kröninger et al. 2019 (FEBS J) characterize the membrane-bound ferredoxin:heterodisulfide
+        oxidoreductase energy conservation chain of fecal M. luminyensis during H2-dependent
+        reduction of methylamines and methanol.
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -175,3 +300,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
     Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added fecal_complex_polysaccharide_fermentation_and_methanogenesis mechanism
+    graph for fecal environment (ENVO:01001029) backed by PMID:22572875, PMID:22343308,
+    PMID:21357460, PMID:22859731, PMID:31162794.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped keystone_amylolytic_and_cellulolytic_degraders multi-taxon guild
+    to COMMUNITY (#2261).
+  llm_assisted: true

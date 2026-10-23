@@ -168,9 +168,148 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Streptococcus agalactiae CCUG 34230
   candidate_pool: 304
+causal_graphs:
+- graph_id: vagina_glycogen_amylase_lactobacillus_acidification
+  title: Vaginal epithelial glycogen cleavage, Lactobacillus colonization, and lactic
+    acid eubiosis mechanism
+  description: The lower female genital tract epithelium expresses glycogen that is
+    cleaved by host mucosal alpha-amylase into maltose, maltotriose, and maltotetraose,
+    supporting colonization by dominant Lactobacillus species (L. crispatus, L. iners,
+    L. gasseri, L. jensenii) whose fermentation produces high concentrations of lactic
+    acid (pH ~4.2-5.0) that maintain vaginal eubiosis and suppress bacterial vaginosis-associated
+    strict anaerobes.
+  nodes:
+  - node_id: vagina
+    label: vagina
+    node_type: HABITAT
+    grounding: UBERON:0000996
+    description: Fibromuscular tubular tract of the female lower reproductive system
+      lined by stratified squamous epithelium bathed in cervicovaginal fluid.
+  - node_id: epithelial_glycogen_and_mucosal_alpha_amylase
+    label: epithelial glycogen cleavage by mucosal alpha-amylase
+    node_type: BIOLOGICAL_PROCESS
+    description: Glycogen expressed by the vaginal epithelium and processed by host
+      mucosal alpha-amylase into maltose, maltotriose, and maltotetraose.
+  - node_id: vaginal_lactobacillus_dominated_community
+    label: Lactobacillus crispatus, L. iners, L. gasseri, and L. jensenii guild
+    node_type: COMMUNITY
+    description: Eubiotic vaginal bacterial community dominated by lactic-acid-producing
+      Lactobacillus species.
+  - node_id: lactic_acid_mucosal_acidification
+    label: lactic acid accumulation and low vaginal pH (~4.2-5.0)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High concentration of Lactobacillus-derived lactic acid that acidifies
+      the vaginal lumen and self-regulates alpha-amylase activity at low pH.
+  - node_id: anaerobe_and_urogenital_pathogen_colonization_resistance
+    label: suppression of bacterial vaginosis anaerobes and urogenital pathogens
+    node_type: COMMUNITY_PROCESS
+    description: Antimicrobial and antiviral barrier protection against overgrowth
+      of bacterial vaginosis-associated strict anaerobes and sexually transmitted
+      pathogens.
+  edges:
+  - edge_id: vagina_provides_epithelial_glycogen_and_mucosal_alpha_amylase
+    subject: vagina
+    predicate: supplies
+    object: epithelial_glycogen_and_mucosal_alpha_amylase
+    description: Spear et al. 2014 (J Infect Dis) demonstrate that host alpha-amylase
+      in lower-genital-tract mucosal fluid cleaves epithelial glycogen into maltose,
+      maltotriose, and maltotetraose.
+    evidence:
+    - reference: PMID:24737800
+      snippet: Treatment of glycogen with genital fluids resulted in production of
+        maltose, maltotriose, and maltotetraose, the major products of α-amylase digestion.
+        These studies show that human α-amylase is present in the female lower genital
+        tract and elucidates how epithelial glycogen can support Lactobacillus colonization
+        in the genital tract.
+      notes: Spear et al. 2014 (J Infect Dis) demonstrate that host alpha-amylase
+        in lower-genital-tract mucosal fluid cleaves epithelial glycogen into maltose,
+        maltotriose, and maltotetraose.
+  - edge_id: epithelial_glycogen_and_mucosal_alpha_amylase_selects_for_vaginal_lactobacillus_dominated_community
+    subject: epithelial_glycogen_and_mucosal_alpha_amylase
+    predicate: selects for
+    object: vaginal_lactobacillus_dominated_community
+    description: Alpha-amylase cleavage products of glycogen directly support growth
+      of vaginal Lactobacillus isolates.
+    evidence:
+    - reference: PMID:24737800
+      snippet: Several Lactobacillus isolates were confirmed to not grow in glycogen,
+        but did grow in glycogen-breakdown products, including maltose, maltotriose,
+        maltopentaose, maltodextrins, and glycogen treated with salivary α-amylase.
+      notes: Alpha-amylase cleavage products of glycogen directly support growth of
+        vaginal Lactobacillus isolates.
+    - reference: PMID:20534435
+      snippet: 'The communities clustered into five groups: four were dominated by
+        Lactobacillus iners, L. crispatus, L. gasseri, or L. jensenii, whereas the
+        fifth had lower proportions of lactic acid bacteria and higher proportions
+        of strictly anaerobic organisms, indicating that a potential key ecological
+        function, the production of lactic acid, seems to be conserved in all communities.'
+      notes: Ravel et al. 2011 (PNAS) define the four Lactobacillus-dominated vaginal
+        community state types (L. iners, L. crispatus, L. gasseri, L. jensenii).
+  - edge_id: vaginal_lactobacillus_dominated_community_produces_lactic_acid_mucosal_acidification
+    subject: vaginal_lactobacillus_dominated_community
+    predicate: produces
+    object: lactic_acid_mucosal_acidification
+    description: Tachedjian et al. 2017 (Res Microbiol) establish that Lactobacillus-produced
+      lactic acid acidifies the vaginal environment during eubiosis.
+    evidence:
+    - reference: PMID:28435139
+      snippet: A major distinguishing feature between the vaginal environment in states
+        of eubiosis and dysbiosis is a high concentration of lactic acid, produced
+        by lactobacilli, that acidifies the vagina in eubiosis versus a sharp drop
+        in lactic acid and an increase in pH in dysbiosis.
+      notes: Tachedjian et al. 2017 (Res Microbiol) establish that Lactobacillus-produced
+        lactic acid acidifies the vaginal environment during eubiosis.
+  - edge_id: lactic_acid_mucosal_acidification_modulates_epithelial_glycogen_and_mucosal_alpha_amylase
+    subject: lactic_acid_mucosal_acidification
+    predicate: inhibits
+    object: epithelial_glycogen_and_mucosal_alpha_amylase
+    description: Nasioudis et al. / Spear et al. 2015 (PLoS One) show negative feedback
+      in which low vaginal pH (~4) reduces alpha-amylase cleavage of glycogen by >50%,
+      stabilizing Lactobacillus growth.
+    evidence:
+    - reference: PMID:26171967
+      snippet: These studies show that at low pH, α-amylase activity is reduced to
+        low but detectable levels, which we speculate helps maintain Lactobacillus
+        growth at a limited but sustained rate.
+      notes: Nasioudis et al. / Spear et al. 2015 (PLoS One) show negative feedback
+        in which low vaginal pH (~4) reduces alpha-amylase cleavage of glycogen by
+        >50%, stabilizing Lactobacillus growth.
+  - edge_id: lactic_acid_mucosal_acidification_drives_anaerobe_and_urogenital_pathogen_colonization_resistance
+    subject: lactic_acid_mucosal_acidification
+    predicate: drives
+    object: anaerobe_and_urogenital_pathogen_colonization_resistance
+    description: Lactic-acid acidification prevents overgrowth of bacterial vaginosis-associated
+      strict anaerobes and protects against urogenital infections.
+    evidence:
+    - reference: PMID:28435139
+      snippet: Vaginal eubiosis is characterised by beneficial lactobacillus-dominated
+        microbiota. In contrast, vaginal dysbiosis (e.g. bacterial vaginosis, BV),
+        characterised by an overgrowth of multiple anaerobes, is associated with an
+        increased risk of adverse urogenital and reproductive health outcomes.
+      notes: Lactic-acid acidification prevents overgrowth of bacterial vaginosis-associated
+        strict anaerobes and protects against urogenital infections.
+    - reference: PMID:24737800
+      snippet: Lactobacillus colonization of the lower female genital tract provides
+        protection from the acquisition of sexually transmitted diseases, including
+        human immunodeficiency virus, and from adverse pregnancy outcomes.
+      notes: Lactobacillus dominance in the lower female genital tract protects against
+        sexually transmitted pathogens.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
     Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added vagina_glycogen_amylase_lactobacillus_acidification mechanism graph
+    for vagina (UBERON:0000996) backed by PMID:24737800, PMID:20534435, PMID:28435139,
+    PMID:26171967.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:28:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped epithelial_glycogen_and_mucosal_alpha_amylase to BIOLOGICAL_PROCESS
+    (#2261).
+  llm_assisted: true

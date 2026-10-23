@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-10-22T173000Z-antigravity-020201
+  timestamp: '2026-10-22T17:30:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for high-opportunity habitats in Cycle 2 Stage 2
+  details: 'Reviewed all 33 existing causal-graph overlays in curation/causal_graphs/ and the remaining eligible ENVIRONMENTS_TABLE-attested and plant-rhizosphere habitat records. Added 10 new snippet-verified causal-graph overlays (33 -> 43 total): root.yaml (PO:0009005, PMID:22859206, PMID:22859207, PMID:23373698), rhizosphere.yaml (ENVO:00005801, PMID:16669762, PMID:29050989, PMID:24056930, PMID:21551032), volcano.yaml (ENVO:00000247, PMID:15970992, PMID:23720654, PMID:15184674), endolithic_environment.yaml (ENVO:01000303, PMID:17506683, PMID:39228380, PMID:19850879), petroleum.yaml (ENVO:00002984, PMID:25104386, PMID:14628064, PMID:18075503), skin_environment.yaml (ENVO:2100003, PMID:29332945, PMID:42267822, PMID:21407241, PMID:26733066), mouth_environment.yaml (ENVO:08000002, PMID:20514044, PMID:30301974), vagina.yaml (UBERON:0000996, PMID:24737800, PMID:20534435, PMID:28435139, PMID:26171967), nasopharynx.yaml (UBERON:0001728, PMID:28316330, PMID:26733066, PMID:39705185), and fecal_environment.yaml (ENVO:01001029, PMID:22572875, PMID:22343308, PMID:21357460, PMID:22859731, PMID:31162794). Documented source-limited gaps for the remaining 5 ENVIRONMENTS_TABLE records (blood, animal-associated environment, saline water, rock, host).'
