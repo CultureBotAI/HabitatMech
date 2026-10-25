@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0002114
-- habitatmech:GOLD.d3160a0c40
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6132
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d3160a0c40
+    for habitatmech:GOLD.4e3f079a4d (Host-associated > Mammals > Digestive system
+    > Small intestine > Duodenum). Review https://github.com/CultureBotAI/HabitatMech/issues/2265
+    : Digestive tract/tube is a tubular subdivision of the digestive system, not the
+    entire digestive system; duodenal ulcer is a mucosal lesion/disease concept, not
+    a subtype of the whole small intestine; duodenum is an intestinal segment, not
+    the entire small intestine; ear is a sense organ, not the entire auditory/hearing
+    system; ear canal is a tubular meatus of the outer ear, not the entire outer ear.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target habitatmech:GOLD.4e3f079a4d.
+    Shared mapping endpoints #1398 remain separate.'

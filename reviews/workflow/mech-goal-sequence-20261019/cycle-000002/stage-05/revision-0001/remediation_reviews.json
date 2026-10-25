@@ -1,0 +1,175 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "d3608f94d77d1709c6fa01e93800e326853b9c027b080692128e80a6039f5c28"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "dd65420687330a236268af6c4e2480be862d19d1c79feb3bea036a7e3c80b56d"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "73b94a1b76ea7021637c91ff9ab91c82508bb3e10c5cd5379da032d65fadd781"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "22eb5da5692d90c933aecd0a48c43702b5accbcc7bfa9bc0d47b067e36382ba3"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-10-25T150000Z-antigravity-226501.yaml",
+      "sha256": "2589d74cc90986a45a545b34a42c0d74bf611838320b0ac45b7a3c8f0ae91af9"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-10-25T150010Z-antigravity-226601.yaml",
+      "sha256": "566a6b282191f35c87dc56fc94719bce890e632d2bc1717d788fbc8401bf95dc"
+    },
+    {
+      "path": "tests/test_digestive_tract_to_ear_canal_review_repairs.py",
+      "sha256": "3c1a13f47e091ff3c19f9977f74fcf778ab1db5a0c15557cb437339320b2b984"
+    }
+  ],
+  "cycle": 2,
+  "remediation_reviews": [
+    {
+      "finding_id": "digestive-tract-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "pass_with_limitations",
+      "predecessor_review_id": "20261025T104019Z-digestive_tract-record",
+      "record_id": "UBERON:0001555",
+      "record_path": "data/habitats/host_associated/digestive_tract.yaml",
+      "record_sha256": "aa541fcf31b790e80858a864c6e8284ac07fce811a48fc288c3f58244edac287",
+      "remediation_report_md_path": "reviews/structured/20261025T151001Z-digestive_tract-remediation/review.md",
+      "remediation_report_md_sha256": "5daf0f63acbacb2b1b1c7efaae441401fa8931261e177e50e0303053902522e6",
+      "remediation_review_id": "20261025T151001Z-digestive_tract-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151001Z-digestive_tract-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "7a89c841643b84db2adcdde4cd273f7c6afc74ed3030e6afd62fe853accdf691"
+    },
+    {
+      "finding_id": "dinoflagellates--887680eb-host-name-exact-synonym",
+      "group_id": "G-dinoflagellates-host-name-exact-synonym",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2266",
+      "post_remediation_record_status": "pass_with_limitations",
+      "predecessor_review_id": "20261025T104021Z-dinoflagellates__887680eb-record",
+      "record_id": "habitatmech:GOLD.94019ddb33",
+      "record_path": "data/habitats/host_associated/dinoflagellates__887680eb.yaml",
+      "record_sha256": "7b952bdcb6ef69dc0ff78732871356832ac9e28ab7dab8dbb224083793ba89d0",
+      "remediation_report_md_path": "reviews/structured/20261025T151002Z-dinoflagellates__887680eb-remediation/review.md",
+      "remediation_report_md_sha256": "cb720c8cf2575c92c6aac1756d070ddfb8d6717da7b4dab3a4a0053f1a5234e0",
+      "remediation_review_id": "20261025T151002Z-dinoflagellates__887680eb-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151002Z-dinoflagellates__887680eb-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3d22307a200f7be48c7898f47fb305e67d2ec9db14580591413cc608afc2781b"
+    },
+    {
+      "finding_id": "duodenal-ulcer-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "pass_with_limitations",
+      "predecessor_review_id": "20261025T104026Z-duodenal_ulcer-record",
+      "record_id": "habitatmech:GOLD.9bfaa32c03",
+      "record_path": "data/habitats/host_associated/duodenal_ulcer.yaml",
+      "record_sha256": "622a46fa831230a90c68654b643daa962f11b9ebd1b8f79c0193a4750a13186a",
+      "remediation_report_md_path": "reviews/structured/20261025T151003Z-duodenal_ulcer-remediation/review.md",
+      "remediation_report_md_sha256": "5741e0ce2cf50381c8976fa42c9fdb0ca14074bc6184aede40399728ba5df204",
+      "remediation_review_id": "20261025T151003Z-duodenal_ulcer-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151003Z-duodenal_ulcer-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "20f5bf6417a4795a61966a067eb887bef73837497cf47ecdeda7395a400b81d4"
+    },
+    {
+      "finding_id": "duodenum--00ca3b2c-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261025T104028Z-duodenum__00ca3b2c-record",
+      "record_id": "habitatmech:GOLD.d1ffda8340",
+      "record_path": "data/habitats/host_associated/duodenum__00ca3b2c.yaml",
+      "record_sha256": "9fc23470528fec848af6c4595dbbbe0e58680b79585f50f73a8805d98a230ff2",
+      "remediation_report_md_path": "reviews/structured/20261025T151004Z-duodenum__00ca3b2c-remediation/review.md",
+      "remediation_report_md_sha256": "d4178bdcdecc15eb2a31030c86257237a945abac8c1a9de8c3b71c9ad52951b4",
+      "remediation_review_id": "20261025T151004Z-duodenum__00ca3b2c-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151004Z-duodenum__00ca3b2c-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "15f685dfbddd6332a6af627463f48b56ce44b1889e78ff5c9aafa65cbf13ae73"
+    },
+    {
+      "finding_id": "duodenum--5b2d8f0e-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261025T104029Z-duodenum__5b2d8f0e-record",
+      "record_id": "habitatmech:GOLD.4e3f079a4d",
+      "record_path": "data/habitats/host_associated/duodenum__5b2d8f0e.yaml",
+      "record_sha256": "d693199d477f130dc3a50e16ab849397ca121de42feb4372b205ad9c0c804de1",
+      "remediation_report_md_path": "reviews/structured/20261025T151005Z-duodenum__5b2d8f0e-remediation/review.md",
+      "remediation_report_md_sha256": "2c0b4f749c9fe3111355b19d129aae763b66197cbcdc34ed6987b5478e58ba63",
+      "remediation_review_id": "20261025T151005Z-duodenum__5b2d8f0e-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151005Z-duodenum__5b2d8f0e-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "1875da39e7cf3b152f93a980e29c43f6a04d9fa336ce129002eca6b70e453e26"
+    },
+    {
+      "finding_id": "duodenum--e751f297-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261025T104030Z-duodenum__e751f297-record",
+      "record_id": "habitatmech:GOLD.87d8aea294",
+      "record_path": "data/habitats/host_associated/duodenum__e751f297.yaml",
+      "record_sha256": "64f53e935bcb0a82cf1eda31feb1acfe756bce4fd4550483afef48aa3d6299a5",
+      "remediation_report_md_path": "reviews/structured/20261025T151006Z-duodenum__e751f297-remediation/review.md",
+      "remediation_report_md_sha256": "75ced2c28029db757bd1831703a4da59726df5f5dd648f40c2a8c2a15d656ba1",
+      "remediation_review_id": "20261025T151006Z-duodenum__e751f297-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151006Z-duodenum__e751f297-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "b1993da0cde40978652d69e44346957d9c151acd64938d48b294aecd7529ea74"
+    },
+    {
+      "finding_id": "ear-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "pass_with_limitations",
+      "predecessor_review_id": "20261025T104031Z-ear-record",
+      "record_id": "UBERON:0001690",
+      "record_path": "data/habitats/host_associated/ear.yaml",
+      "record_sha256": "f9092d689cf64926938b393dfeb91e5d96372e960869920f495509b0a6cbdcbf",
+      "remediation_report_md_path": "reviews/structured/20261025T151007Z-ear-remediation/review.md",
+      "remediation_report_md_sha256": "db651af2e65f04c92ab49ed736fe93e8a3e43916f99a09695237bff2dff97388",
+      "remediation_review_id": "20261025T151007Z-ear-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151007Z-ear-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "0610fb24929fd2762ee2d3a873ce0d5b1bc0a9bd4427b79bd360af4bdd0f0d0d"
+    },
+    {
+      "finding_id": "ear-canal-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261025T104032Z-ear_canal-record",
+      "record_id": "habitatmech:GOLD.57fa2ba2ad",
+      "record_path": "data/habitats/host_associated/ear_canal.yaml",
+      "record_sha256": "ea97e5ef8debbe12f06873f982563074240705b4281e5aa1b3b3526a14aefa6c",
+      "remediation_report_md_path": "reviews/structured/20261025T151008Z-ear_canal-remediation/review.md",
+      "remediation_report_md_sha256": "2ce996d4aa521a893c6c7e7948b96c803456148a888549c7f6192dbb95c6e798",
+      "remediation_review_id": "20261025T151008Z-ear_canal-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151008Z-ear_canal-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3237a39f8473ae7650b64ecc98ffaaacf46c83f5c89a4eca036dc1269ecdd193"
+    },
+    {
+      "finding_id": "ear-canal--7b012d70-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2265",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261025T104033Z-ear_canal__7b012d70-record",
+      "record_id": "habitatmech:GOLD.8b135afbf6",
+      "record_path": "data/habitats/host_associated/ear_canal__7b012d70.yaml",
+      "record_sha256": "0516ce77dd11d30bd4a3ca5f06845c25275901b94f22f7fd6712f2473fe3e9fd",
+      "remediation_report_md_path": "reviews/structured/20261025T151009Z-ear_canal__7b012d70-remediation/review.md",
+      "remediation_report_md_sha256": "2a4d7d719da0b477e9ce040a6adccbc3d17773908186844a8a2322c17cb56033",
+      "remediation_review_id": "20261025T151009Z-ear_canal__7b012d70-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261025T151009Z-ear_canal__7b012d70-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ec2f8371eb4cf1d61558de5e8da9be3f2d776c71f50517ac7919470522656491"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "6a4778d4cff07ec783dd596044d9b00921e3925f",
+  "stage": 5
+}

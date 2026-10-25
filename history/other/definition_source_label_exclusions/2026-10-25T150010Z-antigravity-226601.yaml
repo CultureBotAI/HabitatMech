@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-10-25T150010Z-antigravity-226601
+  timestamp: '2026-10-25T15:00:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2266
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  summary: Remove bare host-clade exact alias Dinoflagellates from dinoflagellate-associated
+    environment (habitatmech:GOLD.94019ddb33)
+  details: 'Stage 5 (resolve_review_findings) remediation of G-dinoflagellates-host-name-exact-synonym
+    (dinoflagellates--887680eb-host-name-exact-synonym from Stage 4 record review
+    20261025T104021Z-dinoflagellates__887680eb-record). Updated curation/term_requests.tsv
+    row for habitatmech:GOLD.94019ddb33 (dinoflagellate-associated environment) to
+    replace bare Dinoflagellates in exact_synonym with dinoflagellate host environment,
+    rebuilt curation/term_requests/envo_robot_template.tsv via scripts/build_term_requests.py,
+    and added habitatmech:GOLD.94019ddb33 (Dinoflagellates -> dinoflagellate-associated
+    environment) to curation/definition_source_label_exclusions.tsv to suppress displaced-source-label
+    exact-synonym fallback while preserving all three verbatim GOLD source attestations,
+    definition text, NCBITaxon:2864 xref, and ENVO:01001000 / host-group environment
+    parents.'
