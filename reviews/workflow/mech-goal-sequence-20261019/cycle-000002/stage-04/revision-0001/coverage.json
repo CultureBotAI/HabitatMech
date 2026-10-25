@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 2,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "395f4605d8ae0a3d9ed9e381a4108f4a9681865c",
+  "cohort_id": "digestive_system_to_ear_canal",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/digestive_system__87922027.yaml through data/habitats/host_associated/ear_canal__7b012d70.yaml (next 24 unreviewed host_associated records immediately following Cycle 1 Stage 4 slice ending at digestive_system__780e5b67.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 7,
+  "needs_curation_count": 17,
+  "new_open_finding_count": 22,
+  "carried_deferred_finding_count": 10,
+  "total_carry_forward_finding_count": 32,
+  "category_review_bundle": {
+    "review_id": "20261025T104100Z-digestive_system_to_ear_canal-category",
+    "yaml_path": "reviews/structured/20261025T104100Z-digestive_system_to_ear_canal-category/review.yaml",
+    "yaml_sha256": "216138cdf0a13e95b6389f1d1505c6d0c0a0cc69b38d321753a165f4a5f6621a",
+    "md_path": "reviews/structured/20261025T104100Z-digestive_system_to_ear_canal-category/review.md",
+    "md_sha256": "d888b19f32a7226cee3490d22595228c508ea7e34e5a43003083f54262c393ad",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261025T104010Z-digestive_system__87922027-record",
+      "target_path": "data/habitats/host_associated/digestive_system__87922027.yaml",
+      "target_id": "habitatmech:GOLD.f6720bccf0",
+      "target_label": "Digestive system",
+      "target_sha256": "3a11b162810bbb236e30ec4b17e5058dabf38c48ac3ba6336e922a6f9cd43335",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--87922027-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104010Z-digestive_system__87922027-record/review.yaml",
+      "yaml_sha256": "f2b5f5547bbaaaea62735392b746243e7c8980adfb9acccdb2a0e7fb22cf37ef",
+      "md_path": "reviews/structured/20261025T104010Z-digestive_system__87922027-record/review.md",
+      "md_sha256": "4d0f007512984922dba2ab205e96a0f7653e128cf2970e39a2ff492434fe268f"
+    },
+    {
+      "review_id": "20261025T104011Z-digestive_system__9ec9b5f9-record",
+      "target_path": "data/habitats/host_associated/digestive_system__9ec9b5f9.yaml",
+      "target_id": "habitatmech:GOLD.d011f4b43c",
+      "target_label": "Digestive system",
+      "target_sha256": "6bb824d5c563d2698fad2e87bacc9d8cc80064830f821683ba15981c7c939e59",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--9ec9b5f9-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104011Z-digestive_system__9ec9b5f9-record/review.yaml",
+      "yaml_sha256": "a399e7e6bc6003f0627829ce5d7b8599920071f94c6b4605ea142efd368a00f7",
+      "md_path": "reviews/structured/20261025T104011Z-digestive_system__9ec9b5f9-record/review.md",
+      "md_sha256": "651b34ffcc6c09d0abdfd62e28cb301d280954acf5fadff6e5a62790a39328eb"
+    },
+    {
+      "review_id": "20261025T104012Z-digestive_system__ae8329bf-record",
+      "target_path": "data/habitats/host_associated/digestive_system__ae8329bf.yaml",
+      "target_id": "habitatmech:GOLD.3baeffe4f8",
+      "target_label": "Digestive system",
+      "target_sha256": "434bf9cd6c862b9edc5d675b13c618c931bbaff03615715430f73685d3f73030",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--ae8329bf-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104012Z-digestive_system__ae8329bf-record/review.yaml",
+      "yaml_sha256": "439f24f59e396b66e7ee82cb2b6b487e22d0eee2fdc25666eba99f984df364e1",
+      "md_path": "reviews/structured/20261025T104012Z-digestive_system__ae8329bf-record/review.md",
+      "md_sha256": "7124943cd34bd5487d307c4714869c7569da38fee1ee68494747326a25ae7688"
+    },
+    {
+      "review_id": "20261025T104013Z-digestive_system__c5da4fa6-record",
+      "target_path": "data/habitats/host_associated/digestive_system__c5da4fa6.yaml",
+      "target_id": "habitatmech:GOLD.acc41d1792",
+      "target_label": "Digestive system",
+      "target_sha256": "6363cb0e898fd5bebe327d8b7ebd0e46a39b672f5ec4f184865efb5c84fbb4fc",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--c5da4fa6-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104013Z-digestive_system__c5da4fa6-record/review.yaml",
+      "yaml_sha256": "335d84002732ffde9c052a526af7c67cbd3fdb649b6261c29cae21dd2334d68f",
+      "md_path": "reviews/structured/20261025T104013Z-digestive_system__c5da4fa6-record/review.md",
+      "md_sha256": "0dd64e1ab20a4bd07e542f2bda8b16f13a85673f6597214fd2cf085439bd5844"
+    },
+    {
+      "review_id": "20261025T104014Z-digestive_system__d7057103-record",
+      "target_path": "data/habitats/host_associated/digestive_system__d7057103.yaml",
+      "target_id": "habitatmech:GOLD.fb6caa2908",
+      "target_label": "Digestive system",
+      "target_sha256": "b62a9a85c91a3a408aaf987c25ce2fdde9fce0a87c5abde2a44583ddb61baff3",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--d7057103-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104014Z-digestive_system__d7057103-record/review.yaml",
+      "yaml_sha256": "6772fb110ea090bf763d76f78cec3e8d7b836141c3a0c0701de1c33a557138aa",
+      "md_path": "reviews/structured/20261025T104014Z-digestive_system__d7057103-record/review.md",
+      "md_sha256": "7923c0f5c59914f9efcc50fb1c004dc338bd6df6bbebfffc702efb6e95cee630"
+    },
+    {
+      "review_id": "20261025T104015Z-digestive_system__e41cfc7b-record",
+      "target_path": "data/habitats/host_associated/digestive_system__e41cfc7b.yaml",
+      "target_id": "habitatmech:GOLD.bcbf6eec9b",
+      "target_label": "Digestive system",
+      "target_sha256": "a3ca6ef4e56ed0cb4e04d0b0601d66b60542b7ec7d1505b6bcc85ee45f0c8e9c",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--e41cfc7b-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104015Z-digestive_system__e41cfc7b-record/review.yaml",
+      "yaml_sha256": "65d4cea9db1f21b9657133ae92be395df0aa759baaa2db3b4d5ec7c3edf67b2d",
+      "md_path": "reviews/structured/20261025T104015Z-digestive_system__e41cfc7b-record/review.md",
+      "md_sha256": "ec388969c6871e9b539bc1de3e003d91dcf5f24a2f1653c3ff355fe04b856eb8"
+    },
+    {
+      "review_id": "20261025T104016Z-digestive_system__efdbeca1-record",
+      "target_path": "data/habitats/host_associated/digestive_system__efdbeca1.yaml",
+      "target_id": "habitatmech:GOLD.c8e85f3c84",
+      "target_label": "Digestive system",
+      "target_sha256": "68f12a08d60a0a350f532b270582ae5e3b8c4419b6c95b1da4a9efdeb085d7a6",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--efdbeca1-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104016Z-digestive_system__efdbeca1-record/review.yaml",
+      "yaml_sha256": "b83097e14a24d752266f76ce186089a2bcdf48006db5df6a48928296613deec9",
+      "md_path": "reviews/structured/20261025T104016Z-digestive_system__efdbeca1-record/review.md",
+      "md_sha256": "049b4425ac48c7ede9adb6e24ce30eecbe6e4215a84885fe5ac6033590a8ce66"
+    },
+    {
+      "review_id": "20261025T104017Z-digestive_system__f6665a67-record",
+      "target_path": "data/habitats/host_associated/digestive_system__f6665a67.yaml",
+      "target_id": "habitatmech:GOLD.6cc264ebf7",
+      "target_label": "Digestive system",
+      "target_sha256": "9c4a99fe3b0aa5c0832d4b3a89414ce074379dc041553c1ce28d6ac7eb6e4b4d",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-system--f6665a67-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104017Z-digestive_system__f6665a67-record/review.yaml",
+      "yaml_sha256": "7fac5bae689ddd826917090e586ddb56e605aad46d1445360d8a16e2b968d6db",
+      "md_path": "reviews/structured/20261025T104017Z-digestive_system__f6665a67-record/review.md",
+      "md_sha256": "9cdc56f23645e3d79be96838b195d625248c54ba2d62b1a4f8abe43bc0b7677c"
+    },
+    {
+      "review_id": "20261025T104018Z-digestive_system_secreted_substance-record",
+      "target_path": "data/habitats/host_associated/digestive_system_secreted_substance.yaml",
+      "target_id": "UBERON:0006911",
+      "target_label": "digestive system secreted substance",
+      "target_sha256": "7ec211fc379f13a62560e2d17b4b63e6d59672b3db9b7d68fb0148895afec86d",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104018Z-digestive_system_secreted_substance-record/review.yaml",
+      "yaml_sha256": "c5ad0d2c23cfde898972df49012178a82c22e86dcc9bc2231ba1798ed6f3d7a4",
+      "md_path": "reviews/structured/20261025T104018Z-digestive_system_secreted_substance-record/review.md",
+      "md_sha256": "ff349d817b948ba1ca342a91cefeeb825d9f5fafcfbd9432cc16b477693a9c82"
+    },
+    {
+      "review_id": "20261025T104019Z-digestive_tract-record",
+      "target_path": "data/habitats/host_associated/digestive_tract.yaml",
+      "target_id": "UBERON:0001555",
+      "target_label": "digestive tract",
+      "target_sha256": "77fb10445e55acf8947ff114e10d0e51a956d205ee4d47f7c67096becc74f541",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "digestive-tract-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261025T104019Z-digestive_tract-record/review.yaml",
+      "yaml_sha256": "286ea541cfa113aafb7d92ccf7a9dacc23e5000d57e215383573d8da14f3fba8",
+      "md_path": "reviews/structured/20261025T104019Z-digestive_tract-record/review.md",
+      "md_sha256": "cf3b79fb55208a6a36f95b6f5b69cf9dd3acdfec9bf54eff8a5a4d9f5daf86cb"
+    },
+    {
+      "review_id": "20261025T104020Z-digital_dermatitis-record",
+      "target_path": "data/habitats/host_associated/digital_dermatitis.yaml",
+      "target_id": "habitatmech:GOLD.f93dba43d8",
+      "target_label": "mammalian digital dermatitis lesion",
+      "target_sha256": "f18a041e448a444b617fd03330e8eea1710cd0a961e4899f7ef02c1b47f9848e",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104020Z-digital_dermatitis-record/review.yaml",
+      "yaml_sha256": "a2a899f613336375e0519e0c7d0207b0719cf151659b1d62d8b2281341d77ee9",
+      "md_path": "reviews/structured/20261025T104020Z-digital_dermatitis-record/review.md",
+      "md_sha256": "9c917b0cfce41fe85f3253448adba08f0bc8070db6b457f6ab6ea13e1bfc1b24"
+    },
+    {
+      "review_id": "20261025T104021Z-dinoflagellates__887680eb-record",
+      "target_path": "data/habitats/host_associated/dinoflagellates__887680eb.yaml",
+      "target_id": "habitatmech:GOLD.94019ddb33",
+      "target_label": "dinoflagellate-associated environment",
+      "target_sha256": "e4667018234e16c6fd89733c2651dd87015e3713bee31c97e0d6454c4ee00912",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "dinoflagellates--887680eb-host-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261025T104021Z-dinoflagellates__887680eb-record/review.yaml",
+      "yaml_sha256": "ea4f0be0ccf34069c2ce859561fc7fe3757d9f91f26ba85d8a453f6f250d3611",
+      "md_path": "reviews/structured/20261025T104021Z-dinoflagellates__887680eb-record/review.md",
+      "md_sha256": "b04531c13aaee16c21e5fbafa487c63228dbab732f98f934c8e7cfb65e9e582b"
+    },
+    {
+      "review_id": "20261025T104022Z-discharge-record",
+      "target_path": "data/habitats/host_associated/discharge.yaml",
+      "target_id": "habitatmech:GOLD.944486580a",
+      "target_label": "human urethral discharge",
+      "target_sha256": "2b8c2f4bde81f44080a3d52912ac02811acc2ecd0ad4cdf3450963f9c3c0cd63",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104022Z-discharge-record/review.yaml",
+      "yaml_sha256": "9ac96a5c308dedacead86a25677c6e11498224e5b3f2f00d5eebe2fcaf4d7eff",
+      "md_path": "reviews/structured/20261025T104022Z-discharge-record/review.md",
+      "md_sha256": "218287b9051be1f1cfed0d270d593be2d542719afa5dd3d562cf8c5f96d907c7"
+    },
+    {
+      "review_id": "20261025T104023Z-discharge__0e4f2939-record",
+      "target_path": "data/habitats/host_associated/discharge__0e4f2939.yaml",
+      "target_id": "habitatmech:GOLD.da244adbbe",
+      "target_label": "human mammary gland discharge",
+      "target_sha256": "d0e9ff7cef98b6d6dc5b897485510d74daba4c49b0377fc424c42f1d5a776274",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104023Z-discharge__0e4f2939-record/review.yaml",
+      "yaml_sha256": "2e82e245082542ca1a5a215adb7e3d7a280a8ef03e2a0c74e956fecfd2316521",
+      "md_path": "reviews/structured/20261025T104023Z-discharge__0e4f2939-record/review.md",
+      "md_sha256": "2364428fc494242a92a3dfc36d81460ace7cf06373cba4bf962fbc829bdb7bd8"
+    },
+    {
+      "review_id": "20261025T104024Z-dorsum-record",
+      "target_path": "data/habitats/host_associated/dorsum.yaml",
+      "target_id": "BTO:0001713",
+      "target_label": "dorsum",
+      "target_sha256": "3b810e04855eea3bd48b4a4c2db6131a2f525b0b4f7a7f3b2be745c5af485b4e",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104024Z-dorsum-record/review.yaml",
+      "yaml_sha256": "2af481609ae8f424dde4ef862c1798b9a4a8ff3ebb8137999bd0b9e6ef59dcf4",
+      "md_path": "reviews/structured/20261025T104024Z-dorsum-record/review.md",
+      "md_sha256": "5b7f8d73afa52909177460730ed4dcd61a08a860de0955fbcf9f850e3309bf0b"
+    },
+    {
+      "review_id": "20261025T104025Z-duodenal_mucosa-record",
+      "target_path": "data/habitats/host_associated/duodenal_mucosa.yaml",
+      "target_id": "BTO:0000367",
+      "target_label": "duodenal mucosa",
+      "target_sha256": "fd5dbe695da0da3c261837a70eb10a64f3cbbcb0c16b05067b0b06877005ff0f",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104025Z-duodenal_mucosa-record/review.yaml",
+      "yaml_sha256": "55d5cb0627dacb3bd2908afdf82c5867bfbee17c024881f7c2d8b126cc34b86c",
+      "md_path": "reviews/structured/20261025T104025Z-duodenal_mucosa-record/review.md",
+      "md_sha256": "1d74d0f97a9d998b2758cd5c5ac5de9c6a050cfca9187f02ab9fd28144569a95"
+    },
+    {
+      "review_id": "20261025T104026Z-duodenal_ulcer-record",
+      "target_path": "data/habitats/host_associated/duodenal_ulcer.yaml",
+      "target_id": "habitatmech:GOLD.9bfaa32c03",
+      "target_label": "Duodenal ulcer",
+      "target_sha256": "29d0164bce248ef395b4689c4aac7b190d73e21f68afdad60584b9feaab36b3a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "duodenal-ulcer-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261025T104026Z-duodenal_ulcer-record/review.yaml",
+      "yaml_sha256": "5126c7f9d58d181d44c6602ceef327e5edbce67dc18d3229431e8e6d5f7f45ad",
+      "md_path": "reviews/structured/20261025T104026Z-duodenal_ulcer-record/review.md",
+      "md_sha256": "cf6874f8281caa1320c6a51e2fe1f92b5afcf4799f1451cf8283c775b53a4c63"
+    },
+    {
+      "review_id": "20261025T104027Z-duodenum-record",
+      "target_path": "data/habitats/host_associated/duodenum.yaml",
+      "target_id": "BTO:0000365",
+      "target_label": "duodenum",
+      "target_sha256": "58b4f4e1492f9f5b94e0f8ff48779b2f5d112ce4a530fe15928c938ba6b6eab1",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261025T104027Z-duodenum-record/review.yaml",
+      "yaml_sha256": "8428276be9dc8cfd3fd167d2e2fdea5613d9e5e65461f21d389d23cd4064164b",
+      "md_path": "reviews/structured/20261025T104027Z-duodenum-record/review.md",
+      "md_sha256": "3178ff9d81acc763555177c0e6633d65b18d796f432fbde186770076d5f33b1f"
+    },
+    {
+      "review_id": "20261025T104028Z-duodenum__00ca3b2c-record",
+      "target_path": "data/habitats/host_associated/duodenum__00ca3b2c.yaml",
+      "target_id": "habitatmech:GOLD.d1ffda8340",
+      "target_label": "Duodenum",
+      "target_sha256": "52199559830dcc124b28b5d0f94966abc2889d09583ee7ca76d56e7947b13628",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "duodenum--00ca3b2c-context-parent",
+        "duodenum--00ca3b2c-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104028Z-duodenum__00ca3b2c-record/review.yaml",
+      "yaml_sha256": "d3f4bc5f1825a6585f336eeb01432d168b2149fb6737e98457227ca8153fd004",
+      "md_path": "reviews/structured/20261025T104028Z-duodenum__00ca3b2c-record/review.md",
+      "md_sha256": "fbff432c1f1aa7dc899b1d05fada7b48e09a004bb3c625539d3befecb9693b00"
+    },
+    {
+      "review_id": "20261025T104029Z-duodenum__5b2d8f0e-record",
+      "target_path": "data/habitats/host_associated/duodenum__5b2d8f0e.yaml",
+      "target_id": "habitatmech:GOLD.4e3f079a4d",
+      "target_label": "Duodenum",
+      "target_sha256": "bb0c1ffb6e86b0fb313e317d654eb35ae0b9759ce9cab5d3419b55d9a85a2146",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "duodenum--5b2d8f0e-context-parent",
+        "duodenum--5b2d8f0e-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104029Z-duodenum__5b2d8f0e-record/review.yaml",
+      "yaml_sha256": "be40973209896904f275a2dda80f6dbce77feebd45c809e29bb89b7192643f21",
+      "md_path": "reviews/structured/20261025T104029Z-duodenum__5b2d8f0e-record/review.md",
+      "md_sha256": "c75cdaf20b064d0842d4fd7e6213a6da9a5c22c74a948f2eb79f71b2f2a11f54"
+    },
+    {
+      "review_id": "20261025T104030Z-duodenum__e751f297-record",
+      "target_path": "data/habitats/host_associated/duodenum__e751f297.yaml",
+      "target_id": "habitatmech:GOLD.87d8aea294",
+      "target_label": "Duodenum",
+      "target_sha256": "716dd125d7392c1d74e42d14f413130a35dcd6516c244fdddafd4c17211f2070",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "duodenum--e751f297-context-parent",
+        "duodenum--e751f297-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104030Z-duodenum__e751f297-record/review.yaml",
+      "yaml_sha256": "10f1c6718aa75debafb68d32ee5736599512c5e12976fca333a4cb0d3f1a179f",
+      "md_path": "reviews/structured/20261025T104030Z-duodenum__e751f297-record/review.md",
+      "md_sha256": "167925d4a7c3306e270bd1d852b6ee3a7edd62ca761c5e668a40e440bf52f656"
+    },
+    {
+      "review_id": "20261025T104031Z-ear-record",
+      "target_path": "data/habitats/host_associated/ear.yaml",
+      "target_id": "UBERON:0001690",
+      "target_label": "ear",
+      "target_sha256": "1f6668e7ee73f65046c5f1a4d000b36b51bd5f4c60c089df6cb04717d239c26a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "ear-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261025T104031Z-ear-record/review.yaml",
+      "yaml_sha256": "dbd811145bcfedbb4e7e1c6fbd7871231b19de0c54a03c2418f59048d5c6d9e9",
+      "md_path": "reviews/structured/20261025T104031Z-ear-record/review.md",
+      "md_sha256": "6610c9b9f60ac10547b27c95a5a8d1fbbf333d1f13b75da48e090b0bbc3f7ff9"
+    },
+    {
+      "review_id": "20261025T104032Z-ear_canal-record",
+      "target_path": "data/habitats/host_associated/ear_canal.yaml",
+      "target_id": "habitatmech:GOLD.57fa2ba2ad",
+      "target_label": "Ear canal",
+      "target_sha256": "7cfb4dc5d8c4f67ac592211a25b0ba2da93187a13d44a9125e7a1f095a705cf1",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "ear-canal-context-parent",
+        "ear-canal-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104032Z-ear_canal-record/review.yaml",
+      "yaml_sha256": "7e4f361d47e2a0f54ad0ca07cff5057f40173a8a512ab8e840df8047b1118286",
+      "md_path": "reviews/structured/20261025T104032Z-ear_canal-record/review.md",
+      "md_sha256": "990c6430d591a8751a7fb0864b4fb11de779d69ad40fb0dc2ba923bf6068fcc2"
+    },
+    {
+      "review_id": "20261025T104033Z-ear_canal__7b012d70-record",
+      "target_path": "data/habitats/host_associated/ear_canal__7b012d70.yaml",
+      "target_id": "habitatmech:GOLD.8b135afbf6",
+      "target_label": "Ear canal",
+      "target_sha256": "88e13136074b8f0927912cf78123926acc90943fab2cb092d61b6d85d5b87f02",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "ear-canal--7b012d70-context-parent",
+        "ear-canal--7b012d70-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261025T104033Z-ear_canal__7b012d70-record/review.yaml",
+      "yaml_sha256": "9febefe116fd621c576149c4adc466defa81451b28b8ec2848840cf14bfd5515",
+      "md_path": "reviews/structured/20261025T104033Z-ear_canal__7b012d70-record/review.md",
+      "md_sha256": "a355cf84c049bc333fff3469069805126278b5f1efefc35e665ebbcd4b9b0608"
+    }
+  ]
+}
