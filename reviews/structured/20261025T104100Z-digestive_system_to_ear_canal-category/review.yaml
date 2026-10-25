@@ -1,0 +1,1896 @@
+schema_version: 1.0.0
+review_id: 20261025T104100Z-digestive_system_to_ear_canal-category
+repository: CultureBotAI/HabitatMech
+kind: category
+title: 'Category cohort review: host_associated slice digestive_system__87922027 through
+  ear_canal__7b012d70 (24 records)'
+started_at: '2026-10-25T10:25:00Z'
+finished_at: '2026-10-25T10:41:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Same agent inspected all 24 cohort target records and source
+    evidence; not independent human or second-agent approval.
+skill: .claude/skills/review-yaml-category/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Full 24-record category boundary and cohort review of the contiguous unreviewed
+  host_associated slice (digestive_system__87922027.yaml through ear_canal__7b012d70.yaml)
+  at commit 395f4605d8ae0a3d9ed9e381a4108f4a9681865c. All 24 records represent distinct
+  host-clade, anatomical, bodily-fluid, or condition concepts (retain decisions).
+  Record-level open findings (22 total across 17 records) are recorded in the 24 linked
+  kind: record bundles for Stage 5 remediation.'
+source:
+  git_revision: 395f4605d8ae0a3d9ed9e381a4108f4a9681865c
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 4a43388a0a8863b06c66cef795db0b9cc12c1507af727f2f672fd97f18309e0e
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: bcd9e1c631a4ec7313b7662e2b17fcd9504eed19385577c728440ca78fc55efb
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 98268bc72604b7311841d844a0b603421b90098de22ab7f5d29d04ee4ce77308
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 64215df4916daafbc32ac99e49824709d561746dae9de5ee0905386cdfafae9c
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 391fd3abe12d609d5d15fc8cff56d87c0278a4056c1231a251253227e9da1cb9
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: c1207270bb0ae2031e42de6cb8220b20f98886f65e40d48793bfd7e9d757d83a
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: beedcfb3f4c9a7b7f7a2b61b0d64ec937a720727fa1b9e9ecfebd3fc2ebfbfc5
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: ee559f7b45b4af2d72a078c45d1a3b676785d34305f286e9738f95771dbaccfd
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: c662d1843091ebe6df1fb05accc52bf78c7e19c6be035450a916397a6cac4f9a
+    role: context
+  - path: data/habitats/host_associated/algae.yaml
+    sha256: d188ea80a8e2702b52255dcc82378cb14be502fdaba853827d6138ba86a9f0b6
+    role: context
+  - path: data/habitats/host_associated/amphibia.yaml
+    sha256: 720ed0986037a6963fe034d53668fbeeb5e3766a9e52a8894539630722203d4b
+    role: context
+  - path: data/habitats/host_associated/annelida.yaml
+    sha256: 69be47a8c54edb5c87ac376edda9cf459331c2911ea559f94c6c2a5833be368b
+    role: context
+  - path: data/habitats/host_associated/arthropoda_myriapoda.yaml
+    sha256: 1870aab03027c3fe70ab8222aa7723277ca6205bf8fac5510427e5ab1927be0a
+    role: context
+  - path: data/habitats/host_associated/auditory_hearing_system__8fefc879.yaml
+    sha256: 8085ae84a65e12c14378b6fa8d6b0a4027f35214af5e561d4213a8a536ba4087
+    role: context
+  - path: data/habitats/host_associated/birds.yaml
+    sha256: 2de4c694d7ca103897d519fd7fbef6d955a9c2502f6045aa8c56d4af09204aae
+    role: context
+  - path: data/habitats/host_associated/cephalochordata.yaml
+    sha256: 2204309bc140c1f97d6c0c29bd6c2b0fb9f2605e0a8f02a47ccb6efcc7655df8
+    role: context
+  - path: data/habitats/host_associated/digestive_system__87922027.yaml
+    sha256: 3a11b162810bbb236e30ec4b17e5058dabf38c48ac3ba6336e922a6f9cd43335
+    role: target
+  - path: data/habitats/host_associated/digestive_system__9ec9b5f9.yaml
+    sha256: 6bb824d5c563d2698fad2e87bacc9d8cc80064830f821683ba15981c7c939e59
+    role: target
+  - path: data/habitats/host_associated/digestive_system__ae8329bf.yaml
+    sha256: 434bf9cd6c862b9edc5d675b13c618c931bbaff03615715430f73685d3f73030
+    role: target
+  - path: data/habitats/host_associated/digestive_system__c5da4fa6.yaml
+    sha256: 6363cb0e898fd5bebe327d8b7ebd0e46a39b672f5ec4f184865efb5c84fbb4fc
+    role: target
+  - path: data/habitats/host_associated/digestive_system__d7057103.yaml
+    sha256: b62a9a85c91a3a408aaf987c25ce2fdde9fce0a87c5abde2a44583ddb61baff3
+    role: target
+  - path: data/habitats/host_associated/digestive_system__e41cfc7b.yaml
+    sha256: a3ca6ef4e56ed0cb4e04d0b0601d66b60542b7ec7d1505b6bcc85ee45f0c8e9c
+    role: target
+  - path: data/habitats/host_associated/digestive_system__efdbeca1.yaml
+    sha256: 68f12a08d60a0a350f532b270582ae5e3b8c4419b6c95b1da4a9efdeb085d7a6
+    role: target
+  - path: data/habitats/host_associated/digestive_system__f6665a67.yaml
+    sha256: 9c4a99fe3b0aa5c0832d4b3a89414ce074379dc041553c1ce28d6ac7eb6e4b4d
+    role: target
+  - path: data/habitats/host_associated/digestive_system_secreted_substance.yaml
+    sha256: 7ec211fc379f13a62560e2d17b4b63e6d59672b3db9b7d68fb0148895afec86d
+    role: target
+  - path: data/habitats/host_associated/digestive_tract.yaml
+    sha256: 77fb10445e55acf8947ff114e10d0e51a956d205ee4d47f7c67096becc74f541
+    role: target
+  - path: data/habitats/host_associated/digital_dermatitis.yaml
+    sha256: f18a041e448a444b617fd03330e8eea1710cd0a961e4899f7ef02c1b47f9848e
+    role: target
+  - path: data/habitats/host_associated/dinoflagellates__887680eb.yaml
+    sha256: e4667018234e16c6fd89733c2651dd87015e3713bee31c97e0d6454c4ee00912
+    role: target
+  - path: data/habitats/host_associated/discharge.yaml
+    sha256: 2b8c2f4bde81f44080a3d52912ac02811acc2ecd0ad4cdf3450963f9c3c0cd63
+    role: target
+  - path: data/habitats/host_associated/discharge__0e4f2939.yaml
+    sha256: d0e9ff7cef98b6d6dc5b897485510d74daba4c49b0377fc424c42f1d5a776274
+    role: target
+  - path: data/habitats/host_associated/dorsum.yaml
+    sha256: 3b810e04855eea3bd48b4a4c2db6131a2f525b0b4f7a7f3b2be745c5af485b4e
+    role: target
+  - path: data/habitats/host_associated/duodenal_mucosa.yaml
+    sha256: fd5dbe695da0da3c261837a70eb10a64f3cbbcb0c16b05067b0b06877005ff0f
+    role: target
+  - path: data/habitats/host_associated/duodenal_ulcer.yaml
+    sha256: 29d0164bce248ef395b4689c4aac7b190d73e21f68afdad60584b9feaab36b3a
+    role: target
+  - path: data/habitats/host_associated/duodenum.yaml
+    sha256: 58b4f4e1492f9f5b94e0f8ff48779b2f5d112ce4a530fe15928c938ba6b6eab1
+    role: target
+  - path: data/habitats/host_associated/duodenum__00ca3b2c.yaml
+    sha256: 52199559830dcc124b28b5d0f94966abc2889d09583ee7ca76d56e7947b13628
+    role: target
+  - path: data/habitats/host_associated/duodenum__5b2d8f0e.yaml
+    sha256: bb0c1ffb6e86b0fb313e317d654eb35ae0b9759ce9cab5d3419b55d9a85a2146
+    role: target
+  - path: data/habitats/host_associated/duodenum__e751f297.yaml
+    sha256: 716dd125d7392c1d74e42d14f413130a35dcd6516c244fdddafd4c17211f2070
+    role: target
+  - path: data/habitats/host_associated/ear.yaml
+    sha256: 1f6668e7ee73f65046c5f1a4d000b36b51bd5f4c60c089df6cb04717d239c26a
+    role: target
+  - path: data/habitats/host_associated/ear_canal.yaml
+    sha256: 7cfb4dc5d8c4f67ac592211a25b0ba2da93187a13d44a9125e7a1f095a705cf1
+    role: target
+  - path: data/habitats/host_associated/ear_canal__7b012d70.yaml
+    sha256: 88e13136074b8f0927912cf78123926acc90943fab2cb092d61b6d85d5b87f02
+    role: target
+  - path: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+    sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+    role: context
+  - path: data/habitats/host_associated/intestinal_mucosa.yaml
+    sha256: 41d4be2a27877bae0556ae889867dd08a1604b4e036ede7c0a81ccb501730ff9
+    role: context
+  - path: data/habitats/host_associated/mammals.yaml
+    sha256: e070a7aa0a880df14e2cbee12da0375cf135cef30266fc1a3c81f41af4dd4943
+    role: context
+  - path: data/habitats/host_associated/mammals_human.yaml
+    sha256: 6d3fba8ddf0a933b0e22f94b17e2df356eb2d297b1d96a7f960575e81d50d4d1
+    role: context
+  - path: data/habitats/host_associated/microbial__50f690f2.yaml
+    sha256: 0a61c7a8e834ed6be95c75fb2162102602fe1fdbec71e83aeecb0eeb720e5143
+    role: context
+  - path: data/habitats/host_associated/mollusca.yaml
+    sha256: 19b33e1d578b0bc0fb27a35035aad544bf3ac639e47647a1b96da0ea8cf8dbd8
+    role: context
+  - path: data/habitats/host_associated/outer_ear__1cde1a0e.yaml
+    sha256: c99b28957506f2da660b0b9a3de49c46386f9d5c83ef106fe20cc18104d4f319
+    role: context
+  - path: data/habitats/host_associated/outer_ear__51c29e92.yaml
+    sha256: 8c9609a4dcac7298bbd4aab3fe5a4c393f632a512fe1f7920080d62af88ffdfb
+    role: context
+  - path: data/habitats/host_associated/protists.yaml
+    sha256: 36cc3b7d0ac6b3e67e4522db0b9661bb38d978f0ae2907ea8a6f073c3c3a7047
+    role: context
+  - path: data/habitats/host_associated/sense_organ.yaml
+    sha256: 96bdae6bcf1e453c3ab4b554119f4c2038b02d1627de60a46a1f90adb155086c
+    role: context
+  - path: data/habitats/host_associated/small_intestine__45b8dd4d.yaml
+    sha256: b30b8b47fed42238c486b6e17477727bd58754fb542686679b1d30b250ef7454
+    role: context
+  - path: data/habitats/host_associated/small_intestine__b5b5caae.yaml
+    sha256: bd656b903f0571ef8ebc5aa7edab4a8e6dec3264904a697401da1ef12117ff6c
+    role: context
+  - path: data/habitats/host_associated/small_intestine__ce3c8e90.yaml
+    sha256: 882898970e9631588f0933215f65a9743eb9700f68f58bde5c86bea628c24863
+    role: context
+  - path: data/habitats/other/skin_environment.yaml
+    sha256: 30553ac3de9b9b5da5cf8242cdb15c84c71ce30e834d748a061a61c2fbd1e4aa
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: 7e2848e31997195539d5a8b292144e58b85425fc39504c8564ff5912f38ae384
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: habitatmech:GOLD.f6720bccf0
+  path: data/habitats/host_associated/digestive_system__87922027.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.d011f4b43c
+  path: data/habitats/host_associated/digestive_system__9ec9b5f9.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.3baeffe4f8
+  path: data/habitats/host_associated/digestive_system__ae8329bf.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.acc41d1792
+  path: data/habitats/host_associated/digestive_system__c5da4fa6.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.fb6caa2908
+  path: data/habitats/host_associated/digestive_system__d7057103.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.bcbf6eec9b
+  path: data/habitats/host_associated/digestive_system__e41cfc7b.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.c8e85f3c84
+  path: data/habitats/host_associated/digestive_system__efdbeca1.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.6cc264ebf7
+  path: data/habitats/host_associated/digestive_system__f6665a67.yaml
+  label: Digestive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: UBERON:0006911
+  path: data/habitats/host_associated/digestive_system_secreted_substance.yaml
+  label: digestive system secreted substance
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: UBERON:0001555
+  path: data/habitats/host_associated/digestive_tract.yaml
+  label: digestive tract
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.f93dba43d8
+  path: data/habitats/host_associated/digital_dermatitis.yaml
+  label: mammalian digital dermatitis lesion
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.94019ddb33
+  path: data/habitats/host_associated/dinoflagellates__887680eb.yaml
+  label: dinoflagellate-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.944486580a
+  path: data/habitats/host_associated/discharge.yaml
+  label: human urethral discharge
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.da244adbbe
+  path: data/habitats/host_associated/discharge__0e4f2939.yaml
+  label: human mammary gland discharge
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0001713
+  path: data/habitats/host_associated/dorsum.yaml
+  label: dorsum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000367
+  path: data/habitats/host_associated/duodenal_mucosa.yaml
+  label: duodenal mucosa
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.9bfaa32c03
+  path: data/habitats/host_associated/duodenal_ulcer.yaml
+  label: Duodenal ulcer
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000365
+  path: data/habitats/host_associated/duodenum.yaml
+  label: duodenum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.d1ffda8340
+  path: data/habitats/host_associated/duodenum__00ca3b2c.yaml
+  label: Duodenum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.4e3f079a4d
+  path: data/habitats/host_associated/duodenum__5b2d8f0e.yaml
+  label: Duodenum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.87d8aea294
+  path: data/habitats/host_associated/duodenum__e751f297.yaml
+  label: Duodenum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: UBERON:0001690
+  path: data/habitats/host_associated/ear.yaml
+  label: ear
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.57fa2ba2ad
+  path: data/habitats/host_associated/ear_canal.yaml
+  label: Ear canal
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.8b135afbf6
+  path: data/habitats/host_associated/ear_canal__7b012d70.yaml
+  label: Ear canal
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Contiguous 24-record cohort boundary review of previously unreviewed
+    records in data/habitats/host_associated/ (indices 386-409 in path order).
+  selection: Next 24 unreviewed records in data/habitats/host_associated/ immediately
+    following 20261022T014533Z-digestive_system__780e5b67-record.
+  coverage: full
+  population_size: 24
+  reviewed_target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  exclusions:
+  - target: Other habitat records outside indices 386-409 of data/habitats/host_associated/
+    reason: Bounded 24-record cohort slice for Cycle 2 Stage 4 record/category review;
+      direct parents are inspected as context.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: .venv/bin/python -m linkml.validator.cli -s src/habitatmech/schema/habitatmech.yaml
+    --target-class HabitatRecord data/habitats/host_associated/digestive_system__87922027.yaml
+    data/habitats/host_associated/digestive_system__9ec9b5f9.yaml data/habitats/host_associated/digestive_system__ae8329bf.yaml
+    data/habitats/host_associated/digestive_system__c5da4fa6.yaml data/habitats/host_associated/digestive_system__d7057103.yaml
+    data/habitats/host_associated/digestive_system__e41cfc7b.yaml data/habitats/host_associated/digestive_system__efdbeca1.yaml
+    data/habitats/host_associated/digestive_system__f6665a67.yaml data/habitats/host_associated/digestive_system_secreted_substance.yaml
+    data/habitats/host_associated/digestive_tract.yaml data/habitats/host_associated/digital_dermatitis.yaml
+    data/habitats/host_associated/dinoflagellates__887680eb.yaml data/habitats/host_associated/discharge.yaml
+    data/habitats/host_associated/discharge__0e4f2939.yaml data/habitats/host_associated/dorsum.yaml
+    data/habitats/host_associated/duodenal_mucosa.yaml data/habitats/host_associated/duodenal_ulcer.yaml
+    data/habitats/host_associated/duodenum.yaml data/habitats/host_associated/duodenum__00ca3b2c.yaml
+    data/habitats/host_associated/duodenum__5b2d8f0e.yaml data/habitats/host_associated/duodenum__e751f297.yaml
+    data/habitats/host_associated/ear.yaml data/habitats/host_associated/ear_canal.yaml
+    data/habitats/host_associated/ear_canal__7b012d70.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: Completed 2026-10-25T10:35:30Z. No issues found.
+  scope_note: Individual schema; strict command covers the 24 named cohort targets;
+    other documented gates have full-corpus scope.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/habitats/host_associated/digestive_system__87922027.yaml
+    data/habitats/host_associated/digestive_system__9ec9b5f9.yaml data/habitats/host_associated/digestive_system__ae8329bf.yaml
+    data/habitats/host_associated/digestive_system__c5da4fa6.yaml data/habitats/host_associated/digestive_system__d7057103.yaml
+    data/habitats/host_associated/digestive_system__e41cfc7b.yaml data/habitats/host_associated/digestive_system__efdbeca1.yaml
+    data/habitats/host_associated/digestive_system__f6665a67.yaml data/habitats/host_associated/digestive_system_secreted_substance.yaml
+    data/habitats/host_associated/digestive_tract.yaml data/habitats/host_associated/digital_dermatitis.yaml
+    data/habitats/host_associated/dinoflagellates__887680eb.yaml data/habitats/host_associated/discharge.yaml
+    data/habitats/host_associated/discharge__0e4f2939.yaml data/habitats/host_associated/dorsum.yaml
+    data/habitats/host_associated/duodenal_mucosa.yaml data/habitats/host_associated/duodenal_ulcer.yaml
+    data/habitats/host_associated/duodenum.yaml data/habitats/host_associated/duodenum__00ca3b2c.yaml
+    data/habitats/host_associated/duodenum__5b2d8f0e.yaml data/habitats/host_associated/duodenum__e751f297.yaml
+    data/habitats/host_associated/ear.yaml data/habitats/host_associated/ear_canal.yaml
+    data/habitats/host_associated/ear_canal__7b012d70.yaml --out /tmp/c2s4_24_strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: 'Completed 2026-10-25T10:35:30Z. Validated 24 files; files with ERROR:
+    0; total ERROR rows: 0.'
+  scope_note: Closed-schema strict validation across all 24 cohort target files (and
+    3,209 full-corpus files).
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: Completed 2026-10-25T10:35:45Z. No issues found; 875 history record(s)
+    valid against src/habitatmech/schema/history.yaml.
+  scope_note: Full-corpus curation history validation.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_provenance.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: 'Completed 2026-10-25T10:35:45Z. provenance current: 14 committed inventories,
+    2 GOLD sources.'
+  scope_note: Full-corpus raw inventory provenance verification.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: 'Completed 2026-10-25T10:35:58Z. expected 3209 records, found 3209 on disk;
+    missing: 0, extra: 0, differing: 0; corpus reproduces exactly from data/raw/.'
+  scope_note: Full-corpus deterministic reproduction from raw inventories and curation
+    tables.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_causal_graph_curations.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: Completed 2026-10-25T10:36:14Z. validated 43 causal-graph curation file(s)
+    with 43 graph(s).
+  scope_note: Full-corpus causal-graph overlay validation.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/build_term_requests.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: Completed 2026-10-25T10:36:14Z. term-request table is current (658 terms).
+  scope_note: Full-corpus term-request table currency check.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: 'Completed 2026-10-25T10:39:05Z. OK_CANONICAL: 1184, OK_SYNONYM: 1, OK_EXCEPTION:
+    5, SKIPPED_NO_ADAPTER: 2063. All id<->label pairs correspond.'
+  scope_note: Configured OAK identifier-label correspondence check across corpus and
+    products.
+- check_id: CCI
+  name: Baseline full native QC in CI
+  status: passed
+  required: true
+  command: gh run view 40183872211 --json status,conclusion,headSha,url
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  summary: Authoritative Build and test quality gate (40183872211) and label-correspondence
+    (40183872221) succeeded on the exact captured revision 395f4605d8ae0a3d9ed9e381a4108f4a9681865c;
+    verified at 2026-10-25T10:39:31Z. https://github.com/CultureBotAI/HabitatMech/actions/runs/40183872211
+  scope_note: Verified remote baseline execution on exact git revision.
+evidence:
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Host identity, strict broader hierarchy, not-applicable disease bins, and
+    source ownership
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: Anatomical sites may identify habitats; whole-host taxon terms cannot substitute
+    for associated environments; parent_habitats must be strictly broader across all
+    contributing routes.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: The declared mapping endpoint is the emitted record; contextual xrefs are
+    not equivalence; parent_habitats requires strictly broader habitat classes.
+  snapshot_sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed native resolution routes and generated source fields
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: Seed generator resolution routes and parent/synonym assembly verified across
+    all 24 cohort records.
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: EREC1
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__87922027.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.f6720bccf0 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.cd0b0940e5"].'
+  snapshot_sha256: 3a11b162810bbb236e30ec4b17e5058dabf38c48ac3ba6336e922a6f9cd43335
+- evidence_id: EREC2
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__9ec9b5f9.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.d011f4b43c (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.6e10201167"].'
+  snapshot_sha256: 6bb824d5c563d2698fad2e87bacc9d8cc80064830f821683ba15981c7c939e59
+- evidence_id: EREC3
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__ae8329bf.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.3baeffe4f8 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.6acc0797e9"].'
+  snapshot_sha256: 434bf9cd6c862b9edc5d675b13c618c931bbaff03615715430f73685d3f73030
+- evidence_id: EREC4
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__c5da4fa6.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.acc41d1792 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.2333d6225a"].'
+  snapshot_sha256: 6363cb0e898fd5bebe327d8b7ebd0e46a39b672f5ec4f184865efb5c84fbb4fc
+- evidence_id: EREC5
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__d7057103.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.fb6caa2908 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.47e603cf4f"].'
+  snapshot_sha256: b62a9a85c91a3a408aaf987c25ce2fdde9fce0a87c5abde2a44583ddb61baff3
+- evidence_id: EREC6
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__e41cfc7b.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.bcbf6eec9b (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.0cd585a031"].'
+  snapshot_sha256: a3ca6ef4e56ed0cb4e04d0b0601d66b60542b7ec7d1505b6bcc85ee45f0c8e9c
+- evidence_id: EREC7
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__efdbeca1.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.c8e85f3c84 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.e889967f4f"].'
+  snapshot_sha256: 68f12a08d60a0a350f532b270582ae5e3b8c4419b6c95b1da4a9efdeb085d7a6
+- evidence_id: EREC8
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system__f6665a67.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.6cc264ebf7 (Digestive system): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001007", "habitatmech:GOLD.46c43fd62c"].'
+  snapshot_sha256: 9c4a99fe3b0aa5c0832d4b3a89414ce074379dc041553c1ce28d6ac7eb6e4b4d
+- evidence_id: EREC9
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_system_secreted_substance.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'UBERON:0006911 (digestive system secreted substance): grounding_status=CLOSE,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0000463"].'
+  snapshot_sha256: 7ec211fc379f13a62560e2d17b4b63e6d59672b3db9b7d68fb0148895afec86d
+- evidence_id: EREC10
+  kind: record_content
+  reference: data/habitats/host_associated/digestive_tract.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'UBERON:0001555 (digestive tract): grounding_status=CLOSE, mapping_status=REVIEWED,
+    parent_habitats=["UBERON:0000025", "habitatmech:GOLD.d011f4b43c"].'
+  snapshot_sha256: 77fb10445e55acf8947ff114e10d0e51a956d205ee4d47f7c67096becc74f541
+- evidence_id: EREC11
+  kind: record_content
+  reference: data/habitats/host_associated/digital_dermatitis.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.f93dba43d8 (mammalian digital dermatitis lesion): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["ENVO:2100003"].'
+  snapshot_sha256: f18a041e448a444b617fd03330e8eea1710cd0a961e4899f7ef02c1b47f9848e
+- evidence_id: EREC12
+  kind: record_content
+  reference: data/habitats/host_associated/dinoflagellates__887680eb.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.94019ddb33 (dinoflagellate-associated environment): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["ENVO:01001000", "habitatmech:GOLD.02383c20a7",
+    "habitatmech:GOLD.184623c963", "habitatmech:GOLD.eee7408afd"].'
+  snapshot_sha256: e4667018234e16c6fd89733c2651dd87015e3713bee31c97e0d6454c4ee00912
+- evidence_id: EREC13
+  kind: record_content
+  reference: data/habitats/host_associated/discharge.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.944486580a (human urethral discharge): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0006314"].'
+  snapshot_sha256: 2b8c2f4bde81f44080a3d52912ac02811acc2ecd0ad4cdf3450963f9c3c0cd63
+- evidence_id: EREC14
+  kind: record_content
+  reference: data/habitats/host_associated/discharge__0e4f2939.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.da244adbbe (human mammary gland discharge): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0006314"].'
+  snapshot_sha256: d0e9ff7cef98b6d6dc5b897485510d74daba4c49b0377fc424c42f1d5a776274
+- evidence_id: EREC15
+  kind: record_content
+  reference: data/habitats/host_associated/dorsum.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'BTO:0001713 (dorsum): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[].'
+  snapshot_sha256: 3b810e04855eea3bd48b4a4c2db6131a2f525b0b4f7a7f3b2be745c5af485b4e
+- evidence_id: EREC16
+  kind: record_content
+  reference: data/habitats/host_associated/duodenal_mucosa.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'BTO:0000367 (duodenal mucosa): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000642"].'
+  snapshot_sha256: fd5dbe695da0da3c261837a70eb10a64f3cbbcb0c16b05067b0b06877005ff0f
+- evidence_id: EREC17
+  kind: record_content
+  reference: data/habitats/host_associated/duodenal_ulcer.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.9bfaa32c03 (Duodenal ulcer): grounding_status=NOT_APPLICABLE,
+    mapping_status=REVIEWED, parent_habitats=["habitatmech:GOLD.f131dcac3d"].'
+  snapshot_sha256: 29d0164bce248ef395b4689c4aac7b190d73e21f68afdad60584b9feaab36b3a
+- evidence_id: EREC18
+  kind: record_content
+  reference: data/habitats/host_associated/duodenum.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'BTO:0000365 (duodenum): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=[].'
+  snapshot_sha256: 58b4f4e1492f9f5b94e0f8ff48779b2f5d112ce4a530fe15928c938ba6b6eab1
+- evidence_id: EREC19
+  kind: record_content
+  reference: data/habitats/host_associated/duodenum__00ca3b2c.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.d1ffda8340 (Duodenum): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0002114", "habitatmech:GOLD.f131dcac3d"].'
+  snapshot_sha256: 52199559830dcc124b28b5d0f94966abc2889d09583ee7ca76d56e7947b13628
+- evidence_id: EREC20
+  kind: record_content
+  reference: data/habitats/host_associated/duodenum__5b2d8f0e.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.4e3f079a4d (Duodenum): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0002114", "habitatmech:GOLD.d3160a0c40"].'
+  snapshot_sha256: bb0c1ffb6e86b0fb313e317d654eb35ae0b9759ce9cab5d3419b55d9a85a2146
+- evidence_id: EREC21
+  kind: record_content
+  reference: data/habitats/host_associated/duodenum__e751f297.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.87d8aea294 (Duodenum): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0002114", "habitatmech:GOLD.333c28fb9f"].'
+  snapshot_sha256: 716dd125d7392c1d74e42d14f413130a35dcd6516c244fdddafd4c17211f2070
+- evidence_id: EREC22
+  kind: record_content
+  reference: data/habitats/host_associated/ear.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'UBERON:0001690 (ear): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000020",
+    "UBERON:0010314", "habitatmech:GOLD.b842078e17"].'
+  snapshot_sha256: 1f6668e7ee73f65046c5f1a4d000b36b51bd5f4c60c089df6cb04717d239c26a
+- evidence_id: EREC23
+  kind: record_content
+  reference: data/habitats/host_associated/ear_canal.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.57fa2ba2ad (Ear canal): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0001352", "habitatmech:GOLD.1930d3bfbc"].'
+  snapshot_sha256: 7cfb4dc5d8c4f67ac592211a25b0ba2da93187a13d44a9125e7a1f095a705cf1
+- evidence_id: EREC24
+  kind: record_content
+  reference: data/habitats/host_associated/ear_canal__7b012d70.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-25T10:41:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.8b135afbf6 (Ear canal): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["UBERON:0001352", "habitatmech:GOLD.1821934761"].'
+  snapshot_sha256: 88e13136074b8f0927912cf78123926acc90943fab2cb092d61b6d85d5b87f02
+assessments:
+- assessment_id: A1
+  area: schema
+  topic: Cohort native validity and reproduction
+  outcome: supported
+  summary: All 24 cohort target records pass LinkML validation and closed-schema strict
+    validation; full-corpus history (875), provenance (14+2), reproduction (3,209),
+    causal graphs (43), term requests (658), and OAK label correspondence pass.
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  evidence_ids:
+  - ERULE
+  - ESCHEMA
+  - ESEED
+- assessment_id: A2
+  area: scope
+  topic: Cohort boundary and lumping/splitting evaluation
+  outcome: supported
+  summary: All 24 records represent distinct host-clade, anatomical-layer, bodily-fluid,
+    or clinical-condition bins; no lumping or splitting is warranted across the cohort.
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - EREC9
+  - EREC10
+  - EREC11
+  - EREC12
+  - EREC13
+  - EREC14
+  - EREC15
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC20
+  - EREC21
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+- assessment_id: A3
+  area: grounding
+  topic: Cohort hierarchy, synonym, and mapping-endpoint summary
+  outcome: supported
+  summary: '7 records pass with limitations; 17 records have 22 open major findings
+    recorded in their respective kind: record bundles (linked in related_reviews)
+    and carried forward to Stage 5 grouped remediation.'
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  - UBERON:0006911
+  - UBERON:0001555
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  - BTO:0001713
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - EREC9
+  - EREC10
+  - EREC11
+  - EREC12
+  - EREC13
+  - EREC14
+  - EREC15
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC20
+  - EREC21
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+  - ESCHEMA
+  - ESEED
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - habitatmech:GOLD.f6720bccf0
+  - habitatmech:GOLD.d011f4b43c
+  - habitatmech:GOLD.3baeffe4f8
+  - habitatmech:GOLD.acc41d1792
+  - habitatmech:GOLD.fb6caa2908
+  - habitatmech:GOLD.bcbf6eec9b
+  - habitatmech:GOLD.c8e85f3c84
+  - habitatmech:GOLD.6cc264ebf7
+  rationale: Retain the eight host-clade-specific GOLD Digestive system records (Human,
+    Annelida, Mollusca, Myriapoda, Birds, Amphibia, Mammals, Cephalochordata) separate
+    from pan-metazoan UBERON:0001007 so host-clade specificity is preserved.
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - ERULE
+- action: retain
+  target_ids:
+  - UBERON:0006911
+  - UBERON:0001555
+  rationale: Retain BacDive digestive system secreted substance (UBERON:0006911, organism
+    substance) separate from GOLD digestive tract (UBERON:0001555, anatomical tube).
+  evidence_ids:
+  - EREC9
+  - EREC10
+  - ERULE
+- action: retain
+  target_ids:
+  - habitatmech:GOLD.944486580a
+  - habitatmech:GOLD.da244adbbe
+  rationale: Retain human urethral discharge (habitatmech:GOLD.944486580a) separate
+    from human mammary gland discharge (habitatmech:GOLD.da244adbbe) because anatomical
+    origin, ductal secretion chemistry, and microbial community context differ.
+  evidence_ids:
+  - EREC13
+  - EREC14
+  - ERULE
+- action: retain
+  target_ids:
+  - BTO:0000367
+  - habitatmech:GOLD.9bfaa32c03
+  - BTO:0000365
+  - habitatmech:GOLD.d1ffda8340
+  - habitatmech:GOLD.4e3f079a4d
+  - habitatmech:GOLD.87d8aea294
+  rationale: Retain PREGO duodenal mucosa (BTO:0000367, mucosal layer), NOT_APPLICABLE
+    human Duodenal ulcer diagnosis bin (habitatmech:GOLD.9bfaa32c03), PREGO general
+    duodenum (BTO:0000365), and the three host-scoped GOLD Duodenum bins (Human, Mammals,
+    Birds) as distinct layer, condition, and host-clade concepts.
+  evidence_ids:
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC20
+  - EREC21
+  - ERULE
+- action: retain
+  target_ids:
+  - UBERON:0001690
+  - habitatmech:GOLD.57fa2ba2ad
+  - habitatmech:GOLD.8b135afbf6
+  rationale: Retain whole ear (UBERON:0001690), mammalian GOLD Ear canal (habitatmech:GOLD.57fa2ba2ad),
+    and human GOLD Ear canal (habitatmech:GOLD.8b135afbf6) as distinct anatomical-part
+    and host-clade concepts.
+  evidence_ids:
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+- action: retain
+  target_ids:
+  - habitatmech:GOLD.f93dba43d8
+  - habitatmech:GOLD.94019ddb33
+  - BTO:0001713
+  rationale: Retain mammalian digital dermatitis lesion (habitatmech:GOLD.f93dba43d8),
+    dinoflagellate-associated environment (habitatmech:GOLD.94019ddb33), and PREGO
+    dorsum (BTO:0001713) as distinct cutaneous-lesion, microeukaryote-host, and anatomical-region
+    concepts.
+  evidence_ids:
+  - EREC11
+  - EREC12
+  - EREC15
+  - ERULE
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104010Z-digestive_system__87922027-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104011Z-digestive_system__9ec9b5f9-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104012Z-digestive_system__ae8329bf-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104013Z-digestive_system__c5da4fa6-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104014Z-digestive_system__d7057103-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104015Z-digestive_system__e41cfc7b-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104016Z-digestive_system__efdbeca1-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104017Z-digestive_system__f6665a67-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104018Z-digestive_system_secreted_substance-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104019Z-digestive_tract-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104020Z-digital_dermatitis-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104021Z-dinoflagellates__887680eb-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104022Z-discharge-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104023Z-discharge__0e4f2939-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104024Z-dorsum-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104025Z-duodenal_mucosa-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104026Z-duodenal_ulcer-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104027Z-duodenum-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104028Z-duodenum__00ca3b2c-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104029Z-duodenum__5b2d8f0e-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104030Z-duodenum__e751f297-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104031Z-ear-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104032Z-ear_canal-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261025T104033Z-ear_canal__7b012d70-record
+  relationship: Component individual record review in this 24-record Cycle-2 Stage-4
+    cohort.
+limitations:
+- Only the stated primary evidence and current ontology/taxonomy authorities were
+  independently inspected; original specimen-level support for every source-bin member
+  is not established.
+- Association counts and PREGO scores do not establish prevalence, viability, mechanism
+  or characteristic presence.
+- Configured label correspondence skipped 2,063 no-adapter pairs; this is not whole-corpus
+  identifier certification.
+- 'Record-specific open findings (22 across 17 records: 8 GOLD context-parent exclusions,
+  1 nomenclature exact_synonyms defect, and 13 #1398 mapping-endpoint contract defects)
+  are recorded on their respective kind: record bundles in related_reviews so each
+  issue_key has a single authoritative open owner for Stage 5 remediation.'
+notes:
+- All 24 cohort target files and context inputs were captured at clean git commit
+  395f4605d8ae0a3d9ed9e381a4108f4a9681865c.
+- 'Each of the 24 targets has a dedicated kind: record bundle in reviews/structured/.'
+tags:
+- category-cohort-review
+- host-associated
