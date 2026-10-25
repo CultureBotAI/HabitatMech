@@ -57,18 +57,18 @@ causal_graphs:
     description: Symbiotic plant oxygen-binding hemoprotein expressed in infected
       legume root nodule cells (exemplified in Pisum sativum, NCBITaxon:3888, by
       Leghemoglobin-1 UniProtKB:P02233 / LGB1_PEA, 148 aa, alongside nodule
-      isoproteins UniProtKB:O48668 / LGB2_PEA and UniProtKB:O80405 / LGB3_PEA);
-      isoprotein family node not grounded to a single accession.
+      isoproteins Leghemoglobin Lb5-10 UniProtKB:O48668 / LGB2_PEA, 147 aa, and
+      Leghemoglobin Lb120-1 UniProtKB:O80405 / LGB3_PEA, 146 aa); isoprotein
+      family node not grounded to a single accession.
     protein_examples:
     - accession: UniProtKB:P02233
       entry_name: LGB1_PEA
       recommended_name: Leghemoglobin-1
-      gene_symbol: LGB1
       taxon_id: NCBITaxon:3888
       taxon_name: Pisum sativum
       role_in_node: isoprotein
       sequence_length: 148
-      crc64: 99AC581EE4E1ECAE
+      crc64: 6A6A6F3EE99D4589
       evidence:
       - reference: PMID:31655741
         snippet: Oxygen regulatory mechanisms
@@ -77,34 +77,32 @@ causal_graphs:
           by Leghemoglobin-1).
     - accession: UniProtKB:O48668
       entry_name: LGB2_PEA
-      recommended_name: Leghemoglobin-2
-      gene_symbol: LGB2
+      recommended_name: Leghemoglobin Lb5-10
       taxon_id: NCBITaxon:3888
       taxon_name: Pisum sativum
       role_in_node: isoprotein
-      sequence_length: 146
-      crc64: 26397A82C775E7AE
+      sequence_length: 147
+      crc64: 351F409DAC557306
       evidence:
       - reference: PMID:31655741
         snippet: Oxygen regulatory mechanisms
         notes: Rutten and Poole reviewed plant leghemoglobin oxygen buffering in
           infected legume root nodule cells (exemplified in pea, Pisum sativum,
-          by Leghemoglobin-2).
+          by Leghemoglobin Lb5-10).
     - accession: UniProtKB:O80405
       entry_name: LGB3_PEA
-      recommended_name: Leghemoglobin-3
-      gene_symbol: LGB3
+      recommended_name: Leghemoglobin Lb120-1
       taxon_id: NCBITaxon:3888
       taxon_name: Pisum sativum
       role_in_node: isoprotein
       sequence_length: 146
-      crc64: F634A0AC635A6EA9
+      crc64: E89075C25F098DCB
       evidence:
       - reference: PMID:31655741
         snippet: Oxygen regulatory mechanisms
         notes: Rutten and Poole reviewed plant leghemoglobin oxygen buffering in
           infected legume root nodule cells (exemplified in pea, Pisum sativum,
-          by Leghemoglobin-3).
+          by Leghemoglobin Lb120-1).
   - node_id: low_oxygen_cytoplasm
     label: low-oxygen nodule cytoplasm
     node_type: ENVIRONMENTAL_PARAMETER
@@ -113,23 +111,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Multisubunit molybdenum-iron nitrogenase complex (NifHDK) shared
       across legume-nodulating rhizobial bacteroids (exemplified in Rhizobium
-      leguminosarum bv. viciae 3841, NCBITaxon:216596, by NifH UniProtKB:Q1M7Z2 /
-      pRL100162, NifD UniProtKB:Q1M7Z3 / pRL100161, and NifK UniProtKB:Q1M7Z4 /
-      pRL100160) and actinorhizal Frankia (exemplified in Frankia alni ACN14a,
-      NCBITaxon:326424, by NifH UniProtKB:Q0RAV4 / FRAAL6813, NifD UniProtKB:Q0RAV5 /
-      FRAAL6812, and NifK UniProtKB:Q0RAV6 / FRAAL6811); complex node not grounded
-      to a single subunit or organism accession.
+      leguminosarum bv. viciae 3841 / Rhizobium johnstonii strain DSM 114642 /
+      LMG 32736 / 3841, NCBITaxon:216596, by NifH UniProtKB:Q1M7Z2 / pRL100162,
+      297 aa, NifD UniProtKB:Q1M7Z3 / pRL100161, 501 aa, and NifK
+      UniProtKB:Q1M7Z4 / pRL100160, 513 aa) and actinorhizal Frankia
+      (exemplified in Frankia alni strain DSM 45986 / CECT 9034 / ACN14a,
+      NCBITaxon:326424, by NifH UniProtKB:Q0RAV4 / FRAAL6813, 331 aa, NifD
+      UniProtKB:Q0RAV5 / FRAAL6812, 486 aa, and NifK UniProtKB:Q0RAV6 /
+      FRAAL6811, 520 aa); complex node not grounded to a single subunit or
+      organism accession.
     protein_examples:
     - accession: UniProtKB:Q1M7Z2
-      entry_name: Q1M7Z2_RHIL3
+      entry_name: Q1M7Z2_RHIJ3
       recommended_name: Nitrogenase iron protein
       gene_symbol: nifH
       locus_tag: pRL100162
       taxon_id: NCBITaxon:216596
-      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      taxon_name: Rhizobium johnstonii (strain DSM 114642 / LMG 32736 / 3841)
       role_in_node: subunit
-      sequence_length: 296
-      crc64: 1EBAA75E8591294E
+      sequence_length: 297
+      crc64: 28B73787C29EB253
       evidence:
       - reference: PMID:34330708
         snippet: Metabolic control of nitrogen fixation
@@ -137,15 +138,15 @@ causal_graphs:
           infected by Rhizobium leguminosarum bv. viciae 3841 (NifH iron protein
           subunit).
     - accession: UniProtKB:Q1M7Z3
-      entry_name: Q1M7Z3_RHIL3
-      recommended_name: Nitrogenase molybdenum-iron protein alpha chain
+      entry_name: Q1M7Z3_RHIJ3
+      recommended_name: Nitrogenase protein alpha chain
       gene_symbol: nifD
       locus_tag: pRL100161
       taxon_id: NCBITaxon:216596
-      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      taxon_name: Rhizobium johnstonii (strain DSM 114642 / LMG 32736 / 3841)
       role_in_node: subunit
-      sequence_length: 500
-      crc64: 5A7716E1AC908E4B
+      sequence_length: 501
+      crc64: F689AAEA4E18C7DA
       evidence:
       - reference: PMID:34330708
         snippet: Metabolic control of nitrogen fixation
@@ -153,15 +154,15 @@ causal_graphs:
           infected by Rhizobium leguminosarum bv. viciae 3841 (NifD MoFe alpha
           subunit).
     - accession: UniProtKB:Q1M7Z4
-      entry_name: Q1M7Z4_RHIL3
+      entry_name: Q1M7Z4_RHIJ3
       recommended_name: Nitrogenase molybdenum-iron protein beta chain
       gene_symbol: nifK
       locus_tag: pRL100160
       taxon_id: NCBITaxon:216596
-      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      taxon_name: Rhizobium johnstonii (strain DSM 114642 / LMG 32736 / 3841)
       role_in_node: subunit
-      sequence_length: 518
-      crc64: DDEFB48C09B1FBC3
+      sequence_length: 513
+      crc64: 07D0C29F3A7A81FA
       evidence:
       - reference: PMID:34330708
         snippet: Metabolic control of nitrogen fixation
@@ -169,15 +170,15 @@ causal_graphs:
           infected by Rhizobium leguminosarum bv. viciae 3841 (NifK MoFe beta
           subunit).
     - accession: UniProtKB:Q0RAV4
-      entry_name: NIFH_FRAAA
+      entry_name: Q0RAV4_FRAAA
       recommended_name: Nitrogenase iron protein
       gene_symbol: nifH
       locus_tag: FRAAL6813
       taxon_id: NCBITaxon:326424
-      taxon_name: Frankia alni (strain ACN14a)
+      taxon_name: Frankia alni (strain DSM 45986 / CECT 9034 / ACN14a)
       role_in_node: subunit
-      sequence_length: 287
-      crc64: 80D580241A1556DA
+      sequence_length: 331
+      crc64: 0765371BA6BC197B
       evidence:
       - reference: PMID:33863007
         snippet: nodules; oxygen
@@ -185,15 +186,15 @@ causal_graphs:
           in Frankia (exemplified in Frankia alni ACN14a by NifH iron protein
           subunit).
     - accession: UniProtKB:Q0RAV5
-      entry_name: NIFD_FRAAA
-      recommended_name: Nitrogenase molybdenum-iron protein alpha chain
+      entry_name: Q0RAV5_FRAAA
+      recommended_name: Nitrogenase protein alpha chain
       gene_symbol: nifD
       locus_tag: FRAAL6812
       taxon_id: NCBITaxon:326424
-      taxon_name: Frankia alni (strain ACN14a)
+      taxon_name: Frankia alni (strain DSM 45986 / CECT 9034 / ACN14a)
       role_in_node: subunit
-      sequence_length: 482
-      crc64: EBC27A37178B899B
+      sequence_length: 486
+      crc64: 672996687EF1CE1C
       evidence:
       - reference: PMID:33863007
         snippet: nodules; oxygen
@@ -201,15 +202,15 @@ causal_graphs:
           in Frankia (exemplified in Frankia alni ACN14a by NifD MoFe alpha
           subunit).
     - accession: UniProtKB:Q0RAV6
-      entry_name: NIFK_FRAAA
+      entry_name: Q0RAV6_FRAAA
       recommended_name: Nitrogenase molybdenum-iron protein beta chain
       gene_symbol: nifK
       locus_tag: FRAAL6811
       taxon_id: NCBITaxon:326424
-      taxon_name: Frankia alni (strain ACN14a)
+      taxon_name: Frankia alni (strain DSM 45986 / CECT 9034 / ACN14a)
       role_in_node: subunit
-      sequence_length: 526
-      crc64: 7A39A79144EB7E5C
+      sequence_length: 520
+      crc64: E7D89A6EC56A33FC
       evidence:
       - reference: PMID:33863007
         snippet: nodules; oxygen
@@ -500,4 +501,12 @@ curation_history:
     UniProtKB:O48668, UniProtKB:O80405) and nitrogenase (UniProtKB:Q1M7Z2,
     UniProtKB:Q1M7Z3, UniProtKB:Q1M7Z4, UniProtKB:Q0RAV4, UniProtKB:Q0RAV5,
     UniProtKB:Q0RAV6) (#2250).'
+  llm_assisted: true
+- timestamp: '2026-10-25T05:39:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Synchronized leghemoglobin and nitrogenase protein_examples with live
+    UniProtKB JSON (entry_name, recommended_name, taxon_name, sequence_length,
+    crc64, and omission of unannotated gene_symbol on Pisum sativum
+    leghemoglobin entries).'
   llm_assisted: true

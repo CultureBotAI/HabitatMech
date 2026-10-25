@@ -192,7 +192,11 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
     description: Reduction of methanol and methylamines with molecular H2 by fecal
       methanogenic archaea (Methanomassiliicoccus luminyensis and Methanosphaera stadtmanae)
-      that consume fermentation-derived H2.
+      that consume fermentation-derived H2 (in active UniProtKB, M. luminyensis B10,
+      NCBITaxon:1175296, has only a 152-aa PCR amplicon fragment of McrA, UniProtKB:G3EKH7
+      from PMID:22859731, and lacks active UniProtKB entries for the membrane-bound
+      Fpo/HdrD complexes assayed in PMID:31162794; full-length protein_examples are
+      therefore omitted).
   edges:
   - edge_id: fecal_environment_retains_undigested_plant_polysaccharides_and_host_mucin
     subject: fecal_environment
@@ -312,4 +316,12 @@ curation_history:
   action: REVISE_CAUSAL_GRAPH
   changes: Retyped keystone_amylolytic_and_cellulolytic_degraders multi-taxon guild
     to COMMUNITY (#2261).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:44:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented Methanomassiliicoccus luminyensis B10 (NCBITaxon:1175296) UniProtKB
+    coverage on fecal_methylotrophic_methanogenesis (only a 152-aa McrA PCR fragment
+    UniProtKB:G3EKH7 from PMID:22859731 and no active UniProtKB entries for the Fpo/HdrD
+    complexes in PMID:31162794).
   llm_assisted: true

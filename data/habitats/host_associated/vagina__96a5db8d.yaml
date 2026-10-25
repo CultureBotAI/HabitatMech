@@ -185,6 +185,66 @@ causal_graphs:
     grounding: UBERON:0000996
     description: Fibromuscular tubular tract of the female lower reproductive system
       lined by stratified squamous epithelium bathed in cervicovaginal fluid.
+  - node_id: mucosal_alpha_amylase
+    label: host mucosal alpha-amylase
+    node_type: GENE_OR_PROTEIN
+    description: Human alpha-amylase isoproteins present in lower-genital-tract mucosal
+      fluid that cleave epithelial glycogen into maltose, maltotriose, and maltotetraose
+      (exemplified in Homo sapiens, NCBITaxon:9606, by salivary Alpha-amylase 1A UniProtKB:P0DUB6
+      / AMY1A_HUMAN, 511 aa, the major form detected in lower-genital-tract fluid,
+      alongside Pancreatic alpha-amylase UniProtKB:P04746 / AMYP_HUMAN, 511 aa); isoprotein
+      family node not grounded to a single accession.
+    protein_examples:
+    - accession: UniProtKB:P0DUB6
+      entry_name: AMY1A_HUMAN
+      recommended_name: Alpha-amylase 1A
+      gene_symbol: AMY1A
+      taxon_id: NCBITaxon:9606
+      taxon_name: Homo sapiens
+      role_in_node: isoprotein
+      sequence_length: 511
+      crc64: 7710BCAC83EBE8B2
+      evidence:
+      - reference: PMID:24737800
+        snippet: Treatment of glycogen with genital fluids resulted in production
+          of maltose, maltotriose, and maltotetraose, the major products of α-amylase
+          digestion. These studies show that human α-amylase is present in the female
+          lower genital tract and elucidates how epithelial glycogen can support Lactobacillus
+          colonization in the genital tract.
+        notes: Spear et al. 2014 (J Infect Dis) demonstrate human alpha-amylase activity
+          in female lower genital tract fluid and show that glycogen treated with
+          human salivary alpha-amylase supports vaginal Lactobacillus growth.
+      - reference: PMID:26171967
+        snippet: While there are two forms of α-amylase in the body, salivary and
+          pancreatic, salivary α-amylase appears to be the major form found in the
+          lower genital tract
+        notes: Nasioudis et al. 2015 (PLoS One) identify salivary alpha-amylase as
+          the major human alpha-amylase isoprotein form present in the lower female
+          genital tract.
+    - accession: UniProtKB:P04746
+      entry_name: AMYP_HUMAN
+      recommended_name: Pancreatic alpha-amylase
+      gene_symbol: AMY2A
+      taxon_id: NCBITaxon:9606
+      taxon_name: Homo sapiens
+      role_in_node: isoprotein
+      sequence_length: 511
+      crc64: A77B1A34EACB3C2A
+      evidence:
+      - reference: PMID:24737800
+        snippet: Treatment of glycogen with genital fluids resulted in production
+          of maltose, maltotriose, and maltotetraose, the major products of α-amylase
+          digestion. These studies show that human α-amylase is present in the female
+          lower genital tract and elucidates how epithelial glycogen can support Lactobacillus
+          colonization in the genital tract.
+        notes: Spear et al. 2014 (J Infect Dis) detect human alpha-amylase protein
+          and enzymatic activity in female lower genital tract mucosal fluid.
+      - reference: PMID:26171967
+        snippet: While there are two forms of α-amylase in the body, salivary and
+          pancreatic, salivary α-amylase appears to be the major form found in the
+          lower genital tract
+        notes: Nasioudis et al. 2015 (PLoS One) distinguish the pancreatic and salivary
+          human alpha-amylase forms in lower-genital-tract mucosal fluid.
   - node_id: epithelial_glycogen_and_mucosal_alpha_amylase
     label: epithelial glycogen cleavage by mucosal alpha-amylase
     node_type: BIOLOGICAL_PROCESS
@@ -207,6 +267,42 @@ causal_graphs:
       of bacterial vaginosis-associated strict anaerobes and sexually transmitted
       pathogens.
   edges:
+  - edge_id: vagina_contains_mucosal_alpha_amylase
+    subject: vagina
+    predicate: contains
+    object: mucosal_alpha_amylase
+    description: Female lower-genital-tract mucosal fluid contains host alpha-amylase
+      (predominantly the salivary isoprotein form alongside pancreatic alpha-amylase).
+    evidence:
+    - reference: PMID:24737800
+      snippet: These studies show that human α-amylase is present in the female lower
+        genital tract and elucidates how epithelial glycogen can support Lactobacillus
+        colonization in the genital tract.
+      notes: Spear et al. 2014 (J Infect Dis) demonstrate by ELISA, Western blot,
+        and enzymatic assay that human alpha-amylase is present in female lower-genital-tract
+        fluid.
+    - reference: PMID:26171967
+      snippet: While there are two forms of α-amylase in the body, salivary and pancreatic,
+        salivary α-amylase appears to be the major form found in the lower genital
+        tract
+      notes: Nasioudis et al. 2015 (PLoS One) identify salivary alpha-amylase (UniProtKB:P0DUB6)
+        alongside pancreatic alpha-amylase (UniProtKB:P04746) in the lower female
+        genital tract.
+  - edge_id: mucosal_alpha_amylase_drives_epithelial_glycogen_cleavage
+    subject: mucosal_alpha_amylase
+    predicate: drives
+    object: epithelial_glycogen_and_mucosal_alpha_amylase
+    description: Host mucosal alpha-amylase cleaves vaginal epithelial glycogen into
+      maltose, maltotriose, and maltotetraose.
+    evidence:
+    - reference: PMID:24737800
+      snippet: Treatment of glycogen with genital fluids resulted in production of
+        maltose, maltotriose, and maltotetraose, the major products of α-amylase digestion.
+        These studies show that human α-amylase is present in the female lower genital
+        tract and elucidates how epithelial glycogen can support Lactobacillus colonization
+        in the genital tract.
+      notes: Spear et al. 2014 (J Infect Dis) show that human alpha-amylase in lower-genital-tract
+        mucosal fluid digests glycogen into maltose, maltotriose, and maltotetraose.
   - edge_id: vagina_provides_epithelial_glycogen_and_mucosal_alpha_amylase
     subject: vagina
     predicate: supplies
@@ -312,4 +408,12 @@ curation_history:
   action: REVISE_CAUSAL_GRAPH
   changes: Retyped epithelial_glycogen_and_mucosal_alpha_amylase to BIOLOGICAL_PROCESS
     (#2261).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:41:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added GENE_OR_PROTEIN node mucosal_alpha_amylase with verified Homo sapiens
+    UniProtKB protein_examples (UniProtKB:P0DUB6 / AMY1A_HUMAN and UniProtKB:P04746
+    / AMYP_HUMAN) backed by PMID:24737800 and PMID:26171967 while preserving all existing
+    node and edge IDs.
   llm_assisted: true

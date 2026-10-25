@@ -26,22 +26,23 @@ causal_graphs:
     description: Bacterial nutrient uptake transporter classes (contrasting
       high-affinity ATP-binding cassette solute-binding systems with
       phosphotransferase systems in the Norris transport/proteome model;
-      exemplified in Candidatus Pelagibacter ubique HTCC1062, NCBITaxon:335992,
-      by periplasmic ABC solute-binding proteins ProX UniProtKB:Q4FMH4 /
-      SAR11_0797, PotD UniProtKB:Q4FKZ8 / SAR11_1336, YhdW UniProtKB:Q4FM26 /
-      SAR11_0953, and UniProtKB:Q4FMK2 / SAR11_0769); plural system class node
-      not grounded to a single subunit accession.
+      exemplified in Candidatus Pelagibacter ubique / Pelagibacter ubique strain
+      HTCC1062, NCBITaxon:335992, by periplasmic ABC solute-binding proteins
+      ProX UniProtKB:Q4FMH4 / SAR11_0797, 320 aa, PotD UniProtKB:Q4FKZ8 /
+      SAR11_1336, 373 aa, YhdW UniProtKB:Q4FM26 / SAR11_0953, 346 aa, and
+      UniProtKB:Q4FMK2 / SAR11_0769, 419 aa); plural system class node not
+      grounded to a single subunit accession.
     protein_examples:
     - accession: UniProtKB:Q4FMH4
       entry_name: Q4FMH4_PELUB
-      recommended_name: ABC-type proline/glycine betaine transport system, periplasmic component
+      recommended_name: ABC-type glycine betaine transport system substrate-binding domain-containing protein
       gene_symbol: proX
       locus_tag: SAR11_0797
       taxon_id: NCBITaxon:335992
-      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
       role_in_node: subunit
-      sequence_length: 342
-      crc64: B6D94B1C4E738282
+      sequence_length: 320
+      crc64: 6179E4470D8F2743
       evidence:
       - reference: PMID:16109880
         snippet: Genome streamlining in a cosmopolitan oceanic bacterium
@@ -54,14 +55,14 @@ causal_graphs:
           high-affinity ABC solute-binding transport systems.
     - accession: UniProtKB:Q4FKZ8
       entry_name: Q4FKZ8_PELUB
-      recommended_name: Spermidine/putrescine ABC transporter, periplasmic spermidine/putrescine-binding protein
+      recommended_name: Spermidine/putrescine-binding periplasmic protein
       gene_symbol: potD
       locus_tag: SAR11_1336
       taxon_id: NCBITaxon:335992
-      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
       role_in_node: subunit
-      sequence_length: 356
-      crc64: 38CE69E5CA33EB1D
+      sequence_length: 373
+      crc64: ED1146B894A763E7
       evidence:
       - reference: PMID:16109880
         snippet: Genome streamlining in a cosmopolitan oceanic bacterium
@@ -74,14 +75,14 @@ causal_graphs:
           high-affinity ABC solute-binding transport systems.
     - accession: UniProtKB:Q4FM26
       entry_name: Q4FM26_PELUB
-      recommended_name: General L-amino acid transport system, periplasmic binding protein
+      recommended_name: ABC transporter
       gene_symbol: yhdW
       locus_tag: SAR11_0953
       taxon_id: NCBITaxon:335992
-      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
       role_in_node: subunit
-      sequence_length: 355
-      crc64: 5831BD58A28F18F6
+      sequence_length: 346
+      crc64: CB1D6B1FBA42CD1B
       evidence:
       - reference: PMID:16109880
         snippet: Genome streamlining in a cosmopolitan oceanic bacterium
@@ -94,13 +95,13 @@ causal_graphs:
           high-affinity ABC solute-binding transport systems.
     - accession: UniProtKB:Q4FMK2
       entry_name: Q4FMK2_PELUB
-      recommended_name: ABC-type branched-chain amino acid transport systems, periplasmic component
+      recommended_name: Probable sugar-binding periplasmic protein
       locus_tag: SAR11_0769
       taxon_id: NCBITaxon:335992
-      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
       role_in_node: subunit
-      sequence_length: 384
-      crc64: 9AC671CA91CF9F7A
+      sequence_length: 419
+      crc64: D7FE3E0B61E6C72E
       evidence:
       - reference: PMID:16109880
         snippet: Genome streamlining in a cosmopolitan oceanic bacterium
@@ -250,4 +251,11 @@ curation_history:
     Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992) periplasmic ABC
     solute-binding proteins (UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26,
     UniProtKB:Q4FMK2) (#2250).'
+  llm_assisted: true
+- timestamp: '2026-10-25T05:40:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Synchronized nutrient_transport_systems protein_examples with live
+    UniProtKB JSON (recommended_name, taxon_name, sequence_length, and crc64 for
+    UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26, and UniProtKB:Q4FMK2).'
   llm_assisted: true

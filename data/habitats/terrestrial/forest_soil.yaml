@@ -338,6 +338,11 @@ causal_graphs:
   - node_id: lignocellulolytic_enzymes
     label: lignocellulolytic enzymes
     node_type: MOLECULAR_FUNCTION
+    description: Multispecies community pool of fungal extracellular hydrolytic and
+      oxidative enzymes decomposing forest litter and organic horizons; cited community
+      metatranscriptomic/review studies (PMID:21776033, PMID:27856492) do not attribute
+      the node to a single reference organism's UniProtKB accession, so protein_examples
+      are inapplicable.
   - node_id: litter_decomposition
     label: litter decomposition
     node_type: BIOLOGICAL_PROCESS
@@ -531,4 +536,10 @@ curation_history:
   changes: Retyped organic_forest_floor from STATE to HABITAT and retyped saprotrophic_fungi
     and ectomycorrhizal_fungi from TAXON to COMMUNITY while retaining stable node
     and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented multispecies enzyme-pool scope and protein_examples inapplicability
+    on lignocellulolytic_enzymes.
   llm_assisted: true

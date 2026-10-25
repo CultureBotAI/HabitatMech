@@ -199,3 +199,56 @@ def test_cycle2_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
     assert supply_refs == {"PMID:28316330", "PMID:26733066"}
 
 
+def test_cycle2_stage3_protein_examples_and_source_limited_notes_are_present():
+    expected_protein_nodes = {
+        "fresh_water": {
+            "mechanosensitive_channels": ["UniProtKB:P0C0S1", "UniProtKB:P0A742"],
+        },
+        "root_nodule": {
+            "leghemoglobin": ["UniProtKB:P02233", "UniProtKB:O48668", "UniProtKB:O80405"],
+            "nitrogenase": [
+                "UniProtKB:Q1M7Z2",
+                "UniProtKB:Q1M7Z3",
+                "UniProtKB:Q1M7Z4",
+                "UniProtKB:Q0RAV4",
+                "UniProtKB:Q0RAV5",
+                "UniProtKB:Q0RAV6",
+            ],
+        },
+        "sea_water": {
+            "nutrient_transport_systems": [
+                "UniProtKB:Q4FMH4",
+                "UniProtKB:Q4FKZ8",
+                "UniProtKB:Q4FM26",
+                "UniProtKB:Q4FMK2",
+            ],
+        },
+        "vagina": {
+            "mucosal_alpha_amylase": ["UniProtKB:P0DUB6", "UniProtKB:P04746"],
+        },
+        "milk": {
+            "bifidobacterial_hmo_transporters_and_glycosidases": [
+                "UniProtKB:B7GPC7",
+                "UniProtKB:B7GNN8",
+                "UniProtKB:B7GNP9",
+            ],
+        },
+    }
+    total_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            total_examples += len(examples)
+    assert total_examples == 20
+
+
+

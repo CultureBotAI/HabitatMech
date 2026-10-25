@@ -34,6 +34,10 @@ causal_graphs:
   - node_id: extracellular_enzyme_activity
     label: extracellular enzyme activity
     node_type: MOLECULAR_FUNCTION
+    description: Multispecies community pool of soil extracellular enzyme
+      activities controlling organic-matter depolymerization; cited synthesis
+      evidence (PMID:23055998) does not isolate a single organism-specific
+      UniProtKB protein accession, so protein_examples are inapplicable.
   - node_id: soil_carbon_turnover
     label: soil carbon turnover
     node_type: BIOLOGICAL_PROCESS
@@ -137,4 +141,10 @@ curation_history:
   action: REVISE_CAUSAL_GRAPH
   changes: Retyped microbial_dispersal_constraints and organic_matter_access from
     STATE to ENVIRONMENTAL_FACTOR while retaining stable node and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:46:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Documented multispecies enzyme-pool scope and protein_examples
+    inapplicability on extracellular_enzyme_activity.'
   llm_assisted: true

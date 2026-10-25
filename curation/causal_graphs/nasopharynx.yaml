@@ -29,7 +29,10 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
     description: Hydrolysis of host triacylglycerols by Corynebacterium accolens LipS1 into antipneumococcal
       oleic/free fatty acids alongside secretion of protease factors that block Staphylococcus aureus
-      pore-forming toxins.
+      pore-forming toxins (in PMID:26733066, C. accolens KPL1818 LipS1 is identified as RefSeq WP_034657805.1
+      / UniParc UPI0003FCC60A, 464 aa, crc64 D853D1B7B63EF25E, which has no active UniProtKB accession;
+      typed protein_examples require ^UniProtKB:[A-Z0-9]+$ and are therefore omitted rather than substituting
+      another strain's sequence).
   - node_id: respiratory_pathogen_gatekeeper_resistance
     label: gatekeeper resistance against Streptococcus pneumoniae and Staphylococcus aureus
     node_type: COMMUNITY_PROCESS
@@ -125,4 +128,12 @@ curation_history:
   changes: Retyped upper_airway_mucosal_and_triacylglycerol_surface to ENVIRONMENTAL_FACTOR and commensal_airway_corynebacterium_guild
     to COMMUNITY, added PMID:26733066 support for upper-airway TAG provision, and stripped HTML italic
     tags and non-breaking spaces from snippets (#2261).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:43:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Documented Corynebacterium accolens KPL1818 LipS1 sequence identity
+    (RefSeq WP_034657805.1 / UniParc UPI0003FCC60A, 464 aa, crc64 D853D1B7B63EF25E
+    from PMID:26733066) and absence of an active UniProtKB accession on
+    lips1_free_fatty_acid_and_protease_secretion.'
   llm_assisted: true

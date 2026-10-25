@@ -47,6 +47,11 @@ causal_graphs:
   - node_id: methane_oxidation
     label: methane oxidation
     node_type: PATHWAY
+    description: Aerobic oxidation of methane and methanol by acidophilic peat
+      methanotrophs (in PMID:11837310, Methylocapsa acidiphila B2, NCBITaxon:133552,
+      is represented in UniProtKB only by partial PCR amplicon fragments for PmoA
+      UniProtKB:Q93K59, 170 aa fragment, and MxaF UniProtKB:Q93K58, 172 aa fragment;
+      full-length protein_examples are therefore omitted on this pathway node).
   - node_id: sphagnum_carbon_fixation
     label: Sphagnum carbon fixation
     node_type: BIOLOGICAL_PROCESS
@@ -230,4 +235,11 @@ curation_history:
   changes: Retyped vertical_peat_stratification from STATE to ENVIRONMENTAL_FACTOR
     and retyped acid_tolerant_methanogens and acidophilic_methanotrophs from TAXON
     to COMMUNITY while retaining stable node and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:44:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Documented Methylocapsa acidiphila B2 (NCBITaxon:133552) partial PCR
+    fragment-only UniProtKB coverage from PMID:11837310 (PmoA fragment
+    UniProtKB:Q93K59 and MxaF fragment UniProtKB:Q93K58) on methane_oxidation.'
   llm_assisted: true
