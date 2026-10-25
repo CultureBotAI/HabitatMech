@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.c4f57235c7
-label: Ice accretions
+label: freshwater ice accretion
+definition: A freshwater ice mass formed by the progressive freezing and accretion
+  of liquid freshwater onto the underside of an ice sheet or glacier above a subglacial
+  or ice-covered lake.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: accreted freshwater ice
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: subglacial lake accretion ice
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001511
 source_attestations:
@@ -13,15 +24,34 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c4f57235c7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM review
+    of unscreened GOLD concept (Environmental > Aquatic > Freshwater > Ice > Ice accretions):
+    no exact ontology match in ENVO/UBERON/FOODON/PO/BTO/NCIT; confirmed distinct
+    microbial habitat and authored genus-differentia definition as ''freshwater ice
+    accretion'' under ENVO:01001511 ''freshwater ice'' (PMID 10591642; DOI:10.1126/science.286.5447.2141).
+    Path: Environmental > Aquatic > Freshwater > Ice > Ice accretions (source concept
+    habitatmech:GOLD.c4f57235c7)'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'freshwater ice accretion' under ENVO:01001511 'freshwater ice'.
+    Defined freshwater ice accretion under ENVO:01001511 'freshwater ice' (parent_mode
+    ADD) for GOLD path 'Environmental > Aquatic > Freshwater > Ice > Ice accretions';
+    supported by microbial ecology literature (PMID 10591642; DOI:10.1126/science.286.5447.2141).
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Ice accretions'
+    when defining habitatmech:GOLD.c4f57235c7 as 'freshwater ice accretion'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Ice accretions'
+    in path 'Environmental > Aquatic > Freshwater > Ice > Ice accretions' is context-dependent
+    and omits the freshwater qualification needed to distinguish it from marine sea-ice
+    or atmospheric rime accretions; suppress automatic exact-synonym retention while
+    preserving verbatim source provenance.
