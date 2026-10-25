@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.d29a0aa94b
-label: Unchlorinated
+label: unchlorinated drinking water
+definition: A drinking water treated and distributed for potable use without the addition
+  of chlorine or chloramine residual disinfectants, relying on source protection and
+  multi-barrier physical or biological filtration to maintain biostability.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: disinfectant-free drinking water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: non-chlorinated drinking water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.99a88ecb51
+- ENVO:00003064
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4547
@@ -13,15 +24,34 @@ source_attestations:
   assertion_count: 12
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d29a0aa94b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM review
+    of unscreened GOLD concept (Environmental > Aquatic > Freshwater > Drinking water
+    > Unchlorinated): no exact ontology match in ENVO/UBERON/FOODON/PO/BTO/NCIT; confirmed
+    distinct microbial habitat and authored genus-differentia definition as ''unchlorinated
+    drinking water'' under ENVO:00003064 ''drinking water'' (PMID 25557766; DOI:10.1111/1462-2920.12741).
+    Path: Environmental > Aquatic > Freshwater > Drinking water > Unchlorinated (source
+    concept habitatmech:GOLD.d29a0aa94b)'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'unchlorinated drinking water' under ENVO:00003064 'drinking
+    water'. Defined unchlorinated drinking water under ENVO:00003064 'drinking water'
+    (parent_mode REPLACE) for GOLD path 'Environmental > Aquatic > Freshwater > Drinking
+    water > Unchlorinated'; supported by microbial ecology literature (PMID 25557766;
+    DOI:10.1111/1462-2920.12741).
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Unchlorinated' when
+    defining habitatmech:GOLD.d29a0aa94b as 'unchlorinated drinking water'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Unchlorinated'
+    in path 'Environmental > Aquatic > Freshwater > Drinking water > Unchlorinated'
+    is a path-dependent modifier lacking the drinking water head noun; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

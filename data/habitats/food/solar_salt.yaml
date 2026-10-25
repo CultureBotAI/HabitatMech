@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.da71b4e2c9
-label: Solar salt
+label: solar salt
+definition: A sodium chloride salt crystallized by solar and wind evaporation of seawater
+  or natural hypersaline brines in saltern crystallizer ponds and harvested for food
+  use, often retaining viable halophilic archaea and bacteria.
+definition_source: HabitatMech
 habitat_category: FOOD
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: food-grade solar salt
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: solar-evaporated sea salt
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01000681
 source_attestations:
@@ -14,15 +25,23 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.da71b4e2c9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM review
+    of unscreened GOLD concept (Engineered > Food production > Salt > Solar salt):
+    no exact ontology match in ENVO/UBERON/FOODON/PO/BTO/NCIT; confirmed distinct
+    microbial habitat and authored genus-differentia definition as ''solar salt''
+    under ENVO:01000681 ''sodium chloride salt'' (PMID 25217724; DOI:10.1016/j.ijfoodmicro.2014.08.019).
+    Path: Engineered > Food production > Salt > Solar salt (source concept habitatmech:GOLD.da71b4e2c9)'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'solar salt' under ENVO:01000681 'sodium chloride salt'. Defined
+    solar salt under ENVO:01000681 'sodium chloride salt' (parent_mode ADD) for GOLD
+    path 'Engineered > Food production > Salt > Solar salt'; supported by microbial
+    ecology literature (PMID 25217724; DOI:10.1016/j.ijfoodmicro.2014.08.019).
