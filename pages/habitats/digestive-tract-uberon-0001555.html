@@ -61,7 +61,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0000025">tube</a>      <code class="curie">UBERON:0000025</code></li>
-  <li><a href="../habitats/digestive-system-habitatmech-gold-d011f4b43c.html">Digestive system</a>      <code class="curie">habitatmech:GOLD.d011f4b43c</code></li>
 </ul>
 
 
@@ -84,6 +83,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Digestive tube&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-25 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.d011f4b43c for habitatmech:GOLD.421614c436 (Host-associated &gt; Annelida &gt; Digestive system &gt; Digestive tube). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2265" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2265</a> : Digestive tract/tube is a tubular subdivision of the digestive system, not the entire digestive system; duodenal ulcer is a mucosal lesion/disease concept, not a subtype of the whole small intestine; duodenum is an intestinal segment, not the entire small intestine; ear is a sense organ, not the entire auditory/hearing system; ear canal is a tubular meatus of the outer ear, not the entire outer ear. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0001555. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

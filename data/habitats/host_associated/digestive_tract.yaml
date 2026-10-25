@@ -32,7 +32,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0000025
-- habitatmech:GOLD.d011f4b43c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3889
@@ -58,3 +57,17 @@ curation_history:
   changes: 'Retained GOLD label ''Digestive tube'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d011f4b43c
+    for habitatmech:GOLD.421614c436 (Host-associated > Annelida > Digestive system
+    > Digestive tube). Review https://github.com/CultureBotAI/HabitatMech/issues/2265
+    : Digestive tract/tube is a tubular subdivision of the digestive system, not the
+    entire digestive system; duodenal ulcer is a mucosal lesion/disease concept, not
+    a subtype of the whole small intestine; duodenum is an intestinal segment, not
+    the entire small intestine; ear is a sense organ, not the entire auditory/hearing
+    system; ear canal is a tubular meatus of the outer ear, not the entire outer ear.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0001555. Shared mapping
+    endpoints #1398 remain separate.'

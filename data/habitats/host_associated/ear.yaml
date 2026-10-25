@@ -19,7 +19,6 @@ synonyms:
 parent_habitats:
 - UBERON:0000020
 - UBERON:0010314
-- habitatmech:GOLD.b842078e17
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7382
@@ -34,3 +33,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b842078e17
+    for habitatmech:GOLD.4cb9c65c22 (Host-associated > Mammals: Human > Auditory/Hearing
+    system > Ear). Review https://github.com/CultureBotAI/HabitatMech/issues/2265
+    : Digestive tract/tube is a tubular subdivision of the digestive system, not the
+    entire digestive system; duodenal ulcer is a mucosal lesion/disease concept, not
+    a subtype of the whole small intestine; duodenum is an intestinal segment, not
+    the entire small intestine; ear is a sense organ, not the entire auditory/hearing
+    system; ear canal is a tubular meatus of the outer ear, not the entire outer ear.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0001690. Shared mapping
+    endpoints #1398 remain separate.'

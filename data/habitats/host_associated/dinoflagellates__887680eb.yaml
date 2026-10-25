@@ -6,7 +6,7 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Dinoflagellates
+- synonym_text: dinoflagellate host environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
@@ -86,3 +86,13 @@ curation_history:
     ENVO has no dinoflagellate-, protist-, alga-, or microbe-associated environment,
     so ENVO:01001000 is the tightest existing ontology parent and NCBITaxon:2864 remains
     an xref rather than the habitat identity.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Dinoflagellates''
+    when defining habitatmech:GOLD.94019ddb33 as ''dinoflagellate-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2266
+    : The displaced label names the determining hosts (Dinophyceae), not their associated
+    environment. Remove only the bare host exact alias and suppress exact-alias fallback;
+    preserve verbatim source provenance, definition, dinoflagellate host environment
+    synonym, genera, taxon xref and native status.'
