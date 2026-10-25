@@ -30,7 +30,10 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
     description: Enzymatic cleavage of host sebaceous triacylglycerols by cutaneous commensal lipases
       (such as Corynebacterium accolens LipS1 and Cutibacterium lipases) into bioactive free fatty acids
-      and short-chain fatty acids.
+      and short-chain fatty acids (in PMID:26733066, C. accolens KPL1818 LipS1 is identified as RefSeq
+      WP_034657805.1 / UniParc UPI0003FCC60A, 464 aa, crc64 D853D1B7B63EF25E, which has no active UniProtKB
+      accession; typed protein_examples require ^UniProtKB:[A-Z0-9]+$ and are therefore omitted rather
+      than substituting another strain's sequence).
   - node_id: cutaneous_immune_education_and_pathogen_resistance
     label: cutaneous immune education and antipathogen colonization resistance
     node_type: COMMUNITY_PROCESS
@@ -119,4 +122,12 @@ curation_history:
   curator: antigravity-claude-opus-4-6
   action: REVISE_CAUSAL_GRAPH
   changes: Normalized non-breaking space in PMID:26733066 snippet to ASCII space (#2261).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:43:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Documented Corynebacterium accolens KPL1818 LipS1 sequence identity
+    (RefSeq WP_034657805.1 / UniParc UPI0003FCC60A, 464 aa, crc64 D853D1B7B63EF25E
+    from PMID:26733066) and absence of an active UniProtKB accession on
+    microbial_triacylglycerol_lipase_hydrolysis.'
   llm_assisted: true

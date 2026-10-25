@@ -225,6 +225,67 @@ causal_graphs:
   - node_id: bifidobacteria
     label: bifidobacteria
     node_type: TAXON
+  - node_id: bifidobacterial_hmo_transporters_and_glycosidases
+    label: Bifidobacterium infantis HMO solute-binding proteins and glycosidases
+    node_type: GENE_OR_PROTEIN
+    description: Oligosaccharide-binding ABC transporter components and glycosyl hydrolases
+      encoded in Bifidobacterium longum subsp. infantis that import and cleave milk
+      glycans and human milk oligosaccharides (exemplified in Bifidobacterium longum
+      subsp. infantis strain ATCC 15697 / DSM 20088 / JCM 1222 / NCTC 11817 / S12,
+      NCBITaxon:391904, from PMID:19033196 by endo-beta-N-acetylglucosaminidase UniProtKB:B7GPC7
+      / EBI1_BIFLS / Blon_2468, 545 aa, HMO-cluster alpha-L-fucosidase UniProtKB:B7GNN8
+      / B7GNN8_BIFLS / Blon_2336, 478 aa, and HMO-cluster family 1 extracellular solute-binding
+      protein UniProtKB:B7GNP9 / B7GNP9_BIFLS / Blon_2347, 531 aa); multi-protein
+      locus node not grounded to a single accession.
+    protein_examples:
+    - accession: UniProtKB:B7GPC7
+      entry_name: EBI1_BIFLS
+      recommended_name: Endo-beta-N-acetylglucosaminidase
+      locus_tag: Blon_2468
+      taxon_id: NCBITaxon:391904
+      taxon_name: Bifidobacterium longum subsp. infantis (strain ATCC 15697 / DSM
+        20088 / JCM 1222 / NCTC 11817 / S12)
+      role_in_node: family_member
+      sequence_length: 545
+      crc64: 9DA332EF43362C80
+      evidence:
+      - reference: PMID:19033196
+        snippet: adaptations for milk utilization
+        notes: Sela and colleagues sequenced Bifidobacterium longum subsp. infantis
+          ATCC 15697 (NCBITaxon:391904), annotating glycan-cleaving glycosidases including
+          endo-beta-N-acetylglucosaminidase Blon_2468 (UniProtKB:B7GPC7).
+    - accession: UniProtKB:B7GNN8
+      entry_name: B7GNN8_BIFLS
+      recommended_name: alpha-L-fucosidase
+      locus_tag: Blon_2336
+      taxon_id: NCBITaxon:391904
+      taxon_name: Bifidobacterium longum subsp. infantis (strain ATCC 15697 / DSM
+        20088 / JCM 1222 / NCTC 11817 / S12)
+      role_in_node: family_member
+      sequence_length: 478
+      crc64: A80662B216191595
+      evidence:
+      - reference: PMID:19033196
+        snippet: adaptations for milk utilization
+        notes: Sela and colleagues identified the 43-kb human milk oligosaccharide
+          (HMO) utilization cluster I in Bifidobacterium longum subsp. infantis ATCC
+          15697 encoding GH29 alpha-L-fucosidase Blon_2336 (UniProtKB:B7GNN8).
+    - accession: UniProtKB:B7GNP9
+      entry_name: B7GNP9_BIFLS
+      recommended_name: Extracellular solute-binding protein, family 1
+      locus_tag: Blon_2347
+      taxon_id: NCBITaxon:391904
+      taxon_name: Bifidobacterium longum subsp. infantis (strain ATCC 15697 / DSM
+        20088 / JCM 1222 / NCTC 11817 / S12)
+      role_in_node: subunit
+      sequence_length: 531
+      crc64: ADC3E00315EF5278
+      evidence:
+      - reference: PMID:19033196
+        snippet: adaptations for milk utilization
+        notes: Sela and colleagues identified family 1 extracellular solute-binding
+          proteins (including Blon_2347, UniProtKB:B7GNP9) within the Bifidobacterium
+          longum subsp. infantis ATCC 15697 HMO utilization cluster.
   - node_id: lactose_fermentation
     label: lactose fermentation
     node_type: PATHWAY
@@ -397,6 +458,33 @@ causal_graphs:
       snippet: fermentation of human milk
       notes: Schwab and Ganzle directly assayed lactic-acid bacterial fermentation
         of human milk sugar substrates.
+  - edge_id: bifidobacteria_express_hmo_transporters_and_glycosidases
+    subject: bifidobacteria
+    predicate: expresses
+    object: bifidobacterial_hmo_transporters_and_glycosidases
+    description: Bifidobacterium longum subsp. infantis encodes family 1 oligosaccharide-binding
+      ABC transporter subunits and glycosyl hydrolases specialized for milk glycan
+      and HMO utilization.
+    evidence:
+    - reference: PMID:19033196
+      snippet: adaptations for milk utilization
+      notes: Sela and colleagues identified the 43-kb HMO utilization gene cluster
+        and associated glycosidases in Bifidobacterium longum subsp. infantis ATCC
+        15697 (NCBITaxon:391904; exemplified by Blon_2468 / UniProtKB:B7GPC7, Blon_2336
+        / UniProtKB:B7GNN8, and Blon_2347 / UniProtKB:B7GNP9).
+  - edge_id: hmo_transporters_and_glycosidases_drive_oligosaccharide_catabolism
+    subject: bifidobacterial_hmo_transporters_and_glycosidases
+    predicate: drives
+    object: oligosaccharide_catabolism
+    description: Bifidobacterial oligosaccharide solute-binding transporters and intracellular
+      glycosidases import and cleave milk oligosaccharides for central fermentative
+      catabolism.
+    evidence:
+    - reference: PMID:19033196
+      snippet: Bifidobacterium longum subsp. infantis
+      notes: Sela and colleagues linked the HMO cluster solute-binding proteins and
+        fucosidase/sialidase/hexosaminidase enzymes of B. longum subsp. infantis ATCC
+        15697 to intracellular oligosaccharide catabolism.
   - edge_id: bifidobacteria_catabolize_oligosaccharides
     subject: bifidobacteria
     predicate: performs
@@ -469,4 +557,13 @@ curation_history:
   changes: Retyped aqueous_emulsion from STATE to ENVIRONMENTAL_FACTOR, milk_microbiota
     from COMMUNITY_PROCESS to COMMUNITY, and lactic_acid_bacteria from TAXON to COMMUNITY
     while retaining stable node and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:42:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added GENE_OR_PROTEIN node bifidobacterial_hmo_transporters_and_glycosidases
+    with verified Bifidobacterium longum subsp. infantis ATCC 15697 (NCBITaxon:391904)
+    UniProtKB protein_examples (UniProtKB:B7GPC7 / Blon_2468, UniProtKB:B7GNN8 / Blon_2336,
+    and UniProtKB:B7GNP9 / Blon_2347) backed by PMID:19033196 while preserving all
+    existing node and edge IDs.
   llm_assisted: true

@@ -199,3 +199,126 @@ def test_cycle2_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
     assert supply_refs == {"PMID:28316330", "PMID:26733066"}
 
 
+def test_cycle2_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "fresh_water": REPO_ROOT / "data" / "habitats" / "aquatic" / "fresh_water.yaml",
+        "root_nodule": REPO_ROOT / "data" / "habitats" / "host_associated" / "root_nodule__0f1c7944.yaml",
+        "sea_water": REPO_ROOT / "data" / "habitats" / "aquatic" / "sea_water.yaml",
+        "vagina": REPO_ROOT / "data" / "habitats" / "host_associated" / "vagina__96a5db8d.yaml",
+        "milk": REPO_ROOT / "data" / "habitats" / "host_associated" / "milk.yaml",
+        "nasopharynx": REPO_ROOT / "data" / "habitats" / "host_associated" / "nasopharynx__087171fc.yaml",
+        "skin_environment": REPO_ROOT / "data" / "habitats" / "other" / "skin_environment.yaml",
+        "fecal_environment": REPO_ROOT / "data" / "habitats" / "other" / "fecal_environment.yaml",
+        "peat_soil": REPO_ROOT / "data" / "habitats" / "terrestrial" / "peat_soil.yaml",
+        "forest_soil": REPO_ROOT / "data" / "habitats" / "terrestrial" / "forest_soil.yaml",
+        "plant_litter": REPO_ROOT / "data" / "habitats" / "terrestrial" / "plant_litter.yaml",
+        "soil": REPO_ROOT / "data" / "habitats" / "terrestrial" / "soil.yaml",
+        "terrestrial_biome": REPO_ROOT / "data" / "habitats" / "terrestrial" / "terrestrial_biome.yaml",
+    }
+    expected_protein_nodes = {
+        "fresh_water": {
+            "mechanosensitive_channels": ["UniProtKB:P0C0S1", "UniProtKB:P0A742"],
+        },
+        "root_nodule": {
+            "leghemoglobin": ["UniProtKB:P02233", "UniProtKB:O48668", "UniProtKB:O80405"],
+            "nitrogenase": [
+                "UniProtKB:Q1M7Z2",
+                "UniProtKB:Q1M7Z3",
+                "UniProtKB:Q1M7Z4",
+                "UniProtKB:Q0RAV4",
+                "UniProtKB:Q0RAV5",
+                "UniProtKB:Q0RAV6",
+            ],
+        },
+        "sea_water": {
+            "nutrient_transport_systems": [
+                "UniProtKB:Q4FMH4",
+                "UniProtKB:Q4FKZ8",
+                "UniProtKB:Q4FM26",
+                "UniProtKB:Q4FMK2",
+            ],
+        },
+        "vagina": {
+            "mucosal_alpha_amylase": ["UniProtKB:P0DUB6", "UniProtKB:P04746"],
+        },
+        "milk": {
+            "bifidobacterial_hmo_transporters_and_glycosidases": [
+                "UniProtKB:B7GPC7",
+                "UniProtKB:B7GNN8",
+                "UniProtKB:B7GNP9",
+            ],
+        },
+    }
+    total_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+                if ex["accession"] == "UniProtKB:B7GNN8":
+                    assert "GH29 alpha-L-fucosidase Blon_2336" in ex["evidence"][0]["notes"]
+            total_examples += len(examples)
+    assert total_examples == 20
+
+    expected_documented_nodes = {
+        "nasopharynx": (
+            "lips1_free_fatty_acid_and_protease_secretion",
+            "COMMUNITY_PROCESS",
+            "UPI0003FCC60A",
+        ),
+        "skin_environment": (
+            "microbial_triacylglycerol_lipase_hydrolysis",
+            "COMMUNITY_PROCESS",
+            "UPI0003FCC60A",
+        ),
+        "fecal_environment": (
+            "fecal_methylotrophic_methanogenesis",
+            "COMMUNITY_PROCESS",
+            "UniProtKB:G3EKH7",
+        ),
+        "peat_soil": (
+            "methane_oxidation",
+            "PATHWAY",
+            "UniProtKB:Q93K59",
+        ),
+        "forest_soil": (
+            "lignocellulolytic_enzymes",
+            "MOLECULAR_FUNCTION",
+            "Multispecies community pool",
+        ),
+        "plant_litter": (
+            "fungal_extracellular_enzymes",
+            "MOLECULAR_FUNCTION",
+            "Multispecies community pool",
+        ),
+        "soil": (
+            "extracellular_enzyme_activity",
+            "MOLECULAR_FUNCTION",
+            "Multispecies community pool",
+        ),
+        "terrestrial_biome": (
+            "extracellular_enzymes",
+            "MOLECULAR_FUNCTION",
+            "Multispecies community pool",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
+
+
+

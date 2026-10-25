@@ -28,6 +28,12 @@ causal_graphs:
   - node_id: fungal_extracellular_enzymes
     label: fungal extracellular enzymes
     node_type: MOLECULAR_FUNCTION
+    description: Multispecies community pool of fungal extracellular hydrolytic
+      and oxidative enzymes in decomposing leaf litter; cited metaproteomic,
+      assay, and review studies (PMID:22402400, PMID:17089664,
+      DOI:10.1007/s11284-007-0390-z) profile community-level enzyme classes rather
+      than a single reference organism's UniProtKB accession, so protein_examples
+      are inapplicable.
   - node_id: lignin_depolymerization
     label: lignin depolymerization
     node_type: PATHWAY
@@ -237,4 +243,10 @@ curation_history:
     and microbial_succession from STATE to COMMUNITY_PROCESS; refined PMID:22402400
     notes on saprotrophic_fungi_secrete_enzymes to reflect fungal-specific extracellular
     hydrolase detection in beech leaf litter.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:46:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Documented multispecies enzyme-pool scope and protein_examples
+    inapplicability on fungal_extracellular_enzymes.'
   llm_assisted: true

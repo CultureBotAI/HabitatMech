@@ -433,6 +433,11 @@ causal_graphs:
   - node_id: extracellular_enzymes
     label: extracellular enzymes
     node_type: MOLECULAR_FUNCTION
+    description: Multispecies community pool of fungal and bacterial extracellular
+      enzymes depolymerizing plant litter and soil organic matter; cited metaproteomic
+      and synthesis studies (PMID:22402400, PMID:23055998) do not attribute the node
+      to a single reference organism's UniProtKB accession, so protein_examples are
+      inapplicable.
   - node_id: soil_organic_matter
     label: soil organic matter
     node_type: CHEMICAL
@@ -716,4 +721,10 @@ curation_history:
   changes: Retyped rhizosphere_bacteria and saprotrophic_fungi from TAXON to COMMUNITY
     and extracellular_enzymes from TRAIT to MOLECULAR_FUNCTION; corrected DOI:10.1139/cjb-2013-0225
     author attribution to Huang et al. (2014) and refined PMID:22402400 notes on saprotrophic_fungi_express_extracellular_enzymes.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:46:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented multispecies enzyme-pool scope and protein_examples inapplicability
+    on extracellular_enzymes.
   llm_assisted: true

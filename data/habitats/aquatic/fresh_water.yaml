@@ -409,7 +409,7 @@ causal_graphs:
       taxon_name: Escherichia coli (strain K12)
       role_in_node: family_member
       sequence_length: 286
-      crc64: D98856BCBE17DFC7
+      crc64: FF00AD64F795E9FE
       evidence:
       - reference: DOI:10.1085/jgp.201411296
         snippet: release solutes from the cytoplasm
@@ -425,7 +425,7 @@ causal_graphs:
       taxon_name: Escherichia coli (strain K12)
       role_in_node: family_member
       sequence_length: 136
-      crc64: 59C23143BC0BAFA4
+      crc64: 18EF7E1BD7DF9491
       evidence:
       - reference: DOI:10.1085/jgp.201411296
         snippet: release solutes from the cytoplasm
@@ -569,4 +569,11 @@ curation_history:
   changes: Populated typed protein_examples on mechanosensitive_channels for Escherichia
     coli K-12 (NCBITaxon:83333) MscS (UniProtKB:P0C0S1) and MscL (UniProtKB:P0A742)
     (#2250).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:38:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Verified mechanosensitive_channels protein_examples against live UniProtKB
+    JSON and updated crc64 checksums for UniProtKB:P0C0S1 (FF00AD64F795E9FE) and UniProtKB:P0A742
+    (18EF7E1BD7DF9491).
   llm_assisted: true
