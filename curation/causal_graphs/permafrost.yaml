@@ -27,6 +27,70 @@ causal_graphs:
     description: Psychrobacter arcticus and related cold-adapted permafrost bacteria employing membrane
       lipid remodeling, cold-shock proteins, acetate metabolism, and reduced proline/arginine/acidic residue
       proteomes for subzero growth.
+  - node_id: psychrobacter_cold_shock_and_acetate_utilization_proteins
+    label: Psychrobacter arcticus cold-shock proteins and acetyl-coenzyme A synthetase
+    node_type: GENE_OR_PROTEIN
+    description: Cold-shock DNA-binding proteins (CspA, CapB) and acetyl-coenzyme A synthetase (AcsA)
+      encoded in Psychrobacter arcticus strain 273-4 (NCBITaxon:259536) that support cold-stress survival
+      and utilization of acetate as an energy source in subzero Siberian permafrost (exemplified from
+      PMID:20154119 by acetyl-coenzyme A synthetase UniProtKB:Q4FVA1 / ACSA_PSYA2 / Psyc_0184, 653 aa,
+      cold-shock DNA-binding protein CspA UniProtKB:Q4FUB4 / Q4FUB4_PSYA2 / Psyc_0531, 70 aa, and cold-shock
+      DNA-binding protein CapB UniProtKB:Q4FT63 / Q4FT63_PSYA2 / Psyc_0942, 71 aa); multi-protein node
+      not grounded to a single accession.
+    protein_examples:
+    - accession: UniProtKB:Q4FVA1
+      entry_name: ACSA_PSYA2
+      recommended_name: Acetyl-coenzyme A synthetase
+      gene_symbol: acsA
+      locus_tag: Psyc_0184
+      taxon_id: NCBITaxon:259536
+      taxon_name: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+      role_in_node: family_member
+      sequence_length: 653
+      crc64: 66ADF5B698220AE0
+      evidence:
+      - reference: PMID:20154119
+        snippet: Analysis of the 2.65-Mb genome suggested that some of the strategies employed by P. arcticus
+          273-4 for survival under cold and stress conditions are changes in membrane composition, synthesis
+          of cold shock proteins, and the use of acetate as an energy source.
+        notes: Ayala-del-Rio et al. 2010 (PMID:20154119) sequenced Psychrobacter arcticus 273-4 (NCBITaxon:259536)
+          from Siberian permafrost and identified acetate utilization via acetyl-coenzyme A synthetase
+          (acsA, Psyc_0184, UniProtKB:Q4FVA1) as a core subzero energy strategy.
+    - accession: UniProtKB:Q4FUB4
+      entry_name: Q4FUB4_PSYA2
+      recommended_name: Cold-shock DNA-binding protein family
+      gene_symbol: cspA
+      locus_tag: Psyc_0531
+      taxon_id: NCBITaxon:259536
+      taxon_name: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+      role_in_node: family_member
+      sequence_length: 70
+      crc64: 6A0236259F6BE72D
+      evidence:
+      - reference: PMID:20154119
+        snippet: Analysis of the 2.65-Mb genome suggested that some of the strategies employed by P. arcticus
+          273-4 for survival under cold and stress conditions are changes in membrane composition, synthesis
+          of cold shock proteins, and the use of acetate as an energy source.
+        notes: Ayala-del-Rio et al. 2010 (PMID:20154119) identified cold-shock protein synthesis in the
+          Psychrobacter arcticus 273-4 genome, exemplified by cold-shock DNA-binding protein CspA (Psyc_0531,
+          UniProtKB:Q4FUB4).
+    - accession: UniProtKB:Q4FT63
+      entry_name: Q4FT63_PSYA2
+      recommended_name: Cold-shock DNA-binding protein family
+      gene_symbol: capB
+      locus_tag: Psyc_0942
+      taxon_id: NCBITaxon:259536
+      taxon_name: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+      role_in_node: family_member
+      sequence_length: 71
+      crc64: 77621286B1CF7609
+      evidence:
+      - reference: PMID:20154119
+        snippet: Analysis of the 2.65-Mb genome suggested that some of the strategies employed by P. arcticus
+          273-4 for survival under cold and stress conditions are changes in membrane composition, synthesis
+          of cold shock proteins, and the use of acetate as an energy source.
+        notes: Ayala-del-Rio et al. 2010 (PMID:20154119) identified cold-shock / cold-acclimation DNA-binding
+          proteins in the Psychrobacter arcticus 273-4 genome, exemplified by CapB (Psyc_0942, UniProtKB:Q4FT63).
   - node_id: anaerobic_fermentative_and_iron_sulfate_reducing_guild
     label: post-thaw fermentative Firmicutes/Bacteroidota and iron/sulfate-reducing guild
     node_type: COMMUNITY
@@ -36,7 +100,9 @@ causal_graphs:
     label: mcrA-mediated hydrogenotrophic and acetoclastic methanogenesis
     node_type: COMMUNITY_PROCESS
     description: Methane production regulated by hydrogenotrophic Methanocellales and facultative acetoclastic
-      Methanosarcina in thawing permafrost and active-layer deposits.
+      Methanosarcina in thawing permafrost and active-layer deposits (profiled via environmental mcrA
+      amplicon OTUs and high-throughput qPCR across multispecies archaeal assemblages in PMID:34310124
+      and PMID:37766397 without single-isolate full-length UniProtKB protein attribution).
   edges:
   - edge_id: permafrost_maintains_subzero_freezing_regime_and_thaw_carbon_release
     subject: permafrost
@@ -76,6 +142,21 @@ causal_graphs:
         at low temperatures.
       notes: Ayala-del-Rio et al. 2010 (PMID:20154119) detail the genomic and proteomic cryoadaptations
         of Psychrobacter arcticus 273-4 in permafrost.
+  - edge_id: psychroactive_psychrobacter_expresses_cold_shock_and_acetate_utilization_proteins
+    subject: psychroactive_psychrobacter_cryoadaptation_guild
+    predicate: expresses
+    object: psychrobacter_cold_shock_and_acetate_utilization_proteins
+    description: Psychrobacter arcticus 273-4 encodes cold-shock DNA-binding proteins (CspA, CapB) and
+      acetyl-coenzyme A synthetase (AcsA) that sustain subzero survival and acetate-based energy metabolism
+      in permafrost.
+    evidence:
+    - reference: PMID:20154119
+      snippet: Analysis of the 2.65-Mb genome suggested that some of the strategies employed by P. arcticus
+        273-4 for survival under cold and stress conditions are changes in membrane composition, synthesis
+        of cold shock proteins, and the use of acetate as an energy source.
+      notes: Ayala-del-Rio et al. 2010 (PMID:20154119) link Psychrobacter arcticus 273-4 (NCBITaxon:259536)
+        cold-shock proteins (Psyc_0531 / UniProtKB:Q4FUB4, Psyc_0942 / UniProtKB:Q4FT63) and acetyl-coenzyme
+        A synthetase (Psyc_0184 / UniProtKB:Q4FVA1) to subzero survival in Siberian permafrost.
   - edge_id: subzero_freezing_regime_and_thaw_drives_anaerobic_fermentative_and_iron_sulfate_reducing_guild
     subject: subzero_freezing_regime_and_thaw_carbon_release
     predicate: drives
@@ -117,4 +198,13 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added permafrost_subzero_cryoadaptation_and_thaw_methanogenesis mechanism graph for permafrost
     (ENVO:00000134) backed by PMID:20154119, PMID:25739499, PMID:38860762, PMID:34310124, PMID:37766397.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Added GENE_OR_PROTEIN node psychrobacter_cold_shock_and_acetate_utilization_proteins with verified
+    Psychrobacter arcticus 273-4 (NCBITaxon:259536) UniProtKB protein_examples (UniProtKB:Q4FVA1 / Psyc_0184,
+    UniProtKB:Q4FUB4 / Psyc_0531, and UniProtKB:Q4FT63 / Psyc_0942) backed by PMID:20154119 and documented
+    community mcrA marker scope on permafrost_mcrA_methanogenesis while preserving all existing node and
+    edge IDs.'
   llm_assisted: true

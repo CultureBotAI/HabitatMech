@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-10-25T233000Z-antigravity-030301
+  timestamp: '2026-10-25T23:30:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Audit causal-graph overlays and populate verified UniProtKB ProteinExample entries in Cycle 3 Stage 3
+  details: 'Audited all 3,209 habitat records (53 with curation/causal_graphs/*.yaml overlays) and re-verified all 20 existing ProteinExample entries against live UniProtKB REST API (0 mismatches). Added 7 new verified ProteinExample entries across 2 new GENE_OR_PROTEIN nodes (20 -> 27 total ProteinExample entries across 8 nodes in 7 overlays): permafrost.yaml (psychrobacter_cold_shock_and_acetate_utilization_proteins for Psychrobacter arcticus 273-4, NCBITaxon:259536, PMID:20154119: UniProtKB:Q4FVA1, UniProtKB:Q4FUB4, UniProtKB:Q4FT63) and peatland.yaml (methanoregula_potassium_uptake_and_bioenergetics_proteins for Methanoregula boonei 6A8, NCBITaxon:456442, PMID:25998264: UniProtKB:A7I5F0, UniProtKB:A7I822, UniProtKB:A7IAU8, UniProtKB:A7I5T0). Recorded exact community-pool amplicon/metagenomic/qPCR scope and UniProtKB/UniParc database coverage blockers across permafrost.yaml (mcrA), peatland.yaml (pmoA), paddy_field_soil.yaml (mcrA, pmoA), black_smoker.yaml (dsrAB in Archaeoglobus neptunius SE56T, NCBITaxon:2732350, inactive UniParc UPI00159774D1 and UPI001AF9CAB8), pitcher.yaml (nifH), and sewage.yaml (blaCTX-M, blaOXA, blaTEM).'

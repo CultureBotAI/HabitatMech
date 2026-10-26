@@ -456,5 +456,94 @@ def test_cycle3_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
                 assert "\u00a0" not in snippet
 
 
+def test_cycle3_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "permafrost": REPO_ROOT / "data" / "habitats" / "terrestrial" / "permafrost.yaml",
+        "peatland": REPO_ROOT / "data" / "habitats" / "terrestrial" / "peatland.yaml",
+        "paddy_field_soil": REPO_ROOT / "data" / "habitats" / "terrestrial" / "paddy_field_soil.yaml",
+        "black_smoker": REPO_ROOT / "data" / "habitats" / "aquatic" / "black_smoker.yaml",
+        "pitcher": REPO_ROOT / "data" / "habitats" / "host_associated" / "pitcher.yaml",
+        "sewage": REPO_ROOT / "data" / "habitats" / "engineered" / "sewage.yaml",
+    }
+    expected_protein_nodes = {
+        "permafrost": {
+            "psychrobacter_cold_shock_and_acetate_utilization_proteins": [
+                "UniProtKB:Q4FVA1",
+                "UniProtKB:Q4FUB4",
+                "UniProtKB:Q4FT63",
+            ],
+        },
+        "peatland": {
+            "methanoregula_potassium_uptake_and_bioenergetics_proteins": [
+                "UniProtKB:A7I5F0",
+                "UniProtKB:A7I822",
+                "UniProtKB:A7IAU8",
+                "UniProtKB:A7I5T0",
+            ],
+        },
+    }
+    new_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            new_examples += len(examples)
+    assert new_examples == 7
+
+    expected_documented_nodes = {
+        "permafrost": (
+            "permafrost_mcrA_methanogenesis",
+            "COMMUNITY_PROCESS",
+            "environmental mcrA amplicon OTUs and high-throughput qPCR",
+        ),
+        "peatland": (
+            "acidophilic_alphaproteobacterial_methanotroph_guild",
+            "COMMUNITY",
+            "UniProtKB:Q93K59",
+        ),
+        "paddy_field_soil": (
+            "paddy_mcrA_methanogenic_archaeal_guild",
+            "COMMUNITY",
+            "environmental mcrA amplicon sequencing",
+        ),
+        "black_smoker": (
+            "hyperthermophilic_archaeoglobus_sulfate_reducing_guild",
+            "TAXON",
+            "UPI00159774D1",
+        ),
+        "pitcher": (
+            "pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome",
+            "COMMUNITY",
+            "community nifH gene detection",
+        ),
+        "sewage": (
+            "in_pipe_waste_biotransformation_and_beta_lactamase_propagation",
+            "COMMUNITY_PROCESS",
+            "blaCTX-M, blaOXA, blaTEM; profiled via city-scale shotgun metagenomics",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
+
+
+
 
 

@@ -32,7 +32,9 @@ causal_graphs:
     node_type: TAXON
     description: Hyperthermophilic Archaeoglobus archaea (growing at 50-85 degrees C) that oxidize H2
       or organic substrates coupled to sulfate, sulfite, or thiosulfate reduction and fix CO2 via the
-      reductive acetyl-CoA pathway.
+      reductive acetyl-CoA pathway (characterized in Archaeoglobus neptunius strain SE56T, NCBITaxon:2732350,
+      in PMID:34335500, whose draft genome GCA_016863535.1 has 0 active UniProtKB proteome entries and
+      only 2 inactive UniParc entries UPI00159774D1 and UPI001AF9CAB8).
   edges:
   - edge_id: black_smoker_supplies_hydrothermal_h2_sulfur_and_thermal_mixing_gradient
     subject: black_smoker
@@ -95,4 +97,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added black_smoker_hydrothermal_chemolithoautotrophy_and_archaeoglobus_sulfate_reduction mechanism
     graph for black smoker (ENVO:00000218) backed by PMID:24414410, PMID:28484604, PMID:34335500.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:52:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented the UniProtKB/UniParc database coverage blocker for Archaeoglobus neptunius SE56T
+    (NCBITaxon:2732350, PMID:34335500) on hyperthermophilic_archaeoglobus_sulfate_reducing_guild while
+    preserving all existing node and edge IDs.
   llm_assisted: true

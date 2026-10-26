@@ -29,7 +29,9 @@ causal_graphs:
     label: in-conveyance waste biotransformation and blaCTX-M/blaOXA/blaTEM resistance reservoir
     node_type: COMMUNITY_PROCESS
     description: Biotransformation of organic waste during sewer conveyance coupled with carriage and
-      propagation of clinically important beta-lactamase genes (blaCTX-M, blaOXA, blaTEM).
+      propagation of clinically important beta-lactamase genes (blaCTX-M, blaOXA, blaTEM; profiled via
+      city-scale shotgun metagenomics across pipe-resident Arcobacter and Acinetobacter assemblages in
+      PMID:35762794 without single-isolate full-length UniProtKB protein attribution).
   edges:
   - edge_id: sewage_maintains_sewer_pipe_conveyance_and_thermal_ecotype_filtering
     subject: sewage
@@ -94,4 +96,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added sewage_conveyance_selection_and_antibiotic_resistance_reservoir mechanism graph for
     sewage (ENVO:00002018) backed by PMID:35762794, PMID:30682717.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:52:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented shotgun metagenomic blaCTX-M/blaOXA/blaTEM resistance-gene family pool scope on
+    in_pipe_waste_biotransformation_and_beta_lactamase_propagation (PMID:35762794) while preserving all
+    existing node and edge IDs.
   llm_assisted: true

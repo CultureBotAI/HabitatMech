@@ -202,7 +202,9 @@ causal_graphs:
     node_type: COMMUNITY
     description: Pitcher-associated bacterial consortium converged across pitcher
       plant lineages that contributes hydrolytic enzyme activity for prey digestion
-      and carries nifH nitrogenase genes for diazotrophy.
+      and carries nifH nitrogenase genes for diazotrophy (profiled via 16S rDNA metabarcoding
+      and community nifH gene detection across Sarracenia purpurea phytotelmata in
+      PMID:38995889 without single-isolate full-length UniProtKB protein attribution).
   - node_id: host_assimilable_nitrogen_phosphorus_and_micronutrient_pool
     label: mineralized nitrogen, phosphorus, and micronutrient pool for the host plant
     node_type: CHEMICAL
@@ -315,4 +317,10 @@ curation_history:
   changes: Added pitcher_phytotelm_prey_digestion_and_diazotrophic_nutrient_supply
     mechanism graph for pitcher (BTO:0001069) backed by PMID:35734258, PMID:35384233,
     PMID:38995889, PMID:38441172.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:52:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented community nifH marker pool scope on pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome
+    (PMID:38995889) while preserving all existing node and edge IDs.
   llm_assisted: true

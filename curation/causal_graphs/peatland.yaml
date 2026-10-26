@@ -25,6 +25,88 @@ causal_graphs:
     node_type: TAXON
     description: Acidiphilic, salt-sensitive hydrogenotrophic methanogens exemplified by Methanoregula
       boonei 6A8 that generate ATP via proton gradients and maintain trk/kdp/kup potassium uptake redundancy.
+  - node_id: methanoregula_potassium_uptake_and_bioenergetics_proteins
+    label: Methanoregula boonei potassium uptake transporters, A-type ATP synthase, and membrane methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Potassium uptake systems (Kdp, Kup, Trk), proton-coupled A-type ATP synthase subunits,
+      and membrane-bound tetrahydromethanopterin S-methyltransferase (Mtr) encoded in Methanoregula boonei
+      strain 6A8 (NCBITaxon:456442) that enable survival and hydrogenotrophic methanogenesis in acidic,
+      low-sodium, hypokalemic ombrotrophic peat bogs (exemplified from PMID:25998264 by potassium-transporting
+      ATPase potassium-binding subunit KdpA UniProtKB:A7I5F0 / KDPA_METB6 / Mboo_0443, 584 aa, K+ potassium
+      transporter Kup UniProtKB:A7I822 / A7I822_METB6 / Mboo_1365, 597 aa, A-type ATP synthase subunit
+      A AtpA UniProtKB:A7IAU8 / AATA_METB6 / Mboo_2345, 588 aa, and tetrahydromethanopterin S-methyltransferase
+      subunit E MtrE UniProtKB:A7I5T0 / A7I5T0_METB6 / Mboo_0573, 301 aa); multi-protein node not grounded
+      to a single accession.
+    protein_examples:
+    - accession: UniProtKB:A7I5F0
+      entry_name: KDPA_METB6
+      recommended_name: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      locus_tag: Mboo_0443
+      taxon_id: NCBITaxon:456442
+      taxon_name: Methanoregula boonei (strain DSM 21154 / JCM 14090 / 6A8)
+      role_in_node: subunit
+      sequence_length: 584
+      crc64: DACB2E42296270BF
+      evidence:
+      - reference: PMID:25998264
+        snippet: Further, perhaps reflecting the hypokalemic status of many peat bogs, M. boonei demonstrates
+          redundancy in the predicted potassium uptake genes trk, kdp and kup, some of which may have
+          been horizontally transferred to methanogens from bacteria, possibly Geobacter spp.
+        notes: Brauer et al. 2015 (PMID:25998264) identified high-affinity Kdp potassium-transporting
+          ATPase genes in the Methanoregula boonei 6A8 genome (NCBITaxon:456442), exemplified by potassium-binding
+          subunit KdpA (Mboo_0443, UniProtKB:A7I5F0).
+    - accession: UniProtKB:A7I822
+      entry_name: A7I822_METB6
+      recommended_name: K+ potassium transporter
+      locus_tag: Mboo_1365
+      taxon_id: NCBITaxon:456442
+      taxon_name: Methanoregula boonei (strain DSM 21154 / JCM 14090 / 6A8)
+      role_in_node: family_member
+      sequence_length: 597
+      crc64: 7AA295D373D9CA8A
+      evidence:
+      - reference: PMID:25998264
+        snippet: Further, perhaps reflecting the hypokalemic status of many peat bogs, M. boonei demonstrates
+          redundancy in the predicted potassium uptake genes trk, kdp and kup, some of which may have
+          been horizontally transferred to methanogens from bacteria, possibly Geobacter spp.
+        notes: Brauer et al. 2015 (PMID:25998264) identified redundant potassium uptake transporters (trk,
+          kdp, and kup) in Methanoregula boonei 6A8, including K+ potassium transporter Mboo_1365 (UniProtKB:A7I822).
+    - accession: UniProtKB:A7IAU8
+      entry_name: AATA_METB6
+      recommended_name: A-type ATP synthase subunit A
+      gene_symbol: atpA
+      locus_tag: Mboo_2345
+      taxon_id: NCBITaxon:456442
+      taxon_name: Methanoregula boonei (strain DSM 21154 / JCM 14090 / 6A8)
+      role_in_node: subunit
+      sequence_length: 588
+      crc64: 1D7C00D68F7250D5
+      evidence:
+      - reference: PMID:25998264
+        snippet: First, M. boonei is predicted to generate ATP using protons that are abundant in peat,
+          rather than sodium ions that are scarce, and the sequence of a membrane-bound methyltransferase,
+          believed to pump Na+ in all methanogens, shows differences in key amino acid residues.
+        notes: Brauer et al. 2015 (PMID:25998264) highlight proton-coupled ATP synthesis in Methanoregula
+          boonei 6A8, exemplified by A-type ATP synthase subunit A (atpA, Mboo_2345, UniProtKB:A7IAU8).
+    - accession: UniProtKB:A7I5T0
+      entry_name: A7I5T0_METB6
+      recommended_name: Tetrahydromethanopterin S-methyltransferase subunit E
+      gene_symbol: mtrE
+      locus_tag: Mboo_0573
+      taxon_id: NCBITaxon:456442
+      taxon_name: Methanoregula boonei (strain DSM 21154 / JCM 14090 / 6A8)
+      role_in_node: subunit
+      sequence_length: 301
+      crc64: 668F08C2C40E0F80
+      evidence:
+      - reference: PMID:25998264
+        snippet: First, M. boonei is predicted to generate ATP using protons that are abundant in peat,
+          rather than sodium ions that are scarce, and the sequence of a membrane-bound methyltransferase,
+          believed to pump Na+ in all methanogens, shows differences in key amino acid residues.
+        notes: Brauer et al. 2015 (PMID:25998264) analyze key residue adaptations in the membrane-bound
+          tetrahydromethanopterin S-methyltransferase complex of Methanoregula boonei 6A8, exemplified
+          by subunit MtrE (mtrE, Mboo_0573, UniProtKB:A7I5T0).
   - node_id: peat_biogenic_methane_flux
     label: H2/CO2-derived biogenic methane pool
     node_type: CHEMICAL
@@ -35,7 +117,9 @@ causal_graphs:
     node_type: COMMUNITY
     description: Acidophilic and acid-tolerant type II Alphaproteobacteria methanotrophs (Methylocystis,
       Methylocapsa acidiphila, Methylocella palustris) oxidizing CH4 via particulate methane monooxygenase
-      (pmoA).
+      (pmoA; profiled via in situ pmoA mRNA transcript amplification and FISH across multispecies peat
+      methanotroph populations in PMID:18093158 and PMID:19719661 without a single full-length reference
+      UniProtKB entry, as Methylocapsa acidiphila B2 has only a partial 170-aa PmoA fragment UniProtKB:Q93K59).
   edges:
   - edge_id: peatland_maintains_acidic_ombrotrophic_low_salt_peat_matrix
     subject: peatland
@@ -72,6 +156,24 @@ causal_graphs:
         transferred to methanogens from bacteria, possibly Geobacter spp.
       notes: Brauer et al. 2015 (PMID:25998264) identify proton-driven ATP synthesis and trk/kdp/kup potassium
         transporter redundancy as key adaptations to acidic peat bogs.
+  - edge_id: acidiphilic_hydrogenotrophic_methanoregula_guild_expresses_potassium_uptake_and_bioenergetics_proteins
+    subject: acidiphilic_hydrogenotrophic_methanoregula_guild
+    predicate: expresses
+    object: methanoregula_potassium_uptake_and_bioenergetics_proteins
+    description: Methanoregula boonei 6A8 encodes redundant potassium uptake systems (Kdp, Kup, Trk),
+      proton-coupled A-type ATP synthase subunits, and a modified membrane-bound methyltransferase (Mtr)
+      adapted to acidic, hypokalemic, low-sodium peatlands.
+    evidence:
+    - reference: PMID:25998264
+      snippet: First, M. boonei is predicted to generate ATP using protons that are abundant in peat,
+        rather than sodium ions that are scarce, and the sequence of a membrane-bound methyltransferase,
+        believed to pump Na+ in all methanogens, shows differences in key amino acid residues. Further,
+        perhaps reflecting the hypokalemic status of many peat bogs, M. boonei demonstrates redundancy
+        in the predicted potassium uptake genes trk, kdp and kup, some of which may have been horizontally
+        transferred to methanogens from bacteria, possibly Geobacter spp.
+      notes: Brauer et al. 2015 (PMID:25998264) characterize the potassium uptake transporters (Mboo_0443
+        / UniProtKB:A7I5F0, Mboo_1365 / UniProtKB:A7I822), A-type ATP synthase (Mboo_2345 / UniProtKB:A7IAU8),
+        and membrane methyltransferase (Mboo_0573 / UniProtKB:A7I5T0) of Methanoregula boonei 6A8 (NCBITaxon:456442).
   - edge_id: acidiphilic_hydrogenotrophic_methanoregula_guild_produces_peat_biogenic_methane_flux
     subject: acidiphilic_hydrogenotrophic_methanoregula_guild
     predicate: produces
@@ -118,4 +220,13 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added peatland_acidiphilic_methanogenesis_and_type_ii_methanotrophy mechanism graph for peatland
     (ENVO:00000044) backed by PMID:20154331, PMID:25998264, PMID:18093158, PMID:19719661.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:51:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Added GENE_OR_PROTEIN node methanoregula_potassium_uptake_and_bioenergetics_proteins with
+    verified Methanoregula boonei 6A8 (NCBITaxon:456442) UniProtKB protein_examples (UniProtKB:A7I5F0
+    / Mboo_0443, UniProtKB:A7I822 / Mboo_1365, UniProtKB:A7IAU8 / Mboo_2345, and UniProtKB:A7I5T0 / Mboo_0573)
+    backed by PMID:25998264 and documented multispecies pmoA transcript scope on acidophilic_alphaproteobacterial_methanotroph_guild
+    while preserving all existing node and edge IDs.'
   llm_assisted: true
