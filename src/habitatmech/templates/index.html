@@ -94,14 +94,14 @@ than the concept.</p>
 <h2 id="downloads">Data downloads &amp; LinkML schema</h2>
 <p>All HabitatMech records, category search indexes, semantic embedding coordinates, and schema definitions are openly available:</p>
 <ul>
-  <li><strong>LinkML Schema:</strong> <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml"><code>src/habitatmech/schema/habitatmech.yaml</code></a> (core habitat &amp; causal graph schema), <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/mech_shared.yaml"><code>src/habitatmech/schema/mech_shared.yaml</code></a>, and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/history.yaml"><code>src/habitatmech/schema/history.yaml</code></a></li>
+  <li><strong>LinkML Schema:</strong> <a href="schema.html">schema reference</a> (every class, slot and enumeration, generated from the schema), and the YAML itself: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml"><code>src/habitatmech/schema/habitatmech.yaml</code></a> (core habitat &amp; causal graph schema), <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/mech_shared.yaml"><code>src/habitatmech/schema/mech_shared.yaml</code></a>, and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/history.yaml"><code>src/habitatmech/schema/history.yaml</code></a></li>
   <li><strong>Category JSON Indexes:</strong>
     {% for c in categories %}<a href="category/{{ c.slug }}.json"><code>{{ c.slug }}.json</code></a> ({{ c.count }}){% if not loop.last %}, {% endif %}{% endfor %}
   </li>
   {% if text_map_enabled %}
   <li><strong>Semantic Embedding Map Data:</strong> <a href="text-map-source/points.json"><code>text-map-source/points.json</code></a> and <a href="text-map-source/manifest.json"><code>text-map-source/manifest.json</code></a></li>
   {% endif %}
-  <li><strong>YAML Corpus &amp; Term Requests:</strong> <a href="https://github.com/CultureBotAI/HabitatMech/tree/main/data/habitats"><code>data/habitats/</code></a> ({{ stats.total }} YAML records) and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/term_requests.tsv"><code>data/term_requests.tsv</code></a></li>
+  <li><strong>YAML Corpus &amp; Term Requests:</strong> <a href="https://github.com/CultureBotAI/HabitatMech/tree/main/data/habitats"><code>data/habitats/</code></a> ({{ stats.total }} YAML records) and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/curation/term_requests.tsv"><code>curation/term_requests.tsv</code></a></li>
   <li><strong>Connected X-Mech Knowledge Bases:</strong> <a href="https://culturebotai.github.io/TaxonMech/">TaxonMech</a> (reported microbial taxa), <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> (ecological communities), <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> (growth media), <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> (environmental stress &amp; physiological traits), and <a href="https://culturebotai.github.io/mechs/">X-Mech Suite</a></li>
 </ul>
 {% endblock %}

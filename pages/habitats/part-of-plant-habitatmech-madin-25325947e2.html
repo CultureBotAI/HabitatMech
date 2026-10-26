@@ -18,7 +18,8 @@
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
-    <a href="../index.html#downloads">Downloads &amp; Schema</a>
+    <a href="../index.html#downloads">Downloads</a>
+    <a href="../schema.html">Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -60,7 +61,8 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ENVO_01001057">environment associated with a plant part or small plant</a>      <code class="curie">ENVO:01001057</code></li>
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_01001057">environment associated with a plant part or small plant
+      <code class="curie">ENVO:01001057</code></a></li>
 </ul>
 
 
@@ -74,28 +76,28 @@ second, independent source are listed first.</p>
   <caption>Taxa reported from this habitat</caption>
   <thead><tr><th scope="col">Taxon</th><th scope="col">Source</th><th scope="col" class="num">Rank</th><th scope="col" class="num">Pool</th><th scope="col">Corroborated</th></tr></thead>
   <tr>
-    <td><em>Paenibacillus sp. JDR-2</em> <code class="curie">NCBITaxon:324057</code> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/browse.html?q=Paenibacillus%20sp.%20JDR-2">TaxonMech ↗</a></td>
+    <td><em>Paenibacillus sp. JDR-2</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_324057"><code class="curie">NCBITaxon:324057</code></a> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon%3A324057" aria-label="TaxonMech: Paenibacillus sp. JDR-2">TaxonMech ↗</a></td>
     <td><span class="pill plain">MADIN</span></td>
     <td class="num">—</td>
     <td class="num">4</td>
     <td></td>
   </tr>
   <tr>
-    <td><em>Enterobacter sp. 638</em> <code class="curie">NCBITaxon:399742</code> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/browse.html?q=Enterobacter%20sp.%20638">TaxonMech ↗</a></td>
+    <td><em>Enterobacter sp. 638</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_399742"><code class="curie">NCBITaxon:399742</code></a> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon%3A399742" aria-label="TaxonMech: Enterobacter sp. 638">TaxonMech ↗</a></td>
     <td><span class="pill plain">MADIN</span></td>
     <td class="num">—</td>
     <td class="num">4</td>
     <td></td>
   </tr>
   <tr>
-    <td><em>saccharibacillus_sacchari</em> <code class="curie">NCBITaxon:456493</code> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/browse.html?q=saccharibacillus_sacchari">TaxonMech ↗</a></td>
+    <td><em>saccharibacillus_sacchari</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_456493"><code class="curie">NCBITaxon:456493</code></a> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon%3A456493" aria-label="TaxonMech: saccharibacillus_sacchari">TaxonMech ↗</a></td>
     <td><span class="pill plain">MADIN</span></td>
     <td class="num">—</td>
     <td class="num">4</td>
     <td></td>
   </tr>
   <tr>
-    <td><em>Lactobacillus sucicola</em> <code class="curie">NCBITaxon:519050</code> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/browse.html?q=Lactobacillus%20sucicola">TaxonMech ↗</a></td>
+    <td><em>Lactobacillus sucicola</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_519050"><code class="curie">NCBITaxon:519050</code></a> <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon%3A519050" aria-label="TaxonMech: Lactobacillus sucicola">TaxonMech ↗</a></td>
     <td><span class="pill plain">MADIN</span></td>
     <td class="num">—</td>
     <td class="num">4</td>
@@ -107,23 +109,33 @@ second, independent source are listed first.</p>
 
 
 <h2>Curation</h2>
-<p class="meta">What a curator decided about this record, and why. A record built
-from several source concepts can carry one decision per concept.</p>
+<p class="meta">Every recorded curation event, in the order it was recorded: the
+seeding from the source inventories, then what a curator decided about this
+record, and why. A record built from several source concepts can carry one
+decision per concept.</p>
 <ol class="events">
   <li>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
-    <p>ENVO:01001057 &#39;environment associated with a plant part or small plant&#39; attached as a parent, not adopted as the identity (NARROW). Last-undecided review (#12): Madin&#39;s &#39;part of plant&#39; names FOODON:03420174, which is not in kg-microbe&#39;s FOODON build, so it is an xref rather than an identity (#58). The concept is a plant part as a place a microbe lives, which is what ENVO:01001057 denotes; kept as a narrower kind of it rather than grounded, because the same term is already the parent of Root-Rhizome and Sterilized-plant-part and adopting it here would merge all three. (source concept habitatmech:MADIN.25325947e2)</p>
+    <p><a href="http://purl.obolibrary.org/obo/ENVO_01001057" rel="noopener noreferrer">ENVO:01001057</a> &#39;environment associated with a plant part or small plant&#39; attached as a parent, not adopted as the identity (NARROW). Last-undecided review (#12): Madin&#39;s &#39;part of plant&#39; names <a href="http://purl.obolibrary.org/obo/FOODON_03420174" rel="noopener noreferrer">FOODON:03420174</a>, which is not in kg-microbe&#39;s FOODON build, so it is an xref rather than an identity (#58). The concept is a plant part as a place a microbe lives, which is what <a href="http://purl.obolibrary.org/obo/ENVO_01001057" rel="noopener noreferrer">ENVO:01001057</a> denotes; kept as a narrower kind of it rather than grounded, because the same term is already the parent of Root-Rhizome and Sterilized-plant-part and adopting it here would merge all three. (source concept habitatmech:MADIN.25325947e2)</p>
+  </li>
+  <li>
+    <span class="pill plain">SEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-16 · seed_from_sources ·
+    generated by the seeding rules, not a curator decision</span>
+    <p>Seeded from data/raw/ inventories; attested by MADIN. Grounding: NARROW.</p>
   </li>
 </ol>
 
 <h2>Explore across X-Mech</h2>
-<p class="meta">Explore related organisms, microbial communities, growth media, and environmental traits across the CultureBotAI suite:</p>
-<p>
-  <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/browse.html?q=part%20of%20plant">TaxonMech (part of plant) ↗</a>
-  <a class="pill plain" href="https://culturebotai.github.io/CommunityMech/">CommunityMech ↗</a>
-  <a class="pill plain" href="https://culturebotai.github.io/CultureMech/app/index.html">CultureMech ↗</a>
-  <a class="pill plain" href="https://culturebotai.github.io/TraitMech/browse.html?q=part%20of%20plant">TraitMech (part of plant) ↗</a>
+<p class="meta">Search other CultureBotAI projects for this habitat's name. A
+project that does not describe it returns no matches. Each
+associated taxon above links TaxonMech by its identifier.</p>
+<p class="xmech-links">
+  <a class="pill plain" href="https://culturebotai.github.io/TaxonMech/pages/browse.html?q=part%20of%20plant" aria-label="Search TaxonMech for part of plant">TaxonMech ↗</a>
+  <a class="pill plain" href="https://culturebotai.github.io/CommunityMech/browser.html?q=part%20of%20plant" aria-label="Search CommunityMech for part of plant">CommunityMech ↗</a>
+  <a class="pill plain" href="https://culturebotai.github.io/CultureMech/app/browser.html?q=part%20of%20plant" aria-label="Search CultureMech for part of plant">CultureMech ↗</a>
+  <a class="pill plain" href="https://culturebotai.github.io/TraitMech/pages/browse.html?q=part%20of%20plant" aria-label="Search TraitMech for part of plant">TraitMech ↗</a>
   <a class="pill plain" href="https://culturebotai.github.io/mechs/">X-Mech Suite ↗</a>
 </p>
 
@@ -131,14 +143,25 @@ from several source concepts can carry one decision per concept.</p>
 <p class="meta">
   Generated by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/other/part_of_plant.yaml">View the record</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a>.
+  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/other/part_of_plant.yaml">View the record</a> · <a href="../schema.html">Schema reference</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a>.
+</p>
+<p class="record-actions">
+  <a href="https://github.com/CultureBotAI/HabitatMech/issues/new?title=Problem%20with%20habitatmech%3AMADIN.25325947e2&amp;body=https%3A%2F%2Fculturebotai.github.io%2FHabitatMech%2Fpages%2Fhabitats%2Fpart-of-plant-habitatmech-madin-25325947e2.html">Report a problem with this record</a>: opens a new
+  GitHub issue that names it. Record files are generated, so a fix lands in the
+  curation inputs rather than as an edit to the YAML.
 </p>
 </main>
 <footer class="site">
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="../index.html#downloads">Downloads</a>. Third-party terms apply.
+    on 2026-08-16. Record as of 2026-08-16, its latest recorded curation event.    <a href="../schema.html">Schema reference</a> · <a href="../index.html#downloads">Downloads</a>.
+  </p>
+  <p class="licence">
+    Project data: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+    Code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+    Third-party source material keeps its own terms
+    (<a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE">licence scope</a>).
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

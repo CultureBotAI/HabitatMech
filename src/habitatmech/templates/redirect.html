@@ -10,6 +10,9 @@
 <meta name="robots" content="noindex, follow">
 {% endblock %}
 {% block title %}{{ r.retired_label }} has moved — HabitatMech{% endblock %}
+{# A stub holds no record of its own to date, and a corpus date here would
+   rewrite every stub whenever any record is curated. #}
+{% block provenance %}{% endblock %}
 {% block content %}
 <h1>{{ r.retired_label }} has moved</h1>
 {% if r.targets|length == 1 %}

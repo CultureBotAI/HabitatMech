@@ -18,7 +18,8 @@
     <a href="index.html">Overview</a>
     <a href="browse.html">Browse</a>
     <a href="term-requests.html">ENVO term requests</a>
-    <a href="index.html#downloads">Downloads &amp; Schema</a>
+    <a href="index.html#downloads">Downloads</a>
+    <a href="schema.html">Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -33,6 +34,8 @@
     <div class="facet-group">
       <label class="facet-label" for="browse-q">Search corpus</label>
       <input id="browse-q" class="facet-input" type="search" placeholder="Name, path, source, or category…" aria-label="Search habitats across all categories">
+      <noscript><p class="meta">Searching and filtering need JavaScript. Without it, open a
+      category: its pages list every record in it.</p></noscript>
     </div>
     <div class="facet-group">
       <label class="facet-label" for="browse-grounding">Grounding status</label>
@@ -100,6 +103,10 @@
   </aside>
 
   <div class="browse-main">
+    <div class="note warn" id="browse-failed" hidden>
+      <p id="browse-failed-text"></p>
+      <p><button type="button" id="browse-retry" class="facet-reset">Retry loading the search indexes</button></p>
+    </div>
     <div class="table-scroll" role="region" tabindex="0" aria-label="Habitat categories">
     <table id="cat-tbl">
       <caption>Habitat categories</caption>
@@ -164,6 +171,7 @@
       <tbody></tbody>
     </table>
     </div>
+    <button type="button" id="browse-more" hidden>Show more matches</button>
   </div>
 </div>
 
@@ -173,13 +181,22 @@
   var gSelect = document.getElementById('browse-grounding');
   var sSelect = document.getElementById('browse-sort');
   var resetBtn = document.getElementById('browse-reset');
+  var retryBtn = document.getElementById('browse-retry');
+  var failedNote = document.getElementById('browse-failed');
+  var failedText = document.getElementById('browse-failed-text');
+  var moreBtn = document.getElementById('browse-more');
   var countEl = document.getElementById('browse-count');
   var catBody = document.querySelector('#cat-tbl tbody');
   var catRows = Array.prototype.slice.call(document.querySelectorAll('#cat-tbl tbody tr'));
   var hitsWrap = document.getElementById('global-hits-wrap');
   var hitsBody = document.querySelector('#global-hits tbody');
+  var PAGE = 200;
+  var shownLimit = PAGE;
+  // Every category's rows, once all of them have loaded; never a partial set.
   var allRecords = null;
   var loading = false;
+  // How many indexes failed on the last attempt, until the reader retries.
+  var failed = null;
 
   function esc(t) {
     return String(t).replace(/[&<>"]/g, function (c) {
@@ -214,25 +231,34 @@
     sorted.forEach(function (tr) { catBody.appendChild(tr); });
   }
 
-  function loadAllCategories(cb) {
-    if (allRecords !== null) { cb(); return; }
-    if (loading) return;
+  // Loads every category index once. A failure keeps nothing and names how
+  // many indexes failed, because a search over the indexes that did arrive
+  // reports a plausible count that is wrong -- "gut" answered 0 instead of 84
+  // with one index missing, and stayed at 0 until a reload.
+  function loadAllCategories() {
+    if (allRecords !== null || loading) return;
     loading = true;
-    countEl.textContent = 'Loading category indexes…';
     var cats = catRows.map(function (tr) {
       return { slug: tr.getAttribute('data-slug'), label: tr.getAttribute('data-label') };
     });
     Promise.all(cats.map(function (c) {
       return fetch('category/' + c.slug + '.json')
-        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
         .then(function (rows) {
           return rows.map(function (r) { return { catSlug: c.slug, catLabel: c.label, row: r }; });
-        })
-        .catch(function () { return []; });
+        }, function () { return null; });
     })).then(function (chunks) {
-      allRecords = [].concat.apply([], chunks);
       loading = false;
-      cb();
+      var missing = chunks.filter(function (chunk) { return chunk === null; }).length;
+      if (missing) failed = { count: missing, total: chunks.length };
+      else allRecords = [].concat.apply([], chunks);
+      // Answer what the controls say now, not what they said when the load
+      // began: typing goes on while the indexes arrive, and answering the
+      // first keystroke showed the 3,093 matches for "g" under "gut".
+      apply();
     });
   }
 
@@ -253,63 +279,111 @@
       hitsWrap.hidden = true;
       hitsBody.innerHTML = '';
       countEl.textContent = '';
+      moreBtn.hidden = true;
+      failedNote.hidden = true;
       return;
     }
 
-    loadAllCategories(function () {
-      var slugged = q.replace(/[^a-z0-9]+/g, '-');
-      var matches = (allRecords || []).filter(function (item) {
-        var r = item.row;
-        if (g && r[3] !== g) return false;
-        if (!q) return true;
-        var hay = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5] + ' ' + item.catLabel).toLowerCase();
-        return hay.indexOf(q) !== -1 || hay.indexOf(slugged) !== -1;
-      });
-      matches.sort(function (a, b) {
-        var ra = a.row, rb = b.row;
-        if (s === 'name-asc') return String(ra[0]).localeCompare(String(rb[0]));
-        if (s === 'name-desc') return String(rb[0]).localeCompare(String(ra[0]));
-        if (s === 'grounding-asc') return String(ra[3]).localeCompare(String(rb[3])) || (Number(rb[4]) - Number(ra[4]));
-        if (s === 'assertions-asc') return (Number(ra[4]) - Number(rb[4])) || String(ra[0]).localeCompare(String(rb[0]));
-        return (Number(rb[4]) - Number(ra[4])) || String(ra[0]).localeCompare(String(rb[0]));
-      });
-      var shown = matches.slice(0, 200);
-      hitsBody.innerHTML = shown.map(function (item) {
-        var r = item.row;
-        var warn = (r[3] === 'UNGROUNDED' || r[3] === 'NOT_APPLICABLE') ? ' warn' : '';
-        return '<tr><td><a href="habitats/' + esc(r[1]) + '.html">' + esc(r[0]) + '</a></td>' +
-               '<td><a href="category/' + esc(item.catSlug) + '.html">' + esc(item.catLabel) + '</a></td>' +
-               '<td class="meta">' + esc(r[2]) + '</td>' +
-               '<td><span class="pill' + warn + '">' + esc(r[3]) + '</span></td>' +
-               '<td class="num">' + esc(r[4]) + '</td>' +
-               '<td class="meta">' + esc(r[5]) + '</td></tr>';
-      }).join('');
-      hitsWrap.hidden = false;
-      countEl.textContent = 'Showing ' + shown.length + ' of ' + matches.length + ' matching habitats';
-      if (q && catRows.every(function (tr) { return tr.classList.contains('is-hidden'); })) {
-        catRows.forEach(function (tr) { tr.classList.remove('is-hidden'); });
+    if (allRecords === null) {
+      hitsWrap.hidden = true;
+      hitsBody.innerHTML = '';
+      moreBtn.hidden = true;
+      // The category table is the route that still works; show all of it.
+      catRows.forEach(function (tr) { tr.classList.remove('is-hidden'); });
+      if (failed) {
+        countEl.textContent = 'Search unavailable: ' + failed.count + ' of ' + failed.total +
+          ' category indexes did not load.';
+        // Beside the results, where a reader looks for them, not only at the
+        // foot of the filter column.
+        failedText.textContent = countEl.textContent + ' A search over the rest would miss ' +
+          'records and report a wrong count. Retry, or open a category below.';
+        failedNote.hidden = false;
+      } else {
+        countEl.textContent = 'Loading category indexes…';
+        failedNote.hidden = true;
+        loadAllCategories();
       }
+      return;
+    }
+    failedNote.hidden = true;
+
+    var slugged = q.replace(/[^a-z0-9]+/g, '-');
+    var matches = allRecords.filter(function (item) {
+      var r = item.row;
+      if (g && r[3] !== g) return false;
+      if (!q) return true;
+      var hay = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5] + ' ' + item.catLabel).toLowerCase();
+      return hay.indexOf(q) !== -1 || hay.indexOf(slugged) !== -1;
     });
+    matches.sort(function (a, b) {
+      var ra = a.row, rb = b.row;
+      if (s === 'name-asc') return String(ra[0]).localeCompare(String(rb[0]));
+      if (s === 'name-desc') return String(rb[0]).localeCompare(String(ra[0]));
+      if (s === 'grounding-asc') return String(ra[3]).localeCompare(String(rb[3])) || (Number(rb[4]) - Number(ra[4]));
+      if (s === 'assertions-asc') return (Number(ra[4]) - Number(rb[4])) || String(ra[0]).localeCompare(String(rb[0]));
+      return (Number(rb[4]) - Number(ra[4])) || String(ra[0]).localeCompare(String(rb[0]));
+    });
+    // Paged rather than cut off at 200, so every match stays reachable.
+    var shown = matches.slice(0, shownLimit);
+    hitsBody.innerHTML = shown.map(function (item) {
+      var r = item.row;
+      var warn = (r[3] === 'UNGROUNDED' || r[3] === 'NOT_APPLICABLE') ? ' warn' : '';
+      return '<tr><td><a href="habitats/' + esc(r[1]) + '.html">' + esc(r[0]) + '</a></td>' +
+             '<td><a href="category/' + esc(item.catSlug) + '.html">' + esc(item.catLabel) + '</a></td>' +
+             '<td class="meta">' + esc(r[2]) + '</td>' +
+             '<td><span class="pill' + warn + '">' + esc(r[3]) + '</span></td>' +
+             '<td class="num">' + esc(r[4]) + '</td>' +
+             '<td class="meta">' + esc(r[5]) + '</td></tr>';
+    }).join('');
+    hitsWrap.hidden = false;
+    moreBtn.hidden = shown.length >= matches.length;
+    countEl.textContent = 'Showing ' + shown.length + ' of ' + matches.length + ' matching habitats';
+    if (q && catRows.every(function (tr) { return tr.classList.contains('is-hidden'); })) {
+      catRows.forEach(function (tr) { tr.classList.remove('is-hidden'); });
+    }
   }
 
-  qInput.addEventListener('input', apply);
-  gSelect.addEventListener('change', apply);
-  if (sSelect) sSelect.addEventListener('change', apply);
+  function changed() {
+    shownLimit = PAGE;
+    apply();
+  }
+
+  qInput.addEventListener('input', changed);
+  gSelect.addEventListener('change', changed);
+  if (sSelect) sSelect.addEventListener('change', changed);
+  moreBtn.addEventListener('click', function () {
+    shownLimit += PAGE;
+    apply();
+  });
+  retryBtn.addEventListener('click', function () {
+    failed = null;
+    apply();
+    // The button hides while the indexes load; keep focus somewhere useful.
+    qInput.focus();
+  });
   resetBtn.addEventListener('click', function () {
     qInput.value = '';
     gSelect.value = '';
     if (sSelect) sSelect.value = 'assertions-desc';
-    apply();
+    changed();
     qInput.focus();
   });
+
+  // A shared link can carry a value this page no longer offers; such a value
+  // leaves its control at the default instead of selecting nothing.
+  function restore(select, value) {
+    if (!select || !value) return;
+    var known = Array.prototype.some.call(select.options, function (o) { return o.value === value; });
+    if (known) select.value = value;
+  }
 
   var params = new URLSearchParams(window.location.search);
   var initialQ = params.get('q');
   var initialG = params.get('grounding');
   var initialS = params.get('sort');
   if (initialQ) qInput.value = initialQ;
-  if (initialG && gSelect) gSelect.value = initialG;
-  if (initialS && sSelect) sSelect.value = initialS;
+  restore(gSelect, initialG);
+  restore(sSelect, initialS);
   if (initialQ || initialG || initialS) {
     apply();
   }
@@ -320,7 +394,13 @@
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="index.html#downloads">Downloads</a>. Third-party terms apply.
+    on 2026-08-16. Corpus as of 2026-10-25, its latest recorded curation event.    <a href="schema.html">Schema reference</a> · <a href="index.html#downloads">Downloads</a>.
+  </p>
+  <p class="licence">
+    Project data: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+    Code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+    Third-party source material keeps its own terms
+    (<a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE">licence scope</a>).
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

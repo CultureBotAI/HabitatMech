@@ -4,14 +4,11 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-
 from scripts import render_pages as site
 
 
 def environment():
-    env = Environment(loader=FileSystemLoader(site.TEMPLATES_DIR),
-                      autoescape=select_autoescape(['html']))
+    env = site.template_environment()
     env.filters['graph_svg'] = lambda value, *_: ''
     return env
 
@@ -26,7 +23,7 @@ def test_mesh_resolver_accepts_canonical_descriptors_and_keeps_unknowns_unlinked
 def test_curation_urls_are_escaped_clickable_and_preserve_punctuation():
     notes = '<script>bad()</script> Read (https://pubmed.ncbi.nlm.nih.gov/10731891/). plain text.'
     html = environment().get_template('habitat.html').render(r={
-        'decisions': [{'changes': notes}], 'sources': [], 'label': 'fixture'}, stats={})
+        'events': [{'changes': notes}], 'sources': [], 'label': 'fixture'}, stats={})
     assert 'href="https://pubmed.ncbi.nlm.nih.gov/10731891/"' in html
     assert '&lt;script&gt;bad()&lt;/script&gt;' in html
     assert '</a>). plain text.' in html
@@ -81,7 +78,7 @@ def test_status_copy_does_not_infer_human_review():
 def test_map_shell_keeps_site_navigation_and_unchanged_bundle_destination():
     html = environment().get_template('text_map.html').render(root='../', stats={}, text_map_enabled=True)
     for expected in ('href="../index.html"', 'href="../browse.html"', 'All Mech projects',
-                     'creativecommons.org/licenses/by/4.0/', 'LICENSE-CODE',
+                     'LICENSE-DATA', 'LICENSE-CODE',
                      'src="../text-map-source/index.html"', "anchor.target = '_top'"):
         assert expected in html
 
