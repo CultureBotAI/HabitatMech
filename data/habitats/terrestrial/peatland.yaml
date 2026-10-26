@@ -234,6 +234,138 @@ characteristic_taxa:
   score: 2.0407
   rank: 25
   candidate_pool: 1419
+causal_graphs:
+- graph_id: peatland_acidiphilic_methanogenesis_and_type_ii_methanotrophy
+  title: Acidic Sphagnum peatland hydrogenotrophic methanogenesis and type II alphaproteobacterial
+    methane oxidation mechanism
+  description: Rain-fed (ombrotrophic) Sphagnum-dominated peatlands maintain acidic
+    (pH 4.0-4.5), low-sodium, potassium-poor anoxic conditions that select for salt-sensitive
+    acidophilic hydrogenotrophic methanogens such as Methanoregula boonei 6A8 (utilizing
+    H+ gradients for ATP synthesis and redundant trk/kdp/kup potassium uptake systems
+    to reduce H2/CO2 to CH4), while biogenic methane flux supports dense acidophilic
+    type II Alphaproteobacteria methanotrophs (Methylocystis, Methylocapsa acidiphila,
+    and Methylocella palustris) expressing particulate methane monooxygenase (pmoA).
+  nodes:
+  - node_id: peatland
+    label: peatland
+    node_type: HABITAT
+    grounding: ENVO:00000044
+    description: Acidic wetland ecosystem accumulating dead Sphagnum and vascular
+      plant peat under waterlogged, oligotrophic, low-ionic-strength conditions.
+  - node_id: acidic_ombrotrophic_low_salt_peat_matrix
+    label: acidic (pH 4.0-4.5) low-sodium hypokalemic peat environment
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Ombrotrophic rain-fed acidic peat matrix characterized by pH 4.0-4.5,
+      scarce sodium ions, and hypokalemic nutrient-poor porewater.
+  - node_id: acidiphilic_hydrogenotrophic_methanoregula_guild
+    label: acidiphilic hydrogenotrophic Methanoregula boonei methanogen guild
+    node_type: TAXON
+    description: Acidiphilic, salt-sensitive hydrogenotrophic methanogens exemplified
+      by Methanoregula boonei 6A8 that generate ATP via proton gradients and maintain
+      trk/kdp/kup potassium uptake redundancy.
+  - node_id: peat_biogenic_methane_flux
+    label: H2/CO2-derived biogenic methane pool
+    node_type: CHEMICAL
+    description: Methane produced from hydrogenotrophic H2/CO2 reduction in anoxic
+      acidic peat layers diffusing into Sphagnum acrotelm zones.
+  - node_id: acidophilic_alphaproteobacterial_methanotroph_guild
+    label: pmoA-expressing Methylocystis, Methylocapsa acidiphila, and Methylocella
+      methanotroph guild
+    node_type: COMMUNITY
+    description: Acidophilic and acid-tolerant type II Alphaproteobacteria methanotrophs
+      (Methylocystis, Methylocapsa acidiphila, Methylocella palustris) oxidizing CH4
+      via particulate methane monooxygenase (pmoA).
+  edges:
+  - edge_id: peatland_maintains_acidic_ombrotrophic_low_salt_peat_matrix
+    subject: peatland
+    predicate: maintains
+    object: acidic_ombrotrophic_low_salt_peat_matrix
+    description: Brauer et al. 2011 (PMID:20154331) and Brauer et al. 2015 (PMID:25998264)
+      characterize ombrotrophic peat bogs as acidic (pH 4.0-4.5), nutrient-poor, low-Na+,
+      hypokalemic environments.
+    evidence:
+    - reference: PMID:20154331
+      snippet: A novel acidiphilic, hydrogenotrophic methanogen, designated strain
+        6A8(T), was isolated from an acidic (pH 4.0-4.5) and ombrotrophic (rain-fed)
+        bog located near Ithaca, NY, USA.
+      notes: Brauer et al. 2011 (Int J Syst Evol Microbiol, PMID:20154331) document
+        the acidic (pH 4.0-4.5) ombrotrophic peat bog habitat of Methanoregula boonei
+        6A8.
+    - reference: PMID:25998264
+      snippet: Analysis of the genome sequence of Methanoregula boonei strain 6A8,
+        an acidophilic methanogen isolated from an ombrotrophic (rain-fed) peat bog,
+        has revealed unique features that likely allow it to survive in acidic, nutrient-poor
+        conditions.
+      notes: Brauer et al. 2015 (PLoS One, PMID:25998264) describe the acidic, nutrient-poor,
+        low-sodium, hypokalemic regime of ombrotrophic peatlands.
+  - edge_id: acidic_ombrotrophic_low_salt_peat_matrix_selects_for_acidiphilic_hydrogenotrophic_methanoregula_guild
+    subject: acidic_ombrotrophic_low_salt_peat_matrix
+    predicate: selects for
+    object: acidiphilic_hydrogenotrophic_methanoregula_guild
+    description: Abundant protons, scarce sodium ions, and hypokalemic porewater in
+      acidic peat bogs select for Methanoregula boonei 6A8 and related group E1/E2
+      methanogenic archaea with proton-coupled ATPases and redundant trk/kdp/kup potassium
+      uptake systems.
+    evidence:
+    - reference: PMID:25998264
+      snippet: First, M. boonei is predicted to generate ATP using protons that are
+        abundant in peat, rather than sodium ions that are scarce, and the sequence
+        of a membrane-bound methyltransferase, believed to pump Na+ in all methanogens,
+        shows differences in key amino acid residues. Further, perhaps reflecting
+        the hypokalemic status of many peat bogs, M. boonei demonstrates redundancy
+        in the predicted potassium uptake genes trk, kdp and kup, some of which may
+        have been horizontally transferred to methanogens from bacteria, possibly
+        Geobacter spp.
+      notes: Brauer et al. 2015 (PMID:25998264) identify proton-driven ATP synthesis
+        and trk/kdp/kup potassium transporter redundancy as key adaptations to acidic
+        peat bogs.
+  - edge_id: acidiphilic_hydrogenotrophic_methanoregula_guild_produces_peat_biogenic_methane_flux
+    subject: acidiphilic_hydrogenotrophic_methanoregula_guild
+    predicate: produces
+    object: peat_biogenic_methane_flux
+    description: Methanoregula boonei 6A8 reduces CO2 with H2 under acidic low-salt
+      conditions to produce methane.
+    evidence:
+    - reference: PMID:20154331
+      snippet: The culture utilized H(2)/CO(2) to produce methane but did not utilize
+        formate, acetate, methanol, ethanol, 2-propanol, butanol or trimethylamine.
+        Optimal growth conditions were near pH 5.1 and 35 °C. The culture grew in
+        basal medium containing as little as 0.43 mM Na(+) and growth was inhibited
+        completely by 50 mM NaCl.
+      notes: Brauer et al. 2011 (PMID:20154331) demonstrate obligate H2/CO2 hydrogenotrophic
+        methanogenesis by Methanoregula boonei 6A8.
+  - edge_id: peat_biogenic_methane_flux_selects_for_acidophilic_alphaproteobacterial_methanotroph_guild
+    subject: peat_biogenic_methane_flux
+    predicate: selects for
+    object: acidophilic_alphaproteobacterial_methanotroph_guild
+    description: Methane oxidation in acidic Sphagnum peatlands is mediated by pmoA-expressing
+      Alphaproteobacteria dominated by Methylocystis, Methylocapsa acidiphila, and
+      Methylocella palustris.
+    evidence:
+    - reference: PMID:18093158
+      snippet: Direct extraction of mRNA from these soils facilitated detection of
+        expression of methane monooxygenase genes, which revealed that particulate
+        methane monooxygenase and not soluble methane monooxygenase was probably responsible
+        for CH(4) oxidation in situ, because only pmoA transcripts (encoding a subunit
+        of particulate methane monooxygenase) were readily detectable. Differences
+        in methanotroph community structures were observed between the Calluna-covered
+        moorland and Sphagnum/Eriophorum-covered gully habitats. As with many other
+        Sphagnum-covered peatlands, the Sphagnum/Eriophorum-covered gullies were dominated
+        by Methylocystis. Methylocella and Methylocapsa-related species were also
+        present.
+      notes: Chen et al. 2008 (Environ Microbiol, PMID:18093158) show in situ pmoA
+        transcript expression and dominance of Methylocystis, Methylocella, and Methylocapsa
+        in acidic Sphagnum peatlands.
+    - reference: PMID:19719661
+      snippet: The population size of this peat-inhabiting Methylocystis subgroup
+        was 2.0+/-0.1x10(6) cells g(-1) (wet weight) of peat from Siberia and 5.5+/-0.5x10(6)
+        cells g(-1) of peat from northern Germany. This represented 60 and 95%, respectively,
+        of the total number of methanotroph cells detected by FISH in these two wetland
+        sites. Other major methanotroph populations were M. acidiphila and Methylocella
+        palustris.
+      notes: Dedysh et al. 2003 (FEMS Microbiol Ecol, PMID:19719661) quantify Methylocystis,
+        Methylocapsa acidiphila, and Methylocella palustris as the dominant methanotrophs
+        in acidic Sphagnum peat.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -279,3 +411,10 @@ curation_history:
   changes: 'Retained GOLD label ''Mire'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added peatland_acidiphilic_methanogenesis_and_type_ii_methanotrophy mechanism
+    graph for peatland (ENVO:00000044) backed by PMID:20154331, PMID:25998264, PMID:18093158,
+    PMID:19719661.
+  llm_assisted: true

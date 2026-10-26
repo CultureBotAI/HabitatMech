@@ -185,6 +185,106 @@ characteristic_taxa:
   score: 1.01259
   rank: 25
   candidate_pool: 30
+causal_graphs:
+- graph_id: paddy_field_soil_rhizosphere_methanogenesis_and_methane_oxidation
+  title: Flooded paddy field soil root-exudate methanogenesis and rhizospheric methane
+    oxidation mechanism
+  description: Flooded rice paddy soil compartments (bulk soil, rhizosphere, and rhizoplane)
+    receive rice root exudates, plant litter, and root-excreted oxygen, where organic
+    substrates and rhizosphere H2 cycling fuel mcrA-encoding hydrogenotrophic and
+    acetoclastic methanogenic archaea while rice root radial oxygen loss induces pmoA-mediated
+    rhizospheric methane oxidation that consumes 36-90% of biogenic CH4 within an
+    integrated methanogen-methanotroph consortium.
+  nodes:
+  - node_id: paddy_field_soil
+    label: paddy field soil
+    node_type: HABITAT
+    grounding: ENVO:00005740
+    description: Flooded agricultural soil used for wetland rice cultivation, partitioned
+      into anoxic bulk soil, rhizosphere, and oxic root-surface rhizoplane compartments.
+  - node_id: rice_root_exudates_litter_and_excreted_oxygen
+    label: rice root exudates, plant litter, and root-excreted oxygen
+    node_type: CHEMICAL
+    description: Organic carbon substrates (root exudates, amino/gluconeogenic acids,
+      and plant litter) and radial oxygen loss supplied by rice roots into flooded
+      paddy soil.
+  - node_id: paddy_mcrA_methanogenic_archaeal_guild
+    label: mcrA-encoding hydrogenotrophic and acetoclastic methanogenic guild
+    node_type: COMMUNITY
+    description: Paddy soil methanogenic archaeal community acting as the bulk-soil
+      network hub and producing CH4 from root exudates, litter, and rhizosphere H2.
+  - node_id: rhizospheric_pmoA_methane_oxidation_sink
+    label: pmoA-mediated rhizospheric methane oxidation and methanogen-methanotroph
+      coupling
+    node_type: COMMUNITY_PROCESS
+    description: Coupled methanogenic-methanotrophic activity across rice rhizosphere
+      and rhizoplane where pmoA-expressing methanotrophs oxidize 36-90% of biogenic
+      methane using root-excreted oxygen.
+  edges:
+  - edge_id: paddy_field_soil_supplies_rice_root_exudates_litter_and_excreted_oxygen
+    subject: paddy_field_soil
+    predicate: supplies
+    object: rice_root_exudates_litter_and_excreted_oxygen
+    description: Rice plants in flooded paddy soils supply root exudates and plant
+      litter as carbon substrates alongside root-excreted oxygen in the rhizosphere.
+    evidence:
+    - reference: PMID:14997675
+      snippet: Root exudates and litters of rice plants could serve as the substrate
+        for methanogenesis and enhance the CH4 production of paddy soils, resulting
+        in a high CH4 emission peak, particularly in rice late growing season. Rhizospheric
+        CH4 oxidation induced by rice root-excreted oxygen constitutes a main biogenic
+        sink of CH4, which could account for 36-90% of CH4 produced in paddy soil
+        over the entire growing season of rice.
+      notes: Fu et al. 2004 (Ying Yong Sheng Tai Xue Bao, PMID:14997675) summarize
+        how rice root exudates, litters, and root-excreted oxygen govern CH4 production
+        and oxidation in paddy soils.
+  - edge_id: rice_root_exudates_litter_and_excreted_oxygen_drives_paddy_mcrA_methanogenic_archaeal_guild
+    subject: rice_root_exudates_litter_and_excreted_oxygen
+    predicate: drives
+    object: paddy_mcrA_methanogenic_archaeal_guild
+    description: Root exudates, plant litter, and rhizosphere hydrogen availability
+      drive mcrA-mediated methanogenesis in paddy soil compartments.
+    evidence:
+    - reference: PMID:41582156
+      snippet: Genome-resolved metatranscriptomic data from PSY rhizosphere soils
+        reveal lower ratios of gene activities for (mostly hydrogenotrophic) CH4 production
+        versus consumption, decreased activity of H2-producing genes, and increased
+        activity of bacterial H2 oxidation pathways.
+      notes: Genome-resolved metatranscriptomics of rice rhizosphere soil (PMID:41582156)
+        shows that rhizosphere H2 cycling and root exudate composition regulate hydrogenotrophic
+        CH4 production.
+    - reference: PMID:38801181
+      snippet: We collected samples from 32 geographically scattered rice fields in
+        east central China, amplicon targeting the mcrA gene for methanogenesis and
+        pmoA gene for methanotrophy by using high-throughput sequencing. Distinct
+        communities of both methanogens and methanotrophs occurred in each of the
+        three compartments, and predominantly positive links were found between methanogens
+        and methanotrophs in all compartments indicating cross-feeding or consortia
+        relationships.
+      notes: Multi-field amplicon analysis of mcrA and pmoA communities (PMID:38801181)
+        demonstrates compartment-specific methanogen communities across bulk soil,
+        rhizosphere, and rhizoplane.
+  - edge_id: paddy_mcrA_methanogenic_archaeal_guild_drives_rhizospheric_pmoA_methane_oxidation_sink
+    subject: paddy_mcrA_methanogenic_archaeal_guild
+    predicate: drives
+    object: rhizospheric_pmoA_methane_oxidation_sink
+    description: Positive cross-feeding links between mcrA methanogens and pmoA methanotrophs
+      coupled with root-excreted oxygen establish a homeostatic rhizosphere methane
+      oxidation sink consuming 36-90% of produced CH4.
+    evidence:
+    - reference: PMID:38801181
+      snippet: Methanogens were acting as the network hub in the bulk soil, and methanotrophs
+        in rhizoplane. Network complexity and stability was greater in the rhizosphere
+        than rhizoplane and bulk soil, with no network hubs detected, suggesting the
+        strongest effect of homeostatic influence by plant occurred in the rhizosphere.
+      notes: Rice rhizosphere and rhizoplane integrate mcrA methanogens and pmoA methanotrophs
+        into stable cross-feeding networks (PMID:38801181).
+    - reference: PMID:14997675
+      snippet: Rhizospheric CH4 oxidation induced by rice root-excreted oxygen constitutes
+        a main biogenic sink of CH4, which could account for 36-90% of CH4 produced
+        in paddy soil over the entire growing season of rice.
+      notes: Rice root-excreted oxygen drives rhizospheric CH4 oxidation consuming
+        36-90% of paddy soil methane (PMID:14997675).
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -209,3 +309,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added paddy_field_soil_rhizosphere_methanogenesis_and_methane_oxidation
+    mechanism graph for paddy field soil (ENVO:00005740) backed by PMID:14997675,
+    PMID:38801181, PMID:41582156.
+  llm_assisted: true

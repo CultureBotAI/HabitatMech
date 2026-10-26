@@ -1,0 +1,100 @@
+identifier: ENVO:01000022
+causal_graphs:
+- graph_id: marine_salt_marsh_spartina_sulfur_cycling_and_diazotrophy
+  title: Marine salt marsh Spartina redox-coupled sulfate reduction, sulfide oxidation, and C/N fixation mechanism
+  description: Marine salt marshes dominated by smooth cordgrass (Spartina alterniflora) generate steep
+    sediment redox potential gradients and high rates of enzymatic organic matter decomposition in the
+    vegetated root zone, selecting for sulfate-reducing bacteria, chemolithotrophic sulfur-oxidizing diazotrophs
+    (Candidatus Thiodiazotropha), and anoxygenic phototrophic purple/green sulfur bacteria (Chromatiaceae
+    and Chlorobiaceae) that detoxify sulfide in the root zone while coupling sulfur oxidation to carbon
+    and nitrogen fixation.
+  nodes:
+  - node_id: marine_salt_marsh_biome
+    label: marine salt marsh biome
+    node_type: HABITAT
+    grounding: ENVO:01000022
+    description: Coastal intertidal salt marsh ecosystem dominated by halophytic cordgrass (Spartina alterniflora)
+      and subject to tidal marine sulfate inundation.
+  - node_id: spartina_root_zone_redox_and_organic_matter_gradient
+    label: Spartina root-zone redox potential gradient and enzymatic organic matter decomposition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Steep sediment redox gradients between anoxic bulk marsh sediment and the oxidized Spartina
+      alterniflora root/rhizosphere zone accompanied by high rates of enzymatic organic matter decomposition.
+  - node_id: salt_marsh_sulfate_reducing_and_sulfur_oxidizing_guilds
+    label: sulfate-reducing, Candidatus Thiodiazotropha, and Chromatiaceae sulfur-cycling guilds
+    node_type: COMMUNITY
+    description: Overrepresented rhizosphere/root sulfate-reducing and sulfur-oxidizing prokaryotes (including
+      Candidatus Thiodiazotropha) alongside intertidal purple sulfur bacteria (Chromatiaceae).
+  - node_id: root_zone_sulfide_detoxification_and_cn_fixation
+    label: chemolithotrophic and phototrophic sulfide oxidation coupled to C and N fixation
+    node_type: COMMUNITY_PROCESS
+    description: Oxidation of phytotoxic hydrogen sulfide coupled to carbon and nitrogen fixation that
+      detoxifies the marsh root zone and replenishes host-plant nutrients.
+  edges:
+  - edge_id: marine_salt_marsh_biome_maintains_spartina_root_zone_redox_and_organic_matter_gradient
+    subject: marine_salt_marsh_biome
+    predicate: maintains
+    object: spartina_root_zone_redox_and_organic_matter_gradient
+    description: Rolando et al. 2022 (PMID:35227326) demonstrate that Spartina alterniflora salt marshes
+      establish steep sediment redox gradients and elevated enzymatic organic matter decomposition in
+      the root and rhizosphere zone.
+    evidence:
+    - reference: PMID:35227326
+      snippet: Salt marshes are dominated by the smooth cordgrass Spartina alterniflora on the US Atlantic
+        and Gulf of Mexico coastlines. Although soil microorganisms are well known to mediate important
+        biogeochemical cycles in salt marshes, little is known about the role of root microbiomes in supporting
+        the health and productivity of marsh plant hosts. Leveraging in situ gradients in aboveground
+        plant biomass as a natural laboratory, we investigated the relationships between S. alterniflora
+        primary productivity, sediment redox potential, and the physiological ecology of bulk sediment,
+        rhizosphere, and root microbial communities at two Georgia barrier islands over two growing seasons.
+      notes: Rolando et al. 2022 (Microbiome, PMID:35227326) characterize the sediment redox and primary
+        productivity gradients of Spartina alterniflora salt marshes.
+  - edge_id: spartina_root_zone_redox_and_organic_matter_gradient_selects_for_salt_marsh_sulfate_reducing_and_sulfur_oxidizing_guilds
+    subject: spartina_root_zone_redox_and_organic_matter_gradient
+    predicate: selects for
+    object: salt_marsh_sulfate_reducing_and_sulfur_oxidizing_guilds
+    description: Oxidized root-zone carbon substrates and marsh sulfur gradients select for sulfate-reducing,
+      sulfur-oxidizing, and nitrifying prokaryotes including Candidatus Thiodiazotropha and phototrophic
+      Chromatiaceae.
+    evidence:
+    - reference: PMID:35227326
+      snippet: Significantly higher rates of enzymatic organic matter decomposition, as well as the relative
+        abundances of putative sulfur (S)-oxidizing, sulfate-reducing, and nitrifying prokaryotes correlated
+        with plant productivity. Moreover, these functional guilds were overrepresented in the S. alterniflora
+        rhizosphere and root core microbiomes. Core microbiome bacteria from the Candidatus Thiodiazotropha
+        genus, with the metabolic potential to couple S oxidation with C and N fixation, were shown to
+        be highly abundant in the root and rhizosphere of S. alterniflora.
+      notes: Rolando et al. 2022 (PMID:35227326) show enrichment of sulfate-reducing, sulfur-oxidizing,
+        and Candidatus Thiodiazotropha guilds in the Spartina root and rhizosphere microbiome.
+    - reference: PMID:18929068
+      snippet: Phototrophic sulfur bacteria are characterized by oxidizing various inorganic sulfur compounds
+        for use as electron donors in carbon dioxide fixation during anoxygenic photosynthetic growth.
+        These bacteria are divided into the purple sulfur bacteria (PSB) and the green sulfur bacteria
+        (GSB). They utilize various combinations of sulfide, elemental sulfur, and thiosulfate and sometimes
+        also ferrous iron and hydrogen as electron donors.
+      notes: Frigaard & Dahl 2009 (Adv Microb Physiol, PMID:18929068) describe inorganic sulfur oxidation
+        coupled to CO2 fixation in purple and green sulfur bacteria (Chromatiaceae/Chlorobiaceae) characteristic
+        of salt marsh sediments.
+  - edge_id: salt_marsh_sulfate_reducing_and_sulfur_oxidizing_guilds_drives_root_zone_sulfide_detoxification_and_cn_fixation
+    subject: salt_marsh_sulfate_reducing_and_sulfur_oxidizing_guilds
+    predicate: drives
+    object: root_zone_sulfide_detoxification_and_cn_fixation
+    description: Root- and rhizosphere-associated sulfur-oxidizing diazotrophs couple chemolithotrophic
+      sulfide oxidation with carbon and nitrogen fixation to detoxify sulfide and stimulate marsh primary
+      productivity.
+    evidence:
+    - reference: PMID:35227326
+      snippet: 'Two microbially mediated mechanisms are proposed to stimulate S. alterniflora primary
+        productivity: (i) enhanced microbial activity replenishes nutrients and terminal electron acceptors
+        in higher biomass stands, and (ii) coupling of chemolithotrophic S oxidation with carbon (C) and
+        nitrogen (N) fixation by root- and rhizosphere-associated prokaryotes detoxifies sulfide in the
+        root zone while potentially transferring fixed C and N to the host plant.'
+      notes: Rolando et al. 2022 (PMID:35227326) establish that coupled sulfur oxidation and C/N fixation
+        detoxifies root-zone sulfide and supports Spartina alterniflora productivity.
+curation_history:
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added marine_salt_marsh_spartina_sulfur_cycling_and_diazotrophy mechanism graph for marine
+    salt marsh biome (ENVO:01000022) backed by PMID:35227326, PMID:18929068.
+  llm_assisted: true
