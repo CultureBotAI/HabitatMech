@@ -42,6 +42,7 @@
       <button type="button" id="tr-reset" class="facet-reset">Reset filters</button>
     </div>
     <p class="meta" id="tr-count" aria-live="polite"></p>
+    <noscript><p class="meta">Filtering needs JavaScript. Every request is listed in the table.</p></noscript>
   </aside>
 
   <div class="browse-main">
@@ -55,7 +56,7 @@
         <td><a href="habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
         <td class="num">{{ r.assertions }}</td>
         <td class="meta">{{ r.sources|join(', ') }}</td>
-        <td class="meta">{{ r.note }}</td>
+        <td class="meta">{{ r.note|autolink }}</td>
       </tr>
       {% endfor %}
       </tbody>

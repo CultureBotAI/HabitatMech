@@ -142,6 +142,10 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 .pill.warn { background: var(--warn-soft); color: var(--warn); }
 .pill.plain { background: var(--code-bg); color: var(--muted); }
+/* A link pill can carry a habitat or taxon name; nowrap pushed 45 record
+   pages sideways at 390 px. */
+a.pill { white-space: normal; overflow-wrap: anywhere; }
+.xmech-links { display: flex; flex-wrap: wrap; gap: .4rem; }
 
 .meta { color: var(--muted); font-size: .9rem; margin: .3rem 0 1rem; }
 .meta .sep { margin: 0 .45rem; opacity: .5; }
@@ -243,6 +247,9 @@ main h1, main p, main li, main dd { overflow-wrap: anywhere; }
   background: var(--bg);
   color: var(--ink);
 }
+/* Text in the page background colour: white on the light accent, near-black on
+   the dark one. A literal white with a dark override for [data-theme="dark"]
+   alone left OS-dark readers with white on #7fc9a3 (1.95:1). */
 .hero-search button {
   padding: 0.65rem 1.1rem;
   font-size: 0.95rem;
@@ -250,11 +257,8 @@ main h1, main p, main li, main dd { overflow-wrap: anywhere; }
   border: 1px solid var(--accent);
   border-radius: 6px;
   background: var(--accent);
-  color: #ffffff;
+  color: var(--bg);
   cursor: pointer;
-}
-:root[data-theme="dark"] .hero-search button {
-  color: #14171a;
 }
 
 /* Downstream page top bar with breadcrumbs + search */
@@ -397,13 +401,28 @@ main h1, main p, main li, main dd { overflow-wrap: anywhere; }
 .facet-reset:hover {
   border-color: var(--accent);
 }
+/* A recovery button inside a notice sizes to its label. */
+.note .facet-reset { width: auto; }
 .browse-main {
   min-width: 0;
 }
 
+/* A visual's data, as a table a keyboard or screen-reader user can reach. */
+.map-table { margin: 1rem 0; }
+.map-table summary { cursor: pointer; font-weight: 600; color: var(--accent); padding: .4rem 0; }
+.map-table summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Generated schema reference. */
+.schema-description p { white-space: pre-line; }
+.schema-class, .schema-enum { margin: 1.6rem 0; }
+.schema-values dt { margin-top: .6rem; font-weight: 600; }
+.schema-values dd { margin: .2rem 0 0 1.2rem; }
+
 @media (max-width: 860px) {
+  /* minmax(0, 1fr), not 1fr: a bare 1fr column grows to fit an opened wide
+     table, and the page scrolls sideways instead of the table's region. */
   .browse-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .facet-sidebar {
     position: static;

@@ -21,7 +21,8 @@
     <a href="{{ root }}index.html">Overview</a>
     <a href="{{ root }}browse.html">Browse</a>
     <a href="{{ root }}term-requests.html">ENVO term requests</a>
-    <a href="{{ root }}index.html#downloads">Downloads &amp; Schema</a>
+    <a href="{{ root }}index.html#downloads">Downloads</a>
+    <a href="{{ root }}schema.html">Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -33,7 +34,14 @@
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on {{ stats.extracted_at }}. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="{{ root }}index.html#downloads">Downloads</a>. Third-party terms apply.
+    on {{ stats.extracted_at }}.{% block provenance %}{% if stats.corpus_as_of %} Corpus as of {{ stats.corpus_as_of }}, its latest recorded curation event.{% endif %}{% endblock %}
+    <a href="{{ root }}schema.html">Schema reference</a> · <a href="{{ root }}index.html#downloads">Downloads</a>.
+  </p>
+  <p class="licence">
+    Project data: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+    Code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+    Third-party source material keeps its own terms
+    (<a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE">licence scope</a>).
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

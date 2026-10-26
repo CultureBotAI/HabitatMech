@@ -18,7 +18,8 @@
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
-    <a href="../index.html#downloads">Downloads &amp; Schema</a>
+    <a href="../index.html#downloads">Downloads</a>
+    <a href="../schema.html">Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -119,6 +120,9 @@ record's own page — the link already carries it.</p>
       <button type="button" id="clear-filter" class="facet-reset" hidden>Clear filter</button>
     </div>
     <p class="meta" id="count" aria-live="polite"></p>
+    <button type="button" id="filter-retry" class="facet-reset" hidden>Retry loading the filter</button>
+    <noscript><p class="meta">Filtering needs JavaScript. The pages below list every
+    record in this category.</p></noscript>
   </aside>
 
   <div class="browse-main">
@@ -190,9 +194,10 @@ record's own page — the link already carries it.</p>
   var sortSelect = document.getElementById('sort-select');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
-  var index = null, pending = null, resultLimit = 300;
+  var index = null, pending = null, resultLimit = 300, loading = false;
   var more = document.getElementById('show-more');
   var clear = document.getElementById('clear-filter');
+  var retry = document.getElementById('filter-retry');
   var pager = document.querySelector('.pager');
   var unfilteredCount = document.getElementById('unfiltered-count');
 
@@ -275,17 +280,27 @@ record's own page — the link already carries it.</p>
     });
   }
 
+  // Fetched once, on the first keystroke — a reader who only browses never
+  // pays for it. One request at a time; when it lands, apply() reads the
+  // controls as they are then, so later keystrokes are not lost.
+  function load() {
+    if (loading) return;
+    loading = true;
+    retry.hidden = true;
+    out.textContent = 'loading…';
+    fetch(box.getAttribute('data-index')).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) { loading = false; index = data; apply(); },
+            function () {
+              loading = false;
+              out.textContent = 'Filter unavailable: the index of all ' + box.getAttribute('data-total') +
+                ' records did not load, so the rows below are this page only.';
+              retry.hidden = false;
+            });
+  }
+
   function triggerFilter() {
     resultLimit = 300;
-    if (index === null) {
-      // Fetched once, on the first keystroke — a reader who only browses never
-      // pays for it.
-      out.textContent = 'loading…';
-      fetch(box.getAttribute('data-index')).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(function (data) { index = data; apply(); })
-        .catch(function () { out.textContent = 'filter unavailable'; });
-      return;
-    }
+    if (index === null) { load(); return; }
     if (pending === null) { pending = requestAnimationFrame(apply); }
   }
 
@@ -294,6 +309,7 @@ record's own page — the link already carries it.</p>
   if (sFilter) sFilter.addEventListener('change', triggerFilter);
   if (sortSelect) sortSelect.addEventListener('change', triggerFilter);
   more.addEventListener('click', function () { resultLimit += 300; apply(); });
+  retry.addEventListener('click', load);
   clear.addEventListener('click', function () {
     box.value = '';
     if (gFilter) gFilter.value = '';
@@ -304,15 +320,23 @@ record's own page — the link already carries it.</p>
     box.focus();
   });
 
+  // A shared link can carry a value this page no longer offers; such a value
+  // leaves its control at the default instead of selecting nothing.
+  function restore(select, value) {
+    if (!select || !value) return;
+    var known = Array.prototype.some.call(select.options, function (o) { return o.value === value; });
+    if (known) select.value = value;
+  }
+
   var params = new URLSearchParams(window.location.search);
   var initialQ = params.get('q');
   var initialG = params.get('grounding');
   var initialS = params.get('source');
   var initialSort = params.get('sort');
   if (initialQ) box.value = initialQ;
-  if (initialG && gFilter) gFilter.value = initialG;
-  if (initialS && sFilter) sFilter.value = initialS;
-  if (initialSort && sortSelect) sortSelect.value = initialSort;
+  restore(gFilter, initialG);
+  restore(sFilter, initialS);
+  restore(sortSelect, initialSort);
   if (initialQ || initialG || initialS || initialSort) {
     triggerFilter();
   }
@@ -323,7 +347,13 @@ record's own page — the link already carries it.</p>
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="../index.html#downloads">Downloads</a>. Third-party terms apply.
+    on 2026-08-16. Corpus as of 2026-10-25, its latest recorded curation event.    <a href="../schema.html">Schema reference</a> · <a href="../index.html#downloads">Downloads</a>.
+  </p>
+  <p class="licence">
+    Project data: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+    Code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+    Third-party source material keeps its own terms
+    (<a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE">licence scope</a>).
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

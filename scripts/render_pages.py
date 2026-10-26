@@ -25,10 +25,13 @@ import re
 import shutil
 import sys
 from collections import Counter, defaultdict
+from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import quote, urlencode, urlsplit
 
 import yaml
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader, pass_context, select_autoescape
+from markupsafe import Markup, escape
 
 if __package__:
     from .build_term_requests import excluded as excluded_term_requests
@@ -45,6 +48,8 @@ TEMPLATES_DIR = REPO_ROOT / "src" / "habitatmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
+SCHEMA_PATH = REPO_ROOT / "src" / "habitatmech" / "schema" / "habitatmech.yaml"
+GITHUB_REPO = "https://github.com/CultureBotAI/HabitatMech"
 
 # Per-record taxon lists are capped in the extractor at 25; showing all of them
 # on the page is fine, but the cap is worth naming where a reader sees it.
@@ -134,6 +139,314 @@ def term_iri(curie: str) -> str | None:
     return None
 
 
+# A CURIE as a reader sees one: a prefix, a colon, then a local id with no
+# space or markup in it.
+CURIE_SHAPE = re.compile(r"[A-Za-z][A-Za-z0-9_.-]*:[^\s<>\"'`\\]+")
+# This repository's own namespace. No registry resolves it, so a habitatmech:
+# identifier is linkable only through the record page it names.
+LOCAL_PREFIX = "habitatmech"
+
+
+def curie_url(curie: str) -> str | None:
+    """Where a displayed identifier is looked up, when no record page names it.
+
+    Known prefixes use term_iri(). Any other well-formed CURIE falls back to
+    bioregistry.io, which resolves or explains every registered prefix, so a
+    displayed identifier is never a dead end; a habitatmech: identifier with no
+    record page has nowhere to go and stays unlinked.
+    """
+    value = (curie or "").strip()
+    if not CURIE_SHAPE.fullmatch(value):
+        return None
+    known = term_iri(value)
+    if known:
+        return known
+    if value.partition(":")[0] == LOCAL_PREFIX:
+        return None
+    return "https://bioregistry.io/" + quote(value, safe=":/")
+
+
+# The sibling Mech routes this site links, from the fleet's route table, which
+# was loaded live in headless Chrome on 2026-10-25: each search route restored
+# ?q= into its search box with a filtered count. A per-taxon link uses
+# TaxonMech's record route, which opens that taxon (or says it is outside
+# TaxonMech's published scope) rather than a label search.
+SIBLING_SEARCH = {
+    "TaxonMech": "https://culturebotai.github.io/TaxonMech/pages/browse.html?q=",
+    "CommunityMech": "https://culturebotai.github.io/CommunityMech/browser.html?q=",
+    "CultureMech": "https://culturebotai.github.io/CultureMech/app/browser.html?q=",
+    "TraitMech": "https://culturebotai.github.io/TraitMech/pages/browse.html?q=",
+}
+TAXONMECH_RECORD = "https://culturebotai.github.io/TaxonMech/pages/taxon.html?id="
+
+
+def sibling_search(mech: str, query: str) -> str:
+    return SIBLING_SEARCH[mech] + quote(query, safe="")
+
+
+def taxonmech_url(taxon_id: str) -> str | None:
+    if not re.fullmatch(r"NCBITaxon:\d+", taxon_id or ""):
+        return None
+    return TAXONMECH_RECORD + quote(taxon_id, safe="")
+
+
+# Citation tokens inside record prose. URLs come first so that a DOI inside a
+# URL stays part of that URL, and a known-prefix CURIE comes last so that
+# "DOI:10.1/x" and "PMID:1" are read as citations. Matching runs on the raw
+# text and every piece is escaped on the way out, so record text never becomes
+# markup. A URL or DOI never contains whitespace, angle brackets, quotes,
+# backticks or square brackets, so Markdown written around one --
+# `[10.1/x](https://...)`, `10.1/x` in backticks -- ends the token instead of
+# joining it. Only prefixes this site already resolves are recognised as CURIEs
+# in prose, where "word:word" is otherwise just punctuation.
+_TOKEN_CHARS = r"[^\s<>\"'`\\\[\]]"
+_PROSE_PREFIXES = sorted(OBO_PREFIXES | {"UniProtKB", "mesh", "MESH", "MeSH", LOCAL_PREFIX})
+CITATION_TOKEN = re.compile(
+    rf"(?P<url>\b(?i:https?)://{_TOKEN_CHARS}+)"
+    rf"|(?P<doi>(?:\b(?i:doi)(?::\s?|=|\s))?(?<![\w./])10\.[0-9]{{4,9}}/{_TOKEN_CHARS}+)"
+    r"|(?P<pmid>\b(?i:pmid)(?::\s?|\s)(?P<pmid_number>[0-9]{1,9})\b)"
+    r"|(?P<pmcid>\bPMC[0-9]{4,9}\b)"
+    rf"|(?P<curie>\b(?:{'|'.join(_PROSE_PREFIXES)}):[A-Za-z0-9_]+(?:\.[A-Za-z0-9_]+)*)"
+)
+_CLOSERS = {")": "(", "]": "[", "}": "{"}
+# Sentence punctuation, plus the Markdown emphasis and code marks that close a
+# token written as **10.x/y** or `10.x/y`.
+_TRAILING = ".,;:!?'\"*`"
+
+
+def _trim_token(token: str) -> str:
+    """Cut a token at a closing parenthesis it never opened, then drop the
+    punctuation, Markdown marks and unbalanced closers that end it.
+
+    "(10.1016/0005-2744(70)90044-4)" keeps the DOI's own parentheses, while in
+    "(https://a.org/x)-(https://b.org/y)" the first ")" closes the sentence's
+    parenthesis, so the token ends there and the second URL is its own.
+    Without this a note's "(https://.../issues/1948);" linked the issue with
+    ");" on the end, which GitHub answers with an empty search (#2046).
+    """
+    depth = 0
+    for index, char in enumerate(token):
+        depth += {"(": 1, ")": -1}.get(char, 0)
+        if depth < 0:
+            token = token[:index]
+            break
+    while token:
+        last = token[-1]
+        if last in _TRAILING or (last in _CLOSERS
+                                 and token.count(last) > token.count(_CLOSERS[last])):
+            token = token[:-1]
+            continue
+        break
+    return token
+
+
+def _web_url(value: str) -> str | None:
+    """An http(s) URL with a host and no credentials, else None."""
+    if any(ord(char) < 32 or ord(char) == 127 for char in value):
+        return None
+    try:
+        parts = urlsplit(value)
+        _ = parts.port  # rejects a malformed port
+    except ValueError:
+        return None
+    if (parts.scheme.lower() in {"http", "https"} and parts.hostname
+            and parts.username is None and parts.password is None):
+        return value
+    return None
+
+
+def _record_href(root: str, slug_of: dict[str, str], curie: str) -> str | None:
+    slug = slug_of.get(curie)
+    return f"{root}habitats/{slug}.html" if slug else None
+
+
+def _token_url(kind: str, token: str, match: re.Match[str], root: str,
+               slug_of: dict[str, str], own: str) -> str | None:
+    if kind == "url":
+        return _web_url(token)
+    if kind == "doi":
+        doi = token[token.index("10."):]
+        return "https://doi.org/" + quote(doi, safe="/") if "/" in doi else None
+    if kind == "pmid":
+        return f"https://pubmed.ncbi.nlm.nih.gov/{match.group('pmid_number')}/"
+    if kind == "pmcid":
+        return f"https://pmc.ncbi.nlm.nih.gov/articles/{token}/"
+    if token == own:
+        return None  # the page the reader is already on
+    return _record_href(root, slug_of, token) or term_iri(token)
+
+
+def autolink_text(value: object, *, root: str = "", slug_of: dict[str, str] | None = None,
+                  own: str = "") -> Markup:
+    """Escape record prose and link the citations and identifiers in it.
+
+    PMID -> PubMed, DOI -> doi.org, PMCID -> PMC, http(s) URLs -> themselves,
+    and a known-prefix CURIE -> the record page that has it as its identifier,
+    else its resolver (`own`, the current record's identifier, stays unlinked).
+    Only the token becomes the anchor and its visible text is unchanged, so a
+    citation inside an evidence note, an edge description or a curation change
+    can be followed without the sentence being reworded. For record content
+    only: schema and documentation prose carries format examples such as
+    PMID:12345678 that must stay plain text.
+    """
+    if value is None:
+        return Markup("")
+    if isinstance(value, Markup):
+        return value
+    text = str(value)
+    slug_of = slug_of or {}
+    out: list[str] = []
+    position = scan = 0
+    while match := CITATION_TOKEN.search(text, scan):
+        kind = match.lastgroup if match.lastgroup != "pmid_number" else "pmid"
+        token = match.group(0)
+        if kind in {"url", "doi"}:
+            token = _trim_token(token)
+        url = _token_url(kind, token, match, root, slug_of, own) if token else None
+        if not url:
+            scan = match.end()
+            continue
+        out.append(escape(text[position:match.start()]))
+        if url.startswith(("http://", "https://")):
+            out.append(Markup('<a href="{}" rel="noopener noreferrer">{}</a>').format(url, token))
+        else:
+            out.append(Markup('<a href="{}">{}</a>').format(url, token))
+        # Resume after the token, not the match: what trimming cut off may hold
+        # the next citation, as in "(https://a.org/x)-(https://b.org/y)".
+        position = scan = match.start() + len(token)
+    out.append(escape(text[position:]))
+    return Markup("").join(out)
+
+
+def _own_identifier(context) -> str:
+    record = context.get("r")
+    return str(record.get("identifier") or "") if isinstance(record, dict) else ""
+
+
+@pass_context
+def autolink(context, value: object) -> Markup:
+    return autolink_text(value, root=context.get("root") or "",
+                         slug_of=context.get("slug_of") or {}, own=_own_identifier(context))
+
+
+@pass_context
+def term_link(context, curie: object) -> Markup:
+    """A displayed identifier as code, linked to where a reader can look it up.
+
+    A CURIE that names one of this corpus's records links to that record's
+    page; anything else goes through curie_url(). Never a link to "#".
+    """
+    value = str(curie or "").strip()
+    if not value:
+        return Markup("")
+    code = Markup('<code class="curie">{}</code>').format(value)
+    url = (_record_href(context.get("root") or "", context.get("slug_of") or {}, value)
+           or curie_url(value))
+    return Markup('<a href="{}">{}</a>').format(url, code) if url else code
+
+
+@pass_context
+def reference_link(context, reference: object) -> Markup:
+    """An evidence reference: its citations linked, else a term link."""
+    value = str(reference or "").strip()
+    linked = autolink(context, value)
+    if "<a " in linked:
+        return Markup('<code class="curie">{}</code>').format(linked)
+    return term_link(context, value)
+
+
+def latest_timestamp(events: list[dict]) -> datetime | None:
+    """The latest recorded event, read from the events and never from the clock,
+    so rendering unchanged records twice gives the same bytes."""
+    moments = []
+    for event in events or []:
+        raw = event.get("timestamp")
+        try:
+            moment = (raw if isinstance(raw, datetime)
+                      else datetime.fromisoformat(str(raw).strip().replace("Z", "+00:00")))
+        except ValueError:
+            continue
+        if moment.tzinfo is not None:
+            moments.append(moment.astimezone(UTC))
+    return max(moments) if moments else None
+
+
+def as_of(events: list[dict]) -> str:
+    moment = latest_timestamp(events)
+    return moment.strftime("%Y-%m-%d") if moment else ""
+
+
+def issue_url(identifier: str, page_url: str) -> str:
+    """A new GitHub issue prefilled with the record it is about."""
+    query = urlencode({"title": f"Problem with {identifier}", "body": page_url},
+                      quote_via=quote)
+    return f"{GITHUB_REPO}/issues/new?{query}"
+
+
+def schema_reference(schema_path: Path = SCHEMA_PATH) -> dict:
+    """Readable documentation of the record schema, read from the schema itself.
+
+    Every class with the slots LinkML resolves for it (imports and slot_usage
+    applied) and every enumeration with its values, in the schema's own order
+    and with no clock, so an unchanged schema renders the same bytes and the
+    pages/ check covers it. Descriptions are the schema's own wording.
+    """
+    from linkml_runtime.utils.schemaview import SchemaView
+
+    view = SchemaView(str(schema_path))
+    module_file = {}
+    for name, schema in view.schema_map.items():
+        source = schema_path.parent / f"{name}.yaml"
+        if source.is_file():
+            module_file[schema.id] = source.relative_to(REPO_ROOT).as_posix()
+    classes = view.all_classes()
+    enums = view.all_enums()
+    local = list(view.all_classes(imports=False))
+    ordered = local + [name for name in classes if name not in local]
+    local_enums = list(view.all_enums(imports=False))
+    ordered_enums = local_enums + [name for name in enums if name not in local_enums]
+
+    def range_kind(name: str) -> str:
+        return "class" if name in classes else "enum" if name in enums else "type"
+
+    def slot_row(slot) -> dict:
+        names = [alt.range for alt in (slot.any_of or slot.exactly_one_of or []) if alt.range]
+        ranges = names or [slot.range or view.schema.default_range or "string"]
+        return {
+            "name": slot.name,
+            "ranges": [{"name": name, "kind": range_kind(name)} for name in ranges],
+            "required": bool(slot.required or slot.identifier),
+            "multivalued": bool(slot.multivalued),
+            "identifier": bool(slot.identifier),
+            "pattern": slot.pattern or "",
+            "description": slot.description or "",
+        }
+
+    return {
+        "title": view.schema.title or view.schema.name,
+        "description": view.schema.description or "",
+        "version": str(view.schema.version or ""),
+        "license": view.schema.license or "",
+        "source": schema_path.relative_to(REPO_ROOT).as_posix(),
+        "modules": sorted(set(module_file.values())),
+        "classes": [{
+            "name": name,
+            "description": classes[name].description or "",
+            "is_a": classes[name].is_a or "",
+            "source": module_file.get(classes[name].from_schema, ""),
+            "slots": [slot_row(slot) for slot in view.class_induced_slots(name)],
+        } for name in ordered],
+        "enums": [{
+            "name": name,
+            "description": enums[name].description or "",
+            "source": module_file.get(enums[name].from_schema, ""),
+            "permissible": [{"text": text, "description": value.description or "",
+                        "meaning": value.meaning or ""}
+                       for text, value in (enums[name].permissible_values or {}).items()],
+        } for name in ordered_enums],
+    }
+
+
 def load_records() -> list[tuple[Path, dict]]:
     out = []
     for path in sorted(HABITATS_DIR.rglob("*.yaml")):
@@ -208,6 +521,24 @@ def extracted_at() -> str:
     return "an unrecorded date"
 
 
+def template_environment() -> Environment:
+    """The Jinja environment every page is rendered with, filters included."""
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATES_DIR)),
+        autoescape=select_autoescape(["html"]),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
+    env.filters["graph_svg"] = graph_svg
+    env.filters["autolink"] = autolink
+    env.filters["term_link"] = term_link
+    env.filters["reference_link"] = reference_link
+    env.filters["taxonmech_url"] = taxonmech_url
+    env.globals["sibling_search"] = sibling_search
+    env.globals["github_repo"] = GITHUB_REPO
+    return env
+
+
 def build(out_dir: Path) -> None:
     # Validate enablement, current checksums and fresh full inputs before
     # an ordinary site build can remove or replace existing pages.
@@ -224,14 +555,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     decisions = load_decisions()
     excluded_requests = excluded_term_requests()
 
-    env = Environment(
-        loader=FileSystemLoader(str(TEMPLATES_DIR)),
-        autoescape=select_autoescape(["html"]),
-        trim_blocks=True,
-        lstrip_blocks=True,
-    )
-    env.filters["graph_svg"] = graph_svg
-
+    env = template_environment()
     env.globals["text_map_enabled"] = text_map is not None
 
     slug_of = {doc["identifier"]: slugify(f"{doc['label']}-{doc['identifier']}") for _, doc in records}
@@ -263,6 +587,10 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
         "extracted_at": extracted_at(),
         "reviewed": sum(1 for _, d in records if d.get("mapping_status") == "REVIEWED"),
         "seeded": sum(1 for _, d in records if d.get("mapping_status") == "SEEDED"),
+        # The dated version of the corpus: its latest recorded curation event.
+        # Aggregate pages state it; a record page states its own record's date
+        # instead, so one record's curation does not rewrite every page (#31).
+        "corpus_as_of": as_of([e for _, d in records for e in d.get("curation_history") or []]),
     }
 
     for path, doc in records:
@@ -298,7 +626,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
                 {
                     "id": p,
                     "label": label_of.get(p, p),
-                    "href": f"../habitats/{slug_of[p]}.html" if p in slug_of else term_iri(p),
+                    "href": f"../habitats/{slug_of[p]}.html" if p in slug_of else curie_url(p),
                 }
                 for p in (doc.get("parent_habitats") or [])
             ],
@@ -309,7 +637,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
                 {
                     "id": x,
                     "label": label_of.get(x, ""),
-                    "href": f"../habitats/{slug_of[x]}.html" if x in slug_of else term_iri(x),
+                    "href": f"../habitats/{slug_of[x]}.html" if x in slug_of else curie_url(x),
                 }
                 for x in (doc.get("xrefs") or [])
             ],
@@ -326,27 +654,31 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
             ],
             "taxa_total": len(taxa),
             "taxa_truncated": len(taxa) > TAXA_SHOWN,
-            # Everything except the seed event: a curator's decisions, which
-            # are the part of the history a reader cannot get anywhere else.
-            # decisions.tsv is a seeder input, not something the site serves,
-            # so before #94 a curated grounding was indistinguishable from a
-            # machine-generated one on the page.
-            "decisions": [
+            # Every recorded event, the seeding first. The curator decisions
+            # are the part a reader cannot get anywhere else -- decisions.tsv
+            # is a seeder input, not something the site serves, so before #94
+            # a curated grounding was indistinguishable from a machine-generated
+            # one -- but leaving the seed event out hid the only dated,
+            # attributed event of the 1,322 records nobody has curated since.
+            "events": [
                 {
                     "action": e.get("action", ""),
                     "curator": e.get("curator", ""),
                     "date": (e.get("timestamp") or "")[:10],
                     "changes": e.get("changes", "").replace("[CLASS-level] ", ""),
                     "class_level": "[CLASS-level]" in (e.get("changes") or ""),
+                    "seeded": e.get("action") == "SEEDED_FROM_SOURCES",
                 }
                 for e in (doc.get("curation_history") or [])
-                if e.get("action") != "SEEDED_FROM_SOURCES"
             ],
+            "as_of": as_of(doc.get("curation_history") or []),
             "repo_path": str(path.relative_to(REPO_ROOT)),
+            "issue_url": issue_url(identifier, f"{SITE_BASE}habitats/{slug_of[identifier]}.html"),
         }
 
         (out_dir / "habitats" / f"{slug_of[identifier]}.html").write_text(
-            env.get_template("habitat.html").render(r=record, root="../", stats=stats),
+            env.get_template("habitat.html").render(r=record, root="../", stats=stats,
+                                                    slug_of=slug_of),
             encoding="utf-8",
         )
 
@@ -509,7 +841,14 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
             swept=swept,
             stats=stats,
             root="",
+            slug_of=slug_of,
         ),
+        encoding="utf-8",
+    )
+    # Readable documentation of the record schema, generated from the schema
+    # so it cannot fall behind it the way a hand-written page would.
+    (out_dir / "schema.html").write_text(
+        env.get_template("schema.html").render(schema=schema_reference(), stats=stats, root=""),
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
@@ -525,7 +864,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     # pages, and every record page is otherwise reachable only by following a
     # category link — three clicks from the root, with no machine-readable index
     # of the deepest and most numerous content (#36).
-    listed = ["index.html", "browse.html", "term-requests.html"]
+    listed = ["index.html", "browse.html", "term-requests.html", "schema.html"]
     listed += category_pages
     listed += [f"habitats/{slug}.html" for slug in sorted(slug_of.values())]
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
@@ -582,10 +921,15 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     )
 
     if text_map is not None:
+        # The map says how many of the site's records it plots, from the
+        # coverage its own manifest records, so a sampled map is never silent.
+        manifest = json.loads(
+            (out_dir / "text-map-source" / "manifest.json").read_text(encoding="utf-8"))
         (out_dir / "text-map").mkdir(exist_ok=True)
         (out_dir / "text-map" / "index.html").write_text(
             env.get_template("text_map.html").render(
-                root="../", stats=stats, categories=categories, groundings=groundings
+                root="../", stats=stats, categories=categories, groundings=groundings,
+                map_coverage=manifest.get("coverage") or {},
             ),
             encoding="utf-8")
 
@@ -595,6 +939,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     # as orphaned forever. Same reason the seeder has --prune.
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "term-requests.html",
+        out_dir / "schema.html",
         out_dir / "style.css", out_dir / "theme-toggle.js", out_dir / ".nojekyll",
         out_dir / "sitemap.xml", out_dir / "robots.txt", out_dir / "404.html",
     }

@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Not found — HabitatMech{% endblock %}
 {% block head %}<meta name="robots" content="noindex, follow">{% endblock %}
+{# Served for every missing address and copied to the repository root; it
+   describes no records, so it carries no corpus date that curation would churn. #}
+{% block provenance %}{% endblock %}
 {% block content %}
 <h1>No page here</h1>
 <p class="lede">

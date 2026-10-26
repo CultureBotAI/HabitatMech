@@ -18,7 +18,8 @@
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
-    <a href="../index.html#downloads">Downloads &amp; Schema</a>
+    <a href="../index.html#downloads">Downloads</a>
+    <a href="../schema.html">Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -33,7 +34,15 @@
 </div>
 
 <h1>Semantic text map</h1>
-<p>The map below uses the shared, validated record-description projection (<code>BAAI/bge-large-en-v1.5</code> + PaCMAP). <a href="../text-map-source/index.html">Open the map on its own</a>.</p>
+<p>The map below uses the shared, validated record-description projection
+(<code>BAAI/bge-large-en-v1.5</code> + PaCMAP); positions summarize similarity
+between record descriptions.
+It plots all 3209 records.
+Coordinates and provenance:
+<a href="../text-map-source/points.json"><code>points.json</code></a> ·
+<a href="../text-map-source/manifest.json"><code>manifest.json</code></a>.</p>
+<noscript><p class="note">The map and its data table need JavaScript. Every record
+is listed on the <a href="../browse.html">Browse</a> category pages.</p></noscript>
 
 <div class="browse-layout">
   <aside class="facet-sidebar" aria-label="Filter semantic text map">
@@ -94,11 +103,24 @@
     <div class="facet-group">
       <button type="button" id="map-reset" class="facet-reset">Reset map filter</button>
     </div>
-    <p class="meta" id="map-status" aria-live="polite"></p>
+    <p class="meta" id="map-status" aria-live="polite">Loading the map…</p>
+    <button type="button" id="map-retry" class="facet-reset" hidden>Retry loading the map</button>
   </aside>
 
   <div class="browse-main">
     <iframe id="text-map-view" title="Explore HabitatMech records by semantic similarity" src="../text-map-source/index.html" style="width:100%;height:80vh;min-height:38rem;border:1px solid var(--rule);border-radius:6px;background:#fff"></iframe>
+    <details class="map-table" id="map-table">
+      <summary>View data as table</summary>
+      <p class="meta" id="map-table-count" aria-live="polite"></p>
+      <button type="button" id="map-table-retry" class="facet-reset" hidden>Retry loading the map data</button>
+      <div class="table-scroll" role="region" tabindex="0" aria-label="Records plotted on the semantic text map">
+      <table>
+        <caption>Records plotted on the semantic text map</caption>
+        <thead><tr><th scope="col">Habitat</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col" class="num">PaCMAP x</th><th scope="col" class="num">PaCMAP y</th></tr></thead>
+        <tbody id="map-table-body"></tbody>
+      </table>
+      </div>
+    </details>
   </div>
 </div>
 
@@ -108,7 +130,20 @@
   var qInput = document.getElementById('map-q');
   var resetBtn = document.getElementById('map-reset');
   var statusEl = document.getElementById('map-status');
+  var retryMap = document.getElementById('map-retry');
+  var tableEl = document.getElementById('map-table');
+  var tableBody = document.getElementById('map-table-body');
+  var tableCount = document.getElementById('map-table-count');
+  var tableRetry = document.getElementById('map-table-retry');
   var prefixBtns = Array.prototype.slice.call(document.querySelectorAll('#prefix-pills .facet-pill'));
+  var mapDoc = null;
+  var points = null, pointsLoading = false;
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
 
   function syncUrl(q) {
     if (!window.history || !window.history.replaceState) return;
@@ -120,9 +155,10 @@
 
   function pushToFrame(val) {
     syncUrl(val);
-    if (!frame.contentDocument) return;
-    var innerSearch = frame.contentDocument.getElementById('search');
-    var innerCount = frame.contentDocument.getElementById('match-count');
+    renderTable();
+    if (!mapDoc) return;
+    var innerSearch = mapDoc.getElementById('search');
+    var innerCount = mapDoc.getElementById('match-count');
     if (innerSearch) {
       innerSearch.value = val;
       innerSearch.dispatchEvent(new Event('input'));
@@ -130,6 +166,49 @@
     if (innerCount && statusEl) {
       statusEl.textContent = innerCount.textContent;
     }
+  }
+
+  // The data table lists what the map plots, from the same points, and follows
+  // the same search: a label or identifier containing the query. Rows are
+  // built only while the table is open, and every one links its record.
+  function renderTable() {
+    if (!tableEl.open) return;
+    if (points === null) { loadPoints(); return; }
+    var q = qInput.value.trim().toLowerCase();
+    var shown = points.filter(function (r) {
+      return !q || (r.label + ' ' + r.identifier).toLowerCase().indexOf(q) !== -1;
+    });
+    tableBody.innerHTML = shown.map(function (r) {
+      var page = String(r.page || '');
+      var name = /^habitats\/[a-z0-9-]+\.html$/.test(page)
+        ? '<a href="../' + esc(page) + '">' + esc(r.label) + '</a>' : esc(r.label);
+      return '<tr><td>' + name + '</td><td><code class="curie">' + esc(r.identifier) +
+             '</code></td><td>' + esc(r.category) + '</td><td class="num">' + esc(Number(r.x).toFixed(2)) +
+             '</td><td class="num">' + esc(Number(r.y).toFixed(2)) + '</td></tr>';
+    }).join('');
+    tableCount.textContent = 'Showing ' + shown.length + ' of ' + points.length + ' plotted records' +
+      (q ? ', filtered by the search above.' : '.');
+  }
+
+  // The map page carries its points; reading them from it costs no second
+  // download. If the map itself failed, the same points come from points.json.
+  function loadPoints() {
+    var embedded = mapDoc && mapDoc.getElementById('points');
+    if (embedded) {
+      try { points = JSON.parse(embedded.textContent); renderTable(); return; } catch (e) { points = null; }
+    }
+    if (pointsLoading) return;
+    pointsLoading = true;
+    tableRetry.hidden = true;
+    tableCount.textContent = 'Loading the map data…';
+    fetch('../text-map-source/points.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) { pointsLoading = false; points = data; renderTable(); },
+            function () {
+              pointsLoading = false;
+              tableCount.textContent = 'The map data did not load. Retry, or find records through Browse.';
+              tableRetry.hidden = false;
+            });
   }
 
   qInput.addEventListener('input', function () {
@@ -156,25 +235,53 @@
     qInput.focus();
   });
 
-  frame.addEventListener('load', function () {
-    // The immutable shared page remains byte-identical. Record navigation
-    // leaves the frame so readers retain normal full-page history and links.
-    frame.contentDocument.addEventListener('click', function (event) {
+  tableEl.addEventListener('toggle', renderTable);
+  tableRetry.addEventListener('click', loadPoints);
+  retryMap.addEventListener('click', function () {
+    retryMap.hidden = true;
+    statusEl.textContent = 'Loading the map…';
+    frame.src = frame.getAttribute('src');
+  });
+
+  var initialQ = new URLSearchParams(window.location.search).get('q');
+  if (initialQ) qInput.value = initialQ;
+
+  function frameDocument() {
+    try { return frame.contentDocument; } catch (e) { return null; }
+  }
+
+  function onFrameLoad() {
+    var doc = frameDocument();
+    if (doc && doc === mapDoc) return;
+    // A failed or missing map loads an error page instead, with no search box:
+    // say so, rather than leave a blank frame and an empty status.
+    if (!doc || !doc.getElementById('search')) {
+      mapDoc = null;
+      statusEl.textContent = 'The map did not load. Retry, or open the data table below or Browse.';
+      retryMap.hidden = false;
+      return;
+    }
+    mapDoc = doc;
+    retryMap.hidden = true;
+    // The immutable shared page remains byte-identical. Navigation from it
+    // (a record, or its manifest) leaves the frame, so readers keep normal
+    // full-page history and links.
+    mapDoc.addEventListener('click', function (event) {
       var anchor = event.target.closest('a');
-      if (anchor && new URL(anchor.href).pathname.includes('/habitats/')) {
-        anchor.target = '_top';
-      }
+      if (anchor) anchor.target = '_top';
     });
-    var params = new URLSearchParams(window.location.search);
-    var initialQ = params.get('q');
-    if (initialQ) {
-      qInput.value = initialQ;
-      pushToFrame(initialQ);
+    if (qInput.value.trim()) {
+      pushToFrame(qInput.value.trim());
     } else {
-      var innerCount = frame.contentDocument.getElementById('match-count');
+      var innerCount = mapDoc.getElementById('match-count');
       if (innerCount && statusEl) statusEl.textContent = innerCount.textContent;
     }
-  });
+  }
+
+  frame.addEventListener('load', onFrameLoad);
+  // A map served from cache can finish before this script runs.
+  var early = frameDocument();
+  if (early && early.readyState === 'complete' && early.getElementById('search')) onFrameLoad();
 })();
 </script>
 </main>
@@ -182,7 +289,13 @@
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="../index.html#downloads">Downloads</a>. Third-party terms apply.
+    on 2026-08-16. Corpus as of 2026-10-25, its latest recorded curation event.    <a href="../schema.html">Schema reference</a> · <a href="../index.html#downloads">Downloads</a>.
+  </p>
+  <p class="licence">
+    Project data: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+    Code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+    Third-party source material keeps its own terms
+    (<a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE">licence scope</a>).
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
