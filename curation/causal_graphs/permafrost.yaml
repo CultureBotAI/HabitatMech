@@ -1,0 +1,120 @@
+identifier: ENVO:00000134
+causal_graphs:
+- graph_id: permafrost_subzero_cryoadaptation_and_thaw_methanogenesis
+  title: Permafrost subzero cryoadaptation and thaw-induced anaerobic carbon decomposition and methanogenesis mechanism
+  description: Intact permafrost imposes long-term freezing temperatures (-10 degrees C to -12 degrees
+    C) where unfrozen intracellular and brine-film water selects for psychroactive bacteria such as
+    Psychrobacter arcticus with cold-adapted membrane composition, cold-shock proteins, and flexible
+    proteomes, while warming-induced permafrost thaw unlocks sequestered organic carbon under anaerobic
+    conditions, shifting communities toward fermentative Firmicutes/Bacteroidota, competing iron/sulfate
+    reducers, and mcrA-encoding hydrogenotrophic Methanocellales and acetoclastic Methanosarcina.
+  nodes:
+  - node_id: permafrost
+    label: permafrost
+    node_type: HABITAT
+    grounding: ENVO:00000134
+    description: Perennially cryotic soil and sediment underlain by vast sequestered organic carbon stocks
+      subject to subzero freezing regimes and seasonal or climate-driven thaw.
+  - node_id: subzero_freezing_regime_and_thaw_carbon_release
+    label: subzero freezing regime and thaw-induced anaerobic carbon mobilization
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Long-term subzero permafrost temperatures (-10 degrees C to -12 degrees C) with liquid
+      intracellular/film water that upon warming thaw expose sequestered soil carbon under wet anaerobic
+      conditions.
+  - node_id: psychroactive_psychrobacter_cryoadaptation_guild
+    label: psychroactive Psychrobacter cryoadapted bacterial guild
+    node_type: TAXON
+    description: Psychrobacter arcticus and related cold-adapted permafrost bacteria employing membrane
+      lipid remodeling, cold-shock proteins, acetate metabolism, and reduced proline/arginine/acidic residue
+      proteomes for subzero growth.
+  - node_id: anaerobic_fermentative_and_iron_sulfate_reducing_guild
+    label: post-thaw fermentative Firmicutes/Bacteroidota and iron/sulfate-reducing guild
+    node_type: COMMUNITY
+    description: Anaerobic post-thaw bacterial consortium dominated by fermentative Firmicutes and Bacteroidota
+      alongside iron- and sulfate-reducing bacteria that compete for substrates in thawed permafrost.
+  - node_id: permafrost_mcrA_methanogenesis
+    label: mcrA-mediated hydrogenotrophic and acetoclastic methanogenesis
+    node_type: COMMUNITY_PROCESS
+    description: Methane production regulated by hydrogenotrophic Methanocellales and facultative acetoclastic
+      Methanosarcina in thawing permafrost and active-layer deposits.
+  edges:
+  - edge_id: permafrost_maintains_subzero_freezing_regime_and_thaw_carbon_release
+    subject: permafrost
+    predicate: maintains
+    object: subzero_freezing_regime_and_thaw_carbon_release
+    description: Ayala-del-Rio et al. 2010 (PMID:20154119) and Mackelprang et al. 2015 (PMID:25739499)
+      establish that permafrost maintains long-term subzero freezing temperatures (-10 degrees C to -12
+      degrees C) and vast carbon stores that become exposed to anaerobic microbial decomposition upon
+      thaw.
+    evidence:
+    - reference: PMID:20154119
+      snippet: Amino acid adaptations and the gene content likely evolved in response to the long-term
+        freezing temperatures (-10 degrees C to -12 degrees C) of the Kolyma (Siberia) permafrost soil
+        from which this strain was isolated. Intracellular water likely does not freeze at these in situ
+        temperatures, which allows P. arcticus to live at subzero temperatures.
+      notes: Ayala-del-Rio et al. 2010 (Appl Environ Microbiol, PMID:20154119) document the -10 degrees
+        C to -12 degrees C freezing regime of Siberian permafrost and subzero survival in unfrozen water.
+    - reference: PMID:25739499
+      snippet: Over 20% of Earth's terrestrial surface is underlain by permafrost with vast stores of
+        carbon that, once thawed, may represent the largest future transfer of carbon from the biosphere
+        to the atmosphere.
+      notes: Hultman et al. 2015 (Nature, PMID:25739499) describe the vast permafrost carbon stores mobilized
+        by thaw.
+  - edge_id: subzero_freezing_regime_selects_for_psychroactive_psychrobacter_cryoadaptation_guild
+    subject: subzero_freezing_regime_and_thaw_carbon_release
+    predicate: selects for
+    object: psychroactive_psychrobacter_cryoadaptation_guild
+    description: Subzero permafrost conditions select for Psychrobacter arcticus 273-4 with membrane composition
+      changes, cold-shock proteins, acetate utilization, and increased proteome flexibility.
+    evidence:
+    - reference: PMID:20154119
+      snippet: Analysis of the 2.65-Mb genome suggested that some of the strategies employed by P. arcticus
+        273-4 for survival under cold and stress conditions are changes in membrane composition, synthesis
+        of cold shock proteins, and the use of acetate as an energy source. Comparative genome analysis
+        indicated that in a significant portion of the P. arcticus proteome there is reduced use of the
+        acidic amino acids and proline and arginine, which is consistent with increased protein flexibility
+        at low temperatures.
+      notes: Ayala-del-Rio et al. 2010 (PMID:20154119) detail the genomic and proteomic cryoadaptations
+        of Psychrobacter arcticus 273-4 in permafrost.
+  - edge_id: subzero_freezing_regime_and_thaw_drives_anaerobic_fermentative_and_iron_sulfate_reducing_guild
+    subject: subzero_freezing_regime_and_thaw_carbon_release
+    predicate: drives
+    object: anaerobic_fermentative_and_iron_sulfate_reducing_guild
+    description: Anaerobic permafrost thaw shifts microbial community structure from Actinobacteria and
+      Proteobacteria toward fermentative Firmicutes and Bacteroidota and iron/sulfate-reducing bacteria.
+    evidence:
+    - reference: PMID:38860762
+      snippet: Following the thawing of permafrost, there was a notable shift in microbial community structure,
+        with fermentative Firmicutes and Bacteroidota taking over from Actinobacteria and Proteobacteria
+        over the 60-day incubation period. The increase in iron and sulfate-reducing microbes had a significant
+        role in limiting methane production from thawed permafrost, underscoring the competition within
+        microbial communities.
+      notes: Genomic analysis of thawing Arctic permafrost (PMID:38860762) shows post-thaw takeover by
+        fermentative Firmicutes/Bacteroidota and competing iron/sulfate reducers.
+  - edge_id: anaerobic_fermentative_and_iron_sulfate_reducing_guild_modulates_permafrost_mcrA_methanogenesis
+    subject: anaerobic_fermentative_and_iron_sulfate_reducing_guild
+    predicate: drives
+    object: permafrost_mcrA_methanogenesis
+    description: Post-thaw carbon degradation and mcrA gene enrichment drive methanogenesis mediated by
+      hydrogenotrophic Methanocellales and facultative acetoclastic Methanosarcina.
+    evidence:
+    - reference: PMID:34310124
+      snippet: Marker OTUs differed between the two soil layers with hydrogenotrophic Methanocellales
+        and facultative acetoclastic Methanosarcina predominant in regulating CH4 production potential
+        in the permafrost and active layer, respectively.
+      notes: Tibetan Plateau permafrost transect analysis (PMID:34310124) identifies hydrogenotrophic
+        Methanocellales and acetoclastic Methanosarcina as key regulators of CH4 production potential.
+    - reference: PMID:37766397
+      snippet: The high-throughput qPCR results showed that the abundance of functional genes involved
+        in liable carbon degradation and methanogenesis increased with permafrost thawing. Notably, the
+        significantly increased mcrA gene abundance and the higher methanogens to methanotrophs ratio
+        implied enhanced methanogenic activities during permafrost thawing.
+      notes: Warming-induced permafrost thaw increases labile carbon degradation genes and mcrA methanogenic
+        potential (PMID:37766397).
+curation_history:
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added permafrost_subzero_cryoadaptation_and_thaw_methanogenesis mechanism graph for permafrost
+    (ENVO:00000134) backed by PMID:20154119, PMID:25739499, PMID:38860762, PMID:34310124, PMID:37766397.
+  llm_assisted: true

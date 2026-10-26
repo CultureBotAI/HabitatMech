@@ -1,0 +1,97 @@
+identifier: ENVO:00002018
+causal_graphs:
+- graph_id: sewage_conveyance_selection_and_antibiotic_resistance_reservoir
+  title: Urban sewage pipe conveyance selection, Arcobacter-Acinetobacter dominance, and beta-lactamase reservoir mechanism
+  description: Untreated municipal sewage conveyed through urban sewer pipe infrastructure imposes strong
+    selective and temperature-stratified conditions distinct from human fecal inputs, selecting for coherent
+    pipe-resident bacterial assemblages dominated by Arcobacter (~11%), Acinetobacter (~10%), Aeromonas,
+    and Trichococcus (whereas human fecal bacteria comprise only ~13%) that mediate in-pipe waste biotransformation
+    and harbor clinically important beta-lactamase antibiotic resistance genes (blaCTX-M, blaOXA, and
+    blaTEM).
+  nodes:
+  - node_id: sewage
+    label: sewage
+    node_type: HABITAT
+    grounding: ENVO:00002018
+    description: Untreated municipal wastewater contaminated with human excreta conveyed through subterranean
+      urban sewer pipe infrastructure.
+  - node_id: sewer_pipe_conveyance_and_thermal_ecotype_filtering
+    label: urban sewer pipe conveyance environment and thermal ecotype filtering
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Selective physicochemical and temperature regime inside municipal wastewater conveyance
+      pipes that differentiates warm and cold ecotypes across urban networks.
+  - node_id: pipe_resident_arcobacter_acinetobacter_trichococcus_guild
+    label: pipe-resident Arcobacter, Acinetobacter, Aeromonas, and Trichococcus guild
+    node_type: COMMUNITY
+    description: Dominant sewer-pipe resident bacterial assemblage led by Arcobacter (~11%), Acinetobacter
+      (~10%), Aeromonas, and Trichococcus that outnumbers human fecal bacteria (~13%) in untreated sewage.
+  - node_id: in_pipe_waste_biotransformation_and_beta_lactamase_propagation
+    label: in-conveyance waste biotransformation and blaCTX-M/blaOXA/blaTEM resistance reservoir
+    node_type: COMMUNITY_PROCESS
+    description: Biotransformation of organic waste during sewer conveyance coupled with carriage and
+      propagation of clinically important beta-lactamase genes (blaCTX-M, blaOXA, blaTEM).
+  edges:
+  - edge_id: sewage_maintains_sewer_pipe_conveyance_and_thermal_ecotype_filtering
+    subject: sewage
+    predicate: maintains
+    object: sewer_pipe_conveyance_and_thermal_ecotype_filtering
+    description: Roguet et al. 2022 (PMID:35762794) demonstrate that urban sewer pipe infrastructure
+      acts as a highly selective habitat where wastewater temperature stratifies warm and cold bacterial
+      ecotypes across cities.
+    evidence:
+    - reference: PMID:35762794
+      snippet: Within the overall microbial community structure, temperature had a discernible impact
+        on the distribution patterns of closely related amplicon sequence variants, resulting in warm
+        and cold ecotypes.
+      notes: Across 71 U.S. cities (mSystems, PMID:35762794), sewage temperature partitions closely related
+        amplicon sequence variants into warm and cold ecotypes.
+    - reference: PMID:35762794
+      snippet: The striking coherence of the sewer microbiome across the United States demonstrates that
+        the sewer environment is highly selective for a particular microbial community composition.
+      notes: Roguet et al. 2022 (PMID:35762794) establish that urban sewer infrastructure exerts strong,
+        geographically coherent environmental selection.
+  - edge_id: sewer_pipe_conveyance_and_thermal_ecotype_filtering_selects_for_pipe_resident_arcobacter_acinetobacter_trichococcus_guild
+    subject: sewer_pipe_conveyance_and_thermal_ecotype_filtering
+    predicate: selects for
+    object: pipe_resident_arcobacter_acinetobacter_trichococcus_guild
+    description: Sewer pipe conveyance selects for dominant resident populations of Arcobacter, Acinetobacter,
+      Aeromonas, and Trichococcus that far exceed the non-resident human fecal fraction.
+    evidence:
+    - reference: PMID:35762794
+      snippet: Two bacterial genera were dominant in most cities regardless of their size or geographic
+        location; on average, Arcobacter accounted for 11% and Acinetobacter 10% of the entire community.
+      notes: Roguet et al. 2022 (PMID:35762794) quantify Arcobacter (11%) and Acinetobacter (10%) as
+        the dominant resident genera across 71 U.S. municipal sewage systems.
+    - reference: PMID:30682717
+      snippet: Arcobacter, Acinetobacter, Aeromonas, and Trichococcus are among the organisms that dominate
+        the microbial community of sewage influent, but are not major members of human fecal microbiome,
+        drinking water, or groundwater.
+      notes: McLellan & Roguet 2019 (Curr Opin Biotechnol, PMID:30682717) identify Arcobacter, Acinetobacter,
+        Aeromonas, and Trichococcus as signature pipe-resident sewage bacteria distinct from human feces.
+  - edge_id: pipe_resident_arcobacter_acinetobacter_trichococcus_guild_drives_in_pipe_waste_biotransformation_and_beta_lactamase_propagation
+    subject: pipe_resident_arcobacter_acinetobacter_trichococcus_guild
+    predicate: drives
+    object: in_pipe_waste_biotransformation_and_beta_lactamase_propagation
+    description: High-biomass pipe-resident sewage bacteria mediate waste biotransformation during conveyance
+      and carry clinically important beta-lactamase genes blaCTX-M, blaOXA, and blaTEM.
+    evidence:
+    - reference: PMID:35762794
+      snippet: Metagenomic analysis of six cities revealed these highly abundant resident organisms carry
+        clinically important antibiotic resistant genes blaCTX-M, blaOXA, and blaTEM. In contrast, human
+        fecal bacteria account for only ~13% of the community; therefore, antibiotic resistance gene inputs
+        from human sources to the sewer system could be comparatively small, which will impact measurement
+        capabilities when monitoring human populations using wastewater.
+      notes: Roguet et al. 2022 (PMID:35762794) show that resident Arcobacter and Acinetobacter populations
+        in sewage carry blaCTX-M, blaOXA, and blaTEM resistance genes.
+    - reference: PMID:30682717
+      snippet: Because of their high biomass, these organisms likely have a role in biotransformation
+        of waste during conveyance and could represent an important inoculum for treatment plants.
+      notes: McLellan & Roguet 2019 (PMID:30682717) describe in-pipe waste biotransformation and treatment-plant
+        inoculation by pipe-resident sewage bacteria.
+curation_history:
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sewage_conveyance_selection_and_antibiotic_resistance_reservoir mechanism graph for
+    sewage (ENVO:00002018) backed by PMID:35762794, PMID:30682717.
+  llm_assisted: true

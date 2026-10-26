@@ -1,0 +1,91 @@
+identifier: BTO:0000537
+causal_graphs:
+- graph_id: nectar_osmotic_climatic_selection_and_pollinator_attractiveness
+  title: Floral nectar osmotic-climatic filtering, Acinetobacter-Rosenbergiella assembly, and pollinator cue modulation mechanism
+  description: Floral nectar secreted by plant nectaries presents a carbohydrate-rich, osmotically and
+    chaotropically selective microenvironment shaped by local temperature, elevation, rainfall, and vegetation
+    density, selecting for specialized nectar-inhabiting bacteria (dominated by Proteobacteria genera
+    Acinetobacter and Rosenbergiella alongside Firmicutes and Actinobacteria) and yeasts (Metschnikowia
+    spp.) that modify nectar chemistry, volatiles, nutritional content, and pollinator attractiveness.
+  nodes:
+  - node_id: nectar
+    label: nectar
+    node_type: HABITAT
+    grounding: BTO:0000537
+    description: Sugar-rich liquid secreted by plant floral nectaries that serves as an open, dynamic
+      anthosphere microbial habitat and pollinator reward.
+  - node_id: high_sugar_osmotic_and_climatic_nectar_regime
+    label: high-carbohydrate osmotic stress and local climatic regime
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Excess carbohydrate concentration creating osmotic and chaotropic stress in floral nectar,
+      modulated by local temperature, elevation, rainfall, and surrounding vegetation density.
+  - node_id: nectar_acinetobacter_rosenbergiella_and_metschnikowia_guild
+    label: Acinetobacter, Rosenbergiella, and Metschnikowia floral nectar microbial guild
+    node_type: COMMUNITY
+    description: Specialized floral nectar microbiota dominated by Proteobacteria (Acinetobacter and
+      Rosenbergiella), Firmicutes, Actinobacteria, and Metschnikowia yeasts.
+  - node_id: nectar_chemistry_volatile_and_pollinator_modulation
+    label: microbial modification of nectar chemistry, volatiles, and pollinator attractiveness
+    node_type: COMMUNITY_PROCESS
+    description: Metabolic alteration of floral nectar sugar/nutrient composition and volatile organic
+      compound profiles that modulates attractiveness to animal pollinators.
+  edges:
+  - edge_id: nectar_maintains_high_sugar_osmotic_and_climatic_nectar_regime
+    subject: nectar
+    predicate: maintains
+    object: high_sugar_osmotic_and_climatic_nectar_regime
+    description: Lievens et al. 2015 (PMID:25041632) and Aizenberg-Gershtein et al. 2021 (PMID:33370885)
+      show that floral nectar imposes high-sugar osmotic/chaotropic constraints and temperature, elevation,
+      rainfall, and vegetation-density filtering.
+    evidence:
+    - reference: PMID:25041632
+      snippet: Depending on the type of sugar, prevailing water activity and other substances present,
+        sugar-rich environments can be highly dynamic or relatively stable, osmotically stressful, and/or
+        destabilizing for macromolecular systems, and can thereby strongly impact the microbial ecology.
+      notes: Lievens et al. 2015 (FEMS Microbiol Rev, PMID:25041632) describe the osmotic and macromolecular
+        constraints of high-sugar floral nectar habitats.
+    - reference: PMID:33370885
+      snippet: Temperature, site-elevation, rainfall, and density of vegetation were found to have significant
+        effects on the structure and diversity of these bacterial communities in the nectar. Vegetation
+        density was positively correlated with microbial diversity, while increased temperatures and
+        elevation reduced the diversity and evenness of bacterial communities.
+      notes: Global Nicotiana glauca nectar microbiome survey (PMID:33370885) demonstrates abiotic filtering
+        by temperature, elevation, rainfall, and vegetation density.
+  - edge_id: high_sugar_osmotic_and_climatic_nectar_regime_selects_for_nectar_acinetobacter_rosenbergiella_and_metschnikowia_guild
+    subject: high_sugar_osmotic_and_climatic_nectar_regime
+    predicate: selects for
+    object: nectar_acinetobacter_rosenbergiella_and_metschnikowia_guild
+    description: High-sugar floral nectar and regional abiotic conditions select for Acinetobacter, Rosenbergiella,
+      and Metschnikowia spp. as dominant nectar inhabitants.
+    evidence:
+    - reference: PMID:33370885
+      snippet: Most abundant in the nectar were the Proteobacteria, Firmicutes, and Actinobacteria phyla,
+        with Acinetobacter and Rosenbergiella (Proteobacteria) being the dominant bacterial genera that
+        contributed most to the dissimilarities between sites.
+      notes: Global floral nectar 16S rRNA survey (PMID:33370885) identifies Proteobacteria (Acinetobacter
+        and Rosenbergiella), Firmicutes, and Actinobacteria as the dominant nectar bacterial taxa.
+    - reference: PMID:25041632
+      snippet: Nectar is a paradigm of an open, dynamic and biodiverse habitat populated by many microbial
+        taxa, often yeasts and bacteria such as, amongst many others, Metschnikowia spp. and Acinetobacter
+        spp., respectively.
+      notes: Lievens et al. 2015 (PMID:25041632) highlight Metschnikowia spp. and Acinetobacter spp.
+        as signature microbial inhabitants of floral nectar.
+  - edge_id: nectar_acinetobacter_rosenbergiella_and_metschnikowia_guild_drives_nectar_chemistry_volatile_and_pollinator_modulation
+    subject: nectar_acinetobacter_rosenbergiella_and_metschnikowia_guild
+    predicate: drives
+    object: nectar_chemistry_volatile_and_pollinator_modulation
+    description: Floral nectar microbial communities alter nectar chemistry, volatiles, nutritional contents,
+      and attractiveness for pollinators.
+    evidence:
+    - reference: PMID:33370885
+      snippet: Floral nectar harbors microbial communities which have significant impacts on its chemistry,
+        volatiles, nutritional contents, and attractiveness for pollinators.
+      notes: Nectar-inhabiting microbial communities directly modulate floral nectar chemistry, volatile
+        emissions, nutrition, and pollinator attraction (PMID:33370885).
+curation_history:
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added nectar_osmotic_climatic_selection_and_pollinator_attractiveness mechanism graph for
+    nectar (BTO:0000537) backed by PMID:25041632, PMID:33370885.
+  llm_assisted: true

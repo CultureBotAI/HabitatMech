@@ -135,6 +135,110 @@ characteristic_taxa:
   score: 3.0
   rank: 12
   candidate_pool: 12
+causal_graphs:
+- graph_id: black_smoker_hydrothermal_chemolithoautotrophy_and_archaeoglobus_sulfate_reduction
+  title: Deep-sea black smoker hydrothermal vent chemolithoautotrophy and hyperthermophilic
+    sulfate reduction mechanism
+  description: Deep-sea black smoker hydrothermal vents discharge superheated volcanic
+    fluids rich in reduced hydrogen (H2), sulfide, sulfite/thiosulfate, and dissolved
+    minerals that mix with cold ambient seawater across steep spatial and chemical
+    gradients, selecting for focused-vent chemosynthetic Epsilonproteobacteria (Sulfurimonas,
+    Caminibacter, Arcobacter) and Gammaproteobacteria (SUP05) in the vent effluent
+    and plume while supporting hyperthermophilic Archaeoglobus archaea (50-85 degrees
+    C) that couple H2 oxidation to sulfate/sulfite/thiosulfate reduction and CO2 fixation
+    via the reductive acetyl-CoA pathway.
+  nodes:
+  - node_id: black_smoker
+    label: black smoker
+    node_type: HABITAT
+    grounding: ENVO:00000218
+    description: Deep-sea hydrothermal vent chimney and plume system formed where
+      superheated sulfide- and mineral-rich crustal fluid discharges into cold ocean
+      water.
+  - node_id: hydrothermal_h2_sulfur_and_thermal_mixing_gradient
+    label: volcanic H2, sulfide/sulfite/thiosulfate, and hydrothermal plume mixing
+      gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Volcanic hydrothermal fluid supply of reduced electron donors (H2,
+      S, sulfide) and oxidized sulfur acceptors (sulfate, sulfite, thiosulfate) across
+      steep thermal (50-110 degrees C to seawater) and chemical plume gradients.
+  - node_id: vent_chemosynthetic_epsilon_and_gammaproteobacteria_guild
+    label: Sulfurimonas, Caminibacter, Arcobacter, and SUP05 chemosynthetic vent guild
+    node_type: COMMUNITY
+    description: Vent-specific putative chemosynthetic Epsilonproteobacteria (Sulfurimonas,
+      Caminibacter, Arcobacter) and Gammaproteobacteria (SUP05) enriched at focused
+      hydrothermal venting orifices and plumes.
+  - node_id: hyperthermophilic_archaeoglobus_sulfate_reducing_guild
+    label: hyperthermophilic Archaeoglobus lithoautotrophic sulfate-reducing guild
+    node_type: TAXON
+    description: Hyperthermophilic Archaeoglobus archaea (growing at 50-85 degrees
+      C) that oxidize H2 or organic substrates coupled to sulfate, sulfite, or thiosulfate
+      reduction and fix CO2 via the reductive acetyl-CoA pathway.
+  edges:
+  - edge_id: black_smoker_supplies_hydrothermal_h2_sulfur_and_thermal_mixing_gradient
+    subject: black_smoker
+    predicate: supplies
+    object: hydrothermal_h2_sulfur_and_thermal_mixing_gradient
+    description: Schonheit & Schafer 1995 (PMID:24414410) and Djurhuus et al. 2017
+      (PMID:28484604) establish that volcanic hydrothermal vents supply H2, sulfur
+      species, and steep spatial/chemical mixing gradients from the vent orifice to
+      surrounding seawater.
+    evidence:
+    - reference: PMID:24414410
+      snippet: Lithotrophic energy metabolism is mostly anaerobic or microaerophilic
+        and based on the oxidation of H2 or S coupled to the reduction of S, SO inf4
+        (sup2-) , CO2 and NO inf3 (sup-) but rarely to O2. the substrates are derived
+        from volcanic activities in hyperthermophilic habitats.
+      notes: Schonheit & Schafer 1995 (World J Microbiol Biotechnol, PMID:24414410)
+        describe volcanic H2 and sulfur redox substrates supporting lithotrophic hyperthermophiles.
+    - reference: PMID:28484604
+      snippet: This study investigates the community composition of black smoker vent
+        microorganisms in the Southern Hemisphere, and changes thereof along a spatial
+        and chemical gradient ranging from the vent plume to surrounding waters.
+      notes: Djurhuus et al. 2017 (R Soc Open Sci, PMID:28484604) characterize the
+        spatial and chemical gradient from black smoker vent orifices into hydrothermal
+        plumes.
+  - edge_id: hydrothermal_h2_sulfur_and_thermal_mixing_gradient_selects_for_vent_chemosynthetic_epsilon_and_gammaproteobacteria_guild
+    subject: hydrothermal_h2_sulfur_and_thermal_mixing_gradient
+    predicate: selects for
+    object: vent_chemosynthetic_epsilon_and_gammaproteobacteria_guild
+    description: Focused black smoker hydrothermal venting selects for niche-specific
+      chemosynthetic Epsilonproteobacteria (Arcobacter, Caminibacter, Sulfurimonas)
+      and Gammaproteobacteria SUP05.
+    evidence:
+    - reference: PMID:28484604
+      snippet: A substantial amount of vent-specific putative chemosynthetic microorganisms
+        were found, particularly in samples from focused hydrothermal venting. Common
+        vent-specific organisms from both vent fields were the genera Arcobacter,
+        Caminibacter and Sulfurimonas from the Epsilonproteobacteria and the SUP05
+        group from the Gammaproteobacteria.
+      notes: Djurhuus et al. 2017 (PMID:28484604) identify Arcobacter, Caminibacter,
+        Sulfurimonas, and SUP05 as the core chemosynthetic taxa selected by focused
+        black smoker venting.
+  - edge_id: hydrothermal_h2_sulfur_and_thermal_mixing_gradient_selects_for_hyperthermophilic_archaeoglobus_sulfate_reducing_guild
+    subject: hydrothermal_h2_sulfur_and_thermal_mixing_gradient
+    predicate: selects for
+    object: hyperthermophilic_archaeoglobus_sulfate_reducing_guild
+    description: High-temperature hydrothermal vent fluids (50-85 degrees C) with
+      H2, sulfate, sulfite, and thiosulfate select for hyperthermophilic Archaeoglobus
+      archaea encoding sulfate reduction and the reductive acetyl-CoA CO2 fixation
+      pathway.
+    evidence:
+    - reference: PMID:34335500
+      snippet: Strain SE56T grows lithoautotrophically with H2 as an electron donor,
+        sulfite or thiosulfate as an electron acceptor, and CO2/HCO3 - as a carbon
+        source. It is also capable of chemoorganotrophic growth by reduction of sulfate,
+        sulfite, or thiosulfate.
+      notes: Slobodkina et al. 2021 (Front Microbiol, PMID:34335500) characterize
+        lithoautotrophic H2-oxidizing and chemoorganotrophic sulfate/sulfite/thiosulfate-reducing
+        metabolism of deep-sea hydrothermal vent Archaeoglobus.
+    - reference: PMID:34335500
+      snippet: Genome contains a complete set of genes involved in CO2 fixation via
+        reductive acetyl-CoA pathway, gluconeogenesis, hydrogen and fatty acids oxidation,
+        sulfate reduction, and flagellar motility.
+      notes: Slobodkina et al. 2021 (PMID:34335500) confirm the genomic repertoire
+        for reductive acetyl-CoA CO2 fixation, hydrogen oxidation, and sulfate reduction
+        in hydrothermal vent Archaeoglobus.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -156,3 +260,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added black_smoker_hydrothermal_chemolithoautotrophy_and_archaeoglobus_sulfate_reduction
+    mechanism graph for black smoker (ENVO:00000218) backed by PMID:24414410, PMID:28484604,
+    PMID:34335500.
+  llm_assisted: true
