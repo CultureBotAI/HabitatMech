@@ -173,6 +173,118 @@ characteristic_taxa:
   score: 1.64995
   rank: 25
   candidate_pool: 161
+causal_graphs:
+- graph_id: pitcher_phytotelm_prey_digestion_and_diazotrophic_nutrient_supply
+  title: Carnivorous pitcher leaf phytotelma prey digestion, diazotrophy, and host
+    nutrient provisioning mechanism
+  description: Cup-shaped carnivorous pitcher leaves (Sarracenia, Nepenthes, and Cephalotus)
+    form self-contained aquatic phytotelmata collecting rainwater and captured insect
+    prey whose fluid acidity and host phenotype select for convergent bacterial and
+    eukaryotic communities that express hydrolytic enzymes and nifH-encoded nitrogenase
+    to degrade arthropod detritus and fix atmospheric nitrogen, releasing assimilable
+    nitrogen, phosphorus, and micronutrients for the host plant.
+  nodes:
+  - node_id: pitcher
+    label: pitcher
+    node_type: HABITAT
+    grounding: BTO:0001069
+    description: Modified cup-shaped carnivorous plant leaf receptacle containing
+      digestive phytotelm fluid and trapped arthropod prey detritus.
+  - node_id: phytotelm_prey_detritus_and_acidic_fluid_regime
+    label: captured insect prey detritus, fluid acidity, and host-phenotype selection
+      regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Confined phytotelm microenvironment defined by captured arthropod
+      prey biomass, digestive fluid acidity and color, and host pitcher-plant species
+      phenotype.
+  - node_id: pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome
+    label: convergent phytotelm hydrolytic and nifH-encoding diazotrophic bacteriome
+    node_type: COMMUNITY
+    description: Pitcher-associated bacterial consortium converged across pitcher
+      plant lineages that contributes hydrolytic enzyme activity for prey digestion
+      and carries nifH nitrogenase genes for diazotrophy.
+  - node_id: host_assimilable_nitrogen_phosphorus_and_micronutrient_pool
+    label: mineralized nitrogen, phosphorus, and micronutrient pool for the host plant
+    node_type: CHEMICAL
+    description: Biologically available nitrogen, phosphorus, and micronutrients released
+      by microbial prey degradation and nitrogen fixation within the pitcher fluid.
+  edges:
+  - edge_id: pitcher_maintains_phytotelm_prey_detritus_and_acidic_fluid_regime
+    subject: pitcher
+    predicate: maintains
+    object: phytotelm_prey_detritus_and_acidic_fluid_regime
+    description: Pitcher leaves maintain a confined aquatic phytotelma with captured
+      insect prey, variable fluid acidity, and host-species-specific selective conditions.
+    evidence:
+    - reference: PMID:35734258
+      snippet: For turnover in composition, the variation in both bacterial and eukaryotic
+        communities primarily differed with fluid acidity, fluid color, and sampling
+        site. We compared C. follicularis-associated community diversity with that
+        of Australian Nepenthes mirabilis, as well as a global comparison of Southeast
+        Asian Nepenthes and North American Sarracenia.
+      notes: Global comparison of Cephalotus, Nepenthes, and Sarracenia pitchers (PMID:35734258)
+        shows that fluid acidity and color govern community turnover across pitcher
+        phytotelmata.
+    - reference: PMID:35384233
+      snippet: Overall, in Sarracenia pitchers, host plant phenotype significantly
+        affects the pitcher microbiomes and other associated organisms.
+      notes: Sarracenia metabarcoding across co-occurring species and hybrids (PMID:35384233)
+        demonstrates strong host-phenotype selection on pitcher microbiomes.
+  - edge_id: phytotelm_prey_detritus_and_acidic_fluid_regime_selects_for_pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome
+    subject: phytotelm_prey_detritus_and_acidic_fluid_regime
+    predicate: selects for
+    object: pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome
+    description: Specialized pitcher phytotelmata select for convergent bacterial
+      clades with prey-digesting metabolic activity and ubiquitous nifH nitrogenase
+      genes.
+    evidence:
+    - reference: PMID:35734258
+      snippet: Overall, we saw convergence in richness and particular clades colonizing
+        pitcher plants around the world, suggesting that these highly specialized
+        habitats select for certain numbers and types of inhabitants.
+      notes: Independently evolved pitcher plant lineages (Cephalotus, Nepenthes,
+        Sarracenia) select for convergent bacterial clades (PMID:35734258).
+    - reference: PMID:38995889
+      snippet: Metagenomic studies have shown a diverse microbiome in this phytotelm
+        environment, including taxa that contribute metabolically to prey digestion.
+        In this investigation, we used high-throughput 16S rDNA sequencing and bioinformatics
+        to analyze the S. purpurea phytotelm bacteriome as it changes through the
+        growing season (May-September) in plants from the north-central region of
+        the species' native range. Additionally, we used molecular techniques to detect
+        and quantify bacterial nitrogenase genes (nifH) in all phytotelm samples to
+        explore the hypothesis that diazotrophy is an additional mechanism of supplying
+        biologically available nitrogen to S. purpurea.
+      notes: Sarracenia purpurea phytotelm bacteriome profiling (PMID:38995889) documents
+        both prey-digesting taxa and 100% prevalence of bacterial nifH nitrogenase
+        genes.
+  - edge_id: pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome_produces_host_assimilable_nitrogen_phosphorus_and_micronutrient_pool
+    subject: pitcher_hydrolytic_and_nifH_diazotrophic_bacteriome
+    predicate: produces
+    object: host_assimilable_nitrogen_phosphorus_and_micronutrient_pool
+    description: Microbial prey digestion and nifH-mediated nitrogen fixation in the
+      pitcher fluid release nitrogen, phosphorus, and micronutrients that support
+      the food web and host plant.
+    evidence:
+    - reference: PMID:38995889
+      snippet: Insect capture and degradation within the pitcher fluid (phytotelma)
+        has been well documented as a mechanism for supplementing the plant's nitrogen,
+        phosphorous, and micronutrient requirements.
+      notes: Prey degradation in the pitcher phytotelma supplies nitrogen, phosphorus,
+        and micronutrients to the host plant (PMID:38995889).
+    - reference: PMID:38995889
+      snippet: Furthermore, nifH genes were detected at biologically significant concentrations
+        in one hundred percent of samples, suggesting that nitrogen fixation may be
+        an important contributor to the S. purpurea nutrient budget.
+      notes: Ubiquitous nifH gene detection indicates diazotrophic nitrogen provisioning
+        to the pitcher plant nutrient budget (PMID:38995889).
+    - reference: PMID:38441172
+      snippet: The carnivorous pitcher plant, Sarracenia purpurea, offers a tractable
+        study system where diverse food webs of macroinvertebrates and microbes facilitate
+        digestion of captured insect prey, releasing nutrients supporting the food
+        web and host plant.
+      notes: Field manipulation of Sarracenia purpurea pitchers (PMID:38441172) confirms
+        microbial and food-web digestion of insect prey to release host-supporting
+        nutrients.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -197,3 +309,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added pitcher_phytotelm_prey_digestion_and_diazotrophic_nutrient_supply
+    mechanism graph for pitcher (BTO:0001069) backed by PMID:35734258, PMID:35384233,
+    PMID:38995889, PMID:38441172.
+  llm_assisted: true

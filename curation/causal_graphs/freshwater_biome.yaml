@@ -1,0 +1,107 @@
+identifier: ENVO:00000873
+causal_graphs:
+- graph_id: freshwater_biome_dom_photolysis_and_ph_bacterioplankton_sorting
+  title: Freshwater biome epilimnetic pH, dissolved organic matter photolysis, and bacterioplankton niche partitioning mechanism
+  description: Epilimnetic surface waters across freshwater lakes and rivers span a broad pH gradient
+    (pH 3.8-8.5) with humic and algal-derived dissolved organic matter (DOM) whose solar photolysis generates
+    singlet oxygen (1O2), selecting for singlet-oxygen-tolerant Betaproteobacteria (Polynucleobacter necessarius,
+    Polynucleobacter acidiphobus/difficilis, and Limnohabitans R-BT065 lineage) and Alphaproteobacteria
+    (Novosphingobium acidiphilum) while inhibiting singlet-oxygen-sensitive ultramicroscopic freshwater
+    Actinobacteria (acI-B / Candidatus Nanopelagicales).
+  nodes:
+  - node_id: freshwater_biome
+    label: freshwater biome
+    node_type: HABITAT
+    grounding: ENVO:00000873
+    description: Inland aquatic ecosystems including lakes, reservoirs, and river networks characterized
+      by low salinity, epilimnetic pH gradients, and terrestrial humic or autochthonous algal dissolved
+      organic matter.
+  - node_id: epilimnetic_ph_and_dom_singlet_oxygen_regime
+    label: epilimnetic pH gradient (3.8-8.5) and DOM-photolysis singlet oxygen exposure
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Surface-water pH gradient (pH 3.8-8.5), humic versus algal organic substrates, and photochemical
+      generation of reactive singlet oxygen from dissolved organic matter photolysis.
+  - node_id: freshwater_polynucleobacter_limnohabitans_betaproteobacteria_guild
+    label: Polynucleobacter and Limnohabitans freshwater Betaproteobacteria guild
+    node_type: COMMUNITY
+    description: Ubiquitous freshwater planktonic Betaproteobacteria (Polynucleobacter necessarius, Polynucleobacter
+      acidiphobus/difficilis, and Limnohabitans R-BT065 cluster) and Novosphingobium acidiphilum favored
+      under singlet oxygen exposure and stratified across pH and trophic gradients.
+  - node_id: ultramicroscopic_aci_actinobacteria_guild
+    label: ultramicroscopic acI-B / Candidatus Nanopelagicales freshwater Actinobacteria guild
+    node_type: COMMUNITY
+    description: Numerically dominant ultramicroscopic surface-water Actinobacteria (acI-B cluster / Candidatus
+      Nanopelagicales) that are sensitive to moderate singlet oxygen exposure from DOM photolysis.
+  edges:
+  - edge_id: freshwater_biome_maintains_epilimnetic_ph_and_dom_singlet_oxygen_regime
+    subject: freshwater_biome
+    predicate: maintains
+    object: epilimnetic_ph_and_dom_singlet_oxygen_regime
+    description: Glaeser et al. 2010 (PMID:20636377) and Jezberova et al. 2012 (PMID:22452571) show that
+      freshwater epilimnia maintain broad pH/humic-algal substrate gradients and solar photolysis of dissolved
+      organic matter generating singlet oxygen.
+    evidence:
+    - reference: PMID:20636377
+      snippet: Photolysis of dissolved organic matter (DOM) leads to contrasting effects on bacterioplankton
+        dynamics, i.e. stimulation and inhibition of bacterial activity. In particular, the role of short-lived
+        reactive oxygen species (ROS), e.g. singlet oxygen (¹O₂), in altering microbial activity and species
+        composition has scarcely been investigated.
+      notes: Glaeser et al. 2010 (Environ Microbiol, PMID:20636377) establish DOM photolysis and singlet
+        oxygen formation as a natural selective factor in humic freshwater lakes.
+    - reference: PMID:22452571
+      snippet: The distribution and abundance of Betaproteobacteria and three of its genera - Limnohabitans
+        (R-BT065 lineage), Polynucleobacter (including subclusters Polynucleobacter necessarius and Polynucleobacter
+        acidiphobus/Polynucleobacter difficilis), and Methylophilus - across the epilimnia of 72 limnologically
+        diverse freshwater habitats were investigated using fluorescence in situ hybridization.
+      notes: Jezberova et al. 2012 (Microb Ecol, PMID:22452571) survey 72 freshwater habitats spanning
+        pH 3.8-8.5 and humic to alkaline algal-dominated regimes.
+  - edge_id: epilimnetic_ph_and_dom_singlet_oxygen_regime_selects_for_freshwater_polynucleobacter_limnohabitans_betaproteobacteria_guild
+    subject: epilimnetic_ph_and_dom_singlet_oxygen_regime
+    predicate: selects for
+    object: freshwater_polynucleobacter_limnohabitans_betaproteobacteria_guild
+    description: DOM photolysis singlet oxygen exposure and epilimnetic pH/nutrient gradients select for
+      Polynucleobacter necessarius, Limnohabitans (R-BT subcluster), and Novosphingobium acidiphilum.
+    evidence:
+    - reference: PMID:20636377
+      snippet: Bacterioplankton phylotypes favoured under these conditions belonged to Betaproteobacteria
+        of the beta II cluster (e.g. Polynucleobacter necessarius) and the beta I cluster related to Limnohabitans
+        (R-BT subcluster) as well as Alphaproteobacteria affiliated to Novosphingobium acidiphilum.
+      notes: Glaeser et al. 2010 (PMID:20636377) demonstrate that Polynucleobacter necessarius, Limnohabitans,
+        and Novosphingobium acidiphilum are favored under singlet oxygen exposure in humic lake water.
+    - reference: PMID:22452571
+      snippet: Polynucleobacter necessarius and Limnohabitans coexisted in the majority of habitats but
+        showed contrasting abundance patterns along the pH gradient of habitats (pH, 3.8-8.5). The observed
+        distribution patterns could theoretically be explained by different preferences for substrate
+        sources, that is, substances of humic origin in acidic waters and algal-derived substances in
+        alkaline waters.
+      notes: Jezberova et al. 2012 (PMID:22452571) document the coexistence and contrasting pH niche partitioning
+        of Polynucleobacter necessarius and Limnohabitans across 72 freshwater epilimnia.
+  - edge_id: epilimnetic_ph_and_dom_singlet_oxygen_regime_inhibits_ultramicroscopic_aci_actinobacteria_guild
+    subject: epilimnetic_ph_and_dom_singlet_oxygen_regime
+    predicate: inhibits
+    object: ultramicroscopic_aci_actinobacteria_guild
+    description: Even moderate singlet oxygen exposure from DOM photolysis inhibits surface-water freshwater
+      Actinobacteria of the acI-B cluster (Candidatus Nanopelagicales).
+    evidence:
+    - reference: PMID:20636377
+      snippet: In contrast, Actinobacteria of the freshwater acI-B cluster were sensitive even against
+        moderate ¹O₂ exposure. We conclude that ¹O₂ exposure due to DOM photolysis represents an important
+        natural selective factor affecting bacterial species dynamics in aquatic ecosystems in many ways.
+      notes: Glaeser et al. 2010 (PMID:20636377) show that freshwater acI-B Actinobacteria are inhibited
+        by moderate singlet oxygen exposure generated during DOM photolysis.
+    - reference: PMID:33148818
+      snippet: Among the preserved microorganisms were important groups never before reported in paleolimnological
+        reconstructions, including bacteriophages (Caudovirales) and ubiquitous freshwater Betaproteobacteria
+        (Polynucleobacter and Limnohabitans). In contrast, ultramicroscopic Actinobacteria ("Candidatus
+        Nanopelagicales") and Alphaproteobacteria (Pelagibacterales) were apparently not well preserved
+        in sediment metagenomes even though they were numerically dominant in surface water metagenomes.
+      notes: Garner et al. 2020 (mSphere, PMID:33148818) confirm the numerical dominance of Candidatus
+        Nanopelagicales (acI Actinobacteria) alongside ubiquitous Polynucleobacter and Limnohabitans in
+        lake surface waters.
+curation_history:
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added freshwater_biome_dom_photolysis_and_ph_bacterioplankton_sorting mechanism graph for freshwater
+    biome (ENVO:00000873) backed by PMID:20636377, PMID:22452571, PMID:33148818.
+  llm_assisted: true

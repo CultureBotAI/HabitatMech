@@ -162,6 +162,111 @@ characteristic_taxa:
   score: 1.66886
   rank: 25
   candidate_pool: 316
+causal_graphs:
+- graph_id: sea_grass_bed_rhizosphere_rol_sulfide_and_nitrogen_cycling
+  title: Seagrass bed meristem radial oxygen loss, sulfate reduction, and sulfide-oxidizing
+    rhizosphere mechanism
+  description: Marine seagrass beds (Zostera marina, Zostera japonica, Zostera muelleri,
+    and Ruppia sinensis) release dissolved organic carbon and radial O2 loss (ROL)
+    from root and basal leaf meristems to form oxic microzones within anoxic sulfide-rich
+    marine sediments, enriching sulfate-reducing bacteria (Desulfocapsaceae and root-apical-meristem
+    SRB that generate H2S while contributing to nitrogen fixation) and recruiting
+    sulfur-oxidizing bacteria (Sulfurovaceae, Rhodobacteraceae, and Chromatiales)
+    in oxic microniches that mitigate phytotoxic sulfide stress.
+  nodes:
+  - node_id: sea_grass_bed
+    label: sea grass bed
+    node_type: HABITAT
+    grounding: ENVO:01000059
+    description: Marine and coastal benthic meadow colonized by seagrasses (Zosteraceae,
+      Posidoniaceae, Hydrocharitaceae, Cymodoceaceae) rooted in anoxic, sulfide-rich
+      marine sediments.
+  - node_id: seagrass_meristem_rol_and_doc_microgradients
+    label: seagrass meristem radial O2 loss oxic microzones and dissolved organic
+      carbon gradients
+    node_type: CHEMICAL
+    description: Plant-driven gradients of dissolved organic carbon and radial oxygen
+      loss from basal leaf and root meristems forming ~300 micrometer oxic microzones
+      with decreased H2S and pH.
+  - node_id: seagrass_rhizosphere_sulfate_reducing_and_diazotrophic_guild
+    label: Desulfocapsaceae and root-meristem sulfate-reducing and nitrogen-fixing
+      bacterial guild
+    node_type: COMMUNITY
+    description: Sulfate-reducing bacteria (including Desulfocapsaceae) enriched around
+      seagrass root apical meristems and rhizospheres that reduce sulfate to H2S while
+      aiding nitrogen fixation and ammonium production.
+  - node_id: seagrass_oxic_microzone_sulfur_oxidizing_guild
+    label: Sulfurovaceae, Rhodobacteraceae, and Chromatiales sulfur-oxidizing rhizosphere
+      guild
+    node_type: COMMUNITY
+    description: Sulfur-oxidizing bacteria (Sulfurovaceae, Rhodobacteraceae, and Chromatiales)
+      enriched within oxic seagrass rhizosphere microniches and developing roots that
+      oxidize sulfide and mitigate sulfide toxicity.
+  edges:
+  - edge_id: sea_grass_bed_supplies_seagrass_meristem_rol_and_doc_microgradients
+    subject: sea_grass_bed
+    predicate: supplies
+    object: seagrass_meristem_rol_and_doc_microgradients
+    description: Martin et al. 2019 (PMID:29687545) show that seagrass meristematic
+      tissues generate dissolved organic carbon gradients and radial O2 loss that
+      create ~300 micrometer oxic microzones with reduced H2S and pH.
+    evidence:
+    - reference: PMID:29687545
+      snippet: The seagrass rhizosphere harbors dynamic microenvironments, where plant-driven
+        gradients of O2 and dissolved organic carbon form microhabitats that select
+        for distinct microbial communities.
+      notes: Martin et al. 2019 (New Phytol, PMID:29687545) establish that plant-driven
+        O2 and dissolved organic carbon gradients structure the seagrass rhizosphere
+        microenvironment.
+  - edge_id: seagrass_meristem_rol_and_doc_microgradients_selects_for_seagrass_rhizosphere_sulfate_reducing_and_diazotrophic_guild
+    subject: seagrass_meristem_rol_and_doc_microgradients
+    predicate: selects for
+    object: seagrass_rhizosphere_sulfate_reducing_and_diazotrophic_guild
+    description: Seagrass root apical meristems and species-specific rhizospheres
+      enrich sulfate-reducing bacteria (including Desulfocapsaceae) that generate
+      H2S and contribute to nitrogen fixation via ammonium production.
+    evidence:
+    - reference: PMID:29687545
+      snippet: Significantly higher relative abundances of sulphate-reducing bacteria
+        were observed around the meristematic tissues compared to the bulk sediment,
+        especially around the root apical meristems (RAM; ∼ 57% of sequences). Within
+        oxic microniches, elevated abundances of sulphide-oxidizing bacteria were
+        observed compared to the bulk sediment and around the RAM.
+      notes: Martin et al. 2019 (PMID:29687545) document intense enrichment of sulfate-reducing
+        bacteria around seagrass root apical meristems and sulfide-oxidizing bacteria
+        in oxic microniches.
+    - reference: PMID:40508259
+      snippet: Chromatiales, which oxidize sulphur, are hypothesized to support juvenile
+        plant growth by mitigating sulphide toxicity, a key stressor in early development.
+        Additionally, sulfate-reducing bacteria (SRB), though potentially harmful
+        due to H2S production, may also aid in nitrogen fixation by producing ammonium.
+      notes: Functional analysis of the Zostera marina holobiont (PMID:40508259) links
+        rhizosphere SRB to both H2S generation and diazotrophic ammonium supply.
+  - edge_id: seagrass_meristem_rol_and_doc_microgradients_selects_for_seagrass_oxic_microzone_sulfur_oxidizing_guild
+    subject: seagrass_meristem_rol_and_doc_microgradients
+    predicate: selects for
+    object: seagrass_oxic_microzone_sulfur_oxidizing_guild
+    description: Oxic rhizosphere microzones and host seagrass species select for
+      Sulfurovaceae, Rhodobacteraceae, and Chromatiales sulfur-oxidizing guilds that
+      mitigate sulfide toxicity.
+    evidence:
+    - reference: PMID:39503478
+      snippet: We found that Rhodobacteraceae, Desulfocapsaceae, and Sulfurovaceae
+        were enriched in RS, ZJ, and ZM samples, respectively, compared with the other
+        two seagrass species, and the bacterial connections were decreased from RS
+        to ZM and ZJ samples.
+      notes: Comparative metagenomics of Ruppia sinensis, Zostera japonica, and Zostera
+        marina rhizospheres (PMID:39503478) demonstrates host-specific enrichment
+        of Rhodobacteraceae, Desulfocapsaceae, and Sulfurovaceae.
+    - reference: PMID:40508259
+      snippet: Key microbial taxa (sulphur-oxidizing and nitrogen-cycling bacteria)
+        were observed across developmental stages, with rapid establishment in seedlings
+        aiding survival in sulphide-rich, anoxic sediments. Chromatiales, which oxidize
+        sulphur, are hypothesized to support juvenile plant growth by mitigating sulphide
+        toxicity, a key stressor in early development.
+      notes: Zostera marina holobiont profiling (PMID:40508259) highlights rapid establishment
+        of sulfur-oxidizing Chromatiales that mitigate sulfide toxicity in anoxic
+        sediments.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -207,3 +312,10 @@ curation_history:
     Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
     omitted counts and independent genera. Original occurrence membership remains
     unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.
+- timestamp: '2026-10-25T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sea_grass_bed_rhizosphere_rol_sulfide_and_nitrogen_cycling mechanism
+    graph for sea grass bed (ENVO:01000059) backed by PMID:29687545, PMID:40508259,
+    PMID:39503478.
+  llm_assisted: true

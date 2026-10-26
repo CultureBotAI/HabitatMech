@@ -321,4 +321,140 @@ def test_cycle2_stage3_protein_examples_and_source_limited_notes_are_present():
         assert expected_substr in node.get("description", "")
 
 
+def test_cycle3_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
+    expected = {
+        "permafrost": (
+            "ENVO:00000134",
+            "permafrost_subzero_cryoadaptation_and_thaw_methanogenesis",
+            {
+                "PMID:20154119",
+                "PMID:25739499",
+                "PMID:38860762",
+                "PMID:34310124",
+                "PMID:37766397",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "permafrost.yaml",
+        ),
+        "peatland": (
+            "ENVO:00000044",
+            "peatland_acidiphilic_methanogenesis_and_type_ii_methanotrophy",
+            {
+                "PMID:20154331",
+                "PMID:25998264",
+                "PMID:18093158",
+                "PMID:19719661",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "peatland.yaml",
+        ),
+        "paddy_field_soil": (
+            "ENVO:00005740",
+            "paddy_field_soil_rhizosphere_methanogenesis_and_methane_oxidation",
+            {
+                "PMID:14997675",
+                "PMID:38801181",
+                "PMID:41582156",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "paddy_field_soil.yaml",
+        ),
+        "marine_salt_marsh_biome": (
+            "ENVO:01000022",
+            "marine_salt_marsh_spartina_sulfur_cycling_and_diazotrophy",
+            {
+                "PMID:35227326",
+                "PMID:18929068",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "marine_salt_marsh_biome.yaml",
+        ),
+        "freshwater_biome": (
+            "ENVO:00000873",
+            "freshwater_biome_dom_photolysis_and_ph_bacterioplankton_sorting",
+            {
+                "PMID:20636377",
+                "PMID:22452571",
+                "PMID:33148818",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "freshwater_biome.yaml",
+        ),
+        "sea_grass_bed": (
+            "ENVO:01000059",
+            "sea_grass_bed_rhizosphere_rol_sulfide_and_nitrogen_cycling",
+            {
+                "PMID:29687545",
+                "PMID:40508259",
+                "PMID:39503478",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "sea_grass_bed.yaml",
+        ),
+        "black_smoker": (
+            "ENVO:00000218",
+            "black_smoker_hydrothermal_chemolithoautotrophy_and_archaeoglobus_sulfate_reduction",
+            {
+                "PMID:24414410",
+                "PMID:28484604",
+                "PMID:34335500",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "black_smoker.yaml",
+        ),
+        "nectar": (
+            "BTO:0000537",
+            "nectar_osmotic_climatic_selection_and_pollinator_attractiveness",
+            {
+                "PMID:25041632",
+                "PMID:33370885",
+            },
+            REPO_ROOT / "data" / "habitats" / "host_associated" / "nectar.yaml",
+        ),
+        "pitcher": (
+            "BTO:0001069",
+            "pitcher_phytotelm_prey_digestion_and_diazotrophic_nutrient_supply",
+            {
+                "PMID:35734258",
+                "PMID:35384233",
+                "PMID:38995889",
+                "PMID:38441172",
+            },
+            REPO_ROOT / "data" / "habitats" / "host_associated" / "pitcher.yaml",
+        ),
+        "sewage": (
+            "ENVO:00002018",
+            "sewage_conveyance_selection_and_antibiotic_resistance_reservoir",
+            {
+                "PMID:35762794",
+                "PMID:30682717",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "sewage.yaml",
+        ),
+    }
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) == 53
+    for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
+        overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
+        assert overlay_path.exists(), f"{slug}.yaml missing"
+        assert hab_path.exists(), f"{hab_path} missing"
+        doc = yaml.safe_load(overlay_path.read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(hab_path.read_text(encoding="utf-8"))
+        assert doc["identifier"] == expected_id
+        assert hab_doc["identifier"] == expected_id
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        graphs = doc["causal_graphs"]
+        assert len(graphs) == 1
+        graph = graphs[0]
+        assert graph["graph_id"] == expected_graph_id
+        nodes = {n["node_id"]: n for n in graph["nodes"]}
+        assert nodes[slug]["node_type"] == "HABITAT"
+        assert nodes[slug]["grounding"] == expected_id
+        refs = {
+            ev["reference"]
+            for edge in graph["edges"]
+            for ev in edge.get("evidence", [])
+        }
+        assert refs == expected_refs
+        assert doc["curation_history"][0]["action"] == "ADD_CAUSAL_GRAPH"
+        for edge in graph["edges"]:
+            for ev in edge.get("evidence", []):
+                snippet = ev.get("snippet", "")
+                assert "<i>" not in snippet and "</i>" not in snippet
+                assert "\u00a0" not in snippet
+
+
+
 
