@@ -453,7 +453,8 @@ def test_landing_search_button_is_legible_in_every_theme():
 def test_map_page_keeps_readers_in_the_licensed_wrapper():
     page = (PAGES / "text-map" / "index.html").read_text(encoding="utf-8")
     main = between(page, "<main", "</main>")
-    assert "text-map-source/index.html" not in [href.split("?")[0] for href, _ in anchors(main)], \
+    assert not [href for href, _ in anchors(main)
+                if href.split("?")[0].endswith("text-map-source/index.html")], \
         "the standalone map has no navigation, theme or licence of its own"
     assert 'src="../text-map-source/index.html"' in main
     table = between(main, '<details class="map-table" id="map-table">', "</details>")

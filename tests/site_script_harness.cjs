@@ -50,6 +50,7 @@ function select(values) {
     get() { return index >= 0 ? el.options[index].value : ''; },
     set(value) { index = el.options.findIndex((o) => o.value === String(value)); },
   });
+  Object.defineProperty(el, 'selectedIndex', { get: () => index });
   return el;
 }
 
@@ -208,10 +209,15 @@ const scenarios = {
   },
 
   async browse_restores_only_values_the_page_offers() {
-    const page = browsePage({ search: '?q=gut&grounding=RETIRED_STATUS&sort=name-desc' });
-    assert.equal(page.ids['browse-grounding'].value, '', 'an unknown grounding falls back to all');
-    assert.equal(page.ids['browse-sort'].value, 'name-desc');
+    // A select given a value it lacks selects nothing (selectedIndex -1); the
+    // page must leave such a control on its default option instead.
+    const page = browsePage({ search: '?q=gut&grounding=RETIRED_STATUS&sort=retired-order' });
+    assert.equal(page.ids['browse-grounding'].selectedIndex, 0, 'an unknown grounding keeps "All"');
+    assert.equal(page.ids['browse-sort'].value, 'assertions-desc', 'an unknown sort keeps the default');
     assert.equal(page.ids['browse-q'].value, 'gut');
+    const known = browsePage({ search: '?q=gut&grounding=EXACT&sort=name-desc' });
+    assert.equal(known.ids['browse-grounding'].value, 'EXACT', 'a value the page offers is restored');
+    assert.equal(known.ids['browse-sort'].value, 'name-desc');
     page.net.respond('aquatic', [row('gut', 'gut-y', 'UNGROUNDED')]);
     page.net.respond('host-associated', []);
     await settle();
