@@ -23,12 +23,16 @@ causal_graphs:
     label: mcrA-encoding hydrogenotrophic and acetoclastic methanogenic guild
     node_type: COMMUNITY
     description: Paddy soil methanogenic archaeal community acting as the bulk-soil network hub and producing
-      CH4 from root exudates, litter, and rhizosphere H2.
+      CH4 from root exudates, litter, and rhizosphere H2 (profiled via environmental mcrA amplicon sequencing
+      and metatranscriptomics across 32 rice fields in PMID:38801181 and PMID:41582156 without single-isolate
+      full-length UniProtKB protein attribution).
   - node_id: rhizospheric_pmoA_methane_oxidation_sink
     label: pmoA-mediated rhizospheric methane oxidation and methanogen-methanotroph coupling
     node_type: COMMUNITY_PROCESS
     description: Coupled methanogenic-methanotrophic activity across rice rhizosphere and rhizoplane where
-      pmoA-expressing methanotrophs oxidize 36-90% of biogenic methane using root-excreted oxygen.
+      pmoA-expressing methanotrophs oxidize 36-90% of biogenic methane using root-excreted oxygen (profiled
+      via environmental pmoA amplicon sequencing across bulk soil, rhizosphere, and rhizoplane compartments
+      in PMID:38801181 without single-strain full-length UniProtKB protein attribution).
   edges:
   - edge_id: paddy_field_soil_supplies_rice_root_exudates_litter_and_excreted_oxygen
     subject: paddy_field_soil
@@ -93,4 +97,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added paddy_field_soil_rhizosphere_methanogenesis_and_methane_oxidation mechanism graph for
     paddy field soil (ENVO:00005740) backed by PMID:14997675, PMID:38801181, PMID:41582156.
+  llm_assisted: true
+- timestamp: '2026-10-26T03:52:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented environmental mcrA and pmoA amplicon/metatranscriptomic community-pool scope on
+    paddy_mcrA_methanogenic_archaeal_guild and rhizospheric_pmoA_methane_oxidation_sink (PMID:38801181,
+    PMID:41582156) while preserving all existing node and edge IDs.
   llm_assisted: true
