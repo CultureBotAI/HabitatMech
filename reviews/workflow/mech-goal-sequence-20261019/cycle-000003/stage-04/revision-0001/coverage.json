@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 3,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "1a40d0958114e6e3facd148ccec6197fa4dd679c",
+  "cohort_id": "ear_discharge_to_empyema",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/ear_discharge.yaml through data/habitats/host_associated/empyema.yaml (next 24 unreviewed host_associated records at indices 410..433 immediately following Cycle 2 Stage 4 slice ending at ear_canal__7b012d70.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 12,
+  "needs_curation_count": 12,
+  "new_open_finding_count": 14,
+  "carried_deferred_finding_count": 23,
+  "total_carry_forward_finding_count": 37,
+  "category_review_bundle": {
+    "review_id": "20261026T083100Z-ear_discharge_to_empyema-category",
+    "yaml_path": "reviews/structured/20261026T083100Z-ear_discharge_to_empyema-category/review.yaml",
+    "yaml_sha256": "43d3df11649396b6c5f567c666533ed5fb709895657ad3aed513753285ca1f53",
+    "md_path": "reviews/structured/20261026T083100Z-ear_discharge_to_empyema-category/review.md",
+    "md_sha256": "2487b4e2ce9edca36c4ffae7ef3329a1667799da9c181c7ece589f09d3b74c37",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261026T083010Z-ear_discharge-record",
+      "target_path": "data/habitats/host_associated/ear_discharge.yaml",
+      "target_id": "habitatmech:GOLD.daebe0af3d",
+      "target_label": "human outer ear discharge",
+      "target_sha256": "5fc08e4dcc2095989c4d27e2120a32eb30b03617fe584935e66c253ab624baf8",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083010Z-ear_discharge-record/review.yaml",
+      "yaml_sha256": "2eff39d17b72ec334dbf6b56cc0907de2b822e7847c0cefc3aa1a0f199b0e316",
+      "md_path": "reviews/structured/20261026T083010Z-ear_discharge-record/review.md",
+      "md_sha256": "3d2819f8e59b6b5337a15026fdb95787a5efa5bcc91a3e3c4242b61f14ca675f"
+    },
+    {
+      "review_id": "20261026T083011Z-ear_discharge__c59c71e2-record",
+      "target_path": "data/habitats/host_associated/ear_discharge__c59c71e2.yaml",
+      "target_id": "habitatmech:GOLD.ef5dde6aea",
+      "target_label": "mammalian external ear discharge",
+      "target_sha256": "d6a21d60b7681179b2433bf056419ac07904054519d4fac0419bbd76d204c330",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083011Z-ear_discharge__c59c71e2-record/review.yaml",
+      "yaml_sha256": "73f25f3e91433c3275aea714def61f6046a7eaa849115c0694a2bc1d63f48c67",
+      "md_path": "reviews/structured/20261026T083011Z-ear_discharge__c59c71e2-record/review.md",
+      "md_sha256": "283a5c86f6e46794e18c0e11a6afaf9b50044c7ddcad9eca712faa99f8bf5ec1"
+    },
+    {
+      "review_id": "20261026T083012Z-eccrine_sweat_gland-record",
+      "target_path": "data/habitats/host_associated/eccrine_sweat_gland.yaml",
+      "target_id": "BTO:0002323",
+      "target_label": "eccrine sweat gland",
+      "target_sha256": "4cfe015d5f9f186f55bcb20a384f689ffc90a8dea16fd4880abf5581117d8811",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eccrine-sweat-gland-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261026T083012Z-eccrine_sweat_gland-record/review.yaml",
+      "yaml_sha256": "c69df5f0e287619779c15beddb44928022cb60e295d759b5c5ccbea0a71776d3",
+      "md_path": "reviews/structured/20261026T083012Z-eccrine_sweat_gland-record/review.md",
+      "md_sha256": "95c69572c100d88fbdf4e369936bcc91505a7e8525a6e0a56e145032e8e29986"
+    },
+    {
+      "review_id": "20261026T083013Z-echinodermata-record",
+      "target_path": "data/habitats/host_associated/echinodermata.yaml",
+      "target_id": "habitatmech:GOLD.e1f435d44b",
+      "target_label": "echinoderm-associated environment",
+      "target_sha256": "dfe4bcae51128e9e7f896ce5cf0f28578d628c8de01a8b9dd360744c71bffdb8",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "echinodermata-host-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261026T083013Z-echinodermata-record/review.yaml",
+      "yaml_sha256": "57b73e10f14451baf71cdf37d6d78f725c0440451180f24b109eca3b7a0b588f",
+      "md_path": "reviews/structured/20261026T083013Z-echinodermata-record/review.md",
+      "md_sha256": "a46690cd477420db6d73ac930a6bde4d39ce57a36070ceb033939236b98bfd44"
+    },
+    {
+      "review_id": "20261026T083014Z-ectosymbionts-record",
+      "target_path": "data/habitats/host_associated/ectosymbionts.yaml",
+      "target_id": "habitatmech:GOLD.7b504d9ca1",
+      "target_label": "green algal ectosymbiont environment",
+      "target_sha256": "ac421df6cb8ce9c28c4f2f6c2bf7322f76eb85e68a8ec82b64c085361f57677a",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083014Z-ectosymbionts-record/review.yaml",
+      "yaml_sha256": "f14a2ae425d656015ac673dfa8405256d4ed97eda70233fd2de7214b6ea8031e",
+      "md_path": "reviews/structured/20261026T083014Z-ectosymbionts-record/review.md",
+      "md_sha256": "4ceb790db69f1fa6c28b8b2c00bafa0820542ac1e3e0d9eb2bad028b4f443c5b"
+    },
+    {
+      "review_id": "20261026T083015Z-ectosymbionts__7a42a232-record",
+      "target_path": "data/habitats/host_associated/ectosymbionts__7a42a232.yaml",
+      "target_id": "habitatmech:GOLD.99aff88405",
+      "target_label": "red algal ectosymbiont environment",
+      "target_sha256": "327b4f4060aee96ba22a0fdf37569a24568c10c3c1396f779baefd54939daa38",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083015Z-ectosymbionts__7a42a232-record/review.yaml",
+      "yaml_sha256": "88ccb42a198ab350b78f426d31d4d584a0aba4550376fe2d9dbcdb46d0a1a831",
+      "md_path": "reviews/structured/20261026T083015Z-ectosymbionts__7a42a232-record/review.md",
+      "md_sha256": "5ecf29e71a432aecb26a47d8bc5da47dfadf9bad275ee19d28dcb4a31f4532c4"
+    },
+    {
+      "review_id": "20261026T083016Z-eczema-record",
+      "target_path": "data/habitats/host_associated/eczema.yaml",
+      "target_id": "habitatmech:GOLD.e21234318e",
+      "target_label": "human eczematous skin lesion",
+      "target_sha256": "7b4c0a1082430695aec41ccb01b3a52d2a6e8757e5c031a53e7fea92ef2baeab",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eczema-context-parent",
+        "eczema-disease-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261026T083016Z-eczema-record/review.yaml",
+      "yaml_sha256": "0afe016a6393f78bde1ff6c9e4188e40ec3a2917b91e734157c6f56a250d3e3b",
+      "md_path": "reviews/structured/20261026T083016Z-eczema-record/review.md",
+      "md_sha256": "60ad9f4b21bbf387b1d80641410fbcbeef731488c65fd23c68f37aa3b9dd9722"
+    },
+    {
+      "review_id": "20261026T083017Z-effusion-record",
+      "target_path": "data/habitats/host_associated/effusion.yaml",
+      "target_id": "habitatmech:GOLD.2047d759aa",
+      "target_label": "Effusion",
+      "target_sha256": "7d858784b7c20c536ce45eea3d669772734931b01f91a53d4c8898727e176b93",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "effusion-wrong-parent-grounding"
+      ],
+      "yaml_path": "reviews/structured/20261026T083017Z-effusion-record/review.yaml",
+      "yaml_sha256": "d12a28fe13b97537a0bc2048f8e153fed3e3e6433c3e1d01e73c680197ef82fa",
+      "md_path": "reviews/structured/20261026T083017Z-effusion-record/review.md",
+      "md_sha256": "fe45bc9c8653fe9ae6cf5ff1bf27d7e8bdec6ccb790cda3a1050826f83ad91f3"
+    },
+    {
+      "review_id": "20261026T083018Z-effusion__ef80da5d-record",
+      "target_path": "data/habitats/host_associated/effusion__ef80da5d.yaml",
+      "target_id": "habitatmech:GOLD.279140e15d",
+      "target_label": "Effusion",
+      "target_sha256": "7a05661e98cd7fef2336c2e52de2ee9263f4c10a4a5bb612045c4a9b21653924",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "effusion--ef80da5d-wrong-parent-grounding"
+      ],
+      "yaml_path": "reviews/structured/20261026T083018Z-effusion__ef80da5d-record/review.yaml",
+      "yaml_sha256": "69a6f0167fb8267b0c235a0d0e02c09ecc09a788d882b2002e95ed02177110f3",
+      "md_path": "reviews/structured/20261026T083018Z-effusion__ef80da5d-record/review.md",
+      "md_sha256": "850962c6e9db47cf28270c8ce08d14d6b5b87c91d0f99ba1fac023e60ace94bb"
+    },
+    {
+      "review_id": "20261026T083019Z-egg-record",
+      "target_path": "data/habitats/host_associated/egg.yaml",
+      "target_id": "habitatmech:BACDIVE.d48ce9485d",
+      "target_label": "Egg",
+      "target_sha256": "4442ae82f9df6071c9c46f1f0ce6db9210ed6b836e497ccfbb22525c11ee2781",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083019Z-egg-record/review.yaml",
+      "yaml_sha256": "f6904b3ac9cbf78a0a44d82e3b8638dc534b6756f1ef8908af82f662d7b19041",
+      "md_path": "reviews/structured/20261026T083019Z-egg-record/review.md",
+      "md_sha256": "fe6d4f922a8e60b752c69877d570ec8fbdf4a388fcc746e5b9435df9e1f03f10"
+    },
+    {
+      "review_id": "20261026T083020Z-egg_capsule-record",
+      "target_path": "data/habitats/host_associated/egg_capsule.yaml",
+      "target_id": "UBERON:3010636",
+      "target_label": "egg capsule",
+      "target_sha256": "52d384bb8eba0ce049d074a041b3fb26063165f1e6f25fef4fbbee0f7b5572d1",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "egg-capsule-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261026T083020Z-egg_capsule-record/review.yaml",
+      "yaml_sha256": "54f529040c8c785d5d2f1707c47d9f8aefedac1ff9a232420c835f4155943bff",
+      "md_path": "reviews/structured/20261026T083020Z-egg_capsule-record/review.md",
+      "md_sha256": "13d568ee63e6d8250b1f915cbedaec4c883d2892451a410219493287c0cbd2a4"
+    },
+    {
+      "review_id": "20261026T083021Z-eggs-record",
+      "target_path": "data/habitats/host_associated/eggs.yaml",
+      "target_id": "habitatmech:GOLD.1f110436d1",
+      "target_label": "fish ovarian egg",
+      "target_sha256": "6d5a99494de454ae0af8e9705b6575f041038c828546f956a9a458eabab6381d",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083021Z-eggs-record/review.yaml",
+      "yaml_sha256": "fdccb07be5386b669d72af455faf0a1e81a996221c00b2f45b542b576f68a5bc",
+      "md_path": "reviews/structured/20261026T083021Z-eggs-record/review.md",
+      "md_sha256": "9bc5761a91a556fed308e604baa6edbeca1ea48c2a6bea7a3bc60fd8902727f6"
+    },
+    {
+      "review_id": "20261026T083022Z-eggs__79d5874d-record",
+      "target_path": "data/habitats/host_associated/eggs__79d5874d.yaml",
+      "target_id": "habitatmech:GOLD.7b8cf8839b",
+      "target_label": "insect egg",
+      "target_sha256": "c6cf3498220c0ccd883a3af9b385ebc4cae8c49f726bc135f7c9eedaf47982f0",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eggs--79d5874d-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261026T083022Z-eggs__79d5874d-record/review.yaml",
+      "yaml_sha256": "5c97276d46f422376328ca991d2e97a235ab6a16f5f20f97e8c9413fd4aed7b4",
+      "md_path": "reviews/structured/20261026T083022Z-eggs__79d5874d-record/review.md",
+      "md_sha256": "2f5153820244ffc51b8421842a02a94715f2b94f894c4502bbbd8b30580a48cd"
+    },
+    {
+      "review_id": "20261026T083023Z-elastic__846c7f5c-record",
+      "target_path": "data/habitats/host_associated/elastic__846c7f5c.yaml",
+      "target_id": "habitatmech:GOLD.f1f87de0bb",
+      "target_label": "Elastic",
+      "target_sha256": "3e38c03357639e8c2feae4031cd6638ad0cb992b25251d9f3a58963f49c764b7",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "elastic--846c7f5c-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261026T083023Z-elastic__846c7f5c-record/review.yaml",
+      "yaml_sha256": "023929e931982c554640ab8b872ae5095e5e6203f8396a20bc47b7da86c9613e",
+      "md_path": "reviews/structured/20261026T083023Z-elastic__846c7f5c-record/review.md",
+      "md_sha256": "805c69e9406a5f30c23af82b25adee6022debe8e4e24d027458a405bd1f23309"
+    },
+    {
+      "review_id": "20261026T083024Z-elastic_cartilage_tissue-record",
+      "target_path": "data/habitats/host_associated/elastic_cartilage_tissue.yaml",
+      "target_id": "UBERON:0001996",
+      "target_label": "elastic cartilage tissue",
+      "target_sha256": "97f8642e5e51b2c0af3ad99917c393a2188b85fa9fd5248ab3a55e072a1ec5a4",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "elastic-cartilage-tissue-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261026T083024Z-elastic_cartilage_tissue-record/review.yaml",
+      "yaml_sha256": "dfa50de0e49912f4576a856af6e0de07f34517b9777c89e826774f8167c733c8",
+      "md_path": "reviews/structured/20261026T083024Z-elastic_cartilage_tissue-record/review.md",
+      "md_sha256": "f0f191aa10635bd87d461c0b5f2540607a23b078416796926766d88855898d26"
+    },
+    {
+      "review_id": "20261026T083025Z-electric_organ-record",
+      "target_path": "data/habitats/host_associated/electric_organ.yaml",
+      "target_id": "BTO:0000376",
+      "target_label": "electric organ",
+      "target_sha256": "e3b19121aea9dbd7c0f8d08d4295c21e1a1003741f4bdfb012337ec5d5ad9365",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083025Z-electric_organ-record/review.yaml",
+      "yaml_sha256": "e3aaaf11da19e98320f357781991058d8f09c1c81137962600c85a3463090e8a",
+      "md_path": "reviews/structured/20261026T083025Z-electric_organ-record/review.md",
+      "md_sha256": "76f469d6d1dd2892e194dea19b27da845c74ed65a64cfb51cc88b462a3c3ed96"
+    },
+    {
+      "review_id": "20261026T083026Z-elementary_body-record",
+      "target_path": "data/habitats/host_associated/elementary_body.yaml",
+      "target_id": "BTO:0000377",
+      "target_label": "elementary body",
+      "target_sha256": "e7bb21e7d7ce2454878b01434d0b6260122a4dc6ec807f23aa0d2fb2015d7ad0",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083026Z-elementary_body-record/review.yaml",
+      "yaml_sha256": "a7fcce01d26ebff8a4a5163c8ddb9bbc2b008d27b60d92baa6266940761426dc",
+      "md_path": "reviews/structured/20261026T083026Z-elementary_body-record/review.md",
+      "md_sha256": "31df894335e491d45ae31f92c908206d5e9f98764f5b28de6eba3274b4b9065d"
+    },
+    {
+      "review_id": "20261026T083027Z-embryo-record",
+      "target_path": "data/habitats/host_associated/embryo.yaml",
+      "target_id": "BTO:0000379",
+      "target_label": "embryo",
+      "target_sha256": "1962e6f2c56f03e14778737e329126ec2c64b00fa9ca1034487eab2e5526a4e0",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083027Z-embryo-record/review.yaml",
+      "yaml_sha256": "f87ed48e44780e70d0e202ef706e2d26ed39662d7309a47bef04e8eabfb99dcf",
+      "md_path": "reviews/structured/20261026T083027Z-embryo-record/review.md",
+      "md_sha256": "0d3a74403b41ca9f1da00598bf287b15b9f556f6d28c06e9506cc8f70b6df638"
+    },
+    {
+      "review_id": "20261026T083028Z-embryo__3df16fcc-record",
+      "target_path": "data/habitats/host_associated/embryo__3df16fcc.yaml",
+      "target_id": "habitatmech:GOLD.32330da5da",
+      "target_label": "brown algal embryo",
+      "target_sha256": "7304654b0bc7787ffca088665da5775017f5d0b12403c4d1b108e27d8b425938",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "embryo--3df16fcc-bare-source-label-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261026T083028Z-embryo__3df16fcc-record/review.yaml",
+      "yaml_sha256": "c6b657201692d1fb7a894bf3e3c2c562fb8cd9d615fd4a7310c337206932c653",
+      "md_path": "reviews/structured/20261026T083028Z-embryo__3df16fcc-record/review.md",
+      "md_sha256": "4cbf4637ddb33b967948b22784c6dec7b08c3f0d1f58d8fd290d9f2c1b5581a3"
+    },
+    {
+      "review_id": "20261026T083029Z-embryo__74685e7d-record",
+      "target_path": "data/habitats/host_associated/embryo__74685e7d.yaml",
+      "target_id": "habitatmech:GOLD.b648ad12d6",
+      "target_label": "Embryo",
+      "target_sha256": "dcfdc4e72b1576cdabb9af8a66caeaa221d6d5933b8ccc48e7578c49d1e4e378",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083029Z-embryo__74685e7d-record/review.yaml",
+      "yaml_sha256": "9b9201d41c98e40082d3dfde3ae403b9fea8c5078696bb076c4f8bbd65c3d5d3",
+      "md_path": "reviews/structured/20261026T083029Z-embryo__74685e7d-record/review.md",
+      "md_sha256": "042f2d23f12482135a6b66762f95d6d5a28131d08d5e25910fb478639dbeb11c"
+    },
+    {
+      "review_id": "20261026T083030Z-embryo__e76df6f3-record",
+      "target_path": "data/habitats/host_associated/embryo__e76df6f3.yaml",
+      "target_id": "habitatmech:GOLD.9f162205a6",
+      "target_label": "fish embryo-associated environment",
+      "target_sha256": "1fd440418d68ced24bbc2cb26909c32a2e969bfed0dc64605776a80b6831fbf2",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "embryo--e76df6f3-bare-source-label-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261026T083030Z-embryo__e76df6f3-record/review.yaml",
+      "yaml_sha256": "afaeb51c8753113a3b10d65e6c751051b0d225c803aeb2fbaa112dab56292ae9",
+      "md_path": "reviews/structured/20261026T083030Z-embryo__e76df6f3-record/review.md",
+      "md_sha256": "f9d150adfec1004e6b12606415ffa36a8cba9e19e385cf86ebaae436fab494a7"
+    },
+    {
+      "review_id": "20261026T083031Z-embryonic_cell_line-record",
+      "target_path": "data/habitats/host_associated/embryonic_cell_line.yaml",
+      "target_id": "BTO:0000669",
+      "target_label": "embryonic cell line",
+      "target_sha256": "f6c3bce59a8a0b094396238bde7e6023da968afd06bf66e6d7a2e08ab6858c49",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083031Z-embryonic_cell_line-record/review.yaml",
+      "yaml_sha256": "5b13853e267e4d23984e4ba32cca28cb498199cb46be1a2f657cabe761f6dc2a",
+      "md_path": "reviews/structured/20261026T083031Z-embryonic_cell_line-record/review.md",
+      "md_sha256": "aa06f722273a0a3dcc6730a1c8b0dfe3907b3ad1de79aefbfc5ba21a68775551"
+    },
+    {
+      "review_id": "20261026T083032Z-embryonic_stem_cell-record",
+      "target_path": "data/habitats/host_associated/embryonic_stem_cell.yaml",
+      "target_id": "BTO:0001086",
+      "target_label": "embryonic stem cell",
+      "target_sha256": "36b4a7f893503adf96599cc87485f2046f7d1cb90c6ffaad3f095949c47134bd",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261026T083032Z-embryonic_stem_cell-record/review.yaml",
+      "yaml_sha256": "8153a0603ac2722c8a79841ebe7d9f931d5316f9709fb451b5db305ee432f565",
+      "md_path": "reviews/structured/20261026T083032Z-embryonic_stem_cell-record/review.md",
+      "md_sha256": "306d3d57d6c8896f5355f2409208b024bd4ac8ce33b72dc1fc1c5c869a1cc4b3"
+    },
+    {
+      "review_id": "20261026T083033Z-empyema-record",
+      "target_path": "data/habitats/host_associated/empyema.yaml",
+      "target_id": "habitatmech:GOLD.818c9729e2",
+      "target_label": "mammalian pleural empyema exudate",
+      "target_sha256": "67f9f62f0125e7f470b2dfc8fb1731b0fd366a5eb9fb43da866359d5e7eb2479",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "empyema-cavity-parent-grounding",
+        "empyema-disease-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261026T083033Z-empyema-record/review.yaml",
+      "yaml_sha256": "b653ef7ce6adf416d3bbb80ad5b8500d06bfd86e99d88333b215bad3633d1ec7",
+      "md_path": "reviews/structured/20261026T083033Z-empyema-record/review.md",
+      "md_sha256": "422e39c846853d7d0971f0cee0b0244f9a713b0e67931bfe69ca8c5f7ff7330c"
+    }
+  ]
+}
