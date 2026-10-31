@@ -1,0 +1,25 @@
+# 2026-10-31 — Cycle 4 Stage 2 (`causal_graphs`): Audit of 53 Existing Causal Graphs and Authoring of 10 New Literature-Backed Habitat Mechanism Overlays
+
+## Summary
+
+Executed Cycle 4 Stage 2 (`causal_graphs`) of `mech-goal-sequence-20261019` using `.claude/skills/habitatmech-evolve-workflow/SKILL.md`, `.claude/skills/curate-causal-graphs/SKILL.md`, `.claude/skills/add-yaml-record/SKILL.md`, and `.claude/skills/curate-yaml-record/SKILL.md`:
+
+1. **Full Audit of Existing 53 Curated Causal-Graph Overlays (`curation/causal_graphs/*.yaml`):**
+   - Verified all 53 pre-existing overlays pass LinkML `HabitatCausalGraphCuration` validation, connected-component and root-`HABITAT` structural checks, ontology grounding correspondence (`conf/id_label_targets.yaml`), and verbatim evidence snippet cleanliness (no HTML artifacts or non-breaking spaces).
+   - Preserved all Cycle 1–3 `GENE_OR_PROTEIN` verified `protein_examples` and source-limited multi-subunit/metagenomic boundary notes intact.
+
+2. **Authored 10 New Evidence-Backed `HabitatCausalGraphCuration` Overlays (53 -> 63 total):**
+   - `curation/causal_graphs/spacecraft_assembly_cleanrooms.yaml` (`habitatmech:GOLD.013b99db03`, `ENGINEERED`): `spacecraft_assembly_cleanroom_oligotrophic_desiccation_selection` — 5 nodes, 4 edges, 6 evidence items across 2 PubMed references (`PMID:23051695`, `PMID:34861887`).
+   - `curation/causal_graphs/uasb_upflow_anaerobic_sludge_blanket.yaml` (`habitatmech:GOLD.0d77d00b06`, `ENGINEERED`): `uasb_granular_sludge_syntrophic_diet_methanogenesis` — 5 nodes (including `GENE_OR_PROTEIN` node `syntrophus_bam_reverse_electron_transfer_complex`), 4 edges, 6 evidence items across 5 PubMed references (`PMID:34838566`, `PMID:35584587`, `PMID:36341859`, `PMID:23378508`, `PMID:21966920`).
+   - `curation/causal_graphs/ssf_solid_state_fermentation.yaml` (`habitatmech:GOLD.3af6ca6cc3`, `ENGINEERED`): `ssf_moist_solid_bed_heat_mass_transfer_and_fungal_polysaccharide_hydrolysis` — 4 nodes, 3 edges, 5 evidence items across 3 PubMed references (`PMID:12115405`, `PMID:21080102`, `PMID:29408199`).
+   - `curation/causal_graphs/anaerobic_aerobic.yaml` (`habitatmech:GOLD.4a2450370b`, `ENGINEERED`): `anaerobic_aerobic_ebpr_polyp_pha_dual_biopolymer_cycling` — 5 nodes (including `GENE_OR_PROTEIN` node `accumulibacter_ppk1_polyphosphate_kinase`), 4 edges, 5 evidence items across 4 PubMed references (`PMID:33638876`, `PMID:34134440`, `PMID:41432927`, `PMID:35467400`).
+   - `curation/causal_graphs/partial_nitrification_anammox_pna.yaml` (`habitatmech:GOLD.5f3cbd7563`, `ENGINEERED`): `partial_nitrification_anammox_do_control_and_stratified_nitrogen_removal` — 5 nodes (including `GENE_OR_PROTEIN` node `kuenenia_hzs_hdh_hydrazine_synthase_and_dehydrogenase`), 4 edges, 5 evidence items across 4 PubMed references (`PMID:41577104`, `PMID:42285533`, `PMID:42946263`, `PMID:21964329`).
+   - `curation/causal_graphs/anaerobic_aerobic__c424253c.yaml` (`habitatmech:GOLD.c07aaa941d`, `ENGINEERED`): `sbr_ebpr_cyclic_feast_famine_granulation_and_pao_selection` — 4 nodes, 3 edges, 4 evidence items across 3 PubMed references (`PMID:37615362`, `PMID:38163067`, `PMID:41207536`).
+   - `curation/causal_graphs/algae_raceway_pond.yaml` (`habitatmech:GOLD.e474187df8`, `ENGINEERED`): `algae_raceway_pond_paddlewheel_flashing_light_and_phycosphere_selection` — 4 nodes, 3 edges, 5 evidence items across 3 PubMed references (`PMID:25919934`, `PMID:35166894`, `PMID:36905416`).
+   - `curation/causal_graphs/sulphur_autotrophic_denitrification.yaml` (`habitatmech:GOLD.f07ee97491`, `ENGINEERED`): `sulfur_autotrophic_denitrification_alkalinity_buffering_and_nar_sulfur_oxidation` — 5 nodes (including `GENE_OR_PROTEIN` node `thiobacillus_denitrificans_narg_dsr_cbbm_sulfur_denitrification_enzymes`), 4 edges, 5 evidence items across 4 PubMed references (`PMID:41108976`, `PMID:41579775`, `PMID:41922114`, `PMID:16980503`).
+   - `curation/causal_graphs/marine_pelagic_zone.yaml` (`ENVO:00000208`, `AQUATIC`): `marine_pelagic_oligotrophic_prochlorococcus_sar11_cross_feeding_and_phosphonate_cycling` — 5 nodes (including `GENE_OR_PROTEIN` node `sar11_cp_lyase_phosphonate_utilization_and_proteorhodopsin_proteins`), 4 edges, 5 evidence items across 3 PubMed references (`PMID:23789085`, `PMID:30742057`, `PMID:35254902`).
+   - `curation/causal_graphs/air.yaml` (`ENVO:00002005`, `AIR`): `air_atmospheric_uv_desiccation_filtering_and_biological_ice_nucleation` — 5 nodes (including `GENE_OR_PROTEIN` node `pseudomonas_ina_ice_nucleation_protein`), 4 edges, 5 evidence items across 2 PubMed references (`PMID:31316133`, `PMID:30483227`).
+
+3. **Native Regeneration and Validation:**
+   - Regenerated all 3,209 habitat records via `scripts/seed_from_sources.py --apply --force` (`curated_causal_graphs_loaded: 63`), rendered all HTML pages via `scripts/render_pages.py`, and synchronized documentation stats blocks via `scripts/check_docs.py --write`.
+   - Added regression tests in `tests/test_stage2_causal_graph_curation.py` verifying all 10 new Cycle 4 Stage 2 overlays and the 63-graph total.

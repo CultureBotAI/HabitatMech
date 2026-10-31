@@ -1,0 +1,117 @@
+identifier: ENVO:00000208
+causal_graphs:
+- graph_id: marine_pelagic_oligotrophic_prochlorococcus_sar11_cross_feeding_and_phosphonate_cycling
+  title: Marine pelagic zone oligotrophic nutrient limitation, Prochlorococcus-SAR11 metabolic coupling,
+    and phosphonate synthesis mechanism
+  description: The sunlit oligotrophic marine pelagic zone imposes strong nitrogen and phosphorus depletion
+    alongside high solar irradiance and salinity gradients, selecting for streamlined populations of Prochlorococcus
+    and SAR11 (Pelagibacterales) that account for over half of euphotic-zone genome equivalents, where
+    Prochlorococcus supplies organic carbon and glycine betaine to support SAR11 growth and C1 metabolism
+    while roughly 15% of surface bacterioplankton (primarily Prochlorococcus and SAR11) encode phosphonate
+    biosynthesis enzymes to form cell-surface phosphonoglycoproteins that mitigate grazing and viral lysis.
+  nodes:
+  - node_id: marine_pelagic_zone
+    label: marine pelagic zone
+    node_type: HABITAT
+    grounding: ENVO:00000208
+    description: Open-ocean pelagic water column comprising the sunlit euphotic and underlying mesopelagic
+      marine water masses.
+  - node_id: oligotrophic_high_light_phosphorus_and_nitrogen_depleted_water_column
+    label: oligotrophic sunlit pelagic water column with low dissolved N and P and high solar irradiance
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient-poor surface ocean water column characterized by low nitrogen and phosphorus
+      concentrations, high solar irradiance, and regional salinity gradients.
+  - node_id: pelagic_prochlorococcus_and_sar11_bacterioplankton_consortium
+    label: numerically dominant Prochlorococcus and SAR11 (Pelagibacterales) pelagic consortium
+    node_type: COMMUNITY
+    description: Streamlined photoautotrophic cyanobacterium Prochlorococcus and heterotrophic alphaproteobacterium
+      SAR11 (combined global population ~2.7 x 10^28 cells) dominating oligotrophic ocean gyres.
+  - node_id: prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes
+    label: Prochlorococcus and SAR11 phosphonate biosynthesis and osmolyte C1 oxidation enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Phosphonate synthesis enzymes (such as phosphoenolpyruvate mutase PepM) and phosphorus-acquisition/osmolyte
+      C1 oxidation proteins encoded by Prochlorococcus and SAR11 in the oligotrophic surface ocean.
+  - node_id: pelagic_glycine_betaine_cross_feeding_and_cell_surface_phosphonoglycoprotein_defense
+    label: commensal organic carbon and glycine betaine cross-feeding and phosphonoglycoprotein defense
+    node_type: COMMUNITY_PROCESS
+    description: Commensal provision of photosynthetically fixed organic carbon and glycine betaine from
+      Prochlorococcus to SAR11 alongside incorporation of phosphonates into cell-surface phosphonoglycoproteins
+      that reduce grazing and viral mortality.
+  edges:
+  - edge_id: marine_pelagic_zone_maintains_oligotrophic_high_light_nutrient_depleted_water_column
+    subject: marine_pelagic_zone
+    predicate: maintains
+    object: oligotrophic_high_light_phosphorus_and_nitrogen_depleted_water_column
+    description: Large expanses of the surface marine pelagic zone are nutrient-poor (low N and P) and
+      exposed to high solar irradiance and salinity.
+    evidence:
+    - reference: PMID:23789085
+      snippet: Large swaths of the nutrient-poor surface ocean are dominated numerically by cyanobacteria
+        (Prochlorococcus), cyanobacterial viruses (cyanophage), and alphaproteobacteria (SAR11).
+      notes: Thompson et al. 2013 (PNAS, PMID:23789085) characterize the physicochemical stressors (high
+        light, salinity, and low N and P) of the oligotrophic surface ocean.
+  - edge_id: oligotrophic_pelagic_water_column_selects_for_prochlorococcus_and_sar11_consortium
+    subject: oligotrophic_high_light_phosphorus_and_nitrogen_depleted_water_column
+    predicate: selects for
+    object: pelagic_prochlorococcus_and_sar11_bacterioplankton_consortium
+    description: Oligotrophic ocean gyres select for Prochlorococcus and SAR11, which together represent
+      more than half of identifiable bacterial and archaeal genome equivalents in the euphotic zone.
+    evidence:
+    - reference: PMID:30742057
+      snippet: Prochlorococcus and SAR11 are among the smallest and most abundant organisms on Earth.
+        With a combined global population of about 2.7 × 1028 cells, they numerically dominate bacterioplankton
+        communities in oligotrophic ocean gyres and yet they have never been grown together in vitro.
+      notes: Becker et al. 2019 (ISME J, PMID:30742057) show that Prochlorococcus and SAR11 numerically
+        dominate oligotrophic ocean gyres and comprise >50% of euphotic-zone genome equivalents at many
+        sites.
+    - reference: PMID:23789085
+      snippet: Gene frequencies indicate selection for phosphorus acquisition (Mediterranean/Sargasso),
+        DNA repair and high-light responses (Red Sea/Pacific Prochlorococcus), and osmolyte C1 oxidation
+        (Red Sea/Mediterranean SAR11).
+      notes: Ecosystem-specific low nutrient availability, high light, and salinity select for adaptive
+        gene repertoires in pelagic Prochlorococcus and SAR11 (PMID:23789085).
+  - edge_id: prochlorococcus_and_sar11_consortium_encodes_phosphonate_biosynthesis_and_c1_oxidation_enzymes
+    subject: pelagic_prochlorococcus_and_sar11_bacterioplankton_consortium
+    predicate: expresses
+    object: prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes
+    description: Roughly 15% of surface-ocean bacterioplankton, predominantly Prochlorococcus and SAR11,
+      carry phosphonate synthesis genes while SAR11 enriches osmolyte C1 oxidation genes.
+    evidence:
+    - reference: PMID:35254902
+      snippet: Here, we show that 15% of all bacterioplankton in the surface ocean have genes phosphonate
+        synthesis and that most belong to the abundant groups Prochlorococcus and SAR11.
+      notes: Acker et al. 2022 (PNAS, PMID:35254902) demonstrate that ~15% of surface-ocean bacterioplankton
+        (primarily Prochlorococcus and SAR11) encode phosphonate synthesis.
+    - reference: PMID:23789085
+      snippet: The unexpected connection between salinity-dependent osmolyte production and SAR11 C1 metabolism
+        represents a potentially major coevolutionary adaptation and biogeochemical flux.
+      notes: Pelagic SAR11 populations enrich C1 oxidation pathways coupled to salinity-dependent osmolyte
+        production (PMID:23789085).
+  - edge_id: prochlorococcus_and_sar11_consortium_drives_glycine_betaine_cross_feeding_and_phosphonoglycoprotein_defense
+    subject: prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes
+    predicate: drives
+    object: pelagic_glycine_betaine_cross_feeding_and_cell_surface_phosphonoglycoprotein_defense
+    description: Prochlorococcus releases organic carbon and glycine betaine that accelerate SAR11 growth
+      by 15-70%, while phosphonate synthesis produces cell-surface phosphonoglycoproteins that mitigate
+      grazing and viral lysis.
+    evidence:
+    - reference: PMID:30742057
+      snippet: The presence of Prochlorococcus was able to meet SAR11's central requirement for organic
+        carbon, but not reduced sulfur. Prochlorococcus strain MIT9313, but not MED4, could meet the unique
+        glycine requirement of SAR11, which could be due to the production and release of glycine betaine
+        by MIT9313, as supported by comparative genomic evidence.
+      notes: Co-culture experiments show Prochlorococcus meets SAR11's central organic carbon requirement
+        and (in strain MIT9313) supplies glycine betaine to fulfill SAR11's glycine requirement (PMID:30742057).
+    - reference: PMID:35254902
+      snippet: Genomic and chemical evidence suggests that phosphonates are incorporated into cell-surface
+        phosphonoglycoproteins that may act to mitigate cell mortality by grazing and viral lysis.
+      notes: Phosphonates synthesized by Prochlorococcus and SAR11 are incorporated into cell-surface
+        phosphonoglycoproteins that protect against grazing and viral lysis (PMID:35254902).
+curation_history:
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added marine_pelagic_oligotrophic_prochlorococcus_sar11_cross_feeding_and_phosphonate_cycling
+    mechanism graph for marine pelagic zone (ENVO:00000208) backed by PMID:23789085, PMID:30742057, and
+    PMID:35254902.
+  llm_assisted: true

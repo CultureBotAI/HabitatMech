@@ -1,0 +1,108 @@
+identifier: habitatmech:GOLD.c07aaa941d
+causal_graphs:
+- graph_id: sbr_ebpr_cyclic_feast_famine_granulation_and_pao_selection
+  title: Anaerobic-aerobic sequencing batch EBPR cyclic substrate feeding, granule selection, and PAO
+    phosphorus removal mechanism
+  description: Anaerobic-aerobic sequencing batch enhanced biological phosphorus removal (SBR-EBPR) bioreactors
+    impose temporal anaerobic-aerobic feast-famine cycles in a single vessel fed with volatile fatty acids
+    (acetate) or alternating amino acids (glutamate), driving spontaneous granule formation and selecting
+    for morphotype I PAO aggregates dominated by Candidatus Accumulibacter clades (IC, IIB, IIC, and nitrite-tolerant
+    subtypes) alongside coexisting Candidatus Competibacter GAOs while out-selecting nitrite-oxidizing
+    bacteria to achieve >99% phosphorus removal.
+  nodes:
+  - node_id: anaerobic_aerobic__c424253c
+    label: anaerobic-aerobic sequencing batch enhanced biological phosphorus removal bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.c07aaa941d
+    description: Sequencing batch reactor (SBR) cycling sequentially through anaerobic substrate feeding,
+      aerobic reaction, settling, and decanting phases for enhanced biological phosphorus removal.
+  - node_id: sbr_cyclic_anaerobic_vfa_amino_acid_feeding_and_aerobic_phases
+    label: sequencing-batch cyclic anaerobic VFA/glutamate feeding and aerobic reaction phases
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Temporal SBR cycling with anaerobic high-VFA (acetate) or alternating glutamate/acetate
+      feeding followed by aerobic phosphorus uptake phases.
+  - node_id: sbr_granular_accumulibacter_pao_and_competibacter_gao_community
+    label: granular Candidatus Accumulibacter PAO and coexisting Candidatus Competibacter GAO community
+    node_type: COMMUNITY
+    description: PAO-dominated morphotype I granules enriched in Candidatus Accumulibacter (clades IC,
+      IIB, IIC) coexisting with Candidatus Competibacter GAOs and accessory PAOs (Azonexus, Thauera, Zoogloea).
+  - node_id: sbr_high_efficiency_phosphorus_release_uptake_and_nitritation
+    label: cyclic anaerobic phosphorus release, PHA storage, and >99% aerobic phosphorus removal
+    node_type: COMMUNITY_PROCESS
+    description: High molar anaerobic P-release/acetate-uptake (0.73-0.77 P-mol/C-mol), PHA synthesis,
+      and complete (>99%) aerobic phosphorus removal coupled with NOB out-selection in one-stage SBR-EBPR
+      systems.
+  edges:
+  - edge_id: sbr_ebpr_maintains_cyclic_anaerobic_vfa_amino_acid_feeding_and_aerobic_phases
+    subject: anaerobic_aerobic__c424253c
+    predicate: maintains
+    object: sbr_cyclic_anaerobic_vfa_amino_acid_feeding_and_aerobic_phases
+    description: SBR-EBPR reactors operate with cyclic anaerobic phases fed with VFAs or alternating glutamate
+      and acetate followed by aerobic phases.
+    evidence:
+    - reference: PMID:37615362
+      snippet: Herein, we reported a novel proof-of-concept demonstration of integrating EBPR and nitritation
+        (oxidation of ammonium to nitrite) in a one-stage sequencing batch reactor to achieve simultaneous
+        high-strength phosphorus and short-cut nitrogen removal.
+      notes: One-stage sequencing batch reactor operation integrates anaerobic high-VFA feeding with aerobic
+        EBPR and nitritation (PMID:37615362).
+    - reference: PMID:41207536
+      snippet: Here we evaluate glutamate and acetate as alternate carbon sources in a laboratory-scale
+        sequencing-batch reactor operated at 30 °C (tropical-climate wastewater temperature). Efficient
+        EBPR was achieved for 140 days using a substrate supply scheme of two weeks of glutamate followed
+        by one week of acetate.
+      notes: Laboratory-scale sequencing-batch EBPR reactor achieves stable phosphorus removal over 140
+        days using alternating glutamate and acetate feeding at 30 degrees C (PMID:41207536).
+  - edge_id: cyclic_feeding_and_granulation_select_for_accumulibacter_pao_and_competibacter_gao_community
+    subject: sbr_cyclic_anaerobic_vfa_amino_acid_feeding_and_aerobic_phases
+    predicate: selects for
+    object: sbr_granular_accumulibacter_pao_and_competibacter_gao_community
+    description: Cyclic SBR-EBPR operation drives spontaneous granule formation, eliminates GAO-dominated
+      morphotype II aggregates, and selects for Candidatus Accumulibacter clades IC, IIB, and IIC while
+      out-selecting NOB (<0.1%).
+    evidence:
+    - reference: PMID:38163067
+      snippet: After 250 days, the elimination of the morphotype II aggregates from the reactor was observed.
+        The subsequent selection of the community was associated with the development of the morphotype
+        I aggregates, in which the relative abundance of PAO increased significantly, resulting in higher
+        efficiency of phosphorus removal. Metagenomic analysis revealed a predominance of the organisms
+        closely related to Candidatus Accumulibacter IС and IIС and of Ca. Accumulibacter IIB among the
+        PAO.
+      notes: Granule succession in an EBPR sequencing batch reactor eliminates morphotype II GAO aggregates
+        and enriches morphotype I PAO granules dominated by Candidatus Accumulibacter IC, IIB, and IIC
+        (PMID:38163067).
+    - reference: PMID:37615362
+      snippet: Long-term sludge acclimation proved that the dominant polyphosphate accumulating organisms
+        (PAOs), Candidatus Accumulibacter, could evolve to a specific subtype that can tolerate the nitrite
+        inhibition as revealed by operational taxonomic unit (OTU)-based oligotyping analysis. The EBPR
+        kinetic and stoichiometric evaluations combined with the amplicon sequencing proved that the Candidatus
+        Competibacter, as the dominant glycogen accumulating organisms (GAOs), could well coexist with
+        PAOs (15.3-24.9% and 14.2-33.1%, respectively) and did not deteriorate the EBPR performance.
+      notes: Long-term SBR acclimation selects for nitrite-tolerant Candidatus Accumulibacter coexisting
+        with Candidatus Competibacter while out-selecting NOB to <0.1% (PMID:37615362).
+  - edge_id: accumulibacter_pao_community_drives_sbr_phosphorus_release_uptake_and_nitritation
+    subject: sbr_granular_accumulibacter_pao_and_competibacter_gao_community
+    predicate: drives
+    object: sbr_high_efficiency_phosphorus_release_uptake_and_nitritation
+    description: Candidatus Accumulibacter PAOs drive high molar P-release/acetate-uptake (0.73-0.77 P-mol/C-mol),
+      PHA storage, and >99% phosphorus removal efficiency in SBR-EBPR reactors.
+    evidence:
+    - reference: PMID:38163067
+      snippet: Active consumption of acetate, primarily by the phosphate-accumulating organisms (PAO),
+        commenced at day 150 of cultivation. This was indicated by the high ratio of molar P-released/acetate
+        uptake (0.73-0.77 P-mol/C-mol), characteristic of PAO.
+      notes: PAO-dominated SBR granules exhibit characteristic stoichiometry of 0.73-0.77 P-mol released
+        per C-mol acetate uptake (PMID:38163067).
+    - reference: PMID:37615362
+      snippet: Excellent EBPR performance of effluent 0.8 ± 1.0 mg P/L and >99% removal efficiency was
+        achieved fed with synthetic high-strength phosphorus wastewater.
+      notes: One-stage SBR-EBPR achieves >99% phosphorus removal efficiency (0.8 mg P/L effluent) alongside
+        short-cut nitritation (PMID:37615362).
+curation_history:
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sbr_ebpr_cyclic_feast_famine_granulation_and_pao_selection mechanism graph for anaerobic-aerobic
+    sequencing batch enhanced biological phosphorus removal bioreactor (habitatmech:GOLD.c07aaa941d) backed
+    by PMID:37615362, PMID:38163067, and PMID:41207536.
+  llm_assisted: true

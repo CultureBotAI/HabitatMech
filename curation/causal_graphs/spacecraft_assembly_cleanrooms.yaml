@@ -1,0 +1,112 @@
+identifier: habitatmech:GOLD.013b99db03
+causal_graphs:
+- graph_id: spacecraft_assembly_cleanroom_oligotrophic_desiccation_selection
+  title: Spacecraft assembly cleanroom oligotrophic surface filtering and bioburden persistence mechanism
+  description: Ultra-clean, low-biomass spacecraft assembly cleanrooms impose severe oligotrophic and
+    surface-decontamination pressures where most detected DNA derives from non-viable cells while a resilient
+    viable fraction (1-10% of reads) comprising endospore-forming Bacillales (Bacillus subtilis, Virgibacillus
+    pantothenticus, Geobacillus) and hardy non-spore-forming genera (Acinetobacter, Sphingobium) persists
+    as planetary-protection bioburden on floors and mission-critical spacecraft hardware.
+  nodes:
+  - node_id: spacecraft_assembly_cleanrooms
+    label: spacecraft assembly cleanroom
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.013b99db03
+    description: Controlled low-particulate, oligotrophic cleanroom facility used for assembling planetary-protection-sensitive
+      spacecraft hardware.
+  - node_id: oligotrophic_low_biomass_cleanroom_surfaces
+    label: oligotrophic low-biomass cleanroom floor and spacecraft hardware surfaces
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient-depleted, strictly controlled cleanroom floor and hardware surfaces where only
+      1% to 10% of bacterial pyrosequencing reads originate from PMA-viable cells.
+  - node_id: cleanroom_endospore_forming_bacillales_guild
+    label: cleanroom endospore-forming Bacillus, Virgibacillus, and Geobacillus guild
+    node_type: COMMUNITY
+    description: Cultivable and PMA-viable spore-forming bacterial genera (including Bacillus subtilis,
+      Virgibacillus pantothenticus, and Geobacillus) persisting in spacecraft assembly facilities.
+  - node_id: viable_non_spore_forming_acinetobacter_sphingobium_guild
+    label: viable non-spore-forming Acinetobacter and Sphingobium cleanroom guild
+    node_type: COMMUNITY
+    description: Hardy non-spore-forming cleanroom bacterial lineages (46 viable genera dominated spatially
+      and temporally by Acinetobacter and Sphingobium) missed by standard spore assays.
+  - node_id: planetary_protection_bioburden_persistence
+    label: differential cell viability and planetary protection bioburden persistence
+    node_type: COMMUNITY_PROCESS
+    description: Survival of hardy oligotrophic spore-forming and non-spore-forming bacterial populations
+      on cleanroom floors and mission-critical spacecraft hardware.
+  edges:
+  - edge_id: cleanroom_maintains_oligotrophic_low_biomass_surfaces
+    subject: spacecraft_assembly_cleanrooms
+    predicate: maintains
+    object: oligotrophic_low_biomass_cleanroom_surfaces
+    description: Spacecraft assembly cleanrooms maintain low-biomass, oligotrophic environments where
+      only 1% to 10% of bacterial pyrosequencing reads arise from viable PMA-intact cells.
+    evidence:
+    - reference: PMID:23051695
+      snippet: In contrast, only 1% to 10% of all of the pyrosequencing reads, arising from a few robust
+        bacterial lineages, originated from sample fractions that had been pre-treated with PMA.
+      notes: Vaishampayan et al. 2013 (PMID:23051695) showed via PMA-pyrosequencing and PhyloChip profiling
+        that only 1-10% of reads in spacecraft assembly cleanrooms derive from viable cells.
+    - reference: PMID:34861887
+      snippet: The Spacecraft Assembly Facility (SAF) at the NASA's Jet Propulsion Laboratory is the primary
+        cleanroom facility used in the construction of some of the planetary protection (PP)-sensitive
+        missions developed by NASA, including the Mars 2020 Perseverance Rover that launched in July 2020.
+      notes: Hendrickson et al. 2021 (PMID:34861887) characterized the NASA JPL Spacecraft Assembly Facility
+        cleanroom microbiome across 98 floor samples.
+  - edge_id: oligotrophic_surfaces_select_for_endospore_forming_bacillales_guild
+    subject: oligotrophic_low_biomass_cleanroom_surfaces
+    predicate: selects for
+    object: cleanroom_endospore_forming_bacillales_guild
+    description: Cleanroom conditions select for resilient endospore-forming bacteria dominated spatially
+      by Bacillus subtilis and temporally by Virgibacillus pantothenticus alongside Geobacillus.
+    evidence:
+    - reference: PMID:34861887
+      snippet: The 130 NSA isolates were represented by 16 bacterial genera, of which 97% were identified
+        as spore-formers via Sanger sequencing. The most spatially abundant isolate was Bacillus subtilis,
+        and the most temporally abundant spore-former was Virgibacillus panthothenticus.
+      notes: NASA standard spore assay isolates from the JPL Spacecraft Assembly Facility were 97% spore-formers
+        led by Bacillus subtilis and Virgibacillus pantothenticus (PMID:34861887).
+  - edge_id: oligotrophic_surfaces_select_for_viable_non_spore_forming_guild
+    subject: oligotrophic_low_biomass_cleanroom_surfaces
+    predicate: selects for
+    object: viable_non_spore_forming_acinetobacter_sphingobium_guild
+    description: Cleanroom surfaces housing spacecraft hardware select for hardy viable non-spore-forming
+      genera (~86% of PMA amplicon diversity) including Acinetobacter and Sphingobium.
+    evidence:
+    - reference: PMID:34861887
+      snippet: 'The amplicon sequencing of the samples treated with propidium monoazide (PMA), which would
+        differentiate between viable and dead organisms, revealed a total of 54 genera: 46 viable non-spore
+        forming genera and 8 viable spore forming genera in these samples. The microbial diversity generated
+        by the amplicon sequencing corresponded to ~86% non-spore-formers and ~14% spore-formers. The
+        most common spatially distributed genera were Sphinigobium, Geobacillus, and Bacillus whereas
+        temporally distributed common genera were Acinetobacter, Geobacilllus, and Bacillus.'
+      notes: PMA-amplicon sequencing and single-cell genomics in the JPL cleanroom identified 46 viable
+        non-spore-forming genera dominated by Acinetobacter and Sphingobium (PMID:34861887).
+    - reference: PMID:23051695
+      snippet: The viable bacterial population detected in cleanrooms devoid of spacecraft hardware was
+        far more diverse than that observed in cleanrooms that housed mission-critical spacecraft hardware.
+        The latter was dominated by hardy, robust organisms previously reported to survive in oligotrophic
+        cleanroom environments.
+      notes: Cleanrooms housing mission-critical spacecraft hardware select for hardy oligotrophic bacterial
+        lineages (PMID:23051695).
+  - edge_id: cleanroom_guilds_drive_planetary_protection_bioburden_persistence
+    subject: viable_non_spore_forming_acinetobacter_sphingobium_guild
+    predicate: drives
+    object: planetary_protection_bioburden_persistence
+    description: Persistence of viable non-spore-forming and spore-forming cleanroom bacteria contributes
+      to planetary protection bioburden that requires molecular monitoring beyond standard spore assays.
+    evidence:
+    - reference: PMID:34861887
+      snippet: Single-cell genomics detected 6 genera in the sample analyzed, with the most prominent
+        being Acinetobacter. This study clearly established that detecting spores via NSA does not provide
+        a complete assessment for the cleanliness of spacecraft-associated environments since it failed
+        to detect several PP-relevant genera that were only recovered via molecular methods.
+      notes: Viable non-spore-forming cleanroom taxa such as Acinetobacter persist as planetary-protection-relevant
+        bioburden undetected by standard spore assays (PMID:34861887).
+curation_history:
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added spacecraft_assembly_cleanroom_oligotrophic_desiccation_selection mechanism graph for
+    spacecraft assembly cleanroom (habitatmech:GOLD.013b99db03) backed by PMID:23051695 and PMID:34861887.
+  llm_assisted: true

@@ -425,7 +425,7 @@ def test_cycle3_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
             REPO_ROOT / "data" / "habitats" / "engineered" / "sewage.yaml",
         ),
     }
-    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) == 53
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) >= 53
     for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
         overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
         assert overlay_path.exists(), f"{slug}.yaml missing"
@@ -542,6 +542,144 @@ def test_cycle3_stage3_protein_examples_and_source_limited_notes_are_present():
         node = nodes[node_id]
         assert node["node_type"] == expected_type
         assert expected_substr in node.get("description", "")
+
+
+def test_cycle4_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
+    expected = {
+        "spacecraft_assembly_cleanrooms": (
+            "habitatmech:GOLD.013b99db03",
+            "spacecraft_assembly_cleanroom_oligotrophic_desiccation_selection",
+            {
+                "PMID:23051695",
+                "PMID:34861887",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "spacecraft_assembly_cleanrooms.yaml",
+        ),
+        "uasb_upflow_anaerobic_sludge_blanket": (
+            "habitatmech:GOLD.0d77d00b06",
+            "uasb_granular_sludge_syntrophic_diet_methanogenesis",
+            {
+                "PMID:34838566",
+                "PMID:35584587",
+                "PMID:36341859",
+                "PMID:23378508",
+                "PMID:21966920",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "uasb_upflow_anaerobic_sludge_blanket.yaml",
+        ),
+        "ssf_solid_state_fermentation": (
+            "habitatmech:GOLD.3af6ca6cc3",
+            "ssf_moist_solid_bed_heat_mass_transfer_and_fungal_polysaccharide_hydrolysis",
+            {
+                "PMID:12115405",
+                "PMID:21080102",
+                "PMID:29408199",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "ssf_solid_state_fermentation.yaml",
+        ),
+        "anaerobic_aerobic": (
+            "habitatmech:GOLD.4a2450370b",
+            "anaerobic_aerobic_ebpr_polyp_pha_dual_biopolymer_cycling",
+            {
+                "PMID:33638876",
+                "PMID:34134440",
+                "PMID:41432927",
+                "PMID:35467400",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "anaerobic_aerobic.yaml",
+        ),
+        "partial_nitrification_anammox_pna": (
+            "habitatmech:GOLD.5f3cbd7563",
+            "partial_nitrification_anammox_do_control_and_stratified_nitrogen_removal",
+            {
+                "PMID:41577104",
+                "PMID:42285533",
+                "PMID:42946263",
+                "PMID:21964329",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "partial_nitrification_anammox_pna.yaml",
+        ),
+        "anaerobic_aerobic__c424253c": (
+            "habitatmech:GOLD.c07aaa941d",
+            "sbr_ebpr_cyclic_feast_famine_granulation_and_pao_selection",
+            {
+                "PMID:37615362",
+                "PMID:38163067",
+                "PMID:41207536",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "anaerobic_aerobic__c424253c.yaml",
+        ),
+        "algae_raceway_pond": (
+            "habitatmech:GOLD.e474187df8",
+            "algae_raceway_pond_paddlewheel_flashing_light_and_phycosphere_selection",
+            {
+                "PMID:25919934",
+                "PMID:35166894",
+                "PMID:36905416",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "algae_raceway_pond.yaml",
+        ),
+        "sulphur_autotrophic_denitrification": (
+            "habitatmech:GOLD.f07ee97491",
+            "sulfur_autotrophic_denitrification_alkalinity_buffering_and_nar_sulfur_oxidation",
+            {
+                "PMID:41108976",
+                "PMID:41579775",
+                "PMID:41922114",
+                "PMID:16980503",
+            },
+            REPO_ROOT / "data" / "habitats" / "engineered" / "sulphur_autotrophic_denitrification.yaml",
+        ),
+        "marine_pelagic_zone": (
+            "ENVO:00000208",
+            "marine_pelagic_oligotrophic_prochlorococcus_sar11_cross_feeding_and_phosphonate_cycling",
+            {
+                "PMID:23789085",
+                "PMID:30742057",
+                "PMID:35254902",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "marine_pelagic_zone.yaml",
+        ),
+        "air": (
+            "ENVO:00002005",
+            "air_atmospheric_uv_desiccation_filtering_and_biological_ice_nucleation",
+            {
+                "PMID:31316133",
+                "PMID:30483227",
+            },
+            REPO_ROOT / "data" / "habitats" / "air" / "air.yaml",
+        ),
+    }
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) == 63
+    for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
+        overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
+        assert overlay_path.exists(), f"{slug}.yaml missing"
+        assert hab_path.exists(), f"{hab_path} missing"
+        doc = yaml.safe_load(overlay_path.read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(hab_path.read_text(encoding="utf-8"))
+        assert doc["identifier"] == expected_id
+        assert hab_doc["identifier"] == expected_id
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        graphs = doc["causal_graphs"]
+        assert len(graphs) == 1
+        graph = graphs[0]
+        assert graph["graph_id"] == expected_graph_id
+        nodes = {n["node_id"]: n for n in graph["nodes"]}
+        assert nodes[slug]["node_type"] == "HABITAT"
+        assert nodes[slug]["grounding"] == expected_id
+        refs = {
+            ev["reference"]
+            for edge in graph["edges"]
+            for ev in edge.get("evidence", [])
+        }
+        assert refs == expected_refs
+        assert doc["curation_history"][0]["action"] == "ADD_CAUSAL_GRAPH"
+        for edge in graph["edges"]:
+            for ev in edge.get("evidence", []):
+                snippet = ev.get("snippet", "")
+                assert "<i>" not in snippet and "</i>" not in snippet
+                assert "\u00a0" not in snippet
+
 
 
 

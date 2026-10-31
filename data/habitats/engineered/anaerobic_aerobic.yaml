@@ -19,6 +19,145 @@ source_attestations:
   source_id: gold.ecosystem:7761
   source_label: Anaerobic-Aerobic
   source_path: Engineered > Bioreactor > EBPR > Anaerobic-Aerobic
+causal_graphs:
+- graph_id: anaerobic_aerobic_ebpr_polyp_pha_dual_biopolymer_cycling
+  title: Anaerobic-aerobic EBPR volatile fatty acid uptake and dual polyphosphate-PHA
+    biopolymer cycling mechanism
+  description: Anaerobic-aerobic enhanced biological phosphorus removal (EBPR) bioreactors
+    cycle biomass between an anaerobic zone receiving volatile fatty acids (VFAs)
+    and an aerobic zone, selecting for polyphosphate-accumulating organisms (PAOs
+    including Candidatus Accumulibacter, Tetrasphaera, and Candidatus Phosphoribacter)
+    that encode polyphosphate kinase (ppk1) and hydrolyze intracellular and extracellular
+    polyphosphate anaerobically to take up VFAs as polyhydroxyalkanoates (PHAs) before
+    oxidizing PHAs aerobically to drive net luxury phosphorus removal.
+  nodes:
+  - node_id: anaerobic_aerobic
+    label: anaerobic-aerobic enhanced biological phosphorus removal bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.4a2450370b
+    description: Wastewater treatment bioreactor cycling activated sludge between
+      anaerobic VFA-fed and aerobic zones to achieve enhanced biological phosphorus
+      removal.
+  - node_id: alternating_anaerobic_vfa_loading_and_aerobic_cycling
+    label: alternating anaerobic VFA loading, hydraulic retention time, and aerobic
+      redox cycling
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Controlled anaerobic hydraulic retention time (1-4 h) and volatile
+      fatty acid loading followed by aerobic aeration stages.
+  - node_id: ebpr_pao_accumulibacter_tetrasphaera_phosphoribacter_guild
+    label: Candidatus Accumulibacter, Tetrasphaera, and Candidatus Phosphoribacter
+      PAO guild
+    node_type: COMMUNITY
+    description: Polyphosphate- and polyhydroxyalkanoate-accumulating bacterial guild
+      driving phosphorus removal in anaerobic-aerobic EBPR systems.
+  - node_id: accumulibacter_ppk1_and_nitrate_reductase_enzymes
+    label: Candidatus Accumulibacter polyphosphate kinase Ppk1 and storage polymer
+      pathway enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Polyphosphate kinase 1 (ppk1) and conserved PAO storage polymer synthesis
+      enzymes in Candidatus Accumulibacter species that catalyze polyphosphate cycling
+      in EBPR bioreactors.
+  - node_id: coupled_anaerobic_polyp_hydrolysis_pha_synthesis_and_aerobic_phosphorus_uptake
+    label: anaerobic polyphosphate hydrolysis with PHA storage and luxury aerobic
+      phosphorus uptake
+    node_type: COMMUNITY_PROCESS
+    description: Reciprocal anaerobic hydrolysis of intracellular/extracellular polyP
+      to power VFA uptake and PHA synthesis, followed by aerobic PHA oxidation to
+      drive net polyP synthesis.
+  edges:
+  - edge_id: anaerobic_aerobic_maintains_alternating_vfa_loading_and_aerobic_cycling
+    subject: anaerobic_aerobic
+    predicate: maintains
+    object: alternating_anaerobic_vfa_loading_and_aerobic_cycling
+    description: Anaerobic-aerobic EBPR configurations control anaerobic HRT and VFA
+      concentration prior to aerobic phosphorus uptake stages.
+    evidence:
+    - reference: PMID:33638876
+      snippet: The research evaluated the effects of anaerobic HRT (τAN ) and VFA
+        concentration-critical operational parameters that can be externally controlled-on
+        EBPR performance. Evaluated alone, τAN (1-4 h) exhibited no statistical effect
+        on effluent phosphorus. However, PHA increased with VFA loading and biomass
+        accumulated more phosphorus.
+      notes: Anaerobic HRT and VFA loading govern PHA synthesis and aerobic phosphorus
+        accumulation in EBPR bioreactors (PMID:33638876).
+    - reference: PMID:34134440
+      snippet: Importantly, the anaerobic-hydrolysis enhancement of intracellular
+        and extracellular ployP could promote EBPR sludge to absorb volatile fatty
+        acids (VFAs) followed by being transformed into intracellular poly-hydroxy-alkanoates
+        (PHAs).
+      notes: Anaerobic VFA absorption and aerobic polyP synthesis are coupled across
+        alternating redox stages in EBPR sludge (PMID:34134440).
+  - edge_id: alternating_vfa_and_redox_cycling_selects_for_ebpr_pao_guild
+    subject: alternating_anaerobic_vfa_loading_and_aerobic_cycling
+    predicate: selects for
+    object: ebpr_pao_accumulibacter_tetrasphaera_phosphoribacter_guild
+    description: Alternating anaerobic-aerobic EBPR operation selects for PAOs co-storing
+      polyP and PHA, including Candidatus Accumulibacter, Tetrasphaera, and Candidatus
+      Phosphoribacter.
+    evidence:
+    - reference: PMID:41432927
+      snippet: The metabolic interdependence of dual biopolymers polyphosphate (polyP)
+        and polyhydroxyalkanoates (PHA) is a defining feature of polyphosphate-accumulating
+        organisms (PAOs), the key agents enabling enhanced biological phosphorus removal
+        (EBPR). Beyond EBPR, PAOs accumulating both polyP and PHA (PHA-PAOs) in natural
+        environments remain unexplored due to limited detection tools, despite hypothesized
+        roles in nutrient cycling. This study presents a novel phenotype-targeted
+        approach integrating triple-stained fluorescence-activated cell sorting with
+        16S rRNA gene sequencing (TriFlow-Seq) to detect, quantify, and phylogenetically
+        characterize PHA-PAOs, validated by fluorescence imaging and single-cell Raman
+        spectroscopy. TriFlow-Seq of EBPR samples confirmed known PAOs, including
+        Candidatus Phosphoribacter, Tetrasphaera, and Ca. Accumulibacter, and revealed
+        new candidate PHA-PAOs within the Rhodobacteraceae family.
+      notes: TriFlow-Seq and Raman spectroscopy confirm Candidatus Accumulibacter,
+        Tetrasphaera, and Candidatus Phosphoribacter as dual polyP/PHA-accumulating
+        organisms in EBPR systems (PMID:41432927).
+    - reference: PMID:35467400
+      snippet: Based on the MiDAS global survey, "Ca. Accumulibacter" species were
+        widespread in wastewater treatment plants (WWTPs) with phosphorus removal,
+        indicating process design as a major driver for their abundance.
+      notes: EBPR process design selects for Candidatus Accumulibacter species globally
+        across phosphorus-removing treatment plants (PMID:35467400).
+  - edge_id: ebpr_pao_guild_encodes_accumulibacter_ppk1_and_nitrate_reductase_enzymes
+    subject: ebpr_pao_accumulibacter_tetrasphaera_phosphoribacter_guild
+    predicate: expresses
+    object: accumulibacter_ppk1_and_nitrate_reductase_enzymes
+    description: Candidatus Accumulibacter lineages encode the polyphosphate kinase
+      marker gene ppk1 and conserved PAO metabolic pathways while diverging in nitrate/nitrite
+      reduction genes.
+    evidence:
+    - reference: PMID:35467400
+      snippet: The ppk1 marker gene allows for a finer-scale differentiation into
+        different "types" and "clades"; nevertheless, taxonomic assignments remain
+        inconsistent across studies. Therefore, a comprehensive reevaluation is needed
+        to establish a common understanding of this genus, in terms of both naming
+        and basic conserved physiological traits. Here, we provide this reassessment
+        using a comparison of genome, ppk1, and 16S rRNA gene-based approaches from
+        comprehensive data sets. We identified 15 novel species, along with "Candidatus
+        Accumulibacter phosphatis," "Candidatus Accumulibacter delftensis," and "Candidatus
+        Accumulibacter aalborgensis."
+      notes: Petriglieri et al. 2022 (PMID:35467400) linked ppk1 and genome-resolved
+        PAO pathways to in situ storage polymer cycling in Candidatus Accumulibacter
+        phosphatis and sibling species.
+  - edge_id: ebpr_pao_guild_drives_coupled_polyp_hydrolysis_pha_synthesis_and_aerobic_phosphorus_uptake
+    subject: ebpr_pao_accumulibacter_tetrasphaera_phosphoribacter_guild
+    predicate: drives
+    object: coupled_anaerobic_polyp_hydrolysis_pha_synthesis_and_aerobic_phosphorus_uptake
+    description: PAOs hydrolyze polyP anaerobically to drive VFA uptake and PHA synthesis,
+      then hydrolyze intracellular PHAs aerobically to power extracellular and intracellular
+      polyP synthesis.
+    evidence:
+    - reference: PMID:34134440
+      snippet: The intracellular PHAs continuously hydrolyzed accompanied with the
+        average chain-length increases of the extracellular and intracellular polyP
+        during the whole aerobic stage. Additionally, the energy of the extracellular
+        polyP synthesized in situ should came from the intracellular PHAs hydrolysis.
+      notes: 31P NMR demonstrates that aerobic intracellular PHA hydrolysis powers
+        intracellular and extracellular polyP synthesis in EBPR sludge (PMID:34134440).
+    - reference: PMID:33638876
+      snippet: Aerobic phosphorus uptake increases linearly with anaerobic phosphorus
+        release, with the slope exceeding unity.
+      notes: Net phosphorus removal in anaerobic-aerobic EBPR results from aerobic
+        P uptake exceeding anaerobic P release (PMID:33638876).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -52,3 +191,11 @@ curation_history:
     > Anaerobic-Aerobic' is a path-dependent redox regime modifier lacking the EBPR
     bioreactor head noun; suppress automatic exact-synonym retention while preserving
     verbatim source provenance.
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added anaerobic_aerobic_ebpr_polyp_pha_dual_biopolymer_cycling mechanism
+    graph for anaerobic-aerobic enhanced biological phosphorus removal bioreactor
+    (habitatmech:GOLD.4a2450370b) backed by PMID:33638876, PMID:34134440, PMID:41432927,
+    and PMID:35467400.
+  llm_assisted: true

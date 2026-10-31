@@ -24,6 +24,108 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: algae_raceway_pond_paddlewheel_flashing_light_and_phycosphere_selection
+  title: Algae raceway pond paddlewheel vertical mixing, photosynthetic CO2/O2 dynamics,
+    and phycosphere bacterial selection mechanism
+  description: Open or greenhouse-enclosed algae raceway ponds use paddlewheel circulation
+    and baffle-induced vertical vortexes to cycle microalgae (such as Nannochloropsis
+    and Chlamydopodium fusiforme) between bottom dark zones and top illuminated zones
+    (flashing-light effect) while nitrate supply and open-pond exposure shape associated
+    Bacteroidetes (Saprospiraceae, NS11-12_marine group) and Alphaproteobacteria communities
+    that correlate with microalgal growth and photosynthetic oxygen and biomass production.
+  nodes:
+  - node_id: algae_raceway_pond
+    label: algae raceway pond
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.e474187df8
+    description: Shallow, recirculating open-channel photobioreactor pond driven by
+      a paddlewheel for large-scale microalgal cultivation.
+  - node_id: paddlewheel_vertical_mixing_and_diurnal_irradiance_nitrate_regime
+    label: paddlewheel-driven vertical mixing, flashing-light cycle, and nitrate regime
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Paddlewheel and chute-baffle liquid circulation controlling vertical
+      liquid velocity, dark-light cycle period, mass transfer coefficient, and dissolved
+      nitrate concentration.
+  - node_id: cultivated_microalgae_and_saprospiraceae_alphaproteobacteria_consortium
+    label: cultivated microalgae (Nannochloropsis, Chlamydopodium) and Saprospiraceae/Alphaproteobacteria
+      phycosphere consortium
+    node_type: COMMUNITY
+    description: Cultivated microalgae (Chlamydopodium fusiforme, Nannochloropsis
+      sp.) co-occurring with open-pond Bacteroidetes (Saprospiraceae, NS11-12_marine
+      group) and Alphaproteobacteria.
+  - node_id: raceway_photosynthetic_oxygen_production_and_biomass_accumulation
+    label: photosynthetic CO2 assimilation, moderate dissolved oxygen build-up (102-104%
+      sat), and microalgal biomass yield
+    node_type: COMMUNITY_PROCESS
+    description: Flashing-light-enhanced photosynthetic oxygen evolution and volumetric
+      microalgal biomass productivity with lower dissolved oxygen build-up and carbon
+      depletion than thin-layer cascades.
+  edges:
+  - edge_id: algae_raceway_pond_maintains_paddlewheel_vertical_mixing_and_irradiance_nitrate_regime
+    subject: algae_raceway_pond
+    predicate: maintains
+    object: paddlewheel_vertical_mixing_and_diurnal_irradiance_nitrate_regime
+    description: Paddlewheel speed, aeration rate, and chute baffles control vertical
+      liquid velocity (0.5 to 6.1 cm/s), mixing time, and dark-light cycle periods
+      in raceway ponds.
+    evidence:
+    - reference: PMID:25919934
+      snippet: Novel up-down chute baffles that sequentially generate clockwise and
+        anticlockwise liquid vortexes were developed to increase vertical liquid velocity
+        between the bottom dark area and the top light area in a raceway pond. The
+        vertical liquid velocity, mixing time, and mass transfer coefficient were
+        measured as functions of paddlewheel speed and air aeration rate by using
+        a particle imaging velocimeter, pH probes, and dissolved oxygen probes.
+      notes: Paddlewheel speed, air aeration rate, and chute baffles govern vertical
+        liquid velocity and mass transfer in raceway ponds (PMID:25919934).
+  - edge_id: paddlewheel_mixing_and_nitrate_regime_select_for_microalgae_and_saprospiraceae_consortium
+    subject: paddlewheel_vertical_mixing_and_diurnal_irradiance_nitrate_regime
+    predicate: selects for
+    object: cultivated_microalgae_and_saprospiraceae_alphaproteobacteria_consortium
+    description: Outdoor raceway pond cultivation and nitrate concentration structure
+      bacterial communities dominated by Bacteroidetes (Saprospiraceae, NS11-12_marine
+      group) and Alphaproteobacteria alongside cultivated microalgae.
+    evidence:
+    - reference: PMID:35166894
+      snippet: Illumina sequencing of 16S rRNA gene amplicons demonstrated that a
+        wide variety of bacteria were present in all reactor types, with predominance
+        of Bacteroidetes and Alphaproteobacteria. Bacterial communities were significantly
+        different between all reactor types (except between the horizontal tubular
+        reactor and the vertical tubular reactor) and also between runs in each reactor.
+        Bacteria common to the majority of samples included one member of the Saprospiraceae
+        family and one of the NS11-12_marine group (both Bacteroidetes).
+      notes: Outdoor pilot raceway ponds cultivating Nannochloropsis sp. CCAP211/78
+        assemble distinct Bacteroidetes (Saprospiraceae, NS11-12_marine group) and
+        Alphaproteobacteria communities correlated with nitrate concentration (PMID:35166894).
+    - reference: PMID:36905416
+      snippet: In both bioreactors, Chlamydopodium cultures grew well in the semi-continuous
+        regime using daily dilution (0.20-0.25 day-1). The biomass productivity calculated
+        per volume was significantly (about 5 times) higher in the RWPs compared to
+        the TLCs.
+      notes: Outdoor pilot raceway ponds support robust semi-continuous growth of
+        Chlamydopodium fusiforme MACC-430 (PMID:36905416).
+  - edge_id: microalgae_and_saprospiraceae_consortium_drives_raceway_photosynthetic_oxygen_and_biomass_production
+    subject: cultivated_microalgae_and_saprospiraceae_alphaproteobacteria_consortium
+    predicate: drives
+    object: raceway_photosynthetic_oxygen_production_and_biomass_accumulation
+    description: Enhanced flashing-light cycling and Saprospiraceae-associated microalgal
+      growth increase raceway pond biomass yield by 32.6% while maintaining moderate
+      dissolved oxygen saturation (102-104% sat).
+    evidence:
+    - reference: PMID:25919934
+      snippet: As a result, the dark-light cycle period was reduced to 1/12. This
+        enhanced flashing light effect with up-down chute baffles increased biomass
+        yield by 32.6% in the same raceway pond.
+      notes: Shortened dark-light cycle periods enhance the flashing-light effect
+        and increase microalgal biomass yield by 32.6% in raceway ponds (PMID:25919934).
+    - reference: PMID:36905416
+      snippet: The measured photosynthesis variables showed that the build-up of dissolved
+        oxygen concentration in the TLC was higher, up to 125-150% of saturation (%sat)
+        as compared to the RWP (102-104%sat).
+      notes: Raceway ponds maintain lower dissolved oxygen build-up (102-104% saturation)
+        and 5-fold higher volumetric biomass productivity than thin-layer cascades
+        (PMID:36905416).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -47,3 +149,10 @@ curation_history:
     REPLACE) for GOLD path 'Engineered > Artificial ecosystem > Aquaculture > Algae
     raceway pond'; supported by microalgal raceway pond microbiome literature (PMID
     35166894; DOI:10.1007/s00253-022-11815-3).
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added algae_raceway_pond_paddlewheel_flashing_light_and_phycosphere_selection
+    mechanism graph for algae raceway pond (habitatmech:GOLD.e474187df8) backed by
+    PMID:25919934, PMID:35166894, and PMID:36905416.
+  llm_assisted: true

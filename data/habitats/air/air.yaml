@@ -177,6 +177,125 @@ characteristic_taxa:
   score: 3.0
   rank: 25
   candidate_pool: 2424
+causal_graphs:
+- graph_id: air_atmospheric_uv_desiccation_filtering_and_biological_ice_nucleation
+  title: Atmospheric air UV and desiccation survival filtering and proteinaceous biological
+    ice nucleation mechanism
+  description: Atmospheric air across the convective boundary layer, troposphere,
+    and lower stratosphere (up to 38 km altitude) exposes aerosolized microorganisms
+    to severe desiccation, subzero freezing, and shortwave ultraviolet radiation,
+    filtering for ATP-viable bacteria and airborne microalgae (Trebouxiophyceae, Chlorophyceae,
+    and Stramenopiles) that tolerate desiccation and freezing and produce cell-associated
+    proteinaceous ice nucleation active (INA) compounds catalyzing ice formation at
+    warm subzero temperatures (>= -6 degrees C) to promote cloud and precipitation
+    deposition.
+  nodes:
+  - node_id: air
+    label: air
+    node_type: HABITAT
+    grounding: ENVO:00002005
+    description: Atmospheric gas medium spanning the convective boundary layer, free
+      troposphere, and stratosphere through which microbial bioaerosols are dispersed.
+  - node_id: tropospheric_and_stratospheric_desiccation_freezing_and_shortwave_uv_stress
+    label: tropospheric and stratospheric desiccation, subzero freezing, and shortwave
+      ultraviolet radiation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Severe atmospheric physical stressors including desiccation, subzero
+      freezing temperatures, and shortwave UV radiation across altitudes up to 38
+      km.
+  - node_id: desiccation_and_uv_tolerant_airborne_bacterial_and_microalgal_assemblage
+    label: desiccation-, freezing-, and UV-tolerant airborne bacterial and microalgal
+      bioaerosol assemblage
+    node_type: COMMUNITY
+    description: Viable atmospheric bacteria and airborne microalgae (Trebouxiophyceae,
+      Chlorophyceae, and Stramenopiles) adapted to survive desiccation, freezing,
+      and shortwave UV radiation during aeolian dispersal.
+  - node_id: cell_associated_proteinaceous_ice_nucleation_active_compounds
+    label: cell-associated proteinaceous ice nucleation active (INA) proteins
+    node_type: GENE_OR_PROTEIN
+    description: Cell-associated proteinaceous ice nucleation active (INA) macromolecules
+      produced by airborne microorganisms and microalgae that nucleate ice at warm
+      subzero temperatures.
+  - node_id: warm_subzero_biological_ice_nucleation_and_cloud_deposition
+    label: warm subzero (>= -6 degrees C) biological ice nucleation and cloud/precipitation
+      catalysis
+    node_type: COMMUNITY_PROCESS
+    description: Catalysis of cloud ice and rain formation at temperatures >= -6 degrees
+      C (and >-15 degrees C) that alters cloud properties and accelerates wet deposition
+      of airborne microbes.
+  edges:
+  - edge_id: air_imposes_tropospheric_and_stratospheric_desiccation_freezing_and_shortwave_uv_stress
+    subject: air
+    predicate: maintains
+    object: tropospheric_and_stratospheric_desiccation_freezing_and_shortwave_uv_stress
+    description: Air masses from the convective boundary layer through the troposphere
+      and stratosphere (3-38 km altitude) subject dispersed bioaerosols to desiccation,
+      freezing, and shortwave UV radiation.
+    evidence:
+    - reference: PMID:31316133
+      snippet: The cell concentrations at altitudes between 3 and 29 km were highly
+        similar (2-5 × 105 cells m-3) and approximately threefold lower than those
+        observed in the convective boundary layer (CBL; 1 × 106 cells m-3), decreasing
+        to 8 × 104 cells m-3 at 35-38 km.
+      notes: Bryan et al. 2019 (ISME J, PMID:31316133) quantified microbial bioaerosol
+        concentrations and atmospheric stressors across the convective boundary layer,
+        troposphere, and stratosphere up to 38 km.
+    - reference: PMID:30483227
+      snippet: In addition, the effect of desiccation was investigated for the aquatic
+        strains and was found to constitute a limiting factor for their atmospheric
+        dispersal.
+      notes: Tesson & Santl-Temkiv 2018 (Front Microbiol, PMID:30483227) show that
+        desiccation and freezing limit survival during atmospheric dispersal.
+  - edge_id: atmospheric_stress_selects_for_desiccation_and_uv_tolerant_airborne_assemblage
+    subject: tropospheric_and_stratospheric_desiccation_freezing_and_shortwave_uv_stress
+    predicate: selects for
+    object: desiccation_and_uv_tolerant_airborne_bacterial_and_microalgal_assemblage
+    description: Atmospheric transport selects for ATP-viable bacteria with extreme
+      tolerance to desiccation and shortwave UV radiation alongside freezing-tolerant
+      airborne microalgae (Trebouxiophyceae, Chlorophyceae, Stramenopiles).
+    evidence:
+    - reference: PMID:31316133
+      snippet: The detection of adenosine triphosphate (ATP) and recovery of bacteria
+        possessing extreme tolerance to desiccation and shortwave ultraviolet radiation
+        confirmed that certain microorganisms have the capacity to persist at lower
+        altitudes of the stratosphere.
+      notes: Viable bacteria recovered from tropospheric and stratospheric air masses
+        exhibit extreme tolerance to desiccation and shortwave UV radiation (PMID:31316133).
+    - reference: PMID:30483227
+      snippet: While there were no deleterious effects of freezing on the viability
+        of airborne microalgae, some of the aquatic strains were killed by freezing.
+      notes: Airborne microalgae (Trebouxiophyceae, Chlorophyceae, Stramenopiles)
+        maintain viability after freezing and tolerate aeolian dispersal (PMID:30483227).
+  - edge_id: airborne_assemblage_produces_cell_associated_proteinaceous_ice_nucleation_active_compounds
+    subject: desiccation_and_uv_tolerant_airborne_bacterial_and_microalgal_assemblage
+    predicate: expresses
+    object: cell_associated_proteinaceous_ice_nucleation_active_compounds
+    description: Airborne microorganisms and ~17% of airborne microalgal isolates
+      produce proteinaceous, cell-associated ice nucleation active (INA) compounds.
+    evidence:
+    - reference: PMID:30483227
+      snippet: We show that ∼17% of airborne isolates, which belonged to taxa Trebouxiphyceae,
+        Chlorophyceae and Stramenopiles, were INA. A large fraction of INA strains
+        (over 40%) had ice nucleation activity at temperatures ≥-6°C. We found that
+        50% of aquatic microalgae were INA, but the majority were active at temperatures
+        <-12°C. Most INA compounds produced by microalgae were proteinaceous and associated
+        with the cells.
+      notes: Airborne microalgal isolates produce cell-associated proteinaceous INA
+        compounds active at warm subzero temperatures (PMID:30483227).
+  - edge_id: proteinaceous_ice_nucleation_compounds_drive_warm_subzero_ice_nucleation_and_cloud_deposition
+    subject: cell_associated_proteinaceous_ice_nucleation_active_compounds
+    predicate: drives
+    object: warm_subzero_biological_ice_nucleation_and_cloud_deposition
+    description: Cell-associated proteinaceous INA compounds catalyze ice nucleation
+      at >= -6 degrees C (and >-15 degrees C), promoting cloud and rain formation
+      and influencing microbial deposition patterns.
+    evidence:
+    - reference: PMID:30483227
+      snippet: Diverse airborne microorganisms are known to produce ice nucleation
+        active (INA) compounds, which catalyze cloud and rain formation, and thus
+        alter cloud properties and their own deposition patterns.
+      notes: Biological INA compounds catalyze cloud and rain formation and modulate
+        atmospheric microbial deposition (PMID:30483227).
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -201,3 +320,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added air_atmospheric_uv_desiccation_filtering_and_biological_ice_nucleation
+    mechanism graph for air (ENVO:00002005) backed by PMID:31316133 and PMID:30483227.
+  llm_assisted: true
