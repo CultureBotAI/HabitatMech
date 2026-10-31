@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/gold_parent_exclusions.tsv
+  slug: gold_parent_exclusions
+session:
+  id: 2026-10-31T081500Z-antigravity-227601
+  timestamp: '2026-10-31T08:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2276
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - gold_parent_exclusions
+  - decisions
+  - term_requests
+  summary: Repair parent_habitats and grounding across 8 records in ear_discharge to
+    empyema cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-ear-discharge-to-empyema-parent-grounding-repairs
+    (8 findings from Stage 4 cohort review 20261026T083100Z-ear_discharge_to_empyema-category).
+    Added 8 guarded rows to curation/gold_parent_exclusions.tsv for habitatmech:GOLD.4f987722bc
+    (BTO:0002323 eccrine_sweat_gland, excluding habitatmech:GOLD.dc86c8917c), habitatmech:GOLD.e21234318e
+    (eczema, excluding habitatmech:GOLD.4b37ab4b76), habitatmech:GOLD.2047d759aa
+    (effusion, excluding habitatmech:GOLD.51e593a6a4), habitatmech:GOLD.279140e15d
+    (effusion__ef80da5d, excluding habitatmech:GOLD.33c4a7e711), habitatmech:GOLD.55552c8f52
+    (UBERON:3010636 egg_capsule, excluding habitatmech:GOLD.3c7ab95a73), habitatmech:GOLD.7b8cf8839b
+    (eggs__79d5874d, excluding habitatmech:GOLD.d23207689e), habitatmech:GOLD.d6c49dfec6
+    (UBERON:0001996 elastic_cartilage_tissue, excluding habitatmech:GOLD.d8b9309d5e),
+    and habitatmech:GOLD.818c9729e2 (empyema, excluding UBERON:0002402). Also updated
+    curation/decisions.tsv and curation/term_requests.tsv for habitatmech:GOLD.2047d759aa
+    (effusion) and habitatmech:GOLD.279140e15d (effusion__ef80da5d) from NARROW UBERON:0000175
+    (pleural effusion) to UNGROUNDED with genus parent UBERON:0006314 (bodily fluid)
+    and parent_mode REPLACE, and updated curation/term_requests.tsv for habitatmech:GOLD.818c9729e2
+    (empyema) to replace cavity parent UBERON:0002402 (pleural cavity) with UBERON:0000175
+    (pleural effusion) and parent_mode REPLACE.'

@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-10-31T081510Z-antigravity-227701
+  timestamp: '2026-10-31T08:15:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2276
+  - https://github.com/CultureBotAI/HabitatMech/issues/2277
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  summary: Exclude bare GOLD source leaf labels from exact_synonyms across 5 records
+    and newly defined middle ear effusion records in ear_discharge to empyema cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-ear-discharge-to-empyema-exact-synonym-repairs
+    (5 findings from Stage 4 cohort review 20261026T083100Z-ear_discharge_to_empyema-category)
+    plus bare-label guards for newly defined middle ear effusion records (#2276).
+    Updated curation/term_requests.tsv and curation/term_requests/envo_robot_template.tsv
+    for habitatmech:GOLD.e1f435d44b (echinoderm-associated environment), habitatmech:GOLD.e21234318e
+    (human eczematous skin lesion), habitatmech:GOLD.32330da5da (brown algal embryo),
+    habitatmech:GOLD.9f162205a6 (fish embryo-associated environment), and habitatmech:GOLD.818c9729e2
+    (mammalian pleural empyema exudate) to remove bare host-clade, disease, or generic
+    embryo labels from exact_synonyms, and added 7 guarded rows to curation/definition_source_label_exclusions.tsv
+    (habitatmech:GOLD.e1f435d44b, habitatmech:GOLD.e21234318e, habitatmech:GOLD.2047d759aa,
+    habitatmech:GOLD.279140e15d, habitatmech:GOLD.32330da5da, habitatmech:GOLD.9f162205a6,
+    and habitatmech:GOLD.818c9729e2) to prevent displaced-source-label exact-synonym
+    fallback while preserving all verbatim GOLD source attestations.'

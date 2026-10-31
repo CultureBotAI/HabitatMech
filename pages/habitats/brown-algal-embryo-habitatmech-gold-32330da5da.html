@@ -76,7 +76,7 @@ a grounding.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Embryo <span class="meta">— HabitatMech curation</span></li><li>Phaeophyceae embryo <span class="meta">— HabitatMech curation</span></li></ul>
+<li>Phaeophyceae embryo <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -91,6 +91,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-31 · claude-opus-5</span>
     <p>Defined as &#39;brown algal embryo&#39; under ENVO:01001000 &#39;environmental system determined by an organism&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; the report&#39;s proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Labelled &#39;brown algal embryo&#39; and not &#39;embryo&#39; on the report&#39;s explicit instruction: the bare label must not be the definiendum, because in GOLD &#39;Embryo&#39; is a reusable life-stage slot - the same thing MIxS models as host_life_stage - and two sibling nodes carry it under Red algae and under Fish. This is the #161 case where two records share a source label and are NOT the same concept: the differentia is already in the path, so each gets its own label and no shared-term mechanism is needed. Genus is ENVO:01001000 rather than the plant or animal branch because a brown alga is a stramenopile, neither plant nor animal; the report notes ENVO has no algae-associated environment class at all, which is the real gap here.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-31 · antigravity</span>
+    <p>Omitted automatic retention of displaced source label &#39;Embryo&#39; when defining habitatmech:GOLD.32330da5da as &#39;brown algal embryo&#39;. Verbatim source attestations are preserved. Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2277" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2277</a> : The displaced label Embryo is an unqualified developmental-stage label outside Host-associated &gt; Algae &gt; Brown Algae &gt; Embryo. Remove only the bare stage exact alias and suppress exact-alias fallback; preserve verbatim source provenance, definition, Phaeophyceae embryo synonym, genera, stage xref and native status.</p>
   </li>
 </ol>
 

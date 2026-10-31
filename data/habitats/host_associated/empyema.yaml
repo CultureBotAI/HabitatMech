@@ -1,20 +1,17 @@
 identifier: habitatmech:GOLD.818c9729e2
 label: mammalian pleural empyema exudate
-definition: A pleural cavity purulent exudate accumulated within the mammalian pleural
-  space during bacterial pleuropneumonia or thoracic infection (pleural empyema).
+definition: A pleural effusion which consists of purulent exudate accumulated within
+  the pleural cavity of a mammal as a result of bacterial or fungal pleural infection.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Empyema
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: pleural empyema fluid
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:0002402
+- UBERON:0000175
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6844
@@ -25,15 +22,49 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-10-17T00:00:00Z'
+- timestamp: '2026-10-31T00:00:00Z'
   curator: antigravity
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined mammalian
-    pleural empyema exudate under UBERON:0002402 ''pleural cavity''; supported by
-    pleural empyema 16S and metagenomic studies (PMID 30915025). (source concept habitatmech:GOLD.818c9729e2)'
-- timestamp: '2026-10-17T00:00:00Z'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2276 and https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : Defined mammalian pleural empyema exudate under UBERON:0000175 ''pleural effusion''
+    with parent_mode REPLACE (excluding anatomical cavity parent UBERON:0002402 ''pleural
+    cavity'') and excluded bare disease label ''Empyema'' from exact_synonyms; supported
+    by pleural empyema 16S and metagenomic studies (PMID 30915025; DOI:10.1093/cid/ciy579).
+    Path: Host-associated > Mammals > Respiratory system > Pleural cavity > Empyema
+    (source concept habitatmech:GOLD.818c9729e2)'
+- timestamp: '2026-10-31T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'mammalian pleural empyema exudate' under UBERON:0002402 'pleural
-    cavity'. Defined mammalian pleural empyema exudate under UBERON:0002402 'pleural
-    cavity'; supported by pleural empyema 16S and metagenomic studies (PMID 30915025).
+  changes: Defined as 'mammalian pleural empyema exudate' under UBERON:0000175 'pleural
+    effusion'. Defined mammalian pleural empyema exudate under UBERON:0000175 'pleural
+    effusion' (parent_mode REPLACE) for GOLD path 'Host-associated > Mammals > Respiratory
+    system > Pleural cavity > Empyema'; supported by pleural empyema 16S and metagenomic
+    studies (PMID 30915025; DOI:10.1093/cid/ciy579).
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution UBERON:0002402 for habitatmech:GOLD.818c9729e2
+    (Host-associated > Mammals > Respiratory system > Pleural cavity > Empyema). Review
+    https://github.com/CultureBotAI/HabitatMech/issues/2276 : Eccrine sweat gland
+    is an exocrine skin appendage, not the entire human integumentary system; eczematous
+    skin lesion is a cutaneous lesion, not the whole skin organ; middle ear effusion
+    is a fluid accumulation, not the middle ear cavity/organ; egg capsule is a secreted
+    reproductive capsule, not the entire annelid reproductive system; insect egg is
+    a reproductive unit, not an entire ootheca/egg mass; elastic cartilage is a cartilage
+    tissue type, not the entire skeletal cartilage assemblage; pleural empyema exudate
+    is a purulent exudate, not the pleural cavity. Exclude only exact guarded GOLD
+    source-path contributions, preserving independent genera and all source observations.
+    Exact target habitatmech:GOLD.818c9729e2. Shared mapping endpoints #1398 remain
+    separate.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Empyema'' when
+    defining habitatmech:GOLD.818c9729e2 as ''mammalian pleural empyema exudate''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : The displaced label Empyema names the clinical condition without host or anatomical
+    restriction outside Host-associated > Mammals > Respiratory system > Pleural cavity
+    > Empyema. Remove only the bare condition exact alias and suppress exact-alias
+    fallback; preserve verbatim source provenance, definition, pleural empyema fluid
+    synonym, genera and native status.'
