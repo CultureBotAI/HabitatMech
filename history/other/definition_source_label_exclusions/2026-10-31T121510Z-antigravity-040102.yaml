@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-10-31T121510Z-antigravity-040102
+  timestamp: '2026-10-31T12:15:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  summary: Guard 5 displaced bioprocess or redox-modifier GOLD source labels from automatic exact-synonym retention
+  details: 'Cycle 4 Stage 1 (add_records): Added 5 rows to curation/definition_source_label_exclusions.tsv (habitatmech:GOLD.3af6ca6cc3 SSF (Solid state fermentation) -> solid-state fermentation bioreactor; habitatmech:GOLD.4a2450370b Anaerobic-Aerobic -> anaerobic-aerobic enhanced biological phosphorus removal bioreactor; habitatmech:GOLD.5f3cbd7563 Partial-Nitrification/Anammox (PNA) -> partial-nitrification anammox bioreactor; habitatmech:GOLD.c07aaa941d Anaerobic-Aerobic -> anaerobic-aerobic sequencing batch enhanced biological phosphorus removal bioreactor; and habitatmech:GOLD.f07ee97491 Sulphur Autotrophic Denitrification -> sulfur autotrophic denitrification bioreactor) so that displaced bioprocess or redox-regime modifier GOLD source labels are retained as RELATED_SYNONYM from GOLD rather than automatically promoted to EXACT_SYNONYM while preserving verbatim source provenance.'

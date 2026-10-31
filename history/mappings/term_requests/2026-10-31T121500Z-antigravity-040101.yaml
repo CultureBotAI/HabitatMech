@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: term_requests
+session:
+  id: 2026-10-31T121500Z-antigravity-040101
+  timestamp: '2026-10-31T12:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - label
+  - definition
+  - parent_habitats
+  - curation_history
+  summary: Author literature-backed microbial habitat definitions and item-level decisions for 8 remaining admissible unscreened GOLD engineered habitats
+  details: 'Cycle 4 Stage 1 (add_records): Exhausted the remaining unconstrained bounded frontier of CLASS-swept ungrounded GOLD habitat concepts by authoring Aristotelian genus-differentia definitions, ENVO parent_class attachments, exact synonyms, and item-level CONFIRM_UNGROUNDED rationales with PubMed/DOI literature citations for all 8 remaining admissible unconstrained engineered microbial habitat records (habitatmech:GOLD.013b99db03 spacecraft assembly cleanroom under ENVO:03600000 cleanroom; habitatmech:GOLD.0d77d00b06 upflow anaerobic sludge blanket bioreactor under ENVO:00002123 bioreactor; habitatmech:GOLD.3af6ca6cc3 solid-state fermentation bioreactor under ENVO:00002123 bioreactor; habitatmech:GOLD.4a2450370b anaerobic-aerobic enhanced biological phosphorus removal bioreactor under ENVO:00002123 bioreactor; habitatmech:GOLD.5f3cbd7563 partial-nitrification anammox bioreactor under ENVO:00002123 bioreactor; habitatmech:GOLD.c07aaa941d anaerobic-aerobic sequencing batch enhanced biological phosphorus removal bioreactor under ENVO:00002123 bioreactor; habitatmech:GOLD.e474187df8 algae raceway pond under ENVO:03600092 artificial pond; and habitatmech:GOLD.f07ee97491 sulfur autotrophic denitrification bioreactor under ENVO:00002123 bioreactor) in curation/term_requests.tsv and curation/decisions.tsv.'
