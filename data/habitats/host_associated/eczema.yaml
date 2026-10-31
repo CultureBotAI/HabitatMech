@@ -8,15 +8,11 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Eczema
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: atopic dermatitis skin lesion
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100003
-- habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7012
@@ -37,5 +33,32 @@ curation_history:
   curator: antigravity
   action: DEFINED
   changes: Defined as 'human eczematous skin lesion' under ENVO:2100003 'skin environment'.
-    Defined human eczematous skin lesion under ENVO:2100003 'skin environment'; supported
-    by atopic dermatitis flare microbiome studies (PMID 22484416).
+    Defined human eczematous skin lesion under ENVO:2100003 'skin environment' (parent_mode
+    REPLACE) to exclude whole-organ GOLD parent Skin; supported by atopic dermatitis
+    flare microbiome studies (PMID 22484416).
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    for habitatmech:GOLD.e21234318e (Host-associated > Mammals: Human > Integumentary
+    system > Skin > Eczema). Review https://github.com/CultureBotAI/HabitatMech/issues/2276
+    : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary
+    system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ;
+    middle ear effusion is a fluid accumulation, not the middle ear cavity/organ;
+    egg capsule is a secreted reproductive capsule, not the entire annelid reproductive
+    system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic
+    cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage;
+    pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude
+    only exact guarded GOLD source-path contributions, preserving independent genera
+    and all source observations. Exact target habitatmech:GOLD.e21234318e. Shared
+    mapping endpoints #1398 remain separate.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Eczema'' when
+    defining habitatmech:GOLD.e21234318e as ''human eczematous skin lesion''. Verbatim
+    source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : The displaced label names the dermatological disease (Eczema), not the human
+    eczematous skin lesion habitat. Remove only the bare disease exact alias and suppress
+    exact-alias fallback; preserve verbatim source provenance, definition, atopic
+    dermatitis skin lesion synonym, genera and native status.'

@@ -61,7 +61,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/skin-environment-envo-2100003.html">skin environment</a>      <code class="curie">ENVO:2100003</code></li>
-  <li><a href="../habitats/skin-habitatmech-gold-4b37ab4b76.html">Skin</a>      <code class="curie">habitatmech:GOLD.4b37ab4b76</code></li>
 </ul>
 
 
@@ -69,7 +68,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Eczema <span class="meta">— HabitatMech curation</span></li><li>atopic dermatitis skin lesion <span class="meta">— HabitatMech curation</span></li></ul>
+<li>atopic dermatitis skin lesion <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -83,7 +82,17 @@ from several source concepts can carry one decision per concept.</p>
   <li>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-10-17 · antigravity</span>
-    <p>Defined as &#39;human eczematous skin lesion&#39; under ENVO:2100003 &#39;skin environment&#39;. Defined human eczematous skin lesion under ENVO:2100003 &#39;skin environment&#39;; supported by atopic dermatitis flare microbiome studies (PMID 22484416).</p>
+    <p>Defined as &#39;human eczematous skin lesion&#39; under ENVO:2100003 &#39;skin environment&#39;. Defined human eczematous skin lesion under ENVO:2100003 &#39;skin environment&#39; (parent_mode REPLACE) to exclude whole-organ GOLD parent Skin; supported by atopic dermatitis flare microbiome studies (PMID 22484416).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-31 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 for habitatmech:GOLD.e21234318e (Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Eczema). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2276" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2276</a> : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ; middle ear effusion is a fluid accumulation, not the middle ear cavity/organ; egg capsule is a secreted reproductive capsule, not the entire annelid reproductive system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage; pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.e21234318e. Shared mapping endpoints #1398 remain separate.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-31 · antigravity</span>
+    <p>Omitted automatic retention of displaced source label &#39;Eczema&#39; when defining habitatmech:GOLD.e21234318e as &#39;human eczematous skin lesion&#39;. Verbatim source attestations are preserved. Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2277" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2277</a> : The displaced label names the dermatological disease (Eczema), not the human eczematous skin lesion habitat. Remove only the bare disease exact alias and suppress exact-alias fallback; preserve verbatim source provenance, definition, atopic dermatitis skin lesion synonym, genera and native status.</p>
   </li>
 </ol>
 

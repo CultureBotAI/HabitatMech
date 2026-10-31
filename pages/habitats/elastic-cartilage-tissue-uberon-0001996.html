@@ -61,7 +61,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0011589">non-mineralized cartilage tissue</a>      <code class="curie">UBERON:0011589</code></li>
-  <li><a href="../habitats/cartilage-habitatmech-gold-d8b9309d5e.html">Cartilage</a>      <code class="curie">habitatmech:GOLD.d8b9309d5e</code></li>
 </ul>
 
 
@@ -79,6 +78,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Grounded to UBERON:0001996 &#39;elastic cartilage tissue&#39; (EXACT). Compound-path screen (#12, #97): the GOLD leaf alone names nothing, or the wrong thing — every search route reads it in isolation, which is why the class-level sweep recorded no match. The last two path steps together, &#39;Cartilage &gt; Elastic&#39;, name elastic cartilage tissue exactly. The term was not in the vendored slice, so this decision is what pulls it in (#97) — extraction reads decisions.tsv and vendors every term it references. (source concept habitatmech:GOLD.d6c49dfec6)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-31 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.d8b9309d5e for habitatmech:GOLD.d6c49dfec6 (Host-associated &gt; Mammals &gt; Skeletal system &gt; Cartilage &gt; Elastic). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2276" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2276</a> : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ; middle ear effusion is a fluid accumulation, not the middle ear cavity/organ; egg capsule is a secreted reproductive capsule, not the entire annelid reproductive system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage; pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0001996. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

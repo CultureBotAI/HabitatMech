@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000369
-- habitatmech:GOLD.d23207689e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7140
@@ -40,7 +39,8 @@ curation_history:
   action: DEFINED
   changes: 'Defined as ''insect egg'' under BTO:0000369 ''egg''. ITEM curation: GOLD
     ''Host-associated > Arthropoda: Insects > Ootheca/Egg mass > Eggs'' denotes insect
-    eggs within an egg mass or ootheca. Define under BTO:0000369 (egg) and exclude
+    eggs within an egg mass or ootheca. Define under BTO:0000369 (egg) with parent_mode
+    REPLACE to exclude containing ootheca parent habitatmech:GOLD.d23207689e and exclude
     bare ''Eggs'' (PMID 25085349; DOI:10.1038/ismej.2014.129). Path: Host-associated
     > Arthropoda: Insects > Ootheca/Egg mass > Eggs'
 - timestamp: '2026-10-17T00:00:00Z'
@@ -52,3 +52,19 @@ curation_history:
     Insects > Ootheca/Egg mass > Eggs'' is context-dependent, ambiguous, or names
     a host/disease/process rather than the defined habitat ''insect egg''; suppress
     automatic exact-synonym retention while preserving verbatim source provenance.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d23207689e
+    for habitatmech:GOLD.7b8cf8839b (Host-associated > Arthropoda: Insects > Ootheca/Egg
+    mass > Eggs). Review https://github.com/CultureBotAI/HabitatMech/issues/2276 :
+    Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary
+    system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ;
+    middle ear effusion is a fluid accumulation, not the middle ear cavity/organ;
+    egg capsule is a secreted reproductive capsule, not the entire annelid reproductive
+    system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic
+    cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage;
+    pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude
+    only exact guarded GOLD source-path contributions, preserving independent genera
+    and all source observations. Exact target habitatmech:GOLD.7b8cf8839b. Shared
+    mapping endpoints #1398 remain separate.'

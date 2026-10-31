@@ -1,28 +1,74 @@
 identifier: habitatmech:GOLD.279140e15d
-label: Effusion
+label: mammalian middle ear effusion
+definition: A bodily fluid which is a serous, mucoid, or purulent fluid accumulated
+  within the middle ear cavity of a mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: mammalian middle ear fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mammalian tympanic cavity effusion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- UBERON:0000175
-- habitatmech:GOLD.33c4a7e711
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6852
   source_label: Effusion
   source_path: Host-associated > Mammals > Auditory/Hearing system > Middle ear >
     Effusion
-  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'UBERON:0000175 ''pleural effusion'' attached as a parent, not adopted
-    as the identity (NARROW). GOLD''s Effusion is generic; UBERON only offers the
-    pleural case, which is narrower, so it is recorded as a parent rather than the
-    identity. Path: Host-associated > Mammals > Auditory/Hearing system > Middle ear
-    > Eff (source concept habitatmech:GOLD.279140e15d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2276 : GOLD ''Host-associated
+    > Mammals > Auditory/Hearing system > Middle ear > Effusion'' denotes mammalian
+    middle ear effusion (fluid accumulated in the middle ear cavity), not UBERON:0000175
+    ''pleural effusion'' (which is anatomically restricted to the thoracic pleural
+    cavity). Define under UBERON:0006314 ''bodily fluid'' with parent_mode REPLACE
+    and exclude containing cavity parent habitatmech:GOLD.33c4a7e711 and bare source
+    label ''Effusion'' (PMID 28529509; DOI:10.1371/journal.pone.0177544). Path: Host-associated
+    > Mammals > Auditory/Hearing system > Middle ear > Effusion (source concept habitatmech:GOLD.279140e15d)'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'mammalian middle ear effusion' under UBERON:0006314 'bodily
+    fluid'. Defined mammalian middle ear effusion under UBERON:0006314 'bodily fluid'
+    (parent_mode REPLACE) for GOLD path 'Host-associated > Mammals > Auditory/Hearing
+    system > Middle ear > Effusion'; supported by mammalian otitis media effusion
+    microbiome studies (PMID 28529509; DOI:10.1371/journal.pone.0177544).
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.33c4a7e711
+    for habitatmech:GOLD.279140e15d (Host-associated > Mammals > Auditory/Hearing
+    system > Middle ear > Effusion). Review https://github.com/CultureBotAI/HabitatMech/issues/2276
+    : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary
+    system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ;
+    middle ear effusion is a fluid accumulation, not the middle ear cavity/organ;
+    egg capsule is a secreted reproductive capsule, not the entire annelid reproductive
+    system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic
+    cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage;
+    pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude
+    only exact guarded GOLD source-path contributions, preserving independent genera
+    and all source observations. Exact target habitatmech:GOLD.279140e15d. Shared
+    mapping endpoints #1398 remain separate.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Effusion'' when
+    defining habitatmech:GOLD.279140e15d as ''mammalian middle ear effusion''. Verbatim
+    source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2276
+    : The displaced label Effusion is context-dependent outside Host-associated >
+    Mammals > Auditory/Hearing system > Middle ear > Effusion. Suppress automatic
+    exact-alias fallback while preserving verbatim source provenance, definition,
+    genera and native status.'

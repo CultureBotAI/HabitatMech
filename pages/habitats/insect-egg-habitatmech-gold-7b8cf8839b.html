@@ -61,7 +61,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/BTO_0000369">egg</a>      <code class="curie">BTO:0000369</code></li>
-  <li><a href="../habitats/insect-ootheca-habitatmech-gold-d23207689e.html">insect ootheca</a>      <code class="curie">habitatmech:GOLD.d23207689e</code></li>
 </ul>
 
 
@@ -83,12 +82,17 @@ from several source concepts can carry one decision per concept.</p>
   <li>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-10-17 · antigravity</span>
-    <p>Defined as &#39;insect egg&#39; under BTO:0000369 &#39;egg&#39;. ITEM curation: GOLD &#39;Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs&#39; denotes insect eggs within an egg mass or ootheca. Define under BTO:0000369 (egg) and exclude bare &#39;Eggs&#39; (PMID 25085349; DOI:10.1038/ismej.2014.129). Path: Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs</p>
+    <p>Defined as &#39;insect egg&#39; under BTO:0000369 &#39;egg&#39;. ITEM curation: GOLD &#39;Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs&#39; denotes insect eggs within an egg mass or ootheca. Define under BTO:0000369 (egg) with parent_mode REPLACE to exclude containing ootheca parent habitatmech:GOLD.d23207689e and exclude bare &#39;Eggs&#39; (PMID 25085349; DOI:10.1038/ismej.2014.129). Path: Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs</p>
   </li>
   <li>
     <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
     <span class="meta">2026-10-17 · antigravity</span>
     <p>Omitted automatic retention of displaced source label &#39;Eggs&#39; when defining habitatmech:GOLD.7b8cf8839b as &#39;insect egg&#39;. Verbatim source attestations are preserved. Displaced GOLD source label &#39;Eggs&#39; in path &#39;Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs&#39; is context-dependent, ambiguous, or names a host/disease/process rather than the defined habitat &#39;insect egg&#39;; suppress automatic exact-synonym retention while preserving verbatim source provenance.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-31 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.d23207689e for habitatmech:GOLD.7b8cf8839b (Host-associated &gt; Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2276" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2276</a> : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ; middle ear effusion is a fluid accumulation, not the middle ear cavity/organ; egg capsule is a secreted reproductive capsule, not the entire annelid reproductive system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage; pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.7b8cf8839b. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

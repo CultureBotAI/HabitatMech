@@ -8,9 +8,6 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Embryo
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: fish egg-associated environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
@@ -59,3 +56,14 @@ curation_history:
     path but no organism reaches it, so the justification rests on external literature,
     not on attestation. UBERON:0000922 is the organism at a stage and stays an xref,
     never the identity (#99, #112).'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Embryo'' when
+    defining habitatmech:GOLD.9f162205a6 as ''fish embryo-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : The displaced label Embryo is an unqualified organismal developmental-stage
+    label outside Host-associated > Fish > Embryo. Remove only the bare stage exact
+    alias and suppress exact-alias fallback; preserve verbatim source provenance,
+    definition, fish egg-associated environment synonym, genera, stage xref and native
+    status.'

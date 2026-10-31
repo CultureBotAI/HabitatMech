@@ -48,8 +48,8 @@ parameters rather than flattening them into one unsupported claim.
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
 | HOST_ASSOCIATED | 1,655 | | EXACT | 1,054 |
-| ENGINEERED | 488 | | UNGROUNDED | 953 |
-| AQUATIC | 468 | | NARROW | 993 |
+| ENGINEERED | 488 | | UNGROUNDED | 955 |
+| AQUATIC | 468 | | NARROW | 991 |
 | TERRESTRIAL | 353 | | NOT_APPLICABLE | 105 |
 | OTHER | 175 | | CLOSE | 92 |
 | FOOD | 59 | | BROAD | 12 |

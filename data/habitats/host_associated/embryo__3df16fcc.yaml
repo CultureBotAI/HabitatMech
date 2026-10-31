@@ -8,9 +8,6 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Embryo
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: Phaeophyceae embryo
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
@@ -60,3 +57,13 @@ curation_history:
     needed. Genus is ENVO:01001000 rather than the plant or animal branch because
     a brown alga is a stramenopile, neither plant nor animal; the report notes ENVO
     has no algae-associated environment class at all, which is the real gap here.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Embryo'' when
+    defining habitatmech:GOLD.32330da5da as ''brown algal embryo''. Verbatim source
+    attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : The displaced label Embryo is an unqualified developmental-stage label outside
+    Host-associated > Algae > Brown Algae > Embryo. Remove only the bare stage exact
+    alias and suppress exact-alias fallback; preserve verbatim source provenance,
+    definition, Phaeophyceae embryo synonym, genera, stage xref and native status.'

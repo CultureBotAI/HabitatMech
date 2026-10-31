@@ -14,7 +14,6 @@ synonyms:
 parent_habitats:
 - BTO:0001331
 - BTO:0002324
-- habitatmech:GOLD.dc86c8917c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6860
@@ -35,3 +34,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.dc86c8917c
+    for habitatmech:GOLD.4f987722bc (Host-associated > Mammals: Human > Integumentary
+    system > Eccrine sweat glands). Review https://github.com/CultureBotAI/HabitatMech/issues/2276
+    : Eccrine sweat gland is an exocrine skin appendage, not the entire human integumentary
+    system; eczematous skin lesion is a cutaneous lesion, not the whole skin organ;
+    middle ear effusion is a fluid accumulation, not the middle ear cavity/organ;
+    egg capsule is a secreted reproductive capsule, not the entire annelid reproductive
+    system; insect egg is a reproductive unit, not an entire ootheca/egg mass; elastic
+    cartilage is a cartilage tissue type, not the entire skeletal cartilage assemblage;
+    pleural empyema exudate is a purulent exudate, not the pleural cavity. Exclude
+    only exact guarded GOLD source-path contributions, preserving independent genera
+    and all source observations. Exact target BTO:0002323. Shared mapping endpoints
+    #1398 remain separate.'

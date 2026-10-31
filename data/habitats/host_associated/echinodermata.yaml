@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Echinodermata
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 - habitatmech:GOLD.4d792ac724
@@ -74,3 +70,13 @@ curation_history:
     construction #213 removed for ''Bivalvia-associated environment''. It passes the
     guard added there because it does not squash to the requested label, which is
     why that guard is not sufficient on its own. The GOLD source label is kept.'
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Echinodermata''
+    when defining habitatmech:GOLD.e1f435d44b as ''echinoderm-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2277
+    : The displaced label names the determining hosts (Echinodermata), not their associated
+    environment. Remove only the bare host exact alias and suppress exact-alias fallback;
+    preserve verbatim source provenance, definition, genera, organism xref and native
+    status.'

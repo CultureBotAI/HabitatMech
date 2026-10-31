@@ -1,0 +1,213 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "dea9f54c4f37043299ec911820c1ca9f552a913881bd8ceefef18b6140ed5031"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "12380d3ee22e773ff067d372204f74165cf5cfa77973ad9565162bbcd383a797"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "76e2e5b58191022cd20054836efccdbec3f4aee24903c73c68519908af4943d0"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "2145a53c45d5b669577bb5a11d144223f543b80a28d40220f6a4f8d587741389"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "f6d6e83963d272c057f795d8a5518e2d117b4a431c75c08b501eed13d170efa1"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-10-31T081500Z-antigravity-227601.yaml",
+      "sha256": "604c2de8bb4c0383bddd0bd8234b0153757b30db8ec49d35d02db80437caa136"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-10-31T081510Z-antigravity-227701.yaml",
+      "sha256": "f25a4321c5b99cb3e6486d2be3e42cfc6a9762f7500163d90fd2957a3a6cda57"
+    },
+    {
+      "path": "tests/test_ear_discharge_to_empyema_review_repairs.py",
+      "sha256": "e6ee4c56690b2018f4f02e84d445c93c30c79a319c93461ccb5674e1f51d26c8"
+    }
+  ],
+  "cycle": 3,
+  "remediation_reviews": [
+    {
+      "finding_id": "eccrine-sweat-gland-context-parent",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083012Z-eccrine_sweat_gland-record",
+      "record_id": "BTO:0002323",
+      "record_path": "data/habitats/host_associated/eccrine_sweat_gland.yaml",
+      "record_sha256": "205fab0b32cfd82efe07d005447bb9e3a51ebe6cecd092c0b0df7a6aa582f30f",
+      "remediation_review_id": "20261031T082501Z-eccrine_sweat_gland-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082501Z-eccrine_sweat_gland-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "31c548f8871d9c473a4d33b035c4e5a9f121bf1c0fec74f952de1ecae286cf3c"
+    },
+    {
+      "finding_id": "echinodermata-host-name-exact-synonym",
+      "group_id": "G-ear-discharge-to-empyema-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2277",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083013Z-echinodermata-record",
+      "record_id": "habitatmech:GOLD.e1f435d44b",
+      "record_path": "data/habitats/host_associated/echinodermata.yaml",
+      "record_sha256": "5777987f94a9d38e9661a8d1c6d27d87bcfc7e50fcb460fccea6ef519ca35dba",
+      "remediation_review_id": "20261031T082502Z-echinodermata-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082502Z-echinodermata-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "e1545d903c956634948de998ebafa89dd1cc1d118773d7cc59056680d22d2f82"
+    },
+    {
+      "finding_id": "eczema-context-parent",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083016Z-eczema-record",
+      "record_id": "habitatmech:GOLD.e21234318e",
+      "record_path": "data/habitats/host_associated/eczema.yaml",
+      "record_sha256": "821dd1861903ede1e209c1eb7f2d59fe25835163fbf383e183a4358fc44fa7ad",
+      "remediation_review_id": "20261031T082503Z-eczema-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082503Z-eczema-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "24f2f51ba0cace3d901a8ffa0b4ecb85006fef1ac90e095bce3b14efe98e31e7"
+    },
+    {
+      "finding_id": "eczema-disease-name-exact-synonym",
+      "group_id": "G-ear-discharge-to-empyema-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2277",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083016Z-eczema-record",
+      "record_id": "habitatmech:GOLD.e21234318e",
+      "record_path": "data/habitats/host_associated/eczema.yaml",
+      "record_sha256": "821dd1861903ede1e209c1eb7f2d59fe25835163fbf383e183a4358fc44fa7ad",
+      "remediation_review_id": "20261031T082503Z-eczema-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082503Z-eczema-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "24f2f51ba0cace3d901a8ffa0b4ecb85006fef1ac90e095bce3b14efe98e31e7"
+    },
+    {
+      "finding_id": "effusion-wrong-parent-grounding",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083017Z-effusion-record",
+      "record_id": "habitatmech:GOLD.2047d759aa",
+      "record_path": "data/habitats/host_associated/effusion.yaml",
+      "record_sha256": "93e703e2a86f673d9e745e0714c5e7642f9a105f94633621d3a895817b812912",
+      "remediation_review_id": "20261031T082504Z-effusion-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082504Z-effusion-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "374186f62d9e3ef2bd0f887d730661290a26c23ecf5618187d5b963b0cf5be0a"
+    },
+    {
+      "finding_id": "effusion--ef80da5d-wrong-parent-grounding",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083018Z-effusion__ef80da5d-record",
+      "record_id": "habitatmech:GOLD.279140e15d",
+      "record_path": "data/habitats/host_associated/effusion__ef80da5d.yaml",
+      "record_sha256": "860eef8b2f12e62f09eeea6d82ee1bda34a6ca3400139bdb8937c336fdb641b9",
+      "remediation_review_id": "20261031T082505Z-effusion__ef80da5d-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082505Z-effusion__ef80da5d-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "cb3ec49c7646fec0042dac1a83330f8c12ee5787758072d8ae994685b36aecbf"
+    },
+    {
+      "finding_id": "egg-capsule-context-parent",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083020Z-egg_capsule-record",
+      "record_id": "UBERON:3010636",
+      "record_path": "data/habitats/host_associated/egg_capsule.yaml",
+      "record_sha256": "7986a368cd50dd2bc20d7c8dc66ab0e6a954a7a4b9a5c5f672ce2f59a9089e8d",
+      "remediation_review_id": "20261031T082506Z-egg_capsule-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082506Z-egg_capsule-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "8ce099ae69af6d05a39290f48f3ffcb3fb9cf4313cdfb24602990c7b99e4f353"
+    },
+    {
+      "finding_id": "eggs--79d5874d-context-parent",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083022Z-eggs__79d5874d-record",
+      "record_id": "habitatmech:GOLD.7b8cf8839b",
+      "record_path": "data/habitats/host_associated/eggs__79d5874d.yaml",
+      "record_sha256": "5e5dd19ada08ef38272c5e8c093d4fedf0582312568705b6b3ab47ac7cca303b",
+      "remediation_review_id": "20261031T082507Z-eggs__79d5874d-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082507Z-eggs__79d5874d-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "778fe81d7f177d1950d29ad5e3784d912474854740a89abc47ad295fc8c29897"
+    },
+    {
+      "finding_id": "elastic-cartilage-tissue-context-parent",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083024Z-elastic_cartilage_tissue-record",
+      "record_id": "UBERON:0001996",
+      "record_path": "data/habitats/host_associated/elastic_cartilage_tissue.yaml",
+      "record_sha256": "6e07769b0153557a1e92baf76ac5a4292e8ddd1024da4afdfa541f006092ffcd",
+      "remediation_review_id": "20261031T082508Z-elastic_cartilage_tissue-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082508Z-elastic_cartilage_tissue-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "c5261c8ff66b99a78221f97842d7b133a7551b41538948552f1984a8ad8e71f8"
+    },
+    {
+      "finding_id": "embryo--3df16fcc-bare-source-label-exact-synonym",
+      "group_id": "G-ear-discharge-to-empyema-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2277",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083028Z-embryo__3df16fcc-record",
+      "record_id": "habitatmech:GOLD.32330da5da",
+      "record_path": "data/habitats/host_associated/embryo__3df16fcc.yaml",
+      "record_sha256": "b3651fecf6e84640dbc21d085095c0c0be1456391e9a223da3dd9deebad136d1",
+      "remediation_review_id": "20261031T082509Z-embryo__3df16fcc-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082509Z-embryo__3df16fcc-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "e5ff3e07266951b4f7374e66869c20617bae70589969614e32ca879af57d33d0"
+    },
+    {
+      "finding_id": "embryo--e76df6f3-bare-source-label-exact-synonym",
+      "group_id": "G-ear-discharge-to-empyema-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2277",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083030Z-embryo__e76df6f3-record",
+      "record_id": "habitatmech:GOLD.9f162205a6",
+      "record_path": "data/habitats/host_associated/embryo__e76df6f3.yaml",
+      "record_sha256": "ee68812e66a8c2411b37732d815993f6d1bb445e0b8c0848915a8f2b42b6d849",
+      "remediation_review_id": "20261031T082510Z-embryo__e76df6f3-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082510Z-embryo__e76df6f3-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "bc0e8dfa8c3a436d3db4ce7e88204447c1dd69e9fc02eafaa9eaa1d393a4272e"
+    },
+    {
+      "finding_id": "empyema-cavity-parent-grounding",
+      "group_id": "G-ear-discharge-to-empyema-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2276",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083033Z-empyema-record",
+      "record_id": "habitatmech:GOLD.818c9729e2",
+      "record_path": "data/habitats/host_associated/empyema.yaml",
+      "record_sha256": "e4ddd9f34e92f17a446559db259ed653509346da5f926d9ed988ddf4992182b3",
+      "remediation_review_id": "20261031T082511Z-empyema-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082511Z-empyema-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3e51b280a8022d5eeda72558d0ac9d759ab1bf65926b4b23ed55a78a87d87c8e"
+    },
+    {
+      "finding_id": "empyema-disease-name-exact-synonym",
+      "group_id": "G-ear-discharge-to-empyema-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2277",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261026T083033Z-empyema-record",
+      "record_id": "habitatmech:GOLD.818c9729e2",
+      "record_path": "data/habitats/host_associated/empyema.yaml",
+      "record_sha256": "e4ddd9f34e92f17a446559db259ed653509346da5f926d9ed988ddf4992182b3",
+      "remediation_review_id": "20261031T082511Z-empyema-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261031T082511Z-empyema-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3e51b280a8022d5eeda72558d0ac9d759ab1bf65926b4b23ed55a78a87d87c8e"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "73f5de1ffa3a7ab7e7bfb0e60149aef034c51aa0",
+  "stage": 5
+}
