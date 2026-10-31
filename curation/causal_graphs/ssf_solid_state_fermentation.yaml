@@ -1,0 +1,97 @@
+identifier: habitatmech:GOLD.3af6ca6cc3
+causal_graphs:
+- graph_id: ssf_moist_solid_bed_heat_mass_transfer_and_fungal_polysaccharide_hydrolysis
+  title: Solid-state fermentation moist solid bed heat/mass transfer and filamentous fungal enzyme production
+    mechanism
+  description: Solid-state fermentation (SSF) bioreactors cultivate filamentous fungi (such as Aspergillus
+    niger and Aspergillus flavus) on non-submerged, moist solid agro-industrial substrates (such as corn
+    and palm kernel cake) where forced aeration and intermittent mixing regulate gas-solid heat and mass
+    transfer and water activity, driving extracellular hydrolytic enzyme production and beta-mannan degradation
+    into mannose.
+  nodes:
+  - node_id: ssf_solid_state_fermentation
+    label: solid-state fermentation bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.3af6ca6cc3
+    description: Bioreactor cultivating microorganisms on moist solid substrates in the absence or near-absence
+      of free-flowing water.
+  - node_id: moist_solid_substrate_bed_and_forced_aeration_regime
+    label: non-submerged moist solid substrate bed, water activity, and forced aeration regime
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Two-phase gas-solid bed subject to metabolic heating, evaporative drying, water-activity
+      gradients, forced humidified aeration, and intermittent mixing.
+  - node_id: filamentous_aspergillus_solid_substrate_colonizers
+    label: filamentous Aspergillus niger and Aspergillus flavus solid-substrate colonizing guild
+    node_type: COMMUNITY
+    description: Hyphal filamentous fungi (Aspergillus niger and Aspergillus flavus) adapted to colonize
+      moist solid particle beds in SSF bioreactors.
+  - node_id: extracellular_beta_mannan_and_polysaccharide_hydrolytic_enzymes
+    label: extracellular beta-mannan degradation and hydrolytic enzyme production
+    node_type: COMMUNITY_PROCESS
+    description: Secretion of extracellular hydrolytic enzymes in SSF bioreactors that depolymerize solid-substrate
+      polysaccharides such as palm kernel cake beta-mannan into mannose.
+  edges:
+  - edge_id: ssf_maintains_moist_solid_substrate_bed_and_forced_aeration_regime
+    subject: ssf_solid_state_fermentation
+    predicate: maintains
+    object: moist_solid_substrate_bed_and_forced_aeration_regime
+    description: SSF bioreactors operate as two-phase gas-solid beds where forced aeration, intermittent
+      mixing, and water addition manage heat and mass heterogeneity and prevent substrate drying.
+    evidence:
+    - reference: PMID:12115405
+      snippet: The increase in the temperature of the gas as it flows through the bed means that it is
+        impossible to prevent the bed from drying out, even if saturated air is used at the air inlet.
+        The substrate can dry to water activities that severely limit growth, unless the bed is intermittently
+        mixed, with the addition of water to bring the water activity back to the desired value.
+      notes: Schutyser et al. 2002 (PMID:12115405) modeled two-phase water and heat transfer in intermittently
+        mixed, forced-aeration SSF bioreactors.
+    - reference: PMID:29408199
+      snippet: The lack of rational and scalable bioreactor designs backed by mathematical models and
+        automated control system that could successfully address heterogeneity with respect to heat and
+        mass, and also operate aseptically, remains the prime reason for it.
+      notes: SSF bioreactor engineering centers on controlling heat and mass transfer heterogeneity across
+        the solid bed (PMID:29408199).
+  - edge_id: moist_solid_substrate_bed_selects_for_filamentous_aspergillus_colonizers
+    subject: moist_solid_substrate_bed_and_forced_aeration_regime
+    predicate: selects for
+    object: filamentous_aspergillus_solid_substrate_colonizers
+    description: Controlled moisture content, water activity, and radially aerated solid beds support
+      growth of Aspergillus niger on corn and Aspergillus flavus on palm kernel cake.
+    evidence:
+    - reference: PMID:12115405
+      snippet: Under the conditions assumed for the simulation, which was designed to mimic the growth
+        of Aspergillus niger on corn, two mixing events were necessary, one at 17.4 and the other at 27.9
+        h.
+      notes: Intermittent mixing and water replenishment sustain Aspergillus niger growth on solid corn
+        substrate in SSF bioreactors (PMID:12115405).
+    - reference: PMID:21080102
+      snippet: Aspergillus flavus was isolated from local PKC and utilized to increase the mannose content
+        of PKC via the degradation of β-mannan in PKC; evaluation was done for batch SSF in Erlenmeyer
+        flasks and in a novel laterally aerated moving bed (LAMB) bioreactor.
+      notes: Radially aerated SSF in a laterally aerated moving bed bioreactor supports rapid Aspergillus
+        flavus colonization of palm kernel cake (PMID:21080102).
+  - edge_id: filamentous_aspergillus_colonizers_drive_extracellular_beta_mannan_hydrolysis
+    subject: filamentous_aspergillus_solid_substrate_colonizers
+    predicate: drives
+    object: extracellular_beta_mannan_and_polysaccharide_hydrolytic_enzymes
+    description: Filamentous fungi in SSF bioreactors produce extracellular enzymes and hydrolyze palm
+      kernel cake beta-mannan to increase mannose content 5.5- to 5.9-fold.
+    evidence:
+    - reference: PMID:21080102
+      snippet: Batch SSF in the LAMB at the optimum condition yielded 79.61 mg mannose g⁻¹ dry PKC (5.5-fold
+        increase) within just 96 h due to better heat and mass transfer when humidified air flowed radially
+        across the PKC bed.
+      notes: Aspergillus flavus SSF degrades beta-mannan in palm kernel cake to yield a 5.5-fold increase
+        in mannose in 96 h (PMID:21080102).
+    - reference: PMID:29408199
+      snippet: The present article reviews state-of-the-art in SSF technology with focus on bioreactors
+        that have been employed for bioprocess applications, in particular, enzyme production.
+      notes: SSF bioreactors are widely deployed for microbial enzyme production on solid substrates (PMID:29408199).
+curation_history:
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added ssf_moist_solid_bed_heat_mass_transfer_and_fungal_polysaccharide_hydrolysis mechanism
+    graph for solid-state fermentation bioreactor (habitatmech:GOLD.3af6ca6cc3) backed by PMID:12115405,
+    PMID:21080102, and PMID:29408199.
+  llm_assisted: true

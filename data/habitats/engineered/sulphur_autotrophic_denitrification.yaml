@@ -23,6 +23,136 @@ source_attestations:
   source_label: Sulphur Autotrophic Denitrification
   source_path: Engineered > Bioreactor > Sulphur Autotrophic Denitrification
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: sulfur_autotrophic_denitrification_alkalinity_buffering_and_nar_sulfur_oxidation
+  title: Sulfur autotrophic denitrification elemental sulfur oxidation, alkalinity
+    buffering, and nar/nir/nor nitrate reduction mechanism
+  description: Sulfur autotrophic denitrification (SAD) bioreactors supply elemental
+    sulfur (S0) and alkalinity buffering (such as NaHCO3 or calcium carbide residue
+    composites that neutralize acid production and prevent pH drops to 5.8) under
+    low dissolved oxygen (~0.3 mg/L), enriching chemolithoautotrophic sulfur-oxidizing
+    denitrifiers (Thiobacillus, Sulfurimonas, Sulfuritalea, and Annwoodia) that upregulate
+    respiratory nitrate/nitrite/nitric-oxide reductases (narGHI, nir, nor), form II
+    RubisCO (cbbM), and sulfur-oxidation enzymes (sulfide:quinone oxidoreductase and
+    dsrC) to achieve >90-97% nitrate removal.
+  nodes:
+  - node_id: sulphur_autotrophic_denitrification
+    label: sulfur autotrophic denitrification bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.f07ee97491
+    description: Chemolithoautotrophic denitrification bioreactor using elemental
+      sulfur or reduced sulfur compounds as electron donors for nitrate removal from
+      low-C/N wastewater.
+  - node_id: elemental_sulfur_electron_donor_and_alkalinity_buffered_anoxic_regime
+    label: elemental sulfur electron donor and alkalinity-buffered low-DO anoxic regime
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Bioavailable elemental sulfur media combined with intrinsic alkalinity
+      buffering (maintaining pH 6.9-8.0+ against proton generation) and low dissolved
+      oxygen (~0.3 mg/L).
+  - node_id: sulfur_oxidizing_thiobacillus_sulfurimonas_sulfuritalea_guild
+    label: Thiobacillus, Sulfurimonas, Sulfuritalea, and Annwoodia sulfur-oxidizing
+      denitrifier guild
+    node_type: COMMUNITY
+    description: Chemolithoautotrophic sulfur-oxidizing bacterial guild dominated
+      by Thiobacillus, Sulfurimonas, Sulfuritalea, and Annwoodia.
+  - node_id: thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes
+    label: Thiobacillus denitrificans respiratory nitrate reductase Nar, DsrC, and
+      form II RubisCO CbbM
+    node_type: GENE_OR_PROTEIN
+    description: Denitrification and sulfur-oxidation enzymes upregulated in Thiobacillus
+      denitrificans under denitrifying conditions, including respiratory nitrate reductase
+      (narGHI), nitrite/nitric oxide reductases (nir, nor), form II RubisCO (cbbM),
+      sulfide:quinone oxidoreductase, and dissimilatory sulfite reductase subunit
+      DsrC.
+  - node_id: autotrophic_sulfur_oxidation_coupled_nitrate_denitrification
+    label: chemolithoautotrophic sulfur oxidation coupled to step-wise nitrate reduction
+      (90-97.7% removal)
+    node_type: COMMUNITY_PROCESS
+    description: Carbon-free autotrophic reduction of nitrate to dinitrogen gas coupled
+      to elemental sulfur/thiosulfate oxidation without nitrite accumulation when
+      alkalinity and sulfur supply are maintained.
+  edges:
+  - edge_id: sad_bioreactor_maintains_elemental_sulfur_and_alkalinity_buffered_anoxic_regime
+    subject: sulphur_autotrophic_denitrification
+    predicate: maintains
+    object: elemental_sulfur_electron_donor_and_alkalinity_buffered_anoxic_regime
+    description: SAD bioreactors couple elemental sulfur media with sustained alkalinity
+      buffering and low DO (~0.3 mg/L) to prevent acid-induced pH drops to 5.8 and
+      nitrite accumulation.
+    evidence:
+    - reference: PMID:41579775
+      snippet: Under adequate alkalinity, the reactor maintained near-neutral pH (6.91-7.10)
+        with high nitrate removal efficiency (90-96 %). When alkalinity supply was
+        stopped, pH dropped to 5.8 within 8 h, resulting in a sharp decline in nitrate
+        removal efficiency (62.4 % and 29.3 % after about 4 days) and nitrite accumulation
+        up to 14 mg/L.
+      notes: Alkalinity buffering and elemental sulfur availability maintain near-neutral
+        pH (6.91-7.10) and low DO (~0.3 mg/L) required for >90% nitrate removal in
+        SAD bioreactors (PMID:41579775).
+    - reference: PMID:41108976
+      snippet: NaHCO3 served both as a perforation agent during fabrication and a
+        sustained alkalinity source during use. Structural characterization revealed
+        primary perforation formed interconnected macropores for microbial colonization,
+        while secondary perforation, driven by gradual NaHCO3/Na2CO3 dissolution,
+        expanded porosity during operation.
+      notes: Porous NaHCO3-buffered sulfur composites provide interconnected macropores
+        and sustained alkalinity release during SAD operation (PMID:41108976).
+  - edge_id: sulfur_and_alkalinity_regime_selects_for_thiobacillus_sulfurimonas_sulfuritalea_guild
+    subject: elemental_sulfur_electron_donor_and_alkalinity_buffered_anoxic_regime
+    predicate: selects for
+    object: sulfur_oxidizing_thiobacillus_sulfurimonas_sulfuritalea_guild
+    description: Buffered elemental sulfur matrices enrich chemolithoautotrophic denitrifiers
+      dominated by Sulfurimonas, Thiobacillus, Sulfuritalea, and Annwoodia.
+    evidence:
+    - reference: PMID:41579775
+      snippet: Microbial community analysis showed the predominance of Sulfurimonas
+        (29.9 %) and Thiobacillus (19.5 %).
+      notes: Sulfurimonas (29.9%) and Thiobacillus (19.5%) predominate in powdered
+        elemental-sulfur SAD membrane bioreactors (PMID:41579775).
+    - reference: PMID:41922114
+      snippet: The abundance of the unique dominant genera involved in autotrophic
+        denitrification (Annwoodia, Sulfuritalea and Thiobacillus) and their functional
+        genes (e.g., narGHI) was also significantly increased in the CCR-S system.
+      notes: Alkalinity slow-release sulfur fillers significantly enrich Annwoodia,
+        Sulfuritalea, and Thiobacillus along with narGHI (PMID:41922114).
+  - edge_id: thiobacillus_guild_expresses_nar_dsr_and_cbbm_enzymes
+    subject: sulfur_oxidizing_thiobacillus_sulfurimonas_sulfuritalea_guild
+    predicate: expresses
+    object: thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes
+    description: Under denitrifying conditions, Thiobacillus denitrificans upregulates
+      nar, nir, and nor denitrification genes, form II RubisCO (cbbM), sulfide:quinone
+      oxidoreductase, and dsrC 4- to 95-fold.
+    evidence:
+    - reference: PMID:16980503
+      snippet: Genes upregulated (ca. 4- to 95-fold) under denitrifying conditions
+        included nar, nir, and nor genes (associated, respectively, with nitrate reductase,
+        nitrite reductase, and nitric oxide reductase, which catalyze successive steps
+        of denitrification), cbbM (encoding form II RubisCO), and genes involved with
+        sulfur compound oxidation (including two physically separated but highly similar
+        copies of sulfide:quinone oxidoreductase and of dsrC, associated with dissimilatory
+        sulfite reductase).
+      notes: Beller et al. 2006 (J Bacteriol, PMID:16980503) demonstrated 4- to 95-fold
+        transcriptional upregulation of nar, nir, nor, cbbM, sulfide:quinone oxidoreductase,
+        and dsrC in Thiobacillus denitrificans under denitrifying conditions.
+  - edge_id: nar_dsr_and_cbbm_enzymes_drive_autotrophic_sulfur_oxidation_coupled_nitrate_denitrification
+    subject: thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes
+    predicate: drives
+    object: autotrophic_sulfur_oxidation_coupled_nitrate_denitrification
+    description: Coordinated sulfur oxidation and nar/nir/nor expression drive high-efficiency
+      autotrophic nitrate removal (94.6-97.7%).
+    evidence:
+    - reference: PMID:41922114
+      snippet: The average and maximum NO3- removal efficiencies of CCR-S reached
+        94.62% and 97.67%, respectively, both higher than those of CC-S (87.69% and
+        95.40%).
+      notes: Buffered SAD bioreactors enriched in Thiobacillus, Sulfuritalea, Annwoodia,
+        and narGHI achieve 94.62-97.67% nitrate removal efficiency (PMID:41922114).
+    - reference: PMID:16980503
+      snippet: Thiobacillus denitrificans is one of the few known obligate chemolithoautotrophic
+        bacteria capable of energetically coupling thiosulfate oxidation to denitrification
+        as well as aerobic respiration.
+      notes: Thiobacillus denitrificans energetically couples reduced sulfur oxidation
+        to complete denitrification (PMID:16980503).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -57,3 +187,10 @@ curation_history:
     process rather than the defined bioreactor habitat 'sulfur autotrophic denitrification
     bioreactor'; suppress automatic exact-synonym retention while preserving verbatim
     source provenance.
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sulfur_autotrophic_denitrification_alkalinity_buffering_and_nar_sulfur_oxidation
+    mechanism graph for sulfur autotrophic denitrification bioreactor (habitatmech:GOLD.f07ee97491)
+    backed by PMID:41108976, PMID:41579775, PMID:41922114, and PMID:16980503.
+  llm_assisted: true

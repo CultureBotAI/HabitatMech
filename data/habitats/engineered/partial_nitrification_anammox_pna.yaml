@@ -22,6 +22,131 @@ source_attestations:
   source_label: Partial-Nitrification/Anammox (PNA)
   source_path: Engineered > Bioreactor > Partial-Nitrification/Anammox (PNA)
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: partial_nitrification_anammox_do_control_and_stratified_nitrogen_removal
+  title: Partial-nitrification anammox dissolved oxygen control, NOB suppression,
+    and stratified autotrophic nitrogen removal mechanism
+  description: Partial-nitrification anammox (PNA) bioreactors regulate airflow and
+    maintain low dissolved oxygen (0.02-0.10 mg/L in membrane-aerated granules or
+    <45% DO saturation in packed beds) to suppress nitrite-oxidizing bacteria (NOB
+    such as Nitrospira) while supporting redox-stratified granules and biofilms with
+    ammonia-oxidizing bacteria (AOB) in outer oxic layers supplying nitrite to core
+    anammox bacteria (Candidatus Brocadia, Candidatus Kuenenia) that express hydrazine
+    synthase and hydrazine-oxidizing enzymes to convert ammonium and nitrite via nitric
+    oxide and hydrazine (N2H4) into dinitrogen gas.
+  nodes:
+  - node_id: partial_nitrification_anammox_pna
+    label: partial-nitrification anammox bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.5f3cbd7563
+    description: Autotrophic nitrogen-removal bioreactor coupling partial nitritation
+      of ammonium to nitrite with anaerobic ammonium oxidation (anammox).
+  - node_id: controlled_low_dissolved_oxygen_and_airflow_regime
+    label: controlled low dissolved oxygen and airflow regime suppressing NOB
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: Strict oxygen delivery and airflow control (ultra-low DO of 0.02-0.10
+      mg/L or <45% bulk DO saturation) that suppresses nitrite-oxidizing bacteria
+      and prevents nitrate build-up.
+  - node_id: stratified_aob_and_anammox_brocadia_kuenenia_consortium
+    label: stratified outer-layer AOB and core anammox Candidatus Brocadia/Kuenenia
+      consortium
+    node_type: COMMUNITY
+    description: Spatially stratified granular or biofilm consortium with ammonia-oxidizing
+      bacteria (AOB) in the outer layer and anammox Planctomycetes (such as Candidatus
+      Brocadia and Candidatus Kuenenia) in the anoxic core.
+  - node_id: anammox_hydrazine_synthase_and_dehydrogenase_complexes
+    label: anammox hydrazine synthase and hydrazine-oxidizing enzyme complexes
+    node_type: GENE_OR_PROTEIN
+    description: Key anammox enzyme complexes purified from Candidatus Kuenenia stuttgartiensis
+      that catalyze hydrazine (N2H4) synthesis from nitric oxide and ammonium and
+      its oxidation to dinitrogen gas (N2).
+  - node_id: coupled_nitritation_and_anammox_dinitrogen_production
+    label: coupled partial nitritation and hydrazine-mediated anaerobic ammonium oxidation
+      to N2
+    node_type: COMMUNITY_PROCESS
+    description: Autotrophic conversion of ammonium and nitrite through nitric oxide
+      and hydrazine intermediates into dinitrogen gas (N2) with high total nitrogen
+      removal efficiency.
+  edges:
+  - edge_id: pna_maintains_controlled_low_dissolved_oxygen_and_airflow_regime
+    subject: partial_nitrification_anammox_pna
+    predicate: maintains
+    object: controlled_low_dissolved_oxygen_and_airflow_regime
+    description: One-stage PNA reactors use airflow control or oxygen-permeable membranes
+      to maintain ultra-low DO (0.02-0.10 mg/L) and suppress nitrite-oxidizing bacteria.
+    evidence:
+    - reference: PMID:41577104
+      snippet: Direct control of the airflow rate, rather than using dissolved oxygen
+        (DO) as an indicator, successfully suppressed nitrite-oxidizing bacteria (NOB).
+        Additionally, long-term addition of exogenous hydrazine (N2H4) effectively
+        suppressed NOB, enhanced anammox activity, and strengthened the granulation
+        process, with these effects persisting even after N2H4 addition ceased.
+      notes: Airflow control and hydrazine addition suppress NOB and rehabilitate
+        nitrogen removal up to 0.8 kg N m-3 d-1 in one-stage granular PNA reactors
+        (PMID:41577104).
+    - reference: PMID:42285533
+      snippet: Dead-end aeration maintained ultra-low DO (0.02-0.10 mg/L), effectively
+        inhibiting NOB while avoiding excessive FA accumulation.
+      notes: Membrane-regulated dead-end aeration maintains ultra-low DO (0.02-0.10
+        mg/L) to inhibit NOB in one-stage PN/anammox reactors (PMID:42285533).
+  - edge_id: low_do_regime_selects_for_stratified_aob_and_anammox_consortium
+    subject: controlled_low_dissolved_oxygen_and_airflow_regime
+    predicate: selects for
+    object: stratified_aob_and_anammox_brocadia_kuenenia_consortium
+    description: DO limitation and EPS-rich granulation select against NOB (Nitrospira)
+      and establish microbial stratification with AOB in the outer layer and anammox
+      bacteria (Candidatus Brocadia) in the core.
+    evidence:
+    - reference: PMID:42285533
+      snippet: Enhanced sludge granulation and a high proportion of tightly bound
+        EPS (89%) supported microbial stratification, with ammonia-oxidizing bacteria
+        (AOB) enriched in the outer layer and anammox bacteria in the core.
+      notes: Granular PNA sludge stratifies into outer-layer AOB and core anammox
+        bacteria (PMID:42285533).
+    - reference: PMID:42946263
+      snippet: Microbial community analysis was consistent with these observations,
+        wherein significant reduction in abundance of NOB (Nitrospira) was observed
+        during AMX phase (4.6%) as compared to high-nitrification stage (59.8%). Also,
+        during the AMX phase, the reactor was enriched with Candidatus Brocadia genus
+        with a relative abundance of 20.9%.
+      notes: DO saturation below 45% reduces Nitrospira NOB from 59.8% to 4.6% and
+        enriches Candidatus Brocadia to 20.9% (PMID:42946263).
+  - edge_id: stratified_anammox_consortium_expresses_hydrazine_synthase_and_dehydrogenase_complexes
+    subject: stratified_aob_and_anammox_brocadia_kuenenia_consortium
+    predicate: expresses
+    object: anammox_hydrazine_synthase_and_dehydrogenase_complexes
+    description: Anammox bacteria express the central enzyme complexes that catalyze
+      hydrazine (N2H4) synthesis from nitric oxide and ammonium and its oxidation
+      to dinitrogen gas.
+    evidence:
+    - reference: PMID:21964329
+      snippet: Here we show that N(2)H(4) is produced from the anammox substrates
+        ammonium and nitrite and that nitric oxide (NO) is the direct precursor of
+        N(2)H(4). We resolved the genes and proteins central to anammox metabolism
+        and purified the key enzymes that catalyse N(2)H(4) synthesis and its oxidation
+        to N(2).
+      notes: Kartal et al. 2011 (Nature, PMID:21964329) resolved the central anammox
+        genes and purified the hydrazine synthase and hydrazine-oxidizing enzymes
+        in Candidatus Kuenenia stuttgartiensis.
+  - edge_id: hydrazine_synthase_and_anammox_consortium_drive_coupled_nitritation_and_dinitrogen_production
+    subject: anammox_hydrazine_synthase_and_dehydrogenase_complexes
+    predicate: drives
+    object: coupled_nitritation_and_anammox_dinitrogen_production
+    description: Hydrazine synthesis and oxidation coupled with AOB nitritation drive
+      autotrophic dinitrogen gas production and 80-93.5% total nitrogen removal in
+      PNA reactors.
+    evidence:
+    - reference: PMID:21964329
+      snippet: Two distinct microbial processes, denitrification and anaerobic ammonium
+        oxidation (anammox), are responsible for the release of fixed nitrogen as
+        dinitrogen gas (N(2)) to the atmosphere.
+      notes: Anammox enzymatic catalysis releases fixed ammonium and nitrite nitrogen
+        as N2 gas (PMID:21964329).
+    - reference: PMID:42285533
+      snippet: Over 200 days of operation, dead-end aeration enabled stable PN/anammox
+        coupling, achieving a high total nitrogen removal efficiency of 93.5 ± 3.9%,
+        compared with 33.7 ± 22.4% under cross-flow aeration.
+      notes: Coupled PN/anammox achieves 93.5% total nitrogen removal efficiency (PMID:42285533).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -55,3 +180,10 @@ curation_history:
     Partial-Nitrification/Anammox (PNA)' names the coupled nitrogen-removal process
     rather than the defined bioreactor habitat 'partial-nitrification anammox bioreactor';
     suppress automatic exact-synonym retention while preserving verbatim source provenance.
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added partial_nitrification_anammox_do_control_and_stratified_nitrogen_removal
+    mechanism graph for partial-nitrification anammox bioreactor (habitatmech:GOLD.5f3cbd7563)
+    backed by PMID:41577104, PMID:42285533, PMID:42946263, and PMID:21964329.
+  llm_assisted: true

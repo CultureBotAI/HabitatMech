@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-10-31T192200Z-antigravity-040201
+  timestamp: '2026-10-31T19:22:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 4 Stage 2 habitats
+  details: 'Reviewed all 53 existing causal-graph overlays in curation/causal_graphs/ and authored 10 new snippet-verified causal-graph overlays (53 -> 63 total): spacecraft_assembly_cleanrooms.yaml (habitatmech:GOLD.013b99db03, PMID:23051695, PMID:34861887), uasb_upflow_anaerobic_sludge_blanket.yaml (habitatmech:GOLD.0d77d00b06, PMID:34838566, PMID:35584587, PMID:36341859, PMID:23378508, PMID:21966920), ssf_solid_state_fermentation.yaml (habitatmech:GOLD.3af6ca6cc3, PMID:12115405, PMID:21080102, PMID:29408199), anaerobic_aerobic.yaml (habitatmech:GOLD.4a2450370b, PMID:33638876, PMID:34134440, PMID:41432927, PMID:35467400), partial_nitrification_anammox_pna.yaml (habitatmech:GOLD.5f3cbd7563, PMID:41577104, PMID:42285533, PMID:42946263, PMID:21964329), anaerobic_aerobic__c424253c.yaml (habitatmech:GOLD.c07aaa941d, PMID:37615362, PMID:38163067, PMID:41207536), algae_raceway_pond.yaml (habitatmech:GOLD.e474187df8, PMID:25919934, PMID:35166894, PMID:36905416), sulphur_autotrophic_denitrification.yaml (habitatmech:GOLD.f07ee97491, PMID:41108976, PMID:41579775, PMID:41922114, PMID:16980503), marine_pelagic_zone.yaml (ENVO:00000208, PMID:23789085, PMID:30742057, PMID:35254902), and air.yaml (ENVO:00002005, PMID:31316133, PMID:30483227).'

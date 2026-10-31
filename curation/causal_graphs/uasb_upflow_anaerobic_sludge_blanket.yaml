@@ -1,0 +1,129 @@
+identifier: habitatmech:GOLD.0d77d00b06
+causal_graphs:
+- graph_id: uasb_granular_sludge_syntrophic_diet_methanogenesis
+  title: Upflow anaerobic sludge blanket granulation, syntrophic fatty-acid/aromatic oxidation, and methanogenesis
+    mechanism
+  description: Upflow anaerobic sludge blanket (UASB) bioreactors operate under high organic loading rates
+    with self-immobilized anaerobic granular sludge that retains biomass and selects for syntrophic fatty-acid-
+    and aromatic-degrading bacteria (Syntrophus, Syntrophobacter, Geobacter, Pelotomaculaceae, and Syntrophorhabdaceae)
+    employing reverse electron transfer and Re-citrate synthase in syntrophic partnership with acetoclastic
+    and hydrogenotrophic methanogens (Methanosarcina, Methanoregula) to convert complex organic wastewaters
+    into biomethane.
+  nodes:
+  - node_id: uasb_upflow_anaerobic_sludge_blanket
+    label: upflow anaerobic sludge blanket bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.0d77d00b06
+    description: High-rate anaerobic wastewater treatment bioreactor where influent flows upward through
+      a dense blanket of self-aggregated microbial granules.
+  - node_id: upflow_organic_loading_and_granular_sludge_retention
+    label: high organic loading rate and self-immobilized granular sludge retention
+    node_type: ENVIRONMENTAL_PARAMETER
+    description: High volumetric organic loading rates (5.1 to 15.7 kg COD m-3 d-1) combined with sludge
+      granulation and conductive-additive-enhanced biomass retention.
+  - node_id: syntrophic_fatty_acid_and_aromatic_oxidizing_guild
+    label: Syntrophus, Syntrophobacter, Geobacter, Pelotomaculaceae, and Syntrophorhabdaceae syntrophic
+      guild
+    node_type: COMMUNITY
+    description: Syntrophic and electroactive anaerobic bacterial guild oxidizing volatile fatty acids,
+      benzoate, and phthalate isomers in UASB granules.
+  - node_id: syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins
+    label: Syntrophus aciditrophicus Re-citrate synthase and membrane-bound reverse electron transfer
+      oxidoreductase
+    node_type: GENE_OR_PROTEIN
+    description: Homotetrameric Re-citrate synthase (SYN_02536) and membrane-bound iron-sulfur oxidoreductase
+      in Syntrophus aciditrophicus that support glutamate biosynthesis and reverse electron transport
+      during syntrophic fatty-acid and benzoate oxidation.
+  - node_id: uasb_acetoclastic_and_hydrogenotrophic_methanogenesis
+    label: syntrophy- and DIET-coupled acetoclastic and hydrogenotrophic biomethane production
+    node_type: COMMUNITY_PROCESS
+    description: Coupled syntrophic acetate oxidation, direct interspecies electron transfer (DIET), and
+      methanogenesis by Methanosarcina and Methanoregula in UASB granules.
+  edges:
+  - edge_id: uasb_maintains_upflow_organic_loading_and_granular_sludge_retention
+    subject: uasb_upflow_anaerobic_sludge_blanket
+    predicate: maintains
+    object: upflow_organic_loading_and_granular_sludge_retention
+    description: UASB reactors sustain high organic loading rates up to 15.7 kg COD/(m3 d) and retain
+      dense granular sludge biomass.
+    evidence:
+    - reference: PMID:34838566
+      snippet: Upflow anaerobic sludge blanket (UASB) reactors, with or without granular activated carbon
+        (GAC) amendment, were applied for blackwater treatment. The impact of GAC on the formation of
+        granules and biomethane recovery was assessed. High organic loading rates (OLRs) up to 15.7 ±
+        2.1 kg COD/(m3d) were achieved with both reactors.
+      notes: UASB blackwater treatment reactors operate at high OLRs up to 15.7 kg COD/(m3 d) with granular
+        sludge formation (PMID:34838566).
+    - reference: PMID:36341859
+      snippet: The reactor supplemented with magnetite was more stable and resilient than the no-magnetite
+        control, with higher degree of granulation (up to 26.6-fold) and biomass retention.
+      notes: Sludge granulation in UASB reactors enhances biomass retention and process stability (PMID:36341859).
+  - edge_id: upflow_organic_loading_selects_for_syntrophic_guild
+    subject: upflow_organic_loading_and_granular_sludge_retention
+    predicate: selects for
+    object: syntrophic_fatty_acid_and_aromatic_oxidizing_guild
+    description: High-rate UASB granular sludge selects for Syntrophus, Bacteroidales, Geobacter, Syntrophobacter,
+      Pelotomaculaceae, and Syntrophorhabdaceae.
+    evidence:
+    - reference: PMID:34838566
+      snippet: The microbes o_Bacteroidales and Syntrophus were predominant in both reactors. The acetoclastic
+        methanogens dominated in the UASB reactor without GAC addition; while hydrogenotrophic methanogens
+        dominated in the GAC-UASB reactor.
+      notes: Syntrophus and Bacteroidales predominate alongside acetoclastic and hydrogenotrophic methanogens
+        in UASB granules (PMID:34838566).
+    - reference: PMID:35584587
+      snippet: Shotgun metagenomic analysis revealed that terephthalate, isophthalate/orthophthalate,
+        and benzoate were degraded by different members of Pelotomaculaceae and Syntrophorhabdaceae.
+      notes: Pelotomaculaceae and Syntrophorhabdaceae degrade aromatic compounds in mesophilic UASB granular
+        sludge (PMID:35584587).
+    - reference: PMID:36341859
+      snippet: Electroactive Deltaproteobacteria bacteria, including Geobacter and Syntrophobacter, were
+        enriched in the presence of magnetite.
+      notes: Electroactive Geobacter and Syntrophobacter are enriched in UASB granular sludge (PMID:36341859).
+  - edge_id: syntrophic_guild_expresses_syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins
+    subject: syntrophic_fatty_acid_and_aromatic_oxidizing_guild
+    predicate: expresses
+    object: syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins
+    description: Syntrophus aciditrophicus expresses Re-citrate synthase (SYN_02536) in syntrophic cultures
+      and encodes a membrane-bound iron-sulfur oxidoreductase for reverse electron transport during syntrophic
+      fatty-acid metabolism.
+    evidence:
+    - reference: PMID:23378508
+      snippet: On the other hand, a putative gene (SYN_02536; NCBI gene accession no. CP000252.1) annotated
+        as coding for isopropylmalate/citramalate/homocitrate synthase has been shown to share 49% deduced
+        amino acid sequence identity with the gene encoding Re-citrate synthase of Clostridium kluyveri.
+      notes: Kim et al. 2013 (PMID:23378508) identified and biochemically characterized Re-citrate synthase
+        encoded by SYN_02536 in Syntrophus aciditrophicus.
+    - reference: PMID:21966920
+      snippet: A membrane-bound, iron-sulfur oxidoreductase found in S. wolfei and Syntrophus aciditrophicus
+        may be uniquely involved in reverse electron transport during syntrophic fatty acid metabolism.
+      notes: Sieber et al. 2010 (PMID:21966920) identified the conserved membrane-bound iron-sulfur oxidoreductase
+        in Syntrophus aciditrophicus and Syntrophomonas wolfei for reverse electron transport.
+  - edge_id: syntrophic_guild_drives_uasb_acetoclastic_and_hydrogenotrophic_methanogenesis
+    subject: syntrophic_fatty_acid_and_aromatic_oxidizing_guild
+    predicate: drives
+    object: uasb_acetoclastic_and_hydrogenotrophic_methanogenesis
+    description: Syntrophic bacteria and DIET-based syntrophy partner with Methanoregula and Methanosarcina
+      to drive COD removal and biomethane production in UASB granules.
+    evidence:
+    - reference: PMID:34838566
+      snippet: A phylogenetic investigation of communities by reconstruction of unobserved states (PICRUSt)
+        indicated that syntrophic acetate oxidation improved with GAC addition. The co-occurrence network
+        indicated that interactions between dominant bacteria and archaea were higher in the GAC-amended
+        UASB reactor than in the UASB reactor without GAC addition.
+      notes: Syntrophic bacterial-archaeal interactions and syntrophic acetate oxidation enhance UASB
+        methanogenesis (PMID:34838566).
+    - reference: PMID:35584587
+      snippet: 16S rRNA gene-based network analysis shows that anaerobic Woesearchaeales belonging to
+        phylum Nanoarchaeota has a positive correlation with Methanoregula, Candidatus Methanofastidiosum,
+        and Methanosarcina, suggesting a symbiotic relationship with methanogens in granular sludge.
+      notes: Methanoregula, Candidatus Methanofastidiosum, and Methanosarcina form cooperative methanogenic
+        networks in UASB granular sludge (PMID:35584587).
+curation_history:
+- timestamp: '2026-10-31T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added uasb_granular_sludge_syntrophic_diet_methanogenesis mechanism graph for upflow anaerobic
+    sludge blanket bioreactor (habitatmech:GOLD.0d77d00b06) backed by PMID:34838566, PMID:35584587, PMID:36341859,
+    PMID:23378508, and PMID:21966920.
+  llm_assisted: true
