@@ -57,9 +57,87 @@ causal_graphs:
   - node_id: anammox_hydrazine_synthase_and_dehydrogenase_complexes
     label: anammox hydrazine synthase and hydrazine-oxidizing enzyme complexes
     node_type: GENE_OR_PROTEIN
-    description: Key anammox enzyme complexes purified from Candidatus Kuenenia stuttgartiensis
-      that catalyze hydrazine (N2H4) synthesis from nitric oxide and ammonium and
-      its oxidation to dinitrogen gas (N2).
+    description: Key anammox enzyme complexes purified from Kuenenia stuttgartiensis
+      (NCBITaxon:174633) that catalyze hydrazine (N2H4) synthesis from nitric oxide
+      and ammonium — heterotrimeric hydrazine synthase subunits HzsA (UniProtKB:Q1Q0T2,
+      HZSA_KUEST, kuste2861, 809 aa), HzsB (UniProtKB:Q1Q0T4, HZSB_KUEST, kuste2859,
+      386 aa), and HzsG (UniProtKB:Q1Q0T3, HZSG_KUEST, kuste2860, 353 aa) — and its
+      oxidation to dinitrogen gas (N2) via hydrazine dehydrogenase Hdh (UniProtKB:Q1PW30,
+      HDH_KUEST, kustc0694, 582 aa). Multi-subunit enzyme complexes in K. stuttgartiensis
+      represented by all four Swiss-Prot reviewed subunits purified in PMID:21964329.
+    protein_examples:
+    - accession: UniProtKB:Q1Q0T2
+      entry_name: HZSA_KUEST
+      recommended_name: Hydrazine synthase subunit alpha
+      locus_tag: kuste2861
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 809
+      crc64: 4D60D075EB87A7CF
+      evidence:
+      - reference: PMID:21964329
+        snippet: Here we show that N(2)H(4) is produced from the anammox substrates
+          ammonium and nitrite and that nitric oxide (NO) is the direct precursor
+          of N(2)H(4). We resolved the genes and proteins central to anammox metabolism
+          and purified the key enzymes that catalyse N(2)H(4) synthesis and its oxidation
+          to N(2).
+        notes: Swiss-Prot reviewed Hydrazine synthase subunit alpha (kuste2861) purified
+          from Kuenenia stuttgartiensis and directly cross-referenced to PMID:21964329.
+    - accession: UniProtKB:Q1Q0T4
+      entry_name: HZSB_KUEST
+      recommended_name: Hydrazine synthase subunit beta
+      locus_tag: kuste2859
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 386
+      crc64: B4C2BCC982852CD0
+      evidence:
+      - reference: PMID:21964329
+        snippet: Here we show that N(2)H(4) is produced from the anammox substrates
+          ammonium and nitrite and that nitric oxide (NO) is the direct precursor
+          of N(2)H(4). We resolved the genes and proteins central to anammox metabolism
+          and purified the key enzymes that catalyse N(2)H(4) synthesis and its oxidation
+          to N(2).
+        notes: Swiss-Prot reviewed Hydrazine synthase subunit beta (kuste2859) purified
+          from Kuenenia stuttgartiensis and directly cross-referenced to PMID:21964329.
+    - accession: UniProtKB:Q1Q0T3
+      entry_name: HZSG_KUEST
+      recommended_name: Hydrazine synthase subunit gamma
+      locus_tag: kuste2860
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 353
+      crc64: 342EA10F32D59E37
+      evidence:
+      - reference: PMID:21964329
+        snippet: Here we show that N(2)H(4) is produced from the anammox substrates
+          ammonium and nitrite and that nitric oxide (NO) is the direct precursor
+          of N(2)H(4). We resolved the genes and proteins central to anammox metabolism
+          and purified the key enzymes that catalyse N(2)H(4) synthesis and its oxidation
+          to N(2).
+        notes: Swiss-Prot reviewed Hydrazine synthase subunit gamma (kuste2860) purified
+          from Kuenenia stuttgartiensis and directly cross-referenced to PMID:21964329.
+    - accession: UniProtKB:Q1PW30
+      entry_name: HDH_KUEST
+      recommended_name: Hydrazine dehydrogenase
+      locus_tag: kustc0694
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 582
+      crc64: 3006EE78AC726B96
+      evidence:
+      - reference: PMID:21964329
+        snippet: Here we show that N(2)H(4) is produced from the anammox substrates
+          ammonium and nitrite and that nitric oxide (NO) is the direct precursor
+          of N(2)H(4). We resolved the genes and proteins central to anammox metabolism
+          and purified the key enzymes that catalyse N(2)H(4) synthesis and its oxidation
+          to N(2).
+        notes: Swiss-Prot reviewed Hydrazine dehydrogenase (kustc0694) purified from
+          Kuenenia stuttgartiensis and directly cross-referenced to PMID:21964329.
   - node_id: coupled_nitritation_and_anammox_dinitrogen_production
     label: coupled partial nitritation and hydrazine-mediated anaerobic ammonium oxidation
       to N2
@@ -186,4 +264,13 @@ curation_history:
   changes: Added partial_nitrification_anammox_do_control_and_stratified_nitrogen_removal
     mechanism graph for partial-nitrification anammox bioreactor (habitatmech:GOLD.5f3cbd7563)
     backed by PMID:41577104, PMID:42285533, PMID:42946263, and PMID:21964329.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added four Swiss-Prot reviewed UniProtKB protein_examples (UniProtKB:Q1Q0T2
+    HZSA_KUEST kuste2861, UniProtKB:Q1Q0T4 HZSB_KUEST kuste2859, UniProtKB:Q1Q0T3
+    HZSG_KUEST kuste2860, and UniProtKB:Q1PW30 HDH_KUEST kustc0694) from Kuenenia
+    stuttgartiensis (NCBITaxon:174633) to anammox_hydrazine_synthase_and_dehydrogenase_complexes
+    backed by PMID:21964329.
   llm_assisted: true

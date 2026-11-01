@@ -29,8 +29,90 @@ causal_graphs:
   - node_id: prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes
     label: Prochlorococcus and SAR11 phosphonate biosynthesis and osmolyte C1 oxidation enzymes
     node_type: GENE_OR_PROTEIN
-    description: Phosphonate synthesis enzymes (such as phosphoenolpyruvate mutase PepM) and phosphorus-acquisition/osmolyte
-      C1 oxidation proteins encoded by Prochlorococcus and SAR11 in the oligotrophic surface ocean.
+    description: Osmolyte biosynthesis and C1 oxidation proteins encoded by co-occurring pelagic Prochlorococcus
+      marinus (strain MIT 9313; NCBITaxon:74547) — glycine/sarcosine N-methyltransferase (UniProtKB:Q7V822,
+      Q7V822_PROMM, gsmt / PMT_0552, 280 aa) and sarcosine-dimethylglycine methyltransferase (UniProtKB:Q7V823,
+      Q7V823_PROMM, sdmt / PMT_0551, 275 aa) — and Pelagibacter ubique (strain HTCC1062; NCBITaxon:335992)
+      — betaine-homocysteine methyltransferase (UniProtKB:Q4FLG1, Q4FLG1_PELUB, bhmT / SAR11_1173, 353
+      aa) and formate dehydrogenase alpha subunit (UniProtKB:Q4FMU1, Q4FMU1_PELUB, fdhF / SAR11_0679,
+      922 aa) — alongside phosphonate biosynthesis enzymes (phosphoenolpyruvate mutase PepM) profiled
+      across 821 single-amplified genomes and BATS/HOT metagenomes in PMID:35254902 (with the Prochlorococcus
+      marinus str. SB NCBITaxon:59926 PepM EV02_1745 archived in UniParc as UPI0005161340 / RefSeq WP_032520302.1,
+      436 aa, crc64 CAE6357547DC7C92 after TrEMBL UniProtKB:A0A0A2B5G7 was retired on 2026-01-28, and
+      therefore documented here rather than in protein_examples).
+    protein_examples:
+    - accession: UniProtKB:Q7V822
+      entry_name: Q7V822_PROMM
+      recommended_name: glycine/sarcosine N-methyltransferase
+      gene_symbol: gsmt
+      locus_tag: PMT_0552
+      taxon_id: NCBITaxon:74547
+      taxon_name: Prochlorococcus marinus (strain MIT 9313)
+      role_in_node: family_member
+      sequence_length: 280
+      crc64: 008B1E4F8D3D5FDA
+      evidence:
+      - reference: PMID:30742057
+        snippet: The presence of Prochlorococcus was able to meet SAR11's central requirement for organic
+          carbon, but not reduced sulfur. Prochlorococcus strain MIT9313, but not MED4, could meet the unique
+          glycine requirement of SAR11, which could be due to the production and release of glycine betaine
+          by MIT9313, as supported by comparative genomic evidence.
+        notes: Glycine/sarcosine N-methyltransferase Gsmt (PMT_0552) catalyzing the first two methylation
+          steps of glycine betaine synthesis in Prochlorococcus marinus strain MIT 9313 (PMID:30742057;
+          genome sequence PMID:12917642).
+    - accession: UniProtKB:Q7V823
+      entry_name: Q7V823_PROMM
+      recommended_name: Putative sarcosine-dimethylglycine methyltransferase
+      gene_symbol: sdmt
+      locus_tag: PMT_0551
+      taxon_id: NCBITaxon:74547
+      taxon_name: Prochlorococcus marinus (strain MIT 9313)
+      role_in_node: family_member
+      sequence_length: 275
+      crc64: D25B7DA47B59E36C
+      evidence:
+      - reference: PMID:30742057
+        snippet: The presence of Prochlorococcus was able to meet SAR11's central requirement for organic
+          carbon, but not reduced sulfur. Prochlorococcus strain MIT9313, but not MED4, could meet the unique
+          glycine requirement of SAR11, which could be due to the production and release of glycine betaine
+          by MIT9313, as supported by comparative genomic evidence.
+        notes: Sarcosine-dimethylglycine methyltransferase Sdmt (PMT_0551) completing glycine betaine
+          biosynthesis in Prochlorococcus marinus strain MIT 9313 (PMID:30742057; genome sequence PMID:12917642).
+    - accession: UniProtKB:Q4FLG1
+      entry_name: Q4FLG1_PELUB
+      recommended_name: Betaine-homocysteine methyltransferase
+      gene_symbol: bhmT
+      locus_tag: SAR11_1173
+      taxon_id: NCBITaxon:335992
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
+      role_in_node: family_member
+      sequence_length: 353
+      crc64: 2051F0D3EFAB8B89
+      evidence:
+      - reference: PMID:30742057
+        snippet: The presence of Prochlorococcus was able to meet SAR11's central requirement for organic
+          carbon, but not reduced sulfur. Prochlorococcus strain MIT9313, but not MED4, could meet the unique
+          glycine requirement of SAR11, which could be due to the production and release of glycine betaine
+          by MIT9313, as supported by comparative genomic evidence.
+        notes: Betaine-homocysteine methyltransferase BhmT (SAR11_1173) initiating glycine betaine demethylation
+          toward glycine and C1 oxidation in Pelagibacter ubique strain HTCC1062 (PMID:30742057; PMID:23789085).
+    - accession: UniProtKB:Q4FMU1
+      entry_name: Q4FMU1_PELUB
+      recommended_name: Formate dehydrogenase Alpha subunit (FdhF-2)
+      gene_symbol: fdhF
+      locus_tag: SAR11_0679
+      taxon_id: NCBITaxon:335992
+      taxon_name: Pelagibacter ubique (strain HTCC1062)
+      role_in_node: subunit
+      sequence_length: 922
+      crc64: 8C2B27BD634A5EED
+      evidence:
+      - reference: PMID:23789085
+        snippet: The unexpected connection between salinity-dependent osmolyte production and SAR11 C1 metabolism
+          represents a potentially major coevolutionary adaptation and biogeochemical flux.
+        notes: Formate dehydrogenase catalytic alpha subunit FdhF (SAR11_0679) catalyzing terminal C1 oxidation
+          of osmolyte-derived formate to CO2 in Pelagibacter ubique strain HTCC1062 (PMID:23789085; genome
+          sequence PMID:16109880).
   - node_id: pelagic_glycine_betaine_cross_feeding_and_cell_surface_phosphonoglycoprotein_defense
     label: commensal organic carbon and glycine betaine cross-feeding and phosphonoglycoprotein defense
     node_type: COMMUNITY_PROCESS
@@ -114,4 +196,14 @@ curation_history:
   changes: Added marine_pelagic_oligotrophic_prochlorococcus_sar11_cross_feeding_and_phosphonate_cycling
     mechanism graph for marine pelagic zone (ENVO:00000208) backed by PMID:23789085, PMID:30742057, and
     PMID:35254902.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added four verified UniProtKB protein_examples (UniProtKB:Q7V822 Q7V822_PROMM gsmt PMT_0552
+    and UniProtKB:Q7V823 Q7V823_PROMM sdmt PMT_0551 from Prochlorococcus marinus strain MIT 9313 NCBITaxon:74547,
+    and UniProtKB:Q4FLG1 Q4FLG1_PELUB bhmT SAR11_1173 and UniProtKB:Q4FMU1 Q4FMU1_PELUB fdhF SAR11_0679
+    from Pelagibacter ubique strain HTCC1062 NCBITaxon:335992) and documented single-cell/metagenomic
+    PepM scope (including UniParc UPI0005161340 for Prochlorococcus marinus str. SB EV02_1745) on
+    prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes.
   llm_assisted: true

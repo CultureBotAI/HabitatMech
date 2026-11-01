@@ -31,7 +31,12 @@ causal_graphs:
     label: cell-associated proteinaceous ice nucleation active (INA) proteins
     node_type: GENE_OR_PROTEIN
     description: Cell-associated proteinaceous ice nucleation active (INA) macromolecules produced by
-      airborne microorganisms and microalgae that nucleate ice at warm subzero temperatures.
+      airborne microorganisms and microalgae (Trebouxiophyceae, Chlorophyceae, and Stramenopiles) that
+      nucleate ice at warm subzero temperatures (>= -6 degrees C). Source-limited unsequenced phenotype
+      — Tesson & Santl-Temkiv 2018 (PMID:30483227) established the proteinaceous nature of airborne microalgal
+      INA compounds via heat and proteinase sensitivity assays across 22 environmental isolates without
+      sequencing or depositing an individual microalgal INA polypeptide in UniProtKB, so protein_examples
+      is intentionally omitted.
   - node_id: warm_subzero_biological_ice_nucleation_and_cloud_deposition
     label: warm subzero (>= -6 degrees C) biological ice nucleation and cloud/precipitation catalysis
     node_type: COMMUNITY_PROCESS
@@ -111,4 +116,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added air_atmospheric_uv_desiccation_filtering_and_biological_ice_nucleation mechanism graph
     for air (ENVO:00002005) backed by PMID:31316133 and PMID:30483227.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented source-limited unsequenced phenotype scope on cell_associated_proteinaceous_ice_nucleation_active_compounds
+    (heat- and proteinase-sensitive INA phenotype across airborne Trebouxiophyceae, Chlorophyceae, and
+    Stramenopiles isolates in PMID:30483227 without sequenced UniProtKB polypeptide accessions).
   llm_assisted: true

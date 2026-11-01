@@ -31,9 +31,78 @@ causal_graphs:
     label: Syntrophus aciditrophicus Re-citrate synthase and membrane-bound reverse electron transfer
       oxidoreductase
     node_type: GENE_OR_PROTEIN
-    description: Homotetrameric Re-citrate synthase (SYN_02536) and membrane-bound iron-sulfur oxidoreductase
-      in Syntrophus aciditrophicus that support glutamate biosynthesis and reverse electron transport
-      during syntrophic fatty-acid and benzoate oxidation.
+    description: Homotetrameric Citrate (Re)-synthase (UniProtKB:Q2LTE1, CIRSY_SYNAS, SYN_02536 / SYNAS_14740,
+      629 aa) and membrane-bound reverse electron transfer complexes — ion-translocating oxidoreductase
+      complex subunit B (UniProtKB:Q2LPK2, Q2LPK2_SYNAS, rnfB / SYN_00628, 287 aa), membrane-associated
+      iron-sulphur-binding reductase (UniProtKB:Q2LWR1, Q2LWR1_SYNAS, SYN_02638, 706 aa), and electron
+      transfer flavoprotein subunit alpha (UniProtKB:Q2LWR0, Q2LWR0_SYNAS, SYN_02637, 325 aa) — in Syntrophus
+      aciditrophicus (strain SB; NCBITaxon:56780) that support glutamate biosynthesis and reverse electron
+      transport during syntrophic fatty-acid and benzoate oxidation. Multi-protein enzymatic and reverse
+      electron transfer machinery in S. aciditrophicus SB represented by four verified UniProtKB exemplars.
+    protein_examples:
+    - accession: UniProtKB:Q2LTE1
+      entry_name: CIRSY_SYNAS
+      recommended_name: Citrate (Re)-synthase
+      locus_tag: SYN_02536
+      taxon_id: NCBITaxon:56780
+      taxon_name: Syntrophus aciditrophicus (strain SB)
+      role_in_node: family_member
+      sequence_length: 629
+      crc64: A4E404229F970D83
+      evidence:
+      - reference: PMID:23378508
+        snippet: On the other hand, a putative gene (SYN_02536; NCBI gene accession no. CP000252.1) annotated
+          as coding for isopropylmalate/citramalate/homocitrate synthase has been shown to share 49% deduced
+          amino acid sequence identity with the gene encoding Re-citrate synthase of Clostridium kluyveri.
+        notes: Swiss-Prot reviewed Citrate (Re)-synthase (ORF name SYN_02536; ordered locus name SYNAS_14740)
+          in Syntrophus aciditrophicus strain SB directly cross-referenced to PMID:23378508.
+    - accession: UniProtKB:Q2LPK2
+      entry_name: Q2LPK2_SYNAS
+      recommended_name: Ion-translocating oxidoreductase complex subunit B
+      gene_symbol: rnfB
+      locus_tag: SYN_00628
+      taxon_id: NCBITaxon:56780
+      taxon_name: Syntrophus aciditrophicus (strain SB)
+      role_in_node: subunit
+      sequence_length: 287
+      crc64: F74735990C7752B6
+      evidence:
+      - reference: PMID:21966920
+        snippet: A membrane-bound, iron-sulfur oxidoreductase found in S. wolfei and Syntrophus aciditrophicus
+          may be uniquely involved in reverse electron transport during syntrophic fatty acid metabolism.
+        notes: RnfB subunit (SYN_00628) of the membrane-bound Rnf iron-sulfur oxidoreductase reverse electron
+          transport complex in Syntrophus aciditrophicus strain SB (PMID:21966920; genome sequence PMID:17442750).
+    - accession: UniProtKB:Q2LWR1
+      entry_name: Q2LWR1_SYNAS
+      recommended_name: Iron-sulphur-binding reductase
+      locus_tag: SYN_02638
+      taxon_id: NCBITaxon:56780
+      taxon_name: Syntrophus aciditrophicus (strain SB)
+      role_in_node: subunit
+      sequence_length: 706
+      crc64: B2EA222633D752D0
+      evidence:
+      - reference: PMID:21966920
+        snippet: A membrane-bound, iron-sulfur oxidoreductase found in S. wolfei and Syntrophus aciditrophicus
+          may be uniquely involved in reverse electron transport during syntrophic fatty acid metabolism.
+        notes: Membrane-associated iron-sulphur-binding reductase (SYN_02638) encoded immediately upstream
+          of electron transfer flavoprotein subunits SYN_02637/SYN_02636 in Syntrophus aciditrophicus
+          strain SB (PMID:21966920; genome sequence PMID:17442750).
+    - accession: UniProtKB:Q2LWR0
+      entry_name: Q2LWR0_SYNAS
+      recommended_name: Electron transfer flavoprotein subunit alpha
+      locus_tag: SYN_02637
+      taxon_id: NCBITaxon:56780
+      taxon_name: Syntrophus aciditrophicus (strain SB)
+      role_in_node: subunit
+      sequence_length: 325
+      crc64: E4F66668082D6135
+      evidence:
+      - reference: PMID:21966920
+        snippet: A membrane-bound, iron-sulfur oxidoreductase found in S. wolfei and Syntrophus aciditrophicus
+          may be uniquely involved in reverse electron transport during syntrophic fatty acid metabolism.
+        notes: Electron transfer flavoprotein subunit alpha (SYN_02637) clustered with SYN_02638 in Syntrophus
+          aciditrophicus strain SB for reverse electron transport (PMID:21966920; genome sequence PMID:17442750).
   - node_id: uasb_acetoclastic_and_hydrogenotrophic_methanogenesis
     label: syntrophy- and DIET-coupled acetoclastic and hydrogenotrophic biomethane production
     node_type: COMMUNITY_PROCESS
@@ -126,4 +195,13 @@ curation_history:
   changes: Added uasb_granular_sludge_syntrophic_diet_methanogenesis mechanism graph for upflow anaerobic
     sludge blanket bioreactor (habitatmech:GOLD.0d77d00b06) backed by PMID:34838566, PMID:35584587, PMID:36341859,
     PMID:23378508, and PMID:21966920.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added four verified UniProtKB protein_examples (UniProtKB:Q2LTE1 CIRSY_SYNAS SYN_02536,
+    UniProtKB:Q2LPK2 Q2LPK2_SYNAS rnfB SYN_00628, UniProtKB:Q2LWR1 Q2LWR1_SYNAS SYN_02638, and
+    UniProtKB:Q2LWR0 Q2LWR0_SYNAS SYN_02637) from Syntrophus aciditrophicus (strain SB) (NCBITaxon:56780)
+    to syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins backed by PMID:23378508
+    and PMID:21966920.
   llm_assisted: true
