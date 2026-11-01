@@ -54,9 +54,87 @@ causal_graphs:
     label: Candidatus Accumulibacter polyphosphate kinase Ppk1 and storage polymer
       pathway enzymes
     node_type: GENE_OR_PROTEIN
-    description: Polyphosphate kinase 1 (ppk1) and conserved PAO storage polymer synthesis
-      enzymes in Candidatus Accumulibacter species that catalyze polyphosphate cycling
-      in EBPR bioreactors.
+    description: Polyphosphate kinase 1 (ppk1; UniProtKB:A0ABX1TZ70, A0ABX1TZ70_9PROT,
+      E4Q23_18485, 706 aa) and periplasmic nitrate reductase (napA; UniProtKB:A0ABX1TYP4,
+      A0ABX1TYP4_9PROT, E4Q23_09450, 838 aa) in Candidatus Accumulibacter phosphatis
+      (NCBITaxon:327160) alongside respiratory nitrate reductase (narG; UniProtKB:A0A1A8XUQ5,
+      A0A1A8XUQ5_9PROT, ACCAA_630021, 1293 aa) in Candidatus Accumulibacter aalborgensis
+      (NCBITaxon:1860102) that catalyze polyphosphate cycling and clade-differentiated
+      nitrate reduction in EBPR bioreactors. Multi-protein enzymatic repertoire across
+      Ca. Accumulibacter phosphatis and Ca. Accumulibacter aalborgensis represented
+      by three verified UniProtKB exemplars.
+    protein_examples:
+    - accession: UniProtKB:A0ABX1TZ70
+      entry_name: A0ABX1TZ70_9PROT
+      recommended_name: Polyphosphate kinase
+      gene_symbol: ppk1
+      locus_tag: E4Q23_18485
+      taxon_id: NCBITaxon:327160
+      taxon_name: Candidatus Accumulibacter phosphatis
+      role_in_node: family_member
+      sequence_length: 706
+      crc64: C24A6A4782DD9CC3
+      evidence:
+      - reference: PMID:35467400
+        snippet: The ppk1 marker gene allows for a finer-scale differentiation into
+          different "types" and "clades"; nevertheless, taxonomic assignments remain
+          inconsistent across studies. Therefore, a comprehensive reevaluation is
+          needed to establish a common understanding of this genus, in terms of both
+          naming and basic conserved physiological traits. Here, we provide this reassessment
+          using a comparison of genome, ppk1, and 16S rRNA gene-based approaches from
+          comprehensive data sets. We identified 15 novel species, along with "Candidatus
+          Accumulibacter phosphatis," "Candidatus Accumulibacter delftensis," and
+          "Candidatus Accumulibacter aalborgensis."
+        notes: Polyphosphate kinase Ppk1 (E4Q23_18485) in Candidatus Accumulibacter
+          phosphatis (NCBITaxon:327160), whose ppk1 marker gene and conserved PAO
+          metabolic pathways were reassessed across EBPR genomes in PMID:35467400.
+    - accession: UniProtKB:A0ABX1TYP4
+      entry_name: A0ABX1TYP4_9PROT
+      recommended_name: Periplasmic nitrate reductase
+      gene_symbol: napA
+      locus_tag: E4Q23_09450
+      taxon_id: NCBITaxon:327160
+      taxon_name: Candidatus Accumulibacter phosphatis
+      role_in_node: family_member
+      sequence_length: 838
+      crc64: 7B84798D7AAE4AFA
+      evidence:
+      - reference: PMID:35467400
+        snippet: The ppk1 marker gene allows for a finer-scale differentiation into
+          different "types" and "clades"; nevertheless, taxonomic assignments remain
+          inconsistent across studies. Therefore, a comprehensive reevaluation is
+          needed to establish a common understanding of this genus, in terms of both
+          naming and basic conserved physiological traits. Here, we provide this reassessment
+          using a comparison of genome, ppk1, and 16S rRNA gene-based approaches from
+          comprehensive data sets. We identified 15 novel species, along with "Candidatus
+          Accumulibacter phosphatis," "Candidatus Accumulibacter delftensis," and
+          "Candidatus Accumulibacter aalborgensis."
+        notes: Periplasmic nitrate reductase NapA (E4Q23_09450) in Candidatus Accumulibacter
+          phosphatis (NCBITaxon:327160) profiled across EBPR PAO genomes in PMID:35467400.
+    - accession: UniProtKB:A0A1A8XUQ5
+      entry_name: A0A1A8XUQ5_9PROT
+      recommended_name: nitrate reductase (quinone)
+      gene_symbol: narG
+      locus_tag: ACCAA_630021
+      taxon_id: NCBITaxon:1860102
+      taxon_name: Candidatus Accumulibacter aalborgensis
+      role_in_node: subunit
+      sequence_length: 1293
+      crc64: 3DA694448A0A9762
+      evidence:
+      - reference: PMID:35467400
+        snippet: The ppk1 marker gene allows for a finer-scale differentiation into
+          different "types" and "clades"; nevertheless, taxonomic assignments remain
+          inconsistent across studies. Therefore, a comprehensive reevaluation is
+          needed to establish a common understanding of this genus, in terms of both
+          naming and basic conserved physiological traits. Here, we provide this reassessment
+          using a comparison of genome, ppk1, and 16S rRNA gene-based approaches from
+          comprehensive data sets. We identified 15 novel species, along with "Candidatus
+          Accumulibacter phosphatis," "Candidatus Accumulibacter delftensis," and
+          "Candidatus Accumulibacter aalborgensis."
+        notes: Respiratory nitrate reductase catalytic subunit NarG (ACCAA_630021)
+          in Candidatus Accumulibacter aalborgensis (NCBITaxon:1860102; genome sequence
+          PMID:27688332), one of the named Accumulibacter species analyzed in PMID:35467400.
   - node_id: coupled_anaerobic_polyp_hydrolysis_pha_synthesis_and_aerobic_phosphorus_uptake
     label: anaerobic polyphosphate hydrolysis with PHA storage and luxury aerobic
       phosphorus uptake
@@ -198,4 +276,14 @@ curation_history:
     graph for anaerobic-aerobic enhanced biological phosphorus removal bioreactor
     (habitatmech:GOLD.4a2450370b) backed by PMID:33638876, PMID:34134440, PMID:41432927,
     and PMID:35467400.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added three verified UniProtKB protein_examples (UniProtKB:A0ABX1TZ70 A0ABX1TZ70_9PROT
+    ppk1 E4Q23_18485 and UniProtKB:A0ABX1TYP4 A0ABX1TYP4_9PROT napA E4Q23_09450 from
+    Candidatus Accumulibacter phosphatis NCBITaxon:327160, and UniProtKB:A0A1A8XUQ5
+    A0A1A8XUQ5_9PROT narG ACCAA_630021 from Candidatus Accumulibacter aalborgensis
+    NCBITaxon:1860102) to accumulibacter_ppk1_and_nitrate_reductase_enzymes backed
+    by PMID:35467400.
   llm_assisted: true

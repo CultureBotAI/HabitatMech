@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-10-31T235000Z-antigravity-040301
+  timestamp: '2026-10-31T23:50:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Audit causal-graph overlays and populate verified UniProtKB ProteinExample entries in Cycle 4 Stage 3
+  details: 'Audited all 3,209 habitat records (63 with curation/causal_graphs/*.yaml overlays) and re-verified all 27 existing ProteinExample entries against live UniProtKB REST API (0 mismatches). Added 19 new verified ProteinExample entries across 5 GENE_OR_PROTEIN nodes (27 -> 46 total ProteinExample entries across 13 nodes in 12 overlays): uasb_upflow_anaerobic_sludge_blanket.yaml (syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins for Syntrophus aciditrophicus SB, NCBITaxon:56780, PMID:23378508 and PMID:21966920: UniProtKB:Q2LTE1, UniProtKB:Q2LPK2, UniProtKB:Q2LWR1, UniProtKB:Q2LWR0), anaerobic_aerobic.yaml (accumulibacter_ppk1_and_nitrate_reductase_enzymes for Candidatus Accumulibacter phosphatis clade II-F UW4 / SCELSE-1, NCBITaxon:522306, and Candidatus Accumulibacter aalborgensis, NCBITaxon:1901528, PMID:35467400: UniProtKB:A0ABX1TZ70, UniProtKB:A0ABX1TYP4, UniProtKB:A0A1A8XUQ5), partial_nitrification_anammox_pna.yaml (anammox_hydrazine_synthase_and_dehydrogenase_complexes for Candidatus Kuenenia stuttgartiensis, NCBITaxon:174633, PMID:21964329: UniProtKB:Q1Q0T2, UniProtKB:Q1Q0T4, UniProtKB:Q1Q0T3, UniProtKB:Q1PW30), sulphur_autotrophic_denitrification.yaml (thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes for Thiobacillus denitrificans ATCC 25259, NCBITaxon:292415, PMID:16980503: UniProtKB:Q3SJ14, UniProtKB:Q60028, UniProtKB:Q3SGR9, UniProtKB:Q3SFJ8), and marine_pelagic_zone.yaml (prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes for Prochlorococcus marinus MIT 9313, NCBITaxon:74547, and Candidatus Pelagibacter ubique HTCC1062, NCBITaxon:335992, PMID:30742057 and PMID:23789085: UniProtKB:Q7V822, UniProtKB:Q7V823, UniProtKB:Q4FLG1, UniProtKB:Q4FMU1). Documented UniParc UPI0005161340 (EV02_1745 PepM in Prochlorococcus marinus str. SB, NCBITaxon:59926, retired TrEMBL UniProtKB:A0A0A2B5G7, PMID:26864648) on marine_pelagic_zone.yaml, unsequenced isolate phenotype scope on air.yaml (cell_associated_proteinaceous_ice_nucleation_active_compounds, PMID:30483227), and multispecies/isolate bulk bioprocess enzyme scope on ssf_solid_state_fermentation.yaml (extracellular_beta_mannan_and_polysaccharide_hydrolytic_enzymes, PMID:21080102 and PMID:29408199).'

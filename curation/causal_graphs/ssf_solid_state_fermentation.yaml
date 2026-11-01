@@ -29,7 +29,10 @@ causal_graphs:
     label: extracellular beta-mannan degradation and hydrolytic enzyme production
     node_type: COMMUNITY_PROCESS
     description: Secretion of extracellular hydrolytic enzymes in SSF bioreactors that depolymerize solid-substrate
-      polysaccharides such as palm kernel cake beta-mannan into mannose.
+      polysaccharides such as palm kernel cake beta-mannan into mannose. Multispecies/isolate bioprocess
+      phenomenon — Chen et al. 2010 (PMID:21080102) and Arora et al. 2018 (PMID:29408199) measure bulk
+      mannose release and extracellular enzyme production by palm-kernel-cake Aspergillus flavus and solid-substrate
+      filamentous fungi without resolving a single sequenced UniProtKB polypeptide.
   edges:
   - edge_id: ssf_maintains_moist_solid_substrate_bed_and_forced_aeration_regime
     subject: ssf_solid_state_fermentation
@@ -94,4 +97,11 @@ curation_history:
   changes: Added ssf_moist_solid_bed_heat_mass_transfer_and_fungal_polysaccharide_hydrolysis mechanism
     graph for solid-state fermentation bioreactor (habitatmech:GOLD.3af6ca6cc3) backed by PMID:12115405,
     PMID:21080102, and PMID:29408199.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented source-limited bulk bioprocess enzyme scope on extracellular_beta_mannan_and_polysaccharide_hydrolytic_enzymes
+    (mannose yield and extracellular hydrolytic enzyme production in PMID:21080102 and PMID:29408199 without
+    an individual sequenced polypeptide accession).
   llm_assisted: true

@@ -681,7 +681,109 @@ def test_cycle4_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
                 assert "\u00a0" not in snippet
 
 
+def test_cycle4_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "uasb_upflow_anaerobic_sludge_blanket": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "uasb_upflow_anaerobic_sludge_blanket.yaml"
+        ),
+        "anaerobic_aerobic": REPO_ROOT / "data" / "habitats" / "engineered" / "anaerobic_aerobic.yaml",
+        "partial_nitrification_anammox_pna": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "partial_nitrification_anammox_pna.yaml"
+        ),
+        "sulphur_autotrophic_denitrification": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "sulphur_autotrophic_denitrification.yaml"
+        ),
+        "marine_pelagic_zone": REPO_ROOT / "data" / "habitats" / "aquatic" / "marine_pelagic_zone.yaml",
+        "air": REPO_ROOT / "data" / "habitats" / "air" / "air.yaml",
+        "ssf_solid_state_fermentation": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "ssf_solid_state_fermentation.yaml"
+        ),
+    }
+    expected_protein_nodes = {
+        "uasb_upflow_anaerobic_sludge_blanket": {
+            "syntrophus_re_citrate_synthase_and_reverse_electron_transfer_proteins": [
+                "UniProtKB:Q2LTE1",
+                "UniProtKB:Q2LPK2",
+                "UniProtKB:Q2LWR1",
+                "UniProtKB:Q2LWR0",
+            ],
+        },
+        "anaerobic_aerobic": {
+            "accumulibacter_ppk1_and_nitrate_reductase_enzymes": [
+                "UniProtKB:A0ABX1TZ70",
+                "UniProtKB:A0ABX1TYP4",
+                "UniProtKB:A0A1A8XUQ5",
+            ],
+        },
+        "partial_nitrification_anammox_pna": {
+            "anammox_hydrazine_synthase_and_dehydrogenase_complexes": [
+                "UniProtKB:Q1Q0T2",
+                "UniProtKB:Q1Q0T4",
+                "UniProtKB:Q1Q0T3",
+                "UniProtKB:Q1PW30",
+            ],
+        },
+        "sulphur_autotrophic_denitrification": {
+            "thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes": [
+                "UniProtKB:Q3SJ14",
+                "UniProtKB:Q60028",
+                "UniProtKB:Q3SGR9",
+                "UniProtKB:Q3SFJ8",
+            ],
+        },
+        "marine_pelagic_zone": {
+            "prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes": [
+                "UniProtKB:Q7V822",
+                "UniProtKB:Q7V823",
+                "UniProtKB:Q4FLG1",
+                "UniProtKB:Q4FMU1",
+            ],
+        },
+    }
+    new_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            new_examples += len(examples)
+    assert new_examples == 19
 
-
+    expected_documented_nodes = {
+        "marine_pelagic_zone": (
+            "prochlorococcus_and_sar11_phosphonate_biosynthesis_and_c1_oxidation_enzymes",
+            "GENE_OR_PROTEIN",
+            "UPI0005161340",
+        ),
+        "air": (
+            "cell_associated_proteinaceous_ice_nucleation_active_compounds",
+            "GENE_OR_PROTEIN",
+            "Source-limited unsequenced phenotype",
+        ),
+        "ssf_solid_state_fermentation": (
+            "extracellular_beta_mannan_and_polysaccharide_hydrolytic_enzymes",
+            "COMMUNITY_PROCESS",
+            "without resolving a single sequenced UniProtKB polypeptide",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
 
 

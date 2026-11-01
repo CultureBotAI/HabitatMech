@@ -60,10 +60,101 @@ causal_graphs:
       form II RubisCO CbbM
     node_type: GENE_OR_PROTEIN
     description: Denitrification and sulfur-oxidation enzymes upregulated in Thiobacillus
-      denitrificans under denitrifying conditions, including respiratory nitrate reductase
-      (narGHI), nitrite/nitric oxide reductases (nir, nor), form II RubisCO (cbbM),
-      sulfide:quinone oxidoreductase, and dissimilatory sulfite reductase subunit
-      DsrC.
+      denitrificans (strain ATCC 25259 / T1; NCBITaxon:292415) under denitrifying
+      conditions, including respiratory nitrate reductase alpha subunit (UniProtKB:Q3SJ14,
+      Q3SJ14_THIDA, Tbd_1403, 1252 aa), form II ribulose bisphosphate carboxylase
+      (UniProtKB:Q60028, RBL2_THIDA, cbbM / Tbd_2638, 459 aa), sulfide-quinone reductase
+      (UniProtKB:Q3SGR9, Q3SGR9_THIDA, Tbd_2225, 422 aa), and dissimilatory sulfite
+      reductase-associated DsrC-like protein (UniProtKB:Q3SFJ8, Q3SFJ8_THIDA, Tbd_2658,
+      110 aa). Multi-protein enzymatic repertoire in T. denitrificans ATCC 25259 represented
+      by four verified UniProtKB exemplars matching the four upregulated gene classes
+      in PMID:16980503.
+    protein_examples:
+    - accession: UniProtKB:Q3SJ14
+      entry_name: Q3SJ14_THIDA
+      recommended_name: Nitrate reductase, alpha subunit
+      locus_tag: Tbd_1403
+      taxon_id: NCBITaxon:292415
+      taxon_name: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      role_in_node: subunit
+      sequence_length: 1252
+      crc64: 102C3A0B6DE9B46E
+      evidence:
+      - reference: PMID:16980503
+        snippet: Genes upregulated (ca. 4- to 95-fold) under denitrifying conditions
+          included nar, nir, and nor genes (associated, respectively, with nitrate
+          reductase, nitrite reductase, and nitric oxide reductase, which catalyze
+          successive steps of denitrification), cbbM (encoding form II RubisCO), and
+          genes involved with sulfur compound oxidation (including two physically
+          separated but highly similar copies of sulfide:quinone oxidoreductase and
+          of dsrC, associated with dissimilatory sulfite reductase).
+        notes: Respiratory nitrate reductase alpha subunit (Tbd_1403) upregulated
+          under denitrifying conditions in Thiobacillus denitrificans strain ATCC
+          25259 (PMID:16980503; genome sequence PMID:16452431).
+    - accession: UniProtKB:Q60028
+      entry_name: RBL2_THIDA
+      recommended_name: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      locus_tag: Tbd_2638
+      taxon_id: NCBITaxon:292415
+      taxon_name: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      role_in_node: family_member
+      sequence_length: 459
+      crc64: 4E080DCFDEA4266D
+      evidence:
+      - reference: PMID:16980503
+        snippet: Genes upregulated (ca. 4- to 95-fold) under denitrifying conditions
+          included nar, nir, and nor genes (associated, respectively, with nitrate
+          reductase, nitrite reductase, and nitric oxide reductase, which catalyze
+          successive steps of denitrification), cbbM (encoding form II RubisCO), and
+          genes involved with sulfur compound oxidation (including two physically
+          separated but highly similar copies of sulfide:quinone oxidoreductase and
+          of dsrC, associated with dissimilatory sulfite reductase).
+        notes: Swiss-Prot reviewed form II RubisCO CbbM (Tbd_2638) upregulated under
+          denitrifying conditions in Thiobacillus denitrificans strain ATCC 25259
+          (PMID:16980503; genome sequence PMID:16452431).
+    - accession: UniProtKB:Q3SGR9
+      entry_name: Q3SGR9_THIDA
+      recommended_name: Sulfide-quinone reductase
+      locus_tag: Tbd_2225
+      taxon_id: NCBITaxon:292415
+      taxon_name: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      role_in_node: family_member
+      sequence_length: 422
+      crc64: 98996642B10FA22D
+      evidence:
+      - reference: PMID:16980503
+        snippet: Genes upregulated (ca. 4- to 95-fold) under denitrifying conditions
+          included nar, nir, and nor genes (associated, respectively, with nitrate
+          reductase, nitrite reductase, and nitric oxide reductase, which catalyze
+          successive steps of denitrification), cbbM (encoding form II RubisCO), and
+          genes involved with sulfur compound oxidation (including two physically
+          separated but highly similar copies of sulfide:quinone oxidoreductase and
+          of dsrC, associated with dissimilatory sulfite reductase).
+        notes: Sulfide-quinone reductase (Tbd_2225) upregulated under denitrifying
+          conditions in Thiobacillus denitrificans strain ATCC 25259 (PMID:16980503;
+          genome sequence PMID:16452431).
+    - accession: UniProtKB:Q3SFJ8
+      entry_name: Q3SFJ8_THIDA
+      recommended_name: DsrC-like protein
+      locus_tag: Tbd_2658
+      taxon_id: NCBITaxon:292415
+      taxon_name: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      role_in_node: subunit
+      sequence_length: 110
+      crc64: 5623D0D1BFCA0CC4
+      evidence:
+      - reference: PMID:16980503
+        snippet: Genes upregulated (ca. 4- to 95-fold) under denitrifying conditions
+          included nar, nir, and nor genes (associated, respectively, with nitrate
+          reductase, nitrite reductase, and nitric oxide reductase, which catalyze
+          successive steps of denitrification), cbbM (encoding form II RubisCO), and
+          genes involved with sulfur compound oxidation (including two physically
+          separated but highly similar copies of sulfide:quinone oxidoreductase and
+          of dsrC, associated with dissimilatory sulfite reductase).
+        notes: DsrC-like protein (Tbd_2658) upregulated under denitrifying conditions
+          in Thiobacillus denitrificans strain ATCC 25259 (PMID:16980503; genome sequence
+          PMID:16452431).
   - node_id: autotrophic_sulfur_oxidation_coupled_nitrate_denitrification
     label: chemolithoautotrophic sulfur oxidation coupled to step-wise nitrate reduction
       (90-97.7% removal)
@@ -193,4 +284,13 @@ curation_history:
   changes: Added sulfur_autotrophic_denitrification_alkalinity_buffering_and_nar_sulfur_oxidation
     mechanism graph for sulfur autotrophic denitrification bioreactor (habitatmech:GOLD.f07ee97491)
     backed by PMID:41108976, PMID:41579775, PMID:41922114, and PMID:16980503.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added four verified UniProtKB protein_examples (UniProtKB:Q3SJ14 Q3SJ14_THIDA
+    Tbd_1403, UniProtKB:Q60028 RBL2_THIDA cbbM Tbd_2638, UniProtKB:Q3SGR9 Q3SGR9_THIDA
+    Tbd_2225, and UniProtKB:Q3SFJ8 Q3SFJ8_THIDA Tbd_2658) from Thiobacillus denitrificans
+    (strain ATCC 25259 / T1) (NCBITaxon:292415) to thiobacillus_denitrificans_nar_dsr_and_cbbm_enzymes
+    backed by PMID:16980503.
   llm_assisted: true
