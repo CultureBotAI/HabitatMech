@@ -1,0 +1,122 @@
+identifier: ENVO:02000059
+causal_graphs:
+- graph_id: surface_soil_edaphic_niche_differentiation_and_ammonia_oxidation
+  title: Surface soil edaphic niche differentiation, bacterial-fungal antagonism, and archaeal/bacterial
+    ammonia oxidation mechanism
+  description: Surface soil (topsoil) habitats experience strong edaphic filtering by soil pH, precipitation/aridity
+    (threshold 0.65), and organic carbon availability (<2% threshold), driving global niche differentiation
+    and antibiotic-mediated antagonism between bacterial and fungal communities alongside chemolithoautotrophic
+    ammonia oxidation catalyzed by ammonia monooxygenase (amoA) in soil Nitrososphaera and Nitrosospira
+    guilds.
+  nodes:
+  - node_id: surface_soil
+    label: surface soil
+    node_type: HABITAT
+    grounding: ENVO:02000059
+    description: Uppermost biologically active soil layer (topsoil) interacting directly with land plant
+      root systems, atmospheric precipitation, and litter inputs.
+  - node_id: topsoil_ph_precipitation_and_organic_carbon_regime
+    label: topsoil pH, precipitation, aridity, and organic carbon regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Edaphic and climatic gradients in surface soil including soil pH (critical transition
+      at pH 5.5), aridity index (0.65), precipitation, and organic carbon (<2% lower fertile limit).
+  - node_id: topsoil_bacterial_fungal_decomposer_and_ammonia_oxidizer_guild
+    label: topsoil bacterial-fungal decomposer and Nitrososphaera/Nitrosospira ammonia-oxidizing guild
+    node_type: COMMUNITY
+    description: Surface soil microbial community comprising generalist bacterial and fungal decomposers
+      alongside Thaumarchaeota/Nitrososphaerota (Nitrososphaera viennensis, Nitrosocosmicus) and Nitrosospira
+      ammonia oxidizers.
+  - node_id: archaeal_and_bacterial_ammonia_monooxygenase_amoa
+    label: archaeal and bacterial ammonia monooxygenase subunit A (amoA)
+    node_type: GENE_OR_PROTEIN
+    description: Ammonia monooxygenase (amoA) encoded by soil ammonia-oxidizing archaea (Nitrososphaera
+      viennensis, Nitrosocosmicus) and ammonia-oxidizing bacteria (Nitrosospira) catalyzing the rate-limiting
+      step of nitrification.
+  - node_id: topsoil_nitrogen_mineralization_and_nitrification
+    label: topsoil nutrient mineralization, chemolithoautotrophic nitrification, and carbon cycling
+    node_type: COMMUNITY_PROCESS
+    description: Coupled soil organic matter mineralization, ammonia/urea oxidation to nitrite, and spatial
+      partitioning of bacterial versus fungal nutrient cycling in surface soil.
+  edges:
+  - edge_id: surface_soil_maintains_topsoil_ph_precipitation_and_organic_carbon_regime
+    subject: surface_soil
+    predicate: maintains
+    object: topsoil_ph_precipitation_and_organic_carbon_regime
+    description: Surface soils across terrestrial biomes exhibit structured gradients in soil pH, precipitation/aridity,
+      and organic carbon content that govern plant-microbe associations.
+    evidence:
+    - reference: PMID:38804108
+      snippet: Finally, we showed that crossing environmental thresholds in aridity (aridity index of
+        0.65, i.e., the transition from mesic to dry ecosystems), soil pH (5.5; i.e., the transition from
+        acidic to strongly acidic soils), and carbon (less than 2%, the lower limit of fertile soils)
+        can result in drastic disruptions in the associations between land plants and soil organisms,
+        with potential implications for the delivery of soil ecosystem processes under ongoing global
+        environmental change.
+      notes: Global standardized survey of topsoil under 150 land plant species across 124 locations identified
+        critical environmental thresholds in aridity (0.65), soil pH (5.5), and organic carbon (<2%) (PMID:38804108).
+  - edge_id: topsoil_edaphic_regime_shapes_bacterial_fungal_and_ammonia_oxidizer_guild
+    subject: topsoil_ph_precipitation_and_organic_carbon_regime
+    predicate: selects for
+    object: topsoil_bacterial_fungal_decomposer_and_ammonia_oxidizer_guild
+    description: Contrasting responses to precipitation and soil pH drive global niche differentiation
+      and antibiotic-gene-mediated antagonism between bacteria and fungi alongside selection for Nitrososphaera
+      and Nitrosospira ammonia oxidizers.
+    evidence:
+    - reference: PMID:30069051
+      snippet: We demonstrate that fungi and bacteria show global niche differentiation that is associated
+        with contrasting diversity responses to precipitation and soil pH. Furthermore, we provide evidence
+        for strong bacterial-fungal antagonism, inferred from antibiotic-resistance genes, in topsoil
+        and ocean habitats, indicating the substantial role of biotic interactions in shaping microbial
+        communities.
+      notes: Bahram et al. 2018 (PMID:30069051) demonstrated global bacterial-fungal niche differentiation
+        and antagonism across 189 topsoil sites.
+    - reference: PMID:32009017
+      snippet: AOB were classified into Nitrosospira; the two dominant OTUs corresponded to the Mount
+        Everest cluster. AOA were classified into three clusters; Nitrososphaera and Nitrosocosmicus were
+        the two dominant clusters.
+      notes: Topsoil ammonia oxidizer profiling identified Nitrosospira AOB and Nitrososphaera/Nitrosocosmicus
+        AOA as the dominant nitrifying clades (PMID:32009017).
+  - edge_id: topsoil_guild_encodes_ammonia_monooxygenase_amoa
+    subject: topsoil_bacterial_fungal_decomposer_and_ammonia_oxidizer_guild
+    predicate: expresses
+    object: archaeal_and_bacterial_ammonia_monooxygenase_amoa
+    description: Soil ammonia-oxidizing archaea (such as Nitrososphaera viennensis) and bacteria (Nitrosospira)
+      encode and express ammonia monooxygenase (amoA) homologues in surface soils.
+    evidence:
+    - reference: PMID:21525411
+      snippet: Genes of archaea encoding homologues of ammonia monooxygenases have been found on a widespread
+        basis and in large amounts in almost all terrestrial and marine environments, indicating that
+        ammonia oxidizing archaea (AOA) might play a major role in nitrification on Earth.
+      notes: Tourna et al. 2011 (PMID:21525411) isolated the soil ammonia-oxidizing archaeon Nitrososphaera
+        viennensis EN76 and characterized its ammonia monooxygenase-driven nitrification.
+    - reference: PMID:32009017
+      snippet: Six and ten operational taxonomic units (OTUs) were identified for ammonia-oxidizing bacteria
+        (AOB) and archaea (AOA) amoA, respectively.
+      notes: Both bacterial and archaeal amoA gene repertoires are maintained in vegetated topsoil communities
+        (PMID:32009017).
+  - edge_id: ammonia_monooxygenase_drives_topsoil_nitrification_and_mineralization
+    subject: archaeal_and_bacterial_ammonia_monooxygenase_amoa
+    predicate: catalyzes
+    object: topsoil_nitrogen_mineralization_and_nitrification
+    description: Ammonia monooxygenase activity coupled with pyruvate/bacterial-assisted chemolithoautotrophy
+      and decomposer mineralization drives ammonia and urea oxidation and nutrient cycling in surface
+      soil.
+    evidence:
+    - reference: PMID:21525411
+      snippet: Here we describe the cultivation and isolation of an AOA from soil. It grows on ammonia
+        or urea as an energy source and is capable of using higher ammonia concentrations than the marine
+        isolate, Nitrosopumilus maritimus.
+      notes: Soil AOA Nitrososphaera viennensis oxidizes ammonia and urea at elevated soil substrate concentrations
+        (PMID:21525411).
+    - reference: PMID:38804108
+      snippet: These consistent taxa were dominated by generalist decomposers and phagotrophs and their
+        presence was positively correlated with the abundance of functional genes linked to mineralization.
+      notes: Consistent topsoil microbial taxa positively correlate with mineralization functional gene
+        abundance (PMID:38804108).
+curation_history:
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added surface_soil_edaphic_niche_differentiation_and_ammonia_oxidation mechanism graph for
+    surface soil (ENVO:02000059) backed by PMID:30069051, PMID:38804108, PMID:21525411, and PMID:32009017.
+  llm_assisted: true

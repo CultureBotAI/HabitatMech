@@ -650,7 +650,163 @@ def test_cycle4_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
             REPO_ROOT / "data" / "habitats" / "air" / "air.yaml",
         ),
     }
-    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) == 63
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) >= 63
+    for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
+        overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
+        assert overlay_path.exists(), f"{slug}.yaml missing"
+        assert hab_path.exists(), f"{hab_path} missing"
+        doc = yaml.safe_load(overlay_path.read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(hab_path.read_text(encoding="utf-8"))
+        assert doc["identifier"] == expected_id
+        assert hab_doc["identifier"] == expected_id
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        graphs = doc["causal_graphs"]
+        assert len(graphs) == 1
+        graph = graphs[0]
+        assert graph["graph_id"] == expected_graph_id
+        nodes = {n["node_id"]: n for n in graph["nodes"]}
+        assert nodes[slug]["node_type"] == "HABITAT"
+        assert nodes[slug]["grounding"] == expected_id
+        refs = {
+            ev["reference"]
+            for edge in graph["edges"]
+            for ev in edge.get("evidence", [])
+        }
+        assert refs == expected_refs
+        assert doc["curation_history"][0]["action"] == "ADD_CAUSAL_GRAPH"
+        for edge in graph["edges"]:
+            for ev in edge.get("evidence", []):
+                snippet = ev.get("snippet", "")
+                assert "<i>" not in snippet and "</i>" not in snippet
+                assert "\u00a0" not in snippet
+
+
+def test_cycle5_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
+    expected = {
+        "surface_soil": (
+            "ENVO:02000059",
+            "surface_soil_edaphic_niche_differentiation_and_ammonia_oxidation",
+            {
+                "PMID:21525411",
+                "PMID:30069051",
+                "PMID:32009017",
+                "PMID:38804108",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "surface_soil.yaml",
+        ),
+        "subpolar_coniferous_forest_biome": (
+            "ENVO:01000250",
+            "boreal_coniferous_forest_cortinarius_peroxidase_humus_oxidation",
+            {
+                "PMID:24725281",
+                "PMID:33934481",
+                "PMID:37697631",
+                "PMID:38325494",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "terrestrial"
+            / "subpolar_coniferous_forest_biome.yaml",
+        ),
+        "tundra_biome": (
+            "ENVO:01000180",
+            "tundra_permafrost_thaw_iron_redox_and_methanogenesis_partitioning",
+            {
+                "PMID:31285347",
+                "PMID:33084697",
+                "PMID:37996661",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "tundra_biome.yaml",
+        ),
+        "oil_contaminated_soil": (
+            "ENVO:00002875",
+            "oil_contaminated_soil_rhodococcus_biosurfactant_and_alkb_hydrocarbon_catabolism",
+            {
+                "PMID:24031544",
+                "PMID:25288551",
+                "PMID:39191326",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "terrestrial"
+            / "oil_contaminated_soil.yaml",
+        ),
+        "solar_salterns": (
+            "habitatmech:GOLD.67571e7dc1",
+            "coastal_solar_saltern_haloquadratum_salinibacter_retinal_phototrophy",
+            {
+                "PMID:18515390",
+                "PMID:21559517",
+                "PMID:28673248",
+                "PMID:36229623",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "solar_salterns.yaml",
+        ),
+        "diffuse_flow": (
+            "habitatmech:GOLD.5c80d6475a",
+            "diffuse_flow_vent_campylobacterota_sulrs_sox_sulfur_chemolithoautotrophy",
+            {
+                "PMID:23847608",
+                "PMID:32336020",
+                "PMID:41767251",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "diffuse_flow.yaml",
+        ),
+        "rock_dwelling_subaerial_biofilms": (
+            "habitatmech:GOLD.02bb8b9d08",
+            "subaerial_rock_biofilm_desiccation_uv_crtb_scytonemin_bioprotection",
+            {
+                "PMID:35208882",
+                "PMID:36669662",
+                "PMID:37517730",
+                "PMID:40358234",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "terrestrial"
+            / "rock_dwelling_subaerial_biofilms.yaml",
+        ),
+        "leaf_surface": (
+            "habitatmech:GOLD.82f62476b8",
+            "leaf_surface_methylobacterium_lanthanide_xoxf_methanol_methylotrophy",
+            {
+                "PMID:20447995",
+                "PMID:30653750",
+            },
+            REPO_ROOT / "data" / "habitats" / "host_associated" / "leaf_surface.yaml",
+        ),
+        "fruiting_body": (
+            "habitatmech:GOLD.92cbc36828",
+            "fungal_fruiting_body_bradyrhizobium_nifh_symbiosis_and_pseudomonas_gacs_edb_defense",
+            {
+                "PMID:23426012",
+                "PMID:33943006",
+                "PMID:35237850",
+                "PMID:38692852",
+            },
+            REPO_ROOT / "data" / "habitats" / "host_associated" / "fruiting_body.yaml",
+        ),
+        "dairy_processing_facility": (
+            "habitatmech:GOLD.b69e4553bb",
+            "dairy_processing_facility_stainless_steel_biofilm_and_pseudomonas_aprx_casein_proteolysis",
+            {
+                "PMID:28217561",
+                "PMID:28303120",
+                "PMID:33336988",
+                "PMID:37732743",
+                "PMID:41794443",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "engineered"
+            / "dairy_processing_facility.yaml",
+        ),
+    }
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) >= 73
     for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
         overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
         assert overlay_path.exists(), f"{slug}.yaml missing"

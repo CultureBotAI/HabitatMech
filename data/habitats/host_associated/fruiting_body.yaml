@@ -24,6 +24,153 @@ source_attestations:
   assertion_count: 140
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: fungal_fruiting_body_bradyrhizobium_nifh_symbiosis_and_pseudomonas_gacs_edb_defense
+  title: Fungal fruiting body Bradyrhizobium nifH nitrogen-fixing symbiosis and Pseudomonas
+    GacS-EDB anti-nematode defense mechanism
+  description: Fungal fruiting bodies (ascocarps of Tuber magnatum white truffles
+    and basidiocarps of Agaricus bisporus mushrooms) provide specialized hyphal microhabitats
+    that host coevolved bacterial communities while facing grazing pressure from fungivorous/bacteriovorous
+    nematodes such as Caenorhabditis elegans. Within Tuber magnatum fruiting bodies,
+    dominant Alpha-Proteobacteria (Bradyrhizobium, Rhizobium, Ensifer) carry nitrogenase
+    (nifH) and glutamine synthetase II (glnII) genes and exhibit reciprocal growth
+    dependency with fungal mycelium, while mushroom-associated Pseudomonas fluorescens
+    (strain NZI7) uses the global regulator GacS and the GacS-regulated EDB gene cluster
+    to repel C. elegans predation.
+  nodes:
+  - node_id: fruiting_body
+    label: fungal fruiting body
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.92cbc36828
+    description: Multicellular reproductive structure (ascocarp or basidiocarp, such
+      as Tuber truffles and Agaricus mushrooms) formed by dikaryotic fungal mycelium.
+  - node_id: ascocarp_hyphal_nutrient_coupling_and_mycophagous_nematode_grazing
+    label: fruiting-body hyphal nitrogen/nutrient demand and C. elegans nematode grazing
+      pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Intimate metabolic interdependence between fungal fruiting-body hyphae
+      and endocarp bacteria alongside bacteriovorous/mycophagous nematode (Caenorhabditis
+      elegans) grazing on mushroom surfaces.
+  - node_id: fruiting_body_bradyrhizobium_rhizobium_and_pseudomonas_fluorescens_guild
+    label: fruiting-body Bradyrhizobium/Rhizobium/Ensifer diazotrophic and Pseudomonas
+      fluorescens guild
+    node_type: COMMUNITY
+    description: Coevolved ascocarp-dominating Alphaproteobacteria (Bradyrhizobium
+      jicamae supergroup lineages, Rhizobium, Ensifer) in Tuber magnatum and mushroom-associated
+      Pseudomonas fluorescens complex strains (including NZI7).
+  - node_id: bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster
+    label: Bradyrhizobium nitrogenase (nifH)/glutamine synthetase (glnII) and Pseudomonas
+      GacS/EDB nematode-repellence cluster
+    node_type: GENE_OR_PROTEIN
+    description: Nitrogenase iron protein gene nifH and glutamine synthetase II gene
+      glnII in truffle-associated Bradyrhizobium spp., alongside the global sensor
+      kinase GacS and GacS-regulated EDB ('edible') gene cluster in mushroom-associated
+      Pseudomonas fluorescens NZI7.
+  - node_id: symbiotic_nitrogen_fixation_mycelial_growth_and_nematode_grazing_deterrence
+    label: symbiotic diazotrophic mycelial growth promotion and EDB-mediated nematode
+      deterrence
+    node_type: COMMUNITY_PROCESS
+    description: Reciprocal diazotrophic bacterial support of Tuber magnatum mycelial
+      growth and non-lethal deterrence of Caenorhabditis elegans grazing on mushroom-associated
+      bacterial colonies.
+  edges:
+  - edge_id: fruiting_body_establishes_hyphal_microhabitat_and_nematode_exposure
+    subject: fruiting_body
+    predicate: maintains
+    object: ascocarp_hyphal_nutrient_coupling_and_mycophagous_nematode_grazing
+    description: Fungal fruiting bodies create selective hyphal microhabitats with
+      reciprocal bacterial-mycelial dependency while edible mushroom fruiting bodies
+      attract Caenorhabditis elegans grazing.
+    evidence:
+    - reference: PMID:38692852
+      snippet: Three T. magnatum strains were co-isolated on modified Woody Plant
+        Medium (mWPM) with aerobic bacteria and characterised through microscopic
+        observations. The difficulties of growing alone both partners, bacteria and
+        T. magnatum mycelium, on mWPM demonstrated the reciprocal dependency.
+      notes: Iotti et al. 2024 (PMID:38692852) demonstrated reciprocal growth dependency
+        between Tuber magnatum mycelium and co-isolated fruiting-body Bradyrhizobium
+        strains.
+    - reference: PMID:23426012
+      snippet: C. elegans is frequently associated with cultivation of the edible
+        mushroom Agaricus bisporus, and has been reported to increase the severity
+        of bacterial blotch of mushrooms, a disease caused by bacteria from the Pseudomonas
+        fluorescens complex.
+      notes: Burlinginson et al. 2013 (PMID:23426012) documented C. elegans grazing
+        interactions with Pseudomonas fluorescens complex bacteria on Agaricus bisporus
+        mushrooms.
+  - edge_id: fruiting_body_microhabitat_selects_for_bradyrhizobium_and_pseudomonas_guild
+    subject: ascocarp_hyphal_nutrient_coupling_and_mycophagous_nematode_grazing
+    predicate: selects for
+    object: fruiting_body_bradyrhizobium_rhizobium_and_pseudomonas_fluorescens_guild
+    description: Tuber magnatum fruiting bodies selectively enrich Bradyrhizobium,
+      Rhizobium, and Ensifer spp. across natural sites, while mushroom habitats select
+      for grazing-resistant Pseudomonas fluorescens strains.
+    evidence:
+    - reference: PMID:35237850
+      snippet: Thirty-six bacterial OTUs in truffles and 11 bacterial OTUs in soils
+        beneath truffles were identified as indicator taxa. As shown for other truffle
+        species, the dominance of Bradyrhizobium, Rhizobium, and Ensifer spp. within
+        the truffle fruiting body suggests an evolutionary adaptation of this microorganism
+        to the genus Tuber.
+      notes: Marozzi et al. 2022 (PMID:35237850) identified Bradyrhizobium, Rhizobium,
+        and Ensifer spp. as dominant indicator taxa inside Tuber magnatum fruiting
+        bodies.
+    - reference: PMID:33943006
+      snippet: The 16S rRNA gene amplicon high-throughput sequencing provided an overview
+        of the composition of the ascocarp-associated bacterial communities. A predominance
+        of α-Proteobacteria was observed, with Bradyrhizobium among the main genera.
+      notes: High-throughput 16S profiling of Molise Tuber magnatum ascocarps confirmed
+        predominance of Alphaproteobacteria led by Bradyrhizobium (PMID:33943006).
+  - edge_id: fruiting_body_guild_harbors_nifh_glnii_and_gacs_edb_genes
+    subject: fruiting_body_bradyrhizobium_rhizobium_and_pseudomonas_fluorescens_guild
+    predicate: expresses
+    object: bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster
+    description: Truffle-associated Bradyrhizobium isolates carry nifH, glnII, and
+      recA genes, while mushroom-associated Pseudomonas fluorescens NZI7 expresses
+      the global regulator GacS and the GacS-regulated EDB gene cluster.
+    evidence:
+    - reference: PMID:38692852
+      snippet: Three bacterial isolates for each T. magnatum strain were obtained
+        and molecularly characterised by sequencing the 16S rRNA, glnII, recA and
+        nifH genes. Phylogenetic analyses showed that all nine bacterial strains were
+        distributed among five subclades included in a new monophyletic lineage belonging
+        to the Bradyrhizobium genus within the Bradyrhizobium jicamae supergroup.
+        The nifH genes were detected in all bacterial isolates, suggesting nitrogen-fixing
+        capacities.
+      notes: All nine Bradyrhizobium strains co-isolated with Tuber magnatum carried
+        nifH and glnII genes (PMID:38692852).
+    - reference: PMID:23426012
+      snippet: To identify the genetic basis of nematode repellence in NZI7, we developed
+        a grid-based screen for mutants that lacked the ability to repel C. elegans.
+        The mutants isolated in this screen included strains with insertions in the
+        global regulator GacS and in a previously undescribed GacS-regulated gene
+        cluster, 'EDB' ('edible').
+      notes: Transposon mutagenesis in mushroom isolate P. fluorescens NZI7 identified
+        GacS and the GacS-regulated EDB gene cluster as essential for C. elegans repellence
+        (PMID:23426012).
+  - edge_id: nifh_and_gacs_edb_drive_mycelial_growth_and_nematode_deterrence
+    subject: bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster
+    predicate: drives
+    object: symbiotic_nitrogen_fixation_mycelial_growth_and_nematode_grazing_deterrence
+    description: Diazotrophic Bradyrhizobium symbiosis enables consistent Tuber magnatum
+      mycelial growth while the cell-associated GacS-EDB factor deters C. elegans
+      predation and facilitates bacterial dissemination.
+    evidence:
+    - reference: PMID:38692852
+      snippet: This study describes beneficial interactions between T. magnatum mycelium
+        and never before described bradyrhizobia, which allows the in vitro growth
+        of T. magnatum mycelium.
+      notes: Symbiotic nifH-bearing Bradyrhizobium strains enable sustained in vitro
+        growth of Tuber magnatum mycelium (PMID:38692852).
+    - reference: PMID:23426012
+      snippet: Our results suggest that the product of the EDB cluster is a poorly
+        diffusible or cell-associated factor that acts together with other features
+        of NZI7 to provide a novel mechanism to deter nematode grazing. As nematodes
+        interact with NZI7 colonies before being repelled, the EDB factor may enable
+        NZI7 to come into contact with and be disseminated by C. elegans without being
+        subject to intensive predation.
+      notes: The GacS-regulated EDB factor deters C. elegans grazing while allowing
+        phoretic dissemination of Pseudomonas fluorescens NZI7 (PMID:23426012).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -61,3 +208,10 @@ curation_history:
     names a host/disease/process rather than the defined habitat 'fungal fruiting
     body'; suppress automatic exact-synonym retention while preserving verbatim source
     provenance.
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added fungal_fruiting_body_bradyrhizobium_nifh_symbiosis_and_pseudomonas_gacs_edb_defense
+    mechanism graph for fruiting_body (habitatmech:GOLD.92cbc36828) backed by PMID:35237850,
+    PMID:33943006, PMID:38692852, and PMID:23426012.
+  llm_assisted: true

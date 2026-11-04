@@ -1,0 +1,142 @@
+identifier: habitatmech:GOLD.b69e4553bb
+causal_graphs:
+- graph_id: dairy_processing_facility_stainless_steel_biofilm_and_pseudomonas_aprx_casein_proteolysis
+  title: Dairy processing facility stainless-steel biofilm persistence and psychrotrophic Pseudomonas
+    AprX metalloprotease milk spoilage mechanism
+  description: Dairy processing facilities combine refrigerated raw milk storage (4-6 degrees C), milk-fed
+    stainless-steel processing surfaces, and ultra-high-temperature (UHT) thermal regimes that select
+    for resilient environmental Pseudomonas oligotypes (Pseudomonas fluorescens and Pseudomonas fragi)
+    alongside multispecies stainless-steel biofilm producers (Pseudomonas aeruginosa, Bacillus licheniformis,
+    Enterococcus faecalis, Streptococcus thermophilus). At refrigeration temperatures, P. fluorescens
+    expresses the aprX-lipA2 operon to secrete the Zn2+/Ca2+-stabilized thermostable alkaline metalloprotease
+    AprX, which survives UHT treatment and hydrolyzes casein micelles, causing milk destabilization and
+    gelation.
+  nodes:
+  - node_id: dairy_processing_facility
+    label: dairy processing facility
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.b69e4553bb
+    description: Industrial food-processing facility and stainless-steel equipment chain used for handling,
+      pasteurizing/UHT-treating, and packaging raw milk and dairy products.
+  - node_id: refrigerated_milk_cold_chain_and_stainless_steel_processing_surfaces
+    label: refrigerated raw-milk cold storage (6°C), UHT thermal processing, and milk-fed stainless-steel
+      surfaces
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cold storage conditions that favor psychrotrophic proliferation coupled with continuous-flow
+      milk contact on stainless-steel equipment surfaces and downstream UHT thermal processing.
+  - node_id: psychrotrophic_pseudomonas_and_heat_resistant_stainless_steel_biofilm_guild
+    label: environmental Pseudomonas (P. fluorescens, P. fragi) and multispecies stainless-steel biofilm
+      guild
+    node_type: COMMUNITY
+    description: Resilient dairy plant environmental oligotypes of Pseudomonas fluorescens and Pseudomonas
+      fragi alongside heat-resistant multispecies biofilm formers (Pseudomonas aeruginosa, Bacillus licheniformis,
+      Enterococcus faecalis, Streptococcus thermophilus).
+  - node_id: thermostable_alkaline_metalloprotease_aprx_and_proteinaceous_biofilm_matrix
+    label: Zn2+/Ca2+-stabilized thermostable extracellular metalloprotease AprX (aprX-lipA2 operon)
+    node_type: GENE_OR_PROTEIN
+    description: Conserved aprX gene within the aprX-lipA2 operon of Pseudomonas fluorescens encoding
+      the Zn2+- and Ca2+-stabilized heat-resistant extracellular alkaline metalloprotease AprX, alongside
+      proteinase-K-sensitive biofilm matrix proteins.
+  - node_id: stainless_steel_biofilm_contamination_and_uht_milk_casein_gelation
+    label: persistent equipment biofilm cross-contamination and UHT-resistant AprX casein hydrolysis/gelation
+    node_type: COMMUNITY_PROCESS
+    description: Continuous seeding of dairy products from stainless-steel biofilms and post-UHT hydrolysis
+      of casein micelles by thermostable AprX, leading to milk destabilization, age gelation, and shelf-life
+      reduction.
+  edges:
+  - edge_id: dairy_facility_maintains_cold_chain_and_stainless_steel_surfaces
+    subject: dairy_processing_facility
+    predicate: maintains
+    object: refrigerated_milk_cold_chain_and_stainless_steel_processing_surfaces
+    description: Dairy processing facilities operate refrigerated raw milk storage and continuous-flow
+      stainless-steel equipment surfaces subjected to thermal processing.
+    evidence:
+    - reference: PMID:33336988
+      snippet: These proteases are especially problematic, because it is difficult to control psychrotrophic
+        bacteria during cold storage and to inactivate their heat-resistant proteases during dairy processing.
+      notes: Zhang et al. 2019 (PMID:33336988) reviewed how cold storage and dairy thermal processing
+        select for psychrotrophic bacteria and their heat-resistant proteases.
+    - reference: PMID:37732743
+      snippet: A continuous flow version was then developed to study multispecies biofilm formed on stainless
+        steel in microfiltered milk under dynamic conditions encountered in dairy processing equipment.
+      notes: Continuous-flow milk over stainless steel models the dynamic surface conditions inside dairy
+        processing equipment (PMID:37732743).
+  - edge_id: cold_chain_and_stainless_steel_select_for_pseudomonas_and_multispecies_biofilms
+    subject: refrigerated_milk_cold_chain_and_stainless_steel_processing_surfaces
+    predicate: selects for
+    object: psychrotrophic_pseudomonas_and_heat_resistant_stainless_steel_biofilm_guild
+    description: Dairy plant surfaces and refrigerated milk select for dominant environmental oligotypes
+      of Pseudomonas fragi and Pseudomonas fluorescens as well as strong stainless-steel biofilm producers
+      (P. aeruginosa, B. licheniformis, E. faecalis, S. thermophilus).
+    evidence:
+    - reference: PMID:28303120
+      snippet: We showed that the most frequently found oligotypes belonged to Pseudomonas fragi and P.
+        fluorescens, that the most abundant oligotypes co-occurred, and were shared between the meat and
+        dairy datasets. All the oligotypes occurring in foods were also identified in the environmental
+        samples of the corresponding plants, highlighting the important role of the environment as a source
+        of strains for food contamination.
+      notes: Stellato et al. 2017 (PMID:28303120) demonstrated that dominant P. fragi and P. fluorescens
+        oligotypes persist in dairy processing plant environments and contaminate finished dairy products.
+    - reference: PMID:37732743
+      snippet: A multispecies model of dairy biofilm was developed under static and dynamic conditions
+        using heat-resistant Bacillus licheniformis, Pseudomonas aeruginosa, Clostridium tyrobutyricum,
+        Enterococcus faecalis, Streptococcus thermophilus, and Rothia kristinae isolated from dairies.
+        C. tyrobutiricum and R. kristinae were weak producers of biofilm, whereas the other four were
+        moderate to strong producers.
+      notes: Dairy isolates of B. licheniformis, P. aeruginosa, E. faecalis, and S. thermophilus dominate
+        multispecies biofilms on stainless steel in microfiltered milk (PMID:37732743).
+  - edge_id: pseudomonas_guild_expresses_thermostable_metalloprotease_aprx
+    subject: psychrotrophic_pseudomonas_and_heat_resistant_stainless_steel_biofilm_guild
+    predicate: expresses
+    object: thermostable_alkaline_metalloprotease_aprx_and_proteinaceous_biofilm_matrix
+    description: Pseudomonas fluorescens strains carry the conserved aprX gene within the aprX-lipA2 operon
+      and express the Zn2+/Ca2+-stabilized thermostable metalloprotease AprX in milk at 6°C and 22°C.
+    evidence:
+    - reference: PMID:28217561
+      snippet: Among the bacterial proteases, a predominant role in spoilage of dairy products seems to
+        be played by the thermostable metallo-protease AprX, which is produced by various strains of Pseudomonas
+        fluorescens. Differences in AprX enzyme activity among different strains were highlighted, but
+        the most proteolytic strains were not identified. In this study, the presence of the aprX gene
+        was evaluated in 69 strains isolated from food matrices and 18 reference strains belonging to
+        the P. fluorescens group, which had been previously typed by the multi locus sequence typing method.
+        Subsequently, a subset of reference strains was inoculated in ultra-high temperature milk, and
+        the expression of the aprX gene was evaluated at 22 and 6°C.
+      notes: Caldera et al. 2016 (PMID:28217561) demonstrated widespread aprX gene carriage and expression
+        at 22°C and 6°C across dairy P. fluorescens group strains.
+    - reference: PMID:41794443
+      snippet: It discusses the aprX evolutionary aspects, regarding the conserved nature of its coding
+        gene, the variable organization of the aprX-lipA2 operon, and the mechanisms regulating its expression.
+      notes: AprX is encoded within the conserved aprX-lipA2 operon in Pseudomonas spp. (PMID:41794443).
+  - edge_id: aprx_and_biofilm_matrix_drive_uht_milk_casein_hydrolysis_and_spoilage
+    subject: thermostable_alkaline_metalloprotease_aprx_and_proteinaceous_biofilm_matrix
+    predicate: catalyzes
+    object: stainless_steel_biofilm_contamination_and_uht_milk_casein_gelation
+    description: Zn2+- and Ca2+-stabilized AprX resists UHT thermal inactivation and hydrolyzes casein
+      micelles to cause UHT milk destabilization and gelation, while proteinaceous biofilms continuously
+      contaminate dairy processing lines.
+    evidence:
+    - reference: PMID:41794443
+      snippet: The proteolysis of Ultra-High Temperature (UHT) milk is often linked to the proteolytic
+        activity of AprX. This enzyme is a thermostable extracellular protease produced by Pseudomonas
+        spp. that hydrolyzes caseins, causing milk destabilization and subsequent gelation.
+      notes: AprX hydrolyzes caseins in UHT milk, causing micelle destabilization and gelation (PMID:41794443).
+    - reference: PMID:41794443
+      snippet: The enzyme's high resistance to UHT treatments is due to its flexible structure stabilized
+        by interactions with divalent ions, mainly zinc and calcium.
+      notes: Divalent Zn2+ and Ca2+ ions stabilize the AprX structure against UHT thermal denaturation
+        (PMID:41794443).
+    - reference: PMID:37732743
+      snippet: In the food industry, especially dairy, biofilms can be formed by heat-resistant spoilage
+        and pathogenic bacteria from the farm. Such biofilms may persist throughout the processing chain
+        and contaminate milk and dairy products continuously, increasing equipment cleaning, maintenance
+        costs, and product recalls.
+      notes: Persistent multispecies biofilms on dairy processing equipment continuously contaminate milk
+        and dairy products (PMID:37732743).
+curation_history:
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added dairy_processing_facility_stainless_steel_biofilm_and_pseudomonas_aprx_casein_proteolysis
+    mechanism graph for dairy_processing_facility (habitatmech:GOLD.b69e4553bb) backed by PMID:28303120,
+    PMID:28217561, PMID:33336988, PMID:41794443, and PMID:37732743.
+  llm_assisted: true

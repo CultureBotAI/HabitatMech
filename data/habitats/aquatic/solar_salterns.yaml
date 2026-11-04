@@ -21,6 +21,140 @@ source_attestations:
   source_path: Environmental > Aquatic > Marine > Intertidal zone > Solar salterns
   assertion_count: 157
   assertion_unit: ORGANISM
+causal_graphs:
+- graph_id: coastal_solar_saltern_haloquadratum_salinibacter_retinal_phototrophy
+  title: Coastal solar saltern hypersaline crystallization and Haloquadratum/Salinibacter
+    retinal-carotenoid phototrophic proton pumping mechanism
+  description: Saturated thalassic brines and crystallizer ponds in coastal solar
+    salterns impose extreme halophilic osmotic stress and high solar irradiance, selecting
+    for communities where the ultrathin square haloarchaeon Haloquadratum walsbyi
+    constitutes up to 80-90% of prokaryotes alongside the extremophilic bacterium
+    Salinibacter ruber. These dominant halophiles constitutively express bacteriorhodopsin,
+    S-layer/halomucin cell-surface glycoproteins, and salinixanthin-retinal xanthorhodopsin
+    proton pumps (coupled with salinixanthin-retaining beta-barrel outer-membrane
+    porins) to harvest solar energy and maintain osmotic and charge homeostasis.
+  nodes:
+  - node_id: solar_salterns
+    label: coastal solar saltern
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.67571e7dc1
+    description: Anthropogenic coastal thalassic evaporation pond system concentrating
+      seawater to NaCl saturation in crystallizer ponds.
+  - node_id: saturated_thalassic_brine_and_high_solar_irradiance
+    label: saturated thalassic NaCl brine and high solar irradiance in crystallizer
+      ponds
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hypersaline NaCl-saturated water in coastal saltern crystallizer
+      ponds exposed to intense solar radiation and evaporative desiccation.
+  - node_id: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    label: Haloquadratum walsbyi (80-90% prokaryotic abundance) and Salinibacter ruber
+      crystallizer guild
+    node_type: COMMUNITY
+    description: Hyperhalophilic archaeal-bacterial consortium dominated by square-flattened
+      Haloquadratum walsbyi (strains HBSQ001, C23) and red-pigmented Salinibacter
+      ruber.
+  - node_id: bacteriorhodopsin_halomucin_and_salinixanthin_xanthorhodopsin_pumps
+    label: Haloquadratum bacteriorhodopsin/S-layer/halomucin glycoproteins and Salinibacter
+      xanthorhodopsin
+    node_type: GENE_OR_PROTEIN
+    description: Constitutively expressed Haloquadratum walsbyi bacteriorhodopsin,
+      S-layer glycoprotein lattice, and giant capsule protein halomucin alongside
+      Salinibacter ruber dual-chromophore (salinixanthin-retinal) xanthorhodopsin
+      and salinixanthin-binding 8-stranded beta-barrel outer-membrane porin.
+  - node_id: retinal_driven_proton_pumping_and_hypersaline_envelope_homeostasis
+    label: light-driven transmembrane proton pumping, carotenoid antenna energy transfer,
+      and hypersaline cell integrity
+    node_type: COMMUNITY_PROCESS
+    description: Solar energy harvesting via bacteriorhodopsin and xanthorhodopsin
+      (with ~45% excited-state energy transfer from salinixanthin S2 to retinal S1)
+      and maintenance of large surface-to-volume ratio and hydration shell integrity.
+  edges:
+  - edge_id: solar_saltern_maintains_saturated_thalassic_brine_and_solar_irradiance
+    subject: solar_salterns
+    predicate: maintains
+    object: saturated_thalassic_brine_and_high_solar_irradiance
+    description: Coastal solar saltern crystallizer ponds maintain saturated thalassic
+      brines under high solar irradiation where only extreme halophiles can proliferate.
+    evidence:
+    - reference: PMID:21559517
+      snippet: Ultrathin square cell Haloquadratum walsbyi from the Archaea domain
+        are the most abundant microorganisms in the hypersaline water of coastal salterns
+        and continental salt lakes.
+      notes: Rico et al. 2011 (PMID:21559517) characterized Haloquadratum walsbyi
+        in the hypersaline waters of coastal salterns.
+    - reference: PMID:36229623
+      snippet: Salinibacter ruber is an extremophilic bacterium able to grow in high-salts
+        environments, such as saltern crystallizer ponds.
+      notes: Salinibacter ruber thrives alongside haloarchaea in high-salt saltern
+        crystallizer ponds (PMID:36229623).
+  - edge_id: saturated_brine_selects_for_haloquadratum_and_salinibacter_guild
+    subject: saturated_thalassic_brine_and_high_solar_irradiance
+    predicate: selects for
+    object: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    description: Saturated thalassic saltern brines select for Haloquadratum walsbyi
+      (which constitutes up to 80-90% of the prokaryotic community) and red-pigmented
+      Salinibacter ruber.
+    evidence:
+    - reference: PMID:28673248
+      snippet: Haloquadratum walsbyi dominates saturated thalassic lakes worldwide
+        where they can constitute up to 80-90% of the total prokaryotic community.
+      notes: Bolhuis et al. 2017 (PMID:28673248) reported that Haloquadratum walsbyi
+        accounts for 80-90% of the prokaryotic community in saturated thalassic waters.
+    - reference: PMID:36229623
+      snippet: This halophilic bacterium is red-pigmented due to the production of
+        several carotenoids and their derivatives. Two of these pigment molecules,
+        salinixanthin and retinal, are reported to be essential cofactors of the xanthorhodopsin,
+        a light-driven proton pump unique to this bacterium.
+      notes: Salinibacter ruber produces carotenoid pigments (salinixanthin) and retinal
+        adapted to sunlit hypersaline crystallizer ponds (PMID:36229623).
+  - edge_id: crystallizer_guild_expresses_bacteriorhodopsin_halomucin_and_xanthorhodopsin
+    subject: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    predicate: expresses
+    object: bacteriorhodopsin_halomucin_and_salinixanthin_xanthorhodopsin_pumps
+    description: Haloquadratum walsbyi HBSQ001 constitutively expresses bacteriorhodopsin,
+      S-layer surface glycoproteins, and the giant capsule protein halomucin, while
+      Salinibacter ruber expresses dual-chromophore xanthorhodopsin and a salinixanthin-binding
+      outer-membrane porin.
+    evidence:
+    - reference: PMID:28673248
+      snippet: Constitutive high gene expression was observed in genes encoding surface
+        glycoproteins, light mediated proton pumping by bacteriorhodopsin, several
+        nutrient uptake systems, buoyancy and storage of excess carbon.
+      notes: Transcriptomics of Haloquadratum walsbyi HBSQ001 demonstrated constitutive
+        high expression of surface glycoproteins and bacteriorhodopsin (PMID:28673248).
+    - reference: PMID:21559517
+      snippet: We demonstrate the presence of a regular corrugation with a periodicity
+        of 16-20 nm attributed to the surface layer (S-layer) protein lattice, striped
+        domains asymmetrically distributed on the cell faces and peculiar bulges correlated
+        with the presence of intracellular granules. Besides, subsequent images of
+        cell evolution during the drying process indicate the presence of an external
+        capsule that might correspond to the giant protein halomucin, predicted by
+        the genome but never before observed by other microscopy studies.
+      notes: Atomic-force microscopy resolved the 16-20 nm S-layer lattice and halomucin
+        external capsule protecting Haloquadratum walsbyi against desiccation (PMID:21559517).
+  - edge_id: retinal_pumps_and_glycoproteins_drive_phototrophic_proton_pumping_and_cell_integrity
+    subject: bacteriorhodopsin_halomucin_and_salinixanthin_xanthorhodopsin_pumps
+    predicate: drives
+    object: retinal_driven_proton_pumping_and_hypersaline_envelope_homeostasis
+    description: Surface glycoproteins maintain Haloquadratum's high surface-to-volume
+      ratio while bacteriorhodopsin and Salinibacter xanthorhodopsin (with 45% energy
+      transfer from salinixanthin to retinal) drive light-mediated transmembrane proton
+      pumping.
+    evidence:
+    - reference: PMID:28673248
+      snippet: Surface glycoproteins are essential for maintaining the large surface
+        to volume ratio that facilitates light and organic nutrient harvesting whereas
+        constitutive expression of bacteriorhodopsin warrants an immediate source
+        of energy when light becomes available.
+      notes: Surface glycoproteins and constitutive bacteriorhodopsin expression enable
+        continuous solar energy and nutrient harvesting in Haloquadratum walsbyi (PMID:28673248).
+    - reference: PMID:18515390
+      snippet: 'The cell membrane of Salinibacter ruber contains xanthorhodopsin,
+        a light-driven transmembrane proton pump with two chromophores: a retinal
+        and the carotenoid, salinixanthin. Action spectra for transport had indicated
+        that light absorbed by either is utilized for function.'
+      notes: Balashov et al. 2008 (PMID:18515390) established 45 +/- 5% excitation
+        energy transfer from salinixanthin to retinal in Salinibacter ruber xanthorhodopsin.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -56,3 +190,10 @@ curation_history:
     is context-dependent, ambiguous, or names a host/disease/process rather than the
     defined habitat 'coastal solar saltern'; suppress automatic exact-synonym retention
     while preserving verbatim source provenance.
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added coastal_solar_saltern_haloquadratum_salinibacter_retinal_phototrophy
+    mechanism graph for solar_salterns (habitatmech:GOLD.67571e7dc1) backed by PMID:28673248,
+    PMID:21559517, PMID:18515390, and PMID:36229623.
+  llm_assisted: true

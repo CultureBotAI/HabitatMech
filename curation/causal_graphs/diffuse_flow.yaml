@@ -1,0 +1,124 @@
+identifier: habitatmech:GOLD.5c80d6475a
+causal_graphs:
+- graph_id: diffuse_flow_vent_campylobacterota_sulrs_sox_sulfur_chemolithoautotrophy
+  title: Diffuse-flow hydrothermal vent fluid Campylobacterota SulRS-Sox sulfur oxidation and mineral
+    colonization mechanism
+  description: Low-temperature diffuse-flow deep-sea hydrothermal vent fluids and adjacent polymetallic
+    sulfide minerals supply dissolved H2S, thiosulfate, and mineral-bound sulfide across subseafloor mixing
+    gradients, selecting for chemolithoautotrophic Campylobacterota (Epsilonproteobacteria) dominated
+    by Sulfurimonas, Sulfurovum, and Arcobacter. In Sulfurimonas, the two-component sensor kinase SulS
+    detects thiosulfate and activates the response regulator SulR to drive transcription of the soxABXY1Z1
+    gene cluster alongside soxCDY2Z2 (soxB), catalyzing sulfur and thiosulfate oxidation coupled to primary
+    production and sulfide mineral dissolution.
+  nodes:
+  - node_id: diffuse_flow
+    label: diffuse-flow hydrothermal vent fluid
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.5c80d6475a
+    description: Low-temperature subseafloor-mixed hydrothermal fluid discharging diffusely through basalt
+      or polymetallic sulfide mounds on the deep ocean floor.
+  - node_id: reduced_sulfur_thiosulfate_and_metal_sulfide_mineral_gradient
+    label: dissolved H2S/thiosulfate fluid plumes and metal sulfide mineral surfaces
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Geochemical gradients of dissolved sulfide, thiosulfate, methane, and exposed metal sulfide
+      minerals (including HgS, FeS2, CuFeS2, ZnS) at diffuse-flow hydrothermal vents.
+  - node_id: vent_campylobacterota_sulfurimonas_sulfurovum_arcobacter_guild
+    label: chemolithoautotrophic Campylobacterota (Sulfurimonas, Sulfurovum, Arcobacter) guild
+    node_type: COMMUNITY
+    description: Vent-endemic sulfur-oxidizing Campylobacterota (Epsilonproteobacteria) genera Sulfurimonas
+      (e.g. Sulfurimonas hydrogeniphila), Sulfurovum, and Arcobacter inhabiting diffuse fluids and colonizing
+      sulfide minerals.
+  - node_id: sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters
+    label: thiosulfate-sensing two-component system SulRS and Sox multienzyme clusters (soxB, soxABXY1Z1,
+      soxCDY2Z2)
+    node_type: GENE_OR_PROTEIN
+    description: Conserved Campylobacterota two-component regulatory system SulRS (where histidine kinase
+      SulS senses thiosulfate and response regulator SulR binds promoters Px, Py, Pr) and the sulfur-oxidizing
+      soxABXY1Z1 and soxCDY2Z2 (soxB) gene clusters.
+  - node_id: sox_pathway_sulfur_oxidation_and_chemosynthetic_mineral_colonization
+    label: Sox-mediated sulfur/thiosulfate chemolithoautotrophy and metal sulfide mineral colonization
+    node_type: COMMUNITY_PROCESS
+    description: Active oxidation of reduced sulfur and thiosulfate via the Sox pathway fueling subseafloor
+      and mineral-attached chemosynthetic primary production at diffuse hydrothermal vents.
+  edges:
+  - edge_id: diffuse_flow_vent_supplies_reduced_sulfur_and_metal_sulfide_substrates
+    subject: diffuse_flow
+    predicate: maintains
+    object: reduced_sulfur_thiosulfate_and_metal_sulfide_mineral_gradient
+    description: Low-temperature diffuse-flow hydrothermal vents supply dissolved sulfide, thiosulfate,
+      methane, and exposed metal sulfide minerals across subseafloor mixing gradients.
+    evidence:
+    - reference: PMID:23847608
+      snippet: In many deep-sea hydrothermal vents, sulfide oxidation is quantitatively the most important
+        chemical energy source for microbial metabolism both at and beneath the seafloor. In this study,
+        the presence and activity of vent endemic Epsilonproteobacteria was examined in six low-temperature
+        diffuse vents over a range of geochemical gradients from Axial Seamount, a deep-sea volcano in
+        the Northeast Pacific.
+      notes: Akerman et al. 2013 (PMID:23847608) characterized sulfide-fueled geochemical gradients across
+        six low-temperature diffuse vents at Axial Seamount.
+    - reference: PMID:32336020
+      snippet: Metal sulfide minerals, including mercury sulfides (HgS), are widespread in hydrothermal
+        vent systems where sulfur-oxidizing microbes are prevalent.
+      notes: Metal sulfide minerals provide solid-phase electron donors alongside dissolved sulfide at
+        diffuse-flow hydrothermal vents on the East Pacific Rise (PMID:32336020).
+  - edge_id: reduced_sulfur_gradients_select_for_campylobacterota_guild
+    subject: reduced_sulfur_thiosulfate_and_metal_sulfide_mineral_gradient
+    predicate: selects for
+    object: vent_campylobacterota_sulfurimonas_sulfurovum_arcobacter_guild
+    description: Dissolved sulfide and metal sulfide minerals at diffuse-flow hydrothermal vents select
+      for sulfur-oxidizing Campylobacterota genera Sulfurimonas, Sulfurovum, and Arcobacter.
+    evidence:
+    - reference: PMID:32336020
+      snippet: Sulfur-oxidizing genera common to newly exposed surfaces (Sulfurimonas, Sulfurovum, and
+        Arcobacter) were present on all samples. Differences in their relative abundance between and within
+        incubation sites point to constraining effects of the immediate environment and the minerals themselves.
+      notes: In situ mineral incubations at a diffuse-flow hydrothermal vent at 9°50'N on the East Pacific
+        Rise showed universal colonization by Sulfurimonas, Sulfurovum, and Arcobacter (PMID:32336020).
+  - edge_id: campylobacterota_guild_expresses_sulrs_and_sox_gene_clusters
+    subject: vent_campylobacterota_sulfurimonas_sulfurovum_arcobacter_guild
+    predicate: expresses
+    object: sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters
+    description: Sulfurimonas and Sulfurovum populations actively express soxB in diffuse vent fluids,
+      regulated by the conserved two-component system SulRS that senses thiosulfate and activates soxABXY1Z1
+      transcription.
+    evidence:
+    - reference: PMID:23847608
+      snippet: PCR primers were developed and applied to target the sulfur oxidation soxB gene of Epsilonproteobacteria.
+        soxB genes belonging to the genera Sulfurimonas and Sulfurovum are both present and expressed
+        at most diffuse vent sites, but not in background seawater.
+      notes: RT-PCR and cDNA profiling confirmed active in situ expression of Sulfurimonas and Sulfurovum
+        soxB genes in diffuse hydrothermal vent fluids (PMID:23847608).
+    - reference: PMID:41767251
+      snippet: Combined microscale thermophoresis (MST) and dual-plasmid reporter assays showed that SulS
+        can senses thiosulfate signals and activates soxABXY 1 Z 1 transcription, whereas this substrate
+        exerts no significant effect on soxCDY 2 Z 2 transcription. Genomic analysis further revealed
+        that sulRS-soxABXY 1 Z 1 -like gene clusters are widely conserved among sulfur-oxidizing bacteria
+        within Campylobacterota.
+      notes: SulRS senses thiosulfate and transcriptionally activates the soxABXY1Z1 gene cluster in deep-sea
+        Campylobacterota (PMID:41767251).
+  - edge_id: sulrs_sox_system_drives_sulfur_chemolithoautotrophy_and_mineral_colonization
+    subject: sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters
+    predicate: catalyzes
+    object: sox_pathway_sulfur_oxidation_and_chemosynthetic_mineral_colonization
+    description: Sox-mediated sulfur and thiosulfate oxidation by Sulfurimonas and Sulfurovum drives chemosynthetic
+      primary production and mineral sulfide dissolution at diffuse-flow hydrothermal vents.
+    evidence:
+    - reference: PMID:23847608
+      snippet: Although Sulfurovum-like soxB genes were detected in all fluid samples, the RNA profiles
+        were nearly identical among the vents and suggest that Sulfurimonas-like species are the primary
+        Epsilonproteobacteria responsible for actively oxidizing sulfur via the Sox pathway at each vent.
+      notes: Sulfurimonas-like species are the primary active sulfur oxidizers via the Sox pathway across
+        Axial Seamount diffuse vents (PMID:23847608).
+    - reference: PMID:32336020
+      snippet: The availability of mineral-derived sulfide as an electron donor may thus be a key control
+        on the activity and proliferation of deep-sea chemosynthetic communities, and this interpretation
+        supports the potential for microbial dissolution of HgS at hydrothermal vents.
+      notes: Oxidation of mineral-derived sulfide supports deep-sea chemosynthetic community proliferation
+        and mineral dissolution at diffuse-flow vents (PMID:32336020).
+curation_history:
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added diffuse_flow_vent_campylobacterota_sulrs_sox_sulfur_chemolithoautotrophy mechanism graph
+    for diffuse_flow (habitatmech:GOLD.5c80d6475a) backed by PMID:23847608, PMID:32336020, and PMID:41767251.
+  llm_assisted: true

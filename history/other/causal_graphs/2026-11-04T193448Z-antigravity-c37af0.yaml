@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-04T193448Z-antigravity-c37af0
+  timestamp: '2026-11-04T19:34:48Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 5 Stage 2 habitats
+  details: 'Reviewed all 63 existing causal-graph overlays in curation/causal_graphs/ and
+    authored 10 new snippet-verified causal-graph overlays (63 -> 73 total): surface_soil.yaml
+    (ENVO:02000059, PMID:30069051, PMID:38804108, PMID:21525411, PMID:32009017), subpolar_coniferous_forest_biome.yaml
+    (ENVO:01000250, PMID:37697631, PMID:33934481, PMID:24725281, PMID:38325494), tundra_biome.yaml (ENVO:01000180,
+    PMID:37996661, PMID:31285347, PMID:33084697), oil_contaminated_soil.yaml
+    (ENVO:00002875, PMID:24031544, PMID:25288551, PMID:39191326), solar_salterns.yaml (habitatmech:GOLD.67571e7dc1,
+    PMID:28673248, PMID:21559517, PMID:18515390, PMID:36229623), diffuse_flow.yaml (habitatmech:GOLD.5c80d6475a,
+    PMID:23847608, PMID:32336020, PMID:41767251), rock_dwelling_subaerial_biofilms.yaml
+    (habitatmech:GOLD.02bb8b9d08, PMID:37517730, PMID:36669662, PMID:35208882, PMID:40358234), leaf_surface.yaml
+    (habitatmech:GOLD.82f62476b8, PMID:30653750, PMID:20447995),
+    fruiting_body.yaml (habitatmech:GOLD.92cbc36828, PMID:35237850, PMID:33943006, PMID:38692852, PMID:23426012),
+    and dairy_processing_facility.yaml (habitatmech:GOLD.b69e4553bb, PMID:28303120, PMID:28217561, PMID:33336988,
+    PMID:41794443, PMID:37732743).'

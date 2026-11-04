@@ -1,0 +1,112 @@
+identifier: habitatmech:GOLD.82f62476b8
+causal_graphs:
+- graph_id: leaf_surface_methylobacterium_lanthanide_xoxf_methanol_methylotrophy
+  title: Leaf surface phyllosphere rare-earth-element sensing and Methylobacterium XoxF-dependent methylotrophic
+    colonization mechanism
+  description: Plant leaf surfaces (phyllosphere) release stomatal methanol and accumulate rare-earth
+    elements (REEs such as La3+, up to 10 ug/g dry weight), selecting for pink-pigmented facultative methylotrophs
+    such as Methylobacterium extorquens (strains PA1 and AM1). During phyllosphere colonization, M. extorquens
+    senses REEs to induce the lanthanide-dependent PQQ methanol dehydrogenase XoxF (while repressing Ca2+-dependent
+    mxaFI) alongside a REE-binding protein and TonB-dependent outer-membrane transporter essential for
+    chelator-assisted REE uptake, driving rapid methanol and formaldehyde oxidation and competitive leaf
+    colonization.
+  nodes:
+  - node_id: leaf_surface
+    label: leaf surface environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.82f62476b8
+    description: Aerial epidermal surface of vascular plant leaves (epiphyllous phyllosphere) exposed
+      to fluctuating light, humidity, plant-emitted C1 compounds, and leaf-surface trace elements.
+  - node_id: phyllosphere_methanol_release_and_rare_earth_element_availability
+    label: plant leaf methanol emission and phyllosphere rare-earth element (La3+/REE) availability
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Availability of plant cell-wall pectin-derived methanol and leaf-surface rare-earth elements
+      (such as lanthanum, La3+) present in the Arabidopsis thaliana phyllosphere.
+  - node_id: phyllosphere_methylobacterium_extorquens_colonizer_guild
+    label: epiphytic Methylobacterium extorquens (strains PA1 and AM1) methylotrophic guild
+    node_type: COMMUNITY
+    description: Dominant phyllosphere-colonizing facultative methylotrophic Alphaproteobacteria (Methylobacterium
+      extorquens PA1 and AM1) adapted to C1 metabolism on plant leaf surfaces.
+  - node_id: lanthanide_methanol_dehydrogenase_xoxf_and_tonb_ree_transporter
+    label: lanthanide-dependent methanol dehydrogenase XoxF, REE-binding protein, and TonB-dependent transporter
+    node_type: GENE_OR_PROTEIN
+    description: REE-dependent PQQ methanol dehydrogenase XoxF (induced by La3+ while Ca2+-dependent mxaFI
+      is repressed) and the co-regulated REE-binding protein and TonB-dependent outer-membrane transporter
+      in Methylobacterium extorquens.
+  - node_id: chelator_assisted_ree_uptake_methanol_oxidation_and_phyllosphere_colonization
+    label: chelator-assisted REE uptake, rapid methanol/formaldehyde oxidation, and competitive phyllosphere
+      colonization
+    node_type: COMMUNITY_PROCESS
+    description: TonB-dependent chelator-assisted lanthanide acquisition and XoxF-catalyzed oxidation
+      of methanol and formaldehyde to formate and CO2, conferring a ~30% growth/uptake advantage and competitive
+      fitness during leaf surface colonization.
+  edges:
+  - edge_id: leaf_surface_provides_methanol_and_rare_earth_elements
+    subject: leaf_surface
+    predicate: maintains
+    object: phyllosphere_methanol_release_and_rare_earth_element_availability
+    description: Plant leaf surfaces provide methanol alongside biologically active rare-earth elements
+      (such as La3+) that govern methylotrophic cofactor selection in the phyllosphere.
+    evidence:
+    - reference: PMID:30653750
+      snippet: Until recently, rare-earth elements (REEs) had been thought to be biologically inactive.
+        This view changed with the discovery of the methanol dehydrogenase XoxF that strictly relies on
+        REEs for its activity. Some methylotrophs only contain xoxF, while others, including the model
+        phyllosphere colonizer Methylobacterium extorquens PA1, harbor this gene in addition to mxaFI
+        encoding a Ca2+ -dependent enzyme.
+      notes: Ochsner et al. 2019 (PMID:30653750) demonstrated that REEs are present on Arabidopsis thaliana
+        leaves and are utilized by the phyllosphere colonizer Methylobacterium extorquens PA1.
+  - edge_id: phyllosphere_methanol_and_rees_select_for_methylobacterium_extorquens
+    subject: phyllosphere_methanol_release_and_rare_earth_element_availability
+    predicate: selects for
+    object: phyllosphere_methylobacterium_extorquens_colonizer_guild
+    description: Leaf-surface methanol and rare-earth elements support epiphytic colonization by Methylobacterium
+      extorquens strains PA1 and AM1.
+    evidence:
+    - reference: PMID:20447995
+      snippet: Here, we found that a xoxF mutant is less competitive than the wild-type during colonization
+        of the phyllosphere of Arabidopsis thaliana, indicating a function for XoxF during plant colonization.
+      notes: Schmidt et al. 2010 (PMID:20447995) demonstrated that Methylobacterium extorquens AM1 relies
+        on XoxF for competitive colonization of the Arabidopsis thaliana phyllosphere.
+  - edge_id: methylobacterium_expresses_xoxf_and_tonb_dependent_ree_transporter
+    subject: phyllosphere_methylobacterium_extorquens_colonizer_guild
+    predicate: expresses
+    object: lanthanide_methanol_dehydrogenase_xoxf_and_tonb_ree_transporter
+    description: Methylobacterium extorquens senses La3+ in a XoxF-dependent and independent manner and
+      expresses XoxF, a REE-binding protein, and a TonB-dependent transporter during leaf colonization.
+    evidence:
+    - reference: PMID:30653750
+      snippet: Using reporter assays and a suppressor screen, we found that lanthanum (La3+ ) is sensed
+        both in a XoxF-dependent and independent manner. Furthermore, we investigated the role of REEs
+        during Arabidopsis thaliana colonization.
+      notes: La3+ sensing regulates the switch between XoxF and MxaFI in Methylobacterium extorquens PA1
+        (PMID:30653750).
+    - reference: PMID:30653750
+      snippet: Among these was a REE-binding protein that is encoded next to a gene for a TonB-dependent
+        transporter. The latter was essential for REE-dependent growth on methanol indicating chelator-assisted
+        uptake of REEs.
+      notes: Proteomic and mutant analyses identified a La3+-regulated REE-binding protein and adjacent
+        TonB-dependent transporter essential for REE-dependent methanol growth (PMID:30653750).
+  - edge_id: xoxf_and_tonb_transporter_drive_methanol_oxidation_and_leaf_colonization
+    subject: lanthanide_methanol_dehydrogenase_xoxf_and_tonb_ree_transporter
+    predicate: catalyzes
+    object: chelator_assisted_ree_uptake_methanol_oxidation_and_phyllosphere_colonization
+    description: Chelator-assisted REE uptake and XoxF activity catalyze dual methanol and formaldehyde
+      oxidation in Methylobacterium extorquens, maintaining methanol uptake rate, exponential growth rate,
+      and competitive fitness on the leaf surface.
+    evidence:
+    - reference: PMID:20447995
+      snippet: A comparison of the growth parameters of the M. extorquens AM1 xoxF mutant with those of
+        the wild-type during exponential growth revealed a reduced methanol uptake rate and a reduced
+        growth rate for the xoxF mutant of about 30 %. Experiments with cells starved for carbon revealed
+        that methanol oxidation in the xoxF mutant occurs less rapidly compared with the wild-type, especially
+        in the first minutes after methanol addition.
+      notes: Loss of xoxF reduces methanol uptake rate and exponential growth rate by ~30% and slows methanol/formaldehyde
+        oxidation in M. extorquens AM1 (PMID:20447995).
+curation_history:
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added leaf_surface_methylobacterium_lanthanide_xoxf_methanol_methylotrophy mechanism graph
+    for leaf_surface (habitatmech:GOLD.82f62476b8) backed by PMID:30653750 and PMID:20447995.
+  llm_assisted: true
