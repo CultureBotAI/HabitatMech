@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 4,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "ad20de05c38d4fadf667b5c579eef50496b31b02",
+  "cohort_id": "empyema_drain_to_epibionts",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/empyema_drain.yaml through data/habitats/host_associated/epibionts.yaml (next 24 unreviewed host_associated records at indices 434..457 immediately following Cycle 3 Stage 4 slice ending at empyema.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 11,
+  "needs_curation_count": 13,
+  "new_open_finding_count": 16,
+  "carried_deferred_finding_count": 24,
+  "total_carry_forward_finding_count": 40,
+  "category_review_bundle": {
+    "review_id": "20261101T061300Z-empyema_drain_to_epibionts-category",
+    "yaml_path": "reviews/structured/20261101T061300Z-empyema_drain_to_epibionts-category/review.yaml",
+    "yaml_sha256": "bf4c671d21ef2244178db762ea60b801a6071e516bfd837d3cc114dcb9cf15e6",
+    "md_path": "reviews/structured/20261101T061300Z-empyema_drain_to_epibionts-category/review.md",
+    "md_sha256": "9dd099ba443f2d376212c88730c73dac59461efe3c6cb157bb008227faeec9ab",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261101T061210Z-empyema_drain-record",
+      "target_path": "data/habitats/host_associated/empyema_drain.yaml",
+      "target_id": "habitatmech:GOLD.1ce5b3ff1a",
+      "target_label": "pleural empyema drainage fluid",
+      "target_sha256": "b9022361e3b09f4f1a74b0e811cf46fedcf07a152697c3956d04b9da8cd36446",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "empyema-drain-device-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261101T061210Z-empyema_drain-record/review.yaml",
+      "yaml_sha256": "cd97df27b9176fc05d56a8f271ac86880a2b2bf541955653651355fb4a293a75",
+      "md_path": "reviews/structured/20261101T061210Z-empyema_drain-record/review.md",
+      "md_sha256": "0480ab7b4bcc6ef978b8d8062b6b18062820198d99d96d6a6b7655c82cfa8824"
+    },
+    {
+      "review_id": "20261101T061211Z-endocrine_gland-record",
+      "target_path": "data/habitats/host_associated/endocrine_gland.yaml",
+      "target_id": "habitatmech:GOLD.2f5a0b5455",
+      "target_label": "Endocrine gland",
+      "target_sha256": "7bad2c064b51f831c15818a6c641d7db5984605f2d54d6553ce737a824081dcc",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-gland-context-parent",
+        "endocrine-gland-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061211Z-endocrine_gland-record/review.yaml",
+      "yaml_sha256": "dcf87505b9f27b7a85e7838bac96baf09e7e6e85bc7bcad83dc3c68502be4bdc",
+      "md_path": "reviews/structured/20261101T061211Z-endocrine_gland-record/review.md",
+      "md_sha256": "8345fdb0e3e954c6542d3aa8b60119e28486220d84ea30bace221d6113a30349"
+    },
+    {
+      "review_id": "20261101T061212Z-endocrine_gland__8c35903c-record",
+      "target_path": "data/habitats/host_associated/endocrine_gland__8c35903c.yaml",
+      "target_id": "habitatmech:GOLD.c26b92ece6",
+      "target_label": "Endocrine gland",
+      "target_sha256": "514315aea57ac6555d13e02dac2548b4f829f1b060d347f65f372fde8a7eb9f5",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-gland--8c35903c-context-parent",
+        "endocrine-gland--8c35903c-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061212Z-endocrine_gland__8c35903c-record/review.yaml",
+      "yaml_sha256": "1419256ca7d02beb118dde2eaf31e45165892d6a3f925d142291efe5cecb45c2",
+      "md_path": "reviews/structured/20261101T061212Z-endocrine_gland__8c35903c-record/review.md",
+      "md_sha256": "744aefb949dce2b2581795ba972de2836e8adff1f781557b78a8306bbda931bf"
+    },
+    {
+      "review_id": "20261101T061213Z-endocrine_system-record",
+      "target_path": "data/habitats/host_associated/endocrine_system.yaml",
+      "target_id": "habitatmech:GOLD.016d1f9e29",
+      "target_label": "Endocrine system",
+      "target_sha256": "d40185902cc96f17a5ae3b3c264754c84a97777f838c487b5730904c86d644dd",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-system-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061213Z-endocrine_system-record/review.yaml",
+      "yaml_sha256": "5ea9ae0b2c0d8f578f5ba95d5e73a1702b547fa0e68d786017a066f267132141",
+      "md_path": "reviews/structured/20261101T061213Z-endocrine_system-record/review.md",
+      "md_sha256": "10d6bb42da8d5a3e27679ac608aa55e8110a33f85da1d9de4bc83ca23b347f06"
+    },
+    {
+      "review_id": "20261101T061214Z-endocrine_system__a22b6ca6-record",
+      "target_path": "data/habitats/host_associated/endocrine_system__a22b6ca6.yaml",
+      "target_id": "habitatmech:GOLD.f386e4764b",
+      "target_label": "Endocrine system",
+      "target_sha256": "839f0269b2120d9e9a486b3cfc4cde33d0579147dca6f7ca66375de3de2c0c72",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-system--a22b6ca6-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061214Z-endocrine_system__a22b6ca6-record/review.yaml",
+      "yaml_sha256": "aaba50f11d47501f8d50d53402f57e452429153ce4afd841c4daf92ec5bb1012",
+      "md_path": "reviews/structured/20261101T061214Z-endocrine_system__a22b6ca6-record/review.md",
+      "md_sha256": "a057d1c8d28d39e9c97557b2078d750ab715c0e3d22e17669d3f1d1d1b8d8c88"
+    },
+    {
+      "review_id": "20261101T061215Z-endocrine_system__e2d3d7a6-record",
+      "target_path": "data/habitats/host_associated/endocrine_system__e2d3d7a6.yaml",
+      "target_id": "habitatmech:GOLD.d275fc9ccd",
+      "target_label": "Endocrine system",
+      "target_sha256": "bdc9be0d773d568cfb93f3e6d0913e3e660096c5f722771e666a4d729423dfbe",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-system--e2d3d7a6-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061215Z-endocrine_system__e2d3d7a6-record/review.yaml",
+      "yaml_sha256": "2cd4e0aada951ae733c70d0120a772b00c5399a7e8cedda132e3b0be4075778f",
+      "md_path": "reviews/structured/20261101T061215Z-endocrine_system__e2d3d7a6-record/review.md",
+      "md_sha256": "a7ce9b60b8a469d1158756dfae3eb14487dec964fc57980a9044484348fa9f9b"
+    },
+    {
+      "review_id": "20261101T061216Z-endocrine_system__fc8977b8-record",
+      "target_path": "data/habitats/host_associated/endocrine_system__fc8977b8.yaml",
+      "target_id": "habitatmech:GOLD.d63e165267",
+      "target_label": "Endocrine system",
+      "target_sha256": "d6b61f33e6a697e1b706ee63c485500da4a152c568c728eddc5817cb5edb010c",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endocrine-system--fc8977b8-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261101T061216Z-endocrine_system__fc8977b8-record/review.yaml",
+      "yaml_sha256": "577344086d13895299d1a162745a0669e6c1bbdb5edc62201260344aea3bcdca",
+      "md_path": "reviews/structured/20261101T061216Z-endocrine_system__fc8977b8-record/review.md",
+      "md_sha256": "35096a1e95342f1dc8f1d118f3b0662b6d2e2087d139a2feacc3b912b8c5ae09"
+    },
+    {
+      "review_id": "20261101T061217Z-endometrial_uterine-record",
+      "target_path": "data/habitats/host_associated/endometrial_uterine.yaml",
+      "target_id": "habitatmech:GOLD.1488865daa",
+      "target_label": "human endometrial polyp",
+      "target_sha256": "3aaa152a6b20b4425400f89cbbfdebe21d56b3cfc7b51a8b63725be9a9b966ea",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endometrial-uterine-cnidarian-polyp-parent"
+      ],
+      "yaml_path": "reviews/structured/20261101T061217Z-endometrial_uterine-record/review.yaml",
+      "yaml_sha256": "e259e829924078e1bb233fdc901ec6360fb7f01c8a2c878f2a30f7259aa90a07",
+      "md_path": "reviews/structured/20261101T061217Z-endometrial_uterine-record/review.md",
+      "md_sha256": "fb0a4a493535e6ea3ea446b7a68ef3078fa4270f211b0a6b361000d64e221c55"
+    },
+    {
+      "review_id": "20261101T061218Z-endometrium-record",
+      "target_path": "data/habitats/host_associated/endometrium.yaml",
+      "target_id": "UBERON:0001295",
+      "target_label": "endometrium",
+      "target_sha256": "fe2a37d1b4021b65f36fc82f1758f7ea972176c71c2fc2c14cc38ee60a7a7aea",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endometrium-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261101T061218Z-endometrium-record/review.yaml",
+      "yaml_sha256": "0fd6266345cf950337e2f62cca20e48b625d000581c1a89d3d472b44ed6fc049",
+      "md_path": "reviews/structured/20261101T061218Z-endometrium-record/review.md",
+      "md_sha256": "cacb7057305be98343fec1746815e9fe7d0097772b6f9685c74a32c1aa9ccb70"
+    },
+    {
+      "review_id": "20261101T061219Z-endophytes-record",
+      "target_path": "data/habitats/host_associated/endophytes.yaml",
+      "target_id": "habitatmech:GOLD.89d01f437a",
+      "target_label": "fruit endophyte environment",
+      "target_sha256": "de96b024fc52f0d0fa3726caf5224bb0b34d195b01893ba0fd0595f7f4de7e14",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endophytes-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261101T061219Z-endophytes-record/review.yaml",
+      "yaml_sha256": "587dda0e49dcbbdf5ddf652b0b1c05dbad15d86af6649ec406fe80842be01c0a",
+      "md_path": "reviews/structured/20261101T061219Z-endophytes-record/review.md",
+      "md_sha256": "7f7cf73a2e99e1f75e9a87af0bc86edf5e7ef818f6fbc0643c58fb7d1c1fb188"
+    },
+    {
+      "review_id": "20261101T061220Z-endophytes__ca9aaedf-record",
+      "target_path": "data/habitats/host_associated/endophytes__ca9aaedf.yaml",
+      "target_id": "habitatmech:GOLD.b8e99e08e5",
+      "target_label": "leaf endophyte environment",
+      "target_sha256": "091600b436f4fca00fe702ae79c2902dafc9e4dede0c2437ae414c0f18ca794d",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endophytes--ca9aaedf-synonym-collision"
+      ],
+      "yaml_path": "reviews/structured/20261101T061220Z-endophytes__ca9aaedf-record/review.yaml",
+      "yaml_sha256": "8e47c80d185af71b737675b78a8afea36be46a60200d91ffed6face8c02a59ed",
+      "md_path": "reviews/structured/20261101T061220Z-endophytes__ca9aaedf-record/review.md",
+      "md_sha256": "3e4b7ea4a5ce057ca7763fe7be9565e320d0bcb5c56db23b92efa6dd0395222c"
+    },
+    {
+      "review_id": "20261101T061221Z-endophytes__fae60ba7-record",
+      "target_path": "data/habitats/host_associated/endophytes__fae60ba7.yaml",
+      "target_id": "habitatmech:GOLD.9731c6bb13",
+      "target_label": "root endophyte environment",
+      "target_sha256": "63b02749e6c4397e27d3284b36f221a58036b9e41a8800a619a1b865b3b619c2",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endophytes--fae60ba7-context-parent",
+        "endophytes--fae60ba7-synonym-collision"
+      ],
+      "yaml_path": "reviews/structured/20261101T061221Z-endophytes__fae60ba7-record/review.yaml",
+      "yaml_sha256": "e4ed098d39ae234b1b582359745bc06e59f5138834c194b19dc8adc683600604",
+      "md_path": "reviews/structured/20261101T061221Z-endophytes__fae60ba7-record/review.md",
+      "md_sha256": "24c8c1fcc1da510cb5fa340e08953320f03521e6affbd542fe0f783a9cc7bc63"
+    },
+    {
+      "review_id": "20261101T061222Z-endosphere-record",
+      "target_path": "data/habitats/host_associated/endosphere.yaml",
+      "target_id": "habitatmech:BACDIVE.3e4680f074",
+      "target_label": "endosphere environment",
+      "target_sha256": "9cc37e05aa4930c303e68e63698c17bd61646ae4693c5b42b6c183ebd6518d08",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061222Z-endosphere-record/review.yaml",
+      "yaml_sha256": "77e5ef2a87dd291e9404a591cae9c60f9e37d57697895843009efa9a720cbb0f",
+      "md_path": "reviews/structured/20261101T061222Z-endosphere-record/review.md",
+      "md_sha256": "16accb7b6e2fdd6a13a2ecaf5a4774e83f74bfb72e9ae0e8a82bbfb531994662"
+    },
+    {
+      "review_id": "20261101T061223Z-endosphere__005f8afe-record",
+      "target_path": "data/habitats/host_associated/endosphere__005f8afe.yaml",
+      "target_id": "habitatmech:GOLD.af0c4ac629",
+      "target_label": "root endosphere",
+      "target_sha256": "49ee2c7234a46c873582ba42d0f548911b1cb53eb6a535c167ffaf8316c81d2f",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061223Z-endosphere__005f8afe-record/review.yaml",
+      "yaml_sha256": "56da00108e3ed7c8a763e731b98ae1f832bc25ff7739087082082918cac8747a",
+      "md_path": "reviews/structured/20261101T061223Z-endosphere__005f8afe-record/review.md",
+      "md_sha256": "bbb179aeab549808cab4eb5c975d034a81e54ba29c1982f903b0df8f476cdb9e"
+    },
+    {
+      "review_id": "20261101T061224Z-endosphere__eb0d56da-record",
+      "target_path": "data/habitats/host_associated/endosphere__eb0d56da.yaml",
+      "target_id": "habitatmech:GOLD.356adc0d4d",
+      "target_label": "leaf endosphere",
+      "target_sha256": "cdda8f515c326357284600aae75002d9f14f5d112d49e8d28f646da8aa857112",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061224Z-endosphere__eb0d56da-record/review.yaml",
+      "yaml_sha256": "9bfcc7f4f884a8bc979155ca6928588a23f696a3d94117854d68dd5829431cbf",
+      "md_path": "reviews/structured/20261101T061224Z-endosphere__eb0d56da-record/review.md",
+      "md_sha256": "240537a57d6ab24e782e74f0515b596e8ce382d3e5a4a75cdefb13c74a71bdc6"
+    },
+    {
+      "review_id": "20261101T061225Z-endosphere__fd8c8a61-record",
+      "target_path": "data/habitats/host_associated/endosphere__fd8c8a61.yaml",
+      "target_id": "habitatmech:GOLD.bfe3e11951",
+      "target_label": "plant endosphere",
+      "target_sha256": "2a7297554cd29370e5fe0c1e60c80fd6f02c9cb5937117dafe316ab9d89b13a2",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "endosphere--fd8c8a61-bare-source-label-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261101T061225Z-endosphere__fd8c8a61-record/review.yaml",
+      "yaml_sha256": "840a33c92632eb74eb711f8a345348544f16234f10a724aede8d0fad424cbd41",
+      "md_path": "reviews/structured/20261101T061225Z-endosphere__fd8c8a61-record/review.md",
+      "md_sha256": "0938354763fb5c3365c69a45d07255393b4890d29f60eaa9ad3fce4fa574775b"
+    },
+    {
+      "review_id": "20261101T061226Z-endosymbionts-record",
+      "target_path": "data/habitats/host_associated/endosymbionts.yaml",
+      "target_id": "habitatmech:GOLD.895a2372e5",
+      "target_label": "host endosymbiont microhabitat",
+      "target_sha256": "552e6941a0f96665c0486e9bf8fba0351fdd4165cc09497aaeb0770875eac2a0",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061226Z-endosymbionts-record/review.yaml",
+      "yaml_sha256": "f0c224f754a269bb7b6e8fe9ef0bffea37391c5468d91d47ca15c8617fa2f87c",
+      "md_path": "reviews/structured/20261101T061226Z-endosymbionts-record/review.md",
+      "md_sha256": "26524b349b341d1a139d65171c5721341ac3db4ca97b7ad71314a821cba529ba"
+    },
+    {
+      "review_id": "20261101T061227Z-endosymbionts__38198b44-record",
+      "target_path": "data/habitats/host_associated/endosymbionts__38198b44.yaml",
+      "target_id": "habitatmech:GOLD.90791d494c",
+      "target_label": "dinoflagellate intracellular endosymbiont environment",
+      "target_sha256": "12f437a7efca3674ef998e478c382d4aabb34d9fa8374e180f03e50a45b98449",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061227Z-endosymbionts__38198b44-record/review.yaml",
+      "yaml_sha256": "09bd527533f2eefb347f988f907a48666bae70d59086607cc753276a6e2bf1be",
+      "md_path": "reviews/structured/20261101T061227Z-endosymbionts__38198b44-record/review.md",
+      "md_sha256": "8d6f5ef66a2ee0a28300091675ad8505fe9ac9b4504a1ff6c8542a1e11456471"
+    },
+    {
+      "review_id": "20261101T061228Z-endothelial_cell-record",
+      "target_path": "data/habitats/host_associated/endothelial_cell.yaml",
+      "target_id": "BTO:0001176",
+      "target_label": "endothelial cell",
+      "target_sha256": "3539dd3c465819e55c8d9582780f412e9f3c182cc90da78e1a99a4bc7e7f7cb8",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061228Z-endothelial_cell-record/review.yaml",
+      "yaml_sha256": "8ed0a36a4c636d32c068f423b2a3524352ed2809a49fc0a65cd3059b28d1667a",
+      "md_path": "reviews/structured/20261101T061228Z-endothelial_cell-record/review.md",
+      "md_sha256": "c944eff055a023f770bc86c22d3aa1eef489eda4b5132417f0c10b681cec6c9f"
+    },
+    {
+      "review_id": "20261101T061229Z-endothelial_progenitor_cell-record",
+      "target_path": "data/habitats/host_associated/endothelial_progenitor_cell.yaml",
+      "target_id": "BTO:0004093",
+      "target_label": "endothelial progenitor cell",
+      "target_sha256": "48d26f5ecea077b00eb4db6f513a288e4a491646fe92b6b3ce255c5fd0a4988a",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061229Z-endothelial_progenitor_cell-record/review.yaml",
+      "yaml_sha256": "504bb48dbe4beb9c8ebaa3e70946c8e836efb363ba539467a8388f973bf95d05",
+      "md_path": "reviews/structured/20261101T061229Z-endothelial_progenitor_cell-record/review.md",
+      "md_sha256": "42c97965fa42288b6cbef449015e4bb896db1bdbab3ed5d2bda8e6dcdff06f2e"
+    },
+    {
+      "review_id": "20261101T061230Z-enterocyte-record",
+      "target_path": "data/habitats/host_associated/enterocyte.yaml",
+      "target_id": "BTO:0000398",
+      "target_label": "enterocyte",
+      "target_sha256": "48cedbff114e272f4a9a7715a580197f65bac4395673a1a4472c9764d5f544e8",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061230Z-enterocyte-record/review.yaml",
+      "yaml_sha256": "5ae8cba47c58d0b9dd415b775ab16e3de9b9830e7b645aa86582a4be2196f556",
+      "md_path": "reviews/structured/20261101T061230Z-enterocyte-record/review.md",
+      "md_sha256": "2c13813d1eadb01097340c073c6daa17b1740152a0a2e069a90543fdf78db84d"
+    },
+    {
+      "review_id": "20261101T061231Z-environmental_system_determined_by_an_organism-record",
+      "target_path": "data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml",
+      "target_id": "ENVO:01001000",
+      "target_label": "environmental system determined by an organism",
+      "target_sha256": "d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061231Z-environmental_system_determined_by_an_organism-record/review.yaml",
+      "yaml_sha256": "345800f40150c206898bbd0267f73d875b0b41ba1ae598462cf34859760d38bb",
+      "md_path": "reviews/structured/20261101T061231Z-environmental_system_determined_by_an_organism-record/review.md",
+      "md_sha256": "226cc6e58bac460f4f05c73252ded7aebe06fb6acef597842e94a81b920c5c63"
+    },
+    {
+      "review_id": "20261101T061232Z-eosinophil-record",
+      "target_path": "data/habitats/host_associated/eosinophil.yaml",
+      "target_id": "BTO:0000399",
+      "target_label": "eosinophil",
+      "target_sha256": "b6217be5b23c8f7358ad60b5349f3a33832b45cb0b8b2ff279d76766d5b843d5",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061232Z-eosinophil-record/review.yaml",
+      "yaml_sha256": "c289c2b8a1dab256ff1745ba2e73741eb996a3ac7a938b5633542f79ee319751",
+      "md_path": "reviews/structured/20261101T061232Z-eosinophil-record/review.md",
+      "md_sha256": "6e417f2b58ec08cff6fbc74c3465c7290ce611dc6d5d391c9c82683802652921"
+    },
+    {
+      "review_id": "20261101T061233Z-epibionts-record",
+      "target_path": "data/habitats/host_associated/epibionts.yaml",
+      "target_id": "habitatmech:GOLD.d0cebee7db",
+      "target_label": "annelid cuticle epibiont environment",
+      "target_sha256": "db529ba843e2544f2002d86800370d0e65f330102739973daf60abb789b2f62f",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261101T061233Z-epibionts-record/review.yaml",
+      "yaml_sha256": "ae8f0c7f99318921583a410419076c71b0a1fc54ad3c06b21dd572031011e9dc",
+      "md_path": "reviews/structured/20261101T061233Z-epibionts-record/review.md",
+      "md_sha256": "702d1099139de75f53d9a3ad22a63dd34fff021808d5bfddb5cb04ad2666a980"
+    }
+  ]
+}
