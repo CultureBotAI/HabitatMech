@@ -1,0 +1,174 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "7e55e782625f544f2d3e4e5c9e5ed5d82c04d477ee606c894bc26cb55f8a949e"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "ec8f7b5cf7b804e31663653e482be907b0333a8be807259eec024fcb7acfeb94"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "d2ca8bb2a88649eef54ff812b40641a02f2ab39145168d65617503309ea9127c"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "fd7160ce4f64754bdcf00ad706e9077e59edbbc7729c8850dc53abf7e3be1b2d"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "454bc07fdc75b4abdced785be5334e75d2955ea691fedb1122bf474b68cd73de"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml",
+      "sha256": "82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml",
+      "sha256": "b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a"
+    },
+    {
+      "path": "tests/test_empyema_drain_to_epibionts_review_repairs.py",
+      "sha256": "bbd37dbb824e90efe994ab4a44b01b16d9ed4a5b039fb66aa902192a4752036c"
+    }
+  ],
+  "cycle": 4,
+  "remediation_reviews": [
+    {
+      "finding_id": "empyema-drain-device-name-exact-synonym",
+      "group_id": "G-empyema-drain-to-epibionts-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2286",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061210Z-empyema_drain-record",
+      "record_id": "habitatmech:GOLD.ab7c8a2936",
+      "record_path": "data/habitats/host_associated/empyema_drain.yaml",
+      "record_sha256": "a8d070d444e85b5a3c54d7c1ef8a92c1f1ac3ed7b7b89238d85844d0ff45ec16",
+      "remediation_review_id": "20261104T035801Z-empyema_drain-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035801Z-empyema_drain-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "46372561740bdd080a1d4bd53e888633dcd9ca2c18a49baa319f24035bac24ec"
+    },
+    {
+      "finding_id": "endocrine-gland-context-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261101T061211Z-endocrine_gland-record",
+      "record_id": "habitatmech:GOLD.4e865e4d23",
+      "record_path": "data/habitats/host_associated/endocrine_gland.yaml",
+      "record_sha256": "f6d1a91e4aebf281fd2035f91768d293751fad694773bbbd8b1505bc99e0e962",
+      "remediation_review_id": "20261104T035802Z-endocrine_gland-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035802Z-endocrine_gland-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "34829623ffcb9c8245449489d3c570f5d924f4d8c38d24886116f38302365b42"
+    },
+    {
+      "finding_id": "endocrine-gland--8c35903c-context-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261101T061212Z-endocrine_gland__8c35903c-record",
+      "record_id": "habitatmech:GOLD.b6bfeb7df5",
+      "record_path": "data/habitats/host_associated/endocrine_gland__8c35903c.yaml",
+      "record_sha256": "da28faac60d131fe910ed82de7588966932b2423f188b5c95549731b67e0070f",
+      "remediation_review_id": "20261104T035803Z-endocrine_gland__8c35903c-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035803Z-endocrine_gland__8c35903c-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "6c0f5c305a53f35e7b2808ea6a2ca190f2a19f97c1297b3592898564729e3e34"
+    },
+    {
+      "finding_id": "endometrial-uterine-cnidarian-polyp-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061217Z-endometrial_uterine-record",
+      "record_id": "habitatmech:GOLD.1488865daa",
+      "record_path": "data/habitats/host_associated/endometrial_uterine.yaml",
+      "record_sha256": "01390fa7617c7c32c95eb9b863effff0c32fd84866122db6fbb16e298d0ce876",
+      "remediation_review_id": "20261104T035808Z-endometrial_uterine-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035808Z-endometrial_uterine-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "bfd1fbc3b37baa349ae59374e4a2dbd902c11c34d681a6a16f90dba49d3cd3c6"
+    },
+    {
+      "finding_id": "endometrium-context-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061218Z-endometrium-record",
+      "record_id": "UBERON:0001295",
+      "record_path": "data/habitats/host_associated/endometrium.yaml",
+      "record_sha256": "f895ecc54b8b1b3edc1427e744cf641931a823720a7bc1b3377ce75c4cd5ebc4",
+      "remediation_review_id": "20261104T035809Z-endometrium-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035809Z-endometrium-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4d0a98ae7d843c141f34794e25a03f8126b469685cf750cefd2eaee36a72680e"
+    },
+    {
+      "finding_id": "endophytes-context-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061219Z-endophytes-record",
+      "record_id": "habitatmech:GOLD.f4469db65f",
+      "record_path": "data/habitats/host_associated/endophytes.yaml",
+      "record_sha256": "c5dad6bb9a98b152a08610320279e1411c25bb2c2a8e9e00c2e172816c00cd9d",
+      "remediation_review_id": "20261104T035811Z-endophytes-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035811Z-endophytes-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "0a7dae8c95c76e5c3f31d9152f7e55821eec8454707ae51376946d74505b12ce"
+    },
+    {
+      "finding_id": "endophytes--ca9aaedf-synonym-collision",
+      "group_id": "G-empyema-drain-to-epibionts-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2286",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061220Z-endophytes__ca9aaedf-record",
+      "record_id": "habitatmech:GOLD.ca6b46b22d",
+      "record_path": "data/habitats/host_associated/endophytes__ca9aaedf.yaml",
+      "record_sha256": "9dcbee9a823bd925b9617050ff2551569082db956f24f94e7fffefb48f431a0c",
+      "remediation_review_id": "20261104T035812Z-endophytes__ca9aaedf-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035812Z-endophytes__ca9aaedf-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "d421ec7a78ebcff4056453da1e27dc38eaf632692dd0a2523dccfddbd4ce385e"
+    },
+    {
+      "finding_id": "endophytes--fae60ba7-context-parent",
+      "group_id": "G-empyema-drain-to-epibionts-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2285",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061221Z-endophytes__fae60ba7-record",
+      "record_id": "habitatmech:GOLD.796a8ab6ba",
+      "record_path": "data/habitats/host_associated/endophytes__fae60ba7.yaml",
+      "record_sha256": "724415395218f71e10cf9783d4699cc31911ca86d3cb1146e17a182fbdf69853",
+      "remediation_review_id": "20261104T035813Z-endophytes__fae60ba7-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035813Z-endophytes__fae60ba7-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ce50ceb00a57c703f87d2563af6e5351e768c404740ba2e03cd0eef1fffe5036"
+    },
+    {
+      "finding_id": "endophytes--fae60ba7-synonym-collision",
+      "group_id": "G-empyema-drain-to-epibionts-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2286",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061221Z-endophytes__fae60ba7-record",
+      "record_id": "habitatmech:GOLD.796a8ab6ba",
+      "record_path": "data/habitats/host_associated/endophytes__fae60ba7.yaml",
+      "record_sha256": "724415395218f71e10cf9783d4699cc31911ca86d3cb1146e17a182fbdf69853",
+      "remediation_review_id": "20261104T035813Z-endophytes__fae60ba7-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035813Z-endophytes__fae60ba7-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ce50ceb00a57c703f87d2563af6e5351e768c404740ba2e03cd0eef1fffe5036"
+    },
+    {
+      "finding_id": "endosphere--fd8c8a61-bare-source-label-exact-synonym",
+      "group_id": "G-empyema-drain-to-epibionts-exact-synonym-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2286",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261101T061225Z-endosphere__fd8c8a61-record",
+      "record_id": "habitatmech:GOLD.cf60c050d7",
+      "record_path": "data/habitats/host_associated/endosphere__fd8c8a61.yaml",
+      "record_sha256": "f0c1471d40f7db3cb96f79ab69198f5f27936e3a80793f62b2bc156dc7dedd5e",
+      "remediation_review_id": "20261104T035815Z-endosphere__fd8c8a61-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261104T035815Z-endosphere__fd8c8a61-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "47fff6a199f91c325d1f03e9683e8fa8b499ad0f72e4807baf240f423bab2843"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0",
+  "stage": 5
+}

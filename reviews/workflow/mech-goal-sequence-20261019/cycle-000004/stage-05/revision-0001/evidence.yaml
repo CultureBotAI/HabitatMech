@@ -1,0 +1,711 @@
+schema_version: 1.0.0
+repository_key: habitatmech
+github_repository: CultureBotAI/HabitatMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Grouped all 40 Stage 4 review findings from empyema_drain through epibionts
+  (plus carried-forward #1398 items) into 3 real GitHub issue groups (#2285, #2286,
+  #1398); resolved 10 actionable curation findings across 9 records (6 parent/grounding
+  repairs in #2285 and 4 exact-synonym repairs in #2286) through native curation tables
+  and writers, saved 9 fresh structured remediation review bundles in reviews/structured/,
+  and deferred 30 systemic #1398 mapping-endpoint contract findings.'
+source_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  sha256: edb10c4d6efeb6755ef7b9944c5377d40fdb263645c4769f4e755398b0e910db
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  sha256: bcf28413c4fe9984757be1e08bb98e35a23a732217dd5074ad0bc6fbb5069a41
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/remediation_reviews.json
+  sha256: c77808c2c4fe46e32e583e22c2f04a8e2b15631f91df88c3664da62926314b7c
+  kind: supporting
+findings:
+- finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
+  carried_from: dental-plaque--8396e8ec-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dental_plaque__8396e8ec.yaml (habitatmech:GOLD.26b1d1137f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0016482 (dental plaque) rather
+    than the minted record identifier habitatmech:GOLD.26b1d1137f.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: dentin-mapping-endpoint-contract
+  carried_from: dentin-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dentin.yaml (habitatmech:GOLD.0433dc9a8f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.0433dc9a8f.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: dentin--be69daef-mapping-endpoint-contract
+  carried_from: dentin--be69daef-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dentin__be69daef.yaml (habitatmech:GOLD.7ec36a9a02):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.7ec36a9a02.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: diaphragm--3c058609-mapping-endpoint-contract
+  carried_from: diaphragm--3c058609-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/diaphragm__3c058609.yaml (habitatmech:GOLD.a287a77880):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.a287a77880.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: diaphragm--fbd202d9-mapping-endpoint-contract
+  carried_from: diaphragm--fbd202d9-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/diaphragm__fbd202d9.yaml (habitatmech:GOLD.c84e967b80):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.c84e967b80.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system-mapping-endpoint-contract
+  carried_from: digestive-system-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system.yaml (habitatmech:GOLD.26a84185d3):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.26a84185d3.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--2589c8ce-mapping-endpoint-contract
+  carried_from: digestive-system--2589c8ce-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__2589c8ce.yaml (habitatmech:GOLD.6eecdf150d):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.6eecdf150d.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--46d403bb-mapping-endpoint-contract
+  carried_from: digestive-system--46d403bb-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__46d403bb.yaml (habitatmech:GOLD.d7cff86ce8):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.d7cff86ce8.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--4f205b4d-mapping-endpoint-contract
+  carried_from: digestive-system--4f205b4d-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__4f205b4d.yaml (habitatmech:GOLD.8a68d0f6f5):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.8a68d0f6f5.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--780e5b67-mapping-endpoint-contract
+  carried_from: digestive-system--780e5b67-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__780e5b67.yaml (habitatmech:GOLD.c1d7082e4b):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.c1d7082e4b.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--87922027-mapping-endpoint-contract
+  carried_from: digestive-system--87922027-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__87922027.yaml (habitatmech:GOLD.f6720bccf0):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.f6720bccf0.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--9ec9b5f9-mapping-endpoint-contract
+  carried_from: digestive-system--9ec9b5f9-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__9ec9b5f9.yaml (habitatmech:GOLD.d011f4b43c):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.d011f4b43c.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--ae8329bf-mapping-endpoint-contract
+  carried_from: digestive-system--ae8329bf-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__ae8329bf.yaml (habitatmech:GOLD.3baeffe4f8):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.3baeffe4f8.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--c5da4fa6-mapping-endpoint-contract
+  carried_from: digestive-system--c5da4fa6-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__c5da4fa6.yaml (habitatmech:GOLD.acc41d1792):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.acc41d1792.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--d7057103-mapping-endpoint-contract
+  carried_from: digestive-system--d7057103-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__d7057103.yaml (habitatmech:GOLD.fb6caa2908):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.fb6caa2908.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--e41cfc7b-mapping-endpoint-contract
+  carried_from: digestive-system--e41cfc7b-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__e41cfc7b.yaml (habitatmech:GOLD.bcbf6eec9b):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.bcbf6eec9b.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--efdbeca1-mapping-endpoint-contract
+  carried_from: digestive-system--efdbeca1-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__efdbeca1.yaml (habitatmech:GOLD.c8e85f3c84):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.c8e85f3c84.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--f6665a67-mapping-endpoint-contract
+  carried_from: digestive-system--f6665a67-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__f6665a67.yaml (habitatmech:GOLD.6cc264ebf7):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.6cc264ebf7.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: duodenum--00ca3b2c-mapping-endpoint-contract
+  carried_from: duodenum--00ca3b2c-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/duodenum__00ca3b2c.yaml (habitatmech:GOLD.d1ffda8340):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0002114 (duodenum) rather than
+    the minted record identifier habitatmech:GOLD.d1ffda8340.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: duodenum--5b2d8f0e-mapping-endpoint-contract
+  carried_from: duodenum--5b2d8f0e-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/duodenum__5b2d8f0e.yaml (habitatmech:GOLD.4e3f079a4d):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0002114 (duodenum) rather than
+    the minted record identifier habitatmech:GOLD.4e3f079a4d.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: duodenum--e751f297-mapping-endpoint-contract
+  carried_from: duodenum--e751f297-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/duodenum__e751f297.yaml (habitatmech:GOLD.87d8aea294):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0002114 (duodenum) rather than
+    the minted record identifier habitatmech:GOLD.87d8aea294.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: ear-canal-mapping-endpoint-contract
+  carried_from: ear-canal-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/ear_canal.yaml (habitatmech:GOLD.57fa2ba2ad):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001352 (external acoustic
+    meatus) rather than the minted record identifier habitatmech:GOLD.57fa2ba2ad.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: ear-canal--7b012d70-mapping-endpoint-contract
+  carried_from: ear-canal--7b012d70-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/ear_canal__7b012d70.yaml (habitatmech:GOLD.8b135afbf6):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001352 (external acoustic
+    meatus) rather than the minted record identifier habitatmech:GOLD.8b135afbf6.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: elastic--846c7f5c-mapping-endpoint-contract
+  carried_from: elastic--846c7f5c-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/elastic__846c7f5c.yaml (habitatmech:GOLD.f1f87de0bb):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001996 (elastic cartilage
+    tissue) rather than the minted record identifier habitatmech:GOLD.f1f87de0bb.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: empyema-drain-device-name-exact-synonym
+  carried_from: empyema-drain-device-name-exact-synonym
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-exact-synonym-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
+  summary: 'data/habitats/host_associated/empyema_drain.yaml (habitatmech:GOLD.1ce5b3ff1a):
+    Bare device/procedure label ''Empyema drain'' is asserted as an exact drainage-fluid
+    synonym — Remove bare ''Empyema drain'' from exact_synonym in curation/term_requests.tsv
+    for habitatmech:GOLD.1ce5b3ff1a (keeping ''empyema chest drain fluid'') and add
+    a guarded row in curation/definition_source_label_exclusions.tsv so ''Empyema
+    drain'' is scoped as RELATED_SYNONYM from GOLD rather than EXACT_SYNONYM.'
+  disposition: 'Resolved in Issue #2286 via curation/term_requests.tsv and guarded
+    row in curation/definition_source_label_exclusions.tsv, regenerated habitat YAML,
+    and verified in fresh structured review bundle reviews/structured/20261104T035801Z-empyema_drain-remediation/review.yaml.'
+- finding_id: endocrine-gland-context-parent
+  carried_from: endocrine-gland-context-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endocrine_gland.yaml (habitatmech:GOLD.2f5a0b5455):
+    Mammalian endocrine gland retains mammalian Endocrine system GOLD parent as a
+    superclass — Add an exclusion row in curation/gold_parent_exclusions.tsv for habitatmech:GOLD.2f5a0b5455
+    on GOLD path ''Host-associated > Mammals > Endocrine system > Endocrine gland''
+    excluding parent_id habitatmech:GOLD.016d1f9e29, preserving ontology parent UBERON:0002368
+    (endocrine gland).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035802Z-endocrine_gland-remediation/review.yaml.'
+- finding_id: endocrine-gland-mapping-endpoint-contract
+  carried_from: endocrine-gland-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_gland.yaml (habitatmech:GOLD.2f5a0b5455):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.2f5a0b5455 (Host-associated > Mammals > Endocrine system > Endocrine
+    gland) and its broader ontology parent UBERON:0002368 (endocrine gland).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endocrine-gland--8c35903c-context-parent
+  carried_from: endocrine-gland--8c35903c-context-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endocrine_gland__8c35903c.yaml (habitatmech:GOLD.c26b92ece6):
+    Human endocrine gland retains human Endocrine system GOLD parent as a superclass
+    — Add an exclusion row in curation/gold_parent_exclusions.tsv for habitatmech:GOLD.c26b92ece6
+    on GOLD path ''Host-associated > Mammals: Human > Endocrine system > Endocrine
+    gland'' excluding parent_id habitatmech:GOLD.d63e165267, preserving ontology parent
+    UBERON:0002368 (endocrine gland).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035803Z-endocrine_gland__8c35903c-remediation/review.yaml.'
+- finding_id: endocrine-gland--8c35903c-mapping-endpoint-contract
+  carried_from: endocrine-gland--8c35903c-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_gland__8c35903c.yaml (habitatmech:GOLD.c26b92ece6):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.c26b92ece6 (Host-associated > Mammals: Human > Endocrine system
+    > Endocrine gland) and its broader ontology parent UBERON:0002368 (endocrine gland).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endocrine-system-mapping-endpoint-contract
+  carried_from: endocrine-system-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_system.yaml (habitatmech:GOLD.016d1f9e29):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.016d1f9e29 (Host-associated > Mammals > Endocrine system) and
+    its broader ontology parent UBERON:0000949 (endocrine system).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endocrine-system--a22b6ca6-mapping-endpoint-contract
+  carried_from: endocrine-system--a22b6ca6-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_system__a22b6ca6.yaml (habitatmech:GOLD.f386e4764b):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.f386e4764b (Host-associated > Birds > Endocrine system) and its
+    broader ontology parent UBERON:0000949 (endocrine system).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endocrine-system--e2d3d7a6-mapping-endpoint-contract
+  carried_from: endocrine-system--e2d3d7a6-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_system__e2d3d7a6.yaml (habitatmech:GOLD.d275fc9ccd):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.d275fc9ccd (Host-associated > Fish > Endocrine system) and its
+    broader ontology parent UBERON:0000949 (endocrine system).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endocrine-system--fc8977b8-mapping-endpoint-contract
+  carried_from: endocrine-system--fc8977b8-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/endocrine_system__fc8977b8.yaml (habitatmech:GOLD.d63e165267):
+    Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
+    source-attestation output with the endpoint contract tracked in Issue #1398 for
+    habitatmech:GOLD.d63e165267 (Host-associated > Mammals: Human > Endocrine system)
+    and its broader ontology parent UBERON:0000949 (endocrine system).'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: endometrial-uterine-cnidarian-polyp-parent
+  carried_from: endometrial-uterine-cnidarian-polyp-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endometrial_uterine.yaml (habitatmech:GOLD.1488865daa):
+    Human endometrial polyp is placed under cnidarian body-form BTO:0006350 (polyp)
+    — Update curation/term_requests.tsv (and curation/decisions.tsv note) for habitatmech:GOLD.1488865daa
+    so parent_class is NCIT:C3824 (Lesion) with parent_mode REPLACE, matching sibling
+    human polyp records (colorectal_polyps, colonic, hyperplastic_inflammatory_polyps)
+    and removing the cnidarian body-form parent BTO:0006350 (polyp, subClassOf BTO:0000284
+    coelenterate).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035808Z-endometrial_uterine-remediation/review.yaml.'
+- finding_id: endometrium-context-parent
+  carried_from: endometrium-context-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endometrium.yaml (UBERON:0001295): Endometrium
+    retains whole-organ human Uterus GOLD parent as a superclass — Add an exclusion
+    row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.e5017de50f
+    on GOLD path ''Host-associated > Mammals: Human > Reproductive system > Uterus
+    > Endometrium'' (exact target UBERON:0001295) excluding parent_id habitatmech:GOLD.f736cbfbc5
+    (Uterus), preserving ontology parent UBERON:0019042 (reproductive system mucosa).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035809Z-endometrium-remediation/review.yaml.'
+- finding_id: endophytes-context-parent
+  carried_from: endophytes-context-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endophytes.yaml (habitatmech:GOLD.89d01f437a):
+    Fruit endophyte environment retains fruit surface Carposphere GOLD parent as a
+    superclass — Change parent_mode to REPLACE in curation/term_requests.tsv (or add
+    an exclusion row in curation/gold_parent_exclusions.tsv) for habitatmech:GOLD.89d01f437a
+    on GOLD path ''Host-associated > Plants > Phyllosphere > Carposphere > Endophytes''
+    so fruit surface environment parent habitatmech:GOLD.e898437067 (carposphere)
+    is excluded while preserving ENVO:01001057 (environment associated with a plant
+    part or small plant).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035811Z-endophytes-remediation/review.yaml.'
+- finding_id: endophytes--ca9aaedf-synonym-collision
+  carried_from: endophytes--ca9aaedf-synonym-collision
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-exact-synonym-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
+  summary: 'data/habitats/host_associated/endophytes__ca9aaedf.yaml (habitatmech:GOLD.b8e99e08e5):
+    Exact synonym ''leaf endosphere'' collides with canonical label of sibling record
+    endosphere__eb0d56da — Remove colliding ''leaf endosphere'' from exact_synonym
+    in curation/term_requests.tsv for habitatmech:GOLD.b8e99e08e5 (retaining ''foliar
+    endophyte environment''), eliminating exact-synonym collision with the canonical
+    label of distinct sibling record data/habitats/host_associated/endosphere__eb0d56da.yaml
+    (habitatmech:GOLD.356adc0d4d).'
+  disposition: 'Resolved in Issue #2286 via curation/term_requests.tsv and guarded
+    row in curation/definition_source_label_exclusions.tsv, regenerated habitat YAML,
+    and verified in fresh structured review bundle reviews/structured/20261104T035812Z-endophytes__ca9aaedf-remediation/review.yaml.'
+- finding_id: endophytes--fae60ba7-context-parent
+  carried_from: endophytes--fae60ba7-context-parent
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  summary: 'data/habitats/host_associated/endophytes__fae60ba7.yaml (habitatmech:GOLD.9731c6bb13):
+    Root endophyte environment retains external root surface Rhizoplane parent as
+    a superclass — Change parent_mode to REPLACE in curation/term_requests.tsv (or
+    add an exclusion row in curation/gold_parent_exclusions.tsv) for habitatmech:GOLD.9731c6bb13
+    on GOLD path ''Host-associated > Plants > Roots > Rhizoplane > Endophytes'' so
+    external root surface parent ENVO:01001181 (rhizoplane) is excluded while preserving
+    ENVO:01001057 (environment associated with a plant part or small plant).'
+  disposition: 'Resolved in Issue #2285 via guarded parent exclusion in curation/gold_parent_exclusions.tsv
+    and synchronized curation/decisions.tsv + curation/term_requests.tsv, regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261104T035813Z-endophytes__fae60ba7-remediation/review.yaml.'
+- finding_id: endophytes--fae60ba7-synonym-collision
+  carried_from: endophytes--fae60ba7-synonym-collision
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-exact-synonym-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
+  summary: 'data/habitats/host_associated/endophytes__fae60ba7.yaml (habitatmech:GOLD.9731c6bb13):
+    Exact synonym ''root endosphere'' collides with canonical label of sibling record
+    endosphere__005f8afe — Replace colliding ''root endosphere'' in exact_synonym
+    in curation/term_requests.tsv for habitatmech:GOLD.9731c6bb13 with a non-colliding
+    exact alias (''radicular endophyte environment''), eliminating exact-synonym collision
+    with the canonical label of distinct sibling record data/habitats/host_associated/endosphere__005f8afe.yaml
+    (habitatmech:GOLD.af0c4ac629).'
+  disposition: 'Resolved in Issue #2286 via curation/term_requests.tsv and guarded
+    row in curation/definition_source_label_exclusions.tsv, regenerated habitat YAML,
+    and verified in fresh structured review bundle reviews/structured/20261104T035813Z-endophytes__fae60ba7-remediation/review.yaml.'
+- finding_id: endosphere--fd8c8a61-bare-source-label-exact-synonym
+  carried_from: endosphere--fd8c8a61-bare-source-label-exact-synonym
+  status: resolved
+  group_id: G-empyema-drain-to-epibionts-exact-synonym-repairs
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
+  summary: 'data/habitats/host_associated/endosphere__fd8c8a61.yaml (habitatmech:GOLD.bfe3e11951):
+    Plant endosphere emits case-duplicate exact synonyms ''Endosphere'' and ''endosphere''
+    without source-label exclusion — Remove bare ''endosphere'' from exact_synonym
+    in curation/term_requests.tsv for habitatmech:GOLD.bfe3e11951 (keeping ''internal
+    plant tissue environment'') and add a guarded row in curation/definition_source_label_exclusions.tsv
+    so bare GOLD ''Endosphere'' is scoped as RELATED_SYNONYM, matching sibling root
+    endosphere and leaf endosphere records.'
+  disposition: 'Resolved in Issue #2286 via curation/term_requests.tsv and guarded
+    row in curation/definition_source_label_exclusions.tsv, regenerated habitat YAML,
+    and verified in fresh structured review bundle reviews/structured/20261104T035815Z-endosphere__fd8c8a61-remediation/review.yaml.'
+groups:
+- group_id: G-empyema-drain-to-epibionts-parent-grounding-repairs
+  finding_ids:
+  - endocrine-gland-context-parent
+  - endocrine-gland--8c35903c-context-parent
+  - endometrial-uterine-cnidarian-polyp-parent
+  - endometrium-context-parent
+  - endophytes-context-parent
+  - endophytes--fae60ba7-context-parent
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2285
+  status: resolved
+  summary: Remove six GOLD context-only parent contributions and repair parent/genus
+    grounding across endocrine_gland, endocrine_gland__8c35903c, endometrial_uterine,
+    endometrium, endophytes, and endophytes__fae60ba7 via curation/decisions.tsv,
+    curation/term_requests.tsv, and curation/gold_parent_exclusions.tsv.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/remediation_reviews.json
+  disposition: 'Resolved all 6 parent/grounding findings under Issue #2285, rebuilt
+    derived artifacts, added tests/test_empyema_drain_to_epibionts_review_repairs.py,
+    and recorded fresh structured remediation review bundles in reviews/structured/.'
+- group_id: G-empyema-drain-to-epibionts-exact-synonym-repairs
+  finding_ids:
+  - empyema-drain-device-name-exact-synonym
+  - endophytes--ca9aaedf-synonym-collision
+  - endophytes--fae60ba7-synonym-collision
+  - endosphere--fd8c8a61-bare-source-label-exact-synonym
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
+  status: resolved
+  summary: Remove bare GOLD source leaf labels ('Empyema drain', 'Endosphere') from
+    exact_synonyms on empyema_drain and endosphere__fd8c8a61 while preserving them
+    as GOLD-scoped RELATED_SYNONYMs, and disambiguate colliding 'plant endosphere'
+    exact_synonyms on endophytes__ca9aaedf and endophytes__fae60ba7.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/remediation_reviews.json
+  disposition: 'Resolved all 4 exact-synonym findings under Issue #2286 via curation/term_requests.tsv
+    and curation/definition_source_label_exclusions.tsv, rebuilt derived artifacts,
+    added counterfactual regression coverage, and recorded fresh structured remediation
+    review bundles in reviews/structured/.'
+- group_id: G-source-attestation-mapping-endpoint-contract
+  finding_ids:
+  - dental-plaque--8396e8ec-mapping-endpoint-contract
+  - dentin-mapping-endpoint-contract
+  - dentin--be69daef-mapping-endpoint-contract
+  - diaphragm--3c058609-mapping-endpoint-contract
+  - diaphragm--fbd202d9-mapping-endpoint-contract
+  - digestive-system-mapping-endpoint-contract
+  - digestive-system--2589c8ce-mapping-endpoint-contract
+  - digestive-system--46d403bb-mapping-endpoint-contract
+  - digestive-system--4f205b4d-mapping-endpoint-contract
+  - digestive-system--780e5b67-mapping-endpoint-contract
+  - digestive-system--87922027-mapping-endpoint-contract
+  - digestive-system--9ec9b5f9-mapping-endpoint-contract
+  - digestive-system--ae8329bf-mapping-endpoint-contract
+  - digestive-system--c5da4fa6-mapping-endpoint-contract
+  - digestive-system--d7057103-mapping-endpoint-contract
+  - digestive-system--e41cfc7b-mapping-endpoint-contract
+  - digestive-system--efdbeca1-mapping-endpoint-contract
+  - digestive-system--f6665a67-mapping-endpoint-contract
+  - duodenum--00ca3b2c-mapping-endpoint-contract
+  - duodenum--5b2d8f0e-mapping-endpoint-contract
+  - duodenum--e751f297-mapping-endpoint-contract
+  - ear-canal-mapping-endpoint-contract
+  - ear-canal--7b012d70-mapping-endpoint-contract
+  - elastic--846c7f5c-mapping-endpoint-contract
+  - endocrine-gland-mapping-endpoint-contract
+  - endocrine-gland--8c35903c-mapping-endpoint-contract
+  - endocrine-system-mapping-endpoint-contract
+  - endocrine-system--a22b6ca6-mapping-endpoint-contract
+  - endocrine-system--e2d3d7a6-mapping-endpoint-contract
+  - endocrine-system--fc8977b8-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  status: deferred
+  summary: Systemic source_attestations[].mapping_predicate endpoint contract where
+    skos:narrowMatch from curation/decisions.tsv is emitted on SourceAttestation of
+    a minted habitatmech:GOLD.* record identifier.
+  disposition: 'Explicitly deferred and carried forward under open repository architecture
+    Issue #1398; requires corpus-wide SourceAttestation schema/writer design change
+    rather than record-local curation edits.'
+carry_forward_ids:
+- dental-plaque--8396e8ec-mapping-endpoint-contract
+- dentin-mapping-endpoint-contract
+- dentin--be69daef-mapping-endpoint-contract
+- diaphragm--3c058609-mapping-endpoint-contract
+- diaphragm--fbd202d9-mapping-endpoint-contract
+- digestive-system-mapping-endpoint-contract
+- digestive-system--2589c8ce-mapping-endpoint-contract
+- digestive-system--46d403bb-mapping-endpoint-contract
+- digestive-system--4f205b4d-mapping-endpoint-contract
+- digestive-system--780e5b67-mapping-endpoint-contract
+- digestive-system--87922027-mapping-endpoint-contract
+- digestive-system--9ec9b5f9-mapping-endpoint-contract
+- digestive-system--ae8329bf-mapping-endpoint-contract
+- digestive-system--c5da4fa6-mapping-endpoint-contract
+- digestive-system--d7057103-mapping-endpoint-contract
+- digestive-system--e41cfc7b-mapping-endpoint-contract
+- digestive-system--efdbeca1-mapping-endpoint-contract
+- digestive-system--f6665a67-mapping-endpoint-contract
+- duodenum--00ca3b2c-mapping-endpoint-contract
+- duodenum--5b2d8f0e-mapping-endpoint-contract
+- duodenum--e751f297-mapping-endpoint-contract
+- ear-canal-mapping-endpoint-contract
+- ear-canal--7b012d70-mapping-endpoint-contract
+- elastic--846c7f5c-mapping-endpoint-contract
+- endocrine-gland-mapping-endpoint-contract
+- endocrine-gland--8c35903c-mapping-endpoint-contract
+- endocrine-system-mapping-endpoint-contract
+- endocrine-system--a22b6ca6-mapping-endpoint-contract
+- endocrine-system--e2d3d7a6-mapping-endpoint-contract
+- endocrine-system--fc8977b8-mapping-endpoint-contract
+infra_tasks: []
+scope_frozen_at: '2026-11-04T03:45:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml
+  sha256: 83d298ceded5970e01661838c3a195e5149a8c8ade68097cfa0220480991d0f1

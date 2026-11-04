@@ -16,7 +16,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:01001057
-- habitatmech:GOLD.e898437067
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5265
@@ -40,15 +39,6 @@ curation_history:
     habitatmech:GOLD.89d01f437a)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
-  action: DEFINED
-  changes: 'Defined as ''fruit endophyte environment'' under ENVO:01001057 ''environment
-    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
-    > Plants > Phyllosphere > Carposphere > Endophytes'' denotes the internal fruit
-    tissue habitat of endophytes. Define under ENVO:01001057 and exclude bare ''Endophytes''
-    (PMID 32346039; DOI:10.1186/s40168-020-00830-z). Path: Host-associated > Plants
-    > Phyllosphere > Carposphere > Endophytes'
-- timestamp: '2026-10-17T00:00:00Z'
-  curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED
   changes: Omitted automatic retention of displaced source label 'Endophytes' when
     defining habitatmech:GOLD.89d01f437a as 'fruit endophyte environment'. Verbatim
@@ -57,3 +47,30 @@ curation_history:
     ambiguous, or names a host/disease/process rather than the defined habitat 'fruit
     endophyte environment'; suppress automatic exact-synonym retention while preserving
     verbatim source provenance.
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fruit endophyte environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation https://github.com/CultureBotAI/HabitatMech/issues/2285
+    : GOLD ''Host-associated > Plants > Phyllosphere > Carposphere > Endophytes''
+    denotes the internal fruit tissue habitat of endophytes rather than the external
+    fruit surface (carposphere). Define under ENVO:01001057 with parent_mode REPLACE
+    to exclude fruit-surface parent habitatmech:GOLD.e898437067 (carposphere) and
+    exclude bare ''Endophytes'' (PMID 32346039; DOI:10.1186/s40168-020-00830-z). Path:
+    Host-associated > Plants > Phyllosphere > Carposphere > Endophytes'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.e898437067
+    for habitatmech:GOLD.89d01f437a (Host-associated > Plants > Phyllosphere > Carposphere
+    > Endophytes). Review https://github.com/CultureBotAI/HabitatMech/issues/2285
+    : Endocrine gland is an organ part of the endocrine system, not a subtype of the
+    entire mammalian or human endocrine system; human endometrial polyp is a benign
+    uterine mucosal lesion, not a subtype of the cnidarian body-form homonym BTO:0006350
+    (polyp); endometrium is the inner mucosal lining of the uterus, not the entire
+    human uterus; fruit endophyte environment is an internal fruit tissue habitat,
+    not a subtype of the external fruit surface (carposphere); root endophyte environment
+    is an internal root tissue habitat, not a subtype of the external root surface
+    (rhizoplane). Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target habitatmech:GOLD.89d01f437a.
+    Shared mapping endpoints #1398 remain separate.'

@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.1488865daa
 label: human endometrial polyp
-definition: A polyp arising as a benign localized overgrowth of endometrial glands
-  and stroma projecting into the human uterine cavity, colonized by uterine mucosal
-  microbiota.
+definition: A Lesion consisting of a benign localized mucosal polyp of endometrial
+  glands and stroma projecting into the human uterine cavity, colonized by uterine
+  mucosal microbiota.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -15,7 +15,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- BTO:0006350
+- NCIT:C3824
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6651
@@ -28,18 +28,6 @@ curation_history:
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
-    endometrial polyp under BTO:0006350 ''polyp''; supported by endometrial polyp
-    reproductive tract microbiome studies (PMID 27512056). (source concept habitatmech:GOLD.1488865daa)'
-- timestamp: '2026-10-17T00:00:00Z'
-  curator: antigravity
-  action: DEFINED
-  changes: Defined as 'human endometrial polyp' under BTO:0006350 'polyp'. Defined
-    human endometrial polyp under BTO:0006350 'polyp'; supported by endometrial polyp
-    reproductive tract microbiome studies (PMID 27512056).
-- timestamp: '2026-10-17T00:00:00Z'
-  curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED
   changes: 'Omitted automatic retention of displaced source label ''Endometrial/Uterine''
     when defining habitatmech:GOLD.1488865daa as ''human endometrial polyp''. Verbatim
@@ -48,3 +36,37 @@ curation_history:
     is context-dependent, ambiguous, or names a host/disease/process rather than the
     defined habitat ''human endometrial polyp''; suppress automatic exact-synonym
     retention while preserving verbatim source provenance.'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2285 : Defined human endometrial
+    polyp under NCIT:C3824 ''Lesion'' with parent_mode REPLACE (excluding cnidarian
+    body-form homonym BTO:0006350 ''polyp'' inherited from GOLD parent Polyps); supported
+    by endometrial polyp reproductive tract microbiome studies (PMID 27512056). Path:
+    Host-associated > Mammals: Human > Benign tumor > Polyps > Endometrial/Uterine
+    (source concept habitatmech:GOLD.1488865daa)'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human endometrial polyp'' under NCIT:C3824 ''Lesion''. Defined
+    human endometrial polyp under NCIT:C3824 ''Lesion'' (parent_mode REPLACE) for
+    GOLD path ''Host-associated > Mammals: Human > Benign tumor > Polyps > Endometrial/Uterine''
+    to exclude cnidarian body-form homonym BTO:0006350 ''polyp'' (https://github.com/CultureBotAI/HabitatMech/issues/2285);
+    supported by endometrial polyp reproductive tract microbiome studies (PMID 27512056).'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution BTO:0006350 for habitatmech:GOLD.1488865daa
+    (Host-associated > Mammals: Human > Benign tumor > Polyps > Endometrial/Uterine).
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2285 : Endocrine gland
+    is an organ part of the endocrine system, not a subtype of the entire mammalian
+    or human endocrine system; human endometrial polyp is a benign uterine mucosal
+    lesion, not a subtype of the cnidarian body-form homonym BTO:0006350 (polyp);
+    endometrium is the inner mucosal lining of the uterus, not the entire human uterus;
+    fruit endophyte environment is an internal fruit tissue habitat, not a subtype
+    of the external fruit surface (carposphere); root endophyte environment is an
+    internal root tissue habitat, not a subtype of the external root surface (rhizoplane).
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target habitatmech:GOLD.1488865daa.
+    Shared mapping endpoints #1398 remain separate.'

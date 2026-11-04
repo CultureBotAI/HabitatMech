@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/gold_parent_exclusions.tsv
+  slug: gold_parent_exclusions
+session:
+  id: 2026-11-04T034500Z-antigravity-228501
+  timestamp: '2026-11-04T03:45:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2285
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - gold_parent_exclusions
+  - decisions
+  - term_requests
+  summary: Repair parent_habitats and grounding across 6 records in empyema_drain to
+    epibionts cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-empyema-drain-to-epibionts-parent-grounding-repairs
+    (6 findings from Stage 4 cohort review 20261104T011600Z-empyema_drain_to_epibionts-category).
+    Added 6 guarded rows to curation/gold_parent_exclusions.tsv for habitatmech:GOLD.49db30e48e
+    (UBERON:0002368 endocrine_gland, excluding UBERON:0000949), habitatmech:GOLD.8c35903cb8
+    (endocrine_gland__8c35903c, excluding habitatmech:GOLD.bbff290868), habitatmech:GOLD.1488865daa
+    (endometrial_uterine, excluding UBERON:0009747), habitatmech:GOLD.c60ab8da48
+    (UBERON:0001295 endometrium, excluding UBERON:0000995), habitatmech:GOLD.e52ef81f1a
+    (endophytes, excluding habitatmech:GOLD.8577274fc0), and habitatmech:GOLD.fae60ba7db
+    (endophytes__fae60ba7, excluding ENVO:01001264). Also updated curation/decisions.tsv
+    and curation/term_requests.tsv for habitatmech:GOLD.1488865daa (endometrial_uterine)
+    from NARROW UBERON:0001295 (endometrium) to UNGROUNDED with genus parent UBERON:0001295
+    (endometrium) and parent_mode REPLACE, and updated curation/term_requests.tsv
+    for habitatmech:GOLD.e52ef81f1a (endophytes) and habitatmech:GOLD.fae60ba7db
+    (endophytes__fae60ba7) to set parent_mode REPLACE.'

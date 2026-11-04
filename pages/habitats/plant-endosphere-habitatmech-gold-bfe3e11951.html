@@ -68,7 +68,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Endosphere <span class="meta">— HabitatMech curation</span></li><li>endosphere <span class="meta">— HabitatMech curation</span></li></ul>
+<li>internal plant tissue environment <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -81,8 +81,13 @@ from several source concepts can carry one decision per concept.</p>
   </li>
   <li>
     <span class="pill">DEFINED</span>
-    <span class="meta">2026-10-17 · antigravity</span>
-    <p>Defined as &#39;plant endosphere&#39; under ENVO:01001001 &#39;plant-associated environment&#39;. ITEM curation: GOLD &#39;Host-associated &gt; Plants &gt; Endosphere&#39; denotes the internal tissue environment of plants inhabited by endophytes. Define under ENVO:01001001 (plant-associated environment) with parent_mode ADD (PMID 25972004; DOI:10.1128/MMBR.00050-14). Path: Host-associated &gt; Plants &gt; Endosphere</p>
+    <span class="meta">2026-11-04 · antigravity</span>
+    <p>Defined as &#39;plant endosphere&#39; under ENVO:01001001 &#39;plant-associated environment&#39;. ITEM curation <a href="https://github.com/CultureBotAI/HabitatMech/issues/2286" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2286</a> : GOLD &#39;Host-associated &gt; Plants &gt; Endosphere&#39; denotes the internal tissue environment of plants inhabited by endophytes. Define under ENVO:01001001 (plant-associated environment) with parent_mode ADD and exclude bare &#39;Endosphere&#39; (PMID 25972004; DOI:10.1128/MMBR.00050-14). Path: Host-associated &gt; Plants &gt; Endosphere</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-11-04 · antigravity</span>
+    <p>Omitted automatic retention of displaced source label &#39;Endosphere&#39; when defining habitatmech:GOLD.bfe3e11951 as &#39;plant endosphere&#39;. Verbatim source attestations are preserved. Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2286" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2286</a> : The displaced label Endosphere is an unqualified source label that collides across the GOLD plant-specific leaf (habitatmech:GOLD.bfe3e11951) and the BacDive general endosphere leaf (habitatmech:BACDIVE.3e4680f074) outside Host-associated &gt; Plants &gt; Endosphere. Remove only the bare unqualified exact alias and suppress exact-alias fallback; preserve verbatim source provenance, definition, internal plant tissue environment synonym, genera and native status.</p>
   </li>
 </ol>
 
