@@ -39,9 +39,9 @@
   - **Causal-graph curations:** `validated 63 causal-graph curation file(s) with 63 graph(s)`.
   - **Curation floor:** No identifier lost since `origin/main`, `HEAD`.
   - **Corpus reproduction:** `verified 3209 file(s) in data/habitats` (0 diffs).
-  - **Redirects:** `743 redirect(s) current`.
-  - **Generated site:** `verified 3965 file(s) in pages` (`3209` records, `743` redirects, `8` categories, `690` term requests).
-  - **Term-request packets:** `verified 8 file(s) in curation/term_requests`.
+  - **Redirects:** `RETIRED.tsv is current (750 redirects)`.
+  - **Generated site:** `rendered 3209 habitat pages, 750 redirect stubs, 8 categories, 696 term requests` (`pages/ is in step with the corpus`).
+  - **Term-request packets:** `term-request table is current (671 terms)`.
 
 ### 4. Ontology ID-to-Label Correspondence (`just validate-products`)
 
