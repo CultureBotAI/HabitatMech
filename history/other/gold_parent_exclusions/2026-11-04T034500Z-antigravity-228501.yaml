@@ -24,16 +24,27 @@ events:
   summary: Repair parent_habitats and grounding across 6 records in empyema_drain to
     epibionts cohort
   details: 'Stage 5 (resolve_review_findings) grouped remediation of G-empyema-drain-to-epibionts-parent-grounding-repairs
-    (6 findings from Stage 4 cohort review 20261104T011600Z-empyema_drain_to_epibionts-category).
-    Added 6 guarded rows to curation/gold_parent_exclusions.tsv for habitatmech:GOLD.49db30e48e
-    (UBERON:0002368 endocrine_gland, excluding UBERON:0000949), habitatmech:GOLD.8c35903cb8
-    (endocrine_gland__8c35903c, excluding habitatmech:GOLD.bbff290868), habitatmech:GOLD.1488865daa
-    (endometrial_uterine, excluding UBERON:0009747), habitatmech:GOLD.c60ab8da48
-    (UBERON:0001295 endometrium, excluding UBERON:0000995), habitatmech:GOLD.e52ef81f1a
-    (endophytes, excluding habitatmech:GOLD.8577274fc0), and habitatmech:GOLD.fae60ba7db
-    (endophytes__fae60ba7, excluding ENVO:01001264). Also updated curation/decisions.tsv
-    and curation/term_requests.tsv for habitatmech:GOLD.1488865daa (endometrial_uterine)
-    from NARROW UBERON:0001295 (endometrium) to UNGROUNDED with genus parent UBERON:0001295
-    (endometrium) and parent_mode REPLACE, and updated curation/term_requests.tsv
-    for habitatmech:GOLD.e52ef81f1a (endophytes) and habitatmech:GOLD.fae60ba7db
-    (endophytes__fae60ba7) to set parent_mode REPLACE.'
+    (6 findings from Stage 4 cohort review 20261101T061235Z-empyema_drain_to_epibionts-cohort).
+    Added 6 guarded rows to curation/gold_parent_exclusions.tsv for habitatmech:GOLD.2f5a0b5455
+    (endocrine_gland, excluding habitatmech:GOLD.016d1f9e29 Endocrine system in Host-associated
+    > Mammals > Endocrine system > Endocrine gland while preserving UBERON:0002368
+    endocrine gland), habitatmech:GOLD.c26b92ece6 (endocrine_gland__8c35903c, excluding
+    habitatmech:GOLD.d63e165267 Endocrine system in Host-associated > Mammals: Human
+    > Endocrine system > Endocrine gland while preserving UBERON:0002368 endocrine
+    gland), habitatmech:GOLD.1488865daa (endometrial_uterine, excluding BTO:0006350
+    polyp in Host-associated > Mammals: Human > Benign tumor > Polyps > Endometrial/Uterine),
+    UBERON:0001295 / GOLD source habitatmech:GOLD.e5017de50f (endometrium, excluding
+    habitatmech:GOLD.f736cbfbc5 Uterus in Host-associated > Mammals: Human > Reproductive
+    system > Uterus > Endometrium while preserving UBERON:0019042 reproductive system
+    mucosa), habitatmech:GOLD.89d01f437a (endophytes, excluding habitatmech:GOLD.e898437067
+    carposphere in Host-associated > Plants > Phyllosphere > Carposphere > Endophytes
+    while preserving ENVO:01001057 environment associated with a plant part or small
+    plant), and habitatmech:GOLD.9731c6bb13 (endophytes__fae60ba7, excluding ENVO:01001181
+    rhizoplane in Host-associated > Plants > Roots > Rhizoplane > Endophytes while
+    preserving ENVO:01001057 environment associated with a plant part or small plant).
+    Also updated curation/decisions.tsv, curation/term_requests.tsv, and curation/term_requests/envo_robot_template.tsv
+    for habitatmech:GOLD.1488865daa (human endometrial polyp) to replace genus parent
+    BTO:0006350 (polyp, cnidarian life-cycle form, parent_mode ADD) with NCIT:C3824
+    (Lesion, parent_mode REPLACE), and updated curation/term_requests.tsv for habitatmech:GOLD.89d01f437a
+    (fruit endophyte environment) and habitatmech:GOLD.9731c6bb13 (root endophyte
+    environment) to set parent_mode REPLACE.'

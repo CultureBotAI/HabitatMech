@@ -11,7 +11,7 @@
 
 ## Summary
 
-Replaced the colliding cross-record exact alias 'plant endosphere' in curation/term_requests.tsv with 'fungal-dominated plant endosphere' (#2286), eliminating the exact-synonym collision with endophytes__fae60ba7 while preserving the guarded exclusion of bare 'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved predecessor finding remains in this target scope.
+Removed the colliding cross-record exact alias 'leaf endosphere' from curation/term_requests.tsv (retaining 'foliar endophyte environment') (#2286), eliminating the exact-synonym collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d) while preserving the guarded exclusion of bare 'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved predecessor finding remains in this target scope.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 860 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.b8e99e08e5.
 
-habitatmech:GOLD.b8e99e08e5: leaf endophyte environment; UNGROUNDED/REVIEWED; parents ["ENVO:01001057"]. Replaced the colliding cross-record exact alias 'plant endosphere' in curation/term_requests.tsv with 'fungal-dominated plant endosphere' (#2286), eliminating the exact-synonym collision with endophytes__fae60ba7 while preserving the guarded exclusion of bare 'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved predecessor finding remains in this target scope.
+habitatmech:GOLD.b8e99e08e5: leaf endophyte environment; UNGROUNDED/REVIEWED; parents ["ENVO:01001057"]. Removed the colliding cross-record exact alias 'leaf endosphere' from curation/term_requests.tsv (retaining 'foliar endophyte environment') (#2286), eliminating the exact-synonym collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d) while preserving the guarded exclusion of bare 'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved predecessor finding remains in this target scope.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: endophytes--ca9aaedf-synonym-collision.
 
 Remove colliding 'leaf endosphere' from exact_synonym in curation/term_requests.tsv for habitatmech:GOLD.b8e99e08e5 (retaining 'foliar endophyte environment'), eliminating exact-synonym collision with the canonical label of distinct sibling record data/habitats/host_associated/endosphere__eb0d56da.yaml (habitatmech:GOLD.356adc0d4d).
 
-Disposition: Replaced the colliding cross-record exact_synonym 'plant endosphere' in curation/term_requests.tsv with 'fungal-dominated plant endosphere' (#2286), eliminating the exact-alias collision with endophytes__fae60ba7.
+Disposition: Removed the colliding cross-record exact_synonym 'leaf endosphere' from curation/term_requests.tsv (retaining 'foliar endophyte environment') (#2286), eliminating the exact-alias collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -142,11 +142,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Replaced the colliding cross-record exact alias 'plant endosphere' in curation/term_requests.tsv
-  with 'fungal-dominated plant endosphere' (#2286), eliminating the exact-synonym
-  collision with endophytes__fae60ba7 while preserving the guarded exclusion of bare
-  'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved predecessor finding remains
-  in this target scope.
+summary: Removed the colliding cross-record exact alias 'leaf endosphere' from curation/term_requests.tsv
+  (retaining 'foliar endophyte environment') (#2286), eliminating the exact-synonym
+  collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d) while preserving
+  the guarded exclusion of bare 'Endophytes' as RELATED_SYNONYM from GOLD. No unresolved
+  predecessor finding remains in this target scope.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -200,10 +200,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061220Z-endophytes__ca9aaedf-record/review.yaml
     sha256: 8e47c80d185af71b737675b78a8afea36be46a60200d91ffed6face8c02a59ed
@@ -598,7 +598,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:12Z'
   support: supports
   summary: 'Authorized curation event for Issue #2286 recorded and validated.'
-  snapshot_sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+  snapshot_sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
 assessments:
 - assessment_id: A1
   area: schema
@@ -631,11 +631,11 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'habitatmech:GOLD.b8e99e08e5: leaf endophyte environment; UNGROUNDED/REVIEWED;
-    parents ["ENVO:01001057"]. Replaced the colliding cross-record exact alias ''plant
-    endosphere'' in curation/term_requests.tsv with ''fungal-dominated plant endosphere''
-    (#2286), eliminating the exact-synonym collision with endophytes__fae60ba7 while
-    preserving the guarded exclusion of bare ''Endophytes'' as RELATED_SYNONYM from
-    GOLD. No unresolved predecessor finding remains in this target scope.'
+    parents ["ENVO:01001057"]. Removed the colliding cross-record exact alias ''leaf
+    endosphere'' from curation/term_requests.tsv (retaining ''foliar endophyte environment'')
+    (#2286), eliminating the exact-synonym collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d)
+    while preserving the guarded exclusion of bare ''Endophytes'' as RELATED_SYNONYM
+    from GOLD. No unresolved predecessor finding remains in this target scope.'
   target_ids:
   - habitatmech:GOLD.b8e99e08e5
   evidence_ids:
@@ -775,9 +775,9 @@ findings:
   - repository: CultureBotAI/HabitatMech
     review_id: 20261101T061220Z-endophytes__ca9aaedf-record
     finding_id: F1
-  disposition_reason: Replaced the colliding cross-record exact_synonym 'plant endosphere'
-    in curation/term_requests.tsv with 'fungal-dominated plant endosphere' (#2286),
-    eliminating the exact-alias collision with endophytes__fae60ba7.
+  disposition_reason: Removed the colliding cross-record exact_synonym 'leaf endosphere'
+    from curation/term_requests.tsv (retaining 'foliar endophyte environment') (#2286),
+    eliminating the exact-alias collision with endosphere__eb0d56da (habitatmech:GOLD.356adc0d4d).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

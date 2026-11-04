@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD context-parent contribution UBERON:0000949 (endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002530 (gland). Identity, native status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+Removed the guarded GOLD context-parent contribution habitatmech:GOLD.d63e165267 (Endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002368 (endocrine gland). Identity (habitatmech:GOLD.c26b92ece6), native status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 860 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.c26b92ece6.
 
-habitatmech:GOLD.c26b92ece6: Endocrine gland; NARROW/SEEDED; parents ["UBERON:0002368"]. Removed the guarded GOLD context-parent contribution UBERON:0000949 (endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002530 (gland). Identity, native status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+habitatmech:GOLD.c26b92ece6: Endocrine gland; NARROW/SEEDED; parents ["UBERON:0002368"]. Removed the guarded GOLD context-parent contribution habitatmech:GOLD.d63e165267 (Endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002368 (endocrine gland). Identity (habitatmech:GOLD.c26b92ece6), native status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: endocrine-gland--8c35903c-context-paren
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for habitatmech:GOLD.c26b92ece6 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Endocrine system &gt; Endocrine gland' excluding parent_id habitatmech:GOLD.d63e165267, preserving ontology parent UBERON:0002368 (endocrine gland).
 
-Disposition: Excluded only the guarded GOLD whole-system context-parent contribution UBERON:0000949 (endocrine system) in curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002530 (gland).
+Disposition: Excluded only the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.d63e165267 (Endocrine system) in curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0002368 (endocrine gland).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
@@ -156,11 +156,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Removed the guarded GOLD context-parent contribution UBERON:0000949 (endocrine
-  system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
-  parent UBERON:0002530 (gland). Identity, native status, and source observations
-  are preserved. The global NARROW source-attestation endpoint finding (#1398) remains
-  explicitly open.
+summary: Removed the guarded GOLD context-parent contribution habitatmech:GOLD.d63e165267
+  (Endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader
+  ontology parent UBERON:0002368 (endocrine gland). Identity (habitatmech:GOLD.c26b92ece6),
+  native status, and source observations are preserved. The global NARROW source-attestation
+  endpoint finding (#1398) remains explicitly open.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -214,10 +214,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061212Z-endocrine_gland__8c35903c-record/review.yaml
     sha256: 1419256ca7d02beb118dde2eaf31e45165892d6a3f925d142291efe5cecb45c2
@@ -592,7 +592,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:03Z'
   support: supports
   summary: 'Authorized curation event for Issue #2285 recorded and validated.'
-  snapshot_sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+  snapshot_sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
 assessments:
 - assessment_id: A1
   area: schema
@@ -623,11 +623,11 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: 'habitatmech:GOLD.c26b92ece6: Endocrine gland; NARROW/SEEDED; parents ["UBERON:0002368"].
-    Removed the guarded GOLD context-parent contribution UBERON:0000949 (endocrine
-    system) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
-    parent UBERON:0002530 (gland). Identity, native status, and source observations
-    are preserved. The global NARROW source-attestation endpoint finding (#1398) remains
-    explicitly open.'
+    Removed the guarded GOLD context-parent contribution habitatmech:GOLD.d63e165267
+    (Endocrine system) via curation/gold_parent_exclusions.tsv (#2285), preserving
+    broader ontology parent UBERON:0002368 (endocrine gland). Identity (habitatmech:GOLD.c26b92ece6),
+    native status, and source observations are preserved. The global NARROW source-attestation
+    endpoint finding (#1398) remains explicitly open.'
   target_ids:
   - habitatmech:GOLD.c26b92ece6
   evidence_ids:
@@ -757,8 +757,8 @@ findings:
     review_id: 20261101T061212Z-endocrine_gland__8c35903c-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-system context-parent contribution
-    UBERON:0000949 (endocrine system) in curation/gold_parent_exclusions.tsv (#2285),
-    preserving broader ontology parent UBERON:0002530 (gland).
+    habitatmech:GOLD.d63e165267 (Endocrine system) in curation/gold_parent_exclusions.tsv
+    (#2285), preserving broader ontology parent UBERON:0002368 (endocrine gland).
 - finding_id: F2
   issue_key: endocrine-gland--8c35903c-mapping-endpoint-contract
   category: representation

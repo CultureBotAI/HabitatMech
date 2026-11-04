@@ -17,10 +17,10 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: Set parent_mode=REPLACE in curation/term_requests.tsv and added a guarded
-  row in curation/gold_parent_exclusions.tsv excluding the host-environment GOLD parent
-  habitatmech:GOLD.cd4f2f2186 (macroalgal host environment) (#2285), preserving broader
-  ontology parent PO:0009007 (portion of plant tissue). No unresolved predecessor
-  finding remains.
+  row in curation/gold_parent_exclusions.tsv excluding the external fruit-surface
+  GOLD parent habitatmech:GOLD.e898437067 (carposphere) (#2285), preserving broader
+  ontology parent ENVO:01001057 (environment associated with a plant part or small
+  plant). No unresolved predecessor finding remains in this target scope.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -74,10 +74,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061219Z-endophytes-record/review.yaml
     sha256: 587dda0e49dcbbdf5ddf652b0b1c05dbad15d86af6649ec406fe80842be01c0a
@@ -514,7 +514,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:11Z'
   support: supports
   summary: 'Authorized curation event for Issue #2285 recorded and validated.'
-  snapshot_sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+  snapshot_sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
 assessments:
 - assessment_id: A1
   area: schema
@@ -549,10 +549,10 @@ assessments:
   outcome: supported
   summary: 'habitatmech:GOLD.89d01f437a: fruit endophyte environment; UNGROUNDED/REVIEWED;
     parents ["ENVO:01001057"]. Set parent_mode=REPLACE in curation/term_requests.tsv
-    and added a guarded row in curation/gold_parent_exclusions.tsv excluding the host-environment
-    GOLD parent habitatmech:GOLD.cd4f2f2186 (macroalgal host environment) (#2285),
-    preserving broader ontology parent PO:0009007 (portion of plant tissue). No unresolved
-    predecessor finding remains.'
+    and added a guarded row in curation/gold_parent_exclusions.tsv excluding the external
+    fruit-surface GOLD parent habitatmech:GOLD.e898437067 (carposphere) (#2285), preserving
+    broader ontology parent ENVO:01001057 (environment associated with a plant part
+    or small plant). No unresolved predecessor finding remains in this target scope.'
   target_ids:
   - habitatmech:GOLD.89d01f437a
   evidence_ids:
@@ -703,9 +703,9 @@ findings:
     review_id: 20261101T061219Z-endophytes-record
     finding_id: F1
   disposition_reason: Set parent_mode=REPLACE in curation/term_requests.tsv and added
-    a guarded row in curation/gold_parent_exclusions.tsv excluding host-environment
-    GOLD parent habitatmech:GOLD.cd4f2f2186 (macroalgal host environment) (#2285),
-    preserving PO:0009007.
+    a guarded row in curation/gold_parent_exclusions.tsv excluding the external fruit-surface
+    GOLD parent habitatmech:GOLD.e898437067 (carposphere) (#2285), preserving ENVO:01001057
+    (environment associated with a plant part or small plant).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

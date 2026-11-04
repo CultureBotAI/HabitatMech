@@ -15,13 +15,13 @@ summary: 'Grouped all 40 Stage 4 review findings from empyema_drain through epib
 source_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
-  sha256: edb10c4d6efeb6755ef7b9944c5377d40fdb263645c4769f4e755398b0e910db
+  sha256: f69ed6228a30c6ae56bca4a5286cb4542f074330e43eea0e70ebaf78f268ba21
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
-  sha256: bcf28413c4fe9984757be1e08bb98e35a23a732217dd5074ad0bc6fbb5069a41
+  sha256: cdeb741b12fd1190444294aabf2d6fcc52a42f40eb26e004db8e6283358b06f4
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/remediation_reviews.json
-  sha256: c77808c2c4fe46e32e583e22c2f04a8e2b15631f91df88c3664da62926314b7c
+  sha256: f42a6548a43dab07d77cc1ab19c71daac7fda4fc2a60df56c782355e084f784a
   kind: supporting
 findings:
 - finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
@@ -621,10 +621,10 @@ groups:
   - endosphere--fd8c8a61-bare-source-label-exact-synonym
   issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2286
   status: resolved
-  summary: Remove bare GOLD source leaf labels ('Empyema drain', 'Endosphere') from
-    exact_synonyms on empyema_drain and endosphere__fd8c8a61 while preserving them
-    as GOLD-scoped RELATED_SYNONYMs, and disambiguate colliding 'plant endosphere'
-    exact_synonyms on endophytes__ca9aaedf and endophytes__fae60ba7.
+  summary: Remove bare GOLD source leaf labels ('Empyema drain', 'endosphere'/'Endosphere')
+    from exact_synonyms on empyema_drain and endosphere__fd8c8a61 while preserving
+    them as GOLD-scoped RELATED_SYNONYMs, and disambiguate colliding 'leaf endosphere'
+    and 'root endosphere' exact_synonyms on endophytes__ca9aaedf and endophytes__fae60ba7.
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md

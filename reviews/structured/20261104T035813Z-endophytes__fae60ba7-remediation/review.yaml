@@ -17,10 +17,12 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: Set parent_mode=REPLACE in curation/term_requests.tsv, added a guarded row
-  in curation/gold_parent_exclusions.tsv excluding the host-environment GOLD parent
-  habitatmech:GOLD.db7faef3a8 (plant host environment) (#2285), and replaced the colliding
-  cross-record exact alias 'plant endosphere' with 'plant tissue endosphere' (#2286).
-  Both predecessor findings (F1 and F2) are resolved.
+  in curation/gold_parent_exclusions.tsv excluding the external root-surface GOLD
+  parent ENVO:01001181 (rhizoplane) while preserving broader ontology parent ENVO:01001057
+  (environment associated with a plant part or small plant) (#2285), and replaced
+  the colliding cross-record exact alias 'root endosphere' with 'radicular endophyte
+  environment' (#2286), eliminating the exact-synonym collision with endosphere__005f8afe
+  (habitatmech:GOLD.af0c4ac629). Both predecessor findings (F1 and F2) are resolved.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -77,10 +79,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061221Z-endophytes__fae60ba7-record/review.yaml
     sha256: e4ed098d39ae234b1b582359745bc06e59f5138834c194b19dc8adc683600604
@@ -532,7 +534,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:13Z'
   support: supports
   summary: 'Authorized curation event for Issue #2285 recorded and validated.'
-  snapshot_sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+  snapshot_sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
 - evidence_id: EHIST_G2
   kind: record_content
   reference: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
@@ -540,7 +542,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:13Z'
   support: supports
   summary: 'Authorized curation event for Issue #2286 recorded and validated.'
-  snapshot_sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+  snapshot_sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
 assessments:
 - assessment_id: A1
   area: schema
@@ -577,10 +579,13 @@ assessments:
   outcome: supported
   summary: 'habitatmech:GOLD.9731c6bb13: root endophyte environment; UNGROUNDED/REVIEWED;
     parents ["ENVO:01001057"]. Set parent_mode=REPLACE in curation/term_requests.tsv,
-    added a guarded row in curation/gold_parent_exclusions.tsv excluding the host-environment
-    GOLD parent habitatmech:GOLD.db7faef3a8 (plant host environment) (#2285), and
-    replaced the colliding cross-record exact alias ''plant endosphere'' with ''plant
-    tissue endosphere'' (#2286). Both predecessor findings (F1 and F2) are resolved.'
+    added a guarded row in curation/gold_parent_exclusions.tsv excluding the external
+    root-surface GOLD parent ENVO:01001181 (rhizoplane) while preserving broader ontology
+    parent ENVO:01001057 (environment associated with a plant part or small plant)
+    (#2285), and replaced the colliding cross-record exact alias ''root endosphere''
+    with ''radicular endophyte environment'' (#2286), eliminating the exact-synonym
+    collision with endosphere__005f8afe (habitatmech:GOLD.af0c4ac629). Both predecessor
+    findings (F1 and F2) are resolved.'
   target_ids:
   - habitatmech:GOLD.9731c6bb13
   evidence_ids:
@@ -740,9 +745,9 @@ findings:
     review_id: 20261101T061221Z-endophytes__fae60ba7-record
     finding_id: F1
   disposition_reason: Set parent_mode=REPLACE in curation/term_requests.tsv and added
-    a guarded row in curation/gold_parent_exclusions.tsv excluding host-environment
-    GOLD parent habitatmech:GOLD.db7faef3a8 (plant host environment) (#2285), preserving
-    PO:0009007.
+    a guarded row in curation/gold_parent_exclusions.tsv excluding the external root-surface
+    GOLD parent ENVO:01001181 (rhizoplane) (#2285), preserving ENVO:01001057 (environment
+    associated with a plant part or small plant).
 - finding_id: F2
   issue_key: endophytes--fae60ba7-synonym-collision
   category: nomenclature
@@ -793,9 +798,9 @@ findings:
   - repository: CultureBotAI/HabitatMech
     review_id: 20261101T061221Z-endophytes__fae60ba7-record
     finding_id: F2
-  disposition_reason: Replaced the colliding cross-record exact_synonym 'plant endosphere'
-    in curation/term_requests.tsv with 'plant tissue endosphere' (#2286), eliminating
-    the exact-alias collision with endophytes__ca9aaedf.
+  disposition_reason: Replaced the colliding cross-record exact_synonym 'root endosphere'
+    in curation/term_requests.tsv with 'radicular endophyte environment' (#2286),
+    eliminating the exact-alias collision with endosphere__005f8afe (habitatmech:GOLD.af0c4ac629).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

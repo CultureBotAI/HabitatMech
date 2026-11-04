@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD whole-organ context-parent contribution UBERON:0000995 (uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0000344 (mucosa). Identity (UBERON:0001295), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+Removed the guarded GOLD whole-organ context-parent contribution habitatmech:GOLD.f736cbfbc5 (Uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0019042 (reproductive system mucosa). Identity (UBERON:0001295), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 860 history records, 14 inventor
 
 identity: supported. Targets: UBERON:0001295.
 
-UBERON:0001295: endometrium; EXACT/SEEDED; parents ["UBERON:0019042"]. Removed the guarded GOLD whole-organ context-parent contribution UBERON:0000995 (uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0000344 (mucosa). Identity (UBERON:0001295), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+UBERON:0001295: endometrium; EXACT/SEEDED; parents ["UBERON:0019042"]. Removed the guarded GOLD whole-organ context-parent contribution habitatmech:GOLD.f736cbfbc5 (Uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0019042 (reproductive system mucosa). Identity (UBERON:0001295), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: endometrium-context-parent.
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.e5017de50f on GOLD path 'Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; Uterus &gt; Endometrium' (exact target UBERON:0001295) excluding parent_id habitatmech:GOLD.f736cbfbc5 (Uterus), preserving ontology parent UBERON:0019042 (reproductive system mucosa).
 
-Disposition: Excluded only the guarded GOLD whole-organ context-parent contribution UBERON:0000995 (uterus) in curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0000344 (mucosa).
+Disposition: Excluded only the guarded GOLD whole-organ context-parent contribution habitatmech:GOLD.f736cbfbc5 (Uterus) in curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology parent UBERON:0019042 (reproductive system mucosa).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -140,11 +140,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Removed the guarded GOLD whole-organ context-parent contribution UBERON:0000995
-  (uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
-  parent UBERON:0000344 (mucosa). Identity (UBERON:0001295), native SEEDED/EXACT status,
-  and source observations are preserved. No unresolved predecessor finding remains
-  in this target scope.
+summary: Removed the guarded GOLD whole-organ context-parent contribution habitatmech:GOLD.f736cbfbc5
+  (Uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
+  parent UBERON:0019042 (reproductive system mucosa). Identity (UBERON:0001295), native
+  SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor
+  finding remains in this target scope.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -198,10 +198,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061218Z-endometrium-record/review.yaml
     sha256: 0fd6266345cf950337e2f62cca20e48b625d000581c1a89d3d472b44ed6fc049
@@ -581,7 +581,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:09Z'
   support: supports
   summary: 'Authorized curation event for Issue #2285 recorded and validated.'
-  snapshot_sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+  snapshot_sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
 assessments:
 - assessment_id: A1
   area: schema
@@ -612,11 +612,11 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'UBERON:0001295: endometrium; EXACT/SEEDED; parents ["UBERON:0019042"].
-    Removed the guarded GOLD whole-organ context-parent contribution UBERON:0000995
-    (uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
-    parent UBERON:0000344 (mucosa). Identity (UBERON:0001295), native SEEDED/EXACT
-    status, and source observations are preserved. No unresolved predecessor finding
-    remains in this target scope.'
+    Removed the guarded GOLD whole-organ context-parent contribution habitatmech:GOLD.f736cbfbc5
+    (Uterus) via curation/gold_parent_exclusions.tsv (#2285), preserving broader ontology
+    parent UBERON:0019042 (reproductive system mucosa). Identity (UBERON:0001295),
+    native SEEDED/EXACT status, and source observations are preserved. No unresolved
+    predecessor finding remains in this target scope.'
   target_ids:
   - UBERON:0001295
   evidence_ids:
@@ -747,8 +747,8 @@ findings:
     review_id: 20261101T061218Z-endometrium-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-organ context-parent contribution
-    UBERON:0000995 (uterus) in curation/gold_parent_exclusions.tsv (#2285), preserving
-    broader ontology parent UBERON:0000344 (mucosa).
+    habitatmech:GOLD.f736cbfbc5 (Uterus) in curation/gold_parent_exclusions.tsv (#2285),
+    preserving broader ontology parent UBERON:0019042 (reproductive system mucosa).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

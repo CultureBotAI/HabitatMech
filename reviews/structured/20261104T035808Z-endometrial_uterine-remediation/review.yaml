@@ -16,10 +16,10 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Corrected the genus of habitatmech:GOLD.1488865daa from UBERON:0013764 (cnidarian
-  polyp) to UBERON:0036226 (Lesion, parent_mode=REPLACE) in curation/term_requests.tsv,
-  updated the CONFIRM_UNGROUNDED rationale in curation/decisions.tsv, and excluded
-  the guarded GOLD Uterus context-parent contribution UBERON:0000995 via curation/gold_parent_exclusions.tsv
+summary: Corrected the genus of habitatmech:GOLD.1488865daa ('human endometrial polyp')
+  from BTO:0006350 (polyp, cnidarian life-cycle form) to NCIT:C3824 (Lesion, parent_mode=REPLACE)
+  in curation/term_requests.tsv, updated the CONFIRM_UNGROUNDED rationale in curation/decisions.tsv,
+  and excluded the guarded GOLD Polyps parent contribution BTO:0006350 via curation/gold_parent_exclusions.tsv
   (#2285). No unresolved predecessor finding remains in this target scope.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
@@ -83,10 +83,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061217Z-endometrial_uterine-record/review.yaml
     sha256: e259e829924078e1bb233fdc901ec6360fb7f01c8a2c878f2a30f7259aa90a07
@@ -550,7 +550,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:08Z'
   support: supports
   summary: 'Authorized curation event for Issue #2285 recorded and validated.'
-  snapshot_sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+  snapshot_sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
 assessments:
 - assessment_id: A1
   area: schema
@@ -587,12 +587,12 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'habitatmech:GOLD.1488865daa: human endometrial polyp; UNGROUNDED/REVIEWED;
-    parents ["NCIT:C3824"]. Corrected the genus of habitatmech:GOLD.1488865daa from
-    UBERON:0013764 (cnidarian polyp) to UBERON:0036226 (Lesion, parent_mode=REPLACE)
-    in curation/term_requests.tsv, updated the CONFIRM_UNGROUNDED rationale in curation/decisions.tsv,
-    and excluded the guarded GOLD Uterus context-parent contribution UBERON:0000995
-    via curation/gold_parent_exclusions.tsv (#2285). No unresolved predecessor finding
-    remains in this target scope.'
+    parents ["NCIT:C3824"]. Corrected the genus of habitatmech:GOLD.1488865daa (''human
+    endometrial polyp'') from BTO:0006350 (polyp, cnidarian life-cycle form) to NCIT:C3824
+    (Lesion, parent_mode=REPLACE) in curation/term_requests.tsv, updated the CONFIRM_UNGROUNDED
+    rationale in curation/decisions.tsv, and excluded the guarded GOLD Polyps parent
+    contribution BTO:0006350 via curation/gold_parent_exclusions.tsv (#2285). No unresolved
+    predecessor finding remains in this target scope.'
   target_ids:
   - habitatmech:GOLD.1488865daa
   evidence_ids:
@@ -755,10 +755,10 @@ findings:
   - repository: CultureBotAI/HabitatMech
     review_id: 20261101T061217Z-endometrial_uterine-record
     finding_id: F1
-  disposition_reason: Replaced parent_class UBERON:0013764 (cnidarian polyp) with
-    UBERON:0036226 (Lesion, parent_mode=REPLACE) in curation/term_requests.tsv, updated
-    the CONFIRM_UNGROUNDED rationale in curation/decisions.tsv, and added a guarded
-    exclusion row for UBERON:0000995 (uterus) in curation/gold_parent_exclusions.tsv
+  disposition_reason: Replaced parent_class BTO:0006350 (polyp, cnidarian life-cycle
+    form) with NCIT:C3824 (Lesion, parent_mode=REPLACE) in curation/term_requests.tsv,
+    updated the CONFIRM_UNGROUNDED rationale in curation/decisions.tsv, and added
+    a guarded exclusion row for BTO:0006350 (polyp) in curation/gold_parent_exclusions.tsv
     (#2285).
 actions: []
 limitations:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the bare medical-device alias 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'pleural empyema drainage fluid') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv so 'Empyema drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity, native status, hierarchy, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+Removed the bare medical-device alias 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'empyema chest drain fluid') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv so 'Empyema drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity (habitatmech:GOLD.1ce5b3ff1a, 'pleural empyema drainage fluid'), native status, hierarchy, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 860 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.1ce5b3ff1a.
 
-habitatmech:GOLD.1ce5b3ff1a: pleural empyema drainage fluid; UNGROUNDED/REVIEWED; parents ["UBERON:0006314"]. Removed the bare medical-device alias 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'pleural empyema drainage fluid') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv so 'Empyema drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity, native status, hierarchy, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+habitatmech:GOLD.1ce5b3ff1a: pleural empyema drainage fluid; UNGROUNDED/REVIEWED; parents ["UBERON:0006314"]. Removed the bare medical-device alias 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'empyema chest drain fluid') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv so 'Empyema drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity (habitatmech:GOLD.1ce5b3ff1a, 'pleural empyema drainage fluid'), native status, hierarchy, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: empyema-drain-device-name-exact-synonym
 
 Remove bare 'Empyema drain' from exact_synonym in curation/term_requests.tsv for habitatmech:GOLD.1ce5b3ff1a (keeping 'empyema chest drain fluid') and add a guarded row in curation/definition_source_label_exclusions.tsv so 'Empyema drain' is scoped as RELATED_SYNONYM from GOLD rather than EXACT_SYNONYM.
 
-Disposition: Removed bare 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'pleural empyema drainage fluid') and added a guarded row in curation/definition_source_label_exclusions.tsv (#2286) so 'Empyema drain' is emitted as RELATED_SYNONYM from GOLD.
+Disposition: Removed bare 'Empyema drain' from exact_synonym in curation/term_requests.tsv (retaining 'empyema chest drain fluid') and added a guarded row in curation/definition_source_label_exclusions.tsv (#2286) so 'Empyema drain' is emitted as RELATED_SYNONYM from GOLD.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -142,11 +142,11 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: Removed the bare medical-device alias 'Empyema drain' from exact_synonym
-  in curation/term_requests.tsv (retaining 'pleural empyema drainage fluid') and added
+  in curation/term_requests.tsv (retaining 'empyema chest drain fluid') and added
   a guarded exclusion row in curation/definition_source_label_exclusions.tsv so 'Empyema
-  drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity, native status,
-  hierarchy, and source observations are preserved. No unresolved predecessor finding
-  remains in this target scope.
+  drain' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity (habitatmech:GOLD.1ce5b3ff1a,
+  'pleural empyema drainage fluid'), native status, hierarchy, and source observations
+  are preserved. No unresolved predecessor finding remains in this target scope.
 source:
   git_revision: 95a1eb1b6a5b18b8a5c3b135222b1118f7506ef0
   state: working_tree
@@ -197,10 +197,10 @@ source:
     sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
     role: context
   - path: history/other/definition_source_label_exclusions/2026-11-04T034510Z-antigravity-228601.yaml
-    sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+    sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
     role: context
   - path: history/other/gold_parent_exclusions/2026-11-04T034500Z-antigravity-228501.yaml
-    sha256: 82f6319002da37cd3f569b0148a4bd1d836418cadcbb96445ede1a3093ed8a84
+    sha256: 01cc85edae358f0b99fb26bb0127c93f997cb24f5b87fecb2a496604eb00f230
     role: context
   - path: reviews/structured/20261101T061210Z-empyema_drain-record/review.yaml
     sha256: cd97df27b9176fc05d56a8f271ac86880a2b2bf541955653651355fb4a293a75
@@ -610,7 +610,7 @@ evidence:
   accessed_at: '2026-11-04T03:58:01Z'
   support: supports
   summary: 'Authorized curation event for Issue #2286 recorded and validated.'
-  snapshot_sha256: b9e5a3c44635feefd39891e3936c3e67728ba7cbdb8e0d672e53b2b066dd983a
+  snapshot_sha256: 257872174c2e52bee3c842c011d691a7cbe702307a33f69531dcbda7c1141333
 assessments:
 - assessment_id: A1
   area: schema
@@ -643,11 +643,12 @@ assessments:
   outcome: supported
   summary: 'habitatmech:GOLD.1ce5b3ff1a: pleural empyema drainage fluid; UNGROUNDED/REVIEWED;
     parents ["UBERON:0006314"]. Removed the bare medical-device alias ''Empyema drain''
-    from exact_synonym in curation/term_requests.tsv (retaining ''pleural empyema
-    drainage fluid'') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    so ''Empyema drain'' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity,
-    native status, hierarchy, and source observations are preserved. No unresolved
-    predecessor finding remains in this target scope.'
+    from exact_synonym in curation/term_requests.tsv (retaining ''empyema chest drain
+    fluid'') and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    so ''Empyema drain'' is scoped as RELATED_SYNONYM from GOLD (#2286). Identity
+    (habitatmech:GOLD.1ce5b3ff1a, ''pleural empyema drainage fluid''), native status,
+    hierarchy, and source observations are preserved. No unresolved predecessor finding
+    remains in this target scope.'
   target_ids:
   - habitatmech:GOLD.1ce5b3ff1a
   evidence_ids:
@@ -786,7 +787,7 @@ findings:
     review_id: 20261101T061210Z-empyema_drain-record
     finding_id: F1
   disposition_reason: Removed bare 'Empyema drain' from exact_synonym in curation/term_requests.tsv
-    (retaining 'pleural empyema drainage fluid') and added a guarded row in curation/definition_source_label_exclusions.tsv
+    (retaining 'empyema chest drain fluid') and added a guarded row in curation/definition_source_label_exclusions.tsv
     (#2286) so 'Empyema drain' is emitted as RELATED_SYNONYM from GOLD.
 actions: []
 limitations:
