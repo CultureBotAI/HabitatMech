@@ -8,10 +8,7 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Endosphere
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: endosphere
+- synonym_text: internal plant tissue environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
@@ -37,11 +34,24 @@ curation_history:
     of plants inhabited by endophytes. Define under ENVO:01001001 (plant-associated
     environment) with parent_mode ADD (PMID 25972004; DOI:10.1128/MMBR.00050-14).
     Path: Host-associated > Plants > Endosphere (source concept habitatmech:GOLD.bfe3e11951)'
-- timestamp: '2026-10-17T00:00:00Z'
+- timestamp: '2026-11-04T00:00:00Z'
   curator: antigravity
   action: DEFINED
   changes: 'Defined as ''plant endosphere'' under ENVO:01001001 ''plant-associated
-    environment''. ITEM curation: GOLD ''Host-associated > Plants > Endosphere'' denotes
-    the internal tissue environment of plants inhabited by endophytes. Define under
-    ENVO:01001001 (plant-associated environment) with parent_mode ADD (PMID 25972004;
+    environment''. ITEM curation https://github.com/CultureBotAI/HabitatMech/issues/2286
+    : GOLD ''Host-associated > Plants > Endosphere'' denotes the internal tissue environment
+    of plants inhabited by endophytes. Define under ENVO:01001001 (plant-associated
+    environment) with parent_mode ADD and exclude bare ''Endosphere'' (PMID 25972004;
     DOI:10.1128/MMBR.00050-14). Path: Host-associated > Plants > Endosphere'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Endosphere'' when
+    defining habitatmech:GOLD.bfe3e11951 as ''plant endosphere''. Verbatim source
+    attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2286
+    : The displaced label Endosphere is an unqualified source label that collides
+    across the GOLD plant-specific leaf (habitatmech:GOLD.bfe3e11951) and the BacDive
+    general endosphere leaf (habitatmech:BACDIVE.3e4680f074) outside Host-associated
+    > Plants > Endosphere. Remove only the bare unqualified exact alias and suppress
+    exact-alias fallback; preserve verbatim source provenance, definition, internal
+    plant tissue environment synonym, genera and native status.'

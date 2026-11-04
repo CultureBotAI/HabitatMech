@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0002368
-- habitatmech:GOLD.d63e165267
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6547
@@ -18,3 +17,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d63e165267
+    for habitatmech:GOLD.c26b92ece6 (Host-associated > Mammals: Human > Endocrine
+    system > Endocrine gland). Review https://github.com/CultureBotAI/HabitatMech/issues/2285
+    : Endocrine gland is an organ part of the endocrine system, not a subtype of the
+    entire mammalian or human endocrine system; human endometrial polyp is a benign
+    uterine mucosal lesion, not a subtype of the cnidarian body-form homonym BTO:0006350
+    (polyp); endometrium is the inner mucosal lining of the uterus, not the entire
+    human uterus; fruit endophyte environment is an internal fruit tissue habitat,
+    not a subtype of the external fruit surface (carposphere); root endophyte environment
+    is an internal root tissue habitat, not a subtype of the external root surface
+    (rhizoplane). Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target habitatmech:GOLD.c26b92ece6.
+    Shared mapping endpoints #1398 remain separate.'

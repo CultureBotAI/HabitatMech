@@ -8,12 +8,11 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: root endosphere
+- synonym_text: radicular endophyte environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
 - ENVO:01001057
-- ENVO:01001181
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5449
@@ -37,16 +36,6 @@ curation_history:
     > Rhizoplane > Endophytes (source concept habitatmech:GOLD.9731c6bb13)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
-  action: DEFINED
-  changes: 'Defined as ''root endophyte environment'' under ENVO:01001057 ''environment
-    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
-    > Plants > Roots > Rhizoplane > Endophytes'' denotes the internal root habitat
-    colonized by endophytes rather than the organisms themselves. Define under ENVO:01001057
-    and exclude bare ''Endophytes'' (PMID 26213366; DOI:10.1016/j.tim.2015.07.004;
-    PMID 22850869; DOI:10.1038/nature11336). Path: Host-associated > Plants > Roots
-    > Rhizoplane > Endophytes'
-- timestamp: '2026-10-17T00:00:00Z'
-  curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED
   changes: Omitted automatic retention of displaced source label 'Endophytes' when
     defining habitatmech:GOLD.9731c6bb13 as 'root endophyte environment'. Verbatim
@@ -55,3 +44,30 @@ curation_history:
     ambiguous, or names a host/disease/process rather than the defined habitat 'root
     endophyte environment'; suppress automatic exact-synonym retention while preserving
     verbatim source provenance.
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''root endophyte environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation https://github.com/CultureBotAI/HabitatMech/issues/2285
+    https://github.com/CultureBotAI/HabitatMech/issues/2286 : GOLD ''Host-associated
+    > Plants > Roots > Rhizoplane > Endophytes'' denotes the internal root habitat
+    colonized by endophytes rather than the organisms themselves or external root
+    surface (rhizoplane). Define under ENVO:01001057 with parent_mode REPLACE to exclude
+    external root-surface parent ENVO:01001181 (rhizoplane) and exclude bare ''Endophytes''
+    (PMID 26213366; DOI:10.1016/j.tim.2015.07.004; PMID 22850869; DOI:10.1038/nature11336).
+    Path: Host-associated > Plants > Roots > Rhizoplane > Endophytes'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001181 for habitatmech:GOLD.9731c6bb13
+    (Host-associated > Plants > Roots > Rhizoplane > Endophytes). Review https://github.com/CultureBotAI/HabitatMech/issues/2285
+    : Endocrine gland is an organ part of the endocrine system, not a subtype of the
+    entire mammalian or human endocrine system; human endometrial polyp is a benign
+    uterine mucosal lesion, not a subtype of the cnidarian body-form homonym BTO:0006350
+    (polyp); endometrium is the inner mucosal lining of the uterus, not the entire
+    human uterus; fruit endophyte environment is an internal fruit tissue habitat,
+    not a subtype of the external fruit surface (carposphere); root endophyte environment
+    is an internal root tissue habitat, not a subtype of the external root surface
+    (rhizoplane). Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target habitatmech:GOLD.9731c6bb13.
+    Shared mapping endpoints #1398 remain separate.'
