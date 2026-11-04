@@ -1,0 +1,127 @@
+identifier: ENVO:01000180
+causal_graphs:
+- graph_id: tundra_permafrost_thaw_iron_redox_and_methanogenesis_partitioning
+  title: Tundra biome active-layer and transition-zone thaw iron-redox cycling and methanogenesis partitioning
+    mechanism
+  description: In northern tundra soils, warming and extended thaw across the active layer and permafrost
+    transition zone create suboxic, organic-carbon-rich reducing conditions modulated by soil pH and terminal
+    electron acceptor (TEA) availability. Extended thaw enriches iron-cycling Gammaproteobacteria (Fe(III)-reducing
+    Rhodoferax sp. and Fe(II)-oxidizing Gallionella sp.) by 3-5 orders of magnitude to 65% of community
+    abundance and increases MtrE and Cyc1 cytochrome gene abundance coupled to benzoate and pyruvate/acetate
+    oxidation, suppressing acetoclastic methanogenesis until Fe(III) TEAs are depleted or multi-year transition-zone
+    warming expands Methanosarcinales.
+  nodes:
+  - node_id: tundra_biome
+    label: tundra biome
+    node_type: HABITAT
+    grounding: ENVO:01000180
+    description: High-latitude treeless Arctic and alpine tundra biome underlined by carbon-rich seasonally
+      thawed active-layer soil, transition zone, and permafrost.
+  - node_id: thawing_active_layer_and_transition_zone_suboxic_iron_acetate_regime
+    label: thawing tundra active-layer and transition-zone suboxic reducing and pH/TEA regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Extended thaw duration and suboxic waterlogged conditions across tundra active-layer
+      and transition-zone horizons releasing labile fermentation products (pyruvate, acetate, benzoate)
+      alongside soil Fe(III)/Fe(II) pools.
+  - node_id: iron_cycling_rhodoferax_gallionella_and_methanosarcinales_guild
+    label: tundra Fe-cycling Rhodoferax/Gallionella/Geobacter and Methanosarcinales guild
+    node_type: COMMUNITY
+    description: Heterotrophic Fe(III)-reducing Rhodoferax sp. and Geobacter, chemoautotrophic Fe(II)-oxidizing
+      Gallionella sp., and acetoclastic/hydrogenotrophic Methanosarcinales archaea in thawing tundra soils.
+  - node_id: outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1
+    label: Fe(III)-reduction outer-membrane cytochrome MtrE and Fe(II)-oxidation cytochrome Cyc1
+    node_type: GENE_OR_PROTEIN
+    description: Dissimilatory Fe(III)-reduction gene MtrE and Fe(II)-oxidation cytochrome gene Cyc1 co-enriched
+      with pyruvate metabolism and benzoate degradation genes during tundra permafrost thaw.
+  - node_id: iron_coupled_organic_carbon_oxidation_and_methanogenesis_modulation
+    label: iron-coupled benzoate/acetate oxidation to CO2 and competitive modulation of CH4 emissions
+    node_type: COMMUNITY_PROCESS
+    description: Coupled oxidation of pyruvate-derived acetate and benzoate to CO2 via Fe(III) reduction
+      that competitively suppresses acetoclastic methanogenesis during initial thaw while shifting to
+      CH4 production upon TEA depletion or multi-year transition-zone warming.
+  edges:
+  - edge_id: tundra_biome_maintains_thawing_active_layer_and_transition_zone_regime
+    subject: tundra_biome
+    predicate: maintains
+    object: thawing_active_layer_and_transition_zone_suboxic_iron_acetate_regime
+    description: Warming and permafrost thaw in northern tundra soils increase labile carbon availability
+      from organic matter fermentation while waterlogged suboxic conditions and soil geochemistry control
+      terminal electron acceptor depletion.
+    evidence:
+    - reference: PMID:33084697
+      snippet: The availability of labile carbon (C) compounds in Arctic wetland soils is expected to
+        increase due to thawing permafrost and increased fermentation as a result of decomposition of
+        organic matter with warming.
+      notes: Tundra wetland soil incubations from the Seward Peninsula, Alaska showed rapid TEA depletion
+        and pH-dependent anaerobic respiration trajectories upon warming (PMID:33084697).
+    - reference: PMID:31285347
+      snippet: Northern-latitude tundra soils harbor substantial carbon (C) stocks that are highly susceptible
+        to microbial degradation with rising global temperatures.
+      notes: Multi-year in situ warming of Alaskan tundra soils demonstrated distinct depth-resolved responses
+        across the active layer (15-25 cm) and transition zone (45-55 cm) (PMID:31285347).
+  - edge_id: thaw_regime_enriches_rhodoferax_gallionella_and_methanosarcinales_guild
+    subject: thawing_active_layer_and_transition_zone_suboxic_iron_acetate_regime
+    predicate: selects for
+    object: iron_cycling_rhodoferax_gallionella_and_methanosarcinales_guild
+    description: Extended thaw in wet sedge tundra enriches Fe(III)-reducing Rhodoferax sp. and Fe(II)-oxidizing
+      Gallionella sp. by 3-5 orders of magnitude (to 65% of community abundance), while multi-year transition-zone
+      warming increases Methanosarcinales 3-fold.
+    evidence:
+    - reference: PMID:37996661
+      snippet: Following extended thaw, we found that iron (Fe)-cycling Gammaproteobacteria, specifically
+        the heterotrophic Fe(III)-reducing Rhodoferax sp. and chemoautotrophic Fe(II)-oxidizing Gallionella
+        sp., increased by 3-5 orders of magnitude in absolute abundance within the transition-zone and
+        permafrost microbiomes, accounting for 65% of community abundance.
+      notes: Quantitative metabarcoding and metagenomics of northern Alaska wet sedge tundra demonstrated
+        massive enrichment of Rhodoferax sp. and Gallionella sp. during extended thaw (PMID:37996661).
+    - reference: PMID:31285347
+      snippet: At the 45- to 55-cm layer, increased methanogenesis potential was observed, which corresponded
+        with a 3-fold increase in abundance of a single archaeal clade of the Methanosarcinales order,
+        increased annual thaw duration (45.3 vs. 79.3 days), and increased CH4 emissions.
+      notes: Half a decade of in situ Alaskan tundra warming increased Methanosarcinales 3-fold in the
+        45-55 cm transition zone (PMID:31285347).
+  - edge_id: iron_cycling_guild_increases_mtre_and_cyc1_abundance
+    subject: iron_cycling_rhodoferax_gallionella_and_methanosarcinales_guild
+    predicate: expresses
+    object: outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1
+    description: Expansion of Fe-cycling Rhodoferax and Gallionella populations increases the abundance
+      of Fe(III)-reduction gene MtrE and Fe(II)-oxidation gene Cyc1 concurrently with benzoate degradation
+      and pyruvate metabolism genes.
+    evidence:
+    - reference: PMID:37996661
+      snippet: We also found that the abundance of genes for Fe(III) reduction (e.g., MtrE) and Fe(II)
+        oxidation (e.g., Cyc1) increased concurrently with genes for benzoate degradation and pyruvate
+        metabolism, in which pyruvate is used to generate acetate that can be oxidized, along with benzoate,
+        to CO2 when coupled with Fe(III) reduction.
+      notes: Metagenomic sequencing of thawing wet sedge tundra documented co-enrichment of MtrE and Cyc1
+        with pyruvate and benzoate oxidation pathways (PMID:37996661).
+  - edge_id: mtre_and_cyc1_drive_iron_coupled_carbon_oxidation_and_suppress_methanogenesis
+    subject: outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1
+    predicate: drives
+    object: iron_coupled_organic_carbon_oxidation_and_methanogenesis_modulation
+    description: Dissimilatory Fe(III) reduction via MtrE and cryptic Fe(II) re-oxidation via Cyc1 dominate
+      post-thaw organic carbon respiration to CO2 and competitively suppress acetoclastic methanogenesis
+      until alternative TEAs are exhausted.
+    evidence:
+    - reference: PMID:37996661
+      snippet: Gene abundance for CH4 metabolism decreased following extended thaw, suggesting dissimilatory
+        Fe(III) reduction suppresses acetoclastic methanogenesis under reducing conditions. Our genomic
+        evidence indicates that microbial carbon degradation is dominated by iron redox metabolism via
+        an increase in gene abundance associated with Fe(III) reduction and Fe(II) oxidation during initial
+        permafrost thaw, likely increasing microbial respiration while suppressing methanogenesis in wet
+        sedge tundra.
+      notes: Iron redox metabolism dominates initial post-thaw carbon mineralization and suppresses acetoclastic
+        methanogenesis in wet sedge tundra (PMID:37996661).
+    - reference: PMID:33084697
+      snippet: In incubation of soils from the circumneutral Teller site, the ratio of CO2 to CH4 dropped
+        from 10 to <2 after 60 days, indicating rapid depletion of alternative terminal electron acceptors
+        (TEAs).
+      notes: Depletion of alternative TEAs in circumneutral tundra soil transitions anaerobic respiration
+        from CO2-dominated TEA reduction to methanogenesis (PMID:33084697).
+curation_history:
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added tundra_permafrost_thaw_iron_redox_and_methanogenesis_partitioning mechanism graph for
+    tundra biome (ENVO:01000180) backed by PMID:37996661, PMID:31285347, and PMID:33084697.
+  llm_assisted: true

@@ -212,6 +212,135 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 1748
+causal_graphs:
+- graph_id: boreal_coniferous_forest_cortinarius_peroxidase_humus_oxidation
+  title: Subpolar coniferous forest ectomycorrhizal Cortinarius Mn-peroxidase humus
+    oxidation and nitrogen-regulated carbon storage mechanism
+  description: Subpolar (boreal) coniferous forest podzols sequester nitrogen in recalcitrant
+    organic humus horizons while trees allocate photosynthate to ectomycorrhizal fungi
+    (notably Cortinarius acutus s.l., Cortinarius glaucopus, and Cortinarius caperatus).
+    These fungi transcribe manganese-dependent class II peroxidases (MnP) that oxidize
+    humus macromolecules to mobilize organic nitrogen and reduce topsoil carbon accumulation
+    by 33%, whereas elevated inorganic ammonium/nitrogen deposition represses Mn-peroxidase
+    activity and shifts the community toward Tylospora and Russula, accelerating humus
+    carbon accumulation.
+  nodes:
+  - node_id: subpolar_coniferous_forest_biome
+    label: subpolar coniferous forest biome
+    node_type: HABITAT
+    grounding: ENVO:01000250
+    description: Northern boreal coniferous forest biome dominated by Pinus sylvestris
+      and Picea abies growing on stratified podzol soils with discrete organic humus
+      and mineral horizons.
+  - node_id: podzol_organic_humus_nitrogen_limitation_and_tree_carbon_allocation
+    label: podzol humus organic nitrogen sequestration and host tree carbon allocation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Sequestration of nitrogen in complex macromolecular humus pools coupled
+      with photosynthetically derived carbon allocation from coniferous hosts across
+      organic and mineral podzol horizons; modulated by inorganic ammonium availability.
+  - node_id: ectomycorrhizal_cortinarius_mycelial_guild
+    label: ectomycorrhizal Cortinarius mycelial guild (Cortinarius acutus s.l., C.
+      glaucopus, C. caperatus)
+    node_type: COMMUNITY
+    description: Boreal ectomycorrhizal fungal guild dominated by Cortinarius species
+      (including Cortinarius acutus s.l., Cortinarius glaucopus, and Cortinarius caperatus)
+      colonizing podzol humus and mineral horizons.
+  - node_id: cortinarius_manganese_dependent_peroxidases
+    label: Cortinarius manganese-dependent class II peroxidases (Mn-peroxidase)
+    node_type: GENE_OR_PROTEIN
+    description: Extracellular manganese-dependent peroxidases (11 peroxidase genes
+      encoded in the Cortinarius glaucopus genome) transcribed in boreal forest humus
+      and downregulated under elevated inorganic ammonium.
+  - node_id: humus_oxidation_organic_nitrogen_mobilization_and_topsoil_carbon_turnover
+    label: enzymatic humus oxidation, organic nitrogen mobilization, and mineral weathering
+    node_type: COMMUNITY_PROCESS
+    description: Oxidative decomposition of recalcitrant organic humus and coupled
+      mineral-horizon Mg/base-cation weathering that mobilizes organically bound nitrogen
+      and reduces topsoil carbon storage by 33%.
+  edges:
+  - edge_id: boreal_forest_maintains_podzol_organic_humus_nitrogen_sequestration
+    subject: subpolar_coniferous_forest_biome
+    predicate: maintains
+    object: podzol_organic_humus_nitrogen_limitation_and_tree_carbon_allocation
+    description: Boreal coniferous forests develop stratified podzol profiles with
+      organic humus horizons that sequester nitrogen in macromolecular complexes while
+      trees allocate photosynthate belowground.
+    evidence:
+    - reference: PMID:24725281
+      snippet: In northern forests, belowground sequestration of nitrogen (N) in complex
+        organic pools restricts nutrient availability to plants.
+      notes: Bödeker et al. 2014 (PMID:24725281) documented nitrogen sequestration
+        in complex organic humus pools in boreal pine and northern forest ecosystems.
+    - reference: PMID:37697631
+      snippet: Tree growth in boreal forests is driven by ectomycorrhizal fungal mobilisation
+        of organic nitrogen and mineral nutrients in soils with discrete organic and
+        mineral horizons.
+      notes: Finlay et al. 2023 (PMID:37697631) demonstrated carbon allocation from
+        Pinus sylvestris across discrete organic and mineral podzol horizons.
+  - edge_id: podzol_humus_and_carbon_allocation_select_for_ectomycorrhizal_cortinarius_guild
+    subject: podzol_organic_humus_nitrogen_limitation_and_tree_carbon_allocation
+    predicate: selects for
+    object: ectomycorrhizal_cortinarius_mycelial_guild
+    description: Organic matter availability and low inorganic nitrogen favor ectomycorrhizal
+      Cortinarius populations (C. acutus s.l., C. glaucopus, C. caperatus), whereas
+      chronic inorganic nitrogen addition shifts the humus guild toward Tylospora
+      fibrillosa and Russula griseascens.
+    evidence:
+    - reference: PMID:33934481
+      snippet: Across Swedish boreal forests, we found that local carbon storage in
+        the organic topsoil was 33% lower in the presence of a group of closely related
+        species of ectomycorrhizal fungi - Cortinarius acutus s.l..
+      notes: Lindahl et al. 2021 (PMID:33934481) identified Cortinarius acutus s.l.
+        as a keystone ectomycorrhizal guild across Swedish boreal forests.
+    - reference: PMID:38325494
+      snippet: Specifically, the humus community changed in part due to a shift from
+        Oidiodendron pilicola, Cenococcum geophilum, and Cortinarius caperatus to
+        Tylospora fibrillosa and Russula griseascens.
+      notes: Twenty years of nitrogen addition in a northern Swedish Norway spruce
+        forest shifted the humus community away from Cortinarius caperatus (PMID:38325494).
+  - edge_id: cortinarius_guild_transcribes_manganese_dependent_peroxidases
+    subject: ectomycorrhizal_cortinarius_mycelial_guild
+    predicate: expresses
+    object: cortinarius_manganese_dependent_peroxidases
+    description: Ectomycorrhizal Cortinarius species transcribe Mn-peroxidase genes
+      in boreal forest humus (with 11 peroxidases encoded in the Cortinarius glaucopus
+      genome), while high ammonium represses peroxidase activity.
+    evidence:
+    - reference: PMID:24725281
+      snippet: We found a significant co-localization of high peroxidase activity
+        and DNA from Cortinarius species. Peroxidase activity was reduced by high
+        ammonium concentrations. Amplification of mRNA sequences indicated transcription
+        of Cortinarius Mn-peroxidase genes under field conditions. The Cortinarius
+        glaucopus genome encodes 11 peroxidases - a number comparable to many white-rot
+        wood decomposers.
+      notes: Field mRNA amplification and genomic analysis confirmed in situ transcription
+        of Cortinarius Mn-peroxidase genes and repression by high ammonium (PMID:24725281).
+    - reference: PMID:38325494
+      snippet: These microbial community changes were associated with decreased activity
+        of Mn-peroxidase and peptidase, and an increase in the activity of C acquiring
+        enzymes.
+      notes: Loss of Cortinarius under nitrogen addition directly corresponded with
+        decreased Mn-peroxidase and peptidase activity in boreal humus (PMID:38325494).
+  - edge_id: cortinarius_mn_peroxidases_drive_humus_oxidation_and_organic_nitrogen_mobilization
+    subject: cortinarius_manganese_dependent_peroxidases
+    predicate: catalyzes
+    object: humus_oxidation_organic_nitrogen_mobilization_and_topsoil_carbon_turnover
+    description: Cortinarius oxidative enzymes decompose complex organic matter to
+      mobilize organically bound nitrogen and integrate with mineral weathering across
+      soil horizons, restricting organic topsoil carbon accumulation.
+    evidence:
+    - reference: PMID:24725281
+      snippet: These results support the hypothesis that some ectomycorrhizal fungi--Cortinarius
+        species in particular--may play an important role in decomposition of complex
+        organic matter, linked to their mobilization of organically bound N.
+      notes: Cortinarius Mn-peroxidases oxidize humus macromolecules to mobilize organically
+        bound nitrogen in boreal forests (PMID:24725281).
+    - reference: PMID:37697631
+      snippet: Allocation of carbon through ectomycorrhizal fungi integrates organic
+        nitrogen mobilisation and mineral weathering across soil horizons, improving
+        the efficiency of plant nutrient acquisition.
+      notes: Ectomycorrhizal mycelia couple organic nitrogen mobilization with Mg
+        and base-cation mineral weathering across podzol horizons (PMID:37697631).
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -254,3 +383,10 @@ curation_history:
   changes: 'Retained GOLD label ''Boreal forest/Taiga'' as RELATED_SYNONYM: a CLOSE
     source mapping does not establish exact lexical equivalence. Independent ontology
     synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added boreal_coniferous_forest_cortinarius_peroxidase_humus_oxidation mechanism
+    graph for subpolar coniferous forest biome (ENVO:01000250) backed by PMID:37697631,
+    PMID:33934481, PMID:24725281, and PMID:38325494.
+  llm_assisted: true

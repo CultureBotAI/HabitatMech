@@ -24,6 +24,136 @@ source_attestations:
   assertion_count: 103
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: subaerial_rock_biofilm_desiccation_uv_crtb_scytonemin_bioprotection
+  title: Subaerial rock biofilm desiccation/UV stress, Nostoc CrtB-dependent PEP-CTERM/scytonemin
+    trafficking, and lithic water retention mechanism
+  description: Subaerial rock biofilms (SABs) on exposed stone and monument surfaces
+    experience fluctuating water activity governed by local temperature and relative
+    humidity alongside intense ultraviolet (UVA/UVB) radiation and drought. Phototroph-chemotroph
+    SAB consortia (including filamentous cyanobacteria such as Nostoc punctiforme)
+    employ cyanoexosortase B (CrtB) to export PEP-CTERM proteins that stabilize extracellular
+    polymeric substances (EPS) and enable UVA/UVB-inducible biosynthesis of the indole-alkaloid
+    sunscreen pigment scytonemin, while desiccated SABs enrich the matrix with proteins
+    and DNA, shift metabolism to fermentation, and delay water evaporation from the
+    underlying stone.
+  nodes:
+  - node_id: rock_dwelling_subaerial_biofilms
+    label: subaerial rock biofilm
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.02bb8b9d08
+    description: Sessile microbial biofilm community colonizing air-exposed rock,
+      limestone, marble, and stone monument surfaces.
+  - node_id: subaerial_desiccation_water_activity_and_uv_radiation_regime
+    label: subaerial desiccation, temperature/RH-constrained water activity, and UVA/UVB
+      irradiation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Restricted liquid water access where biofilm water activity is constrained
+      by local temperature and relative humidity, combined with episodic drought and
+      solar UVA/UVB exposure.
+  - node_id: lithic_phototroph_chemotroph_and_nostoc_cyanobacterial_guild
+    label: subaerial phototroph-chemotroph consortium and filamentous cyanobacteria
+      (Nostoc punctiforme)
+    node_type: COMMUNITY
+    description: Rock-dwelling phototrophic-chemotrophic biofilm community including
+      scytonemin-producing filamentous cyanobacteria such as Nostoc punctiforme.
+  - node_id: cyanoexosortase_b_crtb_pep_cterm_and_scytonemin_gene_clusters
+    label: cyanoexosortase B (CrtB), PEP-CTERM exoproteins, and UVA-inducible scytonemin
+      biosynthesis genes
+    node_type: GENE_OR_PROTEIN
+    description: Nostoc punctiforme cyanoexosortase B (crtB), which processes and
+      exports PEP-CTERM domain proteins to stabilize EPS/hormogonium polysaccharide
+      interactions, and the two UVA/UVB-upregulated scytonemin biosynthesis gene clusters.
+  - node_id: eps_matrix_protein_dna_enrichment_scytonemin_uv_shielding_and_delayed_stone_evaporation
+    label: EPS protein/DNA matrix enrichment, scytonemin UV shielding, fermentative
+      reprogramming, and delayed lithic water evaporation
+    node_type: COMMUNITY_PROCESS
+    description: Stabilization of biofilm EPS with proteins, DNA, and PEP-CTERM exoproteins,
+      periplasmic synthesis of scytonemin sunscreen pigment, metabolic shift to fermentation
+      under desiccation, and retardation of water uptake and evaporation in the lithic
+      substrate.
+  edges:
+  - edge_id: subaerial_rock_biofilm_experiences_desiccation_and_uv_regime
+    subject: rock_dwelling_subaerial_biofilms
+    predicate: maintains
+    object: subaerial_desiccation_water_activity_and_uv_radiation_regime
+    description: Subaerial biofilms on exposed stone surfaces experience severe liquid
+      water limitation where water activity is constrained by temperature and relative
+      humidity alongside drought and UV radiation.
+    evidence:
+    - reference: PMID:37517730
+      snippet: Stone monuments can be difficult environments for life, particularly
+        with respect to liquid water access. Nevertheless, microbial communities are
+        found on them with apparent ubiquity. A variety of strategies for access to
+        liquid water have been proposed. Regardless of their water-retention mechanisms
+        details, though, we argue that water activity (a key indicator for cell viability)
+        is constrained by environmental conditions, largely independently of community
+        structure, and is predicted by the local temperature and relative humidity.
+      notes: Villa et al. 2023 (PMID:37517730) demonstrated that water activity within
+        stone subaerial biofilms is governed by local temperature and relative humidity.
+  - edge_id: desiccation_and_uv_regime_shapes_lithic_phototroph_chemotroph_guild
+    subject: subaerial_desiccation_water_activity_and_uv_radiation_regime
+    predicate: selects for
+    object: lithic_phototroph_chemotroph_and_nostoc_cyanobacterial_guild
+    description: Drought and UV radiation on exposed rock surfaces select for stress-tolerant
+      phototroph-chemotroph subaerial biofilm guilds and scytonemin-producing cyanobacteria.
+    evidence:
+    - reference: PMID:36669662
+      snippet: We found that drought altered the phototroph-chemotroph balance and
+        enriched the biofilm matrix with proteins and DNA. Desiccated SABs underwent
+        a shift in metabolism to fermentation and a decrease in oxidative stress.
+      notes: Villa et al. 2023 (PMID:36669662) showed that desiccation restructures
+        the phototroph-chemotroph balance and induces fermentative metabolism in limestone
+        subaerial biofilms.
+    - reference: PMID:35208882
+      snippet: The indole-alkaloid scytonemin is a sunscreen pigment that is widely
+        produced among cyanobacteria as an ultraviolet radiation (UVR) survival strategy.
+      notes: Filamentous cyanobacteria such as Nostoc punctiforme utilize scytonemin
+        synthesis as a primary UV survival strategy in exposed habitats (PMID:35208882).
+  - edge_id: cyanobacterial_guild_expresses_crtb_and_scytonemin_biosynthesis_genes
+    subject: lithic_phototroph_chemotroph_and_nostoc_cyanobacterial_guild
+    predicate: expresses
+    object: cyanoexosortase_b_crtb_pep_cterm_and_scytonemin_gene_clusters
+    description: Nostoc punctiforme expresses cyanoexosortase B (CrtB) to traffic
+      PEP-CTERM proteins and upregulates scytonemin biosynthesis genes under UVA,
+      UVB, and high-light exposure.
+    evidence:
+    - reference: PMID:35208882
+      snippet: Scytonemin biosynthesis is encoded by two gene clusters that are known
+        to be induced by long-wavelength radiation (UVA).
+      notes: Scytonemin biosynthesis gene clusters are transcriptionally upregulated
+        under UVA, UVB, and high light in Nostoc punctiforme (PMID:35208882).
+    - reference: PMID:40358234
+      snippet: Here, we characterize the role of cyanoexosortase B (CrtB) in the filamentous
+        cyanobacterium Nostoc punctiforme, demonstrating that crtB is essential for
+        motility, biofilm formation, and the production of the sunscreen pigment scytonemin.
+      notes: Deletion of crtB (ΔcrtB) in Nostoc punctiforme abolishes PEP-CTERM protein
+        export, biofilm formation, and periplasmic scytonemin production (PMID:40358234).
+  - edge_id: crtb_and_eps_reprogramming_drive_uv_shielding_and_delayed_stone_evaporation
+    subject: cyanoexosortase_b_crtb_pep_cterm_and_scytonemin_gene_clusters
+    predicate: drives
+    object: eps_matrix_protein_dna_enrichment_scytonemin_uv_shielding_and_delayed_stone_evaporation
+    description: CrtB-mediated PEP-CTERM protein export stabilizes EPS biofilm formation
+      and scytonemin synthesis while protein/DNA-enriched desiccated SAB matrices
+      retard water uptake and delay evaporation in the stone substrate.
+    evidence:
+    - reference: PMID:40358234
+      snippet: These results are consistent with the hypothetical role of CrtB in
+        the processing and export of PEP-CTERM proteins that play a critical role
+        in stabilizing the interaction between the filament surface and HPS to facilitate
+        motility and biofilm formation. In the case of scytonemin-the late biosynthetic
+        steps of which occur in the periplasm and whose operon contains several putative
+        PEP-CTERM proteins-ΔcrtB failed to produce it.
+      notes: CrtB processes PEP-CTERM proteins required for both biofilm matrix stabilization
+        and periplasmic scytonemin synthesis (PMID:40358234).
+    - reference: PMID:36669662
+      snippet: Water absorption experiments showed that desiccated SABs protected
+        the stone from rapid water uptake, while a thermographic survey indicated
+        a delay in water evaporation. Spilling-drop tests revealed a change in the
+        wettability of the stone-SAB interface, which affected the water transport
+        properties of the stone.
+      notes: Desiccated subaerial biofilms alter stone-biofilm interface wettability,
+        preventing rapid water uptake and delaying water evaporation (PMID:36669662).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -48,3 +178,10 @@ curation_history:
     biome (ENVO:00000446). Define under ENVO:00002034 (biofilm) with parent_mode REPLACE
     (PMID 17584235; DOI:10.1111/j.1462-2920.2007.01301.x; PMID 19575564; DOI:10.1146/annurev.micro.091208.073349).
     Path: Environmental > Terrestrial > Rock-dwelling (subaerial biofilms)'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added subaerial_rock_biofilm_desiccation_uv_crtb_scytonemin_bioprotection
+    mechanism graph for rock_dwelling_subaerial_biofilms (habitatmech:GOLD.02bb8b9d08)
+    backed by PMID:37517730, PMID:36669662, PMID:35208882, and PMID:40358234.
+  llm_assisted: true

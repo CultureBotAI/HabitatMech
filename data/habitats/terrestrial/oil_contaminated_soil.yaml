@@ -43,6 +43,134 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 1
   assertion_unit: ORGANISM
+causal_graphs:
+- graph_id: oil_contaminated_soil_rhodococcus_biosurfactant_and_alkb_hydrocarbon_catabolism
+  title: Oil-contaminated soil biosurfactant emulsification and Rhodococcus/Actinobacteria
+    alkB-todC1-pcaG hydrocarbon biodegradation mechanism
+  description: Crude-oil- and petroleum-hydrocarbon-contaminated soils impose hydrophobic
+    organic solvent toxicity and low aqueous hydrocarbon bioavailability, selecting
+    for solvent-tolerant Actinobacteria (notably Rhodococcus erythropolis) and Proteobacteria.
+    These degraders produce glycolipid biosurfactants that lower surface tension to
+    38 mN/m to emulsify and mobilize crude oil while expressing alkane monooxygenases
+    (alkB, alkB1), aromatic ring-hydroxylating dioxygenases (todC1, nidA, pcaG), RND
+    efflux transporters (HAE1), and trehalose-6-phosphate synthase (otsA1) to catabolize
+    aliphatic and polycyclic aromatic hydrocarbons.
+  nodes:
+  - node_id: oil_contaminated_soil
+    label: oil contaminated soil
+    node_type: HABITAT
+    grounding: ENVO:00002875
+    description: Terrestrial soil environment contaminated with crude oil or refined
+      petroleum hydrocarbons including aliphatic alkanes and mono-/polycyclic aromatic
+      hydrocarbons.
+  - node_id: hydrophobic_petroleum_hydrocarbon_and_solvent_stress
+    label: hydrophobic crude oil alkanes, aromatic hydrocarbons, and low aqueous bioavailability
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High concentrations of hydrophobic aliphatic alkanes (cyclohexane,
+      n-hexane, n-decane) and aromatic hydrocarbons (toluene, styrene, ethylbenzene,
+      PAHs) with logPOW 2.64-5.98 requiring surfactant emulsification for bioavailability.
+  - node_id: rhodococcus_erythropolis_and_actinobacteria_proteobacteria_degrader_guild
+    label: Rhodococcus erythropolis and hydrocarbonoclastic Actinobacteria/Proteobacteria
+      guild
+    node_type: COMMUNITY
+    description: Solvent-tolerant hydrocarbon-degrading soil bacterial community dominated
+      by Rhodococcus erythropolis (e.g. strain IBBPo1) alongside other Actinobacteria
+      and Proteobacteria.
+  - node_id: alkb_todc1_nid_pcag_oxygenases_and_otsa1_hae1_tolerance_system
+    label: alkane monooxygenases (alkB, alkB1), aromatic dioxygenases (todC1, nidA,
+      pcaG), HAE1 transporter, and otsA1 trehalose synthase
+    node_type: GENE_OR_PROTEIN
+    description: Catabolic oxygenase genes (alkB, alkB1, todC1, todM, xylM, nidA,
+      pcaG), hydrophobic efflux transporter (HAE1), and trehalose-6-phosphate synthase
+      (otsA1) enabling solvent tolerance and hydrocarbon oxidation.
+  - node_id: biosurfactant_emulsification_and_petroleum_hydrocarbon_biodegradation
+    label: biosurfactant-mediated oil emulsification and aliphatic/PAH biodegradation
+    node_type: COMMUNITY_PROCESS
+    description: Reduction of interfacial tension to 38 mN/m by glycolipid biosurfactants
+      (removing up to 97-99% crude oil at 2-4x CMC) coupled with enzymatic oxidation
+      of fatty acids, alkanes, and polycyclic aromatic hydrocarbons.
+  edges:
+  - edge_id: oil_contaminated_soil_imposes_hydrophobic_petroleum_and_solvent_stress
+    subject: oil_contaminated_soil
+    predicate: maintains
+    object: hydrophobic_petroleum_hydrocarbon_and_solvent_stress
+    description: Crude oil contamination introduces toxic hydrophobic alkanes and
+      aromatic solvents into the soil matrix whose biodegradation is constrained by
+      low aqueous bioavailability.
+    evidence:
+    - reference: PMID:25288551
+      snippet: A new Gram-positive bacterium, Rhodococcus erythropolis IBBPo1 (KF059972.1)
+        was isolated from a crude oil-contaminated soil sample by enrichment culture
+        method. R. erythropolis IBBPo1 was able to tolerate a wide range of toxic
+        compounds, such as antibiotics (800-1000μg/mL), synthetic surfactants (50-200μg/mL),
+        and organic solvents (40%-100%).
+      notes: Stancu 2014 (PMID:25288551) isolated Rhodococcus erythropolis IBBPo1
+        from crude oil-contaminated soil and characterized its tolerance to toxic
+        alkanes and aromatics.
+    - reference: PMID:39191326
+      snippet: Meanwhile, the emulsification and solubilization of SLs promoted the
+        bioavailability of PHs.
+      notes: Hydrophobic petroleum hydrocarbons in contaminated soil require surfactant-mediated
+        emulsification and solubilization to increase bioavailability (PMID:39191326).
+  - edge_id: petroleum_hydrocarbons_select_for_rhodococcus_and_actinobacteria_proteobacteria_guild
+    subject: hydrophobic_petroleum_hydrocarbon_and_solvent_stress
+    predicate: selects for
+    object: rhodococcus_erythropolis_and_actinobacteria_proteobacteria_degrader_guild
+    description: Crude oil and petroleum hydrocarbons in soil select for solvent-tolerant
+      Rhodococcus erythropolis and petroleum-degrading Actinobacteria and Proteobacteria
+      that modify cell surface hydrophobicity and produce biosurfactants.
+    evidence:
+    - reference: PMID:25288551
+      snippet: R. erythropolis IBBPo1 cells adapt to 1% organic solvents by changing
+        surface hydrophobicity, morphology and their metabolic fingerprinting.
+      notes: Rhodococcus erythropolis IBBPo1 adapts to organic solvents via surface
+        hydrophobicity and morphological remodeling (PMID:25288551).
+    - reference: PMID:39191326
+      snippet: The combined metagenomic and metabolomic analysis demonstrated the
+        strong positive correlations between PHs metabolites and PHs-degrading bacteria,
+        such as lauric acid vs. Actinobacteria, benzoic vs. Proteobacteria.
+      notes: Metagenomic and metabolomic profiling of petroleum-contaminated soil
+        linked Actinobacteria and Proteobacteria directly to hydrocarbon intermediate
+        turnover (PMID:39191326).
+  - edge_id: rhodococcus_degrader_guild_encodes_alkb_todc1_and_otsa1_genes
+    subject: rhodococcus_erythropolis_and_actinobacteria_proteobacteria_degrader_guild
+    predicate: expresses
+    object: alkb_todc1_nid_pcag_oxygenases_and_otsa1_hae1_tolerance_system
+    description: Rhodococcus erythropolis IBBPo1 and soil hydrocarbonoclastic consortia
+      harbor catabolic oxygenases (alkB, alkB1, todC1, todM, xylM, nidA, pcaG), efflux
+      transporter HAE1, and trehalose-6-phosphate synthase otsA1.
+    evidence:
+    - reference: PMID:25288551
+      snippet: The high organic solvent tolerance of R. erythropolis IBBPo1 could
+        be due to the presence in their large genome of some catabolic (alkB, alkB1,
+        todC1, todM, xylM), transporter (HAE1) and trehalose-6-phosphate synthase
+        (otsA1, KF059973.1) genes.
+      notes: Genome and PCR analysis of R. erythropolis IBBPo1 from oil-contaminated
+        soil identified alkB, alkB1, todC1, todM, xylM, HAE1, and otsA1 (PMID:25288551).
+  - edge_id: oxygenases_and_biosurfactants_drive_crude_oil_mobilization_and_biodegradation
+    subject: alkb_todc1_nid_pcag_oxygenases_and_otsa1_hae1_tolerance_system
+    predicate: catalyzes
+    object: biosurfactant_emulsification_and_petroleum_hydrocarbon_biodegradation
+    description: Combined glycolipid biosurfactant production by Rhodococcus erythropolis
+      (reducing surface tension to 38 mN/m and removing 97-99% of oil) and alkane/PAH
+      oxygenase activity drive petroleum hydrocarbon degradation in soil.
+    evidence:
+    - reference: PMID:24031544
+      snippet: Reduction in the surface tension, which indicates the presence of biosurfactant,
+        reached a value of 38 mN/m at the end of 35 hours. Use of the produced biosurfactant
+        for washing crude oil-contaminated soil showed that 2 and 4 times the critical
+        micellar concentration (CMC) were able to remove 97 and 99% of the oil, respectively,
+        after 1 month of impregnation.
+      notes: Pacheco et al. 2010 (PMID:24031544) demonstrated 97-99% crude oil removal
+        from oil-contaminated soil using Rhodococcus erythropolis biosurfactants.
+    - reference: PMID:39191326
+      snippet: The metabolomic analysis showed that BC-SLs facilitated the metabolic
+        process of PHs, the microbial metabolism of petroleum hydrocarbons (PHs) became
+        more active. Fatty acid degradation and polycyclic aromatic hydrocarbons (PAHs)
+        degradation were up-regulated, indicating the promoting effect of the BC-SLs
+        for PHs metabolism.
+      notes: Glycolipid biosurfactant enhancement in petroleum-contaminated soil upregulates
+        fatty acid and PAH degradation pathways (PMID:39191326).
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -72,3 +200,10 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-11-04T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added oil_contaminated_soil_rhodococcus_biosurfactant_and_alkb_hydrocarbon_catabolism
+    mechanism graph for oil contaminated soil (ENVO:00002875) backed by PMID:24031544,
+    PMID:25288551, and PMID:39191326.
+  llm_assisted: true
