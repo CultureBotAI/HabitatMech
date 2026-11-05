@@ -11,7 +11,7 @@
 
 ## Summary
 
-The GOLD-attested record PO:0025388 (epicuticular wax, EXACT/REVIEWED, 1 ORGANISM assertion) maps GOLD 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' to PO:0025388 under PO:0025386 (plant cuticular wax), but retains the whole-organ leaf parent PO:0025034 (leaf) as a superclass.
+The GOLD-attested record PO:0025388 (epicuticular wax, EXACT/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) maps GOLD 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' (source concept habitatmech:GOLD.284cf93966) to PO:0025388 under PO:0025386 (cuticular wax), but retains the whole-organ leaf parent PO:0025034 (leaf) as a superclass.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: concern. Targets: PO:0025388.
 
-Epicuticular wax (PO:0025388) is a lipid film coating (part_of) the outer surface of the plant cuticle under PO:0025386 (plant cuticular wax), not a subtype (is_a) of the whole organ PO:0025034 (leaf).
+Epicuticular wax (PO:0025388) is a lipid film coating (part_of) the outer surface of the plant cuticle under PO:0025386 (cuticular wax), not a subtype (is_a) of the whole organ PO:0025034 (leaf).
 
 ### Source counts and retained ranking
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: epicuticular-wax-context-parent.
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.99b6c7bfeb on GOLD path 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' (exact target PO:0025388) excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (plant cuticular wax).
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.284cf93966 on GOLD path 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' (exact target PO:0025388) excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (cuticular wax).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.99b6c7bfeb on GOLD path 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' (exact target PO:0025388) excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (plant cuticular wax). No repair is performed by this read-only review.
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.284cf93966 on GOLD path 'Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax' (exact target PO:0025388) excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (cuticular wax). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -135,10 +135,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The GOLD-attested record PO:0025388 (epicuticular wax, EXACT/REVIEWED, 1
-  ORGANISM assertion) maps GOLD 'Host-associated > Plants > Phyllosphere > Phylloplane/Leaf
-  > Epicuticular wax' to PO:0025388 under PO:0025386 (plant cuticular wax), but retains
-  the whole-organ leaf parent PO:0025034 (leaf) as a superclass.
+summary: 'The GOLD-attested record PO:0025388 (epicuticular wax, EXACT/REVIEWED, no
+  assertion count/unit; total_assertions: 0 in GOLD) maps GOLD ''Host-associated >
+  Plants > Phyllosphere > Phylloplane/Leaf > Epicuticular wax'' (source concept habitatmech:GOLD.284cf93966)
+  to PO:0025388 under PO:0025386 (cuticular wax), but retains the whole-organ leaf
+  parent PO:0025034 (leaf) as a superclass.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -515,8 +516,8 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: Epicuticular wax (PO:0025388) is a lipid film coating (part_of) the outer
-    surface of the plant cuticle under PO:0025386 (plant cuticular wax), not a subtype
-    (is_a) of the whole organ PO:0025034 (leaf).
+    surface of the plant cuticle under PO:0025386 (cuticular wax), not a subtype (is_a)
+    of the whole organ PO:0025034 (leaf).
   target_ids:
   - PO:0025388
   evidence_ids:
@@ -570,10 +571,10 @@ findings:
   certainty: confirmed
   title: Epicuticular wax retains whole-organ PO:0025034 (leaf) GOLD parent as a superclass
   description: Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.99b6c7bfeb on GOLD path 'Host-associated > Plants
+    identifier habitatmech:GOLD.284cf93966 on GOLD path 'Host-associated > Plants
     > Phyllosphere > Phylloplane/Leaf > Epicuticular wax' (exact target PO:0025388)
-    excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (plant
-    cuticular wax).
+    excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (cuticular
+    wax).
   target_ids:
   - PO:0025388
   field_paths:
@@ -608,10 +609,10 @@ actions:
     path: curation/gold_parent_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
   description: Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.99b6c7bfeb on GOLD path 'Host-associated > Plants
+    identifier habitatmech:GOLD.284cf93966 on GOLD path 'Host-associated > Plants
     > Phyllosphere > Phylloplane/Leaf > Epicuticular wax' (exact target PO:0025388)
-    excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (plant
-    cuticular wax). No repair is performed by this read-only review.
+    excluding parent_id PO:0025034 (leaf), preserving ontology parent PO:0025386 (cuticular
+    wax). No repair is performed by this read-only review.
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

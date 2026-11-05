@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.237fd067e0 (human epidermoid cyst in Host-associated &gt; Mammals: Human &gt; Integument (Skin) &gt; Epidermoid, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently defined under BTO:0000320 (cyst) with parent_mode REPLACE and bare 'Epidermoid' scoped as RELATED_SYNONYM.
+The minted GOLD record habitatmech:GOLD.237fd067e0 (human epidermoid cyst in Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Epidermoid, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently defined under BTO:0000320 (cyst) with parent_mode REPLACE to exclude NOT_APPLICABLE GOLD parent Benign tumor and displaced source label 'Epidermoid' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.237fd067e0.
 
-The record defines human epidermoid cyst under BTO:0000320 (cyst) with parent_mode REPLACE to exclude whole-skin GOLD parent UBERON:0002097 (skin of body) and scopes bare GOLD 'Epidermoid' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+The record defines human epidermoid cyst under BTO:0000320 (cyst) with parent_mode REPLACE to exclude NOT_APPLICABLE GOLD parent Benign tumor (habitatmech:GOLD.333c18201f), retains curated exact synonyms ('epidermal inclusion cyst', 'epidermoid cyst'), and omits displaced GOLD source label 'Epidermoid' from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
 
 ### Source counts and retained ranking
 
@@ -126,9 +126,10 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.237fd067e0 (human epidermoid cyst
-  in Host-associated > Mammals: Human > Integument (Skin) > Epidermoid, UNGROUNDED/REVIEWED,
+  in Host-associated > Mammals: Human > Benign tumor > Epidermoid, UNGROUNDED/REVIEWED,
   no assertion count/unit; total_assertions: 0 in GOLD) is coherently defined under
-  BTO:0000320 (cyst) with parent_mode REPLACE and bare ''Epidermoid'' scoped as RELATED_SYNONYM.'
+  BTO:0000320 (cyst) with parent_mode REPLACE to exclude NOT_APPLICABLE GOLD parent
+  Benign tumor and displaced source label ''Epidermoid'' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -502,8 +503,10 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: The record defines human epidermoid cyst under BTO:0000320 (cyst) with
-    parent_mode REPLACE to exclude whole-skin GOLD parent UBERON:0002097 (skin of
-    body) and scopes bare GOLD 'Epidermoid' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    parent_mode REPLACE to exclude NOT_APPLICABLE GOLD parent Benign tumor (habitatmech:GOLD.333c18201f),
+    retains curated exact synonyms ('epidermal inclusion cyst', 'epidermoid cyst'),
+    and omits displaced GOLD source label 'Epidermoid' from synonyms (SOURCE_SYNONYM_EXCLUDED)
+    via curation/definition_source_label_exclusions.tsv.
   target_ids:
   - habitatmech:GOLD.237fd067e0
   evidence_ids:

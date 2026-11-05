@@ -16,10 +16,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The minted GOLD record habitatmech:GOLD.949bdcdb77 (fruit surface epiphyte
+summary: 'The minted GOLD record habitatmech:GOLD.949bdcdb77 (fruit surface epiphyte
   environment in Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes,
-  UNGROUNDED/REVIEWED, 71 ORGANISM assertions) is coherently defined under ENVO:01001057
-  and habitatmech:GOLD.e898437067 (carposphere) with bare 'Epiphytes' scoped as RELATED_SYNONYM.
+  UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently
+  defined under ENVO:01001057 and habitatmech:GOLD.e898437067 (carposphere) with displaced
+  source label ''Epiphytes'' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -397,8 +398,9 @@ assessments:
   outcome: supported
   summary: The record defines fruit surface epiphyte environment under ENVO:01001057
     and habitatmech:GOLD.e898437067 (carposphere, the external fruit surface microhabitat),
-    both strictly broader surface/plant-part environments, and scopes bare GOLD 'Epiphytes'
-    as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    both strictly broader surface/plant-part environments, retains curated exact synonym
+    'carposphere epiphyte habitat', and omits displaced GOLD source label 'Epiphytes'
+    from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
   target_ids:
   - habitatmech:GOLD.949bdcdb77
   evidence_ids:

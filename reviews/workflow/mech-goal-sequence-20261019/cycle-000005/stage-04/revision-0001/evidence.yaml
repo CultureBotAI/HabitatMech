@@ -10,22 +10,22 @@ summary: 'Completed Cycle 5 Stage 4 record and category cohort review for frozen
   lexical slice data/habitats/host_associated/epicuticular_wax.yaml through data/habitats/host_associated/excretory_system.yaml
   at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a; saved 24 kind: record bundles
   and 1 kind: category bundle in reviews/structured/, carried forward 30 deferred
-  #1398 findings from Cycle 4 Stage 5, and recorded 22 new open findings (12 grounding/hierarchy
+  #1398 findings from Cycle 4 Stage 5, and recorded 23 new open findings (13 grounding/hierarchy
   defects, 2 nomenclature exact_synonyms or grounding-scope defects, and 8 #1398 mapping-endpoint
-  contract defects; 52 total carried forward) for Cycle 5 Stage 5 remediation.'
+  contract defects; 53 total carried forward) for Cycle 5 Stage 5 remediation.'
 source_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
 previous_evidence:
   path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/evidence.yaml
   sha256: 0ae0aeca4294e82c3620d0f02e276ac914c5815d710b71a5061f927cfd5fa84d
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_report.md
-  sha256: 889d866c529b3c8fb7cf06d1a18f4e9a2d75d9cac0e2c5a7b6c3bd6b57a5fd49
+  sha256: 613d0a5cefb3da766c855c1966002769961328614c15707e90355d6576bcf1dd
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.yaml
-  sha256: 3e0af8b357fad32cebdb658c81ab4d75ad4f80bfac83a12e8aa9f28200e6d1a0
+  sha256: d78aeaa68ff5426e2d5fb43d447f0adb17920e3e9f147501a36c6284f15b6f49
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/coverage.json
-  sha256: 8b81036f83f4362b8c458dc61b7c804312e1d14d6e17d9b80fc1c7231edb1fd5
+  sha256: 9d3a1bca4faa99a5d7876dc5173aea687a989082554162bc16cda3ab32195b73
   kind: supporting
 findings:
 - finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
@@ -422,10 +422,10 @@ findings:
   status: open
   summary: 'data/habitats/host_associated/epicuticular_wax.yaml (PO:0025388): Epicuticular
     wax retains whole-organ PO:0025034 (leaf) GOLD parent as a superclass — Add an
-    exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.99b6c7bfeb
+    exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.284cf93966
     on GOLD path ''Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Epicuticular
     wax'' (exact target PO:0025388) excluding parent_id PO:0025034 (leaf), preserving
-    ontology parent PO:0025386 (plant cuticular wax).'
+    ontology parent PO:0025386 (cuticular wax).'
   disposition: Carry forward as open major grounding finding from 20261105T051510Z-epicuticular_wax-record
     (F1) for Cycle 5 Stage 5 grouped remediation.
 - finding_id: epithelial-lining-fluid-context-parent
@@ -433,7 +433,7 @@ findings:
   summary: 'data/habitats/host_associated/epithelial_lining_fluid.yaml (UBERON:0035963):
     Epithelial lining fluid retains human Respiratory system GOLD parent as a superclass
     — Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier
-    habitatmech:GOLD.4e8cc085a8 on GOLD path ''Host-associated > Mammals: Human >
+    habitatmech:GOLD.bbe542f86d on GOLD path ''Host-associated > Mammals: Human >
     Respiratory system > Epithelial lining fluid'' (exact target UBERON:0035963) excluding
     parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology
     parent UBERON:0006314 (bodily fluid).'
@@ -445,17 +445,18 @@ findings:
     Equid-associated environment asserts host-taxon label ''Equidae-Horse'' as an
     exact synonym — Clear ''Equidae-Horse'' from exact_synonym in curation/term_requests.tsv
     for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    so BacDive ''Equidae-Horse'' is scoped as RELATED_SYNONYM rather than EXACT_SYNONYM,
-    matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog,
-    caprinae_sheep_goat).'
+    so automatic retention of the displaced BacDive host label ''Equidae-Horse'' as
+    an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving
+    verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive
+    host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat).'
   disposition: Carry forward as open major nomenclature finding from 20261105T051519Z-equidae_horse-record
     (F1) for Cycle 5 Stage 5 grouped remediation.
 - finding_id: erythrocyte-context-parent
   status: open
   summary: 'data/habitats/host_associated/erythrocyte.yaml (BTO:0000424): Erythrocyte
     retains human Blood GOLD parent as a superclass — Add an exclusion row in curation/gold_parent_exclusions.tsv
-    for source identifier habitatmech:GOLD.efab5f873a on GOLD path ''Host-associated
-    > Mammals: Human > Circulatory system > Blood > Erythrocyte'' (exact target BTO:0000424)
+    for source identifier habitatmech:GOLD.6ee13ba963 on GOLD path ''Host-associated
+    > Mammals: Human > Circulatory system > Blood > Erythrocytes'' (exact target BTO:0000424)
     excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent
     BTO:0000574 (hematopoietic cell).'
   disposition: Carry forward as open major grounding finding from 20261105T051520Z-erythrocyte-record
@@ -640,15 +641,26 @@ findings:
   disposition: Carry forward as open major representation finding from 20261105T051531Z-eustachian_tube__a8583033-record
     (F2) for Cycle 5 Stage 5 grouped remediation.
   issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: excretory-system-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/excretory_system.yaml (habitatmech:GOLD.3a0549cbd8):
+    Insect Excretory system retains whole-host insect-associated environment GOLD
+    parent as a superclass — Add an exclusion row in curation/gold_parent_exclusions.tsv
+    for source identifier habitatmech:GOLD.3a0549cbd8 on GOLD path ''Host-associated
+    > Arthropoda: Insects > Excretory system'' (exact target habitatmech:GOLD.3a0549cbd8)
+    excluding parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment),
+    preserving broader ontology parent UBERON:8450002 (excretory system).'
+  disposition: Carry forward as open major grounding finding from 20261105T051533Z-excretory_system-record
+    (F1) for Cycle 5 Stage 5 grouped remediation.
 - finding_id: excretory-system-mapping-endpoint-contract
   status: open
   summary: 'data/habitats/host_associated/excretory_system.yaml (habitatmech:GOLD.3a0549cbd8):
     Narrow mapping predicate points to a minted source-path record — Reconcile narrow-match
     source-attestation output with the endpoint contract tracked in Issue #1398 for
     habitatmech:GOLD.3a0549cbd8 (Host-associated > Arthropoda: Insects > Excretory
-    system) and its broader ontology parent UBERON:0001008 (renal system).'
+    system) and its broader ontology parent UBERON:8450002 (excretory system).'
   disposition: Carry forward as open major representation finding from 20261105T051533Z-excretory_system-record
-    (F1) for Cycle 5 Stage 5 grouped remediation.
+    (F2) for Cycle 5 Stage 5 grouped remediation.
   issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
 groups: []
 carry_forward_ids:
@@ -703,5 +715,6 @@ carry_forward_ids:
 - eustachian-tube-mapping-endpoint-contract
 - eustachian-tube--a8583033-context-parent
 - eustachian-tube--a8583033-mapping-endpoint-contract
+- excretory-system-context-parent
 - excretory-system-mapping-endpoint-contract
 infra_tasks: []

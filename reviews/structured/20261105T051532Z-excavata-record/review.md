@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.b7f85ae39f (excavate protist-associated environment in Host-associated &gt; Protists &gt; Excavata, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently defined under ENVO:01001000 and habitatmech:GOLD.eee7408afd (protist-associated environment) with bare 'Excavata' scoped as RELATED_SYNONYM.
+The minted GOLD record habitatmech:GOLD.b7f85ae39f (excavate protist-associated environment in Host-associated &gt; Protists &gt; Excavata, UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) is coherently defined under ENVO:01001000 and habitatmech:GOLD.eee7408afd (protist-associated environment) with displaced source label 'Excavata' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.b7f85ae39f.
 
-The record defines excavate protist-associated environment under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.eee7408afd (protist-associated environment), both strictly broader host-associated environmental systems, and scopes bare GOLD 'Excavata' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+The record defines excavate protist-associated environment under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.eee7408afd (protist-associated environment), both strictly broader host-associated environmental systems, and omits displaced GOLD source label 'Excavata' from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
 
 ### Source counts and retained ranking
 
@@ -129,8 +129,8 @@ scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.b7f85ae39f (excavate protist-associated
   environment in Host-associated > Protists > Excavata, UNGROUNDED/REVIEWED, no assertion
   count/unit; total_assertions: 0 in GOLD) is coherently defined under ENVO:01001000
-  and habitatmech:GOLD.eee7408afd (protist-associated environment) with bare ''Excavata''
-  scoped as RELATED_SYNONYM.'
+  and habitatmech:GOLD.eee7408afd (protist-associated environment) with displaced
+  source label ''Excavata'' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -535,7 +535,8 @@ assessments:
   summary: The record defines excavate protist-associated environment under ENVO:01001000
     (environmental system determined by an organism) and habitatmech:GOLD.eee7408afd
     (protist-associated environment), both strictly broader host-associated environmental
-    systems, and scopes bare GOLD 'Excavata' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    systems, and omits displaced GOLD source label 'Excavata' from synonyms (SOURCE_SYNONYM_EXCLUDED)
+    via curation/definition_source_label_exclusions.tsv.
   target_ids:
   - habitatmech:GOLD.b7f85ae39f
   evidence_ids:

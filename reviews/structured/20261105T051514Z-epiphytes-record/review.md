@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.0e6d2e67ff (leaf surface epiphyte environment in Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epiphytes, UNGROUNDED/REVIEWED, 119 ORGANISM assertions) is coherently defined under ENVO:01001057 (environment associated with a plant part or small plant) with parent_mode REPLACE and bare 'Epiphytes' scoped as RELATED_SYNONYM.
+The minted GOLD record habitatmech:GOLD.0e6d2e67ff (leaf surface epiphyte environment in Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf surface &gt; Epiphytes, UNGROUNDED/REVIEWED, 1 ORGANISM assertion) is coherently defined under ENVO:01001057 (environment associated with a plant part or small plant) with parent_mode REPLACE to exclude anatomical leaf PO:0025034 and displaced source label 'Epiphytes' omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.0e6d2e67ff.
 
-The record defines leaf surface epiphyte environment under ENVO:01001057 with parent_mode REPLACE to exclude anatomical leaf PO:0025034 and scopes bare GOLD 'Epiphytes' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+The record defines leaf surface epiphyte environment under ENVO:01001057 with parent_mode REPLACE to exclude anatomical leaf PO:0025034, retains curated exact synonym 'phylloplane epiphyte habitat', and omits displaced GOLD source label 'Epiphytes' from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
 
 ### Source counts and retained ranking
 
@@ -125,10 +125,11 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: The minted GOLD record habitatmech:GOLD.0e6d2e67ff (leaf surface epiphyte
-  environment in Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Epiphytes,
-  UNGROUNDED/REVIEWED, 119 ORGANISM assertions) is coherently defined under ENVO:01001057
-  (environment associated with a plant part or small plant) with parent_mode REPLACE
-  and bare 'Epiphytes' scoped as RELATED_SYNONYM.
+  environment in Host-associated > Plants > Phyllosphere > Phylloplane/Leaf surface
+  > Epiphytes, UNGROUNDED/REVIEWED, 1 ORGANISM assertion) is coherently defined under
+  ENVO:01001057 (environment associated with a plant part or small plant) with parent_mode
+  REPLACE to exclude anatomical leaf PO:0025034 and displaced source label 'Epiphytes'
+  omitted from synonyms (SOURCE_SYNONYM_EXCLUDED).
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -490,8 +491,9 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: The record defines leaf surface epiphyte environment under ENVO:01001057
-    with parent_mode REPLACE to exclude anatomical leaf PO:0025034 and scopes bare
-    GOLD 'Epiphytes' as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    with parent_mode REPLACE to exclude anatomical leaf PO:0025034, retains curated
+    exact synonym 'phylloplane epiphyte habitat', and omits displaced GOLD source
+    label 'Epiphytes' from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
   target_ids:
   - habitatmech:GOLD.0e6d2e67ff
   evidence_ids:

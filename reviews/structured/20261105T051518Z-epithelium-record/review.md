@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0000416 (epithelium, EXACT/SEEDED, 35 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000416 under BTO:0000634 (integument) with its vendored definition, synonyms, and 35 literature-mined taxon associations.
+The PREGO-attested record BTO:0000416 (epithelium, EXACT/SEEDED, 35 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000416 under BTO:0000634 (integument) with its vendored definition, 3 PREGO RELATED_SYNONYMs, and 25 retained characteristic taxa (candidate_pool: 35).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000416.
 
-BTO:0000416 (epithelium) is an exact tissue habitat identity under strictly broader ontology parent BTO:0000634 (integument) with 35 retained PREGO taxon associations.
+BTO:0000416 (epithelium) is an exact tissue habitat identity under strictly broader ontology parent BTO:0000634 (integument) with 25 retained PREGO characteristic taxa (from candidate_pool: 35).
 
 ### Source counts and retained ranking
 
@@ -122,10 +122,10 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The PREGO-attested record BTO:0000416 (epithelium, EXACT/SEEDED, 35 TAXON
+summary: 'The PREGO-attested record BTO:0000416 (epithelium, EXACT/SEEDED, 35 TAXON
   assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000416 under
-  BTO:0000634 (integument) with its vendored definition, synonyms, and 35 literature-mined
-  taxon associations.
+  BTO:0000634 (integument) with its vendored definition, 3 PREGO RELATED_SYNONYMs,
+  and 25 retained characteristic taxa (candidate_pool: 35).'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -460,9 +460,9 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
-  summary: BTO:0000416 (epithelium) is an exact tissue habitat identity under strictly
-    broader ontology parent BTO:0000634 (integument) with 35 retained PREGO taxon
-    associations.
+  summary: 'BTO:0000416 (epithelium) is an exact tissue habitat identity under strictly
+    broader ontology parent BTO:0000634 (integument) with 25 retained PREGO characteristic
+    taxa (from candidate_pool: 35).'
   target_ids:
   - BTO:0000416
   evidence_ids:

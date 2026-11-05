@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0000404 (epidermis, EXACT/SEEDED, 1 TAXON assertion) is coherently grounded to BRENDA Tissue Ontology term BTO:0000404 with its vendored definition, synonyms, and 1 literature-mined taxon association.
+The PREGO-attested record BTO:0000404 (epidermis, EXACT/SEEDED, 1 TAXON assertion) is coherently grounded to BRENDA Tissue Ontology term BTO:0000404 with its vendored definition, 1 PREGO RELATED_SYNONYM ('epidermises'), and 1 literature-mined taxon association (Pantoea agglomerans 299R).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000404.
 
-BTO:0000404 (epidermis) is an exact tissue habitat identity with no subclass edge in the vendored ontology slice and 1 retained PREGO taxon association.
+BTO:0000404 (epidermis) is an exact tissue habitat identity with no subclass edge in the vendored ontology slice and 1 retained PREGO taxon association (noting as a source limitation that Pantoea agglomerans 299R is a plant phylloplane epiphyte matched by PREGO lexical text mining on unqualified 'epidermis').
 
 ### Source counts and retained ranking
 
@@ -123,7 +123,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: The PREGO-attested record BTO:0000404 (epidermis, EXACT/SEEDED, 1 TAXON assertion)
   is coherently grounded to BRENDA Tissue Ontology term BTO:0000404 with its vendored
-  definition, synonyms, and 1 literature-mined taxon association.
+  definition, 1 PREGO RELATED_SYNONYM ('epidermises'), and 1 literature-mined taxon
+  association (Pantoea agglomerans 299R).
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -432,7 +433,9 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: BTO:0000404 (epidermis) is an exact tissue habitat identity with no subclass
-    edge in the vendored ontology slice and 1 retained PREGO taxon association.
+    edge in the vendored ontology slice and 1 retained PREGO taxon association (noting
+    as a source limitation that Pantoea agglomerans 299R is a plant phylloplane epiphyte
+    matched by PREGO lexical text mining on unqualified 'epidermis').
   target_ids:
   - BTO:0000404
   evidence_ids:

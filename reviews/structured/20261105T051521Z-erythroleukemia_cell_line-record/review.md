@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0000846 (erythroleukemia cell line, EXACT/SEEDED, 1 TAXON assertion) is coherently grounded to BRENDA Tissue Ontology term BTO:0000846 under BTO:0000737 (leukemia cell line) with its vendored definition, exact synonyms, and 1 literature-mined taxon association.
+The PREGO-attested record BTO:0000846 (erythroleukemia cell line, EXACT/SEEDED, 1 TAXON assertion) is coherently grounded to BRENDA Tissue Ontology term BTO:0000846 under BTO:0000737 (leukemia cell line) with 5 PREGO RELATED_SYNONYMs and 1 literature-mined taxon association (no vendored BTO definition in ontology_terms.tsv).
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000846.
 
-BTO:0000846 (erythroleukemia cell line) is an exact cell-line habitat identity under strictly broader ontology parent BTO:0000737 (leukemia cell line) with 1 retained PREGO taxon association.
+BTO:0000846 (erythroleukemia cell line) is an exact cell-line habitat identity under strictly broader ontology parent BTO:0000737 (leukemia cell line) with 1 retained PREGO taxon association (noting as source limitations the absence of a vendored BTO definition and PREGO stemming variants 'erythroleukemia cell linous'/'erythroleukemic cell linous' in RELATED_SYNONYM).
 
 ### Source counts and retained ranking
 
@@ -125,8 +125,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: The PREGO-attested record BTO:0000846 (erythroleukemia cell line, EXACT/SEEDED,
   1 TAXON assertion) is coherently grounded to BRENDA Tissue Ontology term BTO:0000846
-  under BTO:0000737 (leukemia cell line) with its vendored definition, exact synonyms,
-  and 1 literature-mined taxon association.
+  under BTO:0000737 (leukemia cell line) with 5 PREGO RELATED_SYNONYMs and 1 literature-mined
+  taxon association (no vendored BTO definition in ontology_terms.tsv).
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -476,7 +476,9 @@ assessments:
   outcome: supported
   summary: BTO:0000846 (erythroleukemia cell line) is an exact cell-line habitat identity
     under strictly broader ontology parent BTO:0000737 (leukemia cell line) with 1
-    retained PREGO taxon association.
+    retained PREGO taxon association (noting as source limitations the absence of
+    a vendored BTO definition and PREGO stemming variants 'erythroleukemia cell linous'/'erythroleukemic
+    cell linous' in RELATED_SYNONYM).
   target_ids:
   - BTO:0000846
   evidence_ids:

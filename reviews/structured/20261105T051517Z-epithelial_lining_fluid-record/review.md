@@ -11,7 +11,7 @@
 
 ## Summary
 
-The GOLD-attested record UBERON:0035963 (epithelial lining fluid, EXACT/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) maps GOLD 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' to UBERON:0035963 under UBERON:0006314 (bodily fluid), but retains the whole-organ-system GOLD parent habitatmech:GOLD.e36ba981d1 (Respiratory system) as a superclass.
+The GOLD-attested record UBERON:0035963 (epithelial lining fluid, EXACT/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) maps GOLD 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (source concept habitatmech:GOLD.bbe542f86d) to UBERON:0035963 under UBERON:0006314 (bodily fluid), but retains the whole-organ-system GOLD parent habitatmech:GOLD.e36ba981d1 (Respiratory system) as a superclass.
 
 ## Scope And Provenance
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: epithelial-lining-fluid-context-parent.
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.4e8cc085a8 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (exact target UBERON:0035963) excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology parent UBERON:0006314 (bodily fluid).
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.bbe542f86d on GOLD path 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (exact target UBERON:0035963) excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology parent UBERON:0006314 (bodily fluid).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.4e8cc085a8 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (exact target UBERON:0035963) excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology parent UBERON:0006314 (bodily fluid). No repair is performed by this read-only review.
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.bbe542f86d on GOLD path 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (exact target UBERON:0035963) excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology parent UBERON:0006314 (bodily fluid). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -134,11 +134,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: 'The GOLD-attested record UBERON:0035963 (epithelial lining fluid, EXACT/REVIEWED,
+summary: 'The GOLD-attested record UBERON:0035963 (epithelial lining fluid, EXACT/SEEDED,
   no assertion count/unit; total_assertions: 0 in GOLD) maps GOLD ''Host-associated
-  > Mammals: Human > Respiratory system > Epithelial lining fluid'' to UBERON:0035963
-  under UBERON:0006314 (bodily fluid), but retains the whole-organ-system GOLD parent
-  habitatmech:GOLD.e36ba981d1 (Respiratory system) as a superclass.'
+  > Mammals: Human > Respiratory system > Epithelial lining fluid'' (source concept
+  habitatmech:GOLD.bbe542f86d) to UBERON:0035963 under UBERON:0006314 (bodily fluid),
+  but retains the whole-organ-system GOLD parent habitatmech:GOLD.e36ba981d1 (Respiratory
+  system) as a superclass.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -540,7 +541,7 @@ findings:
   title: Epithelial lining fluid retains human Respiratory system GOLD parent as a
     superclass
   description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.4e8cc085a8 on GOLD path ''Host-associated > Mammals:
+    identifier habitatmech:GOLD.bbe542f86d on GOLD path ''Host-associated > Mammals:
     Human > Respiratory system > Epithelial lining fluid'' (exact target UBERON:0035963)
     excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving
     ontology parent UBERON:0006314 (bodily fluid).'
@@ -577,7 +578,7 @@ actions:
     path: curation/gold_parent_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
   description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.4e8cc085a8 on GOLD path ''Host-associated > Mammals:
+    identifier habitatmech:GOLD.bbe542f86d on GOLD path ''Host-associated > Mammals:
     Human > Respiratory system > Epithelial lining fluid'' (exact target UBERON:0035963)
     excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving
     ontology parent UBERON:0006314 (bodily fluid). No repair is performed by this

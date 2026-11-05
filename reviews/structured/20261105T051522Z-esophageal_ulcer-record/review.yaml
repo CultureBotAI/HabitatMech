@@ -18,9 +18,9 @@ verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.45b27bdccd (Esophageal ulcer in
   Host-associated > Mammals: Human > Digestive system > Esophagus > Esophageal ulcer,
-  NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) correctly
-  records DOID:10248 as a contextual disease xref, but retains anatomical GOLD parent
-  habitatmech:GOLD.974cd3759a (Esophagus) as a superclass.'
+  NOT_APPLICABLE/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD, no
+  xrefs) is marked NOT_APPLICABLE as a clinical disease/lesion concept, but retains
+  anatomical GOLD parent habitatmech:GOLD.974cd3759a (Esophagus) as a superclass.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -354,9 +354,9 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: 'Esophageal ulcer (habitatmech:GOLD.45b27bdccd) is a NOT_APPLICABLE clinical
-    disease/lesion concept (DOID:10248 xref), not an anatomical subtype (is_a) of
-    the human Esophagus (habitatmech:GOLD.974cd3759a); sibling duodenal_ulcer excluded
-    its anatomical Duodenum GOLD parent in #2265.'
+    disease/lesion concept (with empty object_id in curation/decisions.tsv row 2475
+    and no xrefs), not an anatomical subtype (is_a) of the human Esophagus (habitatmech:GOLD.974cd3759a);
+    sibling duodenal_ulcer excluded its anatomical Duodenum GOLD parent in #2265.'
   target_ids:
   - habitatmech:GOLD.45b27bdccd
   evidence_ids:

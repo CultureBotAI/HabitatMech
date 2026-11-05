@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted BacDive record habitatmech:BACDIVE.09c3544e85 (equid-associated environment, BacDive: Equidae-Horse, UNGROUNDED/REVIEWED, 250 STRAIN assertions, 30 characteristic taxa) is defined under ENVO:01001002 (animal-associated environment) with NCBITaxon:9796 xref, but retains host-name 'Equidae-Horse' as an EXACT_SYNONYM from both HabitatMech curation and BacDive.
+The minted BacDive record habitatmech:BACDIVE.09c3544e85 (equid-associated environment, BacDive: Equidae-Horse, UNGROUNDED/REVIEWED, 269 STRAIN assertions, 25 characteristic taxa from candidate_pool: 124) is defined under ENVO:01001002 (animal-associated environment) with upstream NCBITaxon:9788 noted as a non-habitat mapping, but retains host-taxon label 'Equidae-Horse' as an EXACT_SYNONYM from HabitatMech curation.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:BACDIVE.09c3544e85.
 
-Under HabitatMech's host-identity rule, a host organism/taxon label ('Equidae-Horse') is not an exact synonym of an organism-associated environment ('equid-associated environment'); sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat) cleared exact_synonym in curation/term_requests.tsv and added guard rows in curation/definition_source_label_exclusions.tsv so the BacDive host label is scoped as RELATED_SYNONYM.
+Under HabitatMech's host-identity rule, a host organism/taxon label ('Equidae-Horse') is not an exact synonym of an organism-associated environment ('equid-associated environment'); sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat) cleared exact_synonym in curation/term_requests.tsv and added guard rows in curation/definition_source_label_exclusions.tsv so automatic retention of the displaced BacDive host label in synonyms is suppressed (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
 
 ### Source counts and retained ranking
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: equidae-horse-host-name-exact-synonym.
 
-Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv so BacDive 'Equidae-Horse' is scoped as RELATED_SYNONYM rather than EXACT_SYNONYM, matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat).
+Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv so automatic retention of the displaced BacDive host label 'Equidae-Horse' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv so BacDive 'Equidae-Horse' is scoped as RELATED_SYNONYM rather than EXACT_SYNONYM, matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat). No repair is performed by this read-only review.
+Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv so automatic retention of the displaced BacDive host label 'Equidae-Horse' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -94,9 +94,9 @@ Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv for habit
 | ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, bodily fluids, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
 | ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
 | ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=habitatmech:BACDIVE.09c3544e85, grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:01001002"]. |
-| ESIB1 | data/habitats/host_associated/bovinae_cow_cattle.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.a4a67c4a7f (bovine-associated environment) where exact_synonym was cleared and 'Bovinae-Cow, cattle' was scoped as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv. |
-| ESIB2 | data/habitats/host_associated/canidae_dog.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.33fde10528 (canid-associated environment) where exact_synonym was cleared and 'Canidae-Dog' was scoped as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv. |
-| ESIB3 | data/habitats/host_associated/caprinae_sheep_goat.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.4d3086a839 (caprine-associated environment) where exact_synonym was cleared and 'Caprinae-Sheep, goat' was scoped as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv. |
+| ESIB1 | data/habitats/host_associated/bovinae_cow_cattle.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.a4a67c4a7f (bovine-associated environment) where exact_synonym was cleared and displaced source label 'Bovinae-Cow,-Cattle' was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv. |
+| ESIB2 | data/habitats/host_associated/canidae_dog.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.33fde10528 (canid-associated environment) where exact_synonym was cleared and displaced source label 'Canidae-Dog' was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv. |
+| ESIB3 | data/habitats/host_associated/caprinae_sheep_goat.yaml; Entire YAML | supports | Sibling BacDive host-bucket record habitatmech:BACDIVE.4d3086a839 (caprine-associated environment) where exact_synonym was cleared and displaced source label 'Caprinae-Sheep,-Goat' was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv. |
 | EBACDIVE | data/raw/bacdive_isolation_sources.tsv; TSV rows 47 | supports | [{"data": {"bacdive_id": "bacdive.isolation_source:equidae-horse", "label": "Equidae-Horse", "source_slug": "equidae-horse", "strain_count": "269", "taxon_count": "124"}, "row": 47}] |
 | EGROUND | data/raw/isolation_source_groundings.tsv; TSV rows 106 | supports | [{"data": {"confidence": "medium", "curator": "ols4_auto", "mapping_justification": "semapv:LexicalMatching", "object_id": "NCBITaxon:9788", "object_label": "Equidae", "object_source": "NCBITaxon", "predicate_id": "skos:closeMatch", "source_dataset": "bacdive", "subject_label": "Equidae-Horse", "subject_label_normalized": "equidae horse", "verified_date": "2026-05-01"}, "row": 106}] |
 | EONT | data/raw/ontology_terms.tsv; TSV rows 8491 | supports | [{"data": {"definition": "An environmental system determined by an animal.", "deprecated": "", "directly_referenced": "TRUE", "label": "animal-associated environment", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "Metazoan-associated environment&#124;animal environment", "term_id": "ENVO:01001002"}, "row": 8491}] |
@@ -141,10 +141,11 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted BacDive record habitatmech:BACDIVE.09c3544e85 (equid-associated
-  environment, BacDive: Equidae-Horse, UNGROUNDED/REVIEWED, 250 STRAIN assertions,
-  30 characteristic taxa) is defined under ENVO:01001002 (animal-associated environment)
-  with NCBITaxon:9796 xref, but retains host-name ''Equidae-Horse'' as an EXACT_SYNONYM
-  from both HabitatMech curation and BacDive.'
+  environment, BacDive: Equidae-Horse, UNGROUNDED/REVIEWED, 269 STRAIN assertions,
+  25 characteristic taxa from candidate_pool: 124) is defined under ENVO:01001002
+  (animal-associated environment) with upstream NCBITaxon:9788 noted as a non-habitat
+  mapping, but retains host-taxon label ''Equidae-Horse'' as an EXACT_SYNONYM from
+  HabitatMech curation.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -412,8 +413,8 @@ evidence:
   accessed_at: '2026-11-05T05:15:19Z'
   support: supports
   summary: Sibling BacDive host-bucket record habitatmech:BACDIVE.a4a67c4a7f (bovine-associated
-    environment) where exact_synonym was cleared and 'Bovinae-Cow, cattle' was scoped
-    as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    environment) where exact_synonym was cleared and displaced source label 'Bovinae-Cow,-Cattle'
+    was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
   snapshot_sha256: 2f7e0000d47e33359ddf75fdd86e95f552162165bf23239d37e6579639948fbd
 - evidence_id: ESIB2
   kind: record_content
@@ -422,8 +423,8 @@ evidence:
   accessed_at: '2026-11-05T05:15:19Z'
   support: supports
   summary: Sibling BacDive host-bucket record habitatmech:BACDIVE.33fde10528 (canid-associated
-    environment) where exact_synonym was cleared and 'Canidae-Dog' was scoped as RELATED_SYNONYM
-    via curation/definition_source_label_exclusions.tsv.
+    environment) where exact_synonym was cleared and displaced source label 'Canidae-Dog'
+    was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
   snapshot_sha256: 87552b6a21a0c1b436ff9e38322f21fa5c657e3c23eb4b0aaf56e62b32c03172
 - evidence_id: ESIB3
   kind: record_content
@@ -432,8 +433,8 @@ evidence:
   accessed_at: '2026-11-05T05:15:19Z'
   support: supports
   summary: Sibling BacDive host-bucket record habitatmech:BACDIVE.4d3086a839 (caprine-associated
-    environment) where exact_synonym was cleared and 'Caprinae-Sheep, goat' was scoped
-    as RELATED_SYNONYM via curation/definition_source_label_exclusions.tsv.
+    environment) where exact_synonym was cleared and displaced source label 'Caprinae-Sheep,-Goat'
+    was omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) via curation/definition_source_label_exclusions.tsv.
   snapshot_sha256: abc9056f4b86556c0e319fc6d3b4c2bf6245f9a90565a5b14fa5c94dc6c4d0e2
 - evidence_id: EBACDIVE
   kind: database
@@ -570,8 +571,9 @@ assessments:
     is not an exact synonym of an organism-associated environment ('equid-associated
     environment'); sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog,
     caprinae_sheep_goat) cleared exact_synonym in curation/term_requests.tsv and added
-    guard rows in curation/definition_source_label_exclusions.tsv so the BacDive host
-    label is scoped as RELATED_SYNONYM.
+    guard rows in curation/definition_source_label_exclusions.tsv so automatic retention
+    of the displaced BacDive host label in synonyms is suppressed (SOURCE_SYNONYM_EXCLUDED)
+    while preserving verbatim source_attestations.
   target_ids:
   - habitatmech:BACDIVE.09c3544e85
   evidence_ids:
@@ -635,11 +637,12 @@ findings:
   certainty: confirmed
   title: Equid-associated environment asserts host-taxon label 'Equidae-Horse' as
     an exact synonym
-  description: Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv
+  description: 'Clear ''Equidae-Horse'' from exact_synonym in curation/term_requests.tsv
     for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    so BacDive 'Equidae-Horse' is scoped as RELATED_SYNONYM rather than EXACT_SYNONYM,
-    matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog,
-    caprinae_sheep_goat).
+    so automatic retention of the displaced BacDive host label ''Equidae-Horse'' as
+    an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving
+    verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive
+    host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat).'
   target_ids:
   - habitatmech:BACDIVE.09c3544e85
   field_paths:
@@ -684,11 +687,13 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/definition_source_label_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Clear 'Equidae-Horse' from exact_synonym in curation/term_requests.tsv
+  description: 'Clear ''Equidae-Horse'' from exact_synonym in curation/term_requests.tsv
     for habitatmech:BACDIVE.09c3544e85 and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    so BacDive 'Equidae-Horse' is scoped as RELATED_SYNONYM rather than EXACT_SYNONYM,
-    matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog,
-    caprinae_sheep_goat). No repair is performed by this read-only review.
+    so automatic retention of the displaced BacDive host label ''Equidae-Horse'' as
+    an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving
+    verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive
+    host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat). No
+    repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0000959 (esophagus, EXACT/SEEDED, 2 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000959 with its vendored definition, exact synonyms, and 2 literature-mined taxon associations.
+The PREGO-attested record BTO:0000959 (esophagus, EXACT/SEEDED, 2 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000959 with its vendored definition, 9 PREGO RELATED_SYNONYMs (no EXACT_SYNONYMs), and 2 literature-mined taxon associations.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000959.
 
-BTO:0000959 (esophagus) is an exact anatomical organ habitat identity with no subclass edge in the vendored ontology slice and 2 retained PREGO taxon associations.
+BTO:0000959 (esophagus) is an exact anatomical organ habitat identity with no subclass edge in the vendored ontology slice, 9 PREGO RELATED_SYNONYMs, and 2 retained PREGO taxon associations.
 
 ### Source counts and retained ranking
 
@@ -123,7 +123,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: The PREGO-attested record BTO:0000959 (esophagus, EXACT/SEEDED, 2 TAXON assertions)
   is coherently grounded to BRENDA Tissue Ontology term BTO:0000959 with its vendored
-  definition, exact synonyms, and 2 literature-mined taxon associations.
+  definition, 9 PREGO RELATED_SYNONYMs (no EXACT_SYNONYMs), and 2 literature-mined
+  taxon associations.
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -433,7 +434,8 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: BTO:0000959 (esophagus) is an exact anatomical organ habitat identity with
-    no subclass edge in the vendored ontology slice and 2 retained PREGO taxon associations.
+    no subclass edge in the vendored ontology slice, 9 PREGO RELATED_SYNONYMs, and
+    2 retained PREGO taxon associations.
   target_ids:
   - BTO:0000959
   evidence_ids:

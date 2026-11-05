@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.b5205a5f5b (Esophagus in Host-associated &gt; Fish &gt; Digestive system &gt; Foregut &gt; Esophagus, NARROW/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-subdivision piscine Foregut parent habitatmech:GOLD.52f22e84ee as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.b5205a5f5b (Esophagus in Host-associated &gt; Fish &gt; Digestive system &gt; Foregut &gt; Esophagus, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-subdivision piscine Foregut parent habitatmech:GOLD.52f22e84ee as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -149,7 +149,7 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.b5205a5f5b (Esophagus in Host-associated
-  > Fish > Digestive system > Foregut > Esophagus, NARROW/REVIEWED, no assertion count/unit;
+  > Fish > Digestive system > Foregut > Esophagus, NARROW/SEEDED, no assertion count/unit;
   total_assertions: 0 in GOLD) retains whole-subdivision piscine Foregut parent habitatmech:GOLD.52f22e84ee
   as a superclass and exhibits the #1398 narrow-match mapping_predicate representation
   contract defect.'

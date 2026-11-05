@@ -21,7 +21,7 @@ summary: 'Full 24-record category boundary and cohort review of the contiguous u
   host_associated slice (epicuticular_wax.yaml through excretory_system.yaml) at commit
   215b23c90244e634e64f88fa2c1a2a3bb011880a. All 24 records represent distinct host-clade,
   anatomical, bodily-fluid, lesion, plant-surface, cell-type, or cell-line concepts
-  (retain decisions). Record-level open findings (22 total across 14 records) are
+  (retain decisions). Record-level open findings (23 total across 14 records) are
   recorded in the 24 linked kind: record bundles for Stage 5 remediation.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
@@ -1554,7 +1554,7 @@ assessments:
   area: grounding
   topic: Cohort hierarchy, synonym, and mapping-endpoint summary
   outcome: supported
-  summary: '10 records pass with limitations; 14 records have 22 open major findings
+  summary: '10 records pass with limitations; 14 records have 23 open major findings
     recorded in their respective kind: record bundles (linked in related_reviews)
     and carried forward to Stage 5 grouped remediation.'
   target_ids:
@@ -1809,7 +1809,7 @@ limitations:
   or characteristic presence.
 - Configured label correspondence skipped 2,077 no-adapter pairs; this is not whole-corpus
   identifier certification.
-- 'Record-specific open findings (22 across 14 records: 12 grounding/hierarchy defects,
+- 'Record-specific open findings (23 across 14 records: 13 grounding/hierarchy defects,
   2 nomenclature exact_synonyms/grounding-scope defects, and 8 #1398 mapping-endpoint
   contract defects) are recorded on their respective kind: record bundles in related_reviews
   so each issue_key has a single authoritative open owner for Stage 5 remediation.'

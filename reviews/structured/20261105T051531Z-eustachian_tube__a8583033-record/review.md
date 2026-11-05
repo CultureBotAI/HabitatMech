@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.2127bae21d (Eustachian tube in Host-associated &gt; Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear &gt; Eustachian tube, NARROW/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) retains human Middle ear parent habitatmech:GOLD.51e593a6a4 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.2127bae21d (Eustachian tube in Host-associated &gt; Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear &gt; Eustachian tube, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains human Middle ear parent habitatmech:GOLD.51e593a6a4 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -149,7 +149,7 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.2127bae21d (Eustachian tube in Host-associated
-  > Mammals: Human > Auditory/Hearing system > Middle ear > Eustachian tube, NARROW/REVIEWED,
+  > Mammals: Human > Auditory/Hearing system > Middle ear > Eustachian tube, NARROW/SEEDED,
   no assertion count/unit; total_assertions: 0 in GOLD) retains human Middle ear parent
   habitatmech:GOLD.51e593a6a4 as a superclass and exhibits the #1398 narrow-match
   mapping_predicate representation contract defect.'

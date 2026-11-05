@@ -11,7 +11,7 @@
 
 ## Summary
 
-The multi-source record BTO:0000424 (erythrocyte, EXACT/REVIEWED, GOLD: 11 ORGANISM assertions and PREGO: 4 TAXON assertions) maps GOLD 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocyte' and PREGO BTO:0000424 under BTO:0000574 (hematopoietic cell), but retains the human Blood GOLD parent (habitatmech:GOLD.d25ff4a586) as a superclass.
+The multi-source record BTO:0000424 (erythrocyte, EXACT/REVIEWED, GOLD: 1 ORGANISM assertion and PREGO: 11 TAXON assertions) maps GOLD 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocytes' (source concept habitatmech:GOLD.6ee13ba963) and PREGO BTO:0000424 under BTO:0000574 (hematopoietic cell), but retains the human Blood GOLD parent (habitatmech:GOLD.d25ff4a586) as a superclass.
 
 ## Scope And Provenance
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: erythrocyte-context-parent.
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.efab5f873a on GOLD path 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocyte' (exact target BTO:0000424) excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent BTO:0000574 (hematopoietic cell).
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.6ee13ba963 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocytes' (exact target BTO:0000424) excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent BTO:0000574 (hematopoietic cell).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.efab5f873a on GOLD path 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocyte' (exact target BTO:0000424) excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent BTO:0000574 (hematopoietic cell). No repair is performed by this read-only review.
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.6ee13ba963 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Circulatory system &gt; Blood &gt; Erythrocytes' (exact target BTO:0000424) excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent BTO:0000574 (hematopoietic cell). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -139,10 +139,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The multi-source record BTO:0000424 (erythrocyte, EXACT/REVIEWED, GOLD:
-  11 ORGANISM assertions and PREGO: 4 TAXON assertions) maps GOLD ''Host-associated
-  > Mammals: Human > Circulatory system > Blood > Erythrocyte'' and PREGO BTO:0000424
-  under BTO:0000574 (hematopoietic cell), but retains the human Blood GOLD parent
-  (habitatmech:GOLD.d25ff4a586) as a superclass.'
+  1 ORGANISM assertion and PREGO: 11 TAXON assertions) maps GOLD ''Host-associated
+  > Mammals: Human > Circulatory system > Blood > Erythrocytes'' (source concept habitatmech:GOLD.6ee13ba963)
+  and PREGO BTO:0000424 under BTO:0000574 (hematopoietic cell), but retains the human
+  Blood GOLD parent (habitatmech:GOLD.d25ff4a586) as a superclass.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -596,8 +596,8 @@ findings:
   certainty: confirmed
   title: Erythrocyte retains human Blood GOLD parent as a superclass
   description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.efab5f873a on GOLD path ''Host-associated > Mammals:
-    Human > Circulatory system > Blood > Erythrocyte'' (exact target BTO:0000424)
+    identifier habitatmech:GOLD.6ee13ba963 on GOLD path ''Host-associated > Mammals:
+    Human > Circulatory system > Blood > Erythrocytes'' (exact target BTO:0000424)
     excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent
     BTO:0000574 (hematopoietic cell).'
   target_ids:
@@ -637,8 +637,8 @@ actions:
     path: curation/gold_parent_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
   description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
-    identifier habitatmech:GOLD.efab5f873a on GOLD path ''Host-associated > Mammals:
-    Human > Circulatory system > Blood > Erythrocyte'' (exact target BTO:0000424)
+    identifier habitatmech:GOLD.6ee13ba963 on GOLD path ''Host-associated > Mammals:
+    Human > Circulatory system > Blood > Erythrocytes'' (exact target BTO:0000424)
     excluding parent_id habitatmech:GOLD.d25ff4a586 (Blood), preserving ontology parent
     BTO:0000574 (hematopoietic cell). No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded

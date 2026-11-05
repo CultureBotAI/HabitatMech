@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.974cd3759a (Esophagus in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Esophagus, NARROW/REVIEWED, 19 ORGANISM assertions) retains whole-organ-system human Digestive system parent habitatmech:GOLD.f6720bccf0 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.974cd3759a (Esophagus in Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Esophagus, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-organ-system human Digestive system parent habitatmech:GOLD.f6720bccf0 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -149,10 +149,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.974cd3759a (Esophagus in Host-associated
-  > Mammals: Human > Digestive system > Esophagus, NARROW/REVIEWED, 19 ORGANISM assertions)
-  retains whole-organ-system human Digestive system parent habitatmech:GOLD.f6720bccf0
-  as a superclass and exhibits the #1398 narrow-match mapping_predicate representation
-  contract defect.'
+  > Mammals: Human > Digestive system > Esophagus, NARROW/SEEDED, no assertion count/unit;
+  total_assertions: 0 in GOLD) retains whole-organ-system human Digestive system parent
+  habitatmech:GOLD.f6720bccf0 as a superclass and exhibits the #1398 narrow-match
+  mapping_predicate representation contract defect.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit

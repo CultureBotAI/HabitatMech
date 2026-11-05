@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.b2fc8fb1e4 (Esophagus in Host-associated &gt; Birds &gt; Digestive system &gt; Esophagus, NARROW/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-organ-system avian Digestive system parent habitatmech:GOLD.fb6caa2908 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.b2fc8fb1e4 (Esophagus in Host-associated &gt; Birds &gt; Digestive system &gt; Esophagus, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-organ-system avian Digestive system parent habitatmech:GOLD.fb6caa2908 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -149,7 +149,7 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.b2fc8fb1e4 (Esophagus in Host-associated
-  > Birds > Digestive system > Esophagus, NARROW/REVIEWED, no assertion count/unit;
+  > Birds > Digestive system > Esophagus, NARROW/SEEDED, no assertion count/unit;
   total_assertions: 0 in GOLD) retains whole-organ-system avian Digestive system parent
   habitatmech:GOLD.fb6caa2908 as a superclass and exhibits the #1398 narrow-match
   mapping_predicate representation contract defect.'

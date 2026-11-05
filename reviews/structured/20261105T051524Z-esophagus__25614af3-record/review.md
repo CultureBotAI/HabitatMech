@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.5d6c618e63 (Esophagus in Host-associated &gt; Arthropoda: Crustaceans &gt; Digestive system &gt; Foregut &gt; Esophagus, NARROW/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-subdivision crustacean Foregut parent habitatmech:GOLD.fe78a4c113 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.5d6c618e63 (Esophagus in Host-associated &gt; Arthropoda: Crustaceans &gt; Digestive system &gt; Foregut &gt; Esophagus, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains whole-subdivision crustacean Foregut parent habitatmech:GOLD.fe78a4c113 as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -149,7 +149,7 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.5d6c618e63 (Esophagus in Host-associated
-  > Arthropoda: Crustaceans > Digestive system > Foregut > Esophagus, NARROW/REVIEWED,
+  > Arthropoda: Crustaceans > Digestive system > Foregut > Esophagus, NARROW/SEEDED,
   no assertion count/unit; total_assertions: 0 in GOLD) retains whole-subdivision
   crustacean Foregut parent habitatmech:GOLD.fe78a4c113 as a superclass and exhibits
   the #1398 narrow-match mapping_predicate representation contract defect.'

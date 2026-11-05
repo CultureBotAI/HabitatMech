@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.3a0549cbd8 (Excretory system in Host-associated &gt; Arthropoda: Insects &gt; Excretory system, NARROW/REVIEWED, 1 ORGANISM assertion) is placed under UBERON:0001008 (renal system) with parent_mode REPLACE in curation/term_requests.tsv, but exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.3a0549cbd8 (Excretory system in Host-associated &gt; Arthropoda: Insects &gt; Excretory system, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) is placed under UBERON:8450002 (excretory system), but retains the whole-host-environment GOLD parent habitatmech:GOLD.dba2a83b95 (insect-associated environment) as a superclass and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 862 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.3a0549cbd8.
 
-The record defines insect excretory system under UBERON:0001008 (renal system, exact synonym 'excretory system') with parent_mode REPLACE to exclude whole-clade insect parent habitatmech:GOLD.350763da7c, but carries mapping_predicate skos:narrowMatch while its emitted identifier is the minted source concept (#1398).
+The insect excretory system (under UBERON:8450002, excretory system) is an internal anatomical organ system (part_of the insect host), not a subtype (is_a) of the whole-host insect-associated environment (habitatmech:GOLD.dba2a83b95, Host-associated &gt; Arthropoda: Insects), and the record carries mapping_predicate skos:narrowMatch while its emitted identifier is the minted source concept (#1398).
 
 ### Source counts and retained ranking
 
@@ -67,17 +67,31 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 ## Findings
 
-### F1: Narrow mapping predicate points to a minted source-path record
+### F1: Insect Excretory system retains whole-host insect-associated environment GOLD parent as a superclass
+
+major / open / confirmed; issue key: excretory-system-context-parent.
+
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.3a0549cbd8 on GOLD path 'Host-associated &gt; Arthropoda: Insects &gt; Excretory system' (exact target habitatmech:GOLD.3a0549cbd8) excluding parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment), preserving broader ontology parent UBERON:8450002 (excretory system).
+
+### F2: Narrow mapping predicate points to a minted source-path record
 
 major / open / confirmed; issue key: excretory-system-mapping-endpoint-contract.
 
-Reconcile narrow-match source-attestation output with the endpoint contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated &gt; Arthropoda: Insects &gt; Excretory system) and its broader ontology parent UBERON:0001008 (renal system).
+Reconcile narrow-match source-attestation output with the endpoint contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated &gt; Arthropoda: Insects &gt; Excretory system) and its broader ontology parent UBERON:8450002 (excretory system).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Reconcile narrow-match source-attestation output with the endpoint contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated &gt; Arthropoda: Insects &gt; Excretory system) and its broader ontology parent UBERON:0001008 (renal system). No repair is performed by this read-only review.
+Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.3a0549cbd8 on GOLD path 'Host-associated &gt; Arthropoda: Insects &gt; Excretory system' (exact target habitatmech:GOLD.3a0549cbd8) excluding parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment), preserving broader ontology parent UBERON:8450002 (excretory system). No repair is performed by this read-only review.
+
+- Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
+- Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
+- Reassess the changed record in an immutable successor retaining this issue key and exact predecessor lineage.
+
+### ACT2
+
+Reconcile narrow-match source-attestation output with the endpoint contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated &gt; Arthropoda: Insects &gt; Excretory system) and its broader ontology parent UBERON:8450002 (excretory system). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -135,10 +149,11 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.3a0549cbd8 (Excretory system in
-  Host-associated > Arthropoda: Insects > Excretory system, NARROW/REVIEWED, 1 ORGANISM
-  assertion) is placed under UBERON:0001008 (renal system) with parent_mode REPLACE
-  in curation/term_requests.tsv, but exhibits the #1398 narrow-match mapping_predicate
-  representation contract defect.'
+  Host-associated > Arthropoda: Insects > Excretory system, NARROW/SEEDED, no assertion
+  count/unit; total_assertions: 0 in GOLD) is placed under UBERON:8450002 (excretory
+  system), but retains the whole-host-environment GOLD parent habitatmech:GOLD.dba2a83b95
+  (insect-associated environment) as a superclass and exhibits the #1398 narrow-match
+  mapping_predicate representation contract defect.'
 source:
   git_revision: 215b23c90244e634e64f88fa2c1a2a3bb011880a
   state: git_commit
@@ -466,10 +481,11 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
-  summary: The record defines insect excretory system under UBERON:0001008 (renal
-    system, exact synonym 'excretory system') with parent_mode REPLACE to exclude
-    whole-clade insect parent habitatmech:GOLD.350763da7c, but carries mapping_predicate
-    skos:narrowMatch while its emitted identifier is the minted source concept (#1398).
+  summary: 'The insect excretory system (under UBERON:8450002, excretory system) is
+    an internal anatomical organ system (part_of the insect host), not a subtype (is_a)
+    of the whole-host insect-associated environment (habitatmech:GOLD.dba2a83b95,
+    Host-associated > Arthropoda: Insects), and the record carries mapping_predicate
+    skos:narrowMatch while its emitted identifier is the minted source concept (#1398).'
   target_ids:
   - habitatmech:GOLD.3a0549cbd8
   evidence_ids:
@@ -514,6 +530,41 @@ assessments:
   - ESCHEMA
 findings:
 - finding_id: F1
+  issue_key: excretory-system-context-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Insect Excretory system retains whole-host insect-associated environment
+    GOLD parent as a superclass
+  description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
+    identifier habitatmech:GOLD.3a0549cbd8 on GOLD path ''Host-associated > Arthropoda:
+    Insects > Excretory system'' (exact target habitatmech:GOLD.3a0549cbd8) excluding
+    parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment), preserving
+    broader ontology parent UBERON:8450002 (excretory system).'
+  target_ids:
+  - habitatmech:GOLD.3a0549cbd8
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - EGOLD
+  - EONT
+  - EONTEDGE
+  - EP2
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Materially unsupported semantic or representation claim; deterministic
+    validity does not establish scientific support.
+  external_issues: []
+- finding_id: F2
   issue_key: excretory-system-mapping-endpoint-contract
   category: representation
   severity: major
@@ -522,8 +573,8 @@ findings:
   title: Narrow mapping predicate points to a minted source-path record
   description: 'Reconcile narrow-match source-attestation output with the endpoint
     contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated
-    > Arthropoda: Insects > Excretory system) and its broader ontology parent UBERON:0001008
-    (renal system).'
+    > Arthropoda: Insects > Excretory system) and its broader ontology parent UBERON:8450002
+    (excretory system).'
   target_ids:
   - habitatmech:GOLD.3a0549cbd8
   field_paths:
@@ -564,6 +615,31 @@ actions:
   - habitatmech:GOLD.3a0549cbd8
   owner_paths:
   - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  description: 'Add an exclusion row in curation/gold_parent_exclusions.tsv for source
+    identifier habitatmech:GOLD.3a0549cbd8 on GOLD path ''Host-associated > Arthropoda:
+    Insects > Excretory system'' (exact target habitatmech:GOLD.3a0549cbd8) excluding
+    parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment), preserving
+    broader ontology parent UBERON:8450002 (excretory system). No repair is performed
+    by this read-only review.'
+  generator: Controlled source/curation update in Stage 5, then just seed, guarded
+    just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
+    regeneration.
+  acceptance_checks:
+  - Regress the exact reported claim and preserve independently valid identifiers,
+    source counts/units, raw provenance, native status and history.
+  - Append the authorized curation history and require schema, strict, provenance,
+    history, corpus, label, site and full QC gates.
+  - Reassess the changed record in an immutable successor retaining this issue key
+    and exact predecessor lineage.
+- action_id: ACT2
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.3a0549cbd8
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
     path: src/habitatmech/seed.py
     role: Maintained input or generator; never patch generated habitat YAML
   - repository: CultureBotAI/HabitatMech
@@ -574,8 +650,8 @@ actions:
     role: Maintained input or generator; never patch generated habitat YAML
   description: 'Reconcile narrow-match source-attestation output with the endpoint
     contract tracked in Issue #1398 for habitatmech:GOLD.3a0549cbd8 (Host-associated
-    > Arthropoda: Insects > Excretory system) and its broader ontology parent UBERON:0001008
-    (renal system). No repair is performed by this read-only review.'
+    > Arthropoda: Insects > Excretory system) and its broader ontology parent UBERON:8450002
+    (excretory system). No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.
