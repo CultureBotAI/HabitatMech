@@ -16,11 +16,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Removed the guarded GOLD whole-tissue context-parent contribution habitatmech:GOLD.413ed320eb
+summary: Removed the guarded GOLD whole-tissue context-parent contribution habitatmech:GOLD.d25ff4a586
   (Blood) for source concept habitatmech:GOLD.6ee13ba963 via curation/gold_parent_exclusions.tsv
-  (#2295), preserving broader ontology parent BTO:0000089 (blood cell). Identity (BTO:0000424,
-  'erythrocyte'), native REVIEWED/EXACT status, and source observations are preserved.
-  No unresolved predecessor finding remains in this target scope.
+  (#2295), preserving broader ontology parent BTO:0000574 (hematopoietic cell). Identity
+  (BTO:0000424, 'erythrocyte'), native REVIEWED/EXACT status, and source observations
+  are preserved. No unresolved predecessor finding remains in this target scope.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -479,8 +479,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:04Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051520Z-erythrocyte-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -566,11 +567,12 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'BTO:0000424: erythrocyte; EXACT/REVIEWED; parents ["BTO:0000574"]. Removed
-    the guarded GOLD whole-tissue context-parent contribution habitatmech:GOLD.413ed320eb
+    the guarded GOLD whole-tissue context-parent contribution habitatmech:GOLD.d25ff4a586
     (Blood) for source concept habitatmech:GOLD.6ee13ba963 via curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent BTO:0000089 (blood cell). Identity
-    (BTO:0000424, ''erythrocyte''), native REVIEWED/EXACT status, and source observations
-    are preserved. No unresolved predecessor finding remains in this target scope.'
+    (#2295), preserving broader ontology parent BTO:0000574 (hematopoietic cell).
+    Identity (BTO:0000424, ''erythrocyte''), native REVIEWED/EXACT status, and source
+    observations are preserved. No unresolved predecessor finding remains in this
+    target scope.'
   target_ids:
   - BTO:0000424
   evidence_ids:
@@ -722,9 +724,9 @@ findings:
     review_id: 20261105T051520Z-erythrocyte-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-tissue context-parent contribution
-    habitatmech:GOLD.413ed320eb (Blood) for source concept habitatmech:GOLD.6ee13ba963
+    habitatmech:GOLD.d25ff4a586 (Blood) for source concept habitatmech:GOLD.6ee13ba963
     in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent
-    BTO:0000089 (blood cell).
+    BTO:0000574 (hematopoietic cell).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

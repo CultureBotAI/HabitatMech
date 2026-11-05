@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.d93192605f (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d), native REVIEWED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.51e593a6a4 (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 864 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.2127bae21d.
 
-habitatmech:GOLD.2127bae21d: Eustachian tube; NARROW/SEEDED; parents ["UBERON:0002393"]. Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.d93192605f (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d), native REVIEWED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+habitatmech:GOLD.2127bae21d: Eustachian tube; NARROW/SEEDED; parents ["UBERON:0002393"]. Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.51e593a6a4 (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: eustachian-tube--a8583033-context-paren
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.2127bae21d on GOLD path 'Host-associated &gt; Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear &gt; Eustachian tube' (exact target habitatmech:GOLD.2127bae21d) excluding parent_id habitatmech:GOLD.51e593a6a4 (Middle ear), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube).
 
-Disposition: Excluded only the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.d93192605f (Middle ear) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube).
+Disposition: Excluded only the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.51e593a6a4 (Middle ear) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
@@ -117,7 +117,7 @@ Reconcile narrow-match source-attestation output with the endpoint contract trac
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13150 | supports | [{"data": {"definition": "Organ with organ cavity which connects the cavity of the middle ear to the cavity of the pharynx. Examples: There are only two pharyngotympanic tubes, the right and the left pharyngotympanic tubes.[FMA].", "deprecated": "", "directly_referenced": "FALSE", "label": "pharyngotympanic tube", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "auditory tube&#124;eustachian tube&#124;internal auditory tube&#124;pharyngo-tympanic tube&#124;tuba auditiva&#124;tuba auditiva; tuba auditoria; tuba auditivea&#124;tuba auditoria&#124;tuba pharyngotympanica", "term_id": "UBERON:0002393"}, "row": 13150}] |
 | EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 11384 | supports | [{"data": {"object": "UBERON:0000062", "predicate": "rdfs:subClassOf", "subject": "UBERON:0002393"}, "row": 11384}] |
 | EP2 | data/habitats/host_associated/middle_ear__53ce949a.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.51e593a6a4", "label": "Middle ear", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0001756", "habitatmech:GOLD.b842078e17"], "source_attestations": [{"assertion_count": 55, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:6268", "source_label": "Middle ear", "source_path": "Host-associated &gt; Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear"}]} |
-| ESEARCH | Local input and review traversal; grep -rn -E 'eustachian_tube__a8583033&#124;habitatmech:GOLD.2127bae21d' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+| ESEARCH | Local input and review traversal; grep -rn -E 'eustachian_tube__a8583033&#124;habitatmech:GOLD.2127bae21d' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal located Stage 4 predecessor bundle 20261105T051531Z-eustachian_tube__a8583033-record (linked via EPREV and related_reviews) and checked related cohort and ancestor reviews for reconciliation. |
 | EPREV | reviews/structured/20261105T051531Z-eustachian_tube__a8583033-record/review.yaml; Every immutable Stage 4 baseline finding | supports | Exact predecessor keys and findings reconciled; original inspected source scope preserved. |
 | ETEST | tests/test_epicuticular_wax_to_excretory_system_review_repairs.py; Complete full-corpus counterfactual regression suite | supports | Exactly fourteen records differ from the counterfactual baseline across Issues #2295 and #2296. |
 | EPARENTS | curation/gold_parent_exclusions.tsv; TSV line 13 | supports | [[13, "habitatmech:GOLD.2127bae21d\tHost-associated &gt; Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear &gt; Eustachian tube\thabitatmech:GOLD.51e593a6a4\tantigravity\t2026-11-05\tReview https://github.com/CultureBotAI/HabitatMech/issues/2295 : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.2127bae21d. Shared mapping endpoints #1398 remain separate."]] |
@@ -156,11 +156,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.d93192605f
+summary: Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.51e593a6a4
   (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
   ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d),
-  native REVIEWED/NARROW status, and source observations are preserved. The global
-  NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+  native SEEDED/NARROW status, and source observations are preserved. The global NARROW
+  source-attestation endpoint finding (#1398) remains explicitly open.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -542,8 +542,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:13Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051531Z-eustachian_tube__a8583033-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -625,10 +626,10 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: 'habitatmech:GOLD.2127bae21d: Eustachian tube; NARROW/SEEDED; parents ["UBERON:0002393"].
-    Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.d93192605f
+    Removed the guarded GOLD middle-ear context-parent contribution habitatmech:GOLD.51e593a6a4
     (Middle ear) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
     ontology parent UBERON:0002393 (pharyngotympanic tube). Identity (habitatmech:GOLD.2127bae21d),
-    native REVIEWED/NARROW status, and source observations are preserved. The global
+    native SEEDED/NARROW status, and source observations are preserved. The global
     NARROW source-attestation endpoint finding (#1398) remains explicitly open.'
   target_ids:
   - habitatmech:GOLD.2127bae21d
@@ -760,7 +761,7 @@ findings:
     review_id: 20261105T051531Z-eustachian_tube__a8583033-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD middle-ear context-parent contribution
-    habitatmech:GOLD.d93192605f (Middle ear) in curation/gold_parent_exclusions.tsv
+    habitatmech:GOLD.51e593a6a4 (Middle ear) in curation/gold_parent_exclusions.tsv
     (#2295), preserving broader ontology parent UBERON:0002393 (pharyngotympanic tube).
 - finding_id: F2
   issue_key: eustachian-tube--a8583033-mapping-endpoint-contract

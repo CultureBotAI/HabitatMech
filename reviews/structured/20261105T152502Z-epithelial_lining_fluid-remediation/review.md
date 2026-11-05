@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance). Identity (UBERON:0035963, 'epithelial lining fluid'), native REVIEWED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity (UBERON:0035963, 'epithelial lining fluid'), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 864 history records, 14 inventor
 
 identity: supported. Targets: UBERON:0035963.
 
-UBERON:0035963: epithelial lining fluid; EXACT/SEEDED; parents ["UBERON:0006314"]. Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance). Identity (UBERON:0035963, 'epithelial lining fluid'), native REVIEWED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
+UBERON:0035963: epithelial lining fluid; EXACT/SEEDED; parents ["UBERON:0006314"]. Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity (UBERON:0035963, 'epithelial lining fluid'), native SEEDED/EXACT status, and source observations are preserved. No unresolved predecessor finding remains in this target scope.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: epithelial-lining-fluid-context-parent.
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.bbe542f86d on GOLD path 'Host-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid' (exact target UBERON:0035963) excluding parent_id habitatmech:GOLD.e36ba981d1 (Respiratory system), preserving ontology parent UBERON:0006314 (bodily fluid).
 
-Disposition: Excluded only the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance).
+Disposition: Excluded only the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -101,7 +101,7 @@ Disposition: Excluded only the guarded GOLD whole-system context-parent contribu
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13288,13509 | supports | [{"data": {"definition": "Liquid components of living organisms. includes fluids that are excreted or secreted from the body as well as body water that normally is not.", "deprecated": "", "directly_referenced": "FALSE", "label": "bodily fluid", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "body fluid&#124;fluid", "term_id": "UBERON:0006314"}, "row": 13288}, {"data": {"definition": "Epithelial lining fluid forms a thin fluid layer that covers the mucosa of the alveoli, the small airways, and the large airways.", "deprecated": "", "directly_referenced": "FALSE", "label": "epithelial lining fluid", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "ELF", "term_id": "UBERON:0035963"}, "row": 13509}] |
 | EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 7005,11038,11080,11083,11158,11250,11275,11283,11559,11630,11632,11832 | supports | [{"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "ENVO:01001188"}, "row": 7005}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0000179"}, "row": 11038}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0000910"}, "row": 11080}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0000912"}, "row": 11083}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001089"}, "row": 11158}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001796"}, "row": 11250}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001913"}, "row": 11275}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001970"}, "row": 11283}, {"data": {"object": "UBERON:0000463", "predicate": "rdfs:subClassOf", "subject": "UBERON:0006314"}, "row": 11559}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0007779"}, "row": 11630}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0007794"}, "row": 11632}, {"data": {"object": "UBERON:0006314", "predicate": "rdfs:subClassOf", "subject": "UBERON:0035963"}, "row": 11832}] |
 | EP2 | data/habitats/host_associated/respiratory_system__c59e08b7.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.e36ba981d1", "label": "Respiratory system", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0001004", "habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"assertion_count": 2496, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3592", "source_label": "Respiratory system", "source_path": "Host-associated &gt; Mammals: Human &gt; Respiratory system"}]} |
-| ESEARCH | Local input and review traversal; grep -rn -E 'epithelial_lining_fluid&#124;UBERON:0035963' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+| ESEARCH | Local input and review traversal; grep -rn -E 'epithelial_lining_fluid&#124;UBERON:0035963' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal located Stage 4 predecessor bundle 20261105T051517Z-epithelial_lining_fluid-record (linked via EPREV and related_reviews) and checked related cohort and ancestor reviews for reconciliation. |
 | EPREV | reviews/structured/20261105T051517Z-epithelial_lining_fluid-record/review.yaml; Every immutable Stage 4 baseline finding | supports | Exact predecessor keys and findings reconciled; original inspected source scope preserved. |
 | ETEST | tests/test_epicuticular_wax_to_excretory_system_review_repairs.py; Complete full-corpus counterfactual regression suite | supports | Exactly fourteen records differ from the counterfactual baseline across Issues #2295 and #2296. |
 | EPARENTS | curation/gold_parent_exclusions.tsv; TSV line 3 | supports | [[3, "habitatmech:GOLD.bbe542f86d\tHost-associated &gt; Mammals: Human &gt; Respiratory system &gt; Epithelial lining fluid\thabitatmech:GOLD.e36ba981d1\tantigravity\t2026-11-05\tReview https://github.com/CultureBotAI/HabitatMech/issues/2295 : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0035963. Shared mapping endpoints #1398 remain separate."]] |
@@ -140,12 +140,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3
+summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1
   (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv
-  (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance).
-  Identity (UBERON:0035963, 'epithelial lining fluid'), native REVIEWED/EXACT status,
-  and source observations are preserved. No unresolved predecessor finding remains
-  in this target scope.
+  (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity
+  (UBERON:0035963, 'epithelial lining fluid'), native SEEDED/EXACT status, and source
+  observations are preserved. No unresolved predecessor finding remains in this target
+  scope.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -544,8 +544,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:02Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051517Z-epithelial_lining_fluid-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -627,12 +628,12 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'UBERON:0035963: epithelial lining fluid; EXACT/SEEDED; parents ["UBERON:0006314"].
-    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3
+    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1
     (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance).
-    Identity (UBERON:0035963, ''epithelial lining fluid''), native REVIEWED/EXACT
-    status, and source observations are preserved. No unresolved predecessor finding
-    remains in this target scope.'
+    (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity
+    (UBERON:0035963, ''epithelial lining fluid''), native SEEDED/EXACT status, and
+    source observations are preserved. No unresolved predecessor finding remains in
+    this target scope.'
   target_ids:
   - UBERON:0035963
   evidence_ids:
@@ -764,9 +765,9 @@ findings:
     review_id: 20261105T051517Z-epithelial_lining_fluid-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-system context-parent contribution
-    habitatmech:GOLD.4e80e44fb3 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d
+    habitatmech:GOLD.e36ba981d1 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d
     in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent
-    UBERON:0000174 (excreted substance).
+    UBERON:0006314 (bodily fluid).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

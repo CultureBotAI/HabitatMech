@@ -16,11 +16,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.46ad0b8ab1
-  (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
-  ontology parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.b5205a5f5b),
-  native SEEDED/NARROW status, and source observations are preserved. The global NARROW
-  source-attestation endpoint finding (#1398) remains explicitly open.
+summary: Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.52f22e84ee
+  (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology
+  parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.b5205a5f5b), native
+  SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation
+  endpoint finding (#1398) remains explicitly open.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -408,8 +408,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:07Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051525Z-esophagus__2ce9b1a3-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -491,9 +492,9 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: 'habitatmech:GOLD.b5205a5f5b: Esophagus; NARROW/SEEDED; parents ["UBERON:0001043"].
-    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.46ad0b8ab1
-    (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving
-    broader ontology parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.b5205a5f5b),
+    Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.52f22e84ee
+    (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
+    ontology parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.b5205a5f5b),
     native SEEDED/NARROW status, and source observations are preserved. The global
     NARROW source-attestation endpoint finding (#1398) remains explicitly open.'
   target_ids:
@@ -625,9 +626,9 @@ findings:
   - repository: CultureBotAI/HabitatMech
     review_id: 20261105T051525Z-esophagus__2ce9b1a3-record
     finding_id: F1
-  disposition_reason: Excluded only the guarded GOLD whole-system context-parent contribution
-    habitatmech:GOLD.46ad0b8ab1 (Digestive system) in curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent BTO:0000959 (esophagus).
+  disposition_reason: Excluded only the guarded GOLD whole-region context-parent contribution
+    habitatmech:GOLD.52f22e84ee (Foregut) in curation/gold_parent_exclusions.tsv (#2295),
+    preserving broader ontology parent UBERON:0001043 (esophagus).
 - finding_id: F2
   issue_key: esophagus--2ce9b1a3-mapping-endpoint-contract
   category: representation

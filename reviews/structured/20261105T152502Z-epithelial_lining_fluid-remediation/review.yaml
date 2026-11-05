@@ -16,12 +16,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3
+summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1
   (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv
-  (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance).
-  Identity (UBERON:0035963, 'epithelial lining fluid'), native REVIEWED/EXACT status,
-  and source observations are preserved. No unresolved predecessor finding remains
-  in this target scope.
+  (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity
+  (UBERON:0035963, 'epithelial lining fluid'), native SEEDED/EXACT status, and source
+  observations are preserved. No unresolved predecessor finding remains in this target
+  scope.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -420,8 +420,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:02Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051517Z-epithelial_lining_fluid-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -503,12 +504,12 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'UBERON:0035963: epithelial lining fluid; EXACT/SEEDED; parents ["UBERON:0006314"].
-    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.4e80e44fb3
+    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.e36ba981d1
     (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d via curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent UBERON:0000174 (excreted substance).
-    Identity (UBERON:0035963, ''epithelial lining fluid''), native REVIEWED/EXACT
-    status, and source observations are preserved. No unresolved predecessor finding
-    remains in this target scope.'
+    (#2295), preserving broader ontology parent UBERON:0006314 (bodily fluid). Identity
+    (UBERON:0035963, ''epithelial lining fluid''), native SEEDED/EXACT status, and
+    source observations are preserved. No unresolved predecessor finding remains in
+    this target scope.'
   target_ids:
   - UBERON:0035963
   evidence_ids:
@@ -640,9 +641,9 @@ findings:
     review_id: 20261105T051517Z-epithelial_lining_fluid-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-system context-parent contribution
-    habitatmech:GOLD.4e80e44fb3 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d
+    habitatmech:GOLD.e36ba981d1 (Respiratory system) for source concept habitatmech:GOLD.bbe542f86d
     in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent
-    UBERON:0000174 (excreted substance).
+    UBERON:0006314 (bodily fluid).
 actions: []
 limitations:
 - Only the stated primary evidence and current ontology/taxonomy authorities were

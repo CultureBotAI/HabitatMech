@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 via curation/gold_parent_exclusions.tsv while preserving broader ontology parents UBERON:0002513, UBERON:0003462, and UBERON:0011164 (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled GOLD leaf 'Scull: Ethmoid' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.
+Removed the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 via curation/gold_parent_exclusions.tsv while preserving broader ontology parents UBERON:0002513 (endochondral bone), UBERON:0003462 (facial bone), and UBERON:0011164 (neurocranium bone) (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled GOLD leaf 'Scull: Ethmoid' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 864 history records, 14 inventor
 
 identity: supported. Targets: UBERON:0001679.
 
-UBERON:0001679: ethmoid bone; CLOSE/REVIEWED; parents ["UBERON:0002513", "UBERON:0003462", "UBERON:0011164"]. Removed the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 via curation/gold_parent_exclusions.tsv while preserving broader ontology parents UBERON:0002513, UBERON:0003462, and UBERON:0011164 (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled GOLD leaf 'Scull: Ethmoid' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.
+UBERON:0001679: ethmoid bone; CLOSE/REVIEWED; parents ["UBERON:0002513", "UBERON:0003462", "UBERON:0011164"]. Removed the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 via curation/gold_parent_exclusions.tsv while preserving broader ontology parents UBERON:0002513 (endochondral bone), UBERON:0003462 (facial bone), and UBERON:0011164 (neurocranium bone) (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled GOLD leaf 'Scull: Ethmoid' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: ethmoid-bone-context-parent.
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.55cb603eb1 on GOLD path 'Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid' (exact target UBERON:0001679) excluding parent_id habitatmech:GOLD.67f49f8b15 (Bone), preserving ontology parents UBERON:0002513, UBERON:0003462, and UBERON:0011164.
 
-Disposition: Excluded only the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parents UBERON:0002513, UBERON:0003462, and UBERON:0011164.
+Disposition: Excluded only the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1 in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parents UBERON:0002513 (endochondral bone), UBERON:0003462 (facial bone), and UBERON:0011164 (neurocranium bone).
 
 ### F2: Ethmoid bone promotes compound misspelled GOLD leaf 'Scull: Ethmoid' as an exact synonym
 
@@ -110,7 +110,7 @@ Disposition: Updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 (obj
 | EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 11042,11213,11214,11215,11388,11401,11402,11444,11445,11715,11716,11753 | supports | [{"data": {"object": "UBERON:0011164", "predicate": "rdfs:subClassOf", "subject": "UBERON:0000209"}, "row": 11042}, {"data": {"object": "UBERON:0002513", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001679"}, "row": 11213}, {"data": {"object": "UBERON:0003462", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001679"}, "row": 11214}, {"data": {"object": "UBERON:0011164", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001679"}, "row": 11215}, {"data": {"object": "UBERON:0002513", "predicate": "rdfs:subClassOf", "subject": "UBERON:0002412"}, "row": 11388}, {"data": {"object": "UBERON:0001474", "predicate": "rdfs:subClassOf", "subject": "UBERON:0002513"}, "row": 11401}, {"data": {"object": "UBERON:0010363", "predicate": "rdfs:subClassOf", "subject": "UBERON:0002513"}, "row": 11402}, {"data": {"object": "UBERON:0003457", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003462"}, "row": 11444}, {"data": {"object": "UBERON:0010313", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003462"}, "row": 11445}, {"data": {"object": "UBERON:0003457", "predicate": "rdfs:subClassOf", "subject": "UBERON:0011164"}, "row": 11715}, {"data": {"object": "UBERON:0004766", "predicate": "rdfs:subClassOf", "subject": "UBERON:0011164"}, "row": 11716}, {"data": {"object": "UBERON:0003462", "predicate": "rdfs:subClassOf", "subject": "UBERON:0012360"}, "row": 11753}] |
 | EDEC | curation/decisions.tsv; TSV line 1672 | supports | [[1672, "habitatmech:GOLD.55cb603eb1\tGROUND\tUBERON:0001679\tethmoid bone\tCLOSE\tclaude-opus-5\t2026-08-16\tVariant-match review (#12): the seeder grounds on exact labels only, so GOLD's slash and plural conventions hid a term that says exactly this. GOLD writes 'Scull: Ethmoid'; the path is Skeletal system &gt; Bone, so the ethmoid bone is meant; CLOSE (#2296) keeps the compound misspelled leaf 'Scull: Ethmoid' as RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM. Path: Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid\tITEM\t\t"]] |
 | EP4 | data/habitats/host_associated/bone__234001be.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.67f49f8b15", "label": "Bone", "mapping_status": "SEEDED", "parent_habitats": ["BTO:0000140"], "source_attestations": [{"assertion_count": 29, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:5249", "source_label": "Bone", "source_path": "Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone"}]} |
-| ESEARCH | Local input and review traversal; grep -rn -E 'ethmoid_bone&#124;UBERON:0001679' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+| ESEARCH | Local input and review traversal; grep -rn -E 'ethmoid_bone&#124;UBERON:0001679' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal located Stage 4 predecessor bundle 20261105T051529Z-ethmoid_bone-record (linked via EPREV and related_reviews) and checked related cohort and ancestor reviews for reconciliation. |
 | EPREV | reviews/structured/20261105T051529Z-ethmoid_bone-record/review.yaml; Every immutable Stage 4 baseline finding | supports | Exact predecessor keys and findings reconciled; original inspected source scope preserved. |
 | ETEST | tests/test_epicuticular_wax_to_excretory_system_review_repairs.py; Complete full-corpus counterfactual regression suite | supports | Exactly fourteen records differ from the counterfactual baseline across Issues #2295 and #2296. |
 | EPARENTS | curation/gold_parent_exclusions.tsv; TSV line 11 | supports | [[11, "habitatmech:GOLD.55cb603eb1\tHost-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid\thabitatmech:GOLD.67f49f8b15\tantigravity\t2026-11-05\tReview https://github.com/CultureBotAI/HabitatMech/issues/2295 : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0001679. Shared mapping endpoints #1398 remain separate."]] |
@@ -152,11 +152,11 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: 'Removed the guarded GOLD human-scoped context-parent contribution habitatmech:GOLD.67f49f8b15
   (Bone) for source concept habitatmech:GOLD.55cb603eb1 via curation/gold_parent_exclusions.tsv
-  while preserving broader ontology parents UBERON:0002513, UBERON:0003462, and UBERON:0011164
-  (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1 from
-  EXACT to CLOSE so the compound misspelled GOLD leaf ''Scull: Ethmoid'' is emitted
-  with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM (#2296).
-  Both predecessor findings (F1 and F2) are resolved.'
+  while preserving broader ontology parents UBERON:0002513 (endochondral bone), UBERON:0003462
+  (facial bone), and UBERON:0011164 (neurocranium bone) (#2295), and updated curation/decisions.tsv
+  for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled GOLD
+  leaf ''Scull: Ethmoid'' is emitted with scope RELATED_SYNONYM (skos:closeMatch)
+  rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.'
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -594,8 +594,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:11Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051529Z-ethmoid_bone-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -690,10 +691,11 @@ assessments:
     "UBERON:0003462", "UBERON:0011164"]. Removed the guarded GOLD human-scoped context-parent
     contribution habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1
     via curation/gold_parent_exclusions.tsv while preserving broader ontology parents
-    UBERON:0002513, UBERON:0003462, and UBERON:0011164 (#2295), and updated curation/decisions.tsv
-    for habitatmech:GOLD.55cb603eb1 from EXACT to CLOSE so the compound misspelled
-    GOLD leaf ''Scull: Ethmoid'' is emitted with scope RELATED_SYNONYM (skos:closeMatch)
-    rather than EXACT_SYNONYM (#2296). Both predecessor findings (F1 and F2) are resolved.'
+    UBERON:0002513 (endochondral bone), UBERON:0003462 (facial bone), and UBERON:0011164
+    (neurocranium bone) (#2295), and updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1
+    from EXACT to CLOSE so the compound misspelled GOLD leaf ''Scull: Ethmoid'' is
+    emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM
+    (#2296). Both predecessor findings (F1 and F2) are resolved.'
   target_ids:
   - UBERON:0001679
   evidence_ids:
@@ -837,7 +839,8 @@ findings:
   disposition_reason: Excluded only the guarded GOLD human-scoped context-parent contribution
     habitatmech:GOLD.67f49f8b15 (Bone) for source concept habitatmech:GOLD.55cb603eb1
     in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parents
-    UBERON:0002513, UBERON:0003462, and UBERON:0011164.
+    UBERON:0002513 (endochondral bone), UBERON:0003462 (facial bone), and UBERON:0011164
+    (neurocranium bone).
 - finding_id: F2
   issue_key: ethmoid-bone-scull-ethmoid-exact-synonym
   category: nomenclature

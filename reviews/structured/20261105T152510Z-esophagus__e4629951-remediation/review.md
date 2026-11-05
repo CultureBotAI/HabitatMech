@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.70f5a0742f (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.01c242b3b0), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.c8e85f3c84 (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.01c242b3b0), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 864 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.01c242b3b0.
 
-habitatmech:GOLD.01c242b3b0: Esophagus; NARROW/SEEDED; parents ["UBERON:0001043"]. Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.70f5a0742f (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.01c242b3b0), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+habitatmech:GOLD.01c242b3b0: Esophagus; NARROW/SEEDED; parents ["UBERON:0001043"]. Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.c8e85f3c84 (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.01c242b3b0), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: esophagus--e4629951-context-parent.
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.01c242b3b0 on GOLD path 'Host-associated &gt; Mammals &gt; Digestive system &gt; Esophagus' (exact target habitatmech:GOLD.01c242b3b0) excluding parent_id habitatmech:GOLD.c8e85f3c84 (Digestive system), preserving broader ontology parent UBERON:0001043 (esophagus).
 
-Disposition: Excluded only the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.70f5a0742f (Foregut) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent BTO:0000959 (esophagus).
+Disposition: Excluded only the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.c8e85f3c84 (Digestive system) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001043 (esophagus).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
@@ -117,7 +117,7 @@ Reconcile narrow-match source-attestation output with the endpoint contract trac
 | EONT | data/raw/ontology_terms.tsv; TSV rows 12994 | supports | [{"data": {"definition": "Tube that connects the pharynx to the stomach. In mammals, the oesophagus connects the buccal cavity with the stomach. The stratified squamous non-keratinised epithelium lining the buccal cavity is continued through the pharynx down into the oesophagus. The lowest part of the oesophagus (ca. 2 cm) is lined with gastric mucosa and covered by peritoneum. The main body of the oesophagus is lined with small, simple mucous glands. Each gland opens into the lumen by a long duct which pierces the muscularis mucosae (Wilson and Washington, 1989). A sphincter is situated at the point where the oesophagus enters the stomach to prevent gastro-oesophageal reflux, i.e. to prevent acidic gastric contents from reaching stratified epithelia of the oesophagus, where they can cause inflammation and irritation (Wilson and Washington, 1989; Brown et al., 1993).", "deprecated": "", "directly_referenced": "FALSE", "label": "esophagus", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "gullet&#124;oesophagus", "term_id": "UBERON:0001043"}, "row": 12994}] |
 | EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 11145,11146,11147 | supports | [{"data": {"object": "UBERON:0000062", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001043"}, "row": 11145}, {"data": {"object": "UBERON:0004921", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001043"}, "row": 11146}, {"data": {"object": "UBERON:0013765", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001043"}, "row": 11147}] |
 | EP2 | data/habitats/host_associated/digestive_system__efdbeca1.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.c8e85f3c84", "label": "Digestive system", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0001007", "habitatmech:GOLD.e889967f4f"], "source_attestations": [{"assertion_count": 681, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3575", "source_label": "Digestive system", "source_path": "Host-associated &gt; Mammals &gt; Digestive system"}]} |
-| ESEARCH | Local input and review traversal; grep -rn -E 'esophagus__e4629951&#124;habitatmech:GOLD.01c242b3b0' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+| ESEARCH | Local input and review traversal; grep -rn -E 'esophagus__e4629951&#124;habitatmech:GOLD.01c242b3b0' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal located Stage 4 predecessor bundle 20261105T051528Z-esophagus__e4629951-record (linked via EPREV and related_reviews) and checked related cohort and ancestor reviews for reconciliation. |
 | EPREV | reviews/structured/20261105T051528Z-esophagus__e4629951-record/review.yaml; Every immutable Stage 4 baseline finding | supports | Exact predecessor keys and findings reconciled; original inspected source scope preserved. |
 | ETEST | tests/test_epicuticular_wax_to_excretory_system_review_repairs.py; Complete full-corpus counterfactual regression suite | supports | Exactly fourteen records differ from the counterfactual baseline across Issues #2295 and #2296. |
 | EPARENTS | curation/gold_parent_exclusions.tsv; TSV line 10 | supports | [[10, "habitatmech:GOLD.01c242b3b0\tHost-associated &gt; Mammals &gt; Digestive system &gt; Esophagus\thabitatmech:GOLD.c8e85f3c84\tantigravity\t2026-11-05\tReview https://github.com/CultureBotAI/HabitatMech/issues/2295 : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.01c242b3b0. Shared mapping endpoints #1398 remain separate."]] |
@@ -156,11 +156,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.70f5a0742f
-  (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology
-  parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.01c242b3b0), native SEEDED/NARROW
-  status, and source observations are preserved. The global NARROW source-attestation
-  endpoint finding (#1398) remains explicitly open.
+summary: Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.c8e85f3c84
+  (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
+  ontology parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.01c242b3b0),
+  native SEEDED/NARROW status, and source observations are preserved. The global NARROW
+  source-attestation endpoint finding (#1398) remains explicitly open.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -549,8 +549,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:10Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051528Z-esophagus__e4629951-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -632,9 +633,9 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
   summary: 'habitatmech:GOLD.01c242b3b0: Esophagus; NARROW/SEEDED; parents ["UBERON:0001043"].
-    Removed the guarded GOLD whole-region context-parent contribution habitatmech:GOLD.70f5a0742f
-    (Foregut) via curation/gold_parent_exclusions.tsv (#2295), preserving broader
-    ontology parent BTO:0000959 (esophagus). Identity (habitatmech:GOLD.01c242b3b0),
+    Removed the guarded GOLD whole-system context-parent contribution habitatmech:GOLD.c8e85f3c84
+    (Digestive system) via curation/gold_parent_exclusions.tsv (#2295), preserving
+    broader ontology parent UBERON:0001043 (esophagus). Identity (habitatmech:GOLD.01c242b3b0),
     native SEEDED/NARROW status, and source observations are preserved. The global
     NARROW source-attestation endpoint finding (#1398) remains explicitly open.'
   target_ids:
@@ -766,9 +767,9 @@ findings:
   - repository: CultureBotAI/HabitatMech
     review_id: 20261105T051528Z-esophagus__e4629951-record
     finding_id: F1
-  disposition_reason: Excluded only the guarded GOLD whole-region context-parent contribution
-    habitatmech:GOLD.70f5a0742f (Foregut) in curation/gold_parent_exclusions.tsv (#2295),
-    preserving broader ontology parent BTO:0000959 (esophagus).
+  disposition_reason: Excluded only the guarded GOLD whole-system context-parent contribution
+    habitatmech:GOLD.c8e85f3c84 (Digestive system) in curation/gold_parent_exclusions.tsv
+    (#2295), preserving broader ontology parent UBERON:0001043 (esophagus).
 - finding_id: F2
   issue_key: esophagus--e4629951-mapping-endpoint-contract
   category: representation

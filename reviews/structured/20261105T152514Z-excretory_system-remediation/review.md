@@ -11,7 +11,7 @@
 
 ## Summary
 
-Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.0ef2e24505 (insect-associated environment) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001008 (renal system). Identity (habitatmech:GOLD.3a0549cbd8), native REVIEWED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.dba2a83b95 (insect-associated environment) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:8450002 (excretory system). Identity (habitatmech:GOLD.3a0549cbd8), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ## Scope And Provenance
 
@@ -54,7 +54,7 @@ Individual schema, strict 24-target validation, 864 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.3a0549cbd8.
 
-habitatmech:GOLD.3a0549cbd8: Excretory system; NARROW/SEEDED; parents ["UBERON:8450002"]. Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.0ef2e24505 (insect-associated environment) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001008 (renal system). Identity (habitatmech:GOLD.3a0549cbd8), native REVIEWED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+habitatmech:GOLD.3a0549cbd8: Excretory system; NARROW/SEEDED; parents ["UBERON:8450002"]. Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.dba2a83b95 (insect-associated environment) via curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:8450002 (excretory system). Identity (habitatmech:GOLD.3a0549cbd8), native SEEDED/NARROW status, and source observations are preserved. The global NARROW source-attestation endpoint finding (#1398) remains explicitly open.
 
 ### Source counts and retained ranking
 
@@ -82,7 +82,7 @@ major / resolved / confirmed; issue key: excretory-system-context-parent.
 
 Add an exclusion row in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.3a0549cbd8 on GOLD path 'Host-associated &gt; Arthropoda: Insects &gt; Excretory system' (exact target habitatmech:GOLD.3a0549cbd8) excluding parent_id habitatmech:GOLD.dba2a83b95 (insect-associated environment), preserving broader ontology parent UBERON:8450002 (excretory system).
 
-Disposition: Excluded only the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.0ef2e24505 (insect-associated environment) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:0001008 (renal system).
+Disposition: Excluded only the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.dba2a83b95 (insect-associated environment) in curation/gold_parent_exclusions.tsv (#2295), preserving broader ontology parent UBERON:8450002 (excretory system).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
@@ -117,7 +117,7 @@ Reconcile narrow-match source-attestation output with the endpoint contract trac
 | EONT | data/raw/ontology_terms.tsv; TSV rows 13546 | supports | [{"data": {"definition": "An anatomical system that eliminates waste products that arise as a result of metabolic activity.", "deprecated": "", "directly_referenced": "FALSE", "label": "excretory system", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "", "term_id": "UBERON:8450002"}, "row": 13546}] |
 | EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 11134,11878 | supports | [{"data": {"object": "UBERON:8450002", "predicate": "rdfs:subClassOf", "subject": "UBERON:0001008"}, "row": 11134}, {"data": {"object": "UBERON:0000467", "predicate": "rdfs:subClassOf", "subject": "UBERON:8450002"}, "row": 11878}] |
 | EP2 | data/habitats/host_associated/arthropoda_insects.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": "An environmental system determined by an insect.", "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.dba2a83b95", "label": "insect-associated environment", "mapping_status": "REVIEWED", "parent_habitats": ["ENVO:01001000", "ENVO:01001002"], "source_attestations": [{"assertion_count": 1833, "assertion_unit": "ORGANISM", "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:7073", "source_label": "Arthropoda: Insects", "source_path": "Host-associated &gt; Arthropoda: Insects"}]} |
-| ESEARCH | Local input and review traversal; grep -rn -E 'excretory_system&#124;habitatmech:GOLD.3a0549cbd8' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+| ESEARCH | Local input and review traversal; grep -rn -E 'excretory_system&#124;habitatmech:GOLD.3a0549cbd8' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal located Stage 4 predecessor bundle 20261105T051533Z-excretory_system-record (linked via EPREV and related_reviews) and checked related cohort and ancestor reviews for reconciliation. |
 | EPREV | reviews/structured/20261105T051533Z-excretory_system-record/review.yaml; Every immutable Stage 4 baseline finding | supports | Exact predecessor keys and findings reconciled; original inspected source scope preserved. |
 | ETEST | tests/test_epicuticular_wax_to_excretory_system_review_repairs.py; Complete full-corpus counterfactual regression suite | supports | Exactly fourteen records differ from the counterfactual baseline across Issues #2295 and #2296. |
 | EPARENTS | curation/gold_parent_exclusions.tsv; TSV line 14 | supports | [[14, "habitatmech:GOLD.3a0549cbd8\tHost-associated &gt; Arthropoda: Insects &gt; Excretory system\thabitatmech:GOLD.dba2a83b95\tantigravity\t2026-11-05\tReview https://github.com/CultureBotAI/HabitatMech/issues/2295 : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.3a0549cbd8. Shared mapping endpoints #1398 remain separate."]] |
@@ -156,11 +156,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.0ef2e24505
+summary: Removed the guarded GOLD whole-host context-parent contribution habitatmech:GOLD.dba2a83b95
   (insect-associated environment) via curation/gold_parent_exclusions.tsv (#2295),
-  preserving broader ontology parent UBERON:0001008 (renal system). Identity (habitatmech:GOLD.3a0549cbd8),
-  native REVIEWED/NARROW status, and source observations are preserved. The global
-  NARROW source-attestation endpoint finding (#1398) remains explicitly open.
+  preserving broader ontology parent UBERON:8450002 (excretory system). Identity (habitatmech:GOLD.3a0549cbd8),
+  native SEEDED/NARROW status, and source observations are preserved. The global NARROW
+  source-attestation endpoint finding (#1398) remains explicitly open.
 source:
   git_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
   state: working_tree
@@ -538,8 +538,9 @@ evidence:
     curation/ history/
   accessed_at: '2026-11-05T15:25:14Z'
   support: context_only
-  summary: Structured-review traversal verified no prior target review bundle exists
-    for this record; curation and history tables were inspected for all matching rows.
+  summary: Structured-review traversal located Stage 4 predecessor bundle 20261105T051533Z-excretory_system-record
+    (linked via EPREV and related_reviews) and checked related cohort and ancestor
+    reviews for reconciliation.
   search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
     traversal at commit 215b23c90244e634e64f88fa2c1a2a3bb011880a.
 - evidence_id: EPREV
@@ -622,11 +623,11 @@ assessments:
   outcome: concern
   summary: 'habitatmech:GOLD.3a0549cbd8: Excretory system; NARROW/SEEDED; parents
     ["UBERON:8450002"]. Removed the guarded GOLD whole-host context-parent contribution
-    habitatmech:GOLD.0ef2e24505 (insect-associated environment) via curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent UBERON:0001008 (renal system). Identity
-    (habitatmech:GOLD.3a0549cbd8), native REVIEWED/NARROW status, and source observations
-    are preserved. The global NARROW source-attestation endpoint finding (#1398) remains
-    explicitly open.'
+    habitatmech:GOLD.dba2a83b95 (insect-associated environment) via curation/gold_parent_exclusions.tsv
+    (#2295), preserving broader ontology parent UBERON:8450002 (excretory system).
+    Identity (habitatmech:GOLD.3a0549cbd8), native SEEDED/NARROW status, and source
+    observations are preserved. The global NARROW source-attestation endpoint finding
+    (#1398) remains explicitly open.'
   target_ids:
   - habitatmech:GOLD.3a0549cbd8
   evidence_ids:
@@ -758,8 +759,8 @@ findings:
     review_id: 20261105T051533Z-excretory_system-record
     finding_id: F1
   disposition_reason: Excluded only the guarded GOLD whole-host context-parent contribution
-    habitatmech:GOLD.0ef2e24505 (insect-associated environment) in curation/gold_parent_exclusions.tsv
-    (#2295), preserving broader ontology parent UBERON:0001008 (renal system).
+    habitatmech:GOLD.dba2a83b95 (insect-associated environment) in curation/gold_parent_exclusions.tsv
+    (#2295), preserving broader ontology parent UBERON:8450002 (excretory system).
 - finding_id: F2
   issue_key: excretory-system-mapping-endpoint-contract
   category: representation

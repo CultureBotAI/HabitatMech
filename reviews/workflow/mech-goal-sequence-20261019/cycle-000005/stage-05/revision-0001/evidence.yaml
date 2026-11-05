@@ -15,13 +15,13 @@ summary: 'Grouped all 53 Stage 4 review findings from epicuticular_wax through e
 source_revision: f0c857592f79534eeb3701824a58eb7b5fcefef3
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
-  sha256: df4b10506ab46fd2b7fa891c017d621a64e7e48f0230da1fc2fe7c6ff56d6c12
+  sha256: 522663dbe3c72921a220d42d64ba6d6f4820b9d3abdb6ff1991a07df9229ae52
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
-  sha256: 39c163892443b958dfde40d598795b0020e3ce8fd5d0b3a851e0dcc24d44142d
+  sha256: 35b08be5fd7b87c1ddb642a8549a190f1ccb93421bc5a41fd4fa26164c5df798
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/remediation_reviews.json
-  sha256: 1530503558ce0763ab95a420ef499bf877ac94e09d7e26f51120832e3a53e810
+  sha256: d432c9b9569f0b7f057202a5b08b572c89eee655a1833d536d00beab5928fac0
   kind: supporting
 findings:
 - finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
@@ -484,9 +484,10 @@ findings:
     an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving
     verbatim source_attestations (source_label: Equidae-Horse), matching sibling BacDive
     host-bucket records (bovinae_cow_cattle, canidae_dog, caprinae_sheep_goat).'
-  disposition: 'Resolved in Issue #2296 via curation/term_requests.tsv, curation/definition_source_label_exclusions.tsv,
-    and curation/decisions.tsv, regenerated habitat YAML, and verified in fresh structured
-    review bundle reviews/structured/20261105T152503Z-equidae_horse-remediation/review.yaml.'
+  disposition: 'Resolved in Issue #2296 via curation/term_requests.tsv and curation/definition_source_label_exclusions.tsv
+    (suppressing automatic retention of ''Equidae-Horse'' in synonyms while preserving
+    verbatim source_attestations), regenerated habitat YAML, and verified in fresh
+    structured review bundle reviews/structured/20261105T152503Z-equidae_horse-remediation/review.yaml.'
 - finding_id: erythrocyte-context-parent
   carried_from: erythrocyte-context-parent
   status: resolved
@@ -678,9 +679,9 @@ findings:
     from grounding_status EXACT to CLOSE so the compound/misspelled GOLD leaf ''Scull:
     Ethmoid'' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than
     EXACT_SYNONYM.'
-  disposition: 'Resolved in Issue #2296 via curation/term_requests.tsv, curation/definition_source_label_exclusions.tsv,
-    and curation/decisions.tsv, regenerated habitat YAML, and verified in fresh structured
-    review bundle reviews/structured/20261105T152511Z-ethmoid_bone-remediation/review.yaml.'
+  disposition: 'Resolved in Issue #2296 via curation/decisions.tsv (updating habitatmech:GOLD.55cb603eb1
+    from EXACT to CLOSE so ''Scull: Ethmoid'' is emitted as RELATED_SYNONYM), regenerated
+    habitat YAML, and verified in fresh structured review bundle reviews/structured/20261105T152511Z-ethmoid_bone-remediation/review.yaml.'
 - finding_id: eustachian-tube-context-parent
   carried_from: eustachian-tube-context-parent
   status: resolved
@@ -802,10 +803,11 @@ groups:
   - ethmoid-bone-scull-ethmoid-exact-synonym
   issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2296
   status: resolved
-  summary: 'Remove bare BacDive host label (''Equidae-Horse'') from exact_synonyms
-    on equidae_horse while preserving it as a BACDIVE-scoped RELATED_SYNONYM, and
-    change GOLD ''Scull: Ethmoid'' grounding on ethmoid_bone (UBERON:0001679) from
-    EXACT to CLOSE.'
+  summary: 'Clear bare BacDive host label (''Equidae-Horse'') from exact_synonym in
+    curation/term_requests.tsv and suppress its automatic retention in synonyms on
+    equidae_horse via curation/definition_source_label_exclusions.tsv while preserving
+    verbatim source_attestations, and change GOLD ''Scull: Ethmoid'' grounding on
+    ethmoid_bone (UBERON:0001679) from EXACT to CLOSE.'
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
