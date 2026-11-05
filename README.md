@@ -47,11 +47,11 @@ parameters rather than flattening them into one unsupported claim.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,655 | | EXACT | 1,054 |
+| HOST_ASSOCIATED | 1,655 | | EXACT | 1,053 |
 | ENGINEERED | 488 | | UNGROUNDED | 955 |
 | AQUATIC | 468 | | NARROW | 991 |
 | TERRESTRIAL | 353 | | NOT_APPLICABLE | 105 |
-| OTHER | 175 | | CLOSE | 92 |
+| OTHER | 175 | | CLOSE | 93 |
 | FOOD | 59 | | BROAD | 12 |
 | AIR | 7 | |  |  |
 | CLINICAL | 4 | |  |  |

@@ -1,0 +1,239 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "e39c962e767c655c22d6b1b5cf1cc392be3af21c2514e9c70d4c6105782d5650"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "c1efdfa9188346f3292250e42e9f2315d2d49d8c6235e07733efda22039a5c1c"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "72d7573cdee85f7cd54d27e2c864654b1f3b1121444c28b8d65e901edff9b053"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "3697bc9dba647d6db6c8b5ba1f9d56cf50b033f43877345d90feadc3cb1da591"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "725655426fded7f138d9a3e4e7a47eb1165f9a6a6a0d16cd242c07fcebfa0f8c"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-11-05T151500Z-antigravity-229501.yaml",
+      "sha256": "55bcac9e6231000d583bef7c9bff80f24c0a32b3e1c3ede0322550656637c0ec"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-11-05T151510Z-antigravity-229601.yaml",
+      "sha256": "b9af84e90e318d221396ff09e6ae4e926e74bdbfc692ae6cc1a9334c8429abe7"
+    },
+    {
+      "path": "tests/test_epicuticular_wax_to_excretory_system_review_repairs.py",
+      "sha256": "49996201e6fc34bd32f03bad90354d16c9efedb37f518d1020daf68a99e25afe"
+    }
+  ],
+  "cycle": 5,
+  "remediation_reviews": [
+    {
+      "finding_id": "epicuticular-wax-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051500Z-epicuticular_wax-record",
+      "record_id": "PO:0000052",
+      "record_path": "data/habitats/host_associated/epicuticular_wax.yaml",
+      "record_sha256": "f1b0fc2915057476b43afdf824619a765bc1f3a2989a041942c5f2c323fd76b2",
+      "remediation_review_id": "20261105T152501Z-epicuticular_wax-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152501Z-epicuticular_wax-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "47e5699afb92aacd33c10017ec96ec55fe9b656c7320890e704f80b6fe9b3de4"
+    },
+    {
+      "finding_id": "epithelial-lining-fluid-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051501Z-epithelial_lining_fluid-record",
+      "record_id": "UBERON:0003711",
+      "record_path": "data/habitats/host_associated/epithelial_lining_fluid.yaml",
+      "record_sha256": "47636e12ef4a2553975bbfd24a4712b2c5acc54f5bfc4726620e68ea251949a5",
+      "remediation_review_id": "20261105T152502Z-epithelial_lining_fluid-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152502Z-epithelial_lining_fluid-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "040760ce9375f0f8fddeb5dca6430ff16431200665b2d8de3054e8588709b6bd"
+    },
+    {
+      "finding_id": "equidae-horse-host-name-exact-synonym",
+      "group_id": "G-epicuticular-wax-to-excretory-system-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2296",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051506Z-equidae_horse-record",
+      "record_id": "habitatmech:BACDIVE.09c3544e85",
+      "record_path": "data/habitats/host_associated/equidae_horse.yaml",
+      "record_sha256": "ae6e646baf0a68a68a1c29c09e7202810fc6a0c656dd1d23f6742adef673cd2f",
+      "remediation_review_id": "20261105T152503Z-equidae_horse-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152503Z-equidae_horse-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3832fb5334569d62ffffd36620acee92250d38c5492659c7ff35608a26ae51ca"
+    },
+    {
+      "finding_id": "erythrocyte-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051507Z-erythrocyte-record",
+      "record_id": "BTO:0000424",
+      "record_path": "data/habitats/host_associated/erythrocyte.yaml",
+      "record_sha256": "0d570d3785ce75e12f1d40551a80db101b7c2217653cb01d943f8a5616de5ed8",
+      "remediation_review_id": "20261105T152504Z-erythrocyte-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152504Z-erythrocyte-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9e2214519d57dd81bca78dfdc6f4771a5378166e0fde6b90d9e738db6b6a41da"
+    },
+    {
+      "finding_id": "esophageal-ulcer-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051508Z-esophageal_ulcer-record",
+      "record_id": "habitatmech:GOLD.5fb53543b4",
+      "record_path": "data/habitats/host_associated/esophageal_ulcer.yaml",
+      "record_sha256": "808f96fc068e521b5dc34e1b5c849c0e09aa9c6bc4a7172079fb9cd23483fe18",
+      "remediation_review_id": "20261105T152505Z-esophageal_ulcer-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152505Z-esophageal_ulcer-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "c3902291880d9976eebce6a6ec747370a5d8a56502d9d14ba25d80ddd11046b5"
+    },
+    {
+      "finding_id": "esophagus--25614af3-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051510Z-esophagus__25614af3-record",
+      "record_id": "habitatmech:GOLD.25614af339",
+      "record_path": "data/habitats/host_associated/esophagus__25614af3.yaml",
+      "record_sha256": "ec038cf30613ac535c8d6cc4452bb6ab566ce992925ac1fd1121cd05d3274b5c",
+      "remediation_review_id": "20261105T152506Z-esophagus__25614af3-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152506Z-esophagus__25614af3-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "62904c414c6334df810f892d035612a65139611d96a9f89dec339ea561d9bed9"
+    },
+    {
+      "finding_id": "esophagus--2ce9b1a3-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051511Z-esophagus__2ce9b1a3-record",
+      "record_id": "habitatmech:GOLD.2ce9b1a321",
+      "record_path": "data/habitats/host_associated/esophagus__2ce9b1a3.yaml",
+      "record_sha256": "2a32eddc41fefa47f0a89e551315697b2037fa4655808957d06f7db4a2eda99e",
+      "remediation_review_id": "20261105T152507Z-esophagus__2ce9b1a3-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152507Z-esophagus__2ce9b1a3-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9947b3c128eee60f4872cc2e09ba31440aa01ae6793d75a3ee2a59ca45293bb5"
+    },
+    {
+      "finding_id": "esophagus--d8421c5e-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051512Z-esophagus__d8421c5e-record",
+      "record_id": "habitatmech:GOLD.d8421c5eb4",
+      "record_path": "data/habitats/host_associated/esophagus__d8421c5e.yaml",
+      "record_sha256": "fde2321e6d1c99a07a01ec22e06ac22e919e36a71885596a6b7b01fd7320b2f9",
+      "remediation_review_id": "20261105T152508Z-esophagus__d8421c5e-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152508Z-esophagus__d8421c5e-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "c3822d3d5322a017bb774030a89819ec2ea2010e4475188e2f542c07de48143f"
+    },
+    {
+      "finding_id": "esophagus--e0ae9e65-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051513Z-esophagus__e0ae9e65-record",
+      "record_id": "habitatmech:GOLD.e0ae9e654b",
+      "record_path": "data/habitats/host_associated/esophagus__e0ae9e65.yaml",
+      "record_sha256": "77993c1352c577bb9a6db23c13ff954d4cc8b850684682d6451e2ed77bd80f55",
+      "remediation_review_id": "20261105T152509Z-esophagus__e0ae9e65-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152509Z-esophagus__e0ae9e65-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "50438c2f1f1cd7df7f9c0cff29ffc9b520659936b0371378b9309db05d534d32"
+    },
+    {
+      "finding_id": "esophagus--e4629951-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051514Z-esophagus__e4629951-record",
+      "record_id": "habitatmech:GOLD.e462995111",
+      "record_path": "data/habitats/host_associated/esophagus__e4629951.yaml",
+      "record_sha256": "eedf8d59f19014d3715ef3e3d9ba350f9948e6115aaf4d66afc6cb954aa10563",
+      "remediation_review_id": "20261105T152510Z-esophagus__e4629951-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152510Z-esophagus__e4629951-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4265c4502c091c00e611c3b0905a0de816e8464afc7c7cea929cb4c0be93823b"
+    },
+    {
+      "finding_id": "ethmoid-bone-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051516Z-ethmoid_bone-record",
+      "record_id": "UBERON:0001679",
+      "record_path": "data/habitats/host_associated/ethmoid_bone.yaml",
+      "record_sha256": "e406e59cf9e099828db610c838af4d413af1da9f57d9d2723b518d236188db8a",
+      "remediation_review_id": "20261105T152511Z-ethmoid_bone-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152511Z-ethmoid_bone-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "79b53f61900eee4a4dea3c0fad032fb38c2d1b546e7e074ce0e97db6a0e01dc8"
+    },
+    {
+      "finding_id": "ethmoid-bone-scull-ethmoid-exact-synonym",
+      "group_id": "G-epicuticular-wax-to-excretory-system-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2296",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261105T051516Z-ethmoid_bone-record",
+      "record_id": "UBERON:0001679",
+      "record_path": "data/habitats/host_associated/ethmoid_bone.yaml",
+      "record_sha256": "e406e59cf9e099828db610c838af4d413af1da9f57d9d2723b518d236188db8a",
+      "remediation_review_id": "20261105T152511Z-ethmoid_bone-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152511Z-ethmoid_bone-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "79b53f61900eee4a4dea3c0fad032fb38c2d1b546e7e074ce0e97db6a0e01dc8"
+    },
+    {
+      "finding_id": "eustachian-tube-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051517Z-eustachian_tube-record",
+      "record_id": "habitatmech:GOLD.bd1a1a8e43",
+      "record_path": "data/habitats/host_associated/eustachian_tube.yaml",
+      "record_sha256": "767a60fffeb44539637217b98e0ca3b5d37ecc9b53f70ec8b990733ae059c2fd",
+      "remediation_review_id": "20261105T152512Z-eustachian_tube-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152512Z-eustachian_tube-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ac1ad6c450d616ab4e2d17c70ec1f0a6e0fbaf6f1c8656720e6a9a615f9b9d3a"
+    },
+    {
+      "finding_id": "eustachian-tube--a8583033-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051518Z-eustachian_tube__a8583033-record",
+      "record_id": "habitatmech:GOLD.a8583033ef",
+      "record_path": "data/habitats/host_associated/eustachian_tube__a8583033.yaml",
+      "record_sha256": "c64f0152f937be5bdd855224f83c5246ec60a778a2a1881bbda8a2eb1437e3a2",
+      "remediation_review_id": "20261105T152513Z-eustachian_tube__a8583033-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152513Z-eustachian_tube__a8583033-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9e6a43eb7fc5aec8fa6d5327c06c620541f5829d86d795a9e334685b26746479"
+    },
+    {
+      "finding_id": "excretory-system-context-parent",
+      "group_id": "G-epicuticular-wax-to-excretory-system-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2295",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261105T051602Z-excretory_system-record",
+      "record_id": "habitatmech:GOLD.4106bc34d0",
+      "record_path": "data/habitats/host_associated/excretory_system.yaml",
+      "record_sha256": "6f0d6c6b89b978e25cf87809f5f877300a5662b7f3c2d313461f702b804b9e32",
+      "remediation_review_id": "20261105T152514Z-excretory_system-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261105T152514Z-excretory_system-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "58b7daf54df3b824554e0de372b0bb5e60928f6d072be852e35b818771c1a270"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "f0c857592f79534eeb3701824a58eb7b5fcefef3",
+  "stage": 5
+}

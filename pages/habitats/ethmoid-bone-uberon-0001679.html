@@ -35,7 +35,7 @@
 <p class="meta">
   <code class="curie">UBERON:0001679</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/UBERON_0001679">resolve</a>  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">EXACT</span>
+  <span class="sep">·</span><span class="pill">CLOSE</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -63,7 +63,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0002513">endochondral bone</a>      <code class="curie">UBERON:0002513</code></li>
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0003462">facial bone</a>      <code class="curie">UBERON:0003462</code></li>
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0011164">neurocranium bone</a>      <code class="curie">UBERON:0011164</code></li>
-  <li><a href="../habitats/bone-habitatmech-gold-67f49f8b15.html">Bone</a>      <code class="curie">habitatmech:GOLD.67f49f8b15</code></li>
 </ul>
 
 
@@ -80,7 +79,17 @@ from several source concepts can carry one decision per concept.</p>
   <li>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
-    <p>Grounded to UBERON:0001679 &#39;ethmoid bone&#39; (EXACT). Variant-match review (#12): the seeder grounds on exact labels only, so GOLD&#39;s slash and plural conventions hid a term that says exactly this. GOLD writes &#39;Scull: Ethmoid&#39;; the path is Skeletal system &gt; Bone, so the ethmoid bone is meant. Path: Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid (source concept habitatmech:GOLD.55cb603eb1)</p>
+    <p>Grounded to UBERON:0001679 &#39;ethmoid bone&#39; (CLOSE). Variant-match review (#12): the seeder grounds on exact labels only, so GOLD&#39;s slash and plural conventions hid a term that says exactly this. GOLD writes &#39;Scull: Ethmoid&#39;; the path is Skeletal system &gt; Bone, so the ethmoid bone is meant; CLOSE (#2296) keeps the compound misspelled leaf &#39;Scull: Ethmoid&#39; as RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM. Path: Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid (source concept habitatmech:GOLD.55cb603eb1)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_SCOPED</span>
+    <span class="meta">2026-10-07 · seed_from_sources</span>
+    <p>Retained GOLD label &#39;Scull: Ethmoid&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-05 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.67f49f8b15 for habitatmech:GOLD.55cb603eb1 (Host-associated &gt; Mammals: Human &gt; Skeletal system &gt; Bone &gt; Scull: Ethmoid). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2295" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2295</a> : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0001679. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 
