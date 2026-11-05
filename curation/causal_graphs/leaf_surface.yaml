@@ -32,7 +32,48 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: REE-dependent PQQ methanol dehydrogenase XoxF (induced by La3+ while Ca2+-dependent mxaFI
       is repressed) and the co-regulated REE-binding protein and TonB-dependent outer-membrane transporter
-      in Methylobacterium extorquens.
+      in Methylobacterium extorquens. Verified protein_examples are attached for Methylorubrum extorquens
+      strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1 (NCBITaxon:272630) lanthanide-dependent
+      methanol dehydrogenase XoxF1 (UniProtKB:C5B120, xoxF1, MexAM1_META1p1740; PMID:20447995) and paralog
+      XoxF (UniProtKB:C5ATJ3, xoxF, MexAM1_META1p2757; PMID:20447995); the Methylorubrum extorquens PA1
+      (NCBITaxon:419610) XoxF (Mext_1809, UPI000158F5C9), REE-binding protein (Mext_1852, UPI00000C0031),
+      and TonB-dependent receptor (Mext_1853, UPI000162969E) assayed in PMID:30653750 are archived in
+      UniParc without active UniProtKB accessions.
+    protein_examples:
+    - accession: UniProtKB:C5B120
+      entry_name: XOXF1_METEA
+      recommended_name: Lanthanide-dependent methanol dehydrogenase
+      gene_symbol: xoxF1
+      locus_tag: MexAM1_META1p1740
+      taxon_id: NCBITaxon:272630
+      taxon_name: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1)
+      role_in_node: strain_exemplar
+      sequence_length: 601
+      crc64: 4D7DF5EAF4ECAB90
+      evidence:
+      - reference: PMID:20447995
+        snippet: Here, we found that a xoxF mutant is less competitive than the wild-type during colonization
+          of the phyllosphere of Arabidopsis thaliana, indicating a function for XoxF during plant colonization.
+        notes: Methylorubrum extorquens AM1 (NCBITaxon:272630) lanthanide-dependent methanol dehydrogenase
+          XoxF1 (xoxF1, locus tag MexAM1_META1p1740, UniProtKB:C5B120) promotes competitive phyllosphere
+          colonization and methanol oxidation in PMID:20447995.
+    - accession: UniProtKB:C5ATJ3
+      entry_name: C5ATJ3_METEA
+      recommended_name: XoxF
+      gene_symbol: xoxF
+      locus_tag: MexAM1_META1p2757
+      taxon_id: NCBITaxon:272630
+      taxon_name: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1)
+      role_in_node: isoprotein
+      sequence_length: 599
+      crc64: 6FFDBA8B556C6288
+      evidence:
+      - reference: PMID:20447995
+        snippet: Methanol dehydrogenase-like protein XoxF of Methylobacterium extorquens AM1 exhibits
+          a sequence identity of 50 % to the catalytic subunit MxaF of periplasmic methanol dehydrogenase
+          in the same organism.
+        notes: Methylorubrum extorquens AM1 (NCBITaxon:272630) encodes the second XoxF paralog (xoxF,
+          locus tag MexAM1_META1p2757, UniProtKB:C5ATJ3) alongside XoxF1 in PMID:20447995.
   - node_id: chelator_assisted_ree_uptake_methanol_oxidation_and_phyllosphere_colonization
     label: chelator-assisted REE uptake, rapid methanol/formaldehyde oxidation, and competitive phyllosphere
       colonization
@@ -109,4 +150,12 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added leaf_surface_methylobacterium_lanthanide_xoxf_methanol_methylotrophy mechanism graph
     for leaf_surface (habitatmech:GOLD.82f62476b8) backed by PMID:30653750 and PMID:20447995.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 2 verified Methylorubrum extorquens AM1 (NCBITaxon:272630) XoxF protein_examples
+    (UniProtKB:C5B120 xoxF1 MexAM1_META1p1740 and UniProtKB:C5ATJ3 xoxF MexAM1_META1p2757) backed by PMID:20447995,
+    and documented that M. extorquens PA1 proteins in PMID:30653750 are UniParc-only without active UniProtKB
+    accessions.'
   llm_assisted: true

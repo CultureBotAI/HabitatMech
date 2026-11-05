@@ -36,7 +36,57 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Conserved aprX gene within the aprX-lipA2 operon of Pseudomonas fluorescens encoding
       the Zn2+- and Ca2+-stabilized heat-resistant extracellular alkaline metalloprotease AprX, alongside
-      proteinase-K-sensitive biofilm matrix proteins.
+      proteinase-K-sensitive biofilm matrix proteins. Verified protein_examples are attached for dairy/milk-associated
+      Pseudomonas fluorescens (NCBITaxon:294) extracellular alkaline metalloprotease AprX entries in UniProtKB
+      (UniProtKB:Q9KJ19, UniProtKB:B0FXD9, and UniProtKB:B0FXE0; PMID:28217561, PMID:41794443); the 69
+      food isolates screened by aprX PCR and MLST in PMID:28217561 did not deposit separate full-length
+      AprX protein sequences in UniProtKB.
+    protein_examples:
+    - accession: UniProtKB:Q9KJ19
+      entry_name: Q9KJ19_PSEFL
+      recommended_name: Metalloprotease
+      gene_symbol: aprX
+      taxon_id: NCBITaxon:294
+      taxon_name: Pseudomonas fluorescens
+      role_in_node: strain_exemplar
+      sequence_length: 477
+      crc64: 10543C5D526B5728
+      evidence:
+      - reference: PMID:28217561
+        snippet: Among the bacterial proteases, a predominant role in spoilage of dairy products seems
+          to be played by the thermostable metallo-protease AprX, which is produced by various strains
+          of Pseudomonas fluorescens.
+        notes: UniProtKB:Q9KJ19 (Q9KJ19_PSEFL, aprX, 477 aa) is the reference dairy spoilage Pseudomonas
+          fluorescens (NCBITaxon:294) AprX metalloprotease encoded by the aprX-lipA operon (PMID:28217561).
+    - accession: UniProtKB:B0FXD9
+      entry_name: B0FXD9_PSEFL
+      recommended_name: AprX
+      taxon_id: NCBITaxon:294
+      taxon_name: Pseudomonas fluorescens
+      role_in_node: strain_exemplar
+      sequence_length: 477
+      crc64: CF8599E31E98F7A0
+      evidence:
+      - reference: PMID:41794443
+        snippet: The proteolysis of Ultra-High Temperature (UHT) milk is often linked to the proteolytic
+          activity of AprX. This enzyme is a thermostable extracellular protease produced by Pseudomonas
+          spp. that hydrolyzes caseins, causing milk destabilization and subsequent gelation.
+        notes: UniProtKB:B0FXD9 (B0FXD9_PSEFL, 477 aa) is an industrial milk-isolated Pseudomonas fluorescens
+          (NCBITaxon:294) AprX extracellular protease exemplar (PMID:41794443).
+    - accession: UniProtKB:B0FXE0
+      entry_name: B0FXE0_PSEFL
+      recommended_name: AprX
+      taxon_id: NCBITaxon:294
+      taxon_name: Pseudomonas fluorescens
+      role_in_node: strain_exemplar
+      sequence_length: 482
+      crc64: 3CD5B1CE0F3D9726
+      evidence:
+      - reference: PMID:41794443
+        snippet: The enzyme's high resistance to UHT treatments is due to its flexible structure stabilized
+          by interactions with divalent ions, mainly zinc and calcium.
+        notes: UniProtKB:B0FXE0 (B0FXE0_PSEFL, 482 aa) is an industrial milk-isolated Pseudomonas fluorescens
+          (NCBITaxon:294) AprX isoform exemplar (PMID:41794443).
   - node_id: stainless_steel_biofilm_contamination_and_uht_milk_casein_gelation
     label: persistent equipment biofilm cross-contamination and UHT-resistant AprX casein hydrolysis/gelation
     node_type: COMMUNITY_PROCESS
@@ -139,4 +189,12 @@ curation_history:
   changes: Added dairy_processing_facility_stainless_steel_biofilm_and_pseudomonas_aprx_casein_proteolysis
     mechanism graph for dairy_processing_facility (habitatmech:GOLD.b69e4553bb) backed by PMID:28303120,
     PMID:28217561, PMID:33336988, PMID:41794443, and PMID:37732743.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 3 verified dairy/milk Pseudomonas fluorescens (NCBITaxon:294) AprX
+    protein_examples (UniProtKB:Q9KJ19, UniProtKB:B0FXD9, and UniProtKB:B0FXE0) backed by PMID:28217561
+    and PMID:41794443, and documented that the 69 food isolates screened by PCR/MLST in PMID:28217561
+    did not deposit separate full-length AprX protein sequences in UniProtKB.'
   llm_assisted: true

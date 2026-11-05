@@ -246,7 +246,70 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ammonia monooxygenase (amoA) encoded by soil ammonia-oxidizing archaea
       (Nitrososphaera viennensis, Nitrosocosmicus) and ammonia-oxidizing bacteria
-      (Nitrosospira) catalyzing the rate-limiting step of nitrification.
+      (Nitrosospira) catalyzing the rate-limiting step of nitrification. Verified
+      protein_examples are attached for the isolated soil ammonia-oxidizing archaeon
+      Nitrososphaera viennensis EN76 (NCBITaxon:926571) ammonia monooxygenase subunits
+      AmoA (UniProtKB:A0A060HNG6, NVIE_027270), AmoB (UniProtKB:A0A060HVN7, NVIE_028430),
+      and AmoC1 (UniProtKB:A0A060HM27, NVIE_000540; PMID:21525411); multi-soil archaeal
+      and bacterial amoA gene pools quantified by qPCR across pristine/agricultural
+      soils (PMID:16902146) and microplastic-aged soils (PMID:39729140) are source-limited
+      environmental amplicon pools without single-isolate UniProtKB accessions.
+    protein_examples:
+    - accession: UniProtKB:A0A060HNG6
+      entry_name: A0A060HNG6_NITV7
+      recommended_name: Ammonia monooxygenase subunit A
+      gene_symbol: amoA
+      locus_tag: NVIE_027270
+      taxon_id: NCBITaxon:926571
+      taxon_name: Nitrososphaera viennensis (strain DSM 26422 / JCM 19564 / EN76)
+      role_in_node: subunit
+      sequence_length: 216
+      crc64: B6579C3CC10E950E
+      evidence:
+      - reference: PMID:21525411
+        snippet: Here we describe the cultivation and isolation of an AOA from soil.
+          It grows on ammonia or urea as an energy source and is capable of using
+          higher ammonia concentrations than the marine isolate, Nitrosopumilus maritimus.
+        notes: Nitrososphaera viennensis EN76 (NCBITaxon:926571) is the cultivated
+          soil ammonia-oxidizing archaeon from PMID:21525411 encoding ammonia monooxygenase
+          subunit A (amoA, locus tag NVIE_027270, UniProtKB:A0A060HNG6).
+    - accession: UniProtKB:A0A060HVN7
+      entry_name: A0A060HVN7_NITV7
+      recommended_name: Ammonia monooxygenase subunit B
+      gene_symbol: amoB
+      locus_tag: NVIE_028430
+      taxon_id: NCBITaxon:926571
+      taxon_name: Nitrososphaera viennensis (strain DSM 26422 / JCM 19564 / EN76)
+      role_in_node: subunit
+      sequence_length: 185
+      crc64: 0DDCD533219A6128
+      evidence:
+      - reference: PMID:21525411
+        snippet: Genes of archaea encoding homologues of ammonia monooxygenases have
+          been found on a widespread basis and in large amounts in almost all terrestrial
+          and marine environments, indicating that ammonia oxidizing archaea (AOA)
+          might play a major role in nitrification on Earth.
+        notes: Nitrososphaera viennensis EN76 (NCBITaxon:926571) isolated from soil
+          in PMID:21525411 encodes ammonia monooxygenase subunit B (amoB, locus tag
+          NVIE_028430, UniProtKB:A0A060HVN7).
+    - accession: UniProtKB:A0A060HM27
+      entry_name: A0A060HM27_NITV7
+      recommended_name: Ammonia monooxygenase subunit C
+      gene_symbol: amoC1
+      locus_tag: NVIE_000540
+      taxon_id: NCBITaxon:926571
+      taxon_name: Nitrososphaera viennensis (strain DSM 26422 / JCM 19564 / EN76)
+      role_in_node: subunit
+      sequence_length: 187
+      crc64: DD6066426C1F5477
+      evidence:
+      - reference: PMID:21525411
+        snippet: Here we describe the cultivation and isolation of an AOA from soil.
+          It grows on ammonia or urea as an energy source and is capable of using
+          higher ammonia concentrations than the marine isolate, Nitrosopumilus maritimus.
+        notes: Nitrososphaera viennensis EN76 (NCBITaxon:926571) isolated from soil
+          in PMID:21525411 encodes ammonia monooxygenase subunit C (amoC1, locus tag
+          NVIE_000540, UniProtKB:A0A060HM27).
   - node_id: topsoil_nitrogen_mineralization_and_nitrification
     label: topsoil nutrient mineralization, chemolithoautotrophic nitrification, and
       carbon cycling
@@ -395,4 +458,13 @@ curation_history:
   changes: Added surface_soil_edaphic_niche_differentiation_and_ammonia_oxidation
     mechanism graph for surface soil (ENVO:02000059) backed by PMID:30069051, PMID:38804108,
     PMID:21525411, and PMID:32009017.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 3 verified Nitrososphaera viennensis EN76 (NCBITaxon:926571)
+    ammonia monooxygenase subunit protein_examples (UniProtKB:A0A060HNG6 amoA NVIE_027270,
+    UniProtKB:A0A060HVN7 amoB NVIE_028430, and UniProtKB:A0A060HM27 amoC1 NVIE_000540)
+    backed by PMID:21525411, and documented that environmental soil amoA qPCR pools
+    in PMID:16902146 and PMID:39729140 are source-limited amplicon assays.'
   llm_assisted: true

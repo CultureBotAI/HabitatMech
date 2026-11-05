@@ -60,7 +60,87 @@ causal_graphs:
     description: Constitutively expressed Haloquadratum walsbyi bacteriorhodopsin,
       S-layer glycoprotein lattice, and giant capsule protein halomucin alongside
       Salinibacter ruber dual-chromophore (salinixanthin-retinal) xanthorhodopsin
-      and salinixanthin-binding 8-stranded beta-barrel outer-membrane porin.
+      and salinixanthin-binding 8-stranded beta-barrel outer-membrane porin. Verified
+      protein_examples are attached for Haloquadratum walsbyi strain DSM 16790 / HBSQ001
+      (NCBITaxon:362976) bacteriorhodopsin-I Bop1 (UniProtKB:Q18DH8, HQ_1014A; PMID:28673248),
+      halomucin Hmu (UniProtKB:Q18DN4, HQ_1081A; PMID:21559517), and S-layer glycoprotein
+      Csg (UniProtKB:Q18KV5, HQ_1207A; PMID:28673248), together with Salinibacter
+      ruber strain DSM 13855 / M31 (NCBITaxon:309807) xanthorhodopsin (UniProtKB:Q2S2F8,
+      SRU_1500; PMID:18515390).
+    protein_examples:
+    - accession: UniProtKB:Q18DH8
+      entry_name: BACR1_HALWD
+      recommended_name: Bacteriorhodopsin-I
+      gene_symbol: bop1
+      locus_tag: HQ_1014A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: family_member
+      sequence_length: 254
+      crc64: 110CC901DDF50298
+      evidence:
+      - reference: PMID:28673248
+        snippet: Constitutive high gene expression was observed in genes encoding
+          surface glycoproteins, light mediated proton pumping by bacteriorhodopsin,
+          several nutrient uptake systems, buoyancy and storage of excess carbon.
+        notes: Haloquadratum walsbyi strain HBSQ001 (NCBITaxon:362976) bacteriorhodopsin-I
+          (bop1, locus tag HQ_1014A, UniProtKB:Q18DH8) mediates light-driven proton
+          pumping in PMID:28673248.
+    - accession: UniProtKB:Q18DN4
+      entry_name: HMU_HALWD
+      recommended_name: Halomucin
+      gene_symbol: hmu
+      locus_tag: HQ_1081A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: family_member
+      sequence_length: 9159
+      crc64: 2170B9429C2A41E7
+      evidence:
+      - reference: PMID:21559517
+        snippet: Besides, subsequent images of cell evolution during the drying process
+          indicate the presence of an external capsule that might correspond to the
+          giant protein halomucin, predicted by the genome but never before observed
+          by other microscopy studies.
+        notes: Haloquadratum walsbyi (NCBITaxon:362976) giant capsule protein halomucin
+          (hmu, locus tag HQ_1081A, 9159 aa, UniProtKB:Q18DN4) protects cells against
+          desiccation in hypersaline salterns (PMID:21559517).
+    - accession: UniProtKB:Q18KV5
+      entry_name: Q18KV5_HALWD
+      recommended_name: S-layer glycoprotein
+      gene_symbol: csg
+      locus_tag: HQ_1207A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: family_member
+      sequence_length: 988
+      crc64: 125B31867A498D54
+      evidence:
+      - reference: PMID:28673248
+        snippet: Surface glycoproteins are essential for maintaining the large surface
+          to volume ratio that facilitates light and organic nutrient harvesting whereas
+          constitutive expression of bacteriorhodopsin warrants an immediate source
+          of energy when light becomes available.
+        notes: Haloquadratum walsbyi strain HBSQ001 (NCBITaxon:362976) cell-surface
+          S-layer glycoprotein Csg (csg, locus tag HQ_1207A, UniProtKB:Q18KV5) maintains
+          the square cell envelope in PMID:28673248.
+    - accession: UniProtKB:Q2S2F8
+      entry_name: Q2S2F8_SALRD
+      recommended_name: Xanthorhodopsin
+      locus_tag: SRU_1500
+      taxon_id: NCBITaxon:309807
+      taxon_name: Salinibacter ruber (strain DSM 13855 / M31)
+      role_in_node: family_member
+      sequence_length: 273
+      crc64: DFA5CF3DE0A15207
+      evidence:
+      - reference: PMID:18515390
+        snippet: 'The cell membrane of Salinibacter ruber contains xanthorhodopsin,
+          a light-driven transmembrane proton pump with two chromophores: a retinal
+          and the carotenoid, salinixanthin.'
+        notes: Salinibacter ruber strain DSM 13855 / M31 (NCBITaxon:309807) xanthorhodopsin
+          (locus tag SRU_1500, UniProtKB:Q2S2F8) is the dual-chromophore retinal/salinixanthin
+          proton pump characterized in PMID:18515390.
   - node_id: retinal_driven_proton_pumping_and_hypersaline_envelope_homeostasis
     label: light-driven transmembrane proton pumping, carotenoid antenna energy transfer,
       and hypersaline cell integrity
@@ -196,4 +276,13 @@ curation_history:
   changes: Added coastal_solar_saltern_haloquadratum_salinibacter_retinal_phototrophy
     mechanism graph for solar_salterns (habitatmech:GOLD.67571e7dc1) backed by PMID:28673248,
     PMID:21559517, PMID:18515390, and PMID:36229623.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 4 verified protein_examples across Haloquadratum
+    walsbyi HBSQ001 (NCBITaxon:362976; UniProtKB:Q18DH8 bop1 HQ_1014A, UniProtKB:Q18DN4
+    hmu HQ_1081A, UniProtKB:Q18KV5 csg HQ_1207A) and Salinibacter ruber M31 (NCBITaxon:309807;
+    UniProtKB:Q2S2F8 SRU_1500 xanthorhodopsin) backed by PMID:28673248, PMID:21559517,
+    and PMID:18515390.'
   llm_assisted: true

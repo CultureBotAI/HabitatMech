@@ -214,9 +214,13 @@ causal_graphs:
     label: Fe(III)-reduction outer-membrane cytochrome MtrE and Fe(II)-oxidation cytochrome
       Cyc1
     node_type: GENE_OR_PROTEIN
-    description: Dissimilatory Fe(III)-reduction gene MtrE and Fe(II)-oxidation cytochrome
+    description: 'Dissimilatory Fe(III)-reduction gene MtrE and Fe(II)-oxidation cytochrome
       gene Cyc1 co-enriched with pyruvate metabolism and benzoate degradation genes
-      during tundra permafrost thaw.
+      during tundra permafrost thaw. Source-limited for UniProtKB protein_examples:
+      PMID:37996661 quantified metagenomic gene-family abundance (MtrE and Cyc1) across
+      uncultured wet sedge tundra Rhodoferax sp. and Gallionella sp. populations without
+      depositing assembled isolate or MAG protein sequences with active UniProtKB
+      accessions.'
   - node_id: iron_coupled_organic_carbon_oxidation_and_methanogenesis_modulation
     label: iron-coupled benzoate/acetate oxidation to CO2 and competitive modulation
       of CH4 emissions
@@ -323,4 +327,12 @@ curation_history:
   changes: Added tundra_permafrost_thaw_iron_redox_and_methanogenesis_partitioning
     mechanism graph for tundra biome (ENVO:01000180) backed by PMID:37996661, PMID:31285347,
     and PMID:33084697.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Audited outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1
+    for UniProtKB protein_examples; documented source-limited status because PMID:37996661
+    reports metagenomic gene-family abundance across uncultured tundra Rhodoferax
+    sp. and Gallionella sp. without deposited active UniProtKB protein accessions.'
   llm_assisted: true

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-05T005000Z-antigravity-050301
+  timestamp: '2026-11-05T00:50:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Audit causal-graph overlays and populate verified UniProtKB ProteinExample entries in Cycle 5 Stage 3
+  details: 'Audited all 3,209 habitat records (73 with curation/causal_graphs/*.yaml overlays) and re-verified all 46 existing ProteinExample entries against live UniProtKB REST API (0 mismatches). Added 20 new verified ProteinExample entries across 7 GENE_OR_PROTEIN nodes (46 -> 66 total ProteinExample entries across 20 nodes in 19 overlays): surface_soil.yaml (archaeal_and_bacterial_ammonia_monooxygenase_amoa for Nitrososphaera viennensis EN76, NCBITaxon:926571, PMID:21525411: UniProtKB:A0A060HNG6, UniProtKB:A0A060HVN7, UniProtKB:A0A060HM27, plus source-limited qPCR amplicon pool notes for PMID:16902146 and PMID:39729140), subpolar_coniferous_forest_biome.yaml (cortinarius_manganese_dependent_peroxidases for Cortinarius acutus, NCBITaxon:165390, PMID:24725281: UniProtKB:K7RT95, UniProtKB:K7R7Q1, UniProtKB:K7R0E4), oil_contaminated_soil.yaml (alkb_todc1_nid_pcag_oxygenases_and_otsa1_hae1_tolerance_system for Rhodococcus erythropolis IBBPo1, NCBITaxon:1833, PMID:25288551: UniProtKB:S5Z076 otsA1 KF059973.1, plus PCR-only and community-metagenomic source limits for alkB/todC1/nidA/pcaG), solar_salterns.yaml (bacteriorhodopsin_halomucin_and_salinixanthin_xanthorhodopsin_pumps for Haloquadratum walsbyi HBSQ001, NCBITaxon:362976, and Salinibacter ruber M31, NCBITaxon:309807, PMID:28673248, PMID:21559517, and PMID:18515390: UniProtKB:Q18DH8, UniProtKB:Q18DN4, UniProtKB:Q18KV5, UniProtKB:Q2S2F8), rock_dwelling_subaerial_biofilms.yaml (cyanoexosortase_b_crtb_pep_cterm_and_scytonemin_gene_clusters for Nostoc punctiforme ATCC 29133 / PCC 73102, NCBITaxon:63737, PMID:40358234 and PMID:35208882: UniProtKB:B2J727, UniProtKB:B2IXH4, UniProtKB:B2IXH1, UniProtKB:B2IXH0), leaf_surface.yaml (lanthanide_methanol_dehydrogenase_xoxf_and_tonb_ree_transporter for Methylorubrum extorquens AM1, NCBITaxon:272630, PMID:20447995: UniProtKB:C5B120, UniProtKB:C5ATJ3, plus UniParc UPI000158F5C9/UPI00000C0031/UPI000162969E notes for M. extorquens PA1, NCBITaxon:419610, PMID:30653750), and dairy_processing_facility.yaml (thermostable_alkaline_metalloprotease_aprx_and_proteinaceous_biofilm_matrix for dairy/milk-isolated Pseudomonas fluorescens, NCBITaxon:294, PMID:28217561 and PMID:41794443: UniProtKB:Q9KJ19, UniProtKB:B0FXD9, UniProtKB:B0FXE0). Documented source-limited / UniParc-only status on tundra_biome.yaml (outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1, PMID:37996661), diffuse_flow.yaml (sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters, UPI00125EE4C6 and UPI00125F63F9 in Sulfurimonas hydrogeniphila NW10, PMID:41447692, and environmental soxB clones in PMID:23847608), and fruiting_body.yaml (bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster, environmental Tuber magnatum amplicons in PMID:38692852 and UniParc UPI0002D29261 in Pseudomonas fluorescens NZI7, PMID:23426012).'

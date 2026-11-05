@@ -62,10 +62,14 @@ causal_graphs:
     label: Bradyrhizobium nitrogenase (nifH)/glutamine synthetase (glnII) and Pseudomonas
       GacS/EDB nematode-repellence cluster
     node_type: GENE_OR_PROTEIN
-    description: Nitrogenase iron protein gene nifH and glutamine synthetase II gene
+    description: 'Nitrogenase iron protein gene nifH and glutamine synthetase II gene
       glnII in truffle-associated Bradyrhizobium spp., alongside the global sensor
-      kinase GacS and GacS-regulated EDB ('edible') gene cluster in mushroom-associated
-      Pseudomonas fluorescens NZI7.
+      kinase GacS and GacS-regulated EDB (''edible'') gene cluster in mushroom-associated
+      Pseudomonas fluorescens NZI7. Source-limited for UniProtKB protein_examples:
+      the Tuber magnatum ascocarp Bradyrhizobium nifH and glnII sequences in PMID:38692852
+      are environmental PCR amplicons without active UniProtKB protein accessions,
+      and the Pseudomonas fluorescens NZI7 (PMID:23426012) gacS and edb-cluster proteome
+      is archived in UniParc (e.g. UPI0002D29261) without active UniProtKB cross-references.'
   - node_id: symbiotic_nitrogen_fixation_mycelial_growth_and_nematode_grazing_deterrence
     label: symbiotic diazotrophic mycelial growth promotion and EDB-mediated nematode
       deterrence
@@ -214,4 +218,13 @@ curation_history:
   changes: Added fungal_fruiting_body_bradyrhizobium_nifh_symbiosis_and_pseudomonas_gacs_edb_defense
     mechanism graph for fruiting_body (habitatmech:GOLD.92cbc36828) backed by PMID:35237850,
     PMID:33943006, PMID:38692852, and PMID:23426012.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Audited bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster
+    for UniProtKB protein_examples; documented source-limited status because Tuber
+    magnatum Bradyrhizobium nifH/glnII (PMID:38692852) are environmental amplicons
+    and Pseudomonas fluorescens NZI7 (PMID:23426012) proteins are UniParc-only without
+    active UniProtKB accessions.'
   llm_assisted: true
