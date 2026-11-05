@@ -82,7 +82,33 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Catabolic oxygenase genes (alkB, alkB1, todC1, todM, xylM, nidA,
       pcaG), hydrophobic efflux transporter (HAE1), and trehalose-6-phosphate synthase
-      (otsA1) enabling solvent tolerance and hydrocarbon oxidation.
+      (otsA1) enabling solvent tolerance and hydrocarbon oxidation. Verified protein_examples
+      is attached for the Rhodococcus erythropolis IBBPo1 (NCBITaxon:1833) trehalose-6-phosphate
+      synthase OtsA1 sequence deposited directly by PMID:25288551 (UniProtKB:S5Z076,
+      GenBank KF059973.1 / AGT29728.1); alkB, alkB1, todC1, todM, xylM, and HAE1 in
+      strain IBBPo1 (PMID:25288551) were detected by PCR amplification without deposited
+      protein translations, and alkB, nidA/B, and pcaG/H in PMID:31546635 were profiled
+      as community-wide metagenomic gene pools without isolate-resolved UniProtKB
+      accessions.
+    protein_examples:
+    - accession: UniProtKB:S5Z076
+      entry_name: S5Z076_RHOER
+      recommended_name: Trehalose-6-phosphate synthase
+      gene_symbol: otsA1
+      taxon_id: NCBITaxon:1833
+      taxon_name: Rhodococcus erythropolis
+      role_in_node: family_member
+      sequence_length: 151
+      crc64: FC5587C204985205
+      evidence:
+      - reference: PMID:25288551
+        snippet: The high organic solvent tolerance of R. erythropolis IBBPo1 could
+          be due to the presence in their large genome of some catabolic (alkB, alkB1,
+          todC1, todM, xylM), transporter (HAE1) and trehalose-6-phosphate synthase
+          (otsA1, KF059973.1) genes.
+        notes: UniProtKB:S5Z076 (S5Z076_RHOER, otsA1, EMBL KF059973.1 / AGT29728.1)
+          is the exact Rhodococcus erythropolis IBBPo1 (NCBITaxon:1833) trehalose-6-phosphate
+          synthase sequence deposited by Stancu 2014 (PMID:25288551).
   - node_id: biosurfactant_emulsification_and_petroleum_hydrocarbon_biodegradation
     label: biosurfactant-mediated oil emulsification and aliphatic/PAH biodegradation
     node_type: COMMUNITY_PROCESS
@@ -206,4 +232,12 @@ curation_history:
   changes: Added oil_contaminated_soil_rhodococcus_biosurfactant_and_alkb_hydrocarbon_catabolism
     mechanism graph for oil contaminated soil (ENVO:00002875) backed by PMID:24031544,
     PMID:25288551, and PMID:39191326.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added verified Rhodococcus erythropolis IBBPo1 (NCBITaxon:1833)
+    trehalose-6-phosphate synthase OtsA1 protein_examples entry (UniProtKB:S5Z076,
+    KF059973.1) backed by PMID:25288551, and documented PCR-only / community-metagenomic
+    source limits for the remaining catabolic and efflux genes.'
   llm_assisted: true

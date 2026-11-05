@@ -943,3 +943,122 @@ def test_cycle4_stage3_protein_examples_and_source_limited_notes_are_present():
         assert expected_substr in node.get("description", "")
 
 
+def test_cycle5_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "surface_soil": REPO_ROOT / "data" / "habitats" / "terrestrial" / "surface_soil.yaml",
+        "subpolar_coniferous_forest_biome": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "subpolar_coniferous_forest_biome.yaml"
+        ),
+        "tundra_biome": REPO_ROOT / "data" / "habitats" / "terrestrial" / "tundra_biome.yaml",
+        "oil_contaminated_soil": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "oil_contaminated_soil.yaml"
+        ),
+        "solar_salterns": REPO_ROOT / "data" / "habitats" / "aquatic" / "solar_salterns.yaml",
+        "diffuse_flow": REPO_ROOT / "data" / "habitats" / "aquatic" / "diffuse_flow.yaml",
+        "rock_dwelling_subaerial_biofilms": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "rock_dwelling_subaerial_biofilms.yaml"
+        ),
+        "leaf_surface": REPO_ROOT / "data" / "habitats" / "host_associated" / "leaf_surface.yaml",
+        "fruiting_body": REPO_ROOT / "data" / "habitats" / "host_associated" / "fruiting_body.yaml",
+        "dairy_processing_facility": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "dairy_processing_facility.yaml"
+        ),
+    }
+    expected_protein_nodes = {
+        "surface_soil": {
+            "archaeal_and_bacterial_ammonia_monooxygenase_amoa": [
+                "UniProtKB:A0A060HNG6",
+                "UniProtKB:A0A060HVN7",
+                "UniProtKB:A0A060HM27",
+            ],
+        },
+        "subpolar_coniferous_forest_biome": {
+            "cortinarius_manganese_dependent_peroxidases": [
+                "UniProtKB:K7RT95",
+                "UniProtKB:K7R7Q1",
+                "UniProtKB:K7R0E4",
+            ],
+        },
+        "oil_contaminated_soil": {
+            "alkb_todc1_nid_pcag_oxygenases_and_otsa1_hae1_tolerance_system": [
+                "UniProtKB:S5Z076",
+            ],
+        },
+        "solar_salterns": {
+            "bacteriorhodopsin_halomucin_and_salinixanthin_xanthorhodopsin_pumps": [
+                "UniProtKB:Q18DH8",
+                "UniProtKB:Q18DN4",
+                "UniProtKB:Q18KV5",
+                "UniProtKB:Q2S2F8",
+            ],
+        },
+        "rock_dwelling_subaerial_biofilms": {
+            "cyanoexosortase_b_crtb_pep_cterm_and_scytonemin_gene_clusters": [
+                "UniProtKB:B2J727",
+                "UniProtKB:B2IXH4",
+                "UniProtKB:B2IXH1",
+                "UniProtKB:B2IXH0",
+            ],
+        },
+        "leaf_surface": {
+            "lanthanide_methanol_dehydrogenase_xoxf_and_tonb_ree_transporter": [
+                "UniProtKB:C5B120",
+                "UniProtKB:C5ATJ3",
+            ],
+        },
+        "dairy_processing_facility": {
+            "thermostable_alkaline_metalloprotease_aprx_and_proteinaceous_biofilm_matrix": [
+                "UniProtKB:Q9KJ19",
+                "UniProtKB:B0FXD9",
+                "UniProtKB:B0FXE0",
+            ],
+        },
+    }
+    new_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            new_examples += len(examples)
+    assert new_examples == 20
+
+    expected_documented_nodes = {
+        "tundra_biome": (
+            "outer_membrane_cytochrome_mtre_and_iron_oxidase_cyc1",
+            "GENE_OR_PROTEIN",
+            "Source-limited for UniProtKB protein_examples: PMID:37996661",
+        ),
+        "diffuse_flow": (
+            "sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters",
+            "GENE_OR_PROTEIN",
+            "UPI00125EE4C6",
+        ),
+        "fruiting_body": (
+            "bradyrhizobium_nifh_glnii_and_pseudomonas_gacs_edb_repellence_cluster",
+            "GENE_OR_PROTEIN",
+            "UPI0002D29261",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
+
+
+

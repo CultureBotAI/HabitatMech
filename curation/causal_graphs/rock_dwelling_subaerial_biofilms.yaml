@@ -33,7 +33,78 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Nostoc punctiforme cyanoexosortase B (crtB), which processes and exports PEP-CTERM domain
       proteins to stabilize EPS/hormogonium polysaccharide interactions, and the two UVA/UVB-upregulated
-      scytonemin biosynthesis gene clusters.
+      scytonemin biosynthesis gene clusters. Verified protein_examples are attached for Nostoc punctiforme
+      strain ATCC 29133 / PCC 73102 (NCBITaxon:63737) cyanoexosortase B CrtB / EpsH (UniProtKB:B2J727,
+      Npun_F0456; PMID:40358234), scytonemin operon L-tryptophan dehydrogenase ScyB (UniProtKB:B2IXH4,
+      Npun_R1275; PMID:35208882), and periplasmic scytonemin-cluster PEP-CTERM proteins ScyE (UniProtKB:B2IXH1,
+      Npun_R1272; PMID:40358234) and ScyF (UniProtKB:B2IXH0, Npun_R1271; PMID:40358234).
+    protein_examples:
+    - accession: UniProtKB:B2J727
+      entry_name: B2J727_NOSP7
+      recommended_name: Eight transmembrane protein EpsH
+      locus_tag: Npun_F0456
+      taxon_id: NCBITaxon:63737
+      taxon_name: Nostoc punctiforme (strain ATCC 29133 / PCC 73102)
+      role_in_node: family_member
+      sequence_length: 297
+      crc64: 423BD143C907F044
+      evidence:
+      - reference: PMID:40358234
+        snippet: The filamentous cyanobacterium Nostoc punctiforme contains a single putative exosortase,
+          designated cyanoexosortase B (CrtB), implicated by previous work both in motility and in the
+          production of the UV-absorbing pigment, scytonemin.
+        notes: Nostoc punctiforme ATCC 29133 / PCC 73102 (NCBITaxon:63737) cyanoexosortase B (CrtB, locus
+          tag Npun_F0456, annotated in UniProtKB as Eight transmembrane protein EpsH, UniProtKB:B2J727)
+          is essential for motility, biofilm formation, and scytonemin biosynthesis in PMID:40358234.
+    - accession: UniProtKB:B2IXH4
+      entry_name: TRPDH_NOSP7
+      recommended_name: L-tryptophan dehydrogenase
+      locus_tag: Npun_R1275
+      taxon_id: NCBITaxon:63737
+      taxon_name: Nostoc punctiforme (strain ATCC 29133 / PCC 73102)
+      role_in_node: subunit
+      sequence_length: 353
+      crc64: 598B1E8D193C8EE6
+      evidence:
+      - reference: PMID:35208882
+        snippet: The indole-alkaloid scytonemin is a sunscreen pigment that is widely produced among cyanobacteria
+          as an ultraviolet radiation (UVR) survival strategy. Scytonemin biosynthesis is encoded by two
+          gene clusters that are known to be induced by long-wavelength radiation (UVA).
+        notes: Nostoc punctiforme ATCC 29133 / PCC 73102 (NCBITaxon:63737) L-tryptophan dehydrogenase
+          ScyB (locus tag Npun_R1275, UniProtKB:B2IXH4) is a core enzyme of the UVA-inducible scytonemin
+          biosynthesis gene cluster analyzed in PMID:35208882.
+    - accession: UniProtKB:B2IXH1
+      entry_name: B2IXH1_NOSP7
+      recommended_name: PEP-CTERM protein-sorting domain-containing protein
+      locus_tag: Npun_R1272
+      taxon_id: NCBITaxon:63737
+      taxon_name: Nostoc punctiforme (strain ATCC 29133 / PCC 73102)
+      role_in_node: family_member
+      sequence_length: 432
+      crc64: 3367C488C384404E
+      evidence:
+      - reference: PMID:40358234
+        snippet: In the case of scytonemin-the late biosynthetic steps of which occur in the periplasm
+          and whose operon contains several putative PEP-CTERM proteins-ΔcrtB failed to produce it.
+        notes: Nostoc punctiforme ATCC 29133 / PCC 73102 (NCBITaxon:63737) locus Npun_R1272 (ScyE, UniProtKB:B2IXH1)
+          encodes a PEP-CTERM domain-containing protein in the scytonemin biosynthesis operon required
+          for periplasmic scytonemin maturation (PMID:40358234).
+    - accession: UniProtKB:B2IXH0
+      entry_name: B2IXH0_NOSP7
+      recommended_name: PEP-CTERM protein-sorting domain-containing protein
+      locus_tag: Npun_R1271
+      taxon_id: NCBITaxon:63737
+      taxon_name: Nostoc punctiforme (strain ATCC 29133 / PCC 73102)
+      role_in_node: family_member
+      sequence_length: 398
+      crc64: 9C52C83B0377D33D
+      evidence:
+      - reference: PMID:40358234
+        snippet: In the case of scytonemin-the late biosynthetic steps of which occur in the periplasm
+          and whose operon contains several putative PEP-CTERM proteins-ΔcrtB failed to produce it.
+        notes: Nostoc punctiforme ATCC 29133 / PCC 73102 (NCBITaxon:63737) locus Npun_R1271 (ScyF, UniProtKB:B2IXH0)
+          encodes a PEP-CTERM domain-containing protein in the scytonemin biosynthesis operon processed
+          via CrtB (PMID:40358234).
   - node_id: eps_matrix_protein_dna_enrichment_scytonemin_uv_shielding_and_delayed_stone_evaporation
     label: EPS protein/DNA matrix enrichment, scytonemin UV shielding, fermentative reprogramming, and
       delayed lithic water evaporation
@@ -125,4 +196,12 @@ curation_history:
   changes: Added subaerial_rock_biofilm_desiccation_uv_crtb_scytonemin_bioprotection mechanism graph for
     rock_dwelling_subaerial_biofilms (habitatmech:GOLD.02bb8b9d08) backed by PMID:37517730, PMID:36669662,
     PMID:35208882, and PMID:40358234.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 4 verified Nostoc punctiforme ATCC 29133 / PCC 73102 (NCBITaxon:63737)
+    protein_examples (UniProtKB:B2J727 Npun_F0456 CrtB/EpsH, UniProtKB:B2IXH4 Npun_R1275 ScyB, UniProtKB:B2IXH1
+    Npun_R1272 ScyE PEP-CTERM, and UniProtKB:B2IXH0 Npun_R1271 ScyF PEP-CTERM) backed by PMID:40358234
+    and PMID:35208882.'
   llm_assisted: true

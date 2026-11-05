@@ -250,7 +250,59 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Extracellular manganese-dependent peroxidases (11 peroxidase genes
       encoded in the Cortinarius glaucopus genome) transcribed in boreal forest humus
-      and downregulated under elevated inorganic ammonium.
+      and downregulated under elevated inorganic ammonium. Verified protein_examples
+      are attached for Cortinarius acutus (NCBITaxon:165390) manganese-dependent peroxidase
+      (mnp) sequences deposited directly from northern forest humus analyses in PMID:24725281
+      (UniProtKB:K7RT95, UniProtKB:K7R7Q1, UniProtKB:K7R0E4).
+    protein_examples:
+    - accession: UniProtKB:K7RT95
+      entry_name: K7RT95_9AGAR
+      recommended_name: Peroxidase
+      gene_symbol: mnp
+      taxon_id: NCBITaxon:165390
+      taxon_name: Cortinarius acutus
+      role_in_node: family_member
+      sequence_length: 77
+      crc64: 6D374835379C5875
+      evidence:
+      - reference: PMID:24725281
+        snippet: Amplification of mRNA sequences indicated transcription of Cortinarius
+          Mn-peroxidase genes under field conditions.
+        notes: UniProtKB:K7RT95 (K7RT95_9AGAR, mnp, EMBL AFV79588.1) is a Cortinarius
+          acutus (NCBITaxon:165390) peroxidase sequence deposited directly by Bödeker
+          et al. 2014 (PMID:24725281).
+    - accession: UniProtKB:K7R7Q1
+      entry_name: K7R7Q1_9AGAR
+      recommended_name: Peroxidase
+      gene_symbol: mnp
+      taxon_id: NCBITaxon:165390
+      taxon_name: Cortinarius acutus
+      role_in_node: family_member
+      sequence_length: 77
+      crc64: 913E161A72F2BF09
+      evidence:
+      - reference: PMID:24725281
+        snippet: Phylogenetic analyses of Cortinarius peroxidase amplicons and genome
+          sequences were performed.
+        notes: UniProtKB:K7R7Q1 (K7R7Q1_9AGAR, mnp, EMBL AFV79586.1) is a Cortinarius
+          acutus (NCBITaxon:165390) peroxidase sequence deposited directly by Bödeker
+          et al. 2014 (PMID:24725281).
+    - accession: UniProtKB:K7R0E4
+      entry_name: K7R0E4_9AGAR
+      recommended_name: Peroxidase
+      gene_symbol: mnp
+      taxon_id: NCBITaxon:165390
+      taxon_name: Cortinarius acutus
+      role_in_node: family_member
+      sequence_length: 77
+      crc64: E90F4F205B3193B0
+      evidence:
+      - reference: PMID:24725281
+        snippet: We found a significant co-localization of high peroxidase activity
+          and DNA from Cortinarius species.
+        notes: UniProtKB:K7R0E4 (K7R0E4_9AGAR, mnp, EMBL AFV79587.1) is a Cortinarius
+          acutus (NCBITaxon:165390) peroxidase sequence deposited directly by Bödeker
+          et al. 2014 (PMID:24725281).
   - node_id: humus_oxidation_organic_nitrogen_mobilization_and_topsoil_carbon_turnover
     label: enzymatic humus oxidation, organic nitrogen mobilization, and mineral weathering
     node_type: COMMUNITY_PROCESS
@@ -389,4 +441,11 @@ curation_history:
   changes: Added boreal_coniferous_forest_cortinarius_peroxidase_humus_oxidation mechanism
     graph for subpolar coniferous forest biome (ENVO:01000250) backed by PMID:37697631,
     PMID:33934481, PMID:24725281, and PMID:38325494.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Added 3 verified Cortinarius acutus (NCBITaxon:165390)
+    Mn-peroxidase (mnp) protein_examples (UniProtKB:K7RT95, UniProtKB:K7R7Q1, and
+    UniProtKB:K7R0E4) deposited directly by PMID:24725281.'
   llm_assisted: true

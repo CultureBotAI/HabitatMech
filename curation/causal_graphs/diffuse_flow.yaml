@@ -32,9 +32,13 @@ causal_graphs:
     label: thiosulfate-sensing two-component system SulRS and Sox multienzyme clusters (soxB, soxABXY1Z1,
       soxCDY2Z2)
     node_type: GENE_OR_PROTEIN
-    description: Conserved Campylobacterota two-component regulatory system SulRS (where histidine kinase
+    description: 'Conserved Campylobacterota two-component regulatory system SulRS (where histidine kinase
       SulS senses thiosulfate and response regulator SulR binds promoters Px, Py, Pr) and the sulfur-oxidizing
-      soxABXY1Z1 and soxCDY2Z2 (soxB) gene clusters.
+      soxABXY1Z1 and soxCDY2Z2 (soxB) gene clusters. Source-limited for UniProtKB protein_examples: the
+      Sulfurimonas hydrogeniphila NW10 (NCBITaxon:2024847) proteome (SulS/SulR, soxABXY1Z1, soxCDY2Z2;
+      PMID:41447692) is archived in UniParc (e.g. UPI00125EE4C6, UPI00125F63F9) without active UniProtKB
+      cross-references, and the Axial Seamount diffuse-flow soxB sequences in PMID:23847608 are environmental
+      clone-library amplicons without isolate-resolved active UniProtKB accessions.'
   - node_id: sox_pathway_sulfur_oxidation_and_chemosynthetic_mineral_colonization
     label: Sox-mediated sulfur/thiosulfate chemolithoautotrophy and metal sulfide mineral colonization
     node_type: COMMUNITY_PROCESS
@@ -121,4 +125,12 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added diffuse_flow_vent_campylobacterota_sulrs_sox_sulfur_chemolithoautotrophy mechanism graph
     for diffuse_flow (habitatmech:GOLD.5c80d6475a) backed by PMID:23847608, PMID:32336020, and PMID:41767251.
+  llm_assisted: true
+- timestamp: '2026-11-05T00:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 5 Stage 3: Audited sulrs_two_component_system_and_soxabxy1z1_soxcdy2z2_clusters for
+    UniProtKB protein_examples; documented source-limited status because Sulfurimonas hydrogeniphila NW10
+    (PMID:41447692) proteins are UniParc-only without active UniProtKB accessions and Axial Seamount soxB
+    sequences (PMID:23847608) are environmental amplicons.'
   llm_assisted: true
