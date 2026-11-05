@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Equidae-Horse
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 source_attestations:
@@ -204,3 +200,12 @@ curation_history:
     environment'. Definition drafted from the record's deep-research report under
     research/habitats/ and read against it; the report's proposed wording, genus and
     near-miss table are the evidence.
+- timestamp: '2026-11-05T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Equidae-Horse''
+    when defining habitatmech:BACDIVE.09c3544e85 as ''equid-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2296
+    : The displaced label names the determining hosts (Equidae-Horse), not their associated
+    environment. Suppress exact-alias fallback; preserve verbatim source provenance,
+    definition, genus and native status.'

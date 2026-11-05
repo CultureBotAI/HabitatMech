@@ -60,7 +60,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/leaf-po-0025034.html">leaf</a>      <code class="curie">PO:0025034</code></li>
   <li><a href="http://purl.obolibrary.org/obo/PO_0025386">cuticular wax</a>      <code class="curie">PO:0025386</code></li>
 </ul>
 
@@ -79,6 +78,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-14 · claude-opus-5</span>
     <p>Grounded to PO:0025388 &#39;epicuticular wax&#39; (EXACT). Stale-sweep review (#12): the class sweep said no term matched, and that was true when it ran — PO was vendored later, under #10. PO:0025388 &#39;epicuticular wax&#39; matches the leaf exactly and the path is Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax, so it is the same thing. Path: Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax (source concept habitatmech:GOLD.284cf93966)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-05 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution PO:0025034 for habitatmech:GOLD.284cf93966 (Host-associated &gt; Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Epicuticular wax). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2295" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2295</a> : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory mucosal surface liquid, not the entire human respiratory system; erythrocyte is a circulating red blood cell, not the entire human blood tissue; esophageal ulcer is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus; crustacean, piscine, avian, human and mammalian esophagus are tubular digestive organs, not subtypes of the entire foregut or digestive system; ethmoid bone is a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect excretory system is an organ system, not a subtype of the whole insect-associated environment. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target PO:0025388. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 
