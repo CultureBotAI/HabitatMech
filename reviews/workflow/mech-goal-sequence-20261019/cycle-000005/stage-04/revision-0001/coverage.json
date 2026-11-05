@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 5,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "215b23c90244e634e64f88fa2c1a2a3bb011880a",
+  "cohort_id": "epicuticular_wax_to_excretory_system",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/epicuticular_wax.yaml through data/habitats/host_associated/excretory_system.yaml (next 24 unreviewed host_associated records at indices 458..481 immediately following Cycle 4 Stage 4 slice ending at epibionts.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 10,
+  "needs_curation_count": 14,
+  "new_open_finding_count": 22,
+  "carried_deferred_finding_count": 30,
+  "total_carry_forward_finding_count": 52,
+  "category_review_bundle": {
+    "review_id": "20261105T051600Z-epicuticular_wax_to_excretory_system-category",
+    "yaml_path": "reviews/structured/20261105T051600Z-epicuticular_wax_to_excretory_system-category/review.yaml",
+    "yaml_sha256": "28cb49ffa32856552991115ee71f0a9c3a24954505a89ec65c69d65a339a1b18",
+    "md_path": "reviews/structured/20261105T051600Z-epicuticular_wax_to_excretory_system-category/review.md",
+    "md_sha256": "cbe0cf57531ba97e192a9e4b1a7600cb36f5c8f7c25858a64176b11ca2449a68",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261105T051510Z-epicuticular_wax-record",
+      "target_path": "data/habitats/host_associated/epicuticular_wax.yaml",
+      "target_id": "PO:0025388",
+      "target_label": "epicuticular wax",
+      "target_sha256": "d8201ff70f2f356f76afefe5879d56afe4dded116a76fdb993def2c529ca7488",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "epicuticular-wax-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261105T051510Z-epicuticular_wax-record/review.yaml",
+      "yaml_sha256": "910aeb7f54e7dd3259db6012a86873b9d69096e2e61230a6ed09eae92eb747f1",
+      "md_path": "reviews/structured/20261105T051510Z-epicuticular_wax-record/review.md",
+      "md_sha256": "c2289712d426443a1daf3bab53cd3375225242a1b0b7cabf655ea0d7cb1112b9"
+    },
+    {
+      "review_id": "20261105T051511Z-epidermal_cell-record",
+      "target_path": "data/habitats/host_associated/epidermal_cell.yaml",
+      "target_id": "BTO:0001470",
+      "target_label": "epidermal cell",
+      "target_sha256": "123e9fc523bf62891100eddade1311f317feb36cb81f08c41d8bcafabe0d53d6",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051511Z-epidermal_cell-record/review.yaml",
+      "yaml_sha256": "3ef6571635111c97dc70e7415a200e07dc70c9005c35c4c3b3a4527173738256",
+      "md_path": "reviews/structured/20261105T051511Z-epidermal_cell-record/review.md",
+      "md_sha256": "1342dccf8adf14dd1267aad9521a849f106fcbff4858eae8003983778e94cfa3"
+    },
+    {
+      "review_id": "20261105T051512Z-epidermis-record",
+      "target_path": "data/habitats/host_associated/epidermis.yaml",
+      "target_id": "BTO:0000404",
+      "target_label": "epidermis",
+      "target_sha256": "9d7430dc75afc189ea114745ffe65b086176b2b4032accfaffd5f6be3efe934e",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051512Z-epidermis-record/review.yaml",
+      "yaml_sha256": "b536f1663e8a42a3e97ce8d6b499d0a341cc62c3910660736ae4d218747e6bf5",
+      "md_path": "reviews/structured/20261105T051512Z-epidermis-record/review.md",
+      "md_sha256": "08f3f4d3eb110b226f308a29ced857b6d80f04c5c34df7e603dcd914260abd76"
+    },
+    {
+      "review_id": "20261105T051513Z-epidermoid-record",
+      "target_path": "data/habitats/host_associated/epidermoid.yaml",
+      "target_id": "habitatmech:GOLD.237fd067e0",
+      "target_label": "human epidermoid cyst",
+      "target_sha256": "5a07695d2e0c025d9a1ee578d5a242d41ab0d09c100d3826db41141cb242f582",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051513Z-epidermoid-record/review.yaml",
+      "yaml_sha256": "081e6c53b0373dc28c94401fd78f697875387cf07fa3328c770d23abb408944c",
+      "md_path": "reviews/structured/20261105T051513Z-epidermoid-record/review.md",
+      "md_sha256": "8e9bd86d6ae5687cb2a47077d1a3609bc09f95dae137af3c7692e00dcc0305a7"
+    },
+    {
+      "review_id": "20261105T051514Z-epiphytes-record",
+      "target_path": "data/habitats/host_associated/epiphytes.yaml",
+      "target_id": "habitatmech:GOLD.0e6d2e67ff",
+      "target_label": "leaf surface epiphyte environment",
+      "target_sha256": "dfb0f1b4af1ecb371e8b26162918a4f9bf66e215adf646da75e956f965323df4",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051514Z-epiphytes-record/review.yaml",
+      "yaml_sha256": "a486c6003e5fe517b3e2f54b6458efcbf5821a2fa41e3ddde0ce13acc4b314f3",
+      "md_path": "reviews/structured/20261105T051514Z-epiphytes-record/review.md",
+      "md_sha256": "9de87ee6ee1ebcf977c3bf14b887873d1c37b88168cccc423adf7eeaaad1b108"
+    },
+    {
+      "review_id": "20261105T051515Z-epiphytes__ec31dd8e-record",
+      "target_path": "data/habitats/host_associated/epiphytes__ec31dd8e.yaml",
+      "target_id": "habitatmech:GOLD.949bdcdb77",
+      "target_label": "fruit surface epiphyte environment",
+      "target_sha256": "48cc58c753649f7fef4e99343269354b6ac827c3cfff0d9b3f72a4c48083c736",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051515Z-epiphytes__ec31dd8e-record/review.yaml",
+      "yaml_sha256": "e8ef5d24876c83c6ba83a8e7328bfa83ed8b0e402ff2e2aa0dd6e1986bc79df0",
+      "md_path": "reviews/structured/20261105T051515Z-epiphytes__ec31dd8e-record/review.md",
+      "md_sha256": "6da3b6b7ce375101c7b8d7e5a211d0249abb542e49d95ee065ad9dd67eddac52"
+    },
+    {
+      "review_id": "20261105T051516Z-epithelial_cell-record",
+      "target_path": "data/habitats/host_associated/epithelial_cell.yaml",
+      "target_id": "BTO:0000414",
+      "target_label": "epithelial cell",
+      "target_sha256": "c4b37f1d70cb7f541313af8655da8439d82e8cdba8b21e49c2a1031fbe60a54b",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051516Z-epithelial_cell-record/review.yaml",
+      "yaml_sha256": "48c1353ee237ec848b4532edd2d136b378112a840ca32672b6307b7a86d3c9e3",
+      "md_path": "reviews/structured/20261105T051516Z-epithelial_cell-record/review.md",
+      "md_sha256": "c072280ec9a97db9f7ddc3d4020c01098dfe00460c6884de267a61fb5b9b99ba"
+    },
+    {
+      "review_id": "20261105T051517Z-epithelial_lining_fluid-record",
+      "target_path": "data/habitats/host_associated/epithelial_lining_fluid.yaml",
+      "target_id": "UBERON:0035963",
+      "target_label": "epithelial lining fluid",
+      "target_sha256": "12954c93d2f5c447b3822f57c8009d16a1fc1b422c46a6daf456a96281931010",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "epithelial-lining-fluid-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261105T051517Z-epithelial_lining_fluid-record/review.yaml",
+      "yaml_sha256": "47a55b04c177c86d42fcd8d463195874dec109383750b0929e2907dc3ab7d2b3",
+      "md_path": "reviews/structured/20261105T051517Z-epithelial_lining_fluid-record/review.md",
+      "md_sha256": "828abd848c64a5d09015ff7d78345fd11a86de20d05ac5be2fd0614c84d6a06e"
+    },
+    {
+      "review_id": "20261105T051518Z-epithelium-record",
+      "target_path": "data/habitats/host_associated/epithelium.yaml",
+      "target_id": "BTO:0000416",
+      "target_label": "epithelium",
+      "target_sha256": "3842bb5461603ad2188db6eec103fd1bee09a08bb5ace94e45c4022434e2d68b",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051518Z-epithelium-record/review.yaml",
+      "yaml_sha256": "09c4ecbb18023b96496a14f863e76a0632902689fb3ec07b5ed9ad649b46aeb8",
+      "md_path": "reviews/structured/20261105T051518Z-epithelium-record/review.md",
+      "md_sha256": "e0b6a6a3fbe56fb1db2f91a5eb624f7e1c1f03e3e5179d3a6c2fbeca3a8696dc"
+    },
+    {
+      "review_id": "20261105T051519Z-equidae_horse-record",
+      "target_path": "data/habitats/host_associated/equidae_horse.yaml",
+      "target_id": "habitatmech:BACDIVE.09c3544e85",
+      "target_label": "equid-associated environment",
+      "target_sha256": "7edf1d3ac806ab86781a2cac76d5b5635526996bf2e8add5bd8b6977c0d5a8fe",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "equidae-horse-host-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261105T051519Z-equidae_horse-record/review.yaml",
+      "yaml_sha256": "5e72d08616e7a6ce32caaa5118f2d8c1a90ccb0db4f38dfcb6bf46c521df011c",
+      "md_path": "reviews/structured/20261105T051519Z-equidae_horse-record/review.md",
+      "md_sha256": "b824146db70f66c35e0f5e77e675f4570c86735f211b1f47ed6cef78e1144a64"
+    },
+    {
+      "review_id": "20261105T051520Z-erythrocyte-record",
+      "target_path": "data/habitats/host_associated/erythrocyte.yaml",
+      "target_id": "BTO:0000424",
+      "target_label": "erythrocyte",
+      "target_sha256": "b84bfebe492c8a5b0d28b72011baf639781e3a8e9903e55721aa22ffdb4f47fa",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "erythrocyte-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261105T051520Z-erythrocyte-record/review.yaml",
+      "yaml_sha256": "fcb38e0bd3360b19af0ca9d44b653a1802872ca5d9c5039f54d69e65b501787e",
+      "md_path": "reviews/structured/20261105T051520Z-erythrocyte-record/review.md",
+      "md_sha256": "73068d6e34f64ea98ff7d35d957829c62af5c731a026b7c3ae6b025a83fea9e6"
+    },
+    {
+      "review_id": "20261105T051521Z-erythroleukemia_cell_line-record",
+      "target_path": "data/habitats/host_associated/erythroleukemia_cell_line.yaml",
+      "target_id": "BTO:0000846",
+      "target_label": "erythroleukemia cell line",
+      "target_sha256": "00c5e6772aaea2b26f87b3f274578fa10de94c64f9565de5335bfa05502fbaac",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051521Z-erythroleukemia_cell_line-record/review.yaml",
+      "yaml_sha256": "9062e575235e79821e07cc0e2b3cafd970a1b8ea45b84163a8f1c34b7b05b57d",
+      "md_path": "reviews/structured/20261105T051521Z-erythroleukemia_cell_line-record/review.md",
+      "md_sha256": "c1ea9b3ad1474df43ef0b8afb9fc8dbbfcc989f3bc5b27c05239ab9b8cb621e4"
+    },
+    {
+      "review_id": "20261105T051522Z-esophageal_ulcer-record",
+      "target_path": "data/habitats/host_associated/esophageal_ulcer.yaml",
+      "target_id": "habitatmech:GOLD.45b27bdccd",
+      "target_label": "Esophageal ulcer",
+      "target_sha256": "6169425d5fddee7776fdc5237f7ded08a653f66550ccd7e3147539459436d3b6",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophageal-ulcer-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261105T051522Z-esophageal_ulcer-record/review.yaml",
+      "yaml_sha256": "58f3611013280997c644515cfdb2e549bcd7f4ed7a4bf454c04f91695a3db56c",
+      "md_path": "reviews/structured/20261105T051522Z-esophageal_ulcer-record/review.md",
+      "md_sha256": "cbf9445b3ecff085eb9c4f140cf1aa7a25919604ff5f26b3979c62ea56339f92"
+    },
+    {
+      "review_id": "20261105T051523Z-esophagus-record",
+      "target_path": "data/habitats/host_associated/esophagus.yaml",
+      "target_id": "BTO:0000959",
+      "target_label": "esophagus",
+      "target_sha256": "19efa483c449f75c9248c8004637de4783553edb64232fc10af19c937c93b062",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051523Z-esophagus-record/review.yaml",
+      "yaml_sha256": "e18bce7e09b0b756852242c28962e45066d1cca54078c545ee832f24c859f86c",
+      "md_path": "reviews/structured/20261105T051523Z-esophagus-record/review.md",
+      "md_sha256": "35206ef73fbf2faa298a572cf232bdab6ea2c7a76fcd39987d927120751293fa"
+    },
+    {
+      "review_id": "20261105T051524Z-esophagus__25614af3-record",
+      "target_path": "data/habitats/host_associated/esophagus__25614af3.yaml",
+      "target_id": "habitatmech:GOLD.5d6c618e63",
+      "target_label": "Esophagus",
+      "target_sha256": "f39a479d9d5bffe5fa5ffe5d808d48b9db64e70b68c115d7d8307d92334a2798",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophagus--25614af3-context-parent",
+        "esophagus--25614af3-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051524Z-esophagus__25614af3-record/review.yaml",
+      "yaml_sha256": "024513859ca1242c5045774443719dc9537d0b6d77e3ff33e3caad67fb7c013a",
+      "md_path": "reviews/structured/20261105T051524Z-esophagus__25614af3-record/review.md",
+      "md_sha256": "93fdd5ac91e345642a348bffc5deed9d0aacea8f7ef17d2fd75b33986dc46d4d"
+    },
+    {
+      "review_id": "20261105T051525Z-esophagus__2ce9b1a3-record",
+      "target_path": "data/habitats/host_associated/esophagus__2ce9b1a3.yaml",
+      "target_id": "habitatmech:GOLD.b5205a5f5b",
+      "target_label": "Esophagus",
+      "target_sha256": "8e18cf61e226e0899b1fa5841b1abf0d4ef20e8936b41c765c258804d6aaf55e",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophagus--2ce9b1a3-context-parent",
+        "esophagus--2ce9b1a3-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051525Z-esophagus__2ce9b1a3-record/review.yaml",
+      "yaml_sha256": "e5eda83bc83404b646bd9c88d2bf378e3a633a187c59ef0f669fd734b07fe073",
+      "md_path": "reviews/structured/20261105T051525Z-esophagus__2ce9b1a3-record/review.md",
+      "md_sha256": "969b1da3a8efce5c68aebf93778fc8aaaaa94f08890df79539b02e3bbea458fd"
+    },
+    {
+      "review_id": "20261105T051526Z-esophagus__d8421c5e-record",
+      "target_path": "data/habitats/host_associated/esophagus__d8421c5e.yaml",
+      "target_id": "habitatmech:GOLD.b2fc8fb1e4",
+      "target_label": "Esophagus",
+      "target_sha256": "2165007c25fb08a330075116dc6d04f1a2139a241a906ec03e7be04704cacb08",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophagus--d8421c5e-context-parent",
+        "esophagus--d8421c5e-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051526Z-esophagus__d8421c5e-record/review.yaml",
+      "yaml_sha256": "ca9507166acfe0f18a2799fa4a93f5ff9a8d74411e99aec83e07b8032f40b29b",
+      "md_path": "reviews/structured/20261105T051526Z-esophagus__d8421c5e-record/review.md",
+      "md_sha256": "19af31212aa4b7f67daee8c5c36b0c6a25a57c639f2143161b41b0c871cfaeeb"
+    },
+    {
+      "review_id": "20261105T051527Z-esophagus__e0ae9e65-record",
+      "target_path": "data/habitats/host_associated/esophagus__e0ae9e65.yaml",
+      "target_id": "habitatmech:GOLD.974cd3759a",
+      "target_label": "Esophagus",
+      "target_sha256": "24c500b5e56d3fd95daed34ddbc6edc578b130d36f0f076776e0b64e4d626118",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophagus--e0ae9e65-context-parent",
+        "esophagus--e0ae9e65-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051527Z-esophagus__e0ae9e65-record/review.yaml",
+      "yaml_sha256": "7cae7ee3527846b56fd39177d40894dc152fa2fa326cdcdb54311f895bc0fa99",
+      "md_path": "reviews/structured/20261105T051527Z-esophagus__e0ae9e65-record/review.md",
+      "md_sha256": "f5a1f977e673b0cea8efb7dad61ea11c175c79bc6ec36170217ffa1c28f7feef"
+    },
+    {
+      "review_id": "20261105T051528Z-esophagus__e4629951-record",
+      "target_path": "data/habitats/host_associated/esophagus__e4629951.yaml",
+      "target_id": "habitatmech:GOLD.01c242b3b0",
+      "target_label": "Esophagus",
+      "target_sha256": "32937c2ce33a928befe598486cbd8f6dc08ee31abbd272979930ae08b8e5404a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "esophagus--e4629951-context-parent",
+        "esophagus--e4629951-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051528Z-esophagus__e4629951-record/review.yaml",
+      "yaml_sha256": "476ebfba5d6ec1ec7d88ed6883ca9a4aff534eac0b0f5e68658a3ca92002d017",
+      "md_path": "reviews/structured/20261105T051528Z-esophagus__e4629951-record/review.md",
+      "md_sha256": "a802e6217048f7dfc52df740ff32a2c4351a98a58140e457f750061a76f655af"
+    },
+    {
+      "review_id": "20261105T051529Z-ethmoid_bone-record",
+      "target_path": "data/habitats/host_associated/ethmoid_bone.yaml",
+      "target_id": "UBERON:0001679",
+      "target_label": "ethmoid bone",
+      "target_sha256": "364085c169714bef45ab1c9c1aaff7238e59c396ed76eb0bbd7a3650344c2c7a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "ethmoid-bone-context-parent",
+        "ethmoid-bone-scull-ethmoid-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261105T051529Z-ethmoid_bone-record/review.yaml",
+      "yaml_sha256": "c8c9792f5231016524dcb6f6dde82b62c4bd0474863859376e0005777da68f31",
+      "md_path": "reviews/structured/20261105T051529Z-ethmoid_bone-record/review.md",
+      "md_sha256": "fc1fd8049ecad72994672dbb194128bb94a5a0201a96c07e2ff95a8288c7d5ef"
+    },
+    {
+      "review_id": "20261105T051530Z-eustachian_tube-record",
+      "target_path": "data/habitats/host_associated/eustachian_tube.yaml",
+      "target_id": "habitatmech:GOLD.1f8a962fa9",
+      "target_label": "Eustachian tube",
+      "target_sha256": "90765a02983e5c2a5c398bf51c7d654b5efca53a79625da233ee37f1d8091010",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eustachian-tube-context-parent",
+        "eustachian-tube-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051530Z-eustachian_tube-record/review.yaml",
+      "yaml_sha256": "bd5182055899d00bc95be256b32fc81e19d79735179d94e596f94501c9758beb",
+      "md_path": "reviews/structured/20261105T051530Z-eustachian_tube-record/review.md",
+      "md_sha256": "de7dd48c9982a503987cbf25c73ca385a3f6b46f446cc972b7ddf1ce4b21630a"
+    },
+    {
+      "review_id": "20261105T051531Z-eustachian_tube__a8583033-record",
+      "target_path": "data/habitats/host_associated/eustachian_tube__a8583033.yaml",
+      "target_id": "habitatmech:GOLD.2127bae21d",
+      "target_label": "Eustachian tube",
+      "target_sha256": "e5d59391f5b9f65853133d324b2a17450557618046a9a5236f79204cfc005bcb",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eustachian-tube--a8583033-context-parent",
+        "eustachian-tube--a8583033-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051531Z-eustachian_tube__a8583033-record/review.yaml",
+      "yaml_sha256": "f12bc496d22213b9f224e10e4607ab326809905b5354629f720079f77d794942",
+      "md_path": "reviews/structured/20261105T051531Z-eustachian_tube__a8583033-record/review.md",
+      "md_sha256": "563b3aad77dc82261143a57bfb99d283c5f3512a0166f5d2a04ffa91a70c7215"
+    },
+    {
+      "review_id": "20261105T051532Z-excavata-record",
+      "target_path": "data/habitats/host_associated/excavata.yaml",
+      "target_id": "habitatmech:GOLD.b7f85ae39f",
+      "target_label": "excavate protist-associated environment",
+      "target_sha256": "4134fee698d27034a7f892bb885f6eb843adc6fb26ee652b06b5529d6f713552",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261105T051532Z-excavata-record/review.yaml",
+      "yaml_sha256": "3dbd0df0541a7511106b4417d2c44ba3ff993b2757c255c67a42a1b2b1878565",
+      "md_path": "reviews/structured/20261105T051532Z-excavata-record/review.md",
+      "md_sha256": "3113838b2012b9f6744ddc6e582a12a9ca05a41d6ada824fde77afbe9e4abb76"
+    },
+    {
+      "review_id": "20261105T051533Z-excretory_system-record",
+      "target_path": "data/habitats/host_associated/excretory_system.yaml",
+      "target_id": "habitatmech:GOLD.3a0549cbd8",
+      "target_label": "Excretory system",
+      "target_sha256": "5c47aaa190659e6fc1a06db8eda60c8cea888771ac2d84aa4c444c45fc6a8c37",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "excretory-system-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261105T051533Z-excretory_system-record/review.yaml",
+      "yaml_sha256": "9a18116e569def5c150a1bb24a770dd3ab3f61431f83ef9eba307c704c3fcc09",
+      "md_path": "reviews/structured/20261105T051533Z-excretory_system-record/review.md",
+      "md_sha256": "ec1cb00a811047030f68919af3075d83919fde5bb34493944bd035d267fa5cd0"
+    }
+  ]
+}
