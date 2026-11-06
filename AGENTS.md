@@ -118,7 +118,21 @@ test to accommodate a new serializer shape.
 `just render`, and commit the regenerated pages. `pages/` is published and
 checked byte-for-byte.
 
-**Do not edit any claw-governed vendored file here** -- `src/habitatmech/schema/mech_shared.yaml`, `src/habitatmech/schema/history.yaml`, `scripts/check_vendored_sync.{py,sh}`, `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, `scripts/deep_research_contract.py`, `prompts/backlog-loop-goal.md` and the five `tests/test_*` contract files. They are vendored byte-identically from culturebotai-claw at the commit pinned in `scripts/.vendored_canon_ref`; `just check-vendored-sync` (and CI) fails on any local edit. Fix upstream in claw, then re-sync and bump the pin. The older note below about `mech_shared.yaml` still applies: it is vendored
+**Do not edit any claw-governed vendored file here.** The governed files are
+every artifact that claw's `src/kg_microbe_governance/vendored_artifacts.json`,
+at the commit pinned in `scripts/.vendored_canon_ref`, lists for `habitatmech`.
+That set grows as claw governs more files, so it is not copied here; print it
+with:
+
+```bash
+gh api "repos/CultureBotAI/culturebotai-claw/contents/src/kg_microbe_governance/vendored_artifacts.json?ref=$(cat scripts/.vendored_canon_ref)" \
+  -H "Accept: application/vnd.github.raw+json" \
+  --jq '.artifacts[] | select(.consumers == "all" or any(.consumers[]?; . == "habitatmech")) | .target'
+```
+
+`{package_path}` in a target is `src/habitatmech`. The files are vendored
+byte-identically, and `just check-vendored-sync` (and CI) fails on any local
+edit and names the file. Fix upstream in claw, then re-sync and bump the pin. The older note below about `mech_shared.yaml` still applies: it is vendored
 byte-identically across the Mech repositories and sha-pinned by the schema tests.
 
 ## Safe corpus workflow
