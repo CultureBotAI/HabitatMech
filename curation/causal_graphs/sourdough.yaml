@@ -1,0 +1,135 @@
+identifier: habitatmech:GOLD.3153798c1a
+causal_graphs:
+- graph_id: sourdough_fructilactobacillus_sanfranciscensis_levansucrase_and_adi_acidification
+  title: Sourdough cereal carbohydrate/arginine selection, Fructilactobacillus sanfranciscensis levansucrase
+    and arginine deiminase pathway expression, and Kazachstania co-fermentation mechanism
+  description: Propagated wheat and rye sourdoughs provide cereal-derived maltose, sucrose, fructose,
+    and free arginine under recurrent backslopping and acidic fermentation regimes, selecting for stable
+    consortia of obligately heterofermentative lactic acid bacteria dominated by Fructilactobacillus (Lactobacillus)
+    sanfranciscensis alongside acid-tolerant sourdough yeasts such as Kazachstania humilis. Fructilactobacillus
+    sanfranciscensis expresses a cell-wall-associated levansucrase (lev, 879 aa) that converts sucrose
+    into glucose, fructose, prebiotic 1-kestose, and levan fructan exopolysaccharides (EPS), and induces
+    the three-enzyme arginine deiminase (ADI) pathway — arginine deiminase (ADI), ornithine transcarbamoylase
+    (OTC), and carbamate kinase (CK) — to catabolize arginine into ornithine while enhancing acid stress
+    tolerance and bread dough rheology.
+  nodes:
+  - node_id: sourdough
+    label: fermented cereal sourdough environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.3153798c1a
+    description: Acidic fermented cereal flour-and-water dough matrix propagated by backslopping or starter
+      inoculation and populated by coevolved lactic acid bacteria and acid-tolerant yeasts.
+  - node_id: backslopped_cereal_sucrose_maltose_and_arginine_dough_matrix
+    label: backslopped cereal flour sucrose/maltose/fructose and arginine dough matrix
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cereal flour carbohydrates (maltose, sucrose, fructose) and free arginine under frequent
+      backslopping propagation and low-pH (pH 3.5-4.5) fermentation conditions.
+  - node_id: sourdough_fructilactobacillus_sanfranciscensis_and_kazachstania_humilis_guild
+    label: Fructilactobacillus sanfranciscensis and Kazachstania humilis sourdough fermentation guild
+    node_type: COMMUNITY
+    description: Mutualistic sourdough consortium dominated by heterofermentative Fructilactobacillus
+      (Lactobacillus) sanfranciscensis (and Lactobacillus reuteri/delbrueckii groups in type II doughs)
+      and the acid-tolerant yeast Kazachstania humilis.
+  - node_id: fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes
+    label: Fructilactobacillus sanfranciscensis cell-wall levansucrase (lev) and arginine deiminase pathway
+      enzymes (ADI, OTC, CK)
+    node_type: GENE_OR_PROTEIN
+    description: Cell-wall-associated 879-amino-acid levansucrase (lev) in Fructilactobacillus (Lactobacillus)
+      sanfranciscensis TMW 1.392 and the acid-adapted arginine deiminase (ADI, 46 kDa), ornithine transcarbamoylase
+      (OTC, 39 kDa), and carbamate kinase (CK, 37 kDa) enzymes purified from L. sanfranciscensis CB1.
+  - node_id: fructan_kestose_eps_synthesis_ornithine_acid_resistance_and_dough_leavening
+    label: levan/1-kestose synthesis, ADI-mediated acid resistance and ornithine aroma precursor formation,
+      and dough leavening
+    node_type: COMMUNITY_PROCESS
+    description: In situ synthesis of fructan exopolysaccharides and 1-kestose from sucrose, arginine
+      conversion to crust-aroma precursor ornithine with enhanced survival under acidic storage, and synergistic
+      LAB-yeast dough acidification and gas leavening.
+  edges:
+  - edge_id: sourdough_propagation_maintains_cereal_carbohydrates_arginine_and_acidic_selection
+    subject: sourdough
+    predicate: maintains
+    object: backslopped_cereal_sucrose_maltose_and_arginine_dough_matrix
+    description: Propagated sourdough fermentations maintain cereal-derived sucrose, maltose, and arginine
+      under acidic (pH 3.5-4.5) backslopping conditions that eliminate dispersal limitation.
+    evidence:
+    - reference: PMID:30172443
+      snippet: The long-term propagation of sourdoughs eliminates dispersal limitation and consistently
+        leads to sourdough microbiota that are composed of host adapted lactobacilli.
+      notes: Gänzle & Zheng 2019 (PMID:30172443) showed that continuous sourdough propagation selects
+        for specialized sourdough lactobacilli.
+  - edge_id: sourdough_matrix_selects_for_fructilactobacillus_sanfranciscensis_and_kazachstania_humilis
+    subject: backslopped_cereal_sucrose_maltose_and_arginine_dough_matrix
+    predicate: selects for
+    object: sourdough_fructilactobacillus_sanfranciscensis_and_kazachstania_humilis_guild
+    description: Type I wheat and rye sourdough propagation conditions select for rapid-growing Fructilactobacillus
+      sanfranciscensis and co-occurring acid-tolerant Kazachstania humilis.
+    evidence:
+    - reference: PMID:30172443
+      snippet: Propagation of sourdoughs for use as sole leavening agent (type I sourdoughs) dictates
+        fermentation conditions that select for rapid growth. Type I wheat- and rye sourdoughs are consistently
+        populated by insect-adapted lactobacilli, particularly Lactobacillus sanfranciscensis, which is
+        characterized by a small genome size and a restricted metabolic potential.
+      notes: Type I wheat and rye sourdoughs consistently select for Fructilactobacillus (Lactobacillus)
+        sanfranciscensis (PMID:30172443).
+    - reference: PMID:42195949
+      snippet: In this study, an acid-tolerant and high-fermentation performance strain of Kazachstania
+        humilis (K. humilis 3-8) was screened from sourdough isolates and co-cultured with Fructilactobacillus
+        sanfranciscensis (F. sanfranciscensis 5) to prepare liquid sourdough, which was further applied
+        in mantou production.
+      notes: Acid-tolerant Kazachstania humilis and Fructilactobacillus sanfranciscensis form a functional
+        co-culture in sourdough fermentation (PMID:42195949).
+  - edge_id: fructilactobacillus_sanfranciscensis_expresses_levansucrase_and_adi_pathway_enzymes
+    subject: sourdough_fructilactobacillus_sanfranciscensis_and_kazachstania_humilis_guild
+    predicate: expresses
+    object: fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes
+    description: Fructilactobacillus sanfranciscensis expresses a single cell-wall levansucrase (lev)
+      and induces arginine deiminase (ADI), ornithine transcarbamoylase (OTC), and carbamate kinase (CK)
+      during sourdough fermentation.
+    evidence:
+    - reference: PMID:15735966
+      snippet: A levansucrase gene from L. sanfranciscensis TMW 1.392 encompassing 2,300 bp was sequenced.
+        This levansucrase is predicted to be a cell-wall associated protein of 879 amino acids with a
+        relative molecular weight (M(R)) of 90,000. The levansucrase gene was heterologously expressed
+        in Escherichia coli and purified to homogeneity.
+      notes: Tieking et al. 2005 (PMID:15735966) sequenced and functionally characterized the 879-aa cell-wall
+        levansucrase of Lactobacillus sanfranciscensis TMW 1.392.
+    - reference: PMID:12450844
+      snippet: L. sanfranciscensis CB1 showed the highest activities, and the three enzymes were purified
+        from this microorganism to homogeneity by several chromatographic steps. ADI, OTC, and CK had
+        apparent molecular masses of ca. 46, 39, and 37 kDa, respectively, and the pIs were in the range
+        of 5.07 to 5.2. The OTCs, CKs, and especially ADIs were well adapted to pH (acidic, pH 3.5 to
+        4.5) and temperature (30 to 37 degrees C) conditions which are usually found during sourdough
+        fermentation.
+      notes: De Angelis et al. 2002 (PMID:12450844) purified and characterized the acid-adapted ADI, OTC,
+        and CK enzymes of Lactobacillus sanfranciscensis CB1.
+  - edge_id: levansucrase_and_adi_enzymes_drive_fructan_synthesis_acid_tolerance_and_dough_quality
+    subject: fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes
+    predicate: catalyzes
+    object: fructan_kestose_eps_synthesis_ornithine_acid_resistance_and_dough_leavening
+    description: Levansucrase catalyzes sucrose conversion to 1-kestose and levan fructan in wheat doughs,
+      while ADI-pathway arginine catabolism enhances acid stress survival and produces the crust-aroma
+      precursor ornithine alongside LAB-yeast dough acidification and leavening.
+    evidence:
+    - reference: PMID:15735966
+      snippet: During growth in wheat doughs, strain TMW 1.392 utilized sucrose to form fructose, 1-kestose,
+        and fructan, whereas a levansucrase deletion mutant, L. sanfranciscensis TMW 1392Deltalev, lost
+        the ability to hydrolyze sucrose, and did not produce fructan or 1-kestose. These results indicate
+        that, in L. sanfranciscensis TMW 1.392, sucrose metabolism and formation of fructan and 1-kestose
+        is dependent on the activity of a single enzyme, levansucrase.
+      notes: Isogenic deletion of levansucrase (Deltalev) in L. sanfranciscensis TMW 1.392 abolishes sucrose
+        hydrolysis and in situ fructan and 1-kestose formation in wheat doughs (PMID:15735966).
+    - reference: PMID:12450844
+      snippet: A low supply of arginine (6 mM) during sourdough fermentation by L. sanfranciscensis CB1
+        enhanced cell growth, cell survival during storage at 7 degrees C, and tolerance to acid environmental
+        stress and favored the production of ornithine, which is an important precursor of crust aroma
+        compounds.
+      notes: ADI-mediated arginine catabolism in L. sanfranciscensis CB1 enhances acid stress tolerance,
+        cell survival, and ornithine production in sourdough (PMID:12450844).
+curation_history:
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sourdough_fructilactobacillus_sanfranciscensis_levansucrase_and_adi_acidification mechanism
+    graph for sourdough (habitatmech:GOLD.3153798c1a) backed by PMID:12450844, PMID:15735966, PMID:30172443,
+    and PMID:42195949.
+  llm_assisted: true

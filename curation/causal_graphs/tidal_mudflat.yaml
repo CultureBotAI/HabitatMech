@@ -1,0 +1,131 @@
+identifier: ENVO:00000241
+causal_graphs:
+- graph_id: tidal_mudflat_diatom_eps_cable_bacteria_and_benthic_cazyme_sulfur_loop
+  title: Tidal mudflat periodic tidal redox alternation, Candidatus Electrothrix cable bacteria electrogenic
+    sulfur oxidation, and Desulfobulbaceae/SRB HS--SO42- redox connector mechanism
+  description: Intertidal mudflat sediments experience periodic alternation of tidal flooding and air
+    exposure alongside salinity fluctuations and vertical oxygen-sulfide gradients. These tidal redox
+    and sulfide replenishment regimes select for centimeter-long multicellular filamentous cable bacteria
+    (Candidatus Electrothrix and Ca. Electronema in the family Desulfobulbaceae) interacting with sulfate-reducing
+    bacteria (such as Desulfobacca spp. and Desulfatiglans spp.). Cable bacteria express periplasmic cytochromes,
+    conductive periplasmic fibers, reversed canonical sulfate-reduction enzymes, and Wood-Ljungdahl CO2
+    fixation and N2 fixation pathways, catalyzing electrogenic sulfur oxidation (e-SOx) coupled to cathodic
+    oxygen respiration and maintaining a dynamic HS--SO42- redox connector that drives deep sediment oxidation
+    and organic pollutant biodegradation.
+  nodes:
+  - node_id: tidal_mudflat
+    label: tidal mudflat
+    node_type: HABITAT
+    grounding: ENVO:00000241
+    description: Intertidal cohesive fine-grained mudflat and estuarine sediment ecosystem subject to
+      periodic tidal flooding and exposure, salinity fluctuations, and millimeter-scale vertical redox
+      gradients.
+  - node_id: intertidal_light_driven_diatom_eps_and_sulfide_redox_gradient
+    label: tidal flooding-exposure alternation and vertical oxygen-sulfide sediment gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Periodic oxygen permeation during tidal exposure and sulfide replenishment during tidal
+      flooding across surface oxic and deeper anoxic intertidal mudflat sediment layers.
+  - node_id: mudflat_cable_bacteria_and_eps_degrading_proteobacteria_bacteroidetes_guild
+    label: filamentous cable bacteria (Candidatus Electrothrix) and sulfate-reducing Desulfobacca/Desulfatiglans
+      guild
+    node_type: COMMUNITY
+    description: Intertidal sediment consortium comprising centimeter-long multicellular cable bacteria
+      (Candidatus Electrothrix and Ca. Electronema, family Desulfobulbaceae) and syntrophic/partner sulfate-reducing
+      bacteria (Desulfobacca spp. and Desulfatiglans spp.).
+  - node_id: benthic_extracellular_cazymes_peptidases_and_wl_rtca_sulfur_genes
+    label: cable bacterial periplasmic cytochromes, reversed sulfate-reduction pathway, and Wood-Ljungdahl
+      CO2-fixation enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic cytochromes, conductive periplasmic fibers, reversed canonical sulfate-reduction
+      pathway enzymes for anodic sulfide oxidation, and Wood-Ljungdahl CO2-fixation and N2-fixation enzymes
+      encoded and expressed by cable bacteria.
+  - node_id: eps_carbon_transfer_chemoautotrophic_c_fixation_and_mudflat_biostabilization
+    label: electrogenic sulfur oxidation (e-SOx), long-distance electron transport, and HS--SO42- redox-coupled
+      bioremediation
+    node_type: COMMUNITY_PROCESS
+    description: Centimeter-scale electron transport coupling anodic sulfide oxidation in deeper sediment
+      to cathodic oxygen reduction at the sediment surface, regenerating deep sulfate (5-10 mm) to sustain
+      the HS--SO42- redox connector and stimulate anaerobic organic pollutant degradation.
+  edges:
+  - edge_id: tidal_mudflat_maintains_light_driven_diatom_eps_and_redox_gradients
+    subject: tidal_mudflat
+    predicate: maintains
+    object: intertidal_light_driven_diatom_eps_and_sulfide_redox_gradient
+    description: Intertidal mudflat sediments undergo periodic tidal flooding and exposure cycles that
+      alternate oxygen permeation with anoxic sulfate reduction and sulfide replenishment.
+    evidence:
+    - reference: PMID:39173361
+      snippet: Periodic oxygen permeation is critical for pollutant removal within intertidal sediments.
+        However, tidal effects on the vertical redox profile associated with cable bacterial activity
+        is not well understood. In this study, we simulated and quantified the effects of tidal flooding,
+        exposing, and their periodic alternation on vertical redox reactions and phenanthrene removal
+        driven by cable bacteria in the riverbank sediment.
+      notes: Yang et al. 2024 (PMID:39173361) demonstrated that periodic alternation of tidal flooding
+        and exposure governs vertical redox profiles and sulfide replenishment in intertidal sediments.
+  - edge_id: diatom_eps_and_redox_gradients_select_for_cable_bacteria_and_eps_degraders
+    subject: intertidal_light_driven_diatom_eps_and_sulfide_redox_gradient
+    predicate: selects for
+    object: mudflat_cable_bacteria_and_eps_degrading_proteobacteria_bacteroidetes_guild
+    description: Tidal flooding-exposure cycles and brackish/intertidal sulfide gradients select for filamentous
+      cable bacteria (Candidatus Electrothrix) and interacting sulfate-reducing bacteria (Desulfobacca
+      and Desulfatiglans).
+    evidence:
+    - reference: PMID:39173361
+      snippet: Higher cable bacteria abundance (up to 1.5 %) was observed under tidal conditions compared
+        to that under continuous exposing conditions and flooding conditions. This might be attributed
+        to lower oxidation stress and sulfide replenishment via sulfate reduction while flooding. Under
+        tidal conditions, the cable bacteria interacted with sulfate reduction bacteria (e.g. Desulfobacca
+        spp. and Desulfatiglans spp.) and maintained the dynamic balance of HS- and SO42- in sediment
+        profiles.
+      notes: Tidal alternation enriches cable bacteria up to 1.5% abundance alongside sulfate-reducing
+        Desulfobacca and Desulfatiglans spp. in intertidal sediments (PMID:39173361).
+    - reference: PMID:39629215
+      snippet: Particularly brackish environments with strong salinity fluctuations, as well as sediments
+        with low free sulfide concentrations and deep sea sediments harbor a large pool of novel and undescribed
+        cable bacteria taxa.
+      notes: Intertidal and brackish sediments with strong salinity fluctuations harbor diverse cable
+        bacteria clades (PMID:39629215).
+  - edge_id: mudflat_benthic_guild_encodes_cazymes_peptidases_and_carbon_sulfur_pathways
+    subject: mudflat_cable_bacteria_and_eps_degrading_proteobacteria_bacteroidetes_guild
+    predicate: expresses
+    object: benthic_extracellular_cazymes_peptidases_and_wl_rtca_sulfur_genes
+    description: Cable bacteria express reversed canonical sulfate-reduction enzymes, the Wood-Ljungdahl
+      CO2-fixation pathway, N2 fixation, and periplasmic cytochromes and conductive fibers.
+    evidence:
+    - reference: PMID:31427514
+      snippet: With support from metaproteomics of a Ca. Electronema enrichment, the genomes suggest that
+        cable bacteria oxidize sulfide by reversing the canonical sulfate reduction pathway and fix CO2
+        using the Wood-Ljungdahl pathway. Cable bacteria show limited organotrophic potential, may assimilate
+        smaller organic acids and alcohols, fix N2, and synthesize polyphosphates and polyglucose as storage
+        compounds; several of these traits were confirmed by cell-level experimental analyses.
+      notes: Single-filament genomics and metaproteomics of Candidatus Electrothrix and Ca. Electronema
+        confirmed sulfide oxidation via the reversed sulfate reduction pathway and CO2 fixation via the
+        Wood-Ljungdahl pathway (PMID:31427514).
+    - reference: PMID:31427514
+      snippet: We propose a model for electron flow from sulfide to oxygen that involves periplasmic cytochromes,
+        yet-unidentified conductive periplasmic fibers, and periplasmic oxygen reduction.
+      notes: Long-distance electron flow in cable bacteria involves periplasmic cytochromes and conductive
+        periplasmic fibers (PMID:31427514).
+  - edge_id: cazyme_and_chemoautotrophic_pathways_drive_mudflat_microbial_loop
+    subject: benthic_extracellular_cazymes_peptidases_and_wl_rtca_sulfur_genes
+    predicate: catalyzes
+    object: eps_carbon_transfer_chemoautotrophic_c_fixation_and_mudflat_biostabilization
+    description: Electrogenic sulfur oxidation (e-SOx) by cable bacteria drives vertical permeation of
+      oxidation potential, regenerates sulfate at 5-10 mm depth, and accelerates organic pollutant degradation
+      in intertidal sediments.
+    evidence:
+    - reference: PMID:39173361
+      snippet: Results show that electrogenic sulfur oxidation (e-SOx) mediated by cable bacteria during
+        exposing process drove the vertical permeation of oxidation potential characterized by a decrease
+        in Fe(II) and sulfide concentrations. The sulfate produced was observed in deep sediment (5-10
+        mm) and served as an electron acceptor for anaerobic oxidation, thereby triggering the functional
+        succession of microbial community.
+      notes: Cable bacteria e-SOx lowers Fe(II) and sulfide and generates deep sediment sulfate (5-10
+        mm) that fuels anaerobic organic oxidation in intertidal sediments (PMID:39173361).
+curation_history:
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added tidal_mudflat_diatom_eps_cable_bacteria_and_benthic_cazyme_sulfur_loop mechanism graph
+    for tidal_mudflat (ENVO:00000241) backed by PMID:31427514, PMID:39173361, and PMID:39629215.
+  llm_assisted: true

@@ -1,0 +1,132 @@
+identifier: ENVO:00003965
+causal_graphs:
+- graph_id: anaerobic_digester_sludge_syntrophic_vfa_oxidation_and_methanothrix_methanogenesis
+  title: Anaerobic digester sludge saccharide/VFA loading, Syntrophomonas-Syntrophobacter-Methanothrix
+    syntrophic assembly, and acetoclastic/CO2-reductive methanogenesis mechanism
+  description: Anaerobic digester sludge systems treating organic waste and wastewater sludge maintain
+    anoxic, high-organic-loading environments where polymeric saccharides (such as starch) are hydrolyzed
+    into volatile fatty acids (VFAs including butyrate, propionate, valerate, and acetate) under controlled solids
+    retention times (SRTs) and conductive mineral (magnetite) regimes. Substrate-driven selection and
+    VFA shock loads enrich for primary saccharolytic Bifidobacterium, syntrophic butyrate- and propionate-oxidizing
+    bacteria (Syntrophomonas, Syntrophobacter, Cloacimonadaceae W5, Peptoclostridium), and acetoclastic/CO2-reducing
+    methanogenic archaea (Methanothrix soehngenii / Methanosaeta and Methanosarcina). These consortia
+    encode propionate and acetate oxidation enzymes, glycine cleavage systems, acetoclastic methanogenesis
+    genes, and the complete CO2 reduction pathway in Methanothrix soehngenii, catalyzing syntrophic VFA
+    degradation and resilient methane-rich biogas production.
+  nodes:
+  - node_id: anaerobic_digester_sludge
+    label: anaerobic digester sludge
+    node_type: HABITAT
+    grounding: ENVO:00003965
+    description: Engineered anoxic biosolid sludge matrix inside anaerobic digesters converting municipal,
+      agricultural, or industrial organic waste into methane-rich biogas.
+  - node_id: anoxic_saccharide_and_vfa_overload_sludge_matrix
+    label: anoxic saccharide and volatile fatty acid (propionate, butyrate, acetate) sludge matrix
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Anoxic organic-loaded sludge containing starch/glucose and intermediate volatile fatty
+      acids (butyrate, propionate, valerate, acetate) subject to solids retention time (SRT) fluctuations
+      and conductive magnetite particle supplementation.
+  - node_id: digester_bifidobacterium_syntrophomonas_syntrophobacter_and_methanothrix_guild
+    label: Bifidobacterium, Syntrophomonas/Syntrophobacter syntrophs, and Methanothrix/Methanosarcina
+      methanogenic guild
+    node_type: COMMUNITY
+    description: Substrate-partitioned anaerobic digester sludge consortium comprising starch-hydrolyzing
+      Bifidobacterium, syntrophic fatty-acid oxidizers Syntrophomonas, Syntrophobacter, and Cloacimonadaceae
+      W5, and methanogenic archaea Methanothrix soehngenii (Methanosaeta) and Methanosarcina.
+  - node_id: syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways
+    label: propionate/acetate oxidation enzymes, glycine cleavage system, and Methanothrix soehngenii
+      acetoclastic/CO2-reductive methanogenesis pathway
+    node_type: GENE_OR_PROTEIN
+    description: Functional genes for syntrophic propionate, butyrate, and acetate oxidation and stress
+      response, prevalent glycine cleavage systems, acetoclastic methanogenesis-associated genes, and
+      the complete CO2-reductive methanogenesis pathway in Methanothrix soehngenii.
+  - node_id: syntrophic_propionate_butyrate_acetate_degradation_and_biogas_methanogenesis
+    label: syntrophic VFA degradation, process resilience, and methane-rich biogas production
+    node_type: COMMUNITY_PROCESS
+    description: Coupled saccharide hydrolysis, syntrophic oxidation of butyrate and propionate to acetate
+      and H2/electrons, and methanogenic conversion of acetate and CO2 into methane (~66% CH4 biogas),
+      accelerating digester recovery from VFA shock loads.
+  edges:
+  - edge_id: anaerobic_digester_sludge_maintains_anoxic_saccharide_and_vfa_loading_regime
+    subject: anaerobic_digester_sludge
+    predicate: maintains
+    object: anoxic_saccharide_and_vfa_overload_sludge_matrix
+    description: Anaerobic digester sludge maintains anoxic conditions with continuous or fluctuating
+      organic loading of saccharides and volatile fatty acids (butyrate, propionate, acetate).
+    evidence:
+    - reference: PMID:41654532
+      snippet: Anaerobic digesters are typically operated at solids retention times (SRTs) of 20 d or
+        longer to minimize the risk of accidental substrate overloading and biomass washout and to enable
+        the retention of slow-growing methanogens.
+      notes: Anaerobic digesters treating wastewater sludge operate under managed SRTs to buffer organic
+        loading rate spikes and volatile fatty acid accumulation (PMID:41654532).
+  - edge_id: saccharide_and_vfa_substrates_select_for_syntrophs_and_methanothrix_guild
+    subject: anoxic_saccharide_and_vfa_overload_sludge_matrix
+    predicate: selects for
+    object: digester_bifidobacterium_syntrophomonas_syntrophobacter_and_methanothrix_guild
+    description: Starch, butyrate, propionate, and acetate loading in anaerobic digester sludge select
+      for Bifidobacterium, Syntrophomonas, Syntrophobacter, and Methanothrix/Methanosarcina.
+    evidence:
+    - reference: PMID:42954465
+      snippet: Substrate-driven selection shaped distinct functional consortia, with Bifidobacterium enriched
+        in starch hydrolysis and Syntrophomonas enriched in butyrate oxidation.
+      notes: Genome-centric metagenomics of 390 MAGs across anaerobic digestion substrates showed starch
+        selects for Bifidobacterium and butyrate selects for Syntrophomonas (PMID:42954465).
+    - reference: PMID:41242256
+      snippet: Magnetite particles facilitated the preferential enrichment of distinct microbial communities,
+        among which Syntrophobacter, Peptoclostridium, and Methanothrix showed increased relative abundances
+        that positively correlated with the accelerated recovery of overloaded digesters (p < 0.05, Spearman
+        correlation test).
+      notes: Propionate- and acetate-overloaded anaerobic digesters supplemented with magnetite enrich
+        for Syntrophobacter, Peptoclostridium, and Methanothrix (PMID:41242256).
+  - edge_id: digester_guild_encodes_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_genes
+    subject: digester_bifidobacterium_syntrophomonas_syntrophobacter_and_methanothrix_guild
+    predicate: expresses
+    object: syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways
+    description: Anaerobic digester consortia encode propionate and acetate oxidation genes, glycine cleavage
+      systems, acetoclastic methanogenesis genes, and a complete CO2 reduction pathway in Methanothrix
+      soehngenii.
+    evidence:
+    - reference: PMID:42954465
+      snippet: A complete set of acetoclastic methanogenesis-associated genes was identified in a bacterial
+        MAG (Armatimonadota UBA5829). A complete CO₂ reduction pathway was also identified in Methanothrix
+        soehngenii. Glycine cleavage systems were prevalent in high-abundance MAGs, while key Wood-Ljungdahl
+        pathway enzymes were absent.
+      notes: Metagenomic reconstruction identified a complete CO2 reduction pathway in Methanothrix soehngenii,
+        acetoclastic methanogenesis genes, and prevalent glycine cleavage systems in anaerobic digester
+        consortia (PMID:42954465).
+    - reference: PMID:41242256
+      snippet: These shifts and the enrichment of predicted functional genes for propionate and acetate
+        oxidation and stress response underscore the role of magnetite supplementation in reinforcing
+        possible microbial community robustness and resilience.
+      notes: Enrichment of Syntrophobacter and Methanothrix is accompanied by functional genes for propionate
+        and acetate oxidation and stress response (PMID:41242256).
+  - edge_id: syntrophic_oxidation_and_methanogenesis_pathways_drive_vfa_recovery_and_methane_yield
+    subject: syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways
+    predicate: catalyzes
+    object: syntrophic_propionate_butyrate_acetate_degradation_and_biogas_methanogenesis
+    description: Syntrophic propionate/butyrate oxidation and Methanothrix/Methanosarcina methanogenesis
+      accelerate VFA degradation and stabilize methane-rich (~66% CH4) biogas production.
+    evidence:
+    - reference: PMID:41242256
+      snippet: Magnetite particles-supplemented digesters showed 124-226 % and 23-43 % higher methanogenic
+        degradation rates for propionate and acetate overloads (2.5-2.8 and 1.6-2.0 g-COD/L/d, respectively)
+        than the control digesters. This enhancement reduced recovery time by 51-66 % following propionate-shock-loads
+        (p < 0.05, Student's t-test) and up to 23 % following acetate-shock-loads.
+      notes: Enhanced syntrophic propionate and acetate oxidation and Methanothrix methanogenesis increase
+        methanogenic VFA degradation rates by 124-226% (propionate) and 23-43% (acetate) (PMID:41242256).
+    - reference: PMID:41654532
+      snippet: Changes in the relative abundance of taxa that proliferated under stable conditions, namely,
+        the K-strategists Cloacimonadaceae W5, Syntrophomonas spp. and Methanosaeta spp., and the stress
+        tolerant r-strategists Sedimentibacter spp., Christensenellaceae R-7-group, Saccharofermentans
+        spp. and Methanosarcina spp., corresponded with minimal disruptions in process performance during
+        periods of instability.
+      notes: Complementary dynamics of Syntrophomonas, Methanosaeta (Methanothrix), and Methanosarcina
+        stabilize acetate/propionate levels and maintain ~66% biogas methane content (PMID:41654532).
+curation_history:
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added anaerobic_digester_sludge_syntrophic_vfa_oxidation_and_methanothrix_methanogenesis mechanism
+    graph for anaerobic_digester_sludge (ENVO:00003965) backed by PMID:41242256, PMID:41654532, and PMID:42954465.
+  llm_assisted: true
