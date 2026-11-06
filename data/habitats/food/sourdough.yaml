@@ -82,7 +82,34 @@ causal_graphs:
     description: Cell-wall-associated 879-amino-acid levansucrase (lev) in Fructilactobacillus
       (Lactobacillus) sanfranciscensis TMW 1.392 and the acid-adapted arginine deiminase
       (ADI, 46 kDa), ornithine transcarbamoylase (OTC, 39 kDa), and carbamate kinase
-      (CK, 37 kDa) enzymes purified from L. sanfranciscensis CB1.
+      (CK, 37 kDa) enzymes purified from L. sanfranciscensis CB1. Verified protein_examples
+      is attached for the Fructilactobacillus (Lactobacillus) sanfranciscensis TMW
+      1.392 (NCBITaxon:1625) 879-amino-acid cell-wall levansucrase LevS sequenced
+      and characterized in PMID:15735966 (reviewed Swiss-Prot UniProtKB:Q70XJ9, LSC_FRUSA);
+      the arginine deiminase (ADI, 46 kDa), ornithine transcarbamoylase (OTC, 39 kDa),
+      and carbamate kinase (CK, 37 kDa) enzymes purified chromatographically from
+      L. sanfranciscensis CB1 in PMID:12450844 were characterized biochemically without
+      depositing nucleotide or protein sequences in UniProtKB.
+    protein_examples:
+    - accession: UniProtKB:Q70XJ9
+      entry_name: LSC_FRUSA
+      recommended_name: Levansucrase
+      gene_symbol: levS
+      taxon_id: NCBITaxon:1625
+      taxon_name: Fructilactobacillus sanfranciscensis
+      role_in_node: strain_exemplar
+      sequence_length: 879
+      crc64: D8FB15CEE05E1874
+      evidence:
+      - reference: PMID:15735966
+        snippet: A levansucrase gene from L. sanfranciscensis TMW 1.392 encompassing
+          2,300 bp was sequenced. This levansucrase is predicted to be a cell-wall
+          associated protein of 879 amino acids with a relative molecular weight (M(R))
+          of 90,000. The levansucrase gene was heterologously expressed in Escherichia
+          coli and purified to homogeneity.
+        notes: Reviewed Swiss-Prot UniProtKB:Q70XJ9 (LSC_FRUSA, levS, 879 aa) is the
+          exact Fructilactobacillus (Lactobacillus) sanfranciscensis TMW 1.392 (NCBITaxon:1625)
+          cell-wall levansucrase sequenced and purified by Tieking et al. 2005 (PMID:15735966).
   - node_id: fructan_kestose_eps_synthesis_ornithine_acid_resistance_and_dough_leavening
     label: levan/1-kestose synthesis, ADI-mediated acid resistance and ornithine aroma
       precursor formation, and dough leavening
@@ -243,4 +270,13 @@ curation_history:
   changes: Added sourdough_fructilactobacillus_sanfranciscensis_levansucrase_and_adi_acidification
     mechanism graph for sourdough (habitatmech:GOLD.3153798c1a) backed by PMID:12450844,
     PMID:15735966, PMID:30172443, and PMID:42195949.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Added verified reviewed Swiss-Prot Fructilactobacillus
+    sanfranciscensis TMW 1.392 (NCBITaxon:1625) levansucrase (levS) protein_examples
+    entry (UniProtKB:Q70XJ9, LSC_FRUSA, 879 aa) backed by PMID:15735966, and documented
+    biochemical-only source limits for the unsequenced L. sanfranciscensis CB1 ADI,
+    OTC, and CK enzymes in PMID:12450844.'
   llm_assisted: true

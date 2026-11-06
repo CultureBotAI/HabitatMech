@@ -60,11 +60,19 @@ causal_graphs:
     label: Microcoleus vaginatus urea carboxylase/allophanate hydrolase (uc/ah), EPS
       synthesis, and desiccation-hydration stress/repair genes
     node_type: GENE_OR_PROTEIN
-    description: High-affinity urea uptake and urea carboxylase/allophanate hydrolase
+    description: 'High-affinity urea uptake and urea carboxylase/allophanate hydrolase
       (uc/ah) genes in Microcoleus vaginatus PCC 9802, urea biosynthesis genes in
       cyanosphere mutualist Massilia sp. METH4, and M. vaginatus genes for exopolysaccharide
       (EPS) production, DNA repair, oxidative/photo-oxidative and osmotic stress response,
-      and C/N storage polymers.
+      and C/N storage polymers. Source-limited for UniProtKB protein_examples: the
+      Microcoleus vaginatus PCC 9802 / FGP-2 (NCBITaxon:756067 / NCBITaxon:669365)
+      reference proteome assayed in PMID:23739051 and PMID:39673195 is archived in
+      UniParc (urea carboxylase MicvaDRAFT_3760, former UniProtKB:F5UC91 -> UPI00020D1071,
+      1205 aa; allophanate hydrolase MicvaDRAFT_3754, former UniProtKB:F5UC85 -> UPI00020D106B,
+      604 aa; urea ABC transporter substrate-binding protein MicvaDRAFT_3610, former
+      UniProtKB:F5UIY7 -> UPI00020D21E8, 439 aa) without active UniProtKB cross-references
+      for strain PCC 9802/FGP-2, and M. vaginatus CM01 in PMID:41900302 was profiled
+      by 16S/qPCR without deposited active UniProtKB protein accessions.'
   - node_id: eps_habitat_filtering_urea_cn_mutualism_and_topsoil_stabilization
     label: EPS-mediated habitat filtering, urea-based C/N mutualism, and desert topsoil
       stabilization
@@ -199,4 +207,13 @@ curation_history:
   changes: Added soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism
     mechanism graph for soil_crust (habitatmech:GOLD.b1b5044bde) backed by PMID:23739051,
     PMID:39673195, PMID:41900302, and PMID:42460988.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
+    for UniProtKB protein_examples; documented source-limited UniParc-only status
+    for the assayed Microcoleus vaginatus PCC 9802 / FGP-2 proteome (UPI00020D1071
+    MicvaDRAFT_3760 urea carboxylase, UPI00020D106B MicvaDRAFT_3754 allophanate hydrolase,
+    and UPI00020D21E8 MicvaDRAFT_3610 urea ABC transporter; PMID:23739051, PMID:39673195).'
   llm_assisted: true

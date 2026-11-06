@@ -275,7 +275,128 @@ causal_graphs:
     description: Periplasmic cytochromes, conductive periplasmic fibers, reversed
       canonical sulfate-reduction pathway enzymes for anodic sulfide oxidation, and
       Wood-Ljungdahl CO2-fixation and N2-fixation enzymes encoded and expressed by
-      cable bacteria.
+      cable bacteria. Verified protein_examples are attached for the two cable bacterial
+      genomes sequenced in PMID:31427514 — Candidatus Electrothrix aarhusensis (NCBITaxon:1859131)
+      dissimilatory sulfite reductase subunits alpha (UniProtKB:A0A191KRT4, H206_01694)
+      and beta (UniProtKB:A0A192W3X1, H206_01695), dissimilatory adenylylsulfate reductase
+      subunit alpha (UniProtKB:A0A3S3QW80, H206_01093), Wood-Ljungdahl CO-methylating
+      acetyl-CoA synthase (UniProtKB:A0A3S3QHY2, H206_01147), and nitrogenase iron
+      protein NifH (UniProtKB:A0A444J3A3, nifH, H206_06176), together with Candidatus
+      Electronema aureum (NCBITaxon:2005002) dissimilatory sulfite reductase subunit
+      alpha (UniProtKB:A0A521G5H7, CDV28_10159).
+    protein_examples:
+    - accession: UniProtKB:A0A191KRT4
+      entry_name: A0A191KRT4_9BACT
+      recommended_name: Dissimilatory sulfite reductase alpha subunit
+      locus_tag: H206_01694
+      taxon_id: NCBITaxon:1859131
+      taxon_name: Candidatus Electrothrix aarhusensis
+      role_in_node: subunit
+      sequence_length: 426
+      crc64: 256655B19C202E12
+      evidence:
+      - reference: PMID:31427514
+        snippet: With support from metaproteomics of a Ca. Electronema enrichment,
+          the genomes suggest that cable bacteria oxidize sulfide by reversing the
+          canonical sulfate reduction pathway and fix CO2 using the Wood-Ljungdahl
+          pathway.
+        notes: Candidatus Electrothrix aarhusensis (NCBITaxon:1859131) dissimilatory
+          sulfite reductase subunit alpha (ORF H206_01694, UniProtKB:A0A191KRT4, 426
+          aa) is part of the reversed canonical sulfate reduction pathway characterized
+          in PMID:31427514.
+    - accession: UniProtKB:A0A192W3X1
+      entry_name: A0A192W3X1_9BACT
+      recommended_name: Dissimilatory sulfite reductase beta subunit
+      locus_tag: H206_01695
+      taxon_id: NCBITaxon:1859131
+      taxon_name: Candidatus Electrothrix aarhusensis
+      role_in_node: subunit
+      sequence_length: 379
+      crc64: 8E4920655B8BCE5F
+      evidence:
+      - reference: PMID:31427514
+        snippet: With support from metaproteomics of a Ca. Electronema enrichment,
+          the genomes suggest that cable bacteria oxidize sulfide by reversing the
+          canonical sulfate reduction pathway and fix CO2 using the Wood-Ljungdahl
+          pathway.
+        notes: Candidatus Electrothrix aarhusensis (NCBITaxon:1859131) dissimilatory
+          sulfite reductase subunit beta (ORF H206_01695, UniProtKB:A0A192W3X1, 379
+          aa) is part of the reversed canonical sulfate reduction pathway in PMID:31427514.
+    - accession: UniProtKB:A0A3S3QW80
+      entry_name: A0A3S3QW80_9BACT
+      recommended_name: Dissimilatory adenylylsulfate reductase alpha subunit
+      locus_tag: H206_01093
+      taxon_id: NCBITaxon:1859131
+      taxon_name: Candidatus Electrothrix aarhusensis
+      role_in_node: subunit
+      sequence_length: 671
+      crc64: 2721D2187528DBE1
+      evidence:
+      - reference: PMID:31427514
+        snippet: With support from metaproteomics of a Ca. Electronema enrichment,
+          the genomes suggest that cable bacteria oxidize sulfide by reversing the
+          canonical sulfate reduction pathway and fix CO2 using the Wood-Ljungdahl
+          pathway.
+        notes: Candidatus Electrothrix aarhusensis (NCBITaxon:1859131) dissimilatory
+          adenylylsulfate reductase subunit alpha (ORF H206_01093, UniProtKB:A0A3S3QW80,
+          671 aa) operates in the reversed sulfate reduction pathway of cable bacteria
+          in PMID:31427514.
+    - accession: UniProtKB:A0A3S3QHY2
+      entry_name: A0A3S3QHY2_9BACT
+      recommended_name: CO-methylating acetyl-CoA synthase
+      locus_tag: H206_01147
+      taxon_id: NCBITaxon:1859131
+      taxon_name: Candidatus Electrothrix aarhusensis
+      role_in_node: family_member
+      sequence_length: 735
+      crc64: 015B7DDA6E414CE2
+      evidence:
+      - reference: PMID:31427514
+        snippet: With support from metaproteomics of a Ca. Electronema enrichment,
+          the genomes suggest that cable bacteria oxidize sulfide by reversing the
+          canonical sulfate reduction pathway and fix CO2 using the Wood-Ljungdahl
+          pathway.
+        notes: Candidatus Electrothrix aarhusensis (NCBITaxon:1859131) CO-methylating
+          acetyl-CoA synthase (ORF H206_01147, UniProtKB:A0A3S3QHY2, 735 aa) is a
+          key enzyme of the Wood-Ljungdahl CO2 fixation pathway identified in PMID:31427514.
+    - accession: UniProtKB:A0A444J3A3
+      entry_name: A0A444J3A3_9BACT
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: H206_06176
+      taxon_id: NCBITaxon:1859131
+      taxon_name: Candidatus Electrothrix aarhusensis
+      role_in_node: subunit
+      sequence_length: 274
+      crc64: 764A8E3A7B11CD6B
+      evidence:
+      - reference: PMID:31427514
+        snippet: Cable bacteria show limited organotrophic potential, may assimilate
+          smaller organic acids and alcohols, fix N2, and synthesize polyphosphates
+          and polyglucose as storage compounds; several of these traits were confirmed
+          by cell-level experimental analyses.
+        notes: Candidatus Electrothrix aarhusensis (NCBITaxon:1859131) nitrogenase
+          iron protein NifH (nifH, ORF H206_06176, UniProtKB:A0A444J3A3, 274 aa) supports
+          diazotrophic N2 fixation in cable bacteria (PMID:31427514).
+    - accession: UniProtKB:A0A521G5H7
+      entry_name: A0A521G5H7_9BACT
+      recommended_name: Dissimilatory sulfite reductase alpha subunit
+      locus_tag: CDV28_10159
+      taxon_id: NCBITaxon:2005002
+      taxon_name: Candidatus Electronema aureum
+      role_in_node: subunit
+      sequence_length: 426
+      crc64: 0564FAE206CFBF7B
+      evidence:
+      - reference: PMID:31427514
+        snippet: With support from metaproteomics of a Ca. Electronema enrichment,
+          the genomes suggest that cable bacteria oxidize sulfide by reversing the
+          canonical sulfate reduction pathway and fix CO2 using the Wood-Ljungdahl
+          pathway.
+        notes: Candidatus Electronema aureum (NCBITaxon:2005002) dissimilatory sulfite
+          reductase subunit alpha (ORF CDV28_10159, UniProtKB:A0A521G5H7, 426 aa)
+          is part of the reversed canonical sulfate reduction pathway confirmed by
+          genomics and metaproteomics in PMID:31427514.
   - node_id: electrogenic_sulfur_oxidation_esox_and_hs_so4_redox_connector
     label: electrogenic sulfur oxidation (e-SOx), long-distance electron transport,
       and HS--SO42- redox-coupled bioremediation
@@ -419,4 +540,14 @@ curation_history:
   changes: Added tidal_mudflat_cable_bacteria_esox_and_desulfobulbaceae_srb_redox_connector
     mechanism graph for tidal_mudflat (ENVO:00000241) backed by PMID:31427514, PMID:39173361,
     and PMID:39629215.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Added 6 verified cable bacteria protein_examples across
+    Candidatus Electrothrix aarhusensis (NCBITaxon:1859131; UniProtKB:A0A191KRT4 H206_01694
+    DsrA, UniProtKB:A0A192W3X1 H206_01695 DsrB, UniProtKB:A0A3S3QW80 H206_01093 AprA,
+    UniProtKB:A0A3S3QHY2 H206_01147 AcsB, and UniProtKB:A0A444J3A3 H206_06176 nifH)
+    and Candidatus Electronema aureum (NCBITaxon:2005002; UniProtKB:A0A521G5H7 CDV28_10159
+    DsrA) backed by PMID:31427514.'
   llm_assisted: true

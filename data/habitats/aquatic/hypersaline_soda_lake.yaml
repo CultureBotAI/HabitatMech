@@ -63,10 +63,119 @@ causal_graphs:
     label: flavocytochrome c (fcc), truncated Sox system, sulfite:quinone oxidoreductase
       (soe), Hdr/rDsr, and RuBisCO (cbbL, cbbM)
     node_type: GENE_OR_PROTEIN
-    description: Dissimilatory sulfur-oxidation enzymes — flavocytochrome c (fcc),
+    description: 'Dissimilatory sulfur-oxidation enzymes — flavocytochrome c (fcc),
       truncated Sox system, sulfite:quinone oxidoreductase (soe), heterodisulfide
       reductase (hdr), and dissimilatory sulfite reductase (dsr) — together with Calvin-Benson
       cycle form I and form II RuBisCO (cbbL, cbbM) and rTCA ATP citrate lyase (aclB).
+      Verified protein_examples are attached for the hypersaline soda lake isolate
+      Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588; PMID:21984678,
+      PMID:30837958): Calvin-Benson cycle form I RuBisCO large chain CbbL (UniProtKB:B8GQP8,
+      cbbL, Tgr7_3203) and small subunit CbbS (UniProtKB:B8GQP7, cbbS, Tgr7_3202),
+      reverse dissimilatory sulfite reductase alpha (UniProtKB:B8GUE5, Tgr7_2185)
+      and beta (UniProtKB:B8GUE6, Tgr7_2186) subunits, and truncated Sox system L-cysteine
+      S-thiosulfotransferase subunit SoxA (UniProtKB:B8GN83, Tgr7_0853).'
+    protein_examples:
+    - accession: UniProtKB:B8GQP8
+      entry_name: RBL_THISH
+      recommended_name: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      locus_tag: Tgr7_3203
+      taxon_id: NCBITaxon:396588
+      taxon_name: Thioalkalivibrio sulfidiphilus (strain HL-EbGR7)
+      role_in_node: subunit
+      sequence_length: 473
+      crc64: 3B9757752D1DFF12
+      evidence:
+      - reference: PMID:21984678
+        snippet: The genome sequence of strain HL-EbGr7(T) demonstrated the presence
+          of genes encoding the reverse Dsr pathway and a truncated Sox pathway for
+          sulfur oxidation and enzymes of the Calvin-Benson cycle of autotrophic CO(2)
+          assimilation with ribulose-bisphosphate carboxylase/oxygenase (RuBisCO)
+          type I.
+        notes: Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588) form
+          I RuBisCO large chain CbbL (cbbL, locus tag Tgr7_3203, reviewed Swiss-Prot
+          UniProtKB:B8GQP8, 473 aa) catalyzes Calvin-Benson cycle CO2 assimilation
+          (PMID:21984678).
+    - accession: UniProtKB:B8GQP7
+      entry_name: B8GQP7_THISH
+      recommended_name: Ribulose bisphosphate carboxylase small subunit
+      gene_symbol: cbbS
+      locus_tag: Tgr7_3202
+      taxon_id: NCBITaxon:396588
+      taxon_name: Thioalkalivibrio sulfidiphilus (strain HL-EbGR7)
+      role_in_node: subunit
+      sequence_length: 110
+      crc64: F7AE0B4FE953D493
+      evidence:
+      - reference: PMID:21984678
+        snippet: The genome sequence of strain HL-EbGr7(T) demonstrated the presence
+          of genes encoding the reverse Dsr pathway and a truncated Sox pathway for
+          sulfur oxidation and enzymes of the Calvin-Benson cycle of autotrophic CO(2)
+          assimilation with ribulose-bisphosphate carboxylase/oxygenase (RuBisCO)
+          type I.
+        notes: Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588) form
+          I RuBisCO small subunit CbbS (cbbS, locus tag Tgr7_3202, UniProtKB:B8GQP7,
+          110 aa) pairs with CbbL in the Calvin-Benson cycle (PMID:21984678).
+    - accession: UniProtKB:B8GUE5
+      entry_name: B8GUE5_THISH
+      recommended_name: Sulfite reductase, dissimilatory-type alpha subunit
+      locus_tag: Tgr7_2185
+      taxon_id: NCBITaxon:396588
+      taxon_name: Thioalkalivibrio sulfidiphilus (strain HL-EbGR7)
+      role_in_node: subunit
+      sequence_length: 421
+      crc64: CE2CEF633097659E
+      evidence:
+      - reference: PMID:21984678
+        snippet: The genome sequence of strain HL-EbGr7(T) demonstrated the presence
+          of genes encoding the reverse Dsr pathway and a truncated Sox pathway for
+          sulfur oxidation and enzymes of the Calvin-Benson cycle of autotrophic CO(2)
+          assimilation with ribulose-bisphosphate carboxylase/oxygenase (RuBisCO)
+          type I.
+        notes: Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588) dissimilatory-type
+          sulfite reductase alpha subunit (locus tag Tgr7_2185, UniProtKB:B8GUE5,
+          421 aa) operates in the reverse Dsr sulfur-oxidation pathway (PMID:21984678,
+          PMID:30837958).
+    - accession: UniProtKB:B8GUE6
+      entry_name: B8GUE6_THISH
+      recommended_name: Sulfite reductase, dissimilatory-type beta subunit
+      locus_tag: Tgr7_2186
+      taxon_id: NCBITaxon:396588
+      taxon_name: Thioalkalivibrio sulfidiphilus (strain HL-EbGR7)
+      role_in_node: subunit
+      sequence_length: 359
+      crc64: DBA4463059644443
+      evidence:
+      - reference: PMID:21984678
+        snippet: The genome sequence of strain HL-EbGr7(T) demonstrated the presence
+          of genes encoding the reverse Dsr pathway and a truncated Sox pathway for
+          sulfur oxidation and enzymes of the Calvin-Benson cycle of autotrophic CO(2)
+          assimilation with ribulose-bisphosphate carboxylase/oxygenase (RuBisCO)
+          type I.
+        notes: Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588) dissimilatory-type
+          sulfite reductase beta subunit (locus tag Tgr7_2186, UniProtKB:B8GUE6, 359
+          aa) operates in the reverse Dsr sulfur-oxidation pathway (PMID:21984678,
+          PMID:30837958).
+    - accession: UniProtKB:B8GN83
+      entry_name: B8GN83_THISH
+      recommended_name: L-cysteine S-thiosulfotransferase subunit SoxA
+      locus_tag: Tgr7_0853
+      taxon_id: NCBITaxon:396588
+      taxon_name: Thioalkalivibrio sulfidiphilus (strain HL-EbGR7)
+      role_in_node: subunit
+      sequence_length: 277
+      crc64: 2E8E02E56ABC126D
+      evidence:
+      - reference: PMID:30837958
+        snippet: Investigation of the ortholog groups containing genes related to
+          sulfur oxidation showed that flavocytochrome c (fcc), the truncated sox
+          system, and sulfite:quinone oxidoreductase (soe) are present in all strains,
+          whereas dissimilatory sulfite reductase (dsr; which catalyzes the oxidation
+          of elemental sulfur) was found in only six strains.
+        notes: Thioalkalivibrio sulfidiphilus strain HL-EbGR7 (NCBITaxon:396588) L-cysteine
+          S-thiosulfotransferase subunit SoxA (locus tag Tgr7_0853, UniProtKB:B8GN83,
+          277 aa) is a core component of the conserved truncated Sox thiosulfate-oxidation
+          system in soda lake Thioalkalivibrio (PMID:21984678, PMID:30837958).
   - node_id: haloalkaline_chemolithoautotrophic_sulfur_oxidation_and_co2_assimilation
     label: haloalkaline chemolithoautotrophic and phototrophic sulfide/thiosulfate
       oxidation and CO2 assimilation
@@ -187,4 +296,12 @@ curation_history:
   changes: Added hypersaline_soda_lake_thioalkalivibrio_halorhodospira_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_cycling
     mechanism graph for hypersaline_soda_lake (habitatmech:GOLD.3098ee8fe8) backed
     by PMID:21073490, PMID:21984678, and PMID:30837958.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Added 5 verified Thioalkalivibrio sulfidiphilus HL-EbGR7
+    (NCBITaxon:396588) protein_examples (UniProtKB:B8GQP8 cbbL Tgr7_3203, UniProtKB:B8GQP7
+    cbbS Tgr7_3202, UniProtKB:B8GUE5 Tgr7_2185 DsrA, UniProtKB:B8GUE6 Tgr7_2186 DsrB,
+    and UniProtKB:B8GN83 Tgr7_0853 SoxA) backed by PMID:21984678 and PMID:30837958.'
   llm_assisted: true

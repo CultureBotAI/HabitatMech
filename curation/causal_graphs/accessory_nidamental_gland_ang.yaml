@@ -36,9 +36,16 @@ causal_graphs:
     label: Leisingera indigoidine biosynthetic gene cluster, acyl-HSL/siderophore pathways, and ANG antifungal
       secondary metabolite enzymes
     node_type: GENE_OR_PROTEIN
-    description: Complete biosynthetic gene cluster for the antimicrobial pigment indigoidine as well
+    description: 'Complete biosynthetic gene cluster for the antimicrobial pigment indigoidine as well
       as siderophore and acyl-homoserine lactone quorum-sensing genes in Leisingera sp. JC1, alongside
       ANG bacterial pathways producing lincomycin and mycinamicin-like antifungal secondary metabolites.
+      Source-limited for UniProtKB protein_examples: the Euprymna scolopes ANG symbiont Leisingera sp.
+      JC1 (NCBITaxon:1855282) genome proteome sequenced in PMID:27660622 (locus prefix A9D60_, GenBank
+      WGS LYUZ01) is archived in UniParc (e.g., peptide synthetase A9D60_24190, former UniProtKB:A0A1B8RVT2
+      -> UPI0008034E33, 1521 aa; adenylation domain protein WP_083194217.1 -> UPI0009F1E898, 1313 aa;
+      peptide synthetase A9D60_12425, former UniProtKB:A0A1B8S5S3 -> UPI00031486F3, 200 aa) without active
+      UniProtKB cross-references, and the antifungal metabolite network in PMID:31662458 was characterized
+      by untargeted mass spectrometry without deposited UniProtKB protein accessions.'
   - node_id: egg_jelly_coat_deposition_and_antifungal_antibacterial_embryo_protection
     label: bacterial deposition into egg jelly coat and antimicrobial defense against Fusarium keratoplasticum
       and marine vibrios
@@ -145,4 +152,12 @@ curation_history:
   changes: Added accessory_nidamental_gland_leisingera_indigoidine_and_antifungal_egg_defense mechanism
     graph for accessory_nidamental_gland_ang (habitatmech:GOLD.453b1756ab) backed by PMID:22504817, PMID:27660622,
     PMID:31662458, and PMID:36656023.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways
+    for UniProtKB protein_examples; documented UniParc-only status for the Leisingera sp. JC1 (NCBITaxon:1855282)
+    proteome (UPI0008034E33, UPI0009F1E898, UPI00031486F3; PMID:27660622) and metabolomic source-limited
+    status for PMID:31662458.'
   llm_assisted: true

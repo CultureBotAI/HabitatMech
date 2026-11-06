@@ -33,9 +33,14 @@ causal_graphs:
     label: Cluster I/III nitrogenase (nifH), nitrite reductase (nirS), and chronosequence C/S/Fe metabolic
       genes
     node_type: GENE_OR_PROTEIN
-    description: Nitrogenase genes (nif, including nifH Cluster I and III), nitrite reductase (nirS),
+    description: 'Nitrogenase genes (nif, including nifH Cluster I and III), nitrite reductase (nirS),
       and metagenomic functional genes for glycogen, cellulosome, iron acquisition, xylose, lactate, and
-      sulfur metabolism across glacier forefield chronosequences.
+      sulfur metabolism across glacier forefield chronosequences. Source-limited for UniProtKB protein_examples:
+      PMID:21326352 profiled environmental nifH PCR amplicon/T-RFLP phylotypes across the Damma Glacier
+      forefield, PMID:29901729 extracted 185 nif gene sequences from unbinned soil metagenomic contigs
+      across four Arctic glacier forefields, and PMID:37245808 quantified nifH/nirS amplicons and shotgun
+      metagenomic functional categories across the Hailuogou Glacier chronosequence without depositing
+      isolate- or MAG-resolved protein sequences with active UniProtKB accessions.'
   - node_id: pioneer_biological_n2_fixation_plant_colonization_and_asynchronous_cn_accumulation
     label: pioneer biological N2 fixation, labile N stock accumulation, and plant colonization facilitation
     node_type: COMMUNITY_PROCESS
@@ -128,4 +133,12 @@ curation_history:
   changes: Added glacier_forefield_chronosequence_nifh_cluster_i_iii_diazotrophy_and_asynchronous_cn_accumulation
     mechanism graph for glacier_forefield (habitatmech:GOLD.fa0932d6fe) backed by PMID:21326352, PMID:29901729,
     and PMID:37245808.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes
+    for UniProtKB protein_examples; documented source-limited status because PMID:21326352, PMID:29901729,
+    and PMID:37245808 report environmental nifH/nirS amplicons and unbinned soil metagenomic contigs without
+    active UniProtKB protein accessions.'
   llm_assisted: true

@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-06T150500Z-antigravity-060301
+  timestamp: '2026-11-06T15:05:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Audit causal-graph overlays and populate verified UniProtKB ProteinExample entries in Cycle 6 Stage 3
+  details: 'Audited all 3,209 habitat records (83 with curation/causal_graphs/*.yaml overlays) and re-verified all 66 existing ProteinExample entries against live UniProtKB REST API (0 mismatches). Added 21 new verified ProteinExample entries across 5 GENE_OR_PROTEIN nodes (66 -> 87 total ProteinExample entries across 25 nodes in 24 overlays): coral_reef.yaml (endozoicomonas_dddd_dmsp_lyase_dsyb_and_pseudovibrio_tda_gene_clusters for coral-associated Roseobacter sp. DMSP09 NCBITaxon:581034, Roseobacter sp. DMSP10 NCBITaxon:581035, and Pseudomonas sp. DMSP01 NCBITaxon:581032, PMID:19346350: UniProtKB:B7U9V7 dddD, UniProtKB:B7U9V8 dddD, UniProtKB:B7U9V6 dddD, UniProtKB:B7U9V5 dddL, plus UniParc UPI0005957328 note for Pseudovibrio sp. P12 DddD in PMID:27602265 and source-limit notes for PMID:36683362 and PMID:37992165), tidal_mudflat.yaml (cable_bacterial_periplasmic_cytochromes_reversed_dsr_and_wood_ljungdahl_genes for Candidatus Electrothrix aarhusensis NCBITaxon:1859131 and Candidatus Electronema aureum NCBITaxon:2005002, PMID:31427514: UniProtKB:A0A191KRT4 H206_01694 DsrA, UniProtKB:A0A192W3X1 H206_01695 DsrB, UniProtKB:A0A3S3QW80 H206_01093 AprA, UniProtKB:A0A3S3QHY2 H206_01147 AcsB, UniProtKB:A0A444J3A3 H206_06176 nifH, UniProtKB:A0A521G5H7 CDV28_10159 DsrA), hypersaline_soda_lake.yaml (haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes for Thioalkalivibrio sulfidiphilus HL-EbGR7 NCBITaxon:396588, PMID:21984678 and PMID:30837958: UniProtKB:B8GQP8 cbbL Tgr7_3203, UniProtKB:B8GQP7 cbbS Tgr7_3202, UniProtKB:B8GUE5 Tgr7_2185 DsrA, UniProtKB:B8GUE6 Tgr7_2186 DsrB, UniProtKB:B8GN83 Tgr7_0853 SoxA), light_organ.yaml (vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system for Aliivibrio fischeri ES114 NCBITaxon:312309, PMID:10913092, PMID:17087775, and PMID:38270381: UniProtKB:Q5E0Y9 rscS VF_A0237, UniProtKB:Q5DYP3 sypN VF_A1033, UniProtKB:Q5DZ05 luxA VF_A0921, UniProtKB:P35328 luxI VF_A0924, UniProtKB:P35327 luxR VF_A0925), and sourdough.yaml (fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes for Fructilactobacillus sanfranciscensis TMW 1.392 NCBITaxon:1625, PMID:15735966: UniProtKB:Q70XJ9 levS LSC_FRUSA, plus biochemical-only source-limit note for L. sanfranciscensis CB1 ADI/OTC/CK in PMID:12450844). Documented source-limited / UniParc-only status on soil_crust.yaml (microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes, UPI00020D1071, UPI00020D106B, and UPI00020D21E8 in Microcoleus vaginatus PCC 9802 / FGP-2, PMID:23739051 and PMID:39673195), glacier_forefield.yaml (proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes, PMID:21326352, PMID:29901729, and PMID:37245808), fungus_garden_fungus_gallery.yaml (leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins, UPI000181409B, UPI0001BDA80F, and UPI0001BDA80E in Klebsiella variicola At-22, PMID:19965433 and PMID:22378535, and metaproteomic/MS identifications in PMID:23584789 and PMID:26543788), accessory_nidamental_gland_ang.yaml (leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways, UPI0008034E33, UPI0009F1E898, and UPI00031486F3 in Leisingera sp. JC1, PMID:27660622, and MS metabolomics in PMID:31662458), and anaerobic_digester_sludge.yaml (syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways, uncultured MAGs in PMID:42954465 and 16S/predicted profiles in PMID:41242256 and PMID:41654532).'

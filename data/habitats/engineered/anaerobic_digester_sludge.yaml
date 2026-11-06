@@ -222,10 +222,15 @@ causal_graphs:
     label: propionate/acetate oxidation enzymes, glycine cleavage system, and Methanothrix
       soehngenii acetoclastic/CO2-reductive methanogenesis pathway
     node_type: GENE_OR_PROTEIN
-    description: Functional genes for syntrophic propionate, butyrate, and acetate
+    description: 'Functional genes for syntrophic propionate, butyrate, and acetate
       oxidation and stress response, prevalent glycine cleavage systems, acetoclastic
       methanogenesis-associated genes, and the complete CO2-reductive methanogenesis
-      pathway in Methanothrix soehngenii.
+      pathway in Methanothrix soehngenii. Source-limited for UniProtKB protein_examples:
+      PMID:42954465 reconstructed 390 metagenome-assembled genomes (MAGs, including
+      uncultured Methanothrix soehngenii and Armatimonadota UBA5829 MAGs) from synthetic
+      anaerobic digesters, and PMID:41242256 and PMID:41654532 profiled 16S rRNA amplicons
+      and predicted functional pathways without depositing isolate- or MAG-resolved
+      protein sequences with active UniProtKB accessions.'
   - node_id: syntrophic_propionate_butyrate_acetate_degradation_and_biogas_methanogenesis
     label: syntrophic VFA degradation, process resilience, and methane-rich biogas
       production
@@ -386,4 +391,12 @@ curation_history:
   changes: Added anaerobic_digester_sludge_syntrophic_vfa_oxidation_and_methanothrix_methanogenesis
     mechanism graph for anaerobic_digester_sludge (ENVO:00003965) backed by PMID:41242256,
     PMID:41654532, and PMID:42954465.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways
+    for UniProtKB protein_examples; documented source-limited status because PMID:42954465
+    reports uncultured anaerobic-digester MAGs and PMID:41242256 and PMID:41654532
+    report 16S/predicted functional profiles without active UniProtKB protein accessions.'
   llm_assisted: true
