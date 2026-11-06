@@ -58,10 +58,123 @@ causal_graphs:
     label: Vibrio fischeri RscS sensor kinase, syp polysaccharide locus (sypN), LapV
       adhesin, and LuxA/LuxI/LuxR bioluminescence system
     node_type: GENE_OR_PROTEIN
-    description: Symbiosis sensor kinase RscS (rscS), symbiosis polysaccharide (syp)
+    description: 'Symbiosis sensor kinase RscS (rscS), symbiosis polysaccharide (syp)
       locus including glycosyltransferase sypN, LapV adhesin, and the luminescence
       enzymatic and regulatory proteins LuxA, LuxI, and LuxR (luxA, luxI, luxR) in
-      Vibrio (Aliivibrio) fischeri, interacting with host V-type ATPase (VHA).
+      Vibrio (Aliivibrio) fischeri, interacting with host V-type ATPase (VHA). Verified
+      protein_examples are attached for the squid light organ symbiont Aliivibrio
+      (Vibrio) fischeri strain ATCC 700601 / ES114 (NCBITaxon:312309): symbiosis sensor
+      histidine kinase RscS (UniProtKB:Q5E0Y9, rscS, VF_A0237; PMID:17087775), symbiosis
+      polysaccharide glycosyltransferase SypN (UniProtKB:Q5DYP3, sypN, VF_A1033; PMID:17087775,
+      PMID:38270381), luciferase alpha chain LuxA (UniProtKB:Q5DZ05, luxA, VF_A0921;
+      PMID:10913092), acyl-homoserine-lactone synthase LuxI (UniProtKB:P35328, luxI,
+      VF_A0924; PMID:10913092), and transcriptional activator LuxR (UniProtKB:P35327,
+      luxR, VF_A0925; PMID:10913092).'
+    protein_examples:
+    - accession: UniProtKB:Q5E0Y9
+      entry_name: Q5E0Y9_ALIF1
+      recommended_name: histidine kinase
+      gene_symbol: rscS
+      locus_tag: VF_A0237
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 927
+      crc64: 9EE0659CB2E8BF8B
+      evidence:
+      - reference: PMID:17087775
+        snippet: Previously, we identified in Vibrio fischeri a putative sensor kinase,
+          RscS, required for initiating symbiotic colonization of its squid host Euprymna
+          scolopes. Here, we analysed the role of rscS by isolating an allele, rscS1,
+          with increased activity. Multicopy rscS1 activated transcription of genes
+          within the recently identified symbiosis polysaccharide (syp) cluster.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) sensor
+          histidine kinase RscS (rscS, locus tag VF_A0237, UniProtKB:Q5E0Y9, 927 aa)
+          activates syp cluster transcription and surface biofilm aggregation during
+          Euprymna scolopes light organ colonization (PMID:17087775).
+    - accession: UniProtKB:Q5DYP3
+      entry_name: Q5DYP3_ALIF1
+      recommended_name: Glycosyltransferase
+      gene_symbol: sypN
+      locus_tag: VF_A1033
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 378
+      crc64: BEC6D0246251B031
+      evidence:
+      - reference: PMID:17087775
+        snippet: Finally, multicopy rscS1 provided a colonization advantage over control
+          cells and substantially enhanced the ability of wild-type cells to aggregate
+          on the surface of the symbiotic organ of E. scolopes; this latter phenotype
+          similarly depended upon an intact syp locus.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) glycosyltransferase
+          SypN (sypN, locus tag VF_A1033, UniProtKB:Q5DYP3, 378 aa) is a core enzyme
+          of the syp symbiosis polysaccharide locus required for biofilm aggregation
+          on the squid light organ (PMID:17087775, PMID:38270381).
+    - accession: UniProtKB:Q5DZ05
+      entry_name: Q5DZ05_ALIF1
+      recommended_name: Alkanal monooxygenase
+      gene_symbol: luxA
+      locus_tag: VF_A0921
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: subunit
+      sequence_length: 355
+      crc64: 7D6B22DB5D32DB54
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) bacterial
+          luciferase alpha subunit LuxA (luxA, locus tag VF_A0921, UniProtKB:Q5DZ05,
+          355 aa) is required for bioluminescence, crypt epithelial swelling, and
+          full light organ colonization (PMID:10913092).
+    - accession: UniProtKB:P35328
+      entry_name: LUXJ_ALIF1
+      recommended_name: Acyl-homoserine-lactone synthase
+      gene_symbol: luxI
+      locus_tag: VF_A0924
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 193
+      crc64: A300D104637AF801
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) acyl-homoserine-lactone
+          synthase LuxI (luxI, locus tag VF_A0924, reviewed Swiss-Prot UniProtKB:P35328,
+          193 aa) synthesizes the quorum-sensing autoinducer required for crypt luminescence
+          and persistence (PMID:10913092).
+    - accession: UniProtKB:P35327
+      entry_name: LUXS_ALIF1
+      recommended_name: Transcriptional activator protein LuxR
+      gene_symbol: luxR
+      locus_tag: VF_A0925
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 250
+      crc64: 42AC06375E28A34F
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) transcriptional
+          activator protein LuxR (luxR, locus tag VF_A0925, reviewed Swiss-Prot UniProtKB:P35327,
+          250 aa) activates lux operon expression in the squid light organ crypts
+          (PMID:10913092).
   - node_id: syp_biofilm_aggregation_crypt_epithelial_remodeling_and_bioluminescent_symbiosis
     label: Syp-dependent surface biofilm aggregation, crypt dispersal, and Lux-induced
       crypt epithelial swelling and persistence
@@ -203,4 +316,12 @@ curation_history:
   changes: Added squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis
     mechanism graph for light_organ (habitatmech:GOLD.200051736e) backed by PMID:10913092,
     PMID:17087775, PMID:38270381, and PMID:39695176.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Added 5 verified Aliivibrio fischeri ES114 (NCBITaxon:312309)
+    protein_examples (UniProtKB:Q5E0Y9 rscS VF_A0237, UniProtKB:Q5DYP3 sypN VF_A1033,
+    UniProtKB:Q5DZ05 luxA VF_A0921, UniProtKB:P35328 luxI VF_A0924, and UniProtKB:P35327
+    luxR VF_A0925) backed by PMID:10913092, PMID:17087775, and PMID:38270381.'
   llm_assisted: true

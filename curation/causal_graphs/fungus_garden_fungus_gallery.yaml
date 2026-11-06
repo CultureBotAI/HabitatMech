@@ -35,9 +35,16 @@ causal_graphs:
     label: Leucoagaricus gongylophorus cellulases and yellow laccase Lac1Lg, bacterial glycosyl hydrolases,
       and N2-fixation/biosynthetic proteins
     node_type: GENE_OR_PROTEIN
-    description: Stage-specific fungal cellulases and the monomeric yellow laccase Lac1Lg produced by
+    description: 'Stage-specific fungal cellulases and the monomeric yellow laccase Lac1Lg produced by
       Leucoagaricus gongylophorus alongside bacterial glycosyl hydrolases, lignocellulose-degrading genes,
       B-vitamin/amino acid biosynthetic proteins, and symbiotic nitrogenase in fungus-garden bacteria.
+      Source-limited for UniProtKB protein_examples: the fungus-garden diazotroph Klebsiella variicola
+      strain At-22 (NCBITaxon:640131; PMID:19965433, PMID:22378535) nitrogenase proteome is archived in
+      UniParc (NifK Kvar_1601, former UniProtKB:D1KS42 -> UPI000181409B, 520 aa; NifE Kvar_1598, former
+      UniProtKB:D1KS39 -> UPI0001BDA80F, 457 aa; NifN Kvar_1597, former UniProtKB:D1KS38 -> UPI0001BDA80E,
+      461 aa) without active strain-specific UniProtKB accessions, and the Leucoagaricus gongylophorus
+      cellulases and yellow laccase Lac1Lg characterized by metaproteomics and mass spectrometry in PMID:23584789
+      and PMID:26543788 do not have active UniProtKB accessions linked to those studies.'
   - node_id: symbiotic_n2_fixation_lignocellulose_degradation_and_b_vitamin_amino_acid_provisioning
     label: symbiotic N2 fixation into ant biomass, recalcitrant plant polymer degradation, and B-vitamin/amino
       acid provisioning
@@ -129,4 +136,12 @@ curation_history:
   changes: Added fungus_garden_leucoagaricus_lac1lg_cellulase_and_enterobacteriaceae_n2_fixation_symbiosis
     mechanism graph for fungus_garden_fungus_gallery (habitatmech:GOLD.98c192f558) backed by PMID:19965433,
     PMID:22378535, PMID:23584789, and PMID:26543788.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins
+    for UniProtKB protein_examples; documented UniParc-only status for Klebsiella variicola At-22 (NCBITaxon:640131;
+    UPI000181409B, UPI0001BDA80F, UPI0001BDA80E; PMID:19965433, PMID:22378535) and source-limited status
+    for the metaproteomic/MS identifications in PMID:23584789 and PMID:26543788.'
   llm_assisted: true

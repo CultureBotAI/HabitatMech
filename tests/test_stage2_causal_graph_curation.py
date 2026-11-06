@@ -1222,5 +1222,129 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
                 assert snippet in cache_text, f"Snippet not verbatim in {cache_path}: {snippet!r}"
 
 
+def test_cycle6_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "coral_reef": REPO_ROOT / "data" / "habitats" / "aquatic" / "coral_reef.yaml",
+        "tidal_mudflat": REPO_ROOT / "data" / "habitats" / "aquatic" / "tidal_mudflat.yaml",
+        "hypersaline_soda_lake": (
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "hypersaline_soda_lake.yaml"
+        ),
+        "soil_crust": REPO_ROOT / "data" / "habitats" / "terrestrial" / "soil_crust.yaml",
+        "glacier_forefield": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "glacier_forefield.yaml"
+        ),
+        "fungus_garden_fungus_gallery": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "fungus_garden_fungus_gallery.yaml"
+        ),
+        "light_organ": REPO_ROOT / "data" / "habitats" / "host_associated" / "light_organ.yaml",
+        "accessory_nidamental_gland_ang": (
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "host_associated"
+            / "accessory_nidamental_gland_ang.yaml"
+        ),
+        "sourdough": REPO_ROOT / "data" / "habitats" / "food" / "sourdough.yaml",
+        "anaerobic_digester_sludge": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "anaerobic_digester_sludge.yaml"
+        ),
+    }
+    expected_protein_nodes = {
+        "coral_reef": {
+            "endozoicomonas_dddd_dmsp_lyase_dsyb_and_pseudovibrio_tda_gene_clusters": [
+                "UniProtKB:B7U9V7",
+                "UniProtKB:B7U9V8",
+                "UniProtKB:B7U9V6",
+                "UniProtKB:B7U9V5",
+            ],
+        },
+        "tidal_mudflat": {
+            "cable_bacterial_periplasmic_cytochromes_reversed_dsr_and_wood_ljungdahl_genes": [
+                "UniProtKB:A0A191KRT4",
+                "UniProtKB:A0A192W3X1",
+                "UniProtKB:A0A3S3QW80",
+                "UniProtKB:A0A3S3QHY2",
+                "UniProtKB:A0A444J3A3",
+                "UniProtKB:A0A521G5H7",
+            ],
+        },
+        "hypersaline_soda_lake": {
+            "haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes": [
+                "UniProtKB:B8GQP8",
+                "UniProtKB:B8GQP7",
+                "UniProtKB:B8GUE5",
+                "UniProtKB:B8GUE6",
+                "UniProtKB:B8GN83",
+            ],
+        },
+        "light_organ": {
+            "vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system": [
+                "UniProtKB:Q5E0Y9",
+                "UniProtKB:Q5DYP3",
+                "UniProtKB:Q5DZ05",
+                "UniProtKB:P35328",
+                "UniProtKB:P35327",
+            ],
+        },
+        "sourdough": {
+            "fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes": [
+                "UniProtKB:Q70XJ9",
+            ],
+        },
+    }
+    new_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            new_examples += len(examples)
+    assert new_examples == 21
 
+    expected_documented_nodes = {
+        "soil_crust": (
+            "microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes",
+            "GENE_OR_PROTEIN",
+            "UPI00020D1071",
+        ),
+        "glacier_forefield": (
+            "proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes",
+            "GENE_OR_PROTEIN",
+            "Source-limited for UniProtKB protein_examples: PMID:21326352",
+        ),
+        "fungus_garden_fungus_gallery": (
+            "leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins",
+            "GENE_OR_PROTEIN",
+            "UPI000181409B",
+        ),
+        "accessory_nidamental_gland_ang": (
+            "leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways",
+            "GENE_OR_PROTEIN",
+            "UPI0008034E33",
+        ),
+        "anaerobic_digester_sludge": (
+            "syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways",
+            "GENE_OR_PROTEIN",
+            "Source-limited for UniProtKB protein_examples: PMID:42954465",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
 
