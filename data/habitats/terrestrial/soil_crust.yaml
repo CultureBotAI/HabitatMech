@@ -20,6 +20,153 @@ source_attestations:
   assertion_count: 26
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism
+  title: Biological soil crust Microcoleus vaginatus EPS habitat filtering, desiccation-resuscitation
+    transcriptional response, and uc/ah-mediated cyanosphere urea-nitrogen mutualism
+    mechanism
+  description: Arid and polar biological soil crusts (biocrusts) experience recurrent
+    desiccation-hydration cycles, high irradiance, and nitrogen limitation on unconsolidated
+    soil surfaces, selecting for the pioneer filamentous cyanobacterium Microcoleus
+    vaginatus (such as M. vaginatus PCC 9802 and CM01) and heterotrophic diazotrophs
+    (such as Massilia sp. METH4) in its cyanosphere. During wetting and drying cycles,
+    M. vaginatus coordinates DNA repair, photosynthesis recovery, oxidative/osmotic
+    stress responses, and exopolysaccharide (EPS) synthesis, while overexpressing
+    urea uptake and the high-affinity urea carboxylase/allophanate hydrolase (uc/ah)
+    system in response to urea secreted by cyanosphere diazotrophs, driving mutualistic
+    C-for-N exchange, deterministic bacterial network assembly, and arid topsoil stabilization.
+  nodes:
+  - node_id: soil_crust
+    label: soil crust
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.b1b5044bde
+    description: Consolidated surface soil layer (including biological and physical
+      soil crusts) in arid, semi-arid, and polar lands where cyanobacterial biological
+      soil crusts (biocrusts) form the primary microbially mediated crust community.
+  - node_id: dryland_desiccation_rewetting_cycles_and_soil_nitrogen_limitation
+    label: desert topsoil desiccation-hydration cycles and microscale cyanosphere
+      urea-nitrogen limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Infrequent precipitation and rapid desiccation cycles coupled with
+      nitrogen scarcity and micromolar urea hotspots on arid soil surfaces.
+  - node_id: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
+    label: pioneer Microcoleus vaginatus and cyanosphere heterotrophic diazotroph
+      (Massilia) mutualist guild
+    node_type: COMMUNITY
+    description: Biocrust architect cyanobacterium Microcoleus vaginatus (including
+      strains PCC 9802 and CM01) and partner heterotrophic diazotrophs (including
+      Massilia sp. METH4) in its cyanosphere.
+  - node_id: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
+    label: Microcoleus vaginatus urea carboxylase/allophanate hydrolase (uc/ah), EPS
+      synthesis, and desiccation-hydration stress/repair genes
+    node_type: GENE_OR_PROTEIN
+    description: High-affinity urea uptake and urea carboxylase/allophanate hydrolase
+      (uc/ah) genes in Microcoleus vaginatus PCC 9802, urea biosynthesis genes in
+      cyanosphere mutualist Massilia sp. METH4, and M. vaginatus genes for exopolysaccharide
+      (EPS) production, DNA repair, oxidative/photo-oxidative and osmotic stress response,
+      and C/N storage polymers.
+  - node_id: eps_habitat_filtering_urea_cn_mutualism_and_topsoil_stabilization
+    label: EPS-mediated habitat filtering, urea-based C/N mutualism, and desert topsoil
+      stabilization
+    node_type: COMMUNITY_PROCESS
+    description: Chemotactic microscale urea N transfer from cyanosphere diazotrophs
+      to Microcoleus vaginatus, rapid photosynthetic resuscitation upon wetting, and
+      EPS-driven deterministic bacterial community assembly and soil erosion resistance.
+  edges:
+  - edge_id: soil_crust_experiences_dryland_desiccation_rewetting_and_n_limitation
+    subject: soil_crust
+    predicate: maintains
+    object: dryland_desiccation_rewetting_cycles_and_soil_nitrogen_limitation
+    description: Biological soil crusts develop on light-exposed arid soil surfaces
+      subject to desiccation cycles, infrequent precipitation, and nitrogen limitation.
+    evidence:
+    - reference: PMID:23739051
+      snippet: Biological soil crusts (BSCs) cover extensive portions of the earth's
+        deserts. In order to survive desiccation cycles and utilize short periods
+        of activity during infrequent precipitation, crust microorganisms must rely
+        on the unique capabilities of vegetative cells to enter a dormant state and
+        be poised for rapid resuscitation upon wetting.
+      notes: Rajeev et al. 2013 (PMID:23739051) characterized the desiccation-dormancy
+        and precipitation-resuscitation regime of desert biological soil crusts.
+  - edge_id: dryland_edaphic_stresses_select_for_microcoleus_vaginatus_and_cyanosphere_diazotrophs
+    subject: dryland_desiccation_rewetting_cycles_and_soil_nitrogen_limitation
+    predicate: selects for
+    object: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
+    description: Arid soil surfaces and C/N limitation select for the pioneer cyanobacterium
+      Microcoleus vaginatus and chemotactically associated heterotrophic diazotrophs
+      in its cyanosphere.
+    evidence:
+    - reference: PMID:42460988
+      snippet: The filamentous cyanobacterium Microcoleus vaginatus is a pioneer soil
+        colonizer and the most important microorganism for the formation of cyanobacterial
+        biological soil crusts (or biocrusts), biofilm-like communities developing
+        on soil surfaces exposed to light that become prominent in arid and polar
+        lands.
+      notes: Microcoleus vaginatus is the primary pioneer colonizer and architect
+        of cyanobacterial biological soil crusts across arid and polar lands (PMID:42460988).
+    - reference: PMID:39673195
+      snippet: Foundational to the establishment and recovery of biocrusts is a mutualistic
+        exchange of carbon for nitrogen between pioneer cyanobacteria, including the
+        widespread Microcoleus vaginatus, and heterotrophic diazotrophs in its "cyanosphere".
+      notes: Biocrust establishment relies on the mutualism between pioneer Microcoleus
+        vaginatus and heterotrophic diazotrophs in its cyanosphere (PMID:39673195).
+  - edge_id: biocrust_guild_expresses_uc_ah_urea_carboxylase_eps_and_desiccation_stress_genes
+    subject: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
+    predicate: expresses
+    object: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
+    description: Microcoleus vaginatus expresses DNA repair, oxidative/osmotic stress,
+      and exopolysaccharide synthesis genes across hydration-dehydration cycles and
+      overexpresses urea uptake and urea carboxylase/allophanate hydrolase (uc/ah)
+      during co-culture with Massilia sp. METH4.
+    evidence:
+    - reference: PMID:39673195
+      snippet: We show that representative mutualist M. vaginatus PCC 9802 possesses
+        genes for urea uptake, two ureolytic systems, and the urea cycle, overexpressing
+        only uptake and the rare urea carboxylase/allophanate hydrolase (uc/ah) when
+        in co-culture with mutualist Massilia sp. METH4. In turn, it overexpresses
+        urea biosynthesis, but neither urease nor urea uptake when in co-culture.
+      notes: Microcoleus vaginatus PCC 9802 overexpresses urea uptake and urea carboxylase/allophanate
+        hydrolase (uc/ah) while Massilia sp. METH4 overexpresses urea biosynthesis
+        in mutualistic co-culture (PMID:39673195).
+    - reference: PMID:23739051
+      snippet: Onset of desiccation was characterized by the induction of genes for
+        oxidative and photo-oxidative stress responses, osmotic stress response and
+        the synthesis of C and N storage polymers. Early expression of genes for the
+        production of exopolysaccharides, additional storage molecules and genes for
+        membrane unsaturation occurred before drying and hints at preparedness for
+        desiccation.
+      notes: Whole-genome in situ transcriptomics of Microcoleus vaginatus in desert
+        biocrusts showed regulated induction of exopolysaccharide, stress-response,
+        and C/N storage polymer genes (PMID:23739051).
+  - edge_id: eps_and_uc_ah_urea_systems_drive_habitat_filtering_and_interspecies_n_transfer
+    subject: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
+    predicate: catalyzes
+    object: eps_habitat_filtering_urea_cn_mutualism_and_topsoil_stabilization
+    description: EPS secretion by Microcoleus vaginatus and uc/ah-mediated urea assimilation
+      drive interspecies nitrogen transfer, deterministic enrichment of nitrogen-fixing
+      and cyanobacterial guilds, and organic matter accumulation in biological soil
+      crusts.
+    evidence:
+    - reference: PMID:41900302
+      snippet: 'Inoculation with M. vaginatus CM01 (SM, SMB) superiorly promoted Cyano-BSCs
+        development: the SM group achieved the highest coverage (23.33%), while the
+        SMB group showed marked increases in organic matter (OM, 4.10 g·kg-1) and
+        chlorophyll a (Chla, 13.40 μg·g-1), alongside a >5-fold rise in bacterial,
+        cyanobacterial, and nitrogen-fixation gene abundances versus controls. The
+        mechanism centers on extracellular polymeric substances (EPS) secreted by
+        M. vaginatus, which homogenized the microenvironment, suppressed stochastic
+        bacterial dispersal (NCM, SM: R2 = 0.698), and enhanced deterministic selection.'
+      notes: EPS secreted by Microcoleus vaginatus CM01 drives deterministic bacterial
+        assembly and a >5-fold increase in nitrogen-fixation gene abundance in developing
+        cyanobacterial biocrusts (PMID:41900302).
+    - reference: PMID:39673195
+      snippet: The coordinated gene co-regulation, physiology of cultured mutualists,
+        distribution of urea pools in nature, and responses of native microbial populations,
+        all suggest that low-concentration urea is likely the main vehicle for interspecies
+        N transfer, helping attain partner specificity, for which the rare high-affinity
+        uc/ah system of Microcoleus vaginatus is likely central.
+      notes: The high-affinity uc/ah system of Microcoleus vaginatus mediates partner-specific
+        urea nitrogen transfer in natural biocrusts (PMID:39673195).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -46,3 +193,10 @@ curation_history:
     mint under ENVO:00001998 (soil) with ENVO:01000910 recorded as a related xref
     (PMID 35411705; DOI:10.1111/brv.12862; PMID 31144322; DOI:10.1186/s40168-019-0695-0).
     Path: Environmental > Terrestrial > Soil > Soil crust'
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism
+    mechanism graph for soil_crust (habitatmech:GOLD.b1b5044bde) backed by PMID:23739051,
+    PMID:39673195, PMID:41900302, and PMID:42460988.
+  llm_assisted: true

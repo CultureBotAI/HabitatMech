@@ -16,6 +16,147 @@ source_attestations:
   source_path: Environmental > Terrestrial > Soil > Glacier > Glacier forefield
   assertion_count: 2
   assertion_unit: ORGANISM
+causal_graphs:
+- graph_id: glacier_forefield_chronosequence_nifh_cluster_i_iii_diazotrophy_and_asynchronous_cn_accumulation
+  title: Glacier forefield deglaciation chronosequence nifH Cluster I/III diazotrophy,
+    Methylocystis atmospheric C/N retrieval, and asynchronous C/N accumulation mechanism
+  description: Newly deglaciated glacier forefield soils experience extreme climatic
+    fluctuations and severe carbon and nitrogen limitation across primary succession
+    chronosequences. These oligotrophic mineral conditions select for diverse free-living
+    and plant-symbiotic diazotrophs across Cyanobacteria, Alphaproteobacteria, Betaproteobacteria,
+    and Firmicutes (including Nostoc, Geobacter, Polaromonas, Frankia, and methanotrophic
+    Methylocystis spp. capable of retrieving both nitrogen and carbon from the atmospheric
+    pool). These forefield consortia encode Cluster I and Cluster III nitrogenase
+    (nifH), nitrite reductase (nirS), and carbon/sulfur/iron metabolic genes, catalyzing
+    pioneer biological N2 fixation that builds labile nitrogen stocks, facilitates
+    plant colonization, and drives asynchronous soil carbon and nitrogen accumulation
+    along the deglaciation chronosequence.
+  nodes:
+  - node_id: glacier_forefield
+    label: glacier forefield environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.fa0932d6fe
+    description: Proglacial terrain recently exposed by glacier retreat, forming a
+      primary succession chronosequence from bare oligotrophic mineral till to vegetated
+      soils.
+  - node_id: oligotrophic_deglaciated_mineral_soil_and_fluctuating_microclimate
+    label: C/N-depleted deglaciated mineral soil and fluctuating microclimatic regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Strong carbon and nitrogen limitation, shifting soil C/N ratios and
+      pH, and fluctuating temperature and nutritional regimes in young glacier forefield
+      soils.
+  - node_id: proglacial_nostoc_geobacter_polaromonas_frankia_and_methylocystis_diazotroph_guild
+    label: proglacial Nostoc, Geobacter, Polaromonas, Frankia, and Methylocystis diazotrophic
+      guild
+    node_type: COMMUNITY
+    description: Free-living, methanotrophic, and root-associated diazotrophic bacterial
+      community across glacier forefields including Nostoc, Geobacter, Polaromonas,
+      Frankia, and Methylocystis.
+  - node_id: proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes
+    label: Cluster I/III nitrogenase (nifH), nitrite reductase (nirS), and chronosequence
+      C/S/Fe metabolic genes
+    node_type: GENE_OR_PROTEIN
+    description: Nitrogenase genes (nif, including nifH Cluster I and III), nitrite
+      reductase (nirS), and metagenomic functional genes for glycogen, cellulosome,
+      iron acquisition, xylose, lactate, and sulfur metabolism across glacier forefield
+      chronosequences.
+  - node_id: pioneer_biological_n2_fixation_plant_colonization_and_asynchronous_cn_accumulation
+    label: pioneer biological N2 fixation, labile N stock accumulation, and plant
+      colonization facilitation
+    node_type: COMMUNITY_PROCESS
+    description: Retrieval of atmospheric N2 and carbon by forefield diazotrophs and
+      methanotrophs to build labile soil nitrogen stocks, support higher plant colonization,
+      and drive chronosequence C and N accumulation.
+  edges:
+  - edge_id: glacier_forefield_presents_oligotrophic_mineral_soil_and_fluctuating_microclimate
+    subject: glacier_forefield
+    predicate: maintains
+    object: oligotrophic_deglaciated_mineral_soil_and_fluctuating_microclimate
+    description: Glacier forefield environments expose young mineral soils subject
+      to extreme climatic fluctuations, strong carbon and nitrogen limitation, and
+      shifting soil C/N ratios and pH.
+    evidence:
+    - reference: PMID:21326352
+      snippet: Glacier forefield environments are exposed to extreme and fluctuating
+        climatic and nutritional conditions. The high diversity of free-living diazotrophic
+        communities found in these environments indicates that nitrogen fixers are
+        able to efficiently cope with such conditions.
+      notes: Duc et al. 2011 (PMID:21326352) documented the extreme climatic and nutritional
+        conditions and strong carbon limitation in young glacier forefield soils.
+  - edge_id: deglaciated_mineral_soil_selects_for_forefield_diazotrophs_and_methylocystis
+    subject: oligotrophic_deglaciated_mineral_soil_and_fluctuating_microclimate
+    predicate: selects for
+    object: proglacial_nostoc_geobacter_polaromonas_frankia_and_methylocystis_diazotroph_guild
+    description: Oligotrophic glacier forefield conditions select for Nostoc, Geobacter,
+      Polaromonas, Frankia, and atmospheric-C/N-retrieving Methylocystis diazotrophs.
+    evidence:
+    - reference: PMID:29901729
+      snippet: Key organisms identified across the forefields included Nostoc, Geobacter,
+        Polaromonas and Frankia. Nitrogen fixers that are symbiotic with plants were
+        also identified, through the presence of root associated diazotrophs, which
+        fix nitrogen in return for reduced carbon.
+      notes: Metagenomic profiling across four Arctic glacier forefields identified
+        Nostoc, Geobacter, Polaromonas, and Frankia as key forefield diazotrophs (PMID:29901729).
+    - reference: PMID:21326352
+      snippet: Phylotypes related to the genus Methylocystis strongly responded to
+        environmental variations. These methanotrophic microorganisms, which are able
+        to retrieve nitrogen and carbon from the atmospheric pool, are particularly
+        adapted to the extreme nutritional conditions found in glacier forefields.
+      notes: Methanotrophic diazotrophs of the genus Methylocystis are selected by
+        the extreme C/N limitation of young glacier forefields (PMID:21326352).
+  - edge_id: proglacial_guild_harbors_nifh_cluster_i_iii_nirs_and_c_s_fe_metabolic_genes
+    subject: proglacial_nostoc_geobacter_polaromonas_frankia_and_methylocystis_diazotroph_guild
+    predicate: expresses
+    object: proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes
+    description: Glacier forefield microbial communities harbor Cluster I and III
+      nifH and nirS genes alongside chronosequence-structured glycogen, cellulosome,
+      iron, xylose, lactate, and sulfur metabolism genes.
+    evidence:
+    - reference: PMID:29901729
+      snippet: In total, 70 soil metagenomes were used for taxonomic interpretation
+        based on 185 nitrogenase (nif) sequences, extracted from assembled contigs.
+        The low number of recovered genes highlights the need for deeper sequencing
+        in some diverse samples, to uncover the complete microbial populations. A
+        key group of forefield diazotrophs, found throughout the forefields, was identified
+        using a nifH phylogeny, associated with nifH Cluster I and III.
+      notes: Assembled metagenomic contigs across four Arctic glacier forefields encode
+        nifH Cluster I and Cluster III nitrogenase genes (PMID:29901729).
+    - reference: PMID:37245808
+      snippet: The alpha diversity indices of soil bacteria, protozoa and nifH genes
+        showed an upward trend with increased soil ages, and the beta diversity of
+        soil archaea, bacteria, fungi, protozoa, nifH and nirS genes were significantly
+        correlated with soil ages, in which increasing soil C and P while decreased
+        C/N and pH significantly contributed to the differences of soil microbial
+        communities among the analyzed environmental variables. The metagenomic functional
+        genes related to the metabolisms of Glycogen and Cellulosome, Iron Acquisition
+        and Metabolism were significantly decreased with chronosequence, while the
+        utilization of Xylose and Lactate, Potassium Metabolism, Sulfur Metabolism
+        showing an upward trend with soil ages, in which soil C/N ratios and pH were
+        the most influential factors.
+      notes: Along the 120-year Hailuogou Glacier forefield chronosequence, nifH and
+        nirS gene diversity and C/S/Fe metabolic functional profiles track soil age,
+        C/N ratio, and pH (PMID:37245808).
+  - edge_id: nifh_and_chronosequence_metabolic_genes_drive_n2_fixation_and_asynchronous_cn_accumulation
+    subject: proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes
+    predicate: catalyzes
+    object: pioneer_biological_n2_fixation_plant_colonization_and_asynchronous_cn_accumulation
+    description: Microbial nitrogenase and carbon-metabolic pathways build labile
+      nitrogen stocks, facilitate plant colonization, and drive asynchronous C and
+      N accumulation during post-glacial soil development.
+    evidence:
+    - reference: PMID:29901729
+      snippet: Microbial nitrogen fixation is crucial for building labile nitrogen
+        stocks and facilitating higher plant colonisation in oligotrophic glacier
+        forefield soils.
+      notes: Diazotrophic nitrogen fixation builds labile N stocks required for plant
+        colonization in glacier forefield soils (PMID:29901729).
+    - reference: PMID:37245808
+      snippet: Our results indicate that glacier retreat may lead to the asynchronous
+        C and N accumulation along the chronosequence, thereby affecting the metagenomic
+        and metabolomic functioning of soil microbial communities related to C metabolisms
+        during soil development following glacier retreat.
+      notes: Post-glacial microbial succession drives asynchronous C and N accumulation
+        and metabolomic complexity along the glacier forefield chronosequence (PMID:37245808).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -51,3 +192,10 @@ curation_history:
     context-dependent, ambiguous, or names a host/disease/process rather than the
     defined habitat 'glacier forefield soil'; suppress automatic exact-synonym retention
     while preserving verbatim source provenance.
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added glacier_forefield_chronosequence_nifh_cluster_i_iii_diazotrophy_and_asynchronous_cn_accumulation
+    mechanism graph for glacier_forefield (habitatmech:GOLD.fa0932d6fe) backed by
+    PMID:21326352, PMID:29901729, and PMID:37245808.
+  llm_assisted: true
