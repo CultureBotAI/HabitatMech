@@ -191,16 +191,16 @@ causal_graphs:
 - graph_id: coral_reef_holobiont_dmsp_dddd_lyase_and_pseudovibrio_tda_defense
   title: Coral reef holobiont DMSP release, Endozoicomonas/Roseobacter DddD/DddL lyase
     cleavage, and Pseudovibrio tropodithietic acid pathogen defense mechanism
-  description: Reef-building scleractinian corals and their endosymbiotic dinoflagellates
-    produce high concentrations of dimethylsulfoniopropionate (DMSP) across coral
-    tissue, skeleton, and mucus, structuring coral-associated bacterial communities
-    dominated by Endozoicomonas, Roseobacter, Pseudovibrio, Spongiobacter, and Vibrio.
-    Coral-associated Endozoicomonas, Roseobacter, and skeletal microbiomes express
-    DMSP cleavage and synthesis genes including dddD, dddL, and dsyB to convert DMSP
-    into climate-active dimethyl sulfide (DMS) and acrylic acid for thermal stress
-    mitigation, while coral-associated Pseudovibrio sp. P12 catabolizes DMSP via TDA
-    biosynthetic homologs to produce the antimicrobial tropodithietic acid (TDA),
-    inhibiting invasive coral pathogens Vibrio coralliilyticus and Vibrio owensii.
+  description: Reef-building scleractinian corals produce high concentrations of dimethylsulfoniopropionate
+    (DMSP) across coral tissue, skeleton, and mucus, structuring coral-associated
+    bacterial communities dominated by Endozoicomonas, Roseobacter, Pseudovibrio,
+    Spongiobacter, and Vibrio. Coral-associated Endozoicomonas, Roseobacter, and skeletal
+    microbiomes express DMSP cleavage and synthesis genes including dddD, dddL, and
+    dsyB to convert DMSP into climate-active dimethyl sulfide (DMS) and acrylic acid
+    for thermal stress mitigation, while coral-associated Pseudovibrio sp. P12 catabolizes
+    DMSP via TDA biosynthetic homologs to produce the antimicrobial tropodithietic
+    acid (TDA), inhibiting invasive coral pathogens Vibrio coralliilyticus and Vibrio
+    owensii.
   nodes:
   - node_id: coral_reef
     label: coral reef
@@ -215,7 +215,7 @@ causal_graphs:
     description: High concentrations of the organic sulfur compounds dimethylsulfoniopropionate
       (DMSP), dimethyl sulfide (DMS), and acrylic acid in scleractinian coral tissues,
       mucus, and skeletons.
-  - node_id: coral_endozoicomonas_pseudovibrio_and_ruegeria_symbiont_guild
+  - node_id: coral_endozoicomonas_roseobacter_and_pseudovibrio_symbiont_guild
     label: coral-associated Endozoicomonas, Roseobacter, and Pseudovibrio DMSP-metabolizing
       bacterial guild
     node_type: COMMUNITY
@@ -259,10 +259,10 @@ causal_graphs:
         corals and playing a role in structuring their bacterial communities.
       notes: Reef-building corals produce high concentrations of DMSP that structure
         coral-associated bacterial communities (PMID:27602265).
-  - edge_id: coral_dmsp_selects_for_endozoicomonas_pseudovibrio_and_ruegeria_guild
+  - edge_id: coral_dmsp_selects_for_endozoicomonas_roseobacter_and_pseudovibrio_guild
     subject: coral_holobiont_mucus_and_skeletal_dmsp_gradient
     predicate: selects for
-    object: coral_endozoicomonas_pseudovibrio_and_ruegeria_symbiont_guild
+    object: coral_endozoicomonas_roseobacter_and_pseudovibrio_symbiont_guild
     description: Coral-derived DMSP selects for DMSP-metabolizing bacterial symbionts
       including Endozoicomonas, Roseobacter, Spongiobacter, and Pseudovibrio across
       coral mucus, tissue, and skeleton.
@@ -283,7 +283,7 @@ causal_graphs:
       notes: DMSP degradation genes support global colonization of reef-building corals
         by Endozoicomonas (PMID:37992165).
   - edge_id: coral_symbiont_guild_expresses_dddd_dsyb_and_tda_biosynthetic_genes
-    subject: coral_endozoicomonas_pseudovibrio_and_ruegeria_symbiont_guild
+    subject: coral_endozoicomonas_roseobacter_and_pseudovibrio_symbiont_guild
     predicate: expresses
     object: endozoicomonas_dddd_dmsp_lyase_dsyb_and_pseudovibrio_tda_gene_clusters
     description: Coral-associated Endozoicomonas, mucus/tissue isolates, skeletal

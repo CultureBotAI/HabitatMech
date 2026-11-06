@@ -52,7 +52,8 @@ causal_graphs:
     predicate: maintains
     object: anoxic_saccharide_and_vfa_overload_sludge_matrix
     description: Anaerobic digester sludge maintains anoxic conditions with continuous or fluctuating
-      organic loading of saccharides and volatile fatty acids (butyrate, propionate, acetate).
+      organic loading of saccharides (starch, glucose) and volatile fatty acids (butyrate, propionate,
+      valerate, acetate) under managed solids retention times.
     evidence:
     - reference: PMID:41654532
       snippet: Anaerobic digesters are typically operated at solids retention times (SRTs) of 20 d or
@@ -60,6 +61,11 @@ causal_graphs:
         the retention of slow-growing methanogens.
       notes: Anaerobic digesters treating wastewater sludge operate under managed SRTs to buffer organic
         loading rate spikes and volatile fatty acid accumulation (PMID:41654532).
+    - reference: PMID:42954465
+      snippet: 'This study employed genome-centric metagenomics to investigate synthetic AD systems fed
+        with five substrates: starch, glucose, butyrate, propionate-valerate, and acetate.'
+      notes: Anaerobic digestion systems process primary saccharides (starch, glucose) and intermediate
+        volatile fatty acids (butyrate, propionate-valerate, acetate) (PMID:42954465).
   - edge_id: saccharide_and_vfa_substrates_select_for_syntrophs_and_methanothrix_guild
     subject: anoxic_saccharide_and_vfa_overload_sludge_matrix
     predicate: selects for
@@ -116,13 +122,20 @@ causal_graphs:
       notes: Enhanced syntrophic propionate and acetate oxidation and Methanothrix methanogenesis increase
         methanogenic VFA degradation rates by 124-226% (propionate) and 23-43% (acetate) (PMID:41242256).
     - reference: PMID:41654532
+      snippet: Dual pulse disturbances led to faster process recovery compared to digesters receiving
+        a single pulse disturbance (60 d vs. 104 d) with VFAs during the ensuing press disturbance period
+        stabilizing at an average of 308 mg COD/L (acetate) and 227 mg COD/L (propionate), and biogas
+        methane content reaching an average of 66% within 60 d after the onset of the press disturbance.
+      notes: Process recovery in mesophilic anaerobic digesters stabilizes acetate (308 mg COD/L) and
+        propionate (227 mg COD/L) and restores ~66% biogas methane content (PMID:41654532).
+    - reference: PMID:41654532
       snippet: Changes in the relative abundance of taxa that proliferated under stable conditions, namely,
         the K-strategists Cloacimonadaceae W5, Syntrophomonas spp. and Methanosaeta spp., and the stress
         tolerant r-strategists Sedimentibacter spp., Christensenellaceae R-7-group, Saccharofermentans
         spp. and Methanosarcina spp., corresponded with minimal disruptions in process performance during
         periods of instability.
       notes: Complementary dynamics of Syntrophomonas, Methanosaeta (Methanothrix), and Methanosarcina
-        stabilize acetate/propionate levels and maintain ~66% biogas methane content (PMID:41654532).
+        correspond with minimal disruptions in digester performance during periods of instability (PMID:41654532).
 curation_history:
 - timestamp: '2026-11-06T06:30:00Z'
   curator: antigravity-claude-opus-4-6

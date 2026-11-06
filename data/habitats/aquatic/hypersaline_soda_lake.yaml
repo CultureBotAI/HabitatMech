@@ -24,7 +24,7 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 causal_graphs:
-- graph_id: hypersaline_soda_lake_haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_pmoa_cycling
+- graph_id: hypersaline_soda_lake_thioalkalivibrio_halorhodospira_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_cycling
   title: Hypersaline soda lake carbonate-alkaline brine selection and Thioalkalivibrio-Halorhodospira
     fcc/sox/soe/hdr/dsr sulfur oxidation and cbbL/cbbM RuBisCO carbon fixation mechanism
   description: Hypersaline soda lakes (such as Kulunda Steppe, Wadi Natrun, and Kenyan
@@ -46,20 +46,20 @@ causal_graphs:
     description: Saline alkaline lake characterized by high dissolved sodium carbonate/bicarbonate
       concentrations (pH > 9), moderate to extremely high salinity, and active sulfur
       and carbon biogeochemical cycles.
-  - node_id: carbonate_alkaline_salinity_and_reduced_sulfur_methane_gradient
+  - node_id: carbonate_alkaline_salinity_and_reduced_sulfur_gradient
     label: high-pH sodium carbonate/bicarbonate brine and sulfide/thiosulfate gradient
     node_type: ENVIRONMENTAL_FACTOR
     description: High sodium carbonate/bicarbonate alkalinity (pH 8.0-10.5, stable
       >9), high Na+ molarity, and reduced sulfur substrates (sulfide, thiosulfate,
       elemental sulfur) in soda lake waters and sediments.
-  - node_id: haloalkaliphilic_thioalkalivibrio_halorhodospira_halomonas_methylomicrobium_guild
+  - node_id: haloalkaliphilic_thioalkalivibrio_and_halorhodospira_ectothiorhodospiraceae_guild
     label: haloalkaliphilic Thioalkalivibrio and Halorhodospira sulfur-oxidizing Ectothiorhodospiraceae
       guild
     node_type: COMMUNITY
     description: Extremely haloalkaliphilic sulfur-oxidizing Gammaproteobacteria dominated
       by obligately chemolithoautotrophic Thioalkalivibrio (including Thioalkalivibrio
       sulfidiphilus) and phototrophic Halorhodospira.
-  - node_id: haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_and_pmoa_enzymes
+  - node_id: haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes
     label: flavocytochrome c (fcc), truncated Sox system, sulfite:quinone oxidoreductase
       (soe), Hdr/rDsr, and RuBisCO (cbbL, cbbM)
     node_type: GENE_OR_PROTEIN
@@ -67,7 +67,7 @@ causal_graphs:
       truncated Sox system, sulfite:quinone oxidoreductase (soe), heterodisulfide
       reductase (hdr), and dissimilatory sulfite reductase (dsr) — together with Calvin-Benson
       cycle form I and form II RuBisCO (cbbL, cbbM) and rTCA ATP citrate lyase (aclB).
-  - node_id: alkaline_chemolithoautotrophic_carbon_fixation_sulfur_oxidation_and_methanotrophy
+  - node_id: haloalkaline_chemolithoautotrophic_sulfur_oxidation_and_co2_assimilation
     label: haloalkaline chemolithoautotrophic and phototrophic sulfide/thiosulfate
       oxidation and CO2 assimilation
     node_type: COMMUNITY_PROCESS
@@ -75,10 +75,10 @@ causal_graphs:
       at pH 8.0-10.5 coupled to autotrophic CO2 fixation via the Calvin-Benson cycle
       in hypersaline soda lakes.
   edges:
-  - edge_id: hypersaline_soda_lake_maintains_carbonate_alkalinity_and_reduced_sulfur_methane
+  - edge_id: hypersaline_soda_lake_maintains_carbonate_alkalinity_and_reduced_sulfur_gradient
     subject: hypersaline_soda_lake
     predicate: maintains
-    object: carbonate_alkaline_salinity_and_reduced_sulfur_methane_gradient
+    object: carbonate_alkaline_salinity_and_reduced_sulfur_gradient
     description: Soda lakes maintain high sodium carbonate/bicarbonate alkalinity
       (pH > 9) and elevated salinity that support active sulfur cycling.
     evidence:
@@ -90,10 +90,10 @@ causal_graphs:
         communities provides a driving force for highly active biogeochemical cycles.
       notes: Berben et al. 2019 (PMID:30837958) characterized the high sodium carbonate/bicarbonate
         alkalinity (pH > 9) and salinity of soda lakes.
-  - edge_id: carbonate_brine_and_sulfur_methane_gradients_select_for_haloalkaliphilic_guild
-    subject: carbonate_alkaline_salinity_and_reduced_sulfur_methane_gradient
+  - edge_id: carbonate_brine_and_reduced_sulfur_select_for_thioalkalivibrio_halorhodospira_guild
+    subject: carbonate_alkaline_salinity_and_reduced_sulfur_gradient
     predicate: selects for
-    object: haloalkaliphilic_thioalkalivibrio_halorhodospira_halomonas_methylomicrobium_guild
+    object: haloalkaliphilic_thioalkalivibrio_and_halorhodospira_ectothiorhodospiraceae_guild
     description: High carbonate alkalinity, salinity, and reduced sulfur in hypersaline
       soda lakes select for chemolithoautotrophic Thioalkalivibrio and phototrophic
       Halorhodospira.
@@ -111,10 +111,10 @@ causal_graphs:
         i.e. the chemolithotrophic Thioalkalivibrio and the phototrophic Halorhodospira.
       notes: Hypersaline soda lake sediments from the Kulunda Steppe and Wadi Natrun
         are dominated by Thioalkalivibrio and Halorhodospira (PMID:21073490).
-  - edge_id: haloalkaliphilic_guild_expresses_cbbl_cbbm_soxb_apra_nifh_and_pmoa
-    subject: haloalkaliphilic_thioalkalivibrio_halorhodospira_halomonas_methylomicrobium_guild
+  - edge_id: thioalkalivibrio_halorhodospira_guild_expresses_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm
+    subject: haloalkaliphilic_thioalkalivibrio_and_halorhodospira_ectothiorhodospiraceae_guild
     predicate: expresses
-    object: haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_and_pmoa_enzymes
+    object: haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes
     description: Soda lake Thioalkalivibrio and Ectothiorhodospiraceae encode flavocytochrome
       c (fcc), the truncated Sox system, sulfite:quinone oxidoreductase (soe), heterodisulfide
       reductase (hdr), reverse Dsr (dsr), and form I and II RuBisCO (cbbL, cbbM).
@@ -140,10 +140,10 @@ causal_graphs:
         and with a much lower diversity.
       notes: Soda lake sediment communities harbor cbbL (RuBisCO form I), cbbM (RuBisCO
         form II), and aclB (PMID:21073490).
-  - edge_id: rubisco_sox_apr_nif_and_pmo_enzymes_drive_soda_lake_biogeochemical_cycling
-    subject: haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_and_pmoa_enzymes
+  - edge_id: fcc_sox_soe_hdr_dsr_and_rubisco_enzymes_drive_haloalkaline_sulfur_and_carbon_cycling
+    subject: haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes
     predicate: catalyzes
-    object: alkaline_chemolithoautotrophic_carbon_fixation_sulfur_oxidation_and_methanotrophy
+    object: haloalkaline_chemolithoautotrophic_sulfur_oxidation_and_co2_assimilation
     description: Reverse Dsr, truncated Sox, Fcc/Soe/Hdr, and type I RuBisCO enzymes
       catalyze chemolithoautotrophic growth with sulfide and thiosulfate coupled to
       CO2 assimilation at pH 8.0-10.5.
@@ -184,7 +184,7 @@ curation_history:
 - timestamp: '2026-11-06T06:30:00Z'
   curator: antigravity-claude-opus-4-6
   action: ADD_CAUSAL_GRAPH
-  changes: Added hypersaline_soda_lake_haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_pmoa_cycling
+  changes: Added hypersaline_soda_lake_thioalkalivibrio_halorhodospira_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_cycling
     mechanism graph for hypersaline_soda_lake (habitatmech:GOLD.3098ee8fe8) backed
     by PMID:21073490, PMID:21984678, and PMID:30837958.
   llm_assisted: true

@@ -1,6 +1,6 @@
 identifier: habitatmech:GOLD.98c192f558
 causal_graphs:
-- graph_id: fungus_garden_enterobacteriaceae_nifh_diazotrophy_and_lignocellulolytic_thiamine_symbiosis
+- graph_id: fungus_garden_leucoagaricus_lac1lg_cellulase_and_enterobacteriaceae_n2_fixation_symbiosis
   title: Leaf-cutter ant fungus garden Leucoagaricus gongylophorus cellulase/laccase Lac1Lg and Enterobacteriaceae
     diazotrophic/glycosyl-hydrolase symbiosis mechanism
   description: Leaf-cutter ants (Atta and Acromyrmex spp.) cultivate subterranean fungus gardens using
@@ -19,7 +19,7 @@ causal_graphs:
     description: Subterranean or arboreal fungus garden and gallery matrix built by fungus-growing insects
       (such as Atta and Acromyrmex leaf-cutter ants) from fresh foliar plant forage colonized by a fungal
       cultivar and bacterial symbionts.
-  - node_id: foliar_lignocellulose_pectin_substrate_and_nitrogen_thiamine_deficit
+  - node_id: fresh_nitrogen_poor_foliar_lignocellulose_forage_and_garden_matrix
     label: fresh nitrogen-poor foliar lignocellulose forage and fungal garden matrix
     node_type: ENVIRONMENTAL_FACTOR
     description: Large inputs of fresh foliar plant biomass composed of recalcitrant lignocellulosic polymers
@@ -31,14 +31,14 @@ causal_graphs:
     description: Specialized fungus-bacteria community composed of the basidiomycetous fungal cultivar
       Leucoagaricus gongylophorus and abundant N2-fixing and lignocellulolytic Enterobacteriaceae (Enterobacter,
       Pantoea, Klebsiella, Citrobacter, Escherichia).
-  - node_id: enterobacterial_nifh_nitrogenase_glycoside_hydrolases_pectinases_and_thiamine_enzymes
+  - node_id: leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins
     label: Leucoagaricus gongylophorus cellulases and yellow laccase Lac1Lg, bacterial glycosyl hydrolases,
       and N2-fixation/biosynthetic proteins
     node_type: GENE_OR_PROTEIN
     description: Stage-specific fungal cellulases and the monomeric yellow laccase Lac1Lg produced by
       Leucoagaricus gongylophorus alongside bacterial glycosyl hydrolases, lignocellulose-degrading genes,
       B-vitamin/amino acid biosynthetic proteins, and symbiotic nitrogenase in fungus-garden bacteria.
-  - node_id: garden_n2_fixation_cooperative_plant_biomass_degradation_and_vitamin_b1_provisioning
+  - node_id: symbiotic_n2_fixation_lignocellulose_degradation_and_b_vitamin_amino_acid_provisioning
     label: symbiotic N2 fixation into ant biomass, recalcitrant plant polymer degradation, and B-vitamin/amino
       acid provisioning
     node_type: COMMUNITY_PROCESS
@@ -49,7 +49,7 @@ causal_graphs:
   - edge_id: fungus_garden_maintains_foliar_polysaccharide_matrix_and_nutrient_deficits
     subject: fungus_garden_fungus_gallery
     predicate: maintains
-    object: foliar_lignocellulose_pectin_substrate_and_nitrogen_thiamine_deficit
+    object: fresh_nitrogen_poor_foliar_lignocellulose_forage_and_garden_matrix
     description: Leaf-cutter ant fungus gardens receive continuous inputs of fresh, nitrogen-poor foliar
       plant biomass rich in recalcitrant lignocellulosic polymers.
     evidence:
@@ -60,7 +60,7 @@ causal_graphs:
       notes: Aylward et al. 2013 (PMID:23584789) described how Atta cephalotes and Acromyrmex echinatior
         leaf-cutter ants provision fresh foliar biomass into Leucoagaricus gongylophorus fungus gardens.
   - edge_id: foliar_substrate_and_n_deficit_select_for_klebsiella_pantoea_enterobacter_guild
-    subject: foliar_lignocellulose_pectin_substrate_and_nitrogen_thiamine_deficit
+    subject: fresh_nitrogen_poor_foliar_lignocellulose_forage_and_garden_matrix
     predicate: selects for
     object: fungus_garden_klebsiella_pantoea_enterobacter_symbiont_guild
     description: Nitrogen-poor foliar forage in leaf-cutter ant fungus gardens selects for symbiotic N2-fixing
@@ -79,10 +79,10 @@ causal_graphs:
         and Escherichia.
       notes: Metagenomic and 16S profiling of Atta fungus gardens demonstrated abundant Enterobacter,
         Pantoea, Klebsiella, Citrobacter, and Escherichia populations (PMID:22378535).
-  - edge_id: enterobacterial_guild_expresses_nifh_glycoside_hydrolases_pectinases_and_thiamine_genes
+  - edge_id: fungus_garden_guild_expresses_leucoagaricus_lac1lg_cellulases_and_enterobacterial_gh_genes
     subject: fungus_garden_klebsiella_pantoea_enterobacter_symbiont_guild
     predicate: expresses
-    object: enterobacterial_nifh_nitrogenase_glycoside_hydrolases_pectinases_and_thiamine_enzymes
+    object: leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins
     description: Leucoagaricus gongylophorus expresses cellulases and yellow laccase Lac1Lg while fungus-garden
       Enterobacteriaceae express glycosyl hydrolases and B-vitamin/amino acid biosynthetic proteins.
     evidence:
@@ -102,10 +102,10 @@ causal_graphs:
         putative biosynthetic functions are produced in both field-collected and laboratory-reared colonies.
       notes: Metaproteomics confirmed in situ production of bacterial glycosyl hydrolases and biosynthetic
         proteins in Atta fungus gardens (PMID:22378535).
-  - edge_id: nifh_and_polysaccharidases_drive_garden_n_enrichment_and_biomass_deconstruction
-    subject: enterobacterial_nifh_nitrogenase_glycoside_hydrolases_pectinases_and_thiamine_enzymes
+  - edge_id: n2_fixation_and_lignocellulolytic_enzymes_drive_ant_n_incorporation_and_nutrient_provisioning
+    subject: leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins
     predicate: catalyzes
-    object: garden_n2_fixation_cooperative_plant_biomass_degradation_and_vitamin_b1_provisioning
+    object: symbiotic_n2_fixation_lignocellulose_degradation_and_b_vitamin_amino_acid_provisioning
     description: Symbiotic nitrogen fixation and fungal-bacterial lignocellulolytic/biosynthetic enzymes
       convert nitrogen-poor plant forage into fixed nitrogen incorporated into ant biomass as well as
       B-vitamins, amino acids, and oxidized phenolic/non-phenolic substrates.
@@ -126,7 +126,7 @@ curation_history:
 - timestamp: '2026-11-06T06:30:00Z'
   curator: antigravity-claude-opus-4-6
   action: ADD_CAUSAL_GRAPH
-  changes: Added fungus_garden_enterobacteriaceae_nifh_diazotrophy_and_lignocellulolytic_thiamine_symbiosis
+  changes: Added fungus_garden_leucoagaricus_lac1lg_cellulase_and_enterobacteriaceae_n2_fixation_symbiosis
     mechanism graph for fungus_garden_fungus_gallery (habitatmech:GOLD.98c192f558) backed by PMID:19965433,
     PMID:22378535, PMID:23584789, and PMID:26543788.
   llm_assisted: true

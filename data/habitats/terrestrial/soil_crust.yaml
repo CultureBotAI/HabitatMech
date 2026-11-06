@@ -21,7 +21,7 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 causal_graphs:
-- graph_id: biological_soil_crust_microcoleus_wzy_eps_bundle_sheath_and_nostocales_nifhdk_fixation
+- graph_id: soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism
   title: Biological soil crust Microcoleus vaginatus EPS habitat filtering, desiccation-resuscitation
     transcriptional response, and uc/ah-mediated cyanosphere urea-nitrogen mutualism
     mechanism
@@ -37,25 +37,26 @@ causal_graphs:
     C-for-N exchange, deterministic bacterial network assembly, and arid topsoil stabilization.
   nodes:
   - node_id: soil_crust
-    label: biological soil crust environment
+    label: soil crust
     node_type: HABITAT
     grounding: habitatmech:GOLD.b1b5044bde
-    description: Photosynthetic biofilm-like topsoil microbial community (biocrust)
-      developing on light-exposed soil surfaces in arid, semi-arid, and polar lands.
+    description: Consolidated surface soil layer (including biological and physical
+      soil crusts) in arid, semi-arid, and polar lands where cyanobacterial biological
+      soil crusts (biocrusts) form the primary microbially mediated crust community.
   - node_id: dryland_desiccation_rewetting_cycles_and_soil_nitrogen_limitation
     label: desert topsoil desiccation-hydration cycles and microscale cyanosphere
       urea-nitrogen limitation
     node_type: ENVIRONMENTAL_FACTOR
     description: Infrequent precipitation and rapid desiccation cycles coupled with
       nitrogen scarcity and micromolar urea hotspots on arid soil surfaces.
-  - node_id: biocrust_microcoleus_vaginatus_and_heterocystous_nostocales_guild
+  - node_id: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
     label: pioneer Microcoleus vaginatus and cyanosphere heterotrophic diazotroph
       (Massilia) mutualist guild
     node_type: COMMUNITY
     description: Biocrust architect cyanobacterium Microcoleus vaginatus (including
       strains PCC 9802 and CM01) and partner heterotrophic diazotrophs (including
       Massilia sp. METH4) in its cyanosphere.
-  - node_id: microcoleus_wzy_eps_pathway_nostocales_nifhdk_and_crp_trehalose_synthase
+  - node_id: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
     label: Microcoleus vaginatus urea carboxylase/allophanate hydrolase (uc/ah), EPS
       synthesis, and desiccation-hydration stress/repair genes
     node_type: GENE_OR_PROTEIN
@@ -64,7 +65,7 @@ causal_graphs:
       cyanosphere mutualist Massilia sp. METH4, and M. vaginatus genes for exopolysaccharide
       (EPS) production, DNA repair, oxidative/photo-oxidative and osmotic stress response,
       and C/N storage polymers.
-  - node_id: supracellular_bundle_sheath_soil_stabilization_and_biocrust_n2_fixation
+  - node_id: eps_habitat_filtering_urea_cn_mutualism_and_topsoil_stabilization
     label: EPS-mediated habitat filtering, urea-based C/N mutualism, and desert topsoil
       stabilization
     node_type: COMMUNITY_PROCESS
@@ -87,10 +88,10 @@ causal_graphs:
         be poised for rapid resuscitation upon wetting.
       notes: Rajeev et al. 2013 (PMID:23739051) characterized the desiccation-dormancy
         and precipitation-resuscitation regime of desert biological soil crusts.
-  - edge_id: dryland_edaphic_stresses_select_for_microcoleus_and_heterocystous_nostocales
+  - edge_id: dryland_edaphic_stresses_select_for_microcoleus_vaginatus_and_cyanosphere_diazotrophs
     subject: dryland_desiccation_rewetting_cycles_and_soil_nitrogen_limitation
     predicate: selects for
-    object: biocrust_microcoleus_vaginatus_and_heterocystous_nostocales_guild
+    object: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
     description: Arid soil surfaces and C/N limitation select for the pioneer cyanobacterium
       Microcoleus vaginatus and chemotactically associated heterotrophic diazotrophs
       in its cyanosphere.
@@ -109,10 +110,10 @@ causal_graphs:
         widespread Microcoleus vaginatus, and heterotrophic diazotrophs in its "cyanosphere".
       notes: Biocrust establishment relies on the mutualism between pioneer Microcoleus
         vaginatus and heterotrophic diazotrophs in its cyanosphere (PMID:39673195).
-  - edge_id: biocrust_guild_expresses_wzy_eps_pathway_nifhdk_and_crp_trehalose_genes
-    subject: biocrust_microcoleus_vaginatus_and_heterocystous_nostocales_guild
+  - edge_id: biocrust_guild_expresses_uc_ah_urea_carboxylase_eps_and_desiccation_stress_genes
+    subject: biocrust_microcoleus_vaginatus_and_massilia_cyanosphere_diazotroph_guild
     predicate: expresses
-    object: microcoleus_wzy_eps_pathway_nostocales_nifhdk_and_crp_trehalose_synthase
+    object: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
     description: Microcoleus vaginatus expresses DNA repair, oxidative/osmotic stress,
       and exopolysaccharide synthesis genes across hydration-dehydration cycles and
       overexpresses urea uptake and urea carboxylase/allophanate hydrolase (uc/ah)
@@ -137,10 +138,10 @@ causal_graphs:
       notes: Whole-genome in situ transcriptomics of Microcoleus vaginatus in desert
         biocrusts showed regulated induction of exopolysaccharide, stress-response,
         and C/N storage polymer genes (PMID:23739051).
-  - edge_id: wzy_eps_nifhdk_and_trehalose_systems_drive_bundle_sheath_stabilization_and_n_input
-    subject: microcoleus_wzy_eps_pathway_nostocales_nifhdk_and_crp_trehalose_synthase
+  - edge_id: eps_and_uc_ah_urea_systems_drive_habitat_filtering_and_interspecies_n_transfer
+    subject: microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes
     predicate: catalyzes
-    object: supracellular_bundle_sheath_soil_stabilization_and_biocrust_n2_fixation
+    object: eps_habitat_filtering_urea_cn_mutualism_and_topsoil_stabilization
     description: EPS secretion by Microcoleus vaginatus and uc/ah-mediated urea assimilation
       drive interspecies nitrogen transfer, deterministic enrichment of nitrogen-fixing
       and cyanobacterial guilds, and organic matter accumulation in biological soil
@@ -195,7 +196,7 @@ curation_history:
 - timestamp: '2026-11-06T06:30:00Z'
   curator: antigravity-claude-opus-4-6
   action: ADD_CAUSAL_GRAPH
-  changes: Added biological_soil_crust_microcoleus_wzy_eps_bundle_sheath_and_nostocales_nifhdk_fixation
+  changes: Added soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism
     mechanism graph for soil_crust (habitatmech:GOLD.b1b5044bde) backed by PMID:23739051,
     PMID:39673195, PMID:41900302, and PMID:42460988.
   llm_assisted: true

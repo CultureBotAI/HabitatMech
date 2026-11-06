@@ -1,6 +1,6 @@
 identifier: habitatmech:GOLD.200051736e
 causal_graphs:
-- graph_id: squid_light_organ_vibrio_fischeri_rscs_bink_sypg_biofilm_and_lux_bioluminescence
+- graph_id: squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis
   title: Squid light organ V-type ATPase acidic mucus recruitment, Vibrio fischeri RscS-Syp biofilm aggregation,
     and LuxR-LuxI-LuxA bioluminescence morphogenesis mechanism
   description: Juvenile Hawaiian bobtail squid (Euprymna scolopes) hatch aposymbiotically and recruit
@@ -32,7 +32,7 @@ causal_graphs:
     node_type: COMMUNITY
     description: Extracellular monospecific population of the bioluminescent marine bacterium Vibrio (Aliivibrio)
       fischeri colonizing the light organ surface aggregates and deep crypts of Euprymna scolopes.
-  - node_id: vibrio_fischeri_rscs_bink_sypg_syp_cluster_and_luxri_luxcdabeg_system
+  - node_id: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
     label: Vibrio fischeri RscS sensor kinase, syp polysaccharide locus (sypN), LapV adhesin, and LuxA/LuxI/LuxR
       bioluminescence system
     node_type: GENE_OR_PROTEIN
@@ -77,10 +77,10 @@ causal_graphs:
         that aggregate to enter the organ, ultimately reaching and colonizing deep crypt spaces.
       notes: Ciliary currents and surface quiet zones selectively recruit Vibrio fischeri from seawater
         into transient aggregates that disperse into deep crypt spaces (PMID:38270381).
-  - edge_id: vibrio_fischeri_expresses_rscs_bink_sypg_syp_and_luxri_luxcdabeg_genes
+  - edge_id: vibrio_fischeri_expresses_rscs_syp_lapv_and_luxa_luxi_luxr_genes
     subject: vibrio_fischeri_monospecific_light_organ_symbiont_population
     predicate: expresses
-    object: vibrio_fischeri_rscs_bink_sypg_syp_cluster_and_luxri_luxcdabeg_system
+    object: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
     description: Vibrio fischeri expresses the sensor kinase RscS to activate transcription of the syp
       polysaccharide locus (including sypN) and LapV adhesin during surface aggregation and induces luxA,
       luxI, and luxR inside the light organ crypts.
@@ -105,7 +105,7 @@ causal_graphs:
       notes: Symbiotic Vibrio fischeri highly induces the luxA, luxI, and luxR luminescence genes within
         the light organ crypts (PMID:10913092).
   - edge_id: syp_and_lux_systems_drive_biofilm_aggregation_crypt_swelling_and_persistent_colonization
-    subject: vibrio_fischeri_rscs_bink_sypg_syp_cluster_and_luxri_luxcdabeg_system
+    subject: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
     predicate: catalyzes
     object: syp_biofilm_aggregation_crypt_epithelial_remodeling_and_bioluminescent_symbiosis
     description: RscS-activated syp transcription drives surface biofilm aggregation on the light organ,
@@ -130,7 +130,7 @@ curation_history:
 - timestamp: '2026-11-06T06:30:00Z'
   curator: antigravity-claude-opus-4-6
   action: ADD_CAUSAL_GRAPH
-  changes: Added squid_light_organ_vibrio_fischeri_rscs_bink_sypg_biofilm_and_lux_bioluminescence mechanism
-    graph for light_organ (habitatmech:GOLD.200051736e) backed by PMID:10913092, PMID:17087775, PMID:38270381,
-    and PMID:39695176.
+  changes: Added squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis
+    mechanism graph for light_organ (habitatmech:GOLD.200051736e) backed by PMID:10913092, PMID:17087775,
+    PMID:38270381, and PMID:39695176.
   llm_assisted: true

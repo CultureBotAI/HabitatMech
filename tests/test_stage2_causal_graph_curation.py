@@ -1076,7 +1076,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "tidal_mudflat": (
             "ENVO:00000241",
-            "tidal_mudflat_diatom_eps_cable_bacteria_and_benthic_cazyme_sulfur_loop",
+            "tidal_mudflat_cable_bacteria_esox_and_desulfobulbaceae_srb_redox_connector",
             {
                 "PMID:31427514",
                 "PMID:39173361",
@@ -1086,7 +1086,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "hypersaline_soda_lake": (
             "habitatmech:GOLD.3098ee8fe8",
-            "hypersaline_soda_lake_haloalkaliphilic_cbbl_cbbm_soxb_apra_nifh_pmoa_cycling",
+            "hypersaline_soda_lake_thioalkalivibrio_halorhodospira_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_cycling",
             {
                 "PMID:21073490",
                 "PMID:21984678",
@@ -1096,7 +1096,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "soil_crust": (
             "habitatmech:GOLD.b1b5044bde",
-            "biological_soil_crust_microcoleus_wzy_eps_bundle_sheath_and_nostocales_nifhdk_fixation",
+            "soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism",
             {
                 "PMID:23739051",
                 "PMID:39673195",
@@ -1107,7 +1107,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "glacier_forefield": (
             "habitatmech:GOLD.fa0932d6fe",
-            "glacier_forefield_chronosequence_nifh_diazotrophy_and_uscg_pmoa_methane_oxidation",
+            "glacier_forefield_chronosequence_nifh_cluster_i_iii_diazotrophy_and_asynchronous_cn_accumulation",
             {
                 "PMID:21326352",
                 "PMID:29901729",
@@ -1117,7 +1117,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "fungus_garden_fungus_gallery": (
             "habitatmech:GOLD.98c192f558",
-            "fungus_garden_enterobacteriaceae_nifh_diazotrophy_and_lignocellulolytic_thiamine_symbiosis",
+            "fungus_garden_leucoagaricus_lac1lg_cellulase_and_enterobacteriaceae_n2_fixation_symbiosis",
             {
                 "PMID:19965433",
                 "PMID:22378535",
@@ -1132,7 +1132,7 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         ),
         "light_organ": (
             "habitatmech:GOLD.200051736e",
-            "squid_light_organ_vibrio_fischeri_rscs_bink_sypg_biofilm_and_lux_bioluminescence",
+            "squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis",
             {
                 "PMID:10913092",
                 "PMID:17087775",
@@ -1209,8 +1209,17 @@ def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
         for edge in graph["edges"]:
             for ev in edge.get("evidence", []):
                 snippet = ev.get("snippet", "")
+                ref = ev["reference"]
+                assert ref.startswith("PMID:")
+                pmid = ref.split(":", 1)[1]
+                cache_path = REPO_ROOT / "references_cache" / f"PMID_{pmid}.md"
+                assert cache_path.exists(), f"{cache_path} missing"
+                cache_text = cache_path.read_text(encoding="utf-8")
                 assert "<i>" not in snippet and "</i>" not in snippet
-                assert "\u00a0" not in snippet
+                for ch in ("\u00a0", "\u2009", "\u200a"):
+                    assert ch not in snippet
+                    assert ch not in cache_text
+                assert snippet in cache_text, f"Snippet not verbatim in {cache_path}: {snippet!r}"
 
 
 
