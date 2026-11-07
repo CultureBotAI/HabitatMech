@@ -60,8 +60,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0000970">eye</a>      <code class="curie">UBERON:0000970</code></li>
-  <li><a href="../habitats/visual-system-habitatmech-gold-020f82703b.html">Visual system</a>      <code class="curie">habitatmech:GOLD.020f82703b</code></li>
+  <li><a href="http://purl.obolibrary.org/obo/BTO_0000260">ciliary body</a>      <code class="curie">BTO:0000260</code></li>
 </ul>
 
 
@@ -74,8 +73,13 @@ from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
     <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>UBERON:0000970 &#39;eye&#39; attached as a parent, not adopted as the identity (NARROW). The ciliary body is a structure within the eye. Path: Host-associated &gt; Mammals: Human &gt; Visual system &gt; Eye: Ciliary body (source concept habitatmech:GOLD.4d81fdaa51)</p>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>BTO:0000260 &#39;ciliary body&#39; attached as a parent, not adopted as the identity (NARROW). ITEM parent-genus repair (<a href="https://github.com/CultureBotAI/HabitatMech/issues/2304):" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2304):</a> GOLD &#39;Host-associated &gt; Mammals: Human &gt; Visual system &gt; Eye: Ciliary body&#39; denotes the human ciliary body, which is a host-scoped subtype of BTO:0000260 &#39;ciliary body&#39; rather than a subtype of the containing whole eye (UBERON:0000970). Path: Host-associated &gt; Mammals: Human &gt; Visual system &gt; Eye: Ciliary body (source concept habitatmech:GOLD.4d81fdaa51)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.020f82703b for habitatmech:GOLD.4d81fdaa51 (Host-associated &gt; Mammals: Human &gt; Visual system &gt; Eye: Ciliary body). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2304" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2304</a> : Crustacean and annelid excretory system are organ systems, not subtypes of the whole crustacean- or annelid-associated host environment; external genitalia is an anatomical reproductive organ structure, not a subtype of the entire mammalian or human reproductive system; external soft tissue zone is a soft-tissue anatomical region, not a subtype of the mammalian Multiple systems GOLD classification bucket; mammalian, piscine, and human eye are sense organs and ciliary body and vitreous chamber are intraocular structures/compartments, not subtypes of the entire visual system; human and mammalian fallopian tube are oviductal reproductive organs, not subtypes of the entire reproductive system; mammalian and human fascia are connective tissue sheets, not subtypes of the host-scoped connective tissue assemblage; insect fat body is an adipose organ/tissue, not a subtype of the whole insect-associated environment; feather is an avian epidermal appendage, not a subtype of the whole avian skin organ. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.4d81fdaa51. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

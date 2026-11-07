@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-11-07T045510Z-antigravity-230501
+  timestamp: '2026-11-07T04:55:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2305
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - decisions
+  summary: Repair exact_synonyms and grounding scope across external_genitalia and extracellular__3f7afaf4 in excretory_system__22ee753c to fecal cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-excretory-system-22ee753c-to-fecal-synonym-scope-repairs
+    (2 findings from Stage 4 cohort review 20261106T194900Z-excretory_system__22ee753c_to_fecal-category,
+    Issue #2305). Updated curation/decisions.tsv for habitatmech:GOLD.97989ecf5e (External
+    genitalia/Vulva on UBERON:0004176 external genitalia) from grounding_status EXACT
+    to CLOSE so the compound GOLD leaf External genitalia/Vulva is emitted with synonym_type
+    RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM, and added a REVIEW
+    (ITEM) row for sibling source concept habitatmech:GOLD.2ab65bac9e (External genitalia)
+    so external_genitalia.yaml achieves mapping_status REVIEWED. Added a guarded exclusion
+    row in curation/definition_source_label_exclusions.tsv for habitatmech:GOLD.6c8238add0
+    (extracellular__3f7afaf4, molluscan gill extracellular environment) so automatic
+    retention of displaced generic GOLD leaf label Extracellular as EXACT_SYNONYM
+    is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim GOLD
+    source_attestations, matching sibling records extracellular.yaml and extracellular_symbionts.yaml.'

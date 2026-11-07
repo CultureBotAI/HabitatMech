@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.5c89d5e294
 label: human external reproductive organ environment
-definition: A reproductive system anatomical surface comprising the external genitalia
-  of a human host (such as the vulva, labia, penile shaft, glans, or coronal sulcus),
-  colonized by cutaneous and urogenital microbiota.
+definition: An external genitalia anatomical surface of a human host (such as the
+  vulva, labia, penile shaft, glans, or coronal sulcus), colonized by cutaneous and
+  urogenital microbiota.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -12,8 +12,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:0000990
-- habitatmech:GOLD.abc827a582
+- UBERON:0004176
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6286
@@ -30,16 +29,20 @@ curation_history:
   curator: antigravity
   action: CONFIRM_UNGROUNDED
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
-    external reproductive organ environment under UBERON:0000990 ''reproductive system'';
-    supported by human urogenital and external genitalia microbiome studies (PMID
-    22699609). (source concept habitatmech:GOLD.5c89d5e294)'
+    external reproductive organ environment under UBERON:0004176 ''external genitalia''
+    with parent_mode REPLACE to exclude whole-system GOLD parent Reproductive system
+    (https://github.com/CultureBotAI/HabitatMech/issues/2304); supported by human
+    urogenital and external genitalia microbiome studies (PMID 22699609). (source
+    concept habitatmech:GOLD.5c89d5e294)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'human external reproductive organ environment' under UBERON:0000990
-    'reproductive system'. Defined human external reproductive organ environment under
-    UBERON:0000990 'reproductive system'; supported by human urogenital and external
-    genitalia microbiome studies (PMID 22699609).
+  changes: Defined as 'human external reproductive organ environment' under UBERON:0004176
+    'external genitalia'. Defined human external reproductive organ environment under
+    UBERON:0004176 'external genitalia' with parent_mode REPLACE to exclude whole-system
+    GOLD parent Reproductive system (https://github.com/CultureBotAI/HabitatMech/issues/2304);
+    supported by human urogenital and external genitalia microbiome studies (PMID
+    22699609).
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED
