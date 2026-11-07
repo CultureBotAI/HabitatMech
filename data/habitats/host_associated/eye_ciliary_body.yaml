@@ -4,8 +4,7 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- UBERON:0000970
-- habitatmech:GOLD.020f82703b
+- BTO:0000260
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6183
@@ -13,13 +12,38 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Visual system > Eye: Ciliary body'
   mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'UBERON:0000970 ''eye'' attached as a parent, not adopted as the identity
-    (NARROW). The ciliary body is a structure within the eye. Path: Host-associated
-    > Mammals: Human > Visual system > Eye: Ciliary body (source concept habitatmech:GOLD.4d81fdaa51)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-11-06T00:00:00Z'
+  curator: antigravity
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000260 ''ciliary body'' attached as a parent, not adopted as the
+    identity (NARROW). ITEM parent-genus repair (https://github.com/CultureBotAI/HabitatMech/issues/2304):
+    GOLD ''Host-associated > Mammals: Human > Visual system > Eye: Ciliary body''
+    denotes the human ciliary body, which is a host-scoped subtype of BTO:0000260
+    ''ciliary body'' rather than a subtype of the containing whole eye (UBERON:0000970).
+    Path: Host-associated > Mammals: Human > Visual system > Eye: Ciliary body (source
+    concept habitatmech:GOLD.4d81fdaa51)'
+- timestamp: '2026-11-06T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.020f82703b
+    for habitatmech:GOLD.4d81fdaa51 (Host-associated > Mammals: Human > Visual system
+    > Eye: Ciliary body). Review https://github.com/CultureBotAI/HabitatMech/issues/2304
+    : Crustacean and annelid excretory system are organ systems, not subtypes of the
+    whole crustacean- or annelid-associated host environment; external genitalia is
+    an anatomical reproductive organ structure, not a subtype of the entire mammalian
+    or human reproductive system; external soft tissue zone is a soft-tissue anatomical
+    region, not a subtype of the mammalian Multiple systems GOLD classification bucket;
+    mammalian, piscine, and human eye are sense organs and ciliary body and vitreous
+    chamber are intraocular structures/compartments, not subtypes of the entire visual
+    system; human and mammalian fallopian tube are oviductal reproductive organs,
+    not subtypes of the entire reproductive system; mammalian and human fascia are
+    connective tissue sheets, not subtypes of the host-scoped connective tissue assemblage;
+    insect fat body is an adipose organ/tissue, not a subtype of the whole insect-associated
+    environment; feather is an avian epidermal appendage, not a subtype of the whole
+    avian skin organ. Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target habitatmech:GOLD.4d81fdaa51.
+    Shared mapping endpoints #1398 remain separate.'

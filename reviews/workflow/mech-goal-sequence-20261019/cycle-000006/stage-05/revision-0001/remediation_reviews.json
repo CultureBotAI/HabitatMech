@@ -1,0 +1,343 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "7e0e28eeca775e7795d3f72384794f392fcf287f7f972fa57042234a64d3ce40"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "913f1ece5224bbed33b736f78cc8e1244155e91f390fe8e790d6f91a24b3b796"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "f86df360f54cb00d3062ae27a9196828113219c06cfd9cfc9830a0e08603d069"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "7bc32feee639e707af7bc74410a8f34d79c5cb3a8a3ca4965452cbaf6038a384"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "596d59ab03fafa4c1fcdcb6446c87b7c72c04305e9d516047e661060710e86d4"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-11-07T045500Z-antigravity-230401.yaml",
+      "sha256": "d55f782e57e1c75b9485ba0c5e39260dfcbaed7532af9a7fc30c3316874efac9"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-11-07T045510Z-antigravity-230501.yaml",
+      "sha256": "16115355944b03d6e09142bca848ee5d52d3ab9332e2367433aebb6177da314c"
+    },
+    {
+      "path": "tests/test_excretory_system_22ee753c_to_fecal_review_repairs.py",
+      "sha256": "90bb097e6a2311fbaf0a2afadc4ca7642581bab11e5dd3d582ea5cd149c066f6"
+    }
+  ],
+  "cycle": 6,
+  "remediation_reviews": [
+    {
+      "finding_id": "excretory-system--22ee753c-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194810Z-excretory_system__22ee753c-record",
+      "record_id": "habitatmech:GOLD.d0a97e09fe",
+      "record_path": "data/habitats/host_associated/excretory_system__22ee753c.yaml",
+      "record_sha256": "69cc0d2d9a08c46c4d7744fc5965ac4dce845448c616cd52b61ac2974207f22f",
+      "remediation_review_id": "20261107T050001Z-excretory_system__22ee753c-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050001Z-excretory_system__22ee753c-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "a592116a5558708530b4f83df0fa972c78d406b279ed0eb3d3b06434b7a4bab8"
+    },
+    {
+      "finding_id": "excretory-system--37f93bb9-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194811Z-excretory_system__37f93bb9-record",
+      "record_id": "habitatmech:GOLD.a37f187bfe",
+      "record_path": "data/habitats/host_associated/excretory_system__37f93bb9.yaml",
+      "record_sha256": "b6e57d41b4eb7eb605b67fbe0e65451f612441694bc3d7850ea1e416ac6b5a61",
+      "remediation_review_id": "20261107T050002Z-excretory_system__37f93bb9-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050002Z-excretory_system__37f93bb9-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "7c20daf10ef914aaade4ecf31b86e6217a016ba9f76968d3761f28ba3091c8fe"
+    },
+    {
+      "finding_id": "external-genitalia-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194813Z-external_genitalia-record",
+      "record_id": "UBERON:0004176",
+      "record_path": "data/habitats/host_associated/external_genitalia.yaml",
+      "record_sha256": "28ce53715103e76864ca7322c1fb9743606d3468101b02cdddda033c4357e362",
+      "remediation_review_id": "20261107T050003Z-external_genitalia-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050003Z-external_genitalia-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4792ab663bdb7cbe0c751d0df101831247a2343da0d2ae8e1036e62c766f65a8"
+    },
+    {
+      "finding_id": "external-genitalia-vulva-exact-synonym",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2305",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194813Z-external_genitalia-record",
+      "record_id": "UBERON:0004176",
+      "record_path": "data/habitats/host_associated/external_genitalia.yaml",
+      "record_sha256": "28ce53715103e76864ca7322c1fb9743606d3468101b02cdddda033c4357e362",
+      "remediation_review_id": "20261107T050003Z-external_genitalia-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050003Z-external_genitalia-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4792ab663bdb7cbe0c751d0df101831247a2343da0d2ae8e1036e62c766f65a8"
+    },
+    {
+      "finding_id": "external-organs-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194814Z-external_organs-record",
+      "record_id": "habitatmech:GOLD.5c89d5e294",
+      "record_path": "data/habitats/host_associated/external_organs.yaml",
+      "record_sha256": "efe86018e5c6adeec06a1dccf73dea974668f2e9cf3680245b86e498aa5e655d",
+      "remediation_review_id": "20261107T050004Z-external_organs-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050004Z-external_organs-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "df552c6e87724191ff7718f945a455b8e848ac80981082be261e1c198cf5d9a5"
+    },
+    {
+      "finding_id": "external-organs--aed6edb3-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194815Z-external_organs__aed6edb3-record",
+      "record_id": "habitatmech:GOLD.9bfd135cfa",
+      "record_path": "data/habitats/host_associated/external_organs__aed6edb3.yaml",
+      "record_sha256": "c8c51dde0264886a53ce20d9e9ef6bf8a21f975ee72decfe534b11f8d628a454",
+      "remediation_review_id": "20261107T050005Z-external_organs__aed6edb3-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050005Z-external_organs__aed6edb3-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "b23876a4d9ef89a5f2367acb22d2a30ea3674d805d2deb9935d299b2acf31e36"
+    },
+    {
+      "finding_id": "external-soft-tissue-zone-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194816Z-external_soft_tissue_zone-record",
+      "record_id": "UBERON:0034929",
+      "record_path": "data/habitats/host_associated/external_soft_tissue_zone.yaml",
+      "record_sha256": "f5c1101eeb4c1e9871c61210216b3f7a78e0b16f8af11297e0828fc4031e8474",
+      "remediation_review_id": "20261107T050006Z-external_soft_tissue_zone-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050006Z-external_soft_tissue_zone-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "cbaed3c5fd08756e988546ec339c75c854263c9598317df219bdac0380b3cbc2"
+    },
+    {
+      "finding_id": "extracellular-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194817Z-extracellular-record",
+      "record_id": "habitatmech:GOLD.0a69f87c03",
+      "record_path": "data/habitats/host_associated/extracellular.yaml",
+      "record_sha256": "95012e93e796bb1a19eddc307da317ef7e07cb14c18d9cdefb982fb9962247ed",
+      "remediation_review_id": "20261107T050007Z-extracellular-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050007Z-extracellular-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "a26ab15ceacb34a6b1c17bbb26896599f01237067d60c690c34c4ea96e1fd8a5"
+    },
+    {
+      "finding_id": "extracellular--3f7afaf4-displaced-source-synonym",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2305",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194818Z-extracellular__3f7afaf4-record",
+      "record_id": "habitatmech:GOLD.6c8238add0",
+      "record_path": "data/habitats/host_associated/extracellular__3f7afaf4.yaml",
+      "record_sha256": "e5017a4c3736700b024f6af281f1933b438ee68199d1c81e85a9d7d59266d838",
+      "remediation_review_id": "20261107T050008Z-extracellular__3f7afaf4-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050008Z-extracellular__3f7afaf4-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "142d40989d915c6a742aea8a9f60ea946f98dd217cbc58275435625ee6a69aaf"
+    },
+    {
+      "finding_id": "extracellular-symbionts-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194819Z-extracellular_symbionts-record",
+      "record_id": "habitatmech:GOLD.28f9330745",
+      "record_path": "data/habitats/host_associated/extracellular_symbionts.yaml",
+      "record_sha256": "7b415698019a73c49cfbbeee2c55b9dba7913d716c077f5d51c294f48eeec358",
+      "remediation_review_id": "20261107T050009Z-extracellular_symbionts-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050009Z-extracellular_symbionts-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "25a8bffec0c1a9e10de11b59f22a470d9204872770d29a4500301718831b42e8"
+    },
+    {
+      "finding_id": "eye-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194820Z-eye-record",
+      "record_id": "habitatmech:GOLD.4b46114446",
+      "record_path": "data/habitats/host_associated/eye.yaml",
+      "record_sha256": "7ba0cf70599249de12e207a4af52c32e71effbbed919cccab3e9913fe3ca9b87",
+      "remediation_review_id": "20261107T050010Z-eye-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050010Z-eye-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "53db19c03d6c4b5f2728a56bcc5a98fcf389f39723769e55bd09f0c6b729ac2a"
+    },
+    {
+      "finding_id": "eye--59a4c665-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194821Z-eye__59a4c665-record",
+      "record_id": "habitatmech:GOLD.7f217d034e",
+      "record_path": "data/habitats/host_associated/eye__59a4c665.yaml",
+      "record_sha256": "e29fbe1fdedd7cc9013a0ddb3c947e23b687a9a0cc3795a93615b3b85b98a478",
+      "remediation_review_id": "20261107T050011Z-eye__59a4c665-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050011Z-eye__59a4c665-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "a036ec6524fd0b39517c56d362d6d9fbf4a649e5146c2b08cbc5a16ddeef57a5"
+    },
+    {
+      "finding_id": "eye--810dedbb-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194822Z-eye__810dedbb-record",
+      "record_id": "habitatmech:GOLD.b7f1694b87",
+      "record_path": "data/habitats/host_associated/eye__810dedbb.yaml",
+      "record_sha256": "92efd6e546429a0dee467e0afc67326b259a085f4b421fb1cda53f83237656d3",
+      "remediation_review_id": "20261107T050012Z-eye__810dedbb-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050012Z-eye__810dedbb-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "6170db9c31f37ca614000106b945805a88c185053f2a7ad28617ec119e5898dd"
+    },
+    {
+      "finding_id": "eye-ciliary-body-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194823Z-eye_ciliary_body-record",
+      "record_id": "habitatmech:GOLD.4d81fdaa51",
+      "record_path": "data/habitats/host_associated/eye_ciliary_body.yaml",
+      "record_sha256": "29c1bc32f29c281df84589f1e0f1d74061de616a72d5e59e221b56e022694af3",
+      "remediation_review_id": "20261107T050013Z-eye_ciliary_body-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050013Z-eye_ciliary_body-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9b478a773d1b2348393f8b017cb6f23422bbf2946f0d156e08495b9b046df9a3"
+    },
+    {
+      "finding_id": "eye-ciliary-body--832768c5-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194824Z-eye_ciliary_body__832768c5-record",
+      "record_id": "habitatmech:GOLD.aceda5f881",
+      "record_path": "data/habitats/host_associated/eye_ciliary_body__832768c5.yaml",
+      "record_sha256": "95ec979a3093dfc7ae9ca91256ecf7b84564b2bdb5268632ca69ef6d690612e7",
+      "remediation_review_id": "20261107T050014Z-eye_ciliary_body__832768c5-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050014Z-eye_ciliary_body__832768c5-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "1b563e51a8f498dd782e5a13eb84d10b68be32b68eec2c3f6499700049e73af9"
+    },
+    {
+      "finding_id": "eye-vitreous-chamber-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194825Z-eye_vitreous_chamber-record",
+      "record_id": "habitatmech:GOLD.5d27b319ee",
+      "record_path": "data/habitats/host_associated/eye_vitreous_chamber.yaml",
+      "record_sha256": "1c7836f2cf1b677d6d8845c30b58aa096abc11295b79f8a1231663f5bc7786e8",
+      "remediation_review_id": "20261107T050015Z-eye_vitreous_chamber-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050015Z-eye_vitreous_chamber-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "48f5c95b249567b4f7f5084821473175f1524b8467cfbb24bc10a4021aab45ae"
+    },
+    {
+      "finding_id": "eye-vitreous-chamber--b4eddfc1-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194826Z-eye_vitreous_chamber__b4eddfc1-record",
+      "record_id": "habitatmech:GOLD.b84283af7d",
+      "record_path": "data/habitats/host_associated/eye_vitreous_chamber__b4eddfc1.yaml",
+      "record_sha256": "3655d4174d43472bf56446ed4e28d71ee9d991b6b747b79f3f70094cf20f4f33",
+      "remediation_review_id": "20261107T050016Z-eye_vitreous_chamber__b4eddfc1-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050016Z-eye_vitreous_chamber__b4eddfc1-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "409550d0b204fef32865bebfa212c53bff7c928f65c21205c5f6e9503653705e"
+    },
+    {
+      "finding_id": "fallopian-tubes-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194827Z-fallopian_tubes-record",
+      "record_id": "habitatmech:GOLD.a179efbe4f",
+      "record_path": "data/habitats/host_associated/fallopian_tubes.yaml",
+      "record_sha256": "b29b48c390a24ea902f844cdcab136bec07f99d8ba31f7e651772cc3469d2c20",
+      "remediation_review_id": "20261107T050017Z-fallopian_tubes-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050017Z-fallopian_tubes-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "237251fbaa7142afb501120358c9df39eaa13c5146de224d015ec1769a94743b"
+    },
+    {
+      "finding_id": "fallopian-tubes--c41e0038-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194828Z-fallopian_tubes__c41e0038-record",
+      "record_id": "habitatmech:GOLD.fe591e2cb7",
+      "record_path": "data/habitats/host_associated/fallopian_tubes__c41e0038.yaml",
+      "record_sha256": "eb4a0096ecb7ffc0d8bf92868ee6ebab419836bd64112678f309a67735669e46",
+      "remediation_review_id": "20261107T050018Z-fallopian_tubes__c41e0038-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050018Z-fallopian_tubes__c41e0038-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "920712447aaf230a2f77f159b75c46a9de22a01106540d86786b3bae897a2eb2"
+    },
+    {
+      "finding_id": "fascia-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194829Z-fascia-record",
+      "record_id": "habitatmech:GOLD.b64b241c4b",
+      "record_path": "data/habitats/host_associated/fascia.yaml",
+      "record_sha256": "b68bcfcd503e11290d58dde40d8c8c1d23d4220e5bf60dcfcb845b036d517941",
+      "remediation_review_id": "20261107T050019Z-fascia-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050019Z-fascia-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ace0958c04f63e7e8214accdb852c8d2e8fed36d871d29c16c5a7d2e5f93401a"
+    },
+    {
+      "finding_id": "fascia--1f6c9c1a-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261106T194830Z-fascia__1f6c9c1a-record",
+      "record_id": "habitatmech:GOLD.f74ba58314",
+      "record_path": "data/habitats/host_associated/fascia__1f6c9c1a.yaml",
+      "record_sha256": "1716b21ecb90ffc45c0bb8f6fb3e7605a117106bc2d8fa49f83067e5811e20e1",
+      "remediation_review_id": "20261107T050020Z-fascia__1f6c9c1a-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050020Z-fascia__1f6c9c1a-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "7f186d302e5a75b7da3dc9fb8b75b4f0b611522ef850de713c554449e9310495"
+    },
+    {
+      "finding_id": "fat-body-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194831Z-fat_body-record",
+      "record_id": "BTO:0000442",
+      "record_path": "data/habitats/host_associated/fat_body.yaml",
+      "record_sha256": "ff1e1543ee5e0e72f6478b24b4c20b3aa3cb16898d50be71e983535033a8c541",
+      "remediation_review_id": "20261107T050021Z-fat_body-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050021Z-fat_body-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9e3e90d58114aac4ddbd3ba743cd81fdf150a9f12ad490544415aa47d89755e2"
+    },
+    {
+      "finding_id": "feather-context-parent",
+      "group_id": "G-excretory-system-22ee753c-to-fecal-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2304",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261106T194832Z-feather-record",
+      "record_id": "BTO:0000447",
+      "record_path": "data/habitats/host_associated/feather.yaml",
+      "record_sha256": "3f4cc8e939f689b41c9f84474dd6af35acaec98855baeab7e38a7423af16a460",
+      "remediation_review_id": "20261107T050022Z-feather-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261107T050022Z-feather-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "dcd0e9e4448a9067f4561379992300c9777f0bcc158b255f62206501ce806e5b"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "30fbe25f4c539ad6266dae7680d21e451caf6e40",
+  "stage": 5
+}

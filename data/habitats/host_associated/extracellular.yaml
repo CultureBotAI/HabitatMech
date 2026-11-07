@@ -1,9 +1,9 @@
 identifier: habitatmech:GOLD.0a69f87c03
 label: annelid egg capsule albuminous fluid
-definition: An egg capsule compartment consisting of the extracellular nutritive albuminous
-  fluid inside an annelid cocoon (such as an earthworm or leech egg capsule), where
-  vertically transmitted bacterial symbionts proliferate before colonizing developing
-  embryos.
+definition: An environment associated with an animal part or small animal consisting
+  of the extracellular nutritive albuminous fluid inside an annelid cocoon (such as
+  an earthworm or leech egg capsule), where vertically transmitted bacterial symbionts
+  proliferate before colonizing developing embryos.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -13,7 +13,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:3010636
+- ENVO:01001055
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4332
@@ -35,11 +35,13 @@ curation_history:
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: 'Defined as ''annelid egg capsule albuminous fluid'' under UBERON:3010636
-    ''egg capsule''. ITEM curation: GOLD ''Host-associated > Annelida > Reproductive
-    system > Egg capsule > Extracellular'' denotes the extracellular fluid compartment
-    inside an annelid egg capsule/cocoon (PMID 18480259; DOI:10.1128/AEM.00126-08).
-    Path: Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular'
+  changes: 'Defined as ''annelid egg capsule albuminous fluid'' under ENVO:01001055
+    ''environment associated with an animal part or small animal''. ITEM curation:
+    GOLD ''Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular''
+    denotes the extracellular fluid compartment inside an annelid egg capsule/cocoon
+    (PMID 18480259; DOI:10.1128/AEM.00126-08). Path: Host-associated > Annelida >
+    Reproductive system > Egg capsule > Extracellular; parent_mode REPLACE under ENVO:01001055
+    excludes protective capsule parent Egg capsule (https://github.com/CultureBotAI/HabitatMech/issues/2304).'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED
