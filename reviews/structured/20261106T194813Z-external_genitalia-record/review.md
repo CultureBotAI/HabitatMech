@@ -1,0 +1,769 @@
+# Record review: external genitalia (UBERON:0004176)
+
+- Review: 20261106T194813Z-external_genitalia-record
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-11-06T19:35:00Z
+- Finished UTC: 2026-11-06T19:48:13Z
+- Reviewer: antigravity (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The multi-path GOLD record UBERON:0004176 (external genitalia, EXACT/SEEDED, 10 ORGANISM assertions on the human External genitalia/Vulva path and no assertion count/unit on the mammalian External genitalia path) merges GOLD 'Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva' (habitatmech:GOLD.97989ecf5e, grounded with EXACT in curation/decisions.tsv) and 'Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia' (habitatmech:GOLD.2ab65bac9e, unreviewed exact lexical match), but retains mammalian and human Reproductive system GOLD parents (habitatmech:GOLD.29feb6867b, habitatmech:GOLD.abc827a582) as superclasses and promotes slash-disjunction 'External genitalia/Vulva' as an EXACT_SYNONYM.
+
+## Scope And Provenance
+
+Scientific assessment of one exact generated target (data/habitats/host_associated/external_genitalia.yaml) at captured main revision 355eb4a23118506c83a76cf22c6332d04decffec.
+
+Selection: Contiguous 24-record unreviewed cohort in data/habitats/host_associated/ path order (excretory_system__22ee753c through fecal); this bundle assesses its single resolved identifier and source path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 355eb4a23118506c83a76cf22c6332d04decffec.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| UBERON:0004176 | data/habitats/host_associated/external_genitalia.yaml | generated | external genitalia |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | UBERON:0004176 | Completed 2026-11-06T19:45:12Z. No issues found. |
+| validate-strict | passed | True | UBERON:0004176 | Completed 2026-11-06T19:45:18Z. Validated 24 files; files with ERROR: 0; total ERROR rows: 0. |
+| validate-history | passed | True | UBERON:0004176 | Completed 2026-11-06T19:45:25Z. No issues found; 866 history record(s) valid against src/habitatmech/schema/history.yaml. |
+| provenance-check | passed | True | UBERON:0004176 | Completed 2026-11-06T19:45:28Z. provenance current: 14 committed inventories, 2 GOLD sources. |
+| verify-corpus | passed | True | UBERON:0004176 | Completed 2026-11-06T19:45:55Z. expected 3209 records, found 3209 on disk; missing: 0, extra: 0, differing: 0; corpus reproduces exactly from data/raw/. |
+| validate-causal-all | passed | True | UBERON:0004176 | Completed 2026-11-06T19:46:02Z. validated 83 causal-graph curation file(s) with 83 graph(s). |
+| term-requests-check | passed | True | UBERON:0004176 | Completed 2026-11-06T19:46:05Z. term-request table is current (671 terms). |
+| validate-products | passed | True | UBERON:0004176 | Completed 2026-11-06T19:47:55Z. OK_CANONICAL: 1203, OK_SYNONYM: 1, OK_EXCEPTION: 5, SKIPPED_NO_ADAPTER: 2084. All id&lt;-&gt;label pairs correspond. |
+
+## Scientific And Domain Assessments
+
+### Native validity and reproduction
+
+schema: supported. Targets: UBERON:0004176.
+
+Individual schema, strict 24-target validation, 866 history records, 14 inventory/2 GOLD provenance sources, exact 3,209-record reproduction, 83 causal overlays, and 671 term requests passed.
+
+### Identity, definition, hierarchy and aliases
+
+identity: concern. Targets: UBERON:0004176.
+
+External genitalia (UBERON:0004176) are reproductive organs under UBERON:0003133 (reproductive organ), not subtypes (is_a) of the mammalian or human Reproductive system (habitatmech:GOLD.29feb6867b, habitatmech:GOLD.abc827a582); additionally, curation/decisions.tsv row 901 grounds 'External genitalia/Vulva' (habitatmech:GOLD.97989ecf5e) with grounding_status EXACT rather than CLOSE, promoting female-specific slash-disjunction 'External genitalia/Vulva' as an EXACT_SYNONYM on cross-sex UBERON:0004176 while habitatmech:GOLD.2ab65bac9e lacks an item-level REVIEW decision.
+
+### Source counts and retained ranking
+
+quantity: supported. Targets: UBERON:0004176.
+
+Exact raw rows reproduce emitted counts/units, labels, scores, ranks, and pools: [{"source": "GOLD", "count": 10, "unit": "ORGANISM"}, {"source": "GOLD", "count": null, "unit": null}]. Zero counts are omitted; unrelated parent counts are not combined.
+
+### Parameters, mechanisms and native status
+
+completeness: supported. Targets: UBERON:0004176.
+
+Missing optional parameters/graphs are not evidence deficits. Full source decisions and executed routes reproduce SEEDED / EXACT; this read-only review does not mutate generated records.
+
+## Findings
+
+### F1: External genitalia retains mammalian and human Reproductive system GOLD parents as superclasses
+
+major / open / confirmed; issue key: external-genitalia-context-parent.
+
+Add exclusion rows in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.2ab65bac9e ('Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia', excluding parent_id habitatmech:GOLD.29feb6867b) and source identifier habitatmech:GOLD.97989ecf5e ('Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva', excluding parent_id habitatmech:GOLD.abc827a582) on exact target UBERON:0004176, preserving ontology parent UBERON:0003133 (reproductive organ).
+
+### F2: External genitalia promotes slash-disjunction 'External genitalia/Vulva' as an exact synonym and lacks item-level review on its second GOLD path
+
+major / open / confirmed; issue key: external-genitalia-vulva-exact-synonym.
+
+Update curation/decisions.tsv row 901 for habitatmech:GOLD.97989ecf5e ('Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva', object_id UBERON:0004176) from grounding_status EXACT to CLOSE so the slash-disjunction label 'External genitalia/Vulva' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM, and add an item-level REVIEW decision row (EXACT -&gt; UBERON:0004176) for habitatmech:GOLD.2ab65bac9e ('Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia') so both feeding source concepts are reviewed.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Add exclusion rows in curation/gold_parent_exclusions.tsv for source identifier habitatmech:GOLD.2ab65bac9e ('Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia', excluding parent_id habitatmech:GOLD.29feb6867b) and source identifier habitatmech:GOLD.97989ecf5e ('Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva', excluding parent_id habitatmech:GOLD.abc827a582) on exact target UBERON:0004176, preserving ontology parent UBERON:0003133 (reproductive organ). No repair is performed by this read-only review.
+
+- Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
+- Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
+- Reassess the changed record in an immutable successor retaining this issue key and exact predecessor lineage.
+
+### ACT2
+
+Update curation/decisions.tsv row 901 for habitatmech:GOLD.97989ecf5e ('Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva', object_id UBERON:0004176) from grounding_status EXACT to CLOSE so the slash-disjunction label 'External genitalia/Vulva' is emitted with scope RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM, and add an item-level REVIEW decision row (EXACT -&gt; UBERON:0004176) for habitatmech:GOLD.2ab65bac9e ('Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia') so both feeding source concepts are reviewed. No repair is performed by this read-only review.
+
+- Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
+- Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
+- Reassess the changed record in an immutable successor retaining this issue key and exact predecessor lineage.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/host_associated/external_genitalia.yaml; Entire YAML | supports | All target fields, source attestations, synonyms, parent_habitats, and generated history for UBERON:0004176 (external genitalia) were read. |
+| ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, bodily fluids, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
+| ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator produces identifier=UBERON:0004176, grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0003133", "habitatmech:GOLD.29feb6867b", "habitatmech:GOLD.abc827a582"]. |
+| ESIB1 | data/habitats/host_associated/ethmoid_bone.yaml; Entire YAML | supports | Sibling GOLD-attested anatomical record UBERON:0001679 where grounding_status was updated from EXACT to CLOSE in curation/decisions.tsv (#2296) so a non-equivalent GOLD source label is retained as RELATED_SYNONYM (skos:closeMatch) rather than EXACT_SYNONYM. |
+| EGOLD | data/raw/gold_ecosystem_paths.tsv; TSV rows 528,2094 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype": "External genitalia/Vulva", "ecosystem_type": "Reproductive system", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:6245&#124;gold.ecosystem:6246", "leaf_label": "External genitalia/Vulva", "organism_count": "10", "specific_ecosystem": "", "study_count": "0", "total_assertions": "10"}, "row": 528}, {"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Mammals", "ecosystem_subtype": "External genitalia", "ecosystem_type": "Reproductive system", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:7634&#124;gold.ecosystem:7635", "leaf_label": "External genitalia", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions": "0"}, "row": 2094}] |
+| EONT | data/raw/ontology_terms.tsv; TSV rows 13183,13229 | supports | [{"data": {"definition": "An organ involved in reproduction.", "deprecated": "", "directly_referenced": "FALSE", "label": "reproductive organ", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "genital organ&#124;genitalia&#124;reproductive system organ&#124;sex organ", "term_id": "UBERON:0003133"}, "row": 13183}, {"data": {"definition": "The external genitalia are the outer sex organs, such as the penis or vulva in mammals.", "deprecated": "", "directly_referenced": "TRUE", "label": "external genitalia", "label_only": "FALSE", "ontology": "UBERON", "synonyms": "external genitalia&#124;external reproductive organ&#124;external sex organ", "term_id": "UBERON:0004176"}, "row": 13229}] |
+| EONTEDGE | data/raw/ontology_subclass_edges.tsv; TSV rows 11113,11426,11427,11428,11429,11483 | supports | [{"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf", "subject": "UBERON:0000991"}, "row": 11113}, {"data": {"object": "UBERON:0000062", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003133"}, "row": 11426}, {"data": {"object": "UBERON:0005156", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003133"}, "row": 11427}, {"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003134"}, "row": 11428}, {"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003135"}, "row": 11429}, {"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf", "subject": "UBERON:0004176"}, "row": 11483}] |
+| EDEC | curation/decisions.tsv; TSV rows 901 | supports | [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.97989ecf5e", "notes": "Slash alternative; vulva is the female instance. Path: Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External geni", "object_id": "UBERON:0004176", "object_label": "external genitalia", "relation": "", "review_depth": "ITEM"}, "row": 901}] |
+| EP2 | data/habitats/host_associated/reproductive_system__637f205f.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.29feb6867b", "label": "Reproductive system", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000990", "habitatmech:GOLD.e889967f4f"], "source_attestations": [{"assertion_count": 58, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3580", "source_label": "Reproductive system", "source_path": "Host-associated &gt; Mammals &gt; Reproductive system"}]} |
+| EP3 | data/habitats/host_associated/reproductive_system__74cf1790.yaml; Direct-parent identity, definition, hierarchy and source scope | supports | {"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.abc827a582", "label": "Reproductive system", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0000990", "habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"assertion_count": 60, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:3594", "source_label": "Reproductive system", "source_path": "Host-associated &gt; Mammals: Human &gt; Reproductive system"}]} |
+| ESEARCH | Local input and review traversal; grep -rn -E 'external_genitalia&#124;UBERON:0004176' reviews/structured/*/review.yaml curation/ history/ | context_only | Structured-review traversal verified no prior target review bundle exists for this record; curation and history tables were inspected for all matching rows. |
+
+## Limits And Additional Notes
+
+- Only the stated primary evidence and current ontology/taxonomy authorities were independently inspected; original specimen-level support for every source-bin member is not established.
+- Association counts and PREGO scores do not establish prevalence, viability, mechanism or characteristic presence. Parent observations are not inherited by children.
+- Configured label correspondence skipped 2,084 no-adapter pairs; this is not whole-corpus identifier certification.
+- The post-save archive check is a subsequent output gate, not a result claimed in this pre-save observation.
+- iModulonDB is not applicable: the target has no gene, regulator or expression-module assertion. No paid research or scientific-status promotion was performed.
+- All included input bytes match both the clean working tree and exact captured Git revision 355eb4a23118506c83a76cf22c6332d04decffec.
+- Structured archive traversal found no earlier structured review targeting this record. No existing bundle is superseded or closed.
+- This read-only Stage-4 review proposes maintained-owner actions and preserves open findings for Stage 5 grouped remediation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261106T194813Z-external_genitalia-record
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Record review: external genitalia (UBERON:0004176)'
+started_at: '2026-11-06T19:35:00Z'
+finished_at: '2026-11-06T19:48:13Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Same agent inspected the full target and source evidence; not
+    independent human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The multi-path GOLD record UBERON:0004176 (external genitalia, EXACT/SEEDED,
+  10 ORGANISM assertions on the human External genitalia/Vulva path and no assertion
+  count/unit on the mammalian External genitalia path) merges GOLD ''Host-associated
+  > Mammals: Human > Reproductive system > External genitalia/Vulva'' (habitatmech:GOLD.97989ecf5e,
+  grounded with EXACT in curation/decisions.tsv) and ''Host-associated > Mammals >
+  Reproductive system > External genitalia'' (habitatmech:GOLD.2ab65bac9e, unreviewed
+  exact lexical match), but retains mammalian and human Reproductive system GOLD parents
+  (habitatmech:GOLD.29feb6867b, habitatmech:GOLD.abc827a582) as superclasses and promotes
+  slash-disjunction ''External genitalia/Vulva'' as an EXACT_SYNONYM.'
+source:
+  git_revision: 355eb4a23118506c83a76cf22c6332d04decffec
+  state: git_commit
+  inputs:
+  - path: curation/decisions.tsv
+    sha256: e39c962e767c655c22d6b1b5cf1cc392be3af21c2514e9c70d4c6105782d5650
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 725655426fded7f138d9a3e4e7a47eb1165f9a6a6a0d16cd242c07fcebfa0f8c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c1efdfa9188346f3292250e42e9f2315d2d49d8c6235e07733efda22039a5c1c
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: c1207270bb0ae2031e42de6cb8220b20f98886f65e40d48793bfd7e9d757d83a
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 72d7573cdee85f7cd54d27e2c864654b1f3b1121444c28b8d65e901edff9b053
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/host_associated/ethmoid_bone.yaml
+    sha256: e406e59cf9e099828db610c838af4d413af1da9f57d9d2723b518d236188db8a
+    role: context
+  - path: data/habitats/host_associated/external_genitalia.yaml
+    sha256: 772e6d20a4551fa06ab29f3be3d1020ac8eef2d941cd74c3c3e774f2d9d7b972
+    role: target
+  - path: data/habitats/host_associated/reproductive_system__637f205f.yaml
+    sha256: 5e42989b4be93c75426bd107c5447c109a80823ede279076a57bb09d05c4d028
+    role: context
+  - path: data/habitats/host_associated/reproductive_system__74cf1790.yaml
+    sha256: 6d45bc8c65e395c8becf2e8d97a076d494fede86f6586dabcb2c15d53b3ba2bb
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: UBERON:0004176
+  path: data/habitats/host_associated/external_genitalia.yaml
+  label: external genitalia
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Scientific assessment of one exact generated target (data/habitats/host_associated/external_genitalia.yaml)
+    at captured main revision 355eb4a23118506c83a76cf22c6332d04decffec.
+  selection: Contiguous 24-record unreviewed cohort in data/habitats/host_associated/
+    path order (excretory_system__22ee753c through fecal); this bundle assesses its
+    single resolved identifier and source path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - UBERON:0004176
+  exclusions:
+  - target: Other habitat records and SSSOM/KGX products
+    reason: Direct parents and siblings inform hierarchy/synonym interpretation but
+      are not additional completed reviews; exports are not certified.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: .venv/bin/python -m linkml.validator.cli -s src/habitatmech/schema/habitatmech.yaml
+    --target-class HabitatRecord data/habitats/host_associated/external_genitalia.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: Completed 2026-11-06T19:45:12Z. No issues found.
+  scope_note: Individual schema; strict command covers the 24 named cohort targets;
+    other documented gates have full-corpus scope.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/habitats/host_associated/excretory_system__22ee753c.yaml
+    data/habitats/host_associated/excretory_system__37f93bb9.yaml data/habitats/host_associated/exoskeleton.yaml
+    data/habitats/host_associated/external_genitalia.yaml data/habitats/host_associated/external_organs.yaml
+    data/habitats/host_associated/external_organs__aed6edb3.yaml data/habitats/host_associated/external_soft_tissue_zone.yaml
+    data/habitats/host_associated/extracellular.yaml data/habitats/host_associated/extracellular__3f7afaf4.yaml
+    data/habitats/host_associated/extracellular_symbionts.yaml data/habitats/host_associated/eye.yaml
+    data/habitats/host_associated/eye__59a4c665.yaml data/habitats/host_associated/eye__810dedbb.yaml
+    data/habitats/host_associated/eye_ciliary_body.yaml data/habitats/host_associated/eye_ciliary_body__832768c5.yaml
+    data/habitats/host_associated/eye_vitreous_chamber.yaml data/habitats/host_associated/eye_vitreous_chamber__b4eddfc1.yaml
+    data/habitats/host_associated/fallopian_tubes.yaml data/habitats/host_associated/fallopian_tubes__c41e0038.yaml
+    data/habitats/host_associated/fascia.yaml data/habitats/host_associated/fascia__1f6c9c1a.yaml
+    data/habitats/host_associated/fat_body.yaml data/habitats/host_associated/feather.yaml
+    data/habitats/host_associated/fecal.yaml --out /tmp/c6s4_24_strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: 'Completed 2026-11-06T19:45:18Z. Validated 24 files; files with ERROR:
+    0; total ERROR rows: 0.'
+  scope_note: Closed-schema strict validation across all 24 cohort target files (and
+    3,209 full-corpus files).
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: Completed 2026-11-06T19:45:25Z. No issues found; 866 history record(s)
+    valid against src/habitatmech/schema/history.yaml.
+  scope_note: Full-corpus curation history validation.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_provenance.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: 'Completed 2026-11-06T19:45:28Z. provenance current: 14 committed inventories,
+    2 GOLD sources.'
+  scope_note: Full-corpus raw inventory provenance verification.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: 'Completed 2026-11-06T19:45:55Z. expected 3209 records, found 3209 on disk;
+    missing: 0, extra: 0, differing: 0; corpus reproduces exactly from data/raw/.'
+  scope_note: Full-corpus deterministic reproduction from raw inventories and curation
+    tables.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_causal_graph_curations.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: Completed 2026-11-06T19:46:02Z. validated 83 causal-graph curation file(s)
+    with 83 graph(s).
+  scope_note: Full-corpus causal-graph overlay validation.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/build_term_requests.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: Completed 2026-11-06T19:46:05Z. term-request table is current (671 terms).
+  scope_note: Full-corpus term-request table currency check.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - UBERON:0004176
+  summary: 'Completed 2026-11-06T19:47:55Z. OK_CANONICAL: 1203, OK_SYNONYM: 1, OK_EXCEPTION:
+    5, SKIPPED_NO_ADAPTER: 2084. All id<->label pairs correspond.'
+  scope_note: Configured OAK identifier-label correspondence check across corpus and
+    products.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/host_associated/external_genitalia.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: All target fields, source attestations, synonyms, parent_habitats, and
+    generated history for UBERON:0004176 (external genitalia) were read.
+  snapshot_sha256: 772e6d20a4551fa06ab29f3be3d1020ac8eef2d941cd74c3c3e774f2d9d7b972
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Host identity, strict broader hierarchy, bodily fluids, and source ownership
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: Anatomical sites may identify habitats; whole-host taxon terms cannot substitute
+    for associated environments; parent_habitats must be strictly broader across all
+    contributing routes.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: The declared mapping endpoint is the emitted record; contextual xrefs are
+    not equivalence; parent_habitats requires strictly broader habitat classes.
+  snapshot_sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed native resolution routes and generated source fields
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: Seed generator produces identifier=UBERON:0004176, grounding_status=EXACT,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0003133", "habitatmech:GOLD.29feb6867b",
+    "habitatmech:GOLD.abc827a582"].
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: ESIB1
+  kind: record_content
+  reference: data/habitats/host_associated/ethmoid_bone.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: Sibling GOLD-attested anatomical record UBERON:0001679 where grounding_status
+    was updated from EXACT to CLOSE in curation/decisions.tsv (#2296) so a non-equivalent
+    GOLD source label is retained as RELATED_SYNONYM (skos:closeMatch) rather than
+    EXACT_SYNONYM.
+  snapshot_sha256: e406e59cf9e099828db610c838af4d413af1da9f57d9d2723b518d236188db8a
+- evidence_id: EGOLD
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: TSV rows 528,2094
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '[{"data": {"biosample_count": "0", "canonical_path": "Host-associated
+    > Mammals: Human > Reproductive system > External genitalia/Vulva", "depth": "4",
+    "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_subtype":
+    "External genitalia/Vulva", "ecosystem_type": "Reproductive system", "gold_node_count":
+    "2", "gold_node_ids": "gold.ecosystem:6245|gold.ecosystem:6246", "leaf_label":
+    "External genitalia/Vulva", "organism_count": "10", "specific_ecosystem": "",
+    "study_count": "0", "total_assertions": "10"}, "row": 528}, {"data": {"biosample_count":
+    "0", "canonical_path": "Host-associated > Mammals > Reproductive system > External
+    genitalia", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category":
+    "Mammals", "ecosystem_subtype": "External genitalia", "ecosystem_type": "Reproductive
+    system", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:7634|gold.ecosystem:7635",
+    "leaf_label": "External genitalia", "organism_count": "0", "specific_ecosystem":
+    "", "study_count": "0", "total_assertions": "0"}, "row": 2094}]'
+  snapshot_sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+- evidence_id: EONT
+  kind: database
+  reference: data/raw/ontology_terms.tsv
+  locator: TSV rows 13183,13229
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '[{"data": {"definition": "An organ involved in reproduction.", "deprecated":
+    "", "directly_referenced": "FALSE", "label": "reproductive organ", "label_only":
+    "FALSE", "ontology": "UBERON", "synonyms": "genital organ|genitalia|reproductive
+    system organ|sex organ", "term_id": "UBERON:0003133"}, "row": 13183}, {"data":
+    {"definition": "The external genitalia are the outer sex organs, such as the penis
+    or vulva in mammals.", "deprecated": "", "directly_referenced": "TRUE", "label":
+    "external genitalia", "label_only": "FALSE", "ontology": "UBERON", "synonyms":
+    "external genitalia|external reproductive organ|external sex organ", "term_id":
+    "UBERON:0004176"}, "row": 13229}]'
+  snapshot_sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+- evidence_id: EONTEDGE
+  kind: database
+  reference: data/raw/ontology_subclass_edges.tsv
+  locator: TSV rows 11113,11426,11427,11428,11429,11483
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '[{"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf",
+    "subject": "UBERON:0000991"}, "row": 11113}, {"data": {"object": "UBERON:0000062",
+    "predicate": "rdfs:subClassOf", "subject": "UBERON:0003133"}, "row": 11426}, {"data":
+    {"object": "UBERON:0005156", "predicate": "rdfs:subClassOf", "subject": "UBERON:0003133"},
+    "row": 11427}, {"data": {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf",
+    "subject": "UBERON:0003134"}, "row": 11428}, {"data": {"object": "UBERON:0003133",
+    "predicate": "rdfs:subClassOf", "subject": "UBERON:0003135"}, "row": 11429}, {"data":
+    {"object": "UBERON:0003133", "predicate": "rdfs:subClassOf", "subject": "UBERON:0004176"},
+    "row": 11483}]'
+  snapshot_sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+- evidence_id: EDEC
+  kind: database
+  reference: curation/decisions.tsv
+  locator: TSV rows 901
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '[{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12",
+    "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.97989ecf5e",
+    "notes": "Slash alternative; vulva is the female instance. Path: Host-associated
+    > Mammals: Human > Reproductive system > External geni", "object_id": "UBERON:0004176",
+    "object_label": "external genitalia", "relation": "", "review_depth": "ITEM"},
+    "row": 901}]'
+  snapshot_sha256: e39c962e767c655c22d6b1b5cf1cc392be3af21c2514e9c70d4c6105782d5650
+- evidence_id: EP2
+  kind: record_content
+  reference: data/habitats/host_associated/reproductive_system__637f205f.yaml
+  locator: Direct-parent identity, definition, hierarchy and source scope
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.29feb6867b",
+    "label": "Reproductive system", "mapping_status": "SEEDED", "parent_habitats":
+    ["UBERON:0000990", "habitatmech:GOLD.e889967f4f"], "source_attestations": [{"assertion_count":
+    58, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "source": "GOLD", "source_id": "gold.ecosystem:3580", "source_label": "Reproductive
+    system", "source_path": "Host-associated > Mammals > Reproductive system"}]}'
+  snapshot_sha256: 5e42989b4be93c75426bd107c5447c109a80823ede279076a57bb09d05c4d028
+- evidence_id: EP3
+  kind: record_content
+  reference: data/habitats/host_associated/reproductive_system__74cf1790.yaml
+  locator: Direct-parent identity, definition, hierarchy and source scope
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: supports
+  summary: '{"definition": null, "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.abc827a582",
+    "label": "Reproductive system", "mapping_status": "SEEDED", "parent_habitats":
+    ["UBERON:0000990", "habitatmech:GOLD.cd0b0940e5"], "source_attestations": [{"assertion_count":
+    60, "assertion_unit": "ORGANISM", "mapping_predicate": "skos:narrowMatch", "notes":
+    "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.",
+    "source": "GOLD", "source_id": "gold.ecosystem:3594", "source_label": "Reproductive
+    system", "source_path": "Host-associated > Mammals: Human > Reproductive system"}]}'
+  snapshot_sha256: 6d45bc8c65e395c8becf2e8d97a076d494fede86f6586dabcb2c15d53b3ba2bb
+- evidence_id: ESEARCH
+  kind: search
+  reference: Local input and review traversal
+  locator: grep -rn -E 'external_genitalia|UBERON:0004176' reviews/structured/*/review.yaml
+    curation/ history/
+  accessed_at: '2026-11-06T19:48:13Z'
+  support: context_only
+  summary: Structured-review traversal verified no prior target review bundle exists
+    for this record; curation and history tables were inspected for all matching rows.
+  search_scope: curation, history, data/raw, and reviews/structured/*/review.yaml
+    traversal at commit 355eb4a23118506c83a76cf22c6332d04decffec.
+assessments:
+- assessment_id: A1
+  area: schema
+  topic: Native validity and reproduction
+  outcome: supported
+  summary: Individual schema, strict 24-target validation, 866 history records, 14
+    inventory/2 GOLD provenance sources, exact 3,209-record reproduction, 83 causal
+    overlays, and 671 term requests passed.
+  target_ids:
+  - UBERON:0004176
+  evidence_ids:
+  - E1
+  - ERULE
+- assessment_id: A2
+  area: identity
+  topic: Identity, definition, hierarchy and aliases
+  outcome: concern
+  summary: External genitalia (UBERON:0004176) are reproductive organs under UBERON:0003133
+    (reproductive organ), not subtypes (is_a) of the mammalian or human Reproductive
+    system (habitatmech:GOLD.29feb6867b, habitatmech:GOLD.abc827a582); additionally,
+    curation/decisions.tsv row 901 grounds 'External genitalia/Vulva' (habitatmech:GOLD.97989ecf5e)
+    with grounding_status EXACT rather than CLOSE, promoting female-specific slash-disjunction
+    'External genitalia/Vulva' as an EXACT_SYNONYM on cross-sex UBERON:0004176 while
+    habitatmech:GOLD.2ab65bac9e lacks an item-level REVIEW decision.
+  target_ids:
+  - UBERON:0004176
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ESIB1
+  - EGOLD
+  - EONT
+  - EONTEDGE
+  - EDEC
+  - EP2
+  - EP3
+- assessment_id: A3
+  area: quantity
+  topic: Source counts and retained ranking
+  outcome: supported
+  summary: 'Exact raw rows reproduce emitted counts/units, labels, scores, ranks,
+    and pools: [{"source": "GOLD", "count": 10, "unit": "ORGANISM"}, {"source": "GOLD",
+    "count": null, "unit": null}]. Zero counts are omitted; unrelated parent counts
+    are not combined.'
+  target_ids:
+  - UBERON:0004176
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ESIB1
+  - EGOLD
+  - EONT
+  - EONTEDGE
+  - EDEC
+  - EP2
+  - EP3
+- assessment_id: A4
+  area: completeness
+  topic: Parameters, mechanisms and native status
+  outcome: supported
+  summary: Missing optional parameters/graphs are not evidence deficits. Full source
+    decisions and executed routes reproduce SEEDED / EXACT; this read-only review
+    does not mutate generated records.
+  target_ids:
+  - UBERON:0004176
+  evidence_ids:
+  - E1
+  - ESEED
+  - ESCHEMA
+findings:
+- finding_id: F1
+  issue_key: external-genitalia-context-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: External genitalia retains mammalian and human Reproductive system GOLD parents
+    as superclasses
+  description: 'Add exclusion rows in curation/gold_parent_exclusions.tsv for source
+    identifier habitatmech:GOLD.2ab65bac9e (''Host-associated > Mammals > Reproductive
+    system > External genitalia'', excluding parent_id habitatmech:GOLD.29feb6867b)
+    and source identifier habitatmech:GOLD.97989ecf5e (''Host-associated > Mammals:
+    Human > Reproductive system > External genitalia/Vulva'', excluding parent_id
+    habitatmech:GOLD.abc827a582) on exact target UBERON:0004176, preserving ontology
+    parent UBERON:0003133 (reproductive organ).'
+  target_ids:
+  - UBERON:0004176
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ESIB1
+  - EGOLD
+  - EONT
+  - EONTEDGE
+  - EDEC
+  - EP2
+  - EP3
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Materially unsupported semantic or representation claim; deterministic
+    validity does not establish scientific support.
+  external_issues: []
+- finding_id: F2
+  issue_key: external-genitalia-vulva-exact-synonym
+  category: nomenclature
+  severity: major
+  status: open
+  certainty: confirmed
+  title: External genitalia promotes slash-disjunction 'External genitalia/Vulva'
+    as an exact synonym and lacks item-level review on its second GOLD path
+  description: 'Update curation/decisions.tsv row 901 for habitatmech:GOLD.97989ecf5e
+    (''Host-associated > Mammals: Human > Reproductive system > External genitalia/Vulva'',
+    object_id UBERON:0004176) from grounding_status EXACT to CLOSE so the slash-disjunction
+    label ''External genitalia/Vulva'' is emitted with scope RELATED_SYNONYM (skos:closeMatch)
+    rather than EXACT_SYNONYM, and add an item-level REVIEW decision row (EXACT ->
+    UBERON:0004176) for habitatmech:GOLD.2ab65bac9e (''Host-associated > Mammals >
+    Reproductive system > External genitalia'') so both feeding source concepts are
+    reviewed.'
+  target_ids:
+  - UBERON:0004176
+  field_paths:
+  - mapping_status
+  - source_attestations[0].mapping_predicate
+  - synonyms
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ESIB1
+  - EGOLD
+  - EONT
+  - EONTEDGE
+  - EDEC
+  - EP2
+  - EP3
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Materially unsupported semantic or representation claim; deterministic
+    validity does not establish scientific support.
+  external_issues: []
+actions:
+- action_id: ACT1
+  finding_ids:
+  - F1
+  target_ids:
+  - UBERON:0004176
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  description: 'Add exclusion rows in curation/gold_parent_exclusions.tsv for source
+    identifier habitatmech:GOLD.2ab65bac9e (''Host-associated > Mammals > Reproductive
+    system > External genitalia'', excluding parent_id habitatmech:GOLD.29feb6867b)
+    and source identifier habitatmech:GOLD.97989ecf5e (''Host-associated > Mammals:
+    Human > Reproductive system > External genitalia/Vulva'', excluding parent_id
+    habitatmech:GOLD.abc827a582) on exact target UBERON:0004176, preserving ontology
+    parent UBERON:0003133 (reproductive organ). No repair is performed by this read-only
+    review.'
+  generator: Controlled source/curation update in Stage 5, then just seed, guarded
+    just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
+    regeneration.
+  acceptance_checks:
+  - Regress the exact reported claim and preserve independently valid identifiers,
+    source counts/units, raw provenance, native status and history.
+  - Append the authorized curation history and require schema, strict, provenance,
+    history, corpus, label, site and full QC gates.
+  - Reassess the changed record in an immutable successor retaining this issue key
+    and exact predecessor lineage.
+- action_id: ACT2
+  finding_ids:
+  - F2
+  target_ids:
+  - UBERON:0004176
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  description: 'Update curation/decisions.tsv row 901 for habitatmech:GOLD.97989ecf5e
+    (''Host-associated > Mammals: Human > Reproductive system > External genitalia/Vulva'',
+    object_id UBERON:0004176) from grounding_status EXACT to CLOSE so the slash-disjunction
+    label ''External genitalia/Vulva'' is emitted with scope RELATED_SYNONYM (skos:closeMatch)
+    rather than EXACT_SYNONYM, and add an item-level REVIEW decision row (EXACT ->
+    UBERON:0004176) for habitatmech:GOLD.2ab65bac9e (''Host-associated > Mammals >
+    Reproductive system > External genitalia'') so both feeding source concepts are
+    reviewed. No repair is performed by this read-only review.'
+  generator: Controlled source/curation update in Stage 5, then just seed, guarded
+    just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
+    regeneration.
+  acceptance_checks:
+  - Regress the exact reported claim and preserve independently valid identifiers,
+    source counts/units, raw provenance, native status and history.
+  - Append the authorized curation history and require schema, strict, provenance,
+    history, corpus, label, site and full QC gates.
+  - Reassess the changed record in an immutable successor retaining this issue key
+    and exact predecessor lineage.
+limitations:
+- Only the stated primary evidence and current ontology/taxonomy authorities were
+  independently inspected; original specimen-level support for every source-bin member
+  is not established.
+- Association counts and PREGO scores do not establish prevalence, viability, mechanism
+  or characteristic presence. Parent observations are not inherited by children.
+- Configured label correspondence skipped 2,084 no-adapter pairs; this is not whole-corpus
+  identifier certification.
+- The post-save archive check is a subsequent output gate, not a result claimed in
+  this pre-save observation.
+- 'iModulonDB is not applicable: the target has no gene, regulator or expression-module
+  assertion. No paid research or scientific-status promotion was performed.'
+notes:
+- All included input bytes match both the clean working tree and exact captured Git
+  revision 355eb4a23118506c83a76cf22c6332d04decffec.
+- Structured archive traversal found no earlier structured review targeting this record.
+  No existing bundle is superseded or closed.
+- This read-only Stage-4 review proposes maintained-owner actions and preserves open
+  findings for Stage 5 grouped remediation.
+tags:
+- individual-scientific-review
+- host-associated
+```
