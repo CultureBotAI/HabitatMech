@@ -1,0 +1,359 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 7,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "6a699ab5f6f775ca0c18be7a12d7af2e2645f31e",
+  "cohort_id": "fecal__0d8696a2_to_fin",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/fecal__0d8696a2.yaml through data/habitats/host_associated/fin.yaml (next 24 unreviewed host_associated records at indices 506..529 immediately following Cycle 6 Stage 4 slice ending at fecal.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 15,
+  "needs_curation_count": 9,
+  "new_open_finding_count": 11,
+  "carried_deferred_finding_count": 51,
+  "total_carry_forward_finding_count": 62,
+  "category_review_bundle": {
+    "review_id": "20261108T115000Z-fecal__0d8696a2_to_fin-category",
+    "yaml_path": "reviews/structured/20261108T115000Z-fecal__0d8696a2_to_fin-category/review.yaml",
+    "yaml_sha256": "2d346576097ed09476a93c0a9c7fa7ca3aaccbdb91046ec771f2b449f6376643",
+    "md_path": "reviews/structured/20261108T115000Z-fecal__0d8696a2_to_fin-category/review.md",
+    "md_sha256": "88f975f61b25764ec1640d75d343b58caa8eddc784ac24328e80a00e5ccb9869",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261108T114910Z-fecal__0d8696a2-record",
+      "target_path": "data/habitats/host_associated/fecal__0d8696a2.yaml",
+      "target_id": "habitatmech:GOLD.e60074d642",
+      "target_label": "mollusc feces",
+      "target_sha256": "67f1694100c5caec45e311155198921fe59680be2242e7671a45f679b5396bd9",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114910Z-fecal__0d8696a2-record/review.yaml",
+      "yaml_sha256": "81650434735323e0d73aee7c37e42109c86065ea457e752c6dbbba1497a5ecfc",
+      "md_path": "reviews/structured/20261108T114910Z-fecal__0d8696a2-record/review.md",
+      "md_sha256": "ff6969c247ad7c656659e8a11a27cc77a6ef53ba7b64be3355a6831f8f68a7d6"
+    },
+    {
+      "review_id": "20261108T114911Z-fecal__0e10427f-record",
+      "target_path": "data/habitats/host_associated/fecal__0e10427f.yaml",
+      "target_id": "habitatmech:GOLD.51a8d52cec",
+      "target_label": "cephalochordate feces",
+      "target_sha256": "653ec0f5cb4dd6205e1ec06b1016787b052f11bdcbcc3ad4fd6d84748eb6623b",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114911Z-fecal__0e10427f-record/review.yaml",
+      "yaml_sha256": "02f37b928327194190751877ff0882ff49d7d8d23dd7af3d2dc10bfb186c9157",
+      "md_path": "reviews/structured/20261108T114911Z-fecal__0e10427f-record/review.md",
+      "md_sha256": "4ac48c98eb53051d1222b1030221e0867bfd30765b0caaa766d473be328c0b37"
+    },
+    {
+      "review_id": "20261108T114912Z-fecal__69dad039-record",
+      "target_path": "data/habitats/host_associated/fecal__69dad039.yaml",
+      "target_id": "habitatmech:GOLD.8ac00537bc",
+      "target_label": "crustacean feces",
+      "target_sha256": "4c5eef70c7d51e303be28a60f12b4757f1ab2877093dcb477d7b45f51002c680",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114912Z-fecal__69dad039-record/review.yaml",
+      "yaml_sha256": "a4071384b6b70b9f8bfc1e067142fa98ab8b0b22a4b119b4153ed666292519f3",
+      "md_path": "reviews/structured/20261108T114912Z-fecal__69dad039-record/review.md",
+      "md_sha256": "3eca05f638943214dc4973e9a91ae176542c7b230e7707b2c956761e0762ac45"
+    },
+    {
+      "review_id": "20261108T114913Z-fecal__89494a72-record",
+      "target_path": "data/habitats/host_associated/fecal__89494a72.yaml",
+      "target_id": "habitatmech:GOLD.ee5582c64e",
+      "target_label": "reptile feces",
+      "target_sha256": "68506f47c23dabab6c751a9faa2e4e9fea9309f9ce2a89b933cf11e7e53d612b",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114913Z-fecal__89494a72-record/review.yaml",
+      "yaml_sha256": "f4cf3e4566838225873ed0d256517c6b3f2b27086b7592381be82d56da6f6136",
+      "md_path": "reviews/structured/20261108T114913Z-fecal__89494a72-record/review.md",
+      "md_sha256": "41457fda3ca7d1090a09853650433b145acca0272a880708d805a177570b677f"
+    },
+    {
+      "review_id": "20261108T114914Z-fecal__c047ee1e-record",
+      "target_path": "data/habitats/host_associated/fecal__c047ee1e.yaml",
+      "target_id": "habitatmech:GOLD.db419db455",
+      "target_label": "amphibian feces",
+      "target_sha256": "ea151cb158e3708a9eba04a6b563e0cc7863ee266cdfb399903297d3a6b48f96",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114914Z-fecal__c047ee1e-record/review.yaml",
+      "yaml_sha256": "162efac3b889ce638a4c635b6f3e69cf37546f1049bd421eeee24d03a07a34b4",
+      "md_path": "reviews/structured/20261108T114914Z-fecal__c047ee1e-record/review.md",
+      "md_sha256": "c4853bb1467540c57501a25c338450b6f13416a33660fbe82bff25a8c9680969"
+    },
+    {
+      "review_id": "20261108T114915Z-fecal__ceae17b6-record",
+      "target_path": "data/habitats/host_associated/fecal__ceae17b6.yaml",
+      "target_id": "habitatmech:GOLD.48d5963d27",
+      "target_label": "insect nymph feces",
+      "target_sha256": "0283b2de6546ce66a554e8499a897aab3226999a7af29cee42b9a97d96c542c1",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114915Z-fecal__ceae17b6-record/review.yaml",
+      "yaml_sha256": "499f5b390ebcbd5da7a616b14901464a7d3af2463a9f26e61d063fb131645ffd",
+      "md_path": "reviews/structured/20261108T114915Z-fecal__ceae17b6-record/review.md",
+      "md_sha256": "17a6056d3fb3d642f1b8d9fdd2f416feb135fc858c4ca52727fb520fe40433dd"
+    },
+    {
+      "review_id": "20261108T114916Z-fecal__d12909cd-record",
+      "target_path": "data/habitats/host_associated/fecal__d12909cd.yaml",
+      "target_id": "habitatmech:GOLD.d43c16754a",
+      "target_label": "myriapod feces",
+      "target_sha256": "b40aeb69f9d74e8b0c47dc7aef1e75b5dca1170cb93573e5e08340620cf65a4e",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114916Z-fecal__d12909cd-record/review.yaml",
+      "yaml_sha256": "afa6f97687571b3012791aff138a56bdc49567715faee459069d1744c5358d0c",
+      "md_path": "reviews/structured/20261108T114916Z-fecal__d12909cd-record/review.md",
+      "md_sha256": "5876f1c243667da0755b2a3d3f2df1121de6e68c972c35f793ef2873db562041"
+    },
+    {
+      "review_id": "20261108T114917Z-fecal__e9f04eec-record",
+      "target_path": "data/habitats/host_associated/fecal__e9f04eec.yaml",
+      "target_id": "habitatmech:GOLD.e381535c08",
+      "target_label": "insect feces",
+      "target_sha256": "a0b23051acf8bc3d58db1f4db466cf20caf3b378d6fde6308e6932d3600c3911",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114917Z-fecal__e9f04eec-record/review.yaml",
+      "yaml_sha256": "804ffdf3127463134aa40d350d35bdc2b582fa4b28bd070b0751a910e7a2da8c",
+      "md_path": "reviews/structured/20261108T114917Z-fecal__e9f04eec-record/review.md",
+      "md_sha256": "55783046fd1e7b9c84009b9a4205a020a98e3b02c93c9ff12d0be76fbeecbe1c"
+    },
+    {
+      "review_id": "20261108T114918Z-feces-record",
+      "target_path": "data/habitats/host_associated/feces.yaml",
+      "target_id": "UBERON:0001988",
+      "target_label": "feces",
+      "target_sha256": "8fc3ef983646fb278130da29b370d5448ac99af2762f66746aad06d187d3fddb",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "feces-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261108T114918Z-feces-record/review.yaml",
+      "yaml_sha256": "5a6269756387eaf2e2495129ec235493f6f7a93f33b897de78412f960e51124f",
+      "md_path": "reviews/structured/20261108T114918Z-feces-record/review.md",
+      "md_sha256": "d919734782ca6a07632cfc81b1fd53923b242d3e993c21f750c7eadecd9bce9c"
+    },
+    {
+      "review_id": "20261108T114919Z-felidae_cat-record",
+      "target_path": "data/habitats/host_associated/felidae_cat.yaml",
+      "target_id": "habitatmech:BACDIVE.e6b73de092",
+      "target_label": "felid-associated environment",
+      "target_sha256": "3dd7a088e391125221029b4f8261bb34523c522885c0e510e085c6fb3b0ecd53",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "felidae-cat-host-name-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261108T114919Z-felidae_cat-record/review.yaml",
+      "yaml_sha256": "ab003d34fa2b6957faa11b5ca01643bc1c48b14604e6e45d5664a125c56edb87",
+      "md_path": "reviews/structured/20261108T114919Z-felidae_cat-record/review.md",
+      "md_sha256": "a10415924da135ac77ccc05449f81c2fd6816af304f0e872456fb69bf89e06bc"
+    },
+    {
+      "review_id": "20261108T114920Z-female_reproductive_system-record",
+      "target_path": "data/habitats/host_associated/female_reproductive_system.yaml",
+      "target_id": "BTO:0000083",
+      "target_label": "female reproductive system",
+      "target_sha256": "5864f583e48bca17f6d1b1a9c6022b952f70f915299bd2bfebaa0a5f4b2b6689",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114920Z-female_reproductive_system-record/review.yaml",
+      "yaml_sha256": "9bd97cf9847e1c4b6f52f71c0f31a4ab13ee9e8da0b85f06fccd055f94826d24",
+      "md_path": "reviews/structured/20261108T114920Z-female_reproductive_system-record/review.md",
+      "md_sha256": "06e1c8602892c99d6a5de6047d8fb1d6a564ecf23aaf2aa79825f80613955e27"
+    },
+    {
+      "review_id": "20261108T114921Z-fetal_tissue-record",
+      "target_path": "data/habitats/host_associated/fetal_tissue.yaml",
+      "target_id": "habitatmech:GOLD.1ad500c492",
+      "target_label": "human fetal tissue",
+      "target_sha256": "05d9bd20f215501935d6bb2e631497f1f9bac637a08b0782bd44b8dabc37aeb0",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fetal-tissue-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261108T114921Z-fetal_tissue-record/review.yaml",
+      "yaml_sha256": "6355e441b5747fc632c3b22f4d39905d87f9dad755067a7580e8d1a4daeb6481",
+      "md_path": "reviews/structured/20261108T114921Z-fetal_tissue-record/review.md",
+      "md_sha256": "536af60dabbcedd5111ee85370c95dcd6f7437ae875895cc1f743cbc9a83fc83"
+    },
+    {
+      "review_id": "20261108T114922Z-fetal_tissue__610eb0c8-record",
+      "target_path": "data/habitats/host_associated/fetal_tissue__610eb0c8.yaml",
+      "target_id": "habitatmech:GOLD.baffd7f6c7",
+      "target_label": "mammalian fetal tissue",
+      "target_sha256": "b800c1c5b8c80447e3702fe0ccc36d31fab4c33ade6204048f3ff42221691b03",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114922Z-fetal_tissue__610eb0c8-record/review.yaml",
+      "yaml_sha256": "8c211d07822dfd4991dc9184c1f9e8df308a4ae01a8a72d18273abc7f3eec690",
+      "md_path": "reviews/structured/20261108T114922Z-fetal_tissue__610eb0c8-record/review.md",
+      "md_sha256": "4c581f3fcec360f2e8f96a2a0c0c58fe07b3dcc5330e4c7c7e41119ed2cf2bb0"
+    },
+    {
+      "review_id": "20261108T114923Z-fetus-record",
+      "target_path": "data/habitats/host_associated/fetus.yaml",
+      "target_id": "habitatmech:GOLD.c8a2e380c1",
+      "target_label": "Fetus",
+      "target_sha256": "cda704d0cd49b4dbd5fa4e7bf2c6e6e0e4f8ee23c52ffcaa639c16c4e441c247",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fetus-life-stage-parent",
+        "fetus-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261108T114923Z-fetus-record/review.yaml",
+      "yaml_sha256": "25851b4b2fec1406831f2ba89f5e04feff3a52a90157b258f502994e82acb2ae",
+      "md_path": "reviews/structured/20261108T114923Z-fetus-record/review.md",
+      "md_sha256": "07b017ff2c73dbf992fa361dd89bb9e2032c347b2dab2e08876c09f1460a2e85"
+    },
+    {
+      "review_id": "20261108T114924Z-fetus__250e9844-record",
+      "target_path": "data/habitats/host_associated/fetus__250e9844.yaml",
+      "target_id": "habitatmech:GOLD.f2a6418a5c",
+      "target_label": "Fetus",
+      "target_sha256": "1de36aaf5d6ba77a218d90b8733c18252b8935c2bf9a855c1bd24c8890d7a60d",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fetus--250e9844-life-stage-parent",
+        "fetus--250e9844-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261108T114924Z-fetus__250e9844-record/review.yaml",
+      "yaml_sha256": "afea9b4fce3dfae52ade56012e2114f84bc56a295f9050936a9c283366054154",
+      "md_path": "reviews/structured/20261108T114924Z-fetus__250e9844-record/review.md",
+      "md_sha256": "1c9625c75e3c946db8129329a4fbc59700581c7f2f28aa7ed05ac5084e2bfc08"
+    },
+    {
+      "review_id": "20261108T114925Z-fiber-record",
+      "target_path": "data/habitats/host_associated/fiber.yaml",
+      "target_id": "BTO:0000450",
+      "target_label": "fiber",
+      "target_sha256": "dfa40a66ade495444259818c2bd14f0cbb0d3af607013bc35a56857ab1b9c4d4",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114925Z-fiber-record/review.yaml",
+      "yaml_sha256": "ac88a94949c099119fdef4c800c965fc98ec1f12291b8a5680ac8ae720dd7055",
+      "md_path": "reviews/structured/20261108T114925Z-fiber-record/review.md",
+      "md_sha256": "d785d3a1967e4c28769e3f7428133280ccd5f3a9ad8837af8feed5b4fbed9b22"
+    },
+    {
+      "review_id": "20261108T114926Z-fibroblast-record",
+      "target_path": "data/habitats/host_associated/fibroblast.yaml",
+      "target_id": "BTO:0000452",
+      "target_label": "fibroblast",
+      "target_sha256": "fa6aff5fc022ecf64c5a27724d25336cc54c3b9880b249f5b519a13c998e37b7",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114926Z-fibroblast-record/review.yaml",
+      "yaml_sha256": "7a1172394f69cacc969491132d844297df9dfb4a1e89361d15ffb3948010e4ba",
+      "md_path": "reviews/structured/20261108T114926Z-fibroblast-record/review.md",
+      "md_sha256": "71cea60a5d47c8047b15a25334a5811f8bc0858313ceb6a88ffd778261514e2a"
+    },
+    {
+      "review_id": "20261108T114927Z-fibrocartilage-record",
+      "target_path": "data/habitats/host_associated/fibrocartilage.yaml",
+      "target_id": "habitatmech:GOLD.6e80125d90",
+      "target_label": "Fibrocartilage",
+      "target_sha256": "eb6bbd8fd1447dfd697fa70773bd6d10cd37c3f0982fd740ba66e9ceae6e3353",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fibrocartilage-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261108T114927Z-fibrocartilage-record/review.yaml",
+      "yaml_sha256": "d6157b03130e965c1da941c33d4183daaa060cd20044c1a4f52a5f834109af61",
+      "md_path": "reviews/structured/20261108T114927Z-fibrocartilage-record/review.md",
+      "md_sha256": "fc14b399aefc68146546bc2b7394ec5da3854ea971fac5abf21b8262153e77ca"
+    },
+    {
+      "review_id": "20261108T114928Z-fibrocartilage__9cc92423-record",
+      "target_path": "data/habitats/host_associated/fibrocartilage__9cc92423.yaml",
+      "target_id": "habitatmech:GOLD.763577f3ae",
+      "target_label": "Fibrocartilage",
+      "target_sha256": "fda34f53a1a05545a9685c02254585834e9dd743c8addf8581caa7c3de580634",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fibrocartilage--9cc92423-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261108T114928Z-fibrocartilage__9cc92423-record/review.yaml",
+      "yaml_sha256": "b96f4452b52558a5d7a707ae938b68508446a1be4ec146cf6567c888fdb5d7fe",
+      "md_path": "reviews/structured/20261108T114928Z-fibrocartilage__9cc92423-record/review.md",
+      "md_sha256": "786e5129ddf2ba6bfb36418623d029e37af587a5f9e37880f7cf95baa3030e04"
+    },
+    {
+      "review_id": "20261108T114929Z-fibroma-record",
+      "target_path": "data/habitats/host_associated/fibroma.yaml",
+      "target_id": "habitatmech:GOLD.fb56a964a6",
+      "target_label": "Fibroma",
+      "target_sha256": "8b83ff1248778ec4471664c24f5385d1e17cb23be7b7e31605e0e62559444dfe",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fibroma-not-applicable-benign-tumor-parent"
+      ],
+      "yaml_path": "reviews/structured/20261108T114929Z-fibroma-record/review.yaml",
+      "yaml_sha256": "c6712a31d70b3651790576beaf2fda50dc7029abeabe5ba61098af533f81f93a",
+      "md_path": "reviews/structured/20261108T114929Z-fibroma-record/review.md",
+      "md_sha256": "dc0bbe7b710edeea7bf175d3853db4671b4139d3db1229d31c795f2645f35afc"
+    },
+    {
+      "review_id": "20261108T114930Z-filament-record",
+      "target_path": "data/habitats/host_associated/filament.yaml",
+      "target_id": "BTO:0000463",
+      "target_label": "filament",
+      "target_sha256": "366154d88a6566c3749a3b9a619c0049c39c881ce99a3147e5670dbd24be05db",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114930Z-filament-record/review.yaml",
+      "yaml_sha256": "c8c85059527ceb17c5216ee2ee7ea2471151f2501845ec3cce10d5ffd8952f5b",
+      "md_path": "reviews/structured/20261108T114930Z-filament-record/review.md",
+      "md_sha256": "bd89e5821f593c3c77f34836f00c1039df0ee41120cee05b81903cad3f527206"
+    },
+    {
+      "review_id": "20261108T114931Z-filiform_warts-record",
+      "target_path": "data/habitats/host_associated/filiform_warts.yaml",
+      "target_id": "habitatmech:GOLD.06c04be03f",
+      "target_label": "human filiform wart",
+      "target_sha256": "b50e8b4837fd41762346756e167d4eefe6782f08238de1d806f14f99c1bef315",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114931Z-filiform_warts-record/review.yaml",
+      "yaml_sha256": "383cef23e88ee525de5bc62b7c928b2de8d578943cf8ce8684c3d86936ddd77b",
+      "md_path": "reviews/structured/20261108T114931Z-filiform_warts-record/review.md",
+      "md_sha256": "10005410fd7f62f61d512e61608cd28d2c09d9101445767d46deb6ee66b1705c"
+    },
+    {
+      "review_id": "20261108T114932Z-filter_chamber-record",
+      "target_path": "data/habitats/host_associated/filter_chamber.yaml",
+      "target_id": "habitatmech:GOLD.6e59a6cbb1",
+      "target_label": "hemipteran midgut filter chamber",
+      "target_sha256": "ae353e187ed065b52f5b95d5efa59d923fa5b00f198533425cc818b99fde3f80",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261108T114932Z-filter_chamber-record/review.yaml",
+      "yaml_sha256": "a7995bce4803c5a470fbda30bea893a036c488982e9e3cc803799f9471a52d60",
+      "md_path": "reviews/structured/20261108T114932Z-filter_chamber-record/review.md",
+      "md_sha256": "beb6d01b22020352e0474914dca6ef8975b4e14f9626218251d546b8842d1ff4"
+    },
+    {
+      "review_id": "20261108T114933Z-fin-record",
+      "target_path": "data/habitats/host_associated/fin.yaml",
+      "target_id": "UBERON:0008897",
+      "target_label": "fin",
+      "target_sha256": "c069ed80cee42d1a4f05b28203be3b08fbc78971f140c39aa84c568fe87d62f2",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fin-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261108T114933Z-fin-record/review.yaml",
+      "yaml_sha256": "facd88fba1af1d602c65f2c312b54d6e26ca3ac10cdd371d37d8f2b94c984318",
+      "md_path": "reviews/structured/20261108T114933Z-fin-record/review.md",
+      "md_sha256": "ff70378c70c6bbeb07c0d5211c3067ee79da15b19b0a61b142d9a10ddeb02aa3"
+    }
+  ]
+}
