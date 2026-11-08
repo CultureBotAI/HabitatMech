@@ -34,9 +34,61 @@ causal_graphs:
     label: Haloquadratum walsbyi Squarebop I bacteriorhodopsin and Salinibacter ruber salinixanthin-xanthorhodopsin
       and outer-membrane porin
     node_type: GENE_OR_PROTEIN
-    description: Membrane-embedded retinal proton pumps Squarebop I bacteriorhodopsin in Haloquadratum
-      walsbyi and salinixanthin/retinal-cofactor xanthorhodopsin plus the 8-stranded beta-barrel salinixanthin-retaining
-      outer-membrane porin in Salinibacter ruber.
+    description: Membrane-embedded retinal proton pumps Squarebop I bacteriorhodopsin (bop1, UniProtKB:Q18DH8)
+      and Squarebop II bacteriorhodopsin-like protein (bop2, UniProtKB:Q18DH5) in Haloquadratum walsbyi
+      and salinixanthin/retinal-cofactor xanthorhodopsin (SRU_1500, UniProtKB:Q2S2F8) plus the 8-stranded
+      beta-barrel salinixanthin-retaining outer-membrane porin in Salinibacter ruber (source-limited in
+      PMID:36229623 abstract as an unknown protein without a named locus tag).
+    protein_examples:
+    - accession: UniProtKB:Q18DH8
+      entry_name: BACR1_HALWD
+      recommended_name: Bacteriorhodopsin-I
+      gene_symbol: bop1
+      locus_tag: HQ_1014A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: family_member
+      sequence_length: 254
+      crc64: 110CC901DDF50298
+      evidence:
+      - reference: PMID:22580037
+        snippet: Squarebop I bacteriorhodopsin is a light-activated proton pump present in the membranes
+          of the archeon Haloquadratum walsbyi, a square-shaped organism representing 50-60% of microbial
+          population in the crystallizer ponds of the coastal salterns.
+        notes: Haloquadratum walsbyi DSM 16790 / HBSQ001 encodes Squarebop I bacteriorhodopsin (bop1, HQ_1014A,
+          UniProtKB:Q18DH8; 254 aa) isolated from saltern crystallizer pond biomass (PMID:22580037).
+    - accession: UniProtKB:Q18DH5
+      entry_name: BACRM_HALWD
+      recommended_name: Bacteriorhodopsin-II-like protein
+      gene_symbol: bop2
+      locus_tag: HQ_1017A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: isoprotein
+      sequence_length: 246
+      crc64: 5839F73BE76F4090
+      evidence:
+      - reference: PMID:26507954
+        snippet: We estimated a concentration of bacteriorhodopsin and bacteriorhodopsin-like pigments of
+          3.6 nmol l(-1).
+        notes: Haloquadratum walsbyi DSM 16790 / HBSQ001 encodes Bacteriorhodopsin-II-like protein (bop2,
+          HQ_1017A, UniProtKB:Q18DH5; 246 aa) alongside Bacteriorhodopsin-I in saltern crystallizer brines
+          (PMID:26507954).
+    - accession: UniProtKB:Q2S2F8
+      entry_name: Q2S2F8_SALRD
+      recommended_name: Xanthorhodopsin
+      locus_tag: SRU_1500
+      taxon_id: NCBITaxon:309807
+      taxon_name: Salinibacter ruber (strain DSM 13855 / M31)
+      role_in_node: family_member
+      sequence_length: 273
+      crc64: DFA5CF3DE0A15207
+      evidence:
+      - reference: PMID:23373661
+        snippet: Salinibacter produces an unusual carotenoid, salinixanthin that forms a light antenna and
+          transfers energy to the retinal group of xanthorhodopsin, a light-driven proton pump.
+        notes: Salinibacter ruber DSM 13855 / M31 encodes the 273-aa salinixanthin-bound light-driven proton
+          pump xanthorhodopsin (SRU_1500, UniProtKB:Q2S2F8) (PMID:23373661).
   - node_id: retinal_proton_pumping_phototrophy_and_respiratory_chain_competition
     label: light-driven retinal proton pumping, respiratory-chain competition, and hypersaline charge
       homeostasis
@@ -132,4 +184,11 @@ curation_history:
   changes: Added saline_evaporation_pond_haloquadratum_squarebop_and_salinibacter_xanthorhodopsin_phototrophy
     mechanism graph for saline_evaporation_pond (ENVO:00000055) backed by PMID:23373661, PMID:22580037,
     PMID:26507954, and PMID:36229623.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:Q18DH8, UniProtKB:Q18DH5, UniProtKB:Q2S2F8)
+    to squarebop_i_bacteriorhodopsin_xanthorhodopsin_and_salinixanthin_porin and documented abstract-level
+    source limitation for the unnamed Salinibacter ruber outer-membrane porin (PMID:36229623).
   llm_assisted: true

@@ -70,9 +70,88 @@ causal_graphs:
     label: Xylella fastidiosa polygalacturonase PglA (pglA), beta-1,4-endoglucanases
       EngXCA1 and EngXCA2, and DSF synthase RpfF (rpfF)
     node_type: GENE_OR_PROTEIN
-    description: Cell-wall-degrading polygalacturonase PglA (pglA) and beta-1,4-endoglucanases
-      EngXCA1 and EngXCA2 together with the RpfF (rpfF) synthase producing diffusible
-      signal factor (DSF) in Xylella fastidiosa.
+    description: Cell-wall-degrading polygalacturonase PglA (pglA; Pierce's disease
+      reference proteome Xylella fastidiosa strain M23 XfasM23_1570 UniProtKB:B2I701,
+      100% sequence-identical via UniParc UPI0000007D1C to retired Temecula1 Q87BG8)
+      and beta-1,4-endoglucanases EngXCA1 (XfasM23_1953 UniProtKB:B2I997, 100% identical
+      via UPI0000007E74 to retired Temecula1 Q87AH4) and EngXCA2 (XfasM23_2164 UniProtKB:B2IAC4,
+      100% identical via UPI0000007F39 to retired Temecula1 Q879X8) together with
+      the RpfF (rpfF) synthase producing diffusible signal factor (DSF) in Xylella
+      fastidiosa (citrus strain 9a5c XF_1115 UniProtKB:Q9PEB3 and Pierce's disease
+      strain M23 XfasM23_0401 UniProtKB:B2I851 / UPI0000007928).
+    protein_examples:
+    - accession: UniProtKB:B2I701
+      entry_name: B2I701_XYLF2
+      recommended_name: Glycoside hydrolase family 28
+      locus_tag: XfasM23_1570
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: strain_exemplar
+      sequence_length: 544
+      crc64: 6CBBD32CB16F2322
+      evidence:
+      - reference: PMID:17427811
+        snippet: These genes include several beta-1,4 endoglucanases, several xylanases,
+          several xylosidases, and one polygalacturonase (PG). In this study, we demonstrated
+          that the pglA gene encodes a functional PG.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2I701
+          (XfasM23_1570; 544 aa, crc64 6CBBD32CB16F2322) has 100% sequence identity
+          in UniParc (UPI0000007D1C) to the retired Temecula1 pglA TrEMBL entry Q87BG8
+          characterized in PMID:17427811.
+    - accession: UniProtKB:B2I997
+      entry_name: B2I997_XYLF2
+      recommended_name: Endoglucanase
+      locus_tag: XfasM23_1953
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: family_member
+      sequence_length: 614
+      crc64: 29EC67E42F4BC3F7
+      evidence:
+      - reference: PMID:31216219
+        snippet: Here, we demonstrate that two X. fastidiosa β-1,4-endoglucanases
+          (EGases), EngXCA1 and EngXCA2, also play a role in how X. fastidiosa interfaces
+          with grapevine PMs.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2I997
+          (XfasM23_1953; 614 aa, crc64 29EC67E42F4BC3F7) has 100% sequence identity
+          in UniParc (UPI0000007E74) to the retired Temecula1 EngXCA1 TrEMBL entry
+          Q87AH4 (PMID:31216219).
+    - accession: UniProtKB:B2IAC4
+      entry_name: B2IAC4_XYLF2
+      recommended_name: Endoglucanase
+      locus_tag: XfasM23_2164
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: family_member
+      sequence_length: 356
+      crc64: BEA75D2F5D3D332F
+      evidence:
+      - reference: PMID:31216219
+        snippet: Here, we demonstrate that two X. fastidiosa β-1,4-endoglucanases
+          (EGases), EngXCA1 and EngXCA2, also play a role in how X. fastidiosa interfaces
+          with grapevine PMs.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2IAC4
+          (XfasM23_2164; 356 aa, crc64 BEA75D2F5D3D332F) has 100% sequence identity
+          in UniParc (UPI0000007F39) to the retired Temecula1 EngXCA2 TrEMBL entry
+          Q879X8 (PMID:31216219).
+    - accession: UniProtKB:Q9PEB3
+      entry_name: Q9PEB3_XYLFA
+      recommended_name: Regulator of pathogenicity factors
+      locus_tag: XF_1115
+      taxon_id: NCBITaxon:160492
+      taxon_name: Xylella fastidiosa (strain 9a5c)
+      role_in_node: strain_exemplar
+      sequence_length: 290
+      crc64: DAA5F075E6AA6CB5
+      evidence:
+      - reference: PMID:28777044
+        snippet: Expression of genes contributing to xylem colonization are suppressed,
+          while those necessary for insect vector acquisition are increased with increasing
+          concentrations of diffusible signal factor (DSF), whose production is dependent
+          on RpfF.
+        notes: Citrus Xylella fastidiosa subsp. pauca strain 9a5c encodes the 290-aa
+          Regulator of pathogenicity factors RpfF (XF_1115, UniProtKB:Q9PEB3) studied
+          in transgenic citrus/tobacco DSF signaling (PMID:28777044).
   - node_id: pit_membrane_dissolution_intervessel_migration_and_hydraulic_conductivity_loss
     label: enzymatic pit membrane dissolution, systemic intervessel movement, and
       stem hydraulic conductivity reduction
@@ -196,4 +275,12 @@ curation_history:
   changes: Added xylem_vessel_xylella_fastidiosa_pgla_engxca_pit_membrane_digestion_and_rpff_dsf_signaling
     mechanism graph for xylem_vessel (PO:0025417) backed by PMID:17427811, PMID:31216219,
     PMID:33905519, and PMID:28777044.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:B2I701, UniProtKB:B2I997,
+    UniProtKB:B2IAC4, UniProtKB:Q9PEB3) and documented 100% sequence-identical UniParc
+    mappings (UPI0000007D1C, UPI0000007E74, UPI0000007F39, UPI0000007928) for retired
+    Temecula1 TrEMBL entries.
   llm_assisted: true

@@ -38,10 +38,95 @@ causal_graphs:
     label: proteases, peptidases, glutaminases, aspartate aminotransferase, citrate synthase/aconitase/IDH,
       and Tetragenococcus GAPDH
     node_type: GENE_OR_PROTEIN
-    description: Soybean-hydrolyzing proteases, peptidases, and glutaminases, umami amino-acid metabolic
-      enzymes (aspartate aminotransferase, citrate synthase, aconitase, isocitrate dehydrogenase) from
-      Aspergillus oryzae and Zygosaccharomyces rouxii, and glyceraldehyde-3-phosphate dehydrogenase (GAPDH)
+    description: Soybean-hydrolyzing proteases (alp1, UniProtKB:P12547), peptidases, and glutaminases
+      (gtaA, UniProtKB:Q2U4L7), umami amino-acid metabolic enzymes (aspartate aminotransferase UniProtKB:Q2UBR3,
+      citrate synthase UniProtKB:C5DXE7, aconitase, isocitrate dehydrogenase) from Aspergillus oryzae
+      and Zygosaccharomyces rouxii, and glyceraldehyde-3-phosphate dehydrogenase (GAPDH; gap, UniProtKB:A0A2H6DA72)
       in Tetragenococcus halophilus.
+    protein_examples:
+    - accession: UniProtKB:P12547
+      entry_name: ORYZ_ASPOR
+      recommended_name: Alkaline protease 1
+      gene_symbol: alp1
+      locus_tag: AO090003001036
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 403
+      crc64: 39A8AC8B8790E010
+      evidence:
+      - reference: PMID:25073685
+        snippet: Several key hydrolases in soy sauce fermentation such as proteases, peptidases, and glutaminases
+          are supplied by Aspergillus sojae or Aspergillus oryzae.
+        notes: Aspergillus oryzae RIB40 encodes the Swiss-Prot reviewed Alkaline protease 1 (alp1, AO090003001036,
+          UniProtKB:P12547; 403 aa) supplying proteolytic activity in soy sauce fermentation (PMID:25073685).
+    - accession: UniProtKB:Q2U4L7
+      entry_name: GTAA_ASPOR
+      recommended_name: Glutaminase A
+      gene_symbol: gtaA
+      locus_tag: AO090020000289
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 690
+      crc64: E3D0B17841EEA00D
+      evidence:
+      - reference: PMID:25073685
+        snippet: Several key hydrolases in soy sauce fermentation such as proteases, peptidases, and glutaminases
+          are supplied by Aspergillus sojae or Aspergillus oryzae.
+        notes: Aspergillus oryzae RIB40 encodes the Swiss-Prot reviewed Glutaminase A (gtaA, AO090020000289,
+          UniProtKB:Q2U4L7; 690 aa) supplying glutaminase activity in soy sauce fermentation (PMID:25073685).
+    - accession: UniProtKB:Q2UBR3
+      entry_name: Q2UBR3_ASPOR
+      recommended_name: Aspartate aminotransferase
+      locus_tag: AO090012000899
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 415
+      crc64: 10FAEF4054CBFE24
+      evidence:
+      - reference: PMID:38024365
+        snippet: Kyoto Encyclopedia of Genes and Genomes analysis revealed that the main enzymes involved
+          in the metabolism of umami amino acids were aspartate aminotransferase, citrate synthase, aconitase,
+          and isocitrate dehydrogenase, which were produced by Z. rouxii and A. oryzae during early fermentation
+          (0-15 d) and the middle fermentation stage (60-90 d).
+        notes: Representative Aspergillus oryzae RIB40 Aspartate aminotransferase (AO090012000899, UniProtKB:Q2UBR3;
+          415 aa) for umami amino acid biosynthesis in soy sauce (PMID:38024365).
+    - accession: UniProtKB:C5DXE7
+      entry_name: C5DXE7_ZYGRC
+      recommended_name: Citrate synthase
+      locus_tag: ZYRO0F04444g
+      taxon_id: NCBITaxon:4956
+      taxon_name: Zygosaccharomyces rouxii
+      role_in_node: family_member
+      sequence_length: 490
+      crc64: 5BA9803844CF7D45
+      evidence:
+      - reference: PMID:38024365
+        snippet: Kyoto Encyclopedia of Genes and Genomes analysis revealed that the main enzymes involved
+          in the metabolism of umami amino acids were aspartate aminotransferase, citrate synthase, aconitase,
+          and isocitrate dehydrogenase, which were produced by Z. rouxii and A. oryzae during early fermentation
+          (0-15 d) and the middle fermentation stage (60-90 d).
+        notes: Representative Zygosaccharomyces rouxii Citrate synthase (ZYRO0F04444g, UniProtKB:C5DXE7;
+          490 aa) active in umami amino acid metabolism during soy sauce fermentation (PMID:38024365).
+    - accession: UniProtKB:A0A2H6DA72
+      entry_name: A0A2H6DA72_TETHA
+      recommended_name: Glyceraldehyde-3-phosphate dehydrogenase
+      gene_symbol: gap
+      locus_tag: TEHN7118_1500
+      taxon_id: NCBITaxon:1513897
+      taxon_name: Tetragenococcus halophilus subsp. halophilus
+      role_in_node: strain_exemplar
+      sequence_length: 333
+      crc64: EE07BBEA80AEFF93
+      evidence:
+      - reference: PMID:29629630
+        snippet: The difference in the susceptibility to HA among various strains of T. halophilus was caused
+          by the mutations in the gene encoding GAPDH.
+        notes: Tetragenococcus halophilus subsp. halophilus encodes the 333-aa Glyceraldehyde-3-phosphate
+          dehydrogenase (gap, TEHN7118_1500, UniProtKB:A0A2H6DA72) targeted by Aspergillus oryzae heptelidic
+          acid in soy sauce moromi (PMID:29629630).
   - node_id: soy_protein_hydrolysis_umami_amino_acid_biosynthesis_and_moromi_lactic_fermentation
     label: soy protein hydrolysis, umami amino acid biosynthesis, and heptelidic acid-tolerant lactic
       acid fermentation
@@ -138,4 +223,11 @@ curation_history:
   changes: Added soy_sauce_koji_moromi_aspergillus_tetragenococcus_zygosaccharomyces_hydrolase_gapdh_fermentation
     mechanism graph for soy_sauce (habitatmech:GOLD.b22544c1b5) backed by PMID:25073685, PMID:29629630,
     and PMID:38024365.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:P12547, UniProtKB:Q2U4L7, UniProtKB:Q2UBR3,
+    UniProtKB:C5DXE7, UniProtKB:A0A2H6DA72) for Aspergillus oryzae RIB40, Zygosaccharomyces rouxii, and
+    Tetragenococcus halophilus enzymes.
   llm_assisted: true
