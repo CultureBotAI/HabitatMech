@@ -60,9 +60,50 @@ causal_graphs:
       cluster, and granule nitrification/denitrification transcripts
     node_type: GENE_OR_PROTEIN
     description: Wzy- and ABC-dependent exopolysaccharide (EPS) biosynthetic pathways
-      and Wps-homologous biofilm gene cluster in Phormidesmis priestleyi BC1401 alongside
-      metatranscriptomically active nitrification and denitrification genes in cryoconite
-      granules.
+      and Wps-homologous biofilm gene cluster in Phormidesmis priestleyi (represented
+      in active UniProtKB by polar Phormidesmis priestleyi ULC007 polysaccharide export
+      protein UniProtKB:A0A2T1DNA1 and glycosyltransferase UniProtKB:A0A2T1DEC3; Greenland
+      Ice Sheet cryoconite isolate P. priestleyi BC1401 NCBITaxon:1850361 draft genome
+      proteins in PMID:27485510 are archived in UniParc/RefSeq without active UniProtKB
+      accessions, including UPI0009ED003B/WP_082906463, UPI00083A4580/WP_068816785,
+      UPI00083B8902/WP_068816784, and UPI00083B5BEB/WP_068816783) alongside unbinned
+      metatranscriptomically active nitrification and denitrification transcripts
+      in cryoconite granules (PMID:32990745).
+    protein_examples:
+    - accession: UniProtKB:A0A2T1DNA1
+      entry_name: A0A2T1DNA1_9CYAN
+      recommended_name: Polysaccharide export protein
+      locus_tag: C7B65_00675
+      taxon_id: NCBITaxon:1920490
+      taxon_name: Phormidesmis priestleyi ULC007
+      role_in_node: strain_exemplar
+      sequence_length: 425
+      crc64: C4A2336BF3518AEE
+      evidence:
+      - reference: PMID:27485510
+        snippet: Genes involved in EPS biosynthesis were identified from the Wzy-
+          and ABC-dependent pathways.
+        notes: Phormidesmis priestleyi encodes Wzy- and ABC-dependent EPS export and
+          biosynthesis genes, represented in active UniProtKB by P. priestleyi ULC007
+          Polysaccharide export protein (C7B65_00675, UniProtKB:A0A2T1DNA1; 425 aa)
+          while isolate BC1401 is UniParc/RefSeq-only (UPI0009ED003B) (PMID:27485510).
+    - accession: UniProtKB:A0A2T1DEC3
+      entry_name: A0A2T1DEC3_9CYAN
+      recommended_name: Glycosyltransferase
+      locus_tag: C7B65_13580
+      taxon_id: NCBITaxon:1920490
+      taxon_name: Phormidesmis priestleyi ULC007
+      role_in_node: strain_exemplar
+      sequence_length: 337
+      crc64: 6F1A1E18838EC42A
+      evidence:
+      - reference: PMID:37572353
+        snippet: Moreover, all examined strains were confirmed to produce extracellular
+          polymeric substances (EPS), which suggests that cryoconite granulation is
+          most likely due to EPS secretion by gliding cyanobacteria.
+        notes: Representative Phormidesmis priestleyi ULC007 Glycosyltransferase (C7B65_13580,
+          UniProtKB:A0A2T1DEC3; 337 aa) supporting cyanobacterial EPS biosynthesis
+          in glacier cryoconite granulation (PMID:27485510, PMID:37572353).
   - node_id: cryoconite_mineral_granulation_albedo_reduction_and_stratified_n_cycling
     label: EPS-mediated mineral granule aggregation, glacier albedo darkening, and
       redox-stratified nitrification/denitrification
@@ -202,4 +243,13 @@ curation_history:
   changes: Added cryoconite_phormidesmis_wzy_abc_eps_granulation_and_redox_stratified_n_cycling
     mechanism graph for cryoconite (habitatmech:GOLD.2e404ba6a0) backed by PMID:37572353,
     PMID:27485510, and PMID:32990745.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified species-representative Phormidesmis priestleyi ULC007 UniProtKB
+    protein_examples (UniProtKB:A0A2T1DNA1, UniProtKB:A0A2T1DEC3) and documented UniParc/RefSeq-only
+    status for Greenland Ice Sheet isolate P. priestleyi BC1401 (UPI0009ED003B, UPI00083A4580,
+    UPI00083B8902, UPI00083B5BEB) and metatranscriptomic scope for granule N-cycling
+    transcripts (PMID:32990745).
   llm_assisted: true

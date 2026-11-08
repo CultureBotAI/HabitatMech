@@ -65,9 +65,69 @@ causal_graphs:
     label: Acidithiobacillus ferrooxidans outer-membrane monoheme c-type cytochrome
       Cyc2 (cyc2) and bacterial/archaeal rusticyanins (AfR, FaR)
     node_type: GENE_OR_PROTEIN
-    description: External-membrane monoheme c-type cytochrome Cyc2 (cyc2) with bound
-      iron-ion electron-transfer sites and periplasmic Type-1 copper proteins rusticyanin
-      from Acidithiobacillus ferrooxidans (AfR) and Ferroplasma acidiphilum (FaR).
+    description: External-membrane monoheme c-type cytochrome Cyc2 (cyc2, AFE_3153,
+      UniProtKB:B7JAQ7) with bound iron-ion electron-transfer sites and periplasmic
+      Type-1 copper protein rusticyanin from Acidithiobacillus ferrooxidans (AfR,
+      rus/AFE_3146, UniProtKB:B7JAQ0) alongside the archaeal blue-copper cupredoxin/rusticyanin
+      homolog in Ferroplasma acidiphilum (FaR/sulfocyanin soxE, UniProtKB:A0A1V0N1W7).
+    protein_examples:
+    - accession: UniProtKB:B7JAQ7
+      entry_name: B7JAQ7_ACIF2
+      recommended_name: Cytochrome c
+      gene_symbol: cyc2
+      locus_tag: AFE_3153
+      taxon_id: NCBITaxon:243159
+      taxon_name: Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM 14882 /
+        CIP 104768 / NCIMB 8455)
+      role_in_node: family_member
+      sequence_length: 485
+      crc64: 1A6FA60D083BF44A
+      evidence:
+      - reference: PMID:23980744
+        snippet: The high-molecular-weight c-type cytochrome Cyc2 that is located
+          in the external membrane is postulated as the first electron carrier in
+          the Fe(2+) oxidation respiratory pathway of A. ferrooxidans.
+        notes: Acidithiobacillus ferrooxidans encodes the 485-aa outer-membrane monoheme
+          c-type cytochrome Cyc2 (cyc2, AFE_3153, UniProtKB:B7JAQ7) mediating extracellular
+          Fe2+ oxidation (PMID:23980744, PMID:39937138).
+    - accession: UniProtKB:B7JAQ0
+      entry_name: RUS_ACIF2
+      recommended_name: Rusticyanin
+      gene_symbol: rus
+      locus_tag: AFE_3146
+      taxon_id: NCBITaxon:243159
+      taxon_name: Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM 14882 /
+        CIP 104768 / NCIMB 8455)
+      role_in_node: family_member
+      sequence_length: 187
+      crc64: 8F7DC1DA5C992CF1
+      evidence:
+      - reference: PMID:38593609
+        snippet: Motivated by the ambition to establish an enzyme-driven bioleaching
+          pathway for copper extraction, properties of the Type-1 copper protein rusticyanin
+          from Acidithiobacillus ferrooxidans (AfR) were compared with those from
+          an ancestral form of this enzyme (N0) and an archaeal enzyme identified
+          in Ferroplasma acidiphilum (FaR).
+        notes: Acidithiobacillus ferrooxidans encodes the Swiss-Prot reviewed Type-1
+          copper protein Rusticyanin (rus, AFE_3146, UniProtKB:B7JAQ0; 187 aa) (PMID:38593609).
+    - accession: UniProtKB:A0A1V0N1W7
+      entry_name: A0A1V0N1W7_9ARCH
+      recommended_name: Sulfocyanin
+      gene_symbol: soxE
+      taxon_id: NCBITaxon:74969
+      taxon_name: Ferroplasma acidiphilum
+      role_in_node: family_member
+      sequence_length: 173
+      crc64: 670B582311F221D6
+      evidence:
+      - reference: PMID:38593609
+        snippet: Motivated by the ambition to establish an enzyme-driven bioleaching
+          pathway for copper extraction, properties of the Type-1 copper protein rusticyanin
+          from Acidithiobacillus ferrooxidans (AfR) were compared with those from
+          an ancestral form of this enzyme (N0) and an archaeal enzyme identified
+          in Ferroplasma acidiphilum (FaR).
+        notes: Ferroplasma acidiphilum encodes the 173-aa archaeal blue-copper cupredoxin/rusticyanin
+          family protein (soxE, UniProtKB:A0A1V0N1W7) (PMID:38593609).
   - node_id: extracellular_ferrous_iron_oxidation_fe3_regeneration_and_tailings_acidification
     label: extracellular Fe2+ oxidation, Fe3+ mineral oxidant regeneration, ATP conservation,
       and acid mine drainage generation
@@ -197,4 +257,11 @@ curation_history:
   changes: Added mine_tailing_acidithiobacillus_ferroplasma_cyc2_rusticyanin_fe_s_oxidation
     mechanism graph for mine_tailing (ENVO:00000003) backed by PMID:23574280, PMID:23980744,
     PMID:38593609, and PMID:39937138.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:B7JAQ7, UniProtKB:B7JAQ0,
+    UniProtKB:A0A1V0N1W7) for Acidithiobacillus ferrooxidans Cyc2 and Rusticyanin
+    (AfR) and Ferroplasma acidiphilum blue-copper cupredoxin/rusticyanin.
   llm_assisted: true

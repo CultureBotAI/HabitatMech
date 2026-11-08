@@ -35,9 +35,80 @@ causal_graphs:
     label: Colwellia psychrerythraea cold-active lipase CpsLip (Q486T5), pfa/cti fatty acid genes, and
       viral fatty acid desaturase (FAD)
     node_type: GENE_OR_PROTEIN
-    description: Cold-active lipase CpsLip (UniProtKB:Q486T5; Ser111-Asp135-His283 catalytic triad), long-chain
-      polyunsaturated fatty acid synthase (pfa), cis-to-trans fatty acid isomerase (cti), and virally
-      encoded fatty acid desaturase (FAD) genes.
+    description: Cold-active lipase CpsLip (CPS_1187, UniProtKB:Q486T5; Ser111-Asp135-His283 catalytic
+      triad), long-chain polyunsaturated fatty acid synthases PfaA and PfaC (pfaA/CPS_3104, UniProtKB:Q47ZG8;
+      pfaC/CPS_3102, UniProtKB:Q47ZH0), and fatty acid cis/trans isomerase (CPS_0087, UniProtKB:Q48AQ8)
+      in Colwellia psychrerythraea 34H alongside virally encoded fatty acid desaturase (FAD) genes (unbinned
+      viral metagenome contigs across 476 viral populations in PMID:32546670 without isolate-level UniProtKB
+      accessions).
+    protein_examples:
+    - accession: UniProtKB:Q486T5
+      entry_name: Q486T5_COLP3
+      recommended_name: Lipase
+      locus_tag: CPS_1187
+      taxon_id: NCBITaxon:167879
+      taxon_name: Colwellia psychrerythraea (strain 34H / ATCC BAA-681)
+      role_in_node: family_member
+      sequence_length: 308
+      crc64: 0A3846C1CCF5C875
+      evidence:
+      - reference: PMID:23908044
+        snippet: The putative lipase CpsLip from the psychrophilic bacterium Colwellia psychrerythraea 34H
+          encodes a 34,538 Da, 308-amino-acid protein. In this study, CpsLip (UniProtKB code Q486T5) was
+          expressed as an N-terminal hexahistidine fusion protein in Escherichia coli and purified by affinity
+          and size-exclusion chromatography.
+        notes: PMID:23908044 explicitly identifies and characterizes the 308-aa cold-active lipase CpsLip
+          (CPS_1187, UniProtKB:Q486T5) from Colwellia psychrerythraea 34H.
+    - accession: UniProtKB:Q47ZG8
+      entry_name: Q47ZG8_COLP3
+      recommended_name: Polyunsaturated fatty acid synthase PfaA
+      gene_symbol: pfaA
+      locus_tag: CPS_3104
+      taxon_id: NCBITaxon:167879
+      taxon_name: Colwellia psychrerythraea (strain 34H / ATCC BAA-681)
+      role_in_node: subunit
+      sequence_length: 2771
+      crc64: E0EEA833C8FC8D5A
+      evidence:
+      - reference: PMID:25707451
+        snippet: These results are comparable with the fact that the strain 34H genome sequence includes
+          pfa and cti genes that are responsible for the biosynthesis of LC-PUFAs and trans unsaturated
+          fatty acids, respectively.
+        notes: Colwellia psychrerythraea 34H encodes Polyunsaturated fatty acid synthase PfaA (pfaA, CPS_3104,
+          UniProtKB:Q47ZG8; 2771 aa) for LC-PUFA biosynthesis (PMID:25707451).
+    - accession: UniProtKB:Q47ZH0
+      entry_name: Q47ZH0_COLP3
+      recommended_name: Polyunsaturated fatty acid synthase PfaC
+      gene_symbol: pfaC
+      locus_tag: CPS_3102
+      taxon_id: NCBITaxon:167879
+      taxon_name: Colwellia psychrerythraea (strain 34H / ATCC BAA-681)
+      role_in_node: subunit
+      sequence_length: 2016
+      crc64: 02BBF1AA5CDFFA1C
+      evidence:
+      - reference: PMID:25707451
+        snippet: These results are comparable with the fact that the strain 34H genome sequence includes
+          pfa and cti genes that are responsible for the biosynthesis of LC-PUFAs and trans unsaturated
+          fatty acids, respectively.
+        notes: Colwellia psychrerythraea 34H encodes Polyunsaturated fatty acid synthase PfaC (pfaC, CPS_3102,
+          UniProtKB:Q47ZH0; 2016 aa) in the pfa LC-PUFA biosynthesis locus (PMID:25707451).
+    - accession: UniProtKB:Q48AQ8
+      entry_name: Q48AQ8_COLP3
+      recommended_name: Fatty acid cis/trans isomerase
+      locus_tag: CPS_0087
+      taxon_id: NCBITaxon:167879
+      taxon_name: Colwellia psychrerythraea (strain 34H / ATCC BAA-681)
+      role_in_node: family_member
+      sequence_length: 774
+      crc64: 02350E418DA46C5C
+      evidence:
+      - reference: PMID:25707451
+        snippet: These results are comparable with the fact that the strain 34H genome sequence includes
+          pfa and cti genes that are responsible for the biosynthesis of LC-PUFAs and trans unsaturated
+          fatty acids, respectively.
+        notes: Colwellia psychrerythraea 34H encodes Fatty acid cis/trans isomerase (CPS_0087, UniProtKB:Q48AQ8;
+          774 aa) responsible for trans-unsaturated fatty acid formation (PMID:25707451).
   - node_id: subzero_lipid_hydrolysis_membrane_homeoviscous_adaptation_and_fad_transfer
     label: subzero C12 acyl lipid hydrolysis, cis-to-trans and LC-PUFA membrane remodeling, and viral
       FAD-assisted cold/salt stress tolerance
@@ -145,4 +216,11 @@ curation_history:
   changes: Added sea_ice_brine_colwellia_glaciecola_cpslip_pfa_cti_and_viral_fad_cryoadaptation mechanism
     graph for sea_ice_brine (habitatmech:GOLD.003cf7aab1) backed by PMID:34367102, PMID:32546670, PMID:23908044,
     and PMID:25707451.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:Q486T5, UniProtKB:Q47ZG8, UniProtKB:Q47ZH0,
+    UniProtKB:Q48AQ8) for Colwellia psychrerythraea 34H CpsLip, PfaA, PfaC, and Cti and documented unbinned
+    virome scope for viral FAD contigs (PMID:32546670).
   llm_assisted: true

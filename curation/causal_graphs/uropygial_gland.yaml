@@ -31,9 +31,58 @@ causal_graphs:
   - node_id: enterocin_mr10a_mr10b_l50ab_and_as48_bacteriocin_peptides
     label: Enterococcus faecalis enterocins MR10A and MR10B (L50A/L50B homologs) and AS-48 bacteriocins
     node_type: GENE_OR_PROTEIN
-    description: Broad-spectrum peptide bacteriocins enterocin MR10A (5201.58 Da, Glu38Asp variant of
-      L50A) and MR10B (5207.7 Da, Thr9Ala/Leu15Phe variant of L50B) and circular enterocin AS-48 encoded
-      by uropygial Enterococcus faecalis strains.
+    description: Broad-spectrum peptide bacteriocins enterocin MR10A (mr10A, UniProtKB:Q1A2D3; 5201.58
+      Da, Glu38Asp variant of L50A) and MR10B (mr10B, UniProtKB:Q1A2D2; 5207.7 Da, Thr9Ala/Leu15Phe variant
+      of L50B) and circular enterocin AS-48 (as-48, UniProtKB:Q47765) encoded by uropygial Enterococcus
+      faecalis strains.
+    protein_examples:
+    - accession: UniProtKB:Q1A2D3
+      entry_name: Q1A2D3_ENTFL
+      recommended_name: Enterocin JSA
+      gene_symbol: mr10A
+      taxon_id: NCBITaxon:1351
+      taxon_name: Enterococcus faecalis
+      role_in_node: subunit
+      sequence_length: 44
+      crc64: 79B17A9B55738161
+      evidence:
+      - reference: PMID:16751538
+        snippet: Two peptides were purified to homogeneity (MR10A and MR10B), and matrix-assisted laser
+          desorption ionization-time of flight (mass spectrometry) analysis showed masses of 5201.58 and
+          5207.7 Da, respectively.
+        notes: Enterococcus faecalis MRR 10-3 encodes the 44-aa bacteriocin peptide enterocin MR10A (mr10A,
+          UniProtKB:Q1A2D3) isolated from hoopoe uropygial gland secretion (PMID:16751538, PMID:23621827).
+    - accession: UniProtKB:Q1A2D2
+      entry_name: Q1A2D2_ENTFL
+      recommended_name: Enterocin JSB
+      gene_symbol: mr10B
+      taxon_id: NCBITaxon:1351
+      taxon_name: Enterococcus faecalis
+      role_in_node: subunit
+      sequence_length: 43
+      crc64: 5366E65CFC971417
+      evidence:
+      - reference: PMID:16751538
+        snippet: Two peptides were purified to homogeneity (MR10A and MR10B), and matrix-assisted laser
+          desorption ionization-time of flight (mass spectrometry) analysis showed masses of 5201.58 and
+          5207.7 Da, respectively.
+        notes: Enterococcus faecalis MRR 10-3 encodes the 43-aa bacteriocin peptide enterocin MR10B (mr10B,
+          UniProtKB:Q1A2D2) isolated from hoopoe uropygial gland secretion (PMID:16751538, PMID:23621827).
+    - accession: UniProtKB:Q47765
+      entry_name: Q47765_ENTFL
+      recommended_name: AS-48 protein
+      gene_symbol: as-48
+      taxon_id: NCBITaxon:1351
+      taxon_name: Enterococcus faecalis
+      role_in_node: family_member
+      sequence_length: 105
+      crc64: D8F313FFD1B5D2B5
+      evidence:
+      - reference: PMID:23621827
+        snippet: The most frequently detected bacteriocin genes were those encoding for the MR10 and AS-48
+          enterocins, which confer the highest inhibition capacity.
+        notes: Uropygial gland Enterococcus faecalis strains frequently harbor the gene encoding enterocin
+          AS-48 (as-48, UniProtKB:Q47765; 105 aa precursor) alongside MR10 (PMID:23621827).
   - node_id: keratinolytic_bacillus_licheniformis_inhibition_and_eggshell_crypt_antimicrobial_defense
     label: inhibition of keratinolytic Bacillus licheniformis feather degradation and eggshell crypt embryo
       protection
@@ -125,4 +174,10 @@ curation_history:
   changes: Added uropygial_gland_enterococcus_faecalis_mr10_as48_bacteriocin_feather_and_egg_defense mechanism
     graph for uropygial_gland (UBERON:0007802) backed by PMID:16751538, PMID:19880722, PMID:23621827,
     and PMID:24786478.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:Q1A2D3, UniProtKB:Q1A2D2, UniProtKB:Q47765)
+    for Enterococcus faecalis enterocins MR10A, MR10B, and AS-48.
   llm_assisted: true
