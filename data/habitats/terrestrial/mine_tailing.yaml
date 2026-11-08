@@ -23,6 +23,156 @@ source_attestations:
   source_path: Environmental > Terrestrial > Soil > Tailings
   mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: mine_tailing_acidithiobacillus_ferroplasma_cyc2_rusticyanin_fe_s_oxidation
+  title: Mine tailing sulfide mineral oxidation gradient, Acidithiobacillus/Leptospirillum/Ferroplasma
+    succession, and Cyc2/rusticyanin extracellular iron oxidation and acid mine drainage
+    mechanism
+  description: Metal-sulfide mine tailings undergoing oxidative weathering generate
+    progressive acidification gradients from primary and slightly acidic tailings
+    to extremely acidic, heavy-metal-rich oxidized tailings. This acidification succession
+    selects for chemolithoautotrophic iron- and sulfur-oxidizing consortia shifting
+    from Thiobacillus and Acidithiobacillus in early stages to Acidithiobacillus ferrooxidans,
+    Leptospirillum, and the acidophilic archaeon Ferroplasma (28-58% relative abundance
+    in acidic/oxidized tailings). Acidithiobacillus ferrooxidans and Ferroplasma acidiphilum
+    express the outer-membrane monoheme c-type cytochrome Cyc2 (cyc2) and periplasmic
+    Type-1 copper rusticyanins (AfR and FaR) alongside sulfur-oxidation, carbon-fixation,
+    and heavy-metal detoxification pathways to catalyze extracellular electron transfer
+    from ferrous iron (Fe2+) to regenerate ferric iron (Fe3+) mineral oxidant and
+    drive tailings bioleaching and acid mine drainage.
+  nodes:
+  - node_id: mine_tailing
+    label: mine tailing
+    node_type: HABITAT
+    grounding: ENVO:00000003
+    description: Deposited pulverized rock, sulfide ore residue, and mineral waste
+      remaining after metal extraction and beneficiation.
+  - node_id: sulfide_tailings_acidification_and_ferrous_iron_heavy_metal_gradient
+    label: sulfide mine tailings acidification gradient, ferrous iron (Fe2+), and
+      heavy metal/arsenic stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Sequential acidification stages from primary and slightly acidic
+      tailings to extremely acidic, oxidized sulfide tailings enriched in Fe2+, chalcopyrite/sulfide
+      minerals, and heavy metals.
+  - node_id: acidithiobacillus_leptospirillum_and_ferroplasma_bioleaching_guild
+    label: Acidithiobacillus ferrooxidans, Leptospirillum, Thiobacillus, and Ferroplasma
+      acidophilic guild
+    node_type: COMMUNITY
+    description: Acidophilic chemolithoautotrophic bacterial and archaeal guild dominated
+      by Thiobacillus, Acidithiobacillus ferrooxidans, Leptospirillum, and Ferroplasma
+      across acidifying mine tailings.
+  - node_id: outer_membrane_monoheme_cyc2_and_periplasmic_rusticyanin_afr_far
+    label: Acidithiobacillus ferrooxidans outer-membrane monoheme c-type cytochrome
+      Cyc2 (cyc2) and bacterial/archaeal rusticyanins (AfR, FaR)
+    node_type: GENE_OR_PROTEIN
+    description: External-membrane monoheme c-type cytochrome Cyc2 (cyc2) with bound
+      iron-ion electron-transfer sites and periplasmic Type-1 copper proteins rusticyanin
+      from Acidithiobacillus ferrooxidans (AfR) and Ferroplasma acidiphilum (FaR).
+  - node_id: extracellular_ferrous_iron_oxidation_fe3_regeneration_and_tailings_acidification
+    label: extracellular Fe2+ oxidation, Fe3+ mineral oxidant regeneration, ATP conservation,
+      and acid mine drainage generation
+    node_type: COMMUNITY_PROCESS
+    description: Extracellular electron transfer from Fe2+ across the outer membrane
+      coupled to rusticyanin-mediated ATP synthesis, regeneration of Fe3+ mineral
+      oxidant, sulfide mineral solubilization, and acid mine drainage.
+  edges:
+  - edge_id: mine_tailing_maintains_sequential_sulfide_acidification_gradient
+    subject: mine_tailing
+    predicate: maintains
+    object: sulfide_tailings_acidification_and_ferrous_iron_heavy_metal_gradient
+    description: Lead/zinc and copper sulfide mine tailings maintain sequential geochemical
+      stages of acidification from primary and slightly acidic tailings to extremely
+      acidic oxidized tailings.
+    evidence:
+    - reference: PMID:23574280
+      snippet: In an attempt to link the microbial community composition and function
+        in mine tailings to the generation of acid mine drainage, we simultaneously
+        explored the geochemistry and microbiology of six tailings collected from
+        a lead/zinc mine, i.e. primary tailings (T1), slightly acidic tailings (T2),
+        extremely acidic tailings (T3, T4 and T5) and orange-coloured oxidized tailings
+        (T6). Geochemical results showed that the six tailings (from T1 to T6) likely
+        represented sequential stages of the acidification process of the mine tailings.
+      notes: Lead/zinc mine tailings span sequential geochemical stages from primary
+        and slightly acidic to extremely acidic and oxidized tailings (PMID:23574280).
+  - edge_id: tailings_acidification_selects_for_acidithiobacillus_leptospirillum_and_ferroplasma
+    subject: sulfide_tailings_acidification_and_ferrous_iron_heavy_metal_gradient
+    predicate: selects for
+    object: acidithiobacillus_leptospirillum_and_ferroplasma_bioleaching_guild
+    description: Acidifying mine tailings select for Proteobacteria (Thiobacillus,
+      Acidithiobacillus) in early stages (56-93%) and Ferroplasma (28-58%), Acidithiobacillus,
+      and Leptospirillum in extremely acidic and oxidized stages.
+    evidence:
+    - reference: PMID:23574280
+      snippet: '16S rRNA pyrosequencing revealed a contrasting microbial composition
+        between the six tailings: Proteobacteria-related sequences dominated T1-T3
+        with relative abundance ranging from 56 to 93%, whereas Ferroplasma-related
+        sequences dominated T4-T6 with relative abundance ranging from 28 to 58%.'
+      notes: Mine tailings acidification shifts community dominance from Proteobacteria
+        (Thiobacillus, Acidithiobacillus) in T1-T3 to Ferroplasma, Acidithiobacillus,
+        and Leptospirillum in T4-T6 (PMID:23574280).
+    - reference: PMID:23574280
+      snippet: Furthermore, metagenomic analysis of the microbial communities of T2
+        and T6 indicated that the genes encoding key enzymes for microbial carbon
+        fixation, nitrogen fixation and sulfur oxidation in T2 were largely from Thiobacillus
+        and Acidithiobacillus, Methylococcus capsulatus, and Thiobacillus denitrificans
+        respectively; while those in T6 were mostly identified in Acidithiobacillus
+        and Leptospirillum, Acidithiobacillus and Leptospirillum, and Acidithiobacillus
+        respectively.
+      notes: Acidithiobacillus and Leptospirillum dominate carbon fixation, nitrogen
+        fixation, and sulfur oxidation gene pools in oxidized mine tailings T6 (PMID:23574280).
+  - edge_id: bioleaching_guild_expresses_cyc2_and_rusticyanin_afr_far
+    subject: acidithiobacillus_leptospirillum_and_ferroplasma_bioleaching_guild
+    predicate: expresses
+    object: outer_membrane_monoheme_cyc2_and_periplasmic_rusticyanin_afr_far
+    description: Acidithiobacillus ferrooxidans expresses the external-membrane monoheme
+      c-type cytochrome Cyc2 (cyc2) and Type-1 copper protein rusticyanin (AfR), while
+      Ferroplasma acidiphilum expresses the archaeal rusticyanin homolog (FaR).
+    evidence:
+    - reference: PMID:23980744
+      snippet: The high-molecular-weight c-type cytochrome Cyc2 that is located in
+        the external membrane is postulated as the first electron carrier in the Fe(2+)
+        oxidation respiratory pathway of A. ferrooxidans.
+      notes: Acidithiobacillus ferrooxidans expresses the external-membrane c-type
+        cytochrome Cyc2 (cyc2) as the primary electron carrier in its Fe2+ oxidation
+        respiratory pathway (PMID:23980744).
+    - reference: PMID:38593609
+      snippet: Motivated by the ambition to establish an enzyme-driven bioleaching
+        pathway for copper extraction, properties of the Type-1 copper protein rusticyanin
+        from Acidithiobacillus ferrooxidans (AfR) were compared with those from an
+        ancestral form of this enzyme (N0) and an archaeal enzyme identified in Ferroplasma
+        acidiphilum (FaR).
+      notes: Acidithiobacillus ferrooxidans and Ferroplasma acidiphilum encode the
+        Type-1 copper electron-transfer proteins rusticyanin AfR and FaR (PMID:38593609).
+  - edge_id: cyc2_and_rusticyanin_catalyze_extracellular_fe2_oxidation_and_bioleaching
+    subject: outer_membrane_monoheme_cyc2_and_periplasmic_rusticyanin_afr_far
+    predicate: catalyzes
+    object: extracellular_ferrous_iron_oxidation_fe3_regeneration_and_tailings_acidification
+    description: Cyc2 transfers electrons across the outer membrane via bound iron
+      ions while rusticyanin (AfR) couples iron oxidation to ATP synthesis and regeneration
+      of Fe3+ oxidant for mineral bioleaching.
+    evidence:
+    - reference: PMID:39937138
+      snippet: It is confirmed that the Cyc2 protein is capable of EET without the
+        need for soluble iron or other accessory proteins. These results confirm the
+        critical role of bound metal ions in the A. ferrooxidans EET mechanism, and
+        it is expected that homologous monoheme OMPs will have similar conduction
+        pathways.
+      notes: Monoheme outer-membrane Cyc2 from Acidithiobacillus ferrooxidans directly
+        mediates extracellular electron transfer (EET) via bound iron ions (PMID:39937138).
+    - reference: PMID:23980744
+      snippet: Acidithiobacillus ferrooxidans plays an important role in bioleaching
+        in reproducing the mineral oxidant of ferric iron (Fe(3+) ) by oxidization
+        of ferrous iron (Fe(2+) ).
+      notes: Cyc2-driven ferrous iron oxidation regenerates the ferric iron (Fe3+)
+        mineral oxidant and enhances ferrous iron oxidation activity and arsenic-stressed
+        growth (PMID:23980744).
+    - reference: PMID:38593609
+      snippet: The lack of a correlation between the redox potentials and electron
+        transfer rates indicates that AfR and its associated electron transfer chain
+        evolved to specifically facilitate the efficient conversion of the energy
+        of iron oxidation to ATP formation.
+      notes: Acidithiobacillus ferrooxidans rusticyanin (AfR) facilitates efficient
+        conversion of iron-oxidation electron transport into ATP formation (PMID:38593609).
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -41,3 +191,10 @@ curation_history:
   changes: 'Retained GOLD label ''Tailings'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added mine_tailing_acidithiobacillus_ferroplasma_cyc2_rusticyanin_fe_s_oxidation
+    mechanism graph for mine_tailing (ENVO:00000003) backed by PMID:23574280, PMID:23980744,
+    PMID:38593609, and PMID:39937138.
+  llm_assisted: true

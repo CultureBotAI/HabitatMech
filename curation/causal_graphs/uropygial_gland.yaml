@@ -1,0 +1,128 @@
+identifier: UBERON:0007802
+causal_graphs:
+- graph_id: uropygial_gland_enterococcus_faecalis_mr10_as48_bacteriocin_feather_and_egg_defense
+  title: Avian uropygial gland lipid secretion, Enterococcus faecalis mutualistic symbiont selection,
+    and enterocin MR10A/MR10B and AS-48 bacteriocin-mediated feather and eggshell protection mechanism
+  description: The avian uropygial (preen) gland is a holocrine secretory organ at the base of the tail
+    that produces hydrophobic fatty secretions, which in nesting females and nestlings of the hoopoe (Upupa
+    epops) harbor dense mutualistic bacterial communities dominated by Enterococcus faecalis (including
+    strain MRR 10-3). Uropygial-gland Enterococcus faecalis strains encode and secrete the broad-spectrum
+    bacteriocins enterocin MR10A (5201.58 Da) and MR10B (5207.7 Da) — homologous to enterocins L50A and
+    L50B — together with enterocin AS-48. When preened onto plumage or smeared into specialized eggshell
+    crypts, these bacteriocin-producing enterococci inhibit keratinolytic Bacillus licheniformis feather
+    degradation and reduce trans-shell pathogen colonization to increase hatching success.
+  nodes:
+  - node_id: uropygial_gland
+    label: uropygial gland
+    node_type: HABITAT
+    grounding: UBERON:0007802
+    description: Bilobed holocrine sebaceous gland located dorsally at the base of the tail in birds that
+      secretes preen oil.
+  - node_id: nesting_hoopoe_uropygial_hydrophobic_fatty_secretion_niche
+    label: holocrine hydrophobic fatty uropygial secretion in nesting birds (Upupa epops)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Seasonally and sexually regulated hydrophobic fatty secretion produced within the uropygial
+      gland of nesting female hoopoes and nestlings.
+  - node_id: uropygial_enterococcus_faecalis_mrr10_3_mutualistic_guild
+    label: Enterococcus faecalis (strain MRR 10-3) uropygial gland mutualistic symbiont guild
+    node_type: COMMUNITY
+    description: Monospecific and enterococci-dominated symbiotic bacterial community in the hoopoe uropygial
+      gland led by Enterococcus faecalis strain MRR 10-3.
+  - node_id: enterocin_mr10a_mr10b_l50ab_and_as48_bacteriocin_peptides
+    label: Enterococcus faecalis enterocins MR10A and MR10B (L50A/L50B homologs) and AS-48 bacteriocins
+    node_type: GENE_OR_PROTEIN
+    description: Broad-spectrum peptide bacteriocins enterocin MR10A (5201.58 Da, Glu38Asp variant of
+      L50A) and MR10B (5207.7 Da, Thr9Ala/Leu15Phe variant of L50B) and circular enterocin AS-48 encoded
+      by uropygial Enterococcus faecalis strains.
+  - node_id: keratinolytic_bacillus_licheniformis_inhibition_and_eggshell_crypt_antimicrobial_defense
+    label: inhibition of keratinolytic Bacillus licheniformis feather degradation and eggshell crypt embryo
+      protection
+    node_type: COMMUNITY_PROCESS
+    description: Bacteriocin-mediated suppression of feather-degrading Bacillus licheniformis on plumage
+      and antimicrobial barrier protection within specialized hoopoe eggshell crypts that increases hatching
+      success.
+  edges:
+  - edge_id: uropygial_gland_maintains_holocrine_hydrophobic_fatty_secretion
+    subject: uropygial_gland
+    predicate: maintains
+    object: nesting_hoopoe_uropygial_hydrophobic_fatty_secretion_niche
+    description: The avian uropygial gland produces a hydrophobic fatty holocrine secretion that undergoes
+      seasonal and nesting-phase shifts in female hoopoes and nestlings.
+    evidence:
+    - reference: PMID:16751538
+      snippet: The uropygial gland (preen gland) is a holocrine secretory gland situated at the base of
+        the tail in birds which produces a hydrophobic fatty secretion. In certain birds, such as the
+        hoopoe, Upupa epops, the composition of this secretion is influenced by both seasonal and sexual
+        factors, becoming darker and more malodorous in females and in their nestlings during the nesting
+        phase.
+      notes: The hoopoe uropygial gland secretes a seasonally modulated hydrophobic fatty preen secretion
+        during the nesting phase (PMID:16751538).
+  - edge_id: uropygial_secretion_selects_for_mutualistic_enterococcus_faecalis
+    subject: nesting_hoopoe_uropygial_hydrophobic_fatty_secretion_niche
+    predicate: selects for
+    object: uropygial_enterococcus_faecalis_mrr10_3_mutualistic_guild
+    description: Uropygial gland secretions of nesting hoopoes harbor mutualistic Enterococcus isolates
+      dominated by Enterococcus faecalis (including strain MRR 10-3).
+    evidence:
+    - reference: PMID:16751538
+      snippet: We have isolated from the uropygial secretion of a nestling a bacterium that grows in monospecific
+        culture which we have identified unambiguously by phenotypic and genotypic means as Enterococcus
+        faecalis.
+      notes: Enterococcus faecalis MRR 10-3 grows in monospecific culture within the uropygial gland secretion
+        of hoopoe nestlings (PMID:16751538).
+    - reference: PMID:23621827
+      snippet: All the isolates belonged to the genus Enterococcus, with E. faecalis as the most abundant
+        species, with the broadest antimicrobial spectrum and the highest antagonistic activity.
+      notes: Across 187 symbiotic bacterial strains isolated from the hoopoe uropygial gland, all belonged
+        to Enterococcus with E. faecalis as the dominant species (PMID:23621827).
+  - edge_id: uropygial_enterococcus_faecalis_expresses_mr10a_mr10b_and_as48_bacteriocins
+    subject: uropygial_enterococcus_faecalis_mrr10_3_mutualistic_guild
+    predicate: expresses
+    object: enterocin_mr10a_mr10b_l50ab_and_as48_bacteriocin_peptides
+    description: Uropygial Enterococcus faecalis strains encode and secrete enterocins MR10A and MR10B
+      (L50A/L50B homologs) and enterocin AS-48.
+    evidence:
+    - reference: PMID:16751538
+      snippet: Two peptides were purified to homogeneity (MR10A and MR10B), and matrix-assisted laser
+        desorption ionization-time of flight (mass spectrometry) analysis showed masses of 5201.58 and
+        5207.7 Da, respectively. Amino acid sequencing of both peptides revealed high similarity with
+        enterocin L50A and L50B (L. M. Cintas, P. Casaus, H. Holo, P. E. Hernández, I. F. Nes, and L.
+        S. Håvarstein, J. Bacteriol. 180:1988-1994, 1998).
+      notes: Enterococcus faecalis MRR 10-3 secretes enterocin peptides MR10A (5201.58 Da) and MR10B (5207.7
+        Da) homologous to enterocins L50A and L50B (PMID:16751538).
+    - reference: PMID:23621827
+      snippet: The most frequently detected bacteriocin genes were those encoding for the MR10 and AS-48
+        enterocins, which confer the highest inhibition capacity.
+      notes: Uropygial Enterococcus faecalis genomes predominantly harbor genes encoding enterocins MR10
+        and AS-48 (PMID:23621827).
+  - edge_id: enterocins_mr10_and_as48_inhibit_feather_degradation_and_protect_eggshells
+    subject: enterocin_mr10a_mr10b_l50ab_and_as48_bacteriocin_peptides
+    predicate: catalyzes
+    object: keratinolytic_bacillus_licheniformis_inhibition_and_eggshell_crypt_antimicrobial_defense
+    description: Enterocins produced by uropygial Enterococcus faecalis MRR10-3 prevent keratin loss and
+      feather degradation by Bacillus licheniformis and protect embryos when smeared into hoopoe eggshell
+      crypts.
+    evidence:
+    - reference: PMID:19880722
+      snippet: There was a significant decrease both in pure keratin loss and in feather degradation in
+        the presence of the symbiotic bacterium or its bacteriocin. These results suggest that by preening
+        their feathers hoopoes benefit from their symbiotic relationship with bacteriocin-producing enterococci,
+        which constitute a chemical defence against feather degradation.
+      notes: Enterococcus faecalis MRR10-3 and its purified bacteriocins significantly reduce keratin
+        loss and feather degradation caused by Bacillus licheniformis (PMID:19880722).
+    - reference: PMID:24786478
+      snippet: The findings of specialized crypts on the eggshells of hoopoes, and of video-recorded females
+        smearing secretion containing symbiotic bacteria at a high density onto the eggshells strongly
+        support a link between secretion and bacteria on eggs. Moreover, the detected associations between
+        bacteria and hatching success suggest that crypts enhancing the adhesion of symbiont-carrying
+        uropygial secretion likely protect embryos against infections.
+      notes: Transfer of symbiont- and antimicrobial-rich uropygial secretion into hoopoe eggshell crypts
+        prevents bacterial trans-shell invasion and increases hatching success (PMID:24786478).
+curation_history:
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added uropygial_gland_enterococcus_faecalis_mr10_as48_bacteriocin_feather_and_egg_defense mechanism
+    graph for uropygial_gland (UBERON:0007802) backed by PMID:16751538, PMID:19880722, PMID:23621827,
+    and PMID:24786478.
+  llm_assisted: true

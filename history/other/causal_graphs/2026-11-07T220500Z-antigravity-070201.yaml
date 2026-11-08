@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-07T220500Z-antigravity-070201
+  timestamp: '2026-11-07T22:05:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 7 Stage 2 habitats
+  details: 'Reviewed all 83 existing causal-graph overlays in curation/causal_graphs/ and
+    authored 10 new snippet-verified causal-graph overlays (83 -> 93 total): saline_marsh.yaml
+    (ENVO:00000054, PMID:35227326, PMID:38684658, PMID:23986751), saline_evaporation_pond.yaml
+    (ENVO:00000055, PMID:23373661, PMID:22580037, PMID:26507954, PMID:36229623), sea_ice_brine.yaml
+    (habitatmech:GOLD.003cf7aab1, PMID:34367102, PMID:32546670, PMID:23908044, PMID:25707451),
+    mine_tailing.yaml (ENVO:00000003, PMID:23574280, PMID:23980744, PMID:38593609, PMID:39937138),
+    cryoconite.yaml (habitatmech:GOLD.2e404ba6a0, PMID:37572353, PMID:27485510, PMID:32990745),
+    uropygial_gland.yaml (UBERON:0007802, PMID:16751538, PMID:19880722, PMID:23621827, PMID:24786478),
+    xylem_vessel.yaml (PO:0025417, PMID:17427811, PMID:31216219, PMID:33905519, PMID:28777044),
+    gill__8d87864f.yaml (UBERON:0002535, PMID:17504480, PMID:17205805, PMID:16761196, PMID:26882089),
+    soy_sauce.yaml (habitatmech:GOLD.b22544c1b5, PMID:25073685, PMID:29629630, PMID:38024365),
+    and ebpr.yaml (habitatmech:GOLD.b5081d36b9, PMID:17675445, PMID:34227830, PMID:39221073,
+    PMID:35495637).'

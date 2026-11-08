@@ -20,6 +20,163 @@ source_attestations:
   source_label: Sea-ice brine
   source_path: Environmental > Aquatic > Marine > Neritic zone/Coastal water > Sea-ice
     brine
+causal_graphs:
+- graph_id: sea_ice_brine_colwellia_glaciecola_cpslip_pfa_cti_and_viral_fad_cryoadaptation
+  title: Sea-ice brine subzero hypersaline pocket selection, Colwellia/Polaribacter/Glaciecola
+    and phage community enrichment, and CpsLip/pfa/cti/FAD membrane and lipid cryoadaptation
+    mechanism
+  description: Seawater-derived sea-ice brines form liquid subzero hypersaline pockets
+    within frozen sea ice where concentrated dissolved salts prevent freezing amid
+    seasonal temperature and salinity fluctuations. These subzero hypersaline conditions
+    select for psychrophilic bacterial assemblages (~10^5 cells mL-1) dominated by
+    Polaribacter, Paraglaciecola, Colwellia (including Colwellia psychrerythraea 34H),
+    Glaciecola, and Marinobacter alongside habitat-specific bacteriophages (1.3 x
+    10^5 to 2.1 x 10^5 mL-1). Colwellia psychrerythraea 34H and co-occurring brine
+    bacteria and phages express cold-active lipase CpsLip (UniProtKB:Q486T5), polyunsaturated
+    and trans-unsaturated fatty acid synthesis/isomerization genes (pfa and cti),
+    cryoprotectant extracellular polysaccharide substances (EPS), and virally encoded
+    fatty acid desaturase (FAD) auxiliary metabolic genes to maintain membrane fluidity
+    and lipid hydrolysis under subzero hypersaline stress.
+  nodes:
+  - node_id: sea_ice_brine
+    label: sea-ice brine
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.003cf7aab1
+    description: Liquid seawater-derived hypersaline brine channels and pockets retained
+      within subzero sea ice.
+  - node_id: subzero_hypersaline_sea_ice_brine_pocket_regime
+    label: subzero temperature and concentrated dissolved salt regime in liquid sea-ice
+      brine pockets
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Subzero temperatures and concentrated dissolved salts that prevent
+      freezing within seasonally fluctuating sea-ice brine channels.
+  - node_id: sea_ice_brine_colwellia_polaribacter_glaciecola_and_viral_guild
+    label: Colwellia psychrerythraea, Polaribacter, Paraglaciecola, Glaciecola, and
+      sea-ice brine viral guild
+    node_type: COMMUNITY
+    description: Psychrophilic sea-ice brine prokaryotic and viral community dominated
+      by Polaribacter, Paraglaciecola, Colwellia (including C. psychrerythraea 34H),
+      Glaciecola, and Marinobacter and their infecting bacteriophages.
+  - node_id: colwellia_cpslip_lipase_pfa_cti_and_viral_fad_desaturases
+    label: Colwellia psychrerythraea cold-active lipase CpsLip (Q486T5), pfa/cti fatty
+      acid genes, and viral fatty acid desaturase (FAD)
+    node_type: GENE_OR_PROTEIN
+    description: Cold-active lipase CpsLip (UniProtKB:Q486T5; Ser111-Asp135-His283
+      catalytic triad), long-chain polyunsaturated fatty acid synthase (pfa), cis-to-trans
+      fatty acid isomerase (cti), and virally encoded fatty acid desaturase (FAD)
+      genes.
+  - node_id: subzero_lipid_hydrolysis_membrane_homeoviscous_adaptation_and_fad_transfer
+    label: subzero C12 acyl lipid hydrolysis, cis-to-trans and LC-PUFA membrane remodeling,
+      and viral FAD-assisted cold/salt stress tolerance
+    node_type: COMMUNITY_PROCESS
+    description: Low-temperature lipid hydrolysis (retaining >80% CpsLip activity
+      at 278-288 K), microanaerobic cis-to-trans hexadecenoic acid isomerization and
+      LC-PUFA synthesis, and viral FAD-mediated host membrane adaptation to cold and
+      salt stress.
+  edges:
+  - edge_id: sea_ice_brine_maintains_subzero_hypersaline_liquid_pockets
+    subject: sea_ice_brine
+    predicate: maintains
+    object: subzero_hypersaline_sea_ice_brine_pocket_regime
+    description: Sea-ice brines maintain liquid subzero hypersaline habitats within
+      frozen sea ice where concentrated dissolved salts prevent freezing.
+    evidence:
+    - reference: PMID:34367102
+      snippet: Subzero hypersaline brines are liquid microbial habitats within otherwise
+        frozen environments, where concentrated dissolved salts prevent freezing.
+      notes: Concentrated dissolved salts maintain liquid subzero hypersaline brine
+        habitats within frozen sea ice (PMID:34367102).
+    - reference: PMID:32546670
+      snippet: Seawater-derived brines within both sea ice (sea-ice brine) and ancient
+        layers of permafrost (cryopeg brine) support diverse microbes adapted to subzero
+        temperatures and high salinities, yet little is known about viruses in these
+        extreme environments, which, if analogous to other systems, could play important
+        evolutionary and ecosystem roles.
+      notes: Seawater-derived sea-ice brines impose subzero temperatures and high
+        salinities on resident microbial and viral communities (PMID:32546670).
+  - edge_id: subzero_brine_selects_for_colwellia_polaribacter_glaciecola_and_phages
+    subject: subzero_hypersaline_sea_ice_brine_pocket_regime
+    predicate: selects for
+    object: sea_ice_brine_colwellia_polaribacter_glaciecola_and_viral_guild
+    description: Subzero hypersaline sea-ice brines select for psychrophilic bacteria
+      dominated by Polaribacter, Paraglaciecola, Colwellia, and Glaciecola (~10^5
+      cells mL-1) and phages infecting Marinobacter, Glaciecola, and Colwellia.
+    evidence:
+    - reference: PMID:34367102
+      snippet: Taxonomically, sea-ice brine communities (∼105 cells mL-1) had greater
+        richness, more diversity and were dominated by bacterial genera, including
+        Polaribacter, Paraglaciecola, Colwellia, and Glaciecola, whereas the more
+        densely inhabited cryopeg brines (∼108 cells mL-1) lacked these genera and
+        instead were dominated by Marinobacter.
+      notes: First-year Arctic sea-ice brine communities (~10^5 cells mL-1) are dominated
+        by Polaribacter, Paraglaciecola, Colwellia, and Glaciecola (PMID:34367102).
+    - reference: PMID:32546670
+      snippet: 'Additional analyses revealed that these viruses: (i) formed communities
+        that differed between sample type and vertically with sea-ice depth; (ii)
+        infected hosts that dominated these extreme ecosystems, including Marinobacter,
+        Glaciecola, and Colwellia; and (iii) encoded fatty acid desaturase (FAD) genes
+        that likely helped their hosts overcome cold and salt stress during infection,
+        as well as mediated horizontal gene transfer of FAD genes between microbes.'
+      notes: Sea-ice and subzero brine viral populations infect dominant psychrophilic
+        hosts including Marinobacter, Glaciecola, and Colwellia (PMID:32546670).
+  - edge_id: sea_ice_brine_guild_expresses_cpslip_pfa_cti_and_viral_fad
+    subject: sea_ice_brine_colwellia_polaribacter_glaciecola_and_viral_guild
+    predicate: expresses
+    object: colwellia_cpslip_lipase_pfa_cti_and_viral_fad_desaturases
+    description: Colwellia psychrerythraea 34H encodes and expresses the 308-aa cold-active
+      lipase CpsLip (UniProtKB:Q486T5) and pfa/cti fatty acid synthesis/isomerase
+      genes, while subzero brine phages encode fatty acid desaturase (FAD) genes.
+    evidence:
+    - reference: PMID:23908044
+      snippet: The putative lipase CpsLip from the psychrophilic bacterium Colwellia
+        psychrerythraea 34H encodes a 34,538 Da, 308-amino-acid protein. In this study,
+        CpsLip (UniProtKB code Q486T5) was expressed as an N-terminal hexahistidine
+        fusion protein in Escherichia coli and purified by affinity and size-exclusion
+        chromatography.
+      notes: Colwellia psychrerythraea 34H encodes the 308-aa cold-active lipase CpsLip
+        (UniProtKB:Q486T5) with catalytic triad Ser111, Asp135, and His283 (PMID:23908044).
+    - reference: PMID:25707451
+      snippet: These results are comparable with the fact that the strain 34H genome
+        sequence includes pfa and cti genes that are responsible for the biosynthesis
+        of LC-PUFAs and trans unsaturated fatty acids, respectively.
+      notes: Colwellia psychrerythraea 34H carries pfa and cti genes for LC-PUFA and
+        trans-unsaturated fatty acid biosynthesis (PMID:25707451).
+    - reference: PMID:32546670
+      snippet: 'Additional analyses revealed that these viruses: (i) formed communities
+        that differed between sample type and vertically with sea-ice depth; (ii)
+        infected hosts that dominated these extreme ecosystems, including Marinobacter,
+        Glaciecola, and Colwellia; and (iii) encoded fatty acid desaturase (FAD) genes
+        that likely helped their hosts overcome cold and salt stress during infection,
+        as well as mediated horizontal gene transfer of FAD genes between microbes.'
+      notes: Subzero brine viruses encode fatty acid desaturase (FAD) auxiliary metabolic
+        genes (PMID:32546670).
+  - edge_id: cpslip_pfa_cti_and_fad_catalyze_cold_lipid_hydrolysis_and_membrane_adaptation
+    subject: colwellia_cpslip_lipase_pfa_cti_and_viral_fad_desaturases
+    predicate: catalyzes
+    object: subzero_lipid_hydrolysis_membrane_homeoviscous_adaptation_and_fad_transfer
+    description: CpsLip catalyzes cold-active C12 acyl ester hydrolysis (>80% activity
+      at 278-288 K), pfa and cti synthesize docosahexaenoic acid and isomerize cis-
+      to trans-hexadecenoic acid, and viral FAD genes support host cold and salt stress
+      tolerance.
+    evidence:
+    - reference: PMID:23908044
+      snippet: CpsLip maintained over 80% activity in the low-temperature range (278-288
+        K), thereby suggesting that CpsLip is a cold-active lipase. Substrate-specificity
+        analysis demonstrated that CpsLip exhibits maximum activity towards the C12
+        acyl group.
+      notes: Colwellia psychrerythraea 34H CpsLip retains >80% enzymatic activity
+        at 278-288 K with maximum specificity toward C12 acyl substrates (PMID:23908044).
+    - reference: PMID:25707451
+      snippet: Strain 34H cells grown under static conditions at 5 °C had higher levels
+        of 16:1(9t) than those grown under shaken conditions, and this change was
+        accompanied by an antiparallel decrease in the levels of Δ9-cis hexadecenoic
+        acid [16:1(9c)], suggesting that the cis-to-trans isomerization reaction of
+        16:1(9c) is activated under static (microanaerobic) culture conditions, that
+        is, the enzyme could be activated by the decreased dissolved oxygen concentration
+        of cultures.
+      notes: Low-temperature static conditions activate cis-to-trans isomerization
+        of 16:1(9c) to 16:1(9t) alongside docosahexaenoic acid (LC-PUFA) production
+        in Colwellia psychrerythraea 34H (PMID:25707451).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -43,3 +200,10 @@ curation_history:
     is absent from the vendored slice). Define under ENVO:01001319 (saline water body)
     (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Aquatic > Marine
     > Neritic zone/Coastal water > Sea-ice brine'
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sea_ice_brine_colwellia_glaciecola_cpslip_pfa_cti_and_viral_fad_cryoadaptation
+    mechanism graph for sea_ice_brine (habitatmech:GOLD.003cf7aab1) backed by PMID:34367102,
+    PMID:32546670, PMID:23908044, and PMID:25707451.
+  llm_assisted: true

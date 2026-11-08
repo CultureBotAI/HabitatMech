@@ -22,6 +22,156 @@ source_attestations:
   source_label: EBPR
   source_path: Engineered > Bioreactor > EBPR
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: ebpr_accumulibacter_defluviicoccus_ppk1_ppk2_phou_pst_polyphosphate_cycling
+  title: EBPR bioreactor alternating anaerobic feed/aerobic famine cycling, Candidatus
+    Accumulibacter phosphatis and Defluviicoccus selection, and PPK1/PPK2/PhoU-Pst
+    polyphosphate accumulation mechanism
+  description: Enhanced biological phosphorus removal (EBPR) wastewater treatment
+    bioreactors subject activated sludge biomass to alternating anaerobic carbon-feed
+    and aerobic famine regimes. This cyclic redox and substrate regime selects for
+    polyphosphate-accumulating organisms (PAOs) of the lineage Candidatus Accumulibacter
+    phosphatis (spanning at least five ppk1-defined clades) alongside competing glycogen-accumulating
+    organisms (GAOs) of the genus Defluviicoccus (Ca. Defluviicoccus tetraformis,
+    D. vanus, Ca. D. seviourii). Candidatus Accumulibacter expresses polyphosphate
+    kinase 1 (ppk1) and a laterally acquired polyphosphate kinase 2 (PPK2) coupled
+    with a dysregulated PhoU signaling protein that leaves the high-affinity phosphate
+    transport (Pst) system constitutively active, condensing continuous inorganic
+    phosphate uptake into intracellular polyphosphate reserves during aerobic famine
+    while Defluviicoccus synthesizes glycogen and anaerobic polyhydroxyalkanoate (PHA).
+  nodes:
+  - node_id: ebpr
+    label: enhanced biological phosphorus removal bioreactor
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.b5081d36b9
+    description: Engineered wastewater treatment bioreactor configured with alternating
+      anaerobic and aerobic stages to remove excess phosphorus from municipal and
+      industrial wastewater.
+  - node_id: alternating_anaerobic_feed_and_aerobic_famine_wastewater_regime
+    label: alternating anaerobic volatile fatty acid feed and aerobic famine bioreactor
+      regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cyclic operational regime alternating between an anaerobic substrate-rich
+      feed stage and an aerobic carbon-famine stage in activated sludge EBPR bioreactors.
+  - node_id: ebpr_candidatus_accumulibacter_pao_and_defluviicoccus_gao_guild
+    label: Candidatus Accumulibacter phosphatis (PAO) and Defluviicoccus (GAO) bioreactor
+      guild
+    node_type: COMMUNITY
+    description: Activated sludge microbial consortium comprising multi-clade Candidatus
+      Accumulibacter phosphatis polyphosphate-accumulating organisms (PAOs) and Defluviicoccus
+      glycogen-accumulating organisms (GAOs).
+  - node_id: accumulibacter_ppk1_laterally_acquired_ppk2_phou_pst_and_pha_glycogen_genes
+    label: Candidatus Accumulibacter polyphosphate kinases (ppk1, PPK2), PhoU-dysregulated
+      Pst transporter, and Defluviicoccus PHA/glycogen genes
+    node_type: GENE_OR_PROTEIN
+    description: Clade-defining polyphosphate kinase 1 (ppk1), horizontally acquired
+      polyphosphate kinase 2 (PPK2), dysregulated PhoU phosphate-signaling protein
+      and high-affinity Pst phosphate transporter in Ca. Accumulibacter alongside
+      glycogen, anaerobic polyhydroxyalkanoate (PHA), and low-affinity pit transporter
+      genes in Defluviicoccus.
+  - node_id: continuous_pst_phosphate_uptake_ppk2_polyphosphate_condensation_and_pha_cycling
+    label: PhoU-dysregulated Pst phosphate uptake, PPK2-catalyzed polyphosphate condensation,
+      and anaerobic PHA/glycogen competition
+    node_type: COMMUNITY_PROCESS
+    description: Continuous high-affinity phosphate uptake via PhoU-dysregulated Pst
+      and PPK2-driven polyphosphate condensation in Ca. Accumulibacter that removes
+      excess wastewater phosphorus and prevents downstream eutrophication, balanced
+      against anaerobic PHA and glycogen cycling by Defluviicoccus.
+  edges:
+  - edge_id: ebpr_maintains_alternating_anaerobic_feed_and_aerobic_famine_cycling
+    subject: ebpr
+    predicate: maintains
+    object: alternating_anaerobic_feed_and_aerobic_famine_wastewater_regime
+    description: EBPR wastewater treatment bioreactors subject activated sludge to
+      alternating anaerobic feed and aerobic famine conditions.
+    evidence:
+    - reference: PMID:35495637
+      snippet: Members of the genus Defluviicoccus occur often at high abundances
+        in activated sludge wastewater treatment plants designed to remove phosphorus,
+        where biomass is subjected to alternating anaerobic feed/aerobic famine conditions,
+        believed to favor the proliferation of organisms like Ca. Accumulibacter and
+        other phosphate-accumulating organisms (PAO), and Defluviicoccus.
+      notes: Phosphorus-removing EBPR wastewater treatment bioreactors operate under
+        alternating anaerobic feed and aerobic famine conditions (PMID:35495637).
+  - edge_id: anaerobic_aerobic_cycling_selects_for_accumulibacter_clades_and_defluviicoccus
+    subject: alternating_anaerobic_feed_and_aerobic_famine_wastewater_regime
+    predicate: selects for
+    object: ebpr_candidatus_accumulibacter_pao_and_defluviicoccus_gao_guild
+    description: Alternating anaerobic feed and aerobic famine regimes enrich coexisting
+      clades of Candidatus Accumulibacter phosphatis (PAO) and competing Defluviicoccus
+      (GAO) populations.
+    evidence:
+    - reference: PMID:34227830
+      snippet: '"Candidatus Accumulibacter phosphatis" (Accumulibacter) is a polyphosphate-accumulating
+        organism that contributes to the enhanced biological phosphorus removal (EBPR)
+        biotechnological process for removing excess phosphorus from wastewater and
+        preventing eutrophication from downstream receiving waters. Distinct Accumulibacter
+        clades often coexist in full-scale wastewater treatment plants and laboratory-scale
+        enrichment bioreactors and have been hypothesized to inhabit distinct ecological
+        niches.'
+      notes: Full-scale EBPR plants and enrichment bioreactors select for coexisting
+        clades of Candidatus Accumulibacter phosphatis (PMID:34227830).
+    - reference: PMID:17675445
+      snippet: Sequences from at least five clades of "Candidatus Accumulibacter"
+        were recovered by ppk1-targeted PCR, and subsequently, specific primer sets
+        were designed to target the ppk1 gene for each clade.
+      notes: At least five ecologically distinct clades of Candidatus Accumulibacter
+        populate laboratory- and full-scale EBPR sludges (PMID:17675445).
+  - edge_id: ebpr_guild_expresses_ppk1_ppk2_phou_pst_and_pha_glycogen_pathways
+    subject: ebpr_candidatus_accumulibacter_pao_and_defluviicoccus_gao_guild
+    predicate: expresses
+    object: accumulibacter_ppk1_laterally_acquired_ppk2_phou_pst_and_pha_glycogen_genes
+    description: Candidatus Accumulibacter encodes ppk1 and actively transcribes laterally
+      acquired PPK2 with PhoU-dysregulated Pst phosphate transport during EBPR cycles,
+      while Defluviicoccus encodes glycogen, anaerobic PHA synthesis, and pit genes.
+    evidence:
+    - reference: PMID:39221073
+      snippet: Metatranscriptomic analysis of an enrichment culture of Ca. Accumulibacter
+        revealed active transcription of 44 of these genes during an EBPR cycle, notably
+        including the polyphosphate kinase 2 (PPK2) gene instead of the commonly recognized
+        polyphosphate kinase 1 (PPK1) gene. Intriguingly, the phosphate regulon (Pho)
+        genes showed minimal transcriptions, pointing to a distinctive fact of Pho
+        dysregulation, where PhoU, the phosphate signaling complex protein, was not
+        regulating the high-affinity phosphate transport (Pst) system, resulting in
+        continuous phosphate uptake.
+      notes: Ca. Accumulibacter actively transcribes horizontally acquired PPK2 and
+        exhibits PhoU dysregulation of the high-affinity Pst phosphate transporter
+        during EBPR cycles (PMID:39221073).
+    - reference: PMID:35495637
+      snippet: Each, with one exception, which appears not to be a member of this
+        genus, contains the genes expected of GAO members, in possessing multiple
+        copies of those for glycogen biosynthesis and catabolism, and anaerobic polyhydroxyalkanoate
+        (PHA) synthesis.
+      notes: Defluviicoccus genomes in EBPR sludges carry multiple gene copies for
+        glycogen metabolism and anaerobic polyhydroxyalkanoate (PHA) synthesis alongside
+        low-affinity pit phosphate transporters (PMID:35495637).
+  - edge_id: ppk2_and_pst_catalyze_polyphosphate_condensation_and_wastewater_p_removal
+    subject: accumulibacter_ppk1_laterally_acquired_ppk2_phou_pst_and_pha_glycogen_genes
+    predicate: catalyzes
+    object: continuous_pst_phosphate_uptake_ppk2_polyphosphate_condensation_and_pha_cycling
+    description: PhoU-dysregulated Pst drives continuous phosphate uptake and PPK2
+      condenses phosphate into intracellular polyphosphate reserves, while anaerobic
+      substrate competition by Defluviicoccus GAO synthesis of PHA and glycogen modulates
+      aerobic phosphorus removal.
+    evidence:
+    - reference: PMID:39221073
+      snippet: To prevent phosphate toxicity, Ca. Accumulibacter utilized the laterally
+        acquired PPK2 to condense phosphate into polyphosphate, resulting in the polyphosphate-accumulating
+        feature.
+      notes: Laterally acquired PPK2 condenses continuously imported phosphate into
+        intracellular polyphosphate in Ca. Accumulibacter (PMID:39221073).
+    - reference: PMID:35495637
+      snippet: All have a capacity to assimilate readily metabolizable substrates
+        and store them intracellularly during the anaerobic feed stage so that under
+        the subsequent famine aerobic stage, these can be used to synthesize polyphosphate
+        reserves by the PAO and glycogen by Defluviicoccus. Consequently, Defluviicoccus
+        is described as a glycogen-accumulating organism or GAO. Because they share
+        a similar anaerobic phenotype, it has been proposed that at high Defluviicoccus
+        abundance, the PAO are out-competed for assimilable metabolites anaerobically,
+        and hence aerobic P removal capacity is reduced.
+      notes: Anaerobic storage and subsequent aerobic polyphosphate synthesis by PAOs
+        vs glycogen synthesis by Defluviicoccus GAOs govern net biological phosphorus
+        removal in EBPR bioreactors (PMID:35495637).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -42,3 +192,10 @@ curation_history:
     EBPR'' denotes an enhanced biological phosphorus removal (EBPR) bioreactor. Define
     under ENVO:00002123 (bioreactor) (PMID 16998470; DOI:10.1038/nbt1247). Path: Engineered
     > Bioreactor > EBPR'
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added ebpr_accumulibacter_defluviicoccus_ppk1_ppk2_phou_pst_polyphosphate_cycling
+    mechanism graph for ebpr (habitatmech:GOLD.b5081d36b9) backed by PMID:17675445,
+    PMID:34227830, PMID:39221073, and PMID:35495637.
+  llm_assisted: true
