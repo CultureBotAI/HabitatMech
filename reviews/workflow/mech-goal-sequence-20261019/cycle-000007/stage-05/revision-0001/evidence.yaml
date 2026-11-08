@@ -953,7 +953,7 @@ groups:
     added counterfactual regression coverage, and recorded a fresh structured remediation
     review bundle in reviews/structured/.'
 - group_id: G-source-attestation-mapping-endpoint-contract
-  finding_ids: &id001
+  finding_ids:
   - dental-plaque--8396e8ec-mapping-endpoint-contract
   - dentin-mapping-endpoint-contract
   - dentin--be69daef-mapping-endpoint-contract
@@ -1015,7 +1015,60 @@ groups:
   disposition: 'Explicitly deferred and carried forward under open repository architecture
     Issue #1398; requires corpus-wide SourceAttestation schema/writer design change
     rather than record-local curation edits.'
-carry_forward_ids: *id001
+carry_forward_ids:
+- dental-plaque--8396e8ec-mapping-endpoint-contract
+- dentin-mapping-endpoint-contract
+- dentin--be69daef-mapping-endpoint-contract
+- diaphragm--3c058609-mapping-endpoint-contract
+- diaphragm--fbd202d9-mapping-endpoint-contract
+- digestive-system-mapping-endpoint-contract
+- digestive-system--2589c8ce-mapping-endpoint-contract
+- digestive-system--46d403bb-mapping-endpoint-contract
+- digestive-system--4f205b4d-mapping-endpoint-contract
+- digestive-system--780e5b67-mapping-endpoint-contract
+- digestive-system--87922027-mapping-endpoint-contract
+- digestive-system--9ec9b5f9-mapping-endpoint-contract
+- digestive-system--ae8329bf-mapping-endpoint-contract
+- digestive-system--c5da4fa6-mapping-endpoint-contract
+- digestive-system--d7057103-mapping-endpoint-contract
+- digestive-system--e41cfc7b-mapping-endpoint-contract
+- digestive-system--efdbeca1-mapping-endpoint-contract
+- digestive-system--f6665a67-mapping-endpoint-contract
+- duodenum--00ca3b2c-mapping-endpoint-contract
+- duodenum--5b2d8f0e-mapping-endpoint-contract
+- duodenum--e751f297-mapping-endpoint-contract
+- ear-canal-mapping-endpoint-contract
+- ear-canal--7b012d70-mapping-endpoint-contract
+- elastic--846c7f5c-mapping-endpoint-contract
+- endocrine-gland-mapping-endpoint-contract
+- endocrine-gland--8c35903c-mapping-endpoint-contract
+- endocrine-system-mapping-endpoint-contract
+- endocrine-system--a22b6ca6-mapping-endpoint-contract
+- endocrine-system--e2d3d7a6-mapping-endpoint-contract
+- endocrine-system--fc8977b8-mapping-endpoint-contract
+- esophagus--25614af3-mapping-endpoint-contract
+- esophagus--2ce9b1a3-mapping-endpoint-contract
+- esophagus--d8421c5e-mapping-endpoint-contract
+- esophagus--e0ae9e65-mapping-endpoint-contract
+- esophagus--e4629951-mapping-endpoint-contract
+- eustachian-tube-mapping-endpoint-contract
+- eustachian-tube--a8583033-mapping-endpoint-contract
+- excretory-system-mapping-endpoint-contract
+- excretory-system--22ee753c-mapping-endpoint-contract
+- excretory-system--37f93bb9-mapping-endpoint-contract
+- eye-mapping-endpoint-contract
+- eye--59a4c665-mapping-endpoint-contract
+- eye--810dedbb-mapping-endpoint-contract
+- eye-ciliary-body-mapping-endpoint-contract
+- eye-ciliary-body--832768c5-mapping-endpoint-contract
+- eye-vitreous-chamber-mapping-endpoint-contract
+- eye-vitreous-chamber--b4eddfc1-mapping-endpoint-contract
+- fallopian-tubes-mapping-endpoint-contract
+- fallopian-tubes--c41e0038-mapping-endpoint-contract
+- fascia-mapping-endpoint-contract
+- fascia--1f6c9c1a-mapping-endpoint-contract
+- fibrocartilage-mapping-endpoint-contract
+- fibrocartilage--9cc92423-mapping-endpoint-contract
 infra_tasks: []
 scope_frozen_at: '2026-11-08T15:35:00Z'
 previous_evidence:
