@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.f2a6418a5c (Fetus in Host-associated &gt; Mammals: Human &gt; Fetus, NARROW/SEEDED, no assertion count/unit; total_assertions: 0 in GOLD) retains the life-stage organism term BTO:0000449 (fetus) in parent_habitats via the automatic ambiguous-leaf rule and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.f2a6418a5c (Fetus in Host-associated &gt; Mammals: Human &gt; Fetus, NARROW/SEEDED, 4 ORGANISM assertions) retains the life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb (Mammals: Human) in parent_habitats and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 870 history records, 14 inventor
 
 identity: concern. Targets: habitatmech:GOLD.f2a6418a5c.
 
-Per the host life-stage rule in docs/CURATION.md (#112/#114/#276), BTO:0000449 (fetus, 'An unborn or unhatched vertebrate...') denotes a whole organism at a developmental stage rather than a strictly broader habitat class for 'Host-associated &gt; Mammals: Human &gt; Fetus' (habitatmech:GOLD.f2a6418a5c), and the record carries mapping_predicate skos:narrowMatch on a minted source-path identifier (#1398).
+Per the host life-stage rule in docs/CURATION.md (#112/#114/#276), BTO:0000449 (fetus, 'An unborn or unhatched vertebrate...') denotes a whole organism at a developmental stage rather than a strictly broader habitat class for 'Host-associated &gt; Mammals: Human &gt; Fetus' (habitatmech:GOLD.f2a6418a5c), habitatmech:GOLD.b19c53cdbb (Mammals: Human) is a NOT_APPLICABLE GOLD node, and the record carries mapping_predicate skos:narrowMatch on a minted source-path identifier (#1398).
 
 ### Source counts and retained ranking
 
@@ -67,11 +67,11 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 ## Findings
 
-### F1: Human Fetus asserts life-stage organism term BTO:0000449 (fetus) as a habitat superclass
+### F1: Human Fetus asserts life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE Mammals: Human as habitat superclasses
 
 major / open / confirmed; issue key: fetus--250e9844-life-stage-parent.
 
-Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c ('Host-associated &gt; Mammals: Human &gt; Fetus') with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage organism term BTO:0000449 is preserved as a contextual xref rather than a superclass in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated environment).
+Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c ('Host-associated &gt; Mammals: Human &gt; Fetus') with object_id=BTO:0000449, object_label=fetus, and relation=xref so BTO:0000449 is preserved as a contextual xref rather than a superclass, and exclude the NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb ('Mammals: Human') via curation/gold_parent_exclusions.tsv (or define under ENVO:2100003 with parent_mode REPLACE in curation/term_requests.tsv).
 
 ### F2: Narrow mapping predicate points to a minted source-path record
 
@@ -83,7 +83,7 @@ Reconcile narrow-match source-attestation output with the endpoint contract trac
 
 ### ACT1
 
-Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c ('Host-associated &gt; Mammals: Human &gt; Fetus') with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage organism term BTO:0000449 is preserved as a contextual xref rather than a superclass in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated environment). No repair is performed by this read-only review.
+Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c ('Host-associated &gt; Mammals: Human &gt; Fetus') with object_id=BTO:0000449, object_label=fetus, and relation=xref so BTO:0000449 is preserved as a contextual xref rather than a superclass, and exclude the NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb ('Mammals: Human') via curation/gold_parent_exclusions.tsv (or define under ENVO:2100003 with parent_mode REPLACE in curation/term_requests.tsv). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -150,9 +150,9 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.f2a6418a5c (Fetus in Host-associated
-  > Mammals: Human > Fetus, NARROW/SEEDED, no assertion count/unit; total_assertions:
-  0 in GOLD) retains the life-stage organism term BTO:0000449 (fetus) in parent_habitats
-  via the automatic ambiguous-leaf rule and exhibits the #1398 narrow-match mapping_predicate
+  > Mammals: Human > Fetus, NARROW/SEEDED, 4 ORGANISM assertions) retains the life-stage
+  organism term BTO:0000449 (fetus) and NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb
+  (Mammals: Human) in parent_habitats and exhibits the #1398 narrow-match mapping_predicate
   representation contract defect.'
 source:
   git_revision: 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e
@@ -501,8 +501,9 @@ assessments:
   summary: 'Per the host life-stage rule in docs/CURATION.md (#112/#114/#276), BTO:0000449
     (fetus, ''An unborn or unhatched vertebrate...'') denotes a whole organism at
     a developmental stage rather than a strictly broader habitat class for ''Host-associated
-    > Mammals: Human > Fetus'' (habitatmech:GOLD.f2a6418a5c), and the record carries
-    mapping_predicate skos:narrowMatch on a minted source-path identifier (#1398).'
+    > Mammals: Human > Fetus'' (habitatmech:GOLD.f2a6418a5c), habitatmech:GOLD.b19c53cdbb
+    (Mammals: Human) is a NOT_APPLICABLE GOLD node, and the record carries mapping_predicate
+    skos:narrowMatch on a minted source-path identifier (#1398).'
   target_ids:
   - habitatmech:GOLD.f2a6418a5c
   evidence_ids:
@@ -554,14 +555,14 @@ findings:
   severity: major
   status: open
   certainty: confirmed
-  title: Human Fetus asserts life-stage organism term BTO:0000449 (fetus) as a habitat
-    superclass
+  title: 'Human Fetus asserts life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE
+    Mammals: Human as habitat superclasses'
   description: 'Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
     for habitatmech:GOLD.f2a6418a5c (''Host-associated > Mammals: Human > Fetus'')
-    with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage
-    organism term BTO:0000449 is preserved as a contextual xref rather than a superclass
-    in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated
-    environment).'
+    with object_id=BTO:0000449, object_label=fetus, and relation=xref so BTO:0000449
+    is preserved as a contextual xref rather than a superclass, and exclude the NOT_APPLICABLE
+    GOLD parent habitatmech:GOLD.b19c53cdbb (''Mammals: Human'') via curation/gold_parent_exclusions.tsv
+    (or define under ENVO:2100003 with parent_mode REPLACE in curation/term_requests.tsv).'
   target_ids:
   - habitatmech:GOLD.f2a6418a5c
   field_paths:
@@ -583,6 +584,12 @@ findings:
   owner_paths:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
     role: Maintained input or generator; never patch generated habitat YAML
   rule_id: docs/CURATION.md and native record-review checklist
   native_severity: major
@@ -647,12 +654,19 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
   description: 'Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
     for habitatmech:GOLD.f2a6418a5c (''Host-associated > Mammals: Human > Fetus'')
-    with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage
-    organism term BTO:0000449 is preserved as a contextual xref rather than a superclass
-    in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated
-    environment). No repair is performed by this read-only review.'
+    with object_id=BTO:0000449, object_label=fetus, and relation=xref so BTO:0000449
+    is preserved as a contextual xref rather than a superclass, and exclude the NOT_APPLICABLE
+    GOLD parent habitatmech:GOLD.b19c53cdbb (''Mammals: Human'') via curation/gold_parent_exclusions.tsv
+    (or define under ENVO:2100003 with parent_mode REPLACE in curation/term_requests.tsv).
+    No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.

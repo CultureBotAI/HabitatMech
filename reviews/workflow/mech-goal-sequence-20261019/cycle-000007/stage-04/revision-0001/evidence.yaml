@@ -19,13 +19,13 @@ previous_evidence:
   sha256: 961313e5babe7828bbaf4e1a0e632292676cd888add7aa844543c9f7fde5e379
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/review_report.md
-  sha256: efcdc4450049a883b79efbcf6e24633c4ec9efe3e7c5f40a0b6fa96fe3c427d5
+  sha256: af971dddfd30b28ccf54d779f7f08d3c117b30ae7b9fe77c2b1b0e3146533add
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/review_findings.yaml
-  sha256: 6fff6dd7f74cab5b985fe8179a97df99c51f4342ab9b1c363c0664764b86d37c
+  sha256: c3ec513286be4b0efa31c2c3fec80f3bbebff737453de8a7905af30433ceef71
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/coverage.json
-  sha256: 56153e70465acb5dc1fb4bf1ff1393552a84dcbdb0925d7af15368d6a5cccf75
+  sha256: fab09d15451a5e0f4b4e2af03564a15161d5b4b8271388a377309c2e007b9027
   kind: supporting
 findings:
 - finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
@@ -700,23 +700,24 @@ findings:
     — Add exclusion rows in curation/gold_parent_exclusions.tsv on exact target UBERON:0001988
     for source identifier habitatmech:GOLD.53337a753d (''Host-associated > Annelida
     > Digestive system > Digestive tube > Cast'', excluding parent_id UBERON:0001555),
-    habitatmech:GOLD.d11c365b20 (''Host-associated > Mammals: Human > Digestive system
-    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.5b0aa7456c),
-    habitatmech:GOLD.3671b973b2 (''Host-associated > Mammals > Digestive system >
-    Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2), and
-    habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system > Large
-    intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314), preserving
-    UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
+    habitatmech:GOLD.9ca5fb955b (''Host-associated > Human > Digestive system > Fecal'',
+    excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 (''Host-associated
+    > Mammals: Human > Digestive system > Large intestine > Fecal'', excluding parent_id
+    habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 (''Host-associated >
+    Mammals > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2),
+    and habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system
+    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314),
+    preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
   disposition: Carry forward as open major grounding finding from 20261108T114918Z-feces-record
     (F1) for Cycle 7 Stage 5 grouped remediation.
 - finding_id: felidae-cat-host-name-exact-synonym
   status: open
   summary: 'data/habitats/host_associated/felidae_cat.yaml (habitatmech:BACDIVE.e6b73de092):
     Felid-associated environment asserts host-taxon label ''Felidae-Cat'' as an exact
-    synonym — Remove ''Felidae-Cat'' from exact_synonyms in curation/term_requests.tsv
-    row 46 for habitatmech:BACDIVE.e6b73de092 (retaining ''cat-associated environment''
-    and ''feline host environment'') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    (source_label ''Felidae-Cat'', curated_label ''felid-associated environment'')
+    synonym — Replace ''Felidae-Cat'' in exact_synonym of curation/term_requests.tsv
+    row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with ''cat-associated environment|feline
+    host environment'') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    (source_label ''Felidae-Cat'', requested_label ''felid-associated environment'')
     so automatic retention of the displaced BacDive host label ''Felidae-Cat'' as
     an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving
     verbatim source_attestations.'
@@ -758,13 +759,14 @@ findings:
 - finding_id: fetus--250e9844-life-stage-parent
   status: open
   summary: 'data/habitats/host_associated/fetus__250e9844.yaml (habitatmech:GOLD.f2a6418a5c):
-    Human Fetus asserts life-stage organism term BTO:0000449 (fetus) as a habitat
-    superclass — Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
-    for habitatmech:GOLD.f2a6418a5c (''Host-associated > Mammals: Human > Fetus'')
-    with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage
-    organism term BTO:0000449 is preserved as a contextual xref rather than a superclass
-    in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated
-    environment).'
+    Human Fetus asserts life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE
+    Mammals: Human as habitat superclasses — Add an ITEM-level CONFIRM_UNGROUNDED
+    row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c (''Host-associated
+    > Mammals: Human > Fetus'') with object_id=BTO:0000449, object_label=fetus, and
+    relation=xref so BTO:0000449 is preserved as a contextual xref rather than a superclass,
+    and exclude the NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb (''Mammals:
+    Human'') via curation/gold_parent_exclusions.tsv (or define under ENVO:2100003
+    with parent_mode REPLACE in curation/term_requests.tsv).'
   disposition: Carry forward as open major grounding finding from 20261108T114924Z-fetus__250e9844-record
     (F1) for Cycle 7 Stage 5 grouped remediation.
 - finding_id: fetus--250e9844-mapping-endpoint-contract

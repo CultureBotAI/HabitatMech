@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted BacDive record habitatmech:BACDIVE.e6b73de092 (felid-associated environment in Host &gt; Mammals &gt; Felidae-Cat, UNGROUNDED/REVIEWED, 449 STRAIN assertions) is coherently defined under ENVO:01001002 (animal-associated environment) with NCBITaxon:9681 (Felidae) as an xref, but asserts the bare host-taxon label 'Felidae-Cat' as an EXACT_SYNONYM.
+The minted BacDive record habitatmech:BACDIVE.e6b73de092 (felid-associated environment in Host &gt; Vertebrates &gt; Mammals &gt; Felidae-Cat, UNGROUNDED/REVIEWED, 95 STRAIN assertions) is coherently defined under ENVO:01001002 (animal-associated environment) with NCBITaxon:9681 (Felidae) as an xref, but asserts the bare host-taxon label 'Felidae-Cat' as an EXACT_SYNONYM.
 
 ## Scope And Provenance
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: felidae-cat-host-name-exact-synonym.
 
-Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment' and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
+Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment&#124;feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment' and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations. No repair is performed by this read-only review.
+Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment&#124;feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations. No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -140,10 +140,10 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: The minted BacDive record habitatmech:BACDIVE.e6b73de092 (felid-associated
-  environment in Host > Mammals > Felidae-Cat, UNGROUNDED/REVIEWED, 449 STRAIN assertions)
-  is coherently defined under ENVO:01001002 (animal-associated environment) with NCBITaxon:9681
-  (Felidae) as an xref, but asserts the bare host-taxon label 'Felidae-Cat' as an
-  EXACT_SYNONYM.
+  environment in Host > Vertebrates > Mammals > Felidae-Cat, UNGROUNDED/REVIEWED,
+  95 STRAIN assertions) is coherently defined under ENVO:01001002 (animal-associated
+  environment) with NCBITaxon:9681 (Felidae) as an xref, but asserts the bare host-taxon
+  label 'Felidae-Cat' as an EXACT_SYNONYM.
 source:
   git_revision: 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e
   state: git_commit
@@ -620,10 +620,10 @@ findings:
   certainty: confirmed
   title: Felid-associated environment asserts host-taxon label 'Felidae-Cat' as an
     exact synonym
-  description: Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv
-    row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment'
-    and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so
+  description: Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv
+    row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment|feline
+    host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so
     automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM
     is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
   target_ids:
@@ -669,10 +669,10 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/definition_source_label_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv
-    row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment'
-    and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so
+  description: Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv
+    row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment|feline
+    host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so
     automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM
     is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
     No repair is performed by this read-only review.

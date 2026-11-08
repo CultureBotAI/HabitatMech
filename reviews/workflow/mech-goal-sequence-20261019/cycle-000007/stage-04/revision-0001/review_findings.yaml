@@ -751,24 +751,26 @@ findings:
   description: 'Add exclusion rows in curation/gold_parent_exclusions.tsv on exact
     target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d (''Host-associated
     > Annelida > Digestive system > Digestive tube > Cast'', excluding parent_id UBERON:0001555),
-    habitatmech:GOLD.d11c365b20 (''Host-associated > Mammals: Human > Digestive system
-    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.5b0aa7456c),
-    habitatmech:GOLD.3671b973b2 (''Host-associated > Mammals > Digestive system >
-    Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2), and
-    habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system > Large
-    intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314), preserving
-    UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
+    habitatmech:GOLD.9ca5fb955b (''Host-associated > Human > Digestive system > Fecal'',
+    excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 (''Host-associated
+    > Mammals: Human > Digestive system > Large intestine > Fecal'', excluding parent_id
+    habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 (''Host-associated >
+    Mammals > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2),
+    and habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system
+    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314),
+    preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
   summary: 'Feces retains digestive tract and host-scoped Large intestine GOLD organ
     parents as superclasses — Add exclusion rows in curation/gold_parent_exclusions.tsv
     on exact target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d
     (''Host-associated > Annelida > Digestive system > Digestive tube > Cast'', excluding
-    parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 (''Host-associated > Mammals:
-    Human > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.5b0aa7456c),
-    habitatmech:GOLD.3671b973b2 (''Host-associated > Mammals > Digestive system >
-    Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2), and
-    habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system > Large
-    intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314), preserving
-    UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
+    parent_id UBERON:0001555), habitatmech:GOLD.9ca5fb955b (''Host-associated > Human
+    > Digestive system > Fecal'', excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20
+    (''Host-associated > Mammals: Human > Digestive system > Large intestine > Fecal'',
+    excluding parent_id habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2
+    (''Host-associated > Mammals > Digestive system > Large intestine > Fecal'', excluding
+    parent_id habitatmech:GOLD.6bda0871e2), and habitatmech:GOLD.515763f493 (''Host-associated
+    > Birds > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314),
+    preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
   field_paths:
   - parent_habitats
   evidence_ids:
@@ -803,17 +805,17 @@ findings:
   status: open
   title: Felid-associated environment asserts host-taxon label 'Felidae-Cat' as an
     exact synonym
-  description: Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv
-    row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment'
-    and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so
+  description: Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv
+    row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment|feline
+    host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so
     automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM
     is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
   summary: Felid-associated environment asserts host-taxon label 'Felidae-Cat' as
-    an exact synonym — Remove 'Felidae-Cat' from exact_synonyms in curation/term_requests.tsv
-    row 46 for habitatmech:BACDIVE.e6b73de092 (retaining 'cat-associated environment'
-    and 'feline host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
-    (source_label 'Felidae-Cat', curated_label 'felid-associated environment') so
+    an exact synonym — Replace 'Felidae-Cat' in exact_synonym of curation/term_requests.tsv
+    row 46 for habitatmech:BACDIVE.e6b73de092 (e.g. with 'cat-associated environment|feline
+    host environment') and add a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    (source_label 'Felidae-Cat', requested_label 'felid-associated environment') so
     automatic retention of the displaced BacDive host label 'Felidae-Cat' as an EXACT_SYNONYM
     is omitted from synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim source_attestations.
   field_paths:
@@ -983,21 +985,22 @@ findings:
   severity: major
   category: grounding
   status: open
-  title: Human Fetus asserts life-stage organism term BTO:0000449 (fetus) as a habitat
-    superclass
+  title: 'Human Fetus asserts life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE
+    Mammals: Human as habitat superclasses'
   description: 'Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
     for habitatmech:GOLD.f2a6418a5c (''Host-associated > Mammals: Human > Fetus'')
-    with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage
-    organism term BTO:0000449 is preserved as a contextual xref rather than a superclass
-    in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated
-    environment).'
-  summary: 'Human Fetus asserts life-stage organism term BTO:0000449 (fetus) as a
-    habitat superclass — Add an ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
-    for habitatmech:GOLD.f2a6418a5c (''Host-associated > Mammals: Human > Fetus'')
-    with object_id=BTO:0000449, object_label=fetus, and relation=xref so the life-stage
-    organism term BTO:0000449 is preserved as a contextual xref rather than a superclass
-    in parent_habitats, retaining broader parent habitatmech:GOLD.cd0b0940e5 (human-associated
-    environment).'
+    with object_id=BTO:0000449, object_label=fetus, and relation=xref so BTO:0000449
+    is preserved as a contextual xref rather than a superclass, and exclude the NOT_APPLICABLE
+    GOLD parent habitatmech:GOLD.b19c53cdbb (''Mammals: Human'') via curation/gold_parent_exclusions.tsv
+    (or define under ENVO:2100003 with parent_mode REPLACE in curation/term_requests.tsv).'
+  summary: 'Human Fetus asserts life-stage organism term BTO:0000449 (fetus) and NOT_APPLICABLE
+    Mammals: Human as habitat superclasses — Add an ITEM-level CONFIRM_UNGROUNDED
+    row in curation/decisions.tsv for habitatmech:GOLD.f2a6418a5c (''Host-associated
+    > Mammals: Human > Fetus'') with object_id=BTO:0000449, object_label=fetus, and
+    relation=xref so BTO:0000449 is preserved as a contextual xref rather than a superclass,
+    and exclude the NOT_APPLICABLE GOLD parent habitatmech:GOLD.b19c53cdbb (''Mammals:
+    Human'') via curation/gold_parent_exclusions.tsv (or define under ENVO:2100003
+    with parent_mode REPLACE in curation/term_requests.tsv).'
   field_paths:
   - grounding_status
   - mapping_status
@@ -1017,6 +1020,12 @@ findings:
   owner_paths:
   - repository: CultureBotAI/HabitatMech
     path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
     role: Maintained input or generator; never patch generated habitat YAML
 - finding_id: fetus--250e9844-mapping-endpoint-contract
   structured_review_id: 20261108T114924Z-fetus__250e9844-record

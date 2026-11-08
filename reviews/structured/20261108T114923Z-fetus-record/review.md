@@ -11,7 +11,7 @@
 
 ## Summary
 
-The minted GOLD record habitatmech:GOLD.c8a2e380c1 (Fetus in Host-associated &gt; Mammals &gt; Fetus, NARROW/SEEDED, 11 ORGANISM assertions) retains the life-stage organism term BTO:0000449 (fetus) in parent_habitats via the automatic ambiguous-leaf rule and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
+The minted GOLD record habitatmech:GOLD.c8a2e380c1 (Fetus in Host-associated &gt; Mammals &gt; Fetus, NARROW/SEEDED, 3 ORGANISM assertions) retains the life-stage organism term BTO:0000449 (fetus) in parent_habitats via the automatic ambiguous-leaf rule and exhibits the #1398 narrow-match mapping_predicate representation contract defect.
 
 ## Scope And Provenance
 
@@ -150,7 +150,7 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: 'The minted GOLD record habitatmech:GOLD.c8a2e380c1 (Fetus in Host-associated
-  > Mammals > Fetus, NARROW/SEEDED, 11 ORGANISM assertions) retains the life-stage
+  > Mammals > Fetus, NARROW/SEEDED, 3 ORGANISM assertions) retains the life-stage
   organism term BTO:0000449 (fetus) in parent_habitats via the automatic ambiguous-leaf
   rule and exhibits the #1398 narrow-match mapping_predicate representation contract
   defect.'

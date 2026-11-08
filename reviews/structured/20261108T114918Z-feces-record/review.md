@@ -11,7 +11,7 @@
 
 ## Summary
 
-The multi-source record UBERON:0001988 (feces, EXACT/REVIEWED, merging 5 GOLD paths, BacDive 'Excrements-Feces', Madin 'feces', PREGO UBERON:0001988, 1 environmental parameter, and 1 causal graph) is coherently grounded to UBERON:0001988 under UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material), but retains 4 anatomical digestive-organ GOLD parents (UBERON:0001555 digestive tract and human/mammalian/avian Large intestine habitatmech:GOLD.5b0aa7456c, habitatmech:GOLD.6bda0871e2, habitatmech:GOLD.b091b80314) as superclasses.
+The multi-source record UBERON:0001988 (feces, EXACT/REVIEWED, merging 5 GOLD paths and BacDive 'Host &gt; Vertebrates &gt; Mammals &gt; Excrements &gt; Feces-Stool' with 2,421 STRAIN assertions) is coherently grounded to UBERON:0001988 under UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material), but retains 4 anatomical digestive-organ GOLD parents (UBERON:0001555 digestive tract and human/mammalian/avian Large intestine habitatmech:GOLD.5b0aa7456c, habitatmech:GOLD.6bda0871e2, habitatmech:GOLD.b091b80314) as superclasses.
 
 ## Scope And Provenance
 
@@ -71,13 +71,13 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 major / open / confirmed; issue key: feces-context-parent.
 
-Add exclusion rows in curation/gold_parent_exclusions.tsv on exact target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d ('Host-associated &gt; Annelida &gt; Digestive system &gt; Digestive tube &gt; Cast', excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 ('Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 ('Host-associated &gt; Mammals &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.6bda0871e2), and habitatmech:GOLD.515763f493 ('Host-associated &gt; Birds &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.b091b80314), preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).
+Add exclusion rows in curation/gold_parent_exclusions.tsv on exact target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d ('Host-associated &gt; Annelida &gt; Digestive system &gt; Digestive tube &gt; Cast', excluding parent_id UBERON:0001555), habitatmech:GOLD.9ca5fb955b ('Host-associated &gt; Human &gt; Digestive system &gt; Fecal', excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 ('Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 ('Host-associated &gt; Mammals &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.6bda0871e2), and habitatmech:GOLD.515763f493 ('Host-associated &gt; Birds &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.b091b80314), preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).
 
 ## Recommended Actions And Acceptance Checks
 
 ### ACT1
 
-Add exclusion rows in curation/gold_parent_exclusions.tsv on exact target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d ('Host-associated &gt; Annelida &gt; Digestive system &gt; Digestive tube &gt; Cast', excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 ('Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 ('Host-associated &gt; Mammals &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.6bda0871e2), and habitatmech:GOLD.515763f493 ('Host-associated &gt; Birds &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.b091b80314), preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material). No repair is performed by this read-only review.
+Add exclusion rows in curation/gold_parent_exclusions.tsv on exact target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d ('Host-associated &gt; Annelida &gt; Digestive system &gt; Digestive tube &gt; Cast', excluding parent_id UBERON:0001555), habitatmech:GOLD.9ca5fb955b ('Host-associated &gt; Human &gt; Digestive system &gt; Fecal', excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 ('Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 ('Host-associated &gt; Mammals &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.6bda0871e2), and habitatmech:GOLD.515763f493 ('Host-associated &gt; Birds &gt; Digestive system &gt; Large intestine &gt; Fecal', excluding parent_id habitatmech:GOLD.b091b80314), preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material). No repair is performed by this read-only review.
 
 - Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history.
 - Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
@@ -143,8 +143,8 @@ completion: completed
 verdict: needs_curation
 scientific_review: true
 summary: The multi-source record UBERON:0001988 (feces, EXACT/REVIEWED, merging 5
-  GOLD paths, BacDive 'Excrements-Feces', Madin 'feces', PREGO UBERON:0001988, 1 environmental
-  parameter, and 1 causal graph) is coherently grounded to UBERON:0001988 under UBERON:0000174
+  GOLD paths and BacDive 'Host > Vertebrates > Mammals > Excrements > Feces-Stool'
+  with 2,421 STRAIN assertions) is coherently grounded to UBERON:0001988 under UBERON:0000174
   (excreta) and ENVO:00002276 (animal waste material), but retains 4 anatomical digestive-organ
   GOLD parents (UBERON:0001555 digestive tract and human/mammalian/avian Large intestine
   habitatmech:GOLD.5b0aa7456c, habitatmech:GOLD.6bda0871e2, habitatmech:GOLD.b091b80314)
@@ -750,13 +750,14 @@ findings:
   description: 'Add exclusion rows in curation/gold_parent_exclusions.tsv on exact
     target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d (''Host-associated
     > Annelida > Digestive system > Digestive tube > Cast'', excluding parent_id UBERON:0001555),
-    habitatmech:GOLD.d11c365b20 (''Host-associated > Mammals: Human > Digestive system
-    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.5b0aa7456c),
-    habitatmech:GOLD.3671b973b2 (''Host-associated > Mammals > Digestive system >
-    Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2), and
-    habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system > Large
-    intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314), preserving
-    UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
+    habitatmech:GOLD.9ca5fb955b (''Host-associated > Human > Digestive system > Fecal'',
+    excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 (''Host-associated
+    > Mammals: Human > Digestive system > Large intestine > Fecal'', excluding parent_id
+    habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 (''Host-associated >
+    Mammals > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2),
+    and habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system
+    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314),
+    preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).'
   target_ids:
   - UBERON:0001988
   field_paths:
@@ -800,14 +801,15 @@ actions:
   description: 'Add exclusion rows in curation/gold_parent_exclusions.tsv on exact
     target UBERON:0001988 for source identifier habitatmech:GOLD.53337a753d (''Host-associated
     > Annelida > Digestive system > Digestive tube > Cast'', excluding parent_id UBERON:0001555),
-    habitatmech:GOLD.d11c365b20 (''Host-associated > Mammals: Human > Digestive system
-    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.5b0aa7456c),
-    habitatmech:GOLD.3671b973b2 (''Host-associated > Mammals > Digestive system >
-    Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2), and
-    habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system > Large
-    intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314), preserving
-    UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material). No repair
-    is performed by this read-only review.'
+    habitatmech:GOLD.9ca5fb955b (''Host-associated > Human > Digestive system > Fecal'',
+    excluding parent_id UBERON:0001555), habitatmech:GOLD.d11c365b20 (''Host-associated
+    > Mammals: Human > Digestive system > Large intestine > Fecal'', excluding parent_id
+    habitatmech:GOLD.5b0aa7456c), habitatmech:GOLD.3671b973b2 (''Host-associated >
+    Mammals > Digestive system > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.6bda0871e2),
+    and habitatmech:GOLD.515763f493 (''Host-associated > Birds > Digestive system
+    > Large intestine > Fecal'', excluding parent_id habitatmech:GOLD.b091b80314),
+    preserving UBERON:0000174 (excreta) and ENVO:00002276 (animal waste material).
+    No repair is performed by this read-only review.'
   generator: Controlled source/curation update in Stage 5, then just seed, guarded
     just seed-canary, just seed-apply, and dependent term-request/map/site/redirect
     regeneration.
