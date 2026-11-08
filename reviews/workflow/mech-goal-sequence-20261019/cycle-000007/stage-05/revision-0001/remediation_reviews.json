@@ -1,0 +1,161 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "d3bf0a3ca3570e8f318898db92f800a1e13220f64112fe5c1ce1edc9181c3ae2"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "f004c15e7d206d673bdd9e6d051f6fce93c8a06ebe4db6026149d4d00c49cc9e"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "ad853d6290dd72b2451d945a0545a5dc5272cc37c2296eaab78c99d2872d4b0c"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "0e7964ab7dcc5702495b873f9c8132a1b8e05f9102ca727d2fffc8a566075a11"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "f53415b9d57f351620a1722c7c83414983899dd9a4559d42e9a094a3e8f501e8"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-11-08T153500Z-antigravity-231801.yaml",
+      "sha256": "0238f5404c80e4c6e0f01acbaf496cb3a6a304632fe3c51122e348ea0e39c919"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-11-08T153510Z-antigravity-231901.yaml",
+      "sha256": "e28d82abe703f19ad589f62f7e93ca573a8ebb71bfab13030a83059e974d2126"
+    },
+    {
+      "path": "tests/test_fecal_0d8696a2_to_fin_review_repairs.py",
+      "sha256": "db50d90f8a6296e1914051aa62fe928ab03d264f44cc8cbfb1c822f9f9ec650c"
+    }
+  ],
+  "cycle": 7,
+  "remediation_reviews": [
+    {
+      "finding_id": "feces-context-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114918Z-feces-record",
+      "record_id": "UBERON:0001988",
+      "record_path": "data/habitats/host_associated/feces.yaml",
+      "record_sha256": "a8b3e0efc0c7ad4c9206c1d3e742113308743fab068759671dcd090e6fd8b628",
+      "remediation_review_id": "20261108T154501Z-feces-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154501Z-feces-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9f733828821b28e1ede50d4ece489ce24952efaa44708b4a7a6930fd6627c32f"
+    },
+    {
+      "finding_id": "felidae-cat-host-name-exact-synonym",
+      "group_id": "G-fecal-0d8696a2-to-fin-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2319",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114919Z-felidae_cat-record",
+      "record_id": "habitatmech:BACDIVE.e6b73de092",
+      "record_path": "data/habitats/host_associated/felidae_cat.yaml",
+      "record_sha256": "daf5f03c2f0b7d4b212d5fea484cd29724e0d0d2e45431deffb8aab8e8211667",
+      "remediation_review_id": "20261108T154502Z-felidae_cat-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154502Z-felidae_cat-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3a46c8ec5e6a2181c1873920dc281ef2dfc92721adf0ca18f6024e17733c2c60"
+    },
+    {
+      "finding_id": "fetal-tissue-context-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114921Z-fetal_tissue-record",
+      "record_id": "habitatmech:GOLD.1ad500c492",
+      "record_path": "data/habitats/host_associated/fetal_tissue.yaml",
+      "record_sha256": "50978abc7e55000b9d4f5f23cafb99c5880da4818ab990de087779abf083ba4c",
+      "remediation_review_id": "20261108T154503Z-fetal_tissue-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154503Z-fetal_tissue-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "accc9396026e509164dbabbe4b14120c5fe8e1baa6e591193c54e0a6d26bc2db"
+    },
+    {
+      "finding_id": "fetus--250e9844-life-stage-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114924Z-fetus__250e9844-record",
+      "record_id": "habitatmech:GOLD.f2a6418a5c",
+      "record_path": "data/habitats/host_associated/fetus__250e9844.yaml",
+      "record_sha256": "a01bde2d48819fbdf3f2f84976b6f9e9e27802577520258fb8df0897aec7a260",
+      "remediation_review_id": "20261108T154505Z-fetus__250e9844-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154505Z-fetus__250e9844-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "649a31e2e1f814a5a4aa535936a2624edc08e9f95870dc3dde07289753f35279"
+    },
+    {
+      "finding_id": "fetus--250e9844-mapping-endpoint-contract",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114924Z-fetus__250e9844-record",
+      "record_id": "habitatmech:GOLD.f2a6418a5c",
+      "record_path": "data/habitats/host_associated/fetus__250e9844.yaml",
+      "record_sha256": "a01bde2d48819fbdf3f2f84976b6f9e9e27802577520258fb8df0897aec7a260",
+      "remediation_review_id": "20261108T154505Z-fetus__250e9844-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154505Z-fetus__250e9844-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "649a31e2e1f814a5a4aa535936a2624edc08e9f95870dc3dde07289753f35279"
+    },
+    {
+      "finding_id": "fetus-life-stage-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114923Z-fetus-record",
+      "record_id": "habitatmech:GOLD.c8a2e380c1",
+      "record_path": "data/habitats/host_associated/fetus.yaml",
+      "record_sha256": "60e0aaca9c13fe20de654ef7607e2996ec146686799b3318c350ba90aec80efc",
+      "remediation_review_id": "20261108T154504Z-fetus-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154504Z-fetus-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "981f1958d63dcb7ccd89077ad9af6fd265dd9dbda68ebf342a855f74df75117b"
+    },
+    {
+      "finding_id": "fetus-mapping-endpoint-contract",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114923Z-fetus-record",
+      "record_id": "habitatmech:GOLD.c8a2e380c1",
+      "record_path": "data/habitats/host_associated/fetus.yaml",
+      "record_sha256": "60e0aaca9c13fe20de654ef7607e2996ec146686799b3318c350ba90aec80efc",
+      "remediation_review_id": "20261108T154504Z-fetus-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154504Z-fetus-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "981f1958d63dcb7ccd89077ad9af6fd265dd9dbda68ebf342a855f74df75117b"
+    },
+    {
+      "finding_id": "fibroma-not-applicable-benign-tumor-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114929Z-fibroma-record",
+      "record_id": "habitatmech:GOLD.fb56a964a6",
+      "record_path": "data/habitats/host_associated/fibroma.yaml",
+      "record_sha256": "4cdedf967ffe76ae283765eb1f71f3ca3f82b4506cf9e6726fe773d7da6335ba",
+      "remediation_review_id": "20261108T154506Z-fibroma-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154506Z-fibroma-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4c4b8192ab71d6230f17882c27b0918a53f6fd87082ebe6172fc59e3452a1e8e"
+    },
+    {
+      "finding_id": "fin-context-parent",
+      "group_id": "G-fecal-0d8696a2-to-fin-parent-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2318",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261108T114933Z-fin-record",
+      "record_id": "UBERON:0008897",
+      "record_path": "data/habitats/host_associated/fin.yaml",
+      "record_sha256": "64af3b171425e86bccb2f2ded0308c8fca835228377ba86a43eeb33baad1de8e",
+      "remediation_review_id": "20261108T154507Z-fin-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261108T154507Z-fin-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "a2e808cc6845fd4735e8afb9da39c083917a57c65a2583467e03fc810f3d4c6b"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "8e2744f4c33769669e5e9a66a4ae9e27a9642590",
+  "stage": 5
+}

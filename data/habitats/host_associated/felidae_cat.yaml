@@ -7,7 +7,10 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Felidae-Cat
+- synonym_text: cat-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: feline host environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
@@ -193,8 +196,8 @@ curation_history:
     of organisms, not a place - so it stays an xref (#99) and the concept keeps its
     minted identity with a term request. Category HOST_ASSOCIATED: the host is living.
     (source concept habitatmech:BACDIVE.e6b73de092)'
-- timestamp: '2026-08-26T00:00:00Z'
-  curator: claude-opus-5
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
   action: DEFINED
   changes: 'Defined as ''felid-associated environment'' under ENVO:01001002 ''animal-associated
     environment''. Definition follows the established <clade>-associated environment
@@ -205,4 +208,15 @@ curation_history:
     and the near-miss reasoning are already settled by those five siblings and by
     NCBITaxon, so a billed report would add nothing this slice turns on. Worded like
     the equid sibling for the same reason as the canid row: NCBITaxon:9681 ''Felidae''
-    is wider than the domestic cat the source label names.'
+    is wider than the domestic cat the source label names. Review https://github.com/CultureBotAI/HabitatMech/issues/2319
+    : replaced bare host label Felidae-Cat in exact_synonym with cat-associated environment|feline
+    host environment and guarded fallback exclusion in curation/definition_source_label_exclusions.tsv.'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Felidae-Cat''
+    when defining habitatmech:BACDIVE.e6b73de092 as ''felid-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2319
+    : The displaced label names the determining hosts (Felidae-Cat), not their associated
+    environment. Suppress exact-alias fallback; preserve verbatim source provenance,
+    definition, genus and native status.'

@@ -12,7 +12,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0000026
-- habitatmech:GOLD.92e3c832eb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6922
@@ -24,3 +23,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.92e3c832eb
+    for habitatmech:GOLD.8634ec53de (Host-associated > Fish > Integumentary system
+    > Skin > Fin). Review https://github.com/CultureBotAI/HabitatMech/issues/2318
+    : Feces and earthworm casts are egested digestive waste material, not subtypes
+    of the digestive tract or of the human, mammalian, or avian large intestine organ;
+    a fish fin is a locomotory appendage, not a subtype of the whole fish skin organ.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0008897. Shared mapping
+    endpoints #1398 remain separate.'
