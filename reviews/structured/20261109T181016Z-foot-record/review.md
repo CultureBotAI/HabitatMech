@@ -11,7 +11,7 @@
 
 ## Summary
 
-The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('The terminal part of the vertebrate leg upon which an individual stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic taxa from the 107-row BacDive pool.
+The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('1: The terminal part of the vertebrate leg upon which an individual stands. 2: An invertebrate organ of locomotion or attachment; especially: a ventral muscular surface or process of a mollusk.') under BTO:0001492 (limb) with 25 displayed characteristic taxa from the 83-row BacDive pool.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000476.
 
-The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('The terminal part of the vertebrate leg upon which an individual stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic taxa from the 107-row BacDive pool.
+The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('1: The terminal part of the vertebrate leg upon which an individual stands. 2: An invertebrate organ of locomotion or attachment; especially: a ventral muscular surface or process of a mollusk.') under BTO:0001492 (limb) with 25 displayed characteristic taxa from the 83-row BacDive pool.
 
 ### Source counts and retained ranking
 
@@ -121,11 +121,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot',
+summary: 'The BacDive-attested record BTO:0000476 (foot, ''bacdive.isolation_source:foot'',
   EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology
-  term BTO:0000476 ('The terminal part of the vertebrate leg upon which an individual
-  stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic taxa from
-  the 107-row BacDive pool.
+  term BTO:0000476 (''1: The terminal part of the vertebrate leg upon which an individual
+  stands. 2: An invertebrate organ of locomotion or attachment; especially: a ventral
+  muscular surface or process of a mollusk.'') under BTO:0001492 (limb) with 25 displayed
+  characteristic taxa from the 83-row BacDive pool.'
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -478,11 +479,12 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
-  summary: The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot',
+  summary: 'The BacDive-attested record BTO:0000476 (foot, ''bacdive.isolation_source:foot'',
     EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue
-    Ontology term BTO:0000476 ('The terminal part of the vertebrate leg upon which
-    an individual stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic
-    taxa from the 107-row BacDive pool.
+    Ontology term BTO:0000476 (''1: The terminal part of the vertebrate leg upon which
+    an individual stands. 2: An invertebrate organ of locomotion or attachment; especially:
+    a ventral muscular surface or process of a mollusk.'') under BTO:0001492 (limb)
+    with 25 displayed characteristic taxa from the 83-row BacDive pool.'
   target_ids:
   - BTO:0000476
   evidence_ids:

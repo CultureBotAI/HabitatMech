@@ -499,15 +499,14 @@ findings:
   certainty: confirmed
   title: Bare host clade name 'Fish' is asserted as an exact synonym of fish-associated
     environment
-  description: Remove bare host clade label 'Fish' from exact_synonym in curation/term_requests.tsv
-    row 9 for habitatmech:GOLD.3d529a667e (retaining 'fish host environment') and
-    add a guarded row in curation/definition_source_label_exclusions.tsv so the displaced
-    GOLD source label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated
-    environment.
+  description: Replace bare host clade label 'Fish' in exact_synonym of curation/term_requests.tsv
+    row 9 for habitatmech:GOLD.3d529a667e with 'fish host environment' and add a guarded
+    row in curation/definition_source_label_exclusions.tsv so the displaced GOLD source
+    label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated environment.
   target_ids:
   - habitatmech:GOLD.3d529a667e
   field_paths:
-  - exact_synonyms
+  - synonyms
   evidence_ids:
   - E1
   - ERULE
@@ -546,17 +545,16 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: curation/definition_source_label_exclusions.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: Remove bare host clade label 'Fish' from exact_synonym in curation/term_requests.tsv
-    row 9 for habitatmech:GOLD.3d529a667e (retaining 'fish host environment') and
-    add a guarded row in curation/definition_source_label_exclusions.tsv so the displaced
-    GOLD source label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated
-    environment.
+  description: Replace bare host clade label 'Fish' in exact_synonym of curation/term_requests.tsv
+    row 9 for habitatmech:GOLD.3d529a667e with 'fish host environment' and add a guarded
+    row in curation/definition_source_label_exclusions.tsv so the displaced GOLD source
+    label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated environment.
   generator: Update curation/term_requests.tsv and curation/definition_source_label_exclusions.tsv,
     then run just seed, just seed-canary, just seed-apply, just term-requests, and
     just render.
   acceptance_checks:
-  - Verify exact_synonyms on data/habitats/host_associated/fish.yaml retains only
-    'fish host environment' and omits bare 'Fish'.
+  - Verify synonyms on data/habitats/host_associated/fish.yaml retains only 'fish
+    host environment' and omits bare 'Fish'.
   - Run just qc and just validate-products.
 limitations:
 - Only the cited repository inputs, ontology terms, and source inventories were inspected;

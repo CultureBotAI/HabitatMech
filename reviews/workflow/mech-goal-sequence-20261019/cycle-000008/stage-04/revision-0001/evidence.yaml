@@ -11,7 +11,7 @@ summary: 'Completed Cycle 8 Stage 4 record and category cohort review for frozen
   at commit 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39; saved 24 kind: record bundles
   and 1 kind: category bundle in reviews/structured/, carried forward 53 deferred
   #1398 findings from Cycle 7 Stage 5, and recorded 24 new open findings (4 blocker
-  identity defects, 11 major grounding/hierarchy defects, 1 major nomenclature exact_synonyms
+  identity defects, 12 major grounding/hierarchy defects, 1 major nomenclature synonyms
   defect, and 7 #1398 mapping-endpoint contract defects; 77 total carried forward)
   for Cycle 8 Stage 5 remediation.'
 source_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
@@ -20,13 +20,13 @@ previous_evidence:
   sha256: 5fae6499a30401cec6c3a7ff2456d5cd61cf4645fd354b9c268f19edfd56dea1
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_report.md
-  sha256: 556366b3edd97033436c6c5a1c3bb9aa9d400d7d84fa746d143d256ba51c927a
+  sha256: 7ea6a33573a96f9c7592f0656afcb453e2800036aad2e2292dd23e37c97d1411
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_findings.yaml
-  sha256: 94ed0e6e3c314836e41115b4948b8a1a68074f80bd6c95a803c64c7b0c42f949
+  sha256: 74200ff284b9456a71eb547c345eccb878132a0ca3a06eebd1487924bed9f939
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/coverage.json
-  sha256: fabc6869aff8facf4584759eeb4e64301397ce2acbb417f14c1dd557e1b6beb9
+  sha256: dd62d9e2e90bd3b0a12412621113f161b6e2c50f6d4299d455efeea92aabf967
   kind: supporting
 findings:
 - finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
@@ -724,9 +724,9 @@ findings:
   status: open
   summary: 'data/habitats/host_associated/fish.yaml (habitatmech:GOLD.3d529a667e):
     Bare host clade name ''Fish'' is asserted as an exact synonym of fish-associated
-    environment — Remove bare host clade label ''Fish'' from exact_synonym in curation/term_requests.tsv
-    row 9 for habitatmech:GOLD.3d529a667e (retaining ''fish host environment'') and
-    add a guarded row in curation/definition_source_label_exclusions.tsv so the displaced
+    environment — Replace bare host clade label ''Fish'' in exact_synonym of curation/term_requests.tsv
+    row 9 for habitatmech:GOLD.3d529a667e with ''fish host environment'' and add a
+    guarded row in curation/definition_source_label_exclusions.tsv so the displaced
     GOLD source label ''Fish'' is not retained as an EXACT_SYNONYM on fish-associated
     environment.'
   disposition: Carry forward as open major nomenclature finding from 20261109T181011Z-fish-record
@@ -761,10 +761,11 @@ findings:
   status: open
   summary: 'data/habitats/host_associated/flagellum.yaml (BTO:0002292): Subcellular
     motility organelle BTO:0002292 (flagellum) is used as a host-associated habitat
-    identity — PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions
-    across flagellated bacteria such as Escherichia coli, Salmonella enterica, and
-    Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella
-    to BTO:0002292 (''Long, thin, whip-like structure present in some cells...'').
+    identity — PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON
+    assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica,
+    and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility
+    flagella to BTO:0002292 (''Long, slender, threadlike, whiplike extension of certain
+    cells or unicellular organisms used mainly for movements (others for signal transduction)...'').
     Under docs/CURATION.md, a subcellular motility organelle/component of the cell
     is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
     for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum,
@@ -924,7 +925,7 @@ findings:
     lymph node to BTO:0006514 (foreleg) asserts UBERON:0000029 (lymph node) as a parent
     of foreleg — Because habitatmech:GOLD.80220dc4d4 (''Host-associated > Mammals
     > Lymphatic system > Lymph nodes > Forelegs'') is grounded to BTO:0006514 (foreleg),
-    the generated record combines BTO subclass parent BTO:0000721 (limb) with GOLD
+    the generated record combines BTO subclass parent BTO:0000721 (leg) with GOLD
     path parent UBERON:0000029 (lymph node), falsely asserting that a foreleg is a
     subtype of lymph node. Resolving F1 by ungrounding habitatmech:GOLD.80220dc4d4
     to ''mammalian forelimb lymph node'' under UBERON:0000029 eliminates this parent

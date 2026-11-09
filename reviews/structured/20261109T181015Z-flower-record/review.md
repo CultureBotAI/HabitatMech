@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa.
+The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: supported. Targets: BTO:0000469.
 
-The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa.
+The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa.
 
 ### Source counts and retained ranking
 
@@ -122,8 +122,8 @@ verdict: pass_with_limitations
 scientific_review: true
 summary: The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions)
   is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive
-  structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed
-  characteristic taxa.
+  structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers')
+  and 6 displayed characteristic taxa.
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -451,8 +451,8 @@ assessments:
   outcome: supported
   summary: The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions)
     is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive
-    structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed
-    characteristic taxa.
+    structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers')
+    and 6 displayed characteristic taxa.
   target_ids:
   - BTO:0000469
   evidence_ids:

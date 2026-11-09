@@ -11,7 +11,7 @@
 
 ## Summary
 
-The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph node) in parent_habitats.
+The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph node) in parent_habitats.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: concern. Targets: BTO:0006514.
 
-The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph node) in parent_habitats.
+The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph node) in parent_habitats.
 
 ### Source counts and retained ranking
 
@@ -77,7 +77,7 @@ GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &
 
 major / open / confirmed; issue key: foreleg-lymph-node-parent-collision.
 
-Because habitatmech:GOLD.80220dc4d4 ('Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs') is grounded to BTO:0006514 (foreleg), the generated record combines BTO subclass parent BTO:0000721 (limb) with GOLD path parent UBERON:0000029 (lymph node), falsely asserting that a foreleg is a subtype of lymph node. Resolving F1 by ungrounding habitatmech:GOLD.80220dc4d4 to 'mammalian forelimb lymph node' under UBERON:0000029 eliminates this parent collision.
+Because habitatmech:GOLD.80220dc4d4 ('Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs') is grounded to BTO:0006514 (foreleg), the generated record combines BTO subclass parent BTO:0000721 (leg) with GOLD path parent UBERON:0000029 (lymph node), falsely asserting that a foreleg is a subtype of lymph node. Resolving F1 by ungrounding habitatmech:GOLD.80220dc4d4 to 'mammalian forelimb lymph node' under UBERON:0000029 eliminates this parent collision.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -143,8 +143,8 @@ summary: The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/RE
   grounds GOLD path 'Host-associated > Mammals > Lymphatic system > Lymph nodes >
   Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather
   than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81),
-  causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph
-  node) in parent_habitats.
+  causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph node)
+  in parent_habitats.
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -529,7 +529,7 @@ assessments:
     grounds GOLD path 'Host-associated > Mammals > Lymphatic system > Lymph nodes
     > Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514
     rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81),
-    causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph
+    causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph
     node) in parent_habitats.
   target_ids:
   - BTO:0006514
@@ -644,7 +644,7 @@ findings:
     (lymph node) as a parent of foreleg
   description: Because habitatmech:GOLD.80220dc4d4 ('Host-associated > Mammals > Lymphatic
     system > Lymph nodes > Forelegs') is grounded to BTO:0006514 (foreleg), the generated
-    record combines BTO subclass parent BTO:0000721 (limb) with GOLD path parent UBERON:0000029
+    record combines BTO subclass parent BTO:0000721 (leg) with GOLD path parent UBERON:0000029
     (lymph node), falsely asserting that a foreleg is a subtype of lymph node. Resolving
     F1 by ungrounding habitatmech:GOLD.80220dc4d4 to 'mammalian forelimb lymph node'
     under UBERON:0000029 eliminates this parent collision.

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full 24-record category boundary and cohort review of the contiguous unreviewed host_associated slice (finger.yaml through free_living_state.yaml) at commit 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39. All 24 records represent distinct anatomical-site, host-environment, cellular/organism-form, foregut, lymph-node, forestomach, fossil-remains, or insect-frass source concepts (retain decisions; no cross-record lumping or splitting). Record-level open findings (23 total across 13 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.
+Full 24-record category boundary and cohort review of the contiguous unreviewed host_associated slice (finger.yaml through free_living_state.yaml) at commit 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39. All 24 records represent distinct anatomical-site, host-environment, cellular/organism-form, foregut, lymph-node, forestomach, fossil-remains, or insect-frass source concepts (retain decisions; no cross-record lumping or splitting). Record-level open findings (24 total across 13 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.
 
 ## Scope And Provenance
 
@@ -80,7 +80,7 @@ All 24 records represent distinct anatomical-site, host-environment, organism-fo
 
 grounding: supported. Targets: BTO:0004669, habitatmech:GOLD.3d529a667e, BTO:0000464, BTO:0002292, habitatmech:GOLD.79193f14f9, BTO:0000469, BTO:0000476, habitatmech:GOLD.0a9f2ca319, BTO:0001447, BTO:0000507, habitatmech:GOLD.52f22e84ee, habitatmech:GOLD.cd6e81f421, habitatmech:GOLD.bd1664969c, habitatmech:GOLD.8997340b18, habitatmech:GOLD.fe78a4c113, BTO:0006514, BTO:0000480, habitatmech:GOLD.4af8939c1f, habitatmech:GOLD.76df031f74, habitatmech:GOLD.f1a2eca320, habitatmech:GOLD.c5640eadf7, habitatmech:GOLD.319c3f351e, habitatmech:GOLD.67f3cde908, BTO:0001551.
 
-11 records pass with limitations; 13 records have 23 open findings (4 blocker identity findings, 11 major grounding findings, 1 major nomenclature finding, and 7 major #1398 mapping-endpoint contract findings) recorded in their respective kind: record bundles (linked in related_reviews) and carried forward to Stage 5 grouped remediation.
+11 records pass with limitations; 13 records have 24 open findings (4 blocker identity findings, 12 major grounding findings, 1 major nomenclature finding, and 7 major #1398 mapping-endpoint contract findings) recorded in their respective kind: record bundles (linked in related_reviews) and carried forward to Stage 5 grouped remediation.
 
 ## Findings
 
@@ -104,19 +104,19 @@ No findings recorded within this review's declared scope.
 | EREC1 | data/habitats/host_associated/finger.yaml; Entire YAML | supports | The PREGO-attested record BTO:0004669 (finger, EXACT/SEEDED, 9 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0004669 with its vendored anatomical definition, 4 PREGO RELATED_SYNONYMs ('digits', 'fingers', 'forelimb digit', 'forelimb digits'), and 9 displayed characteristic taxa. |
 | EREC2 | data/habitats/host_associated/fish.yaml; Entire YAML | supports | The curated GOLD host-environment record habitatmech:GOLD.3d529a667e (fish-associated environment, UNGROUNDED/REVIEWED, 1,350 ORGANISM assertions) has a sound definition and parent_habitats (ENVO:01001000, ENVO:01001002), but curation/term_requests.tsv row 9 retains the bare host clade name 'Fish' in exact_synonym, emitting 'Fish' as an EXACT_SYNONYM on the environment record. |
 | EREC3 | data/habitats/host_associated/flagellate.yaml; Entire YAML | supports | The PREGO-attested record BTO:0000464 (flagellate, 'A flagellate protozoan or alga.', EXACT/SEEDED, 9 TAXON assertions) uses a morphological whole-organism form class as a microbial habitat identity and imports organism-form classes BTO:0000720 (plant form) and BTO:0002503 (protozoan form) in parent_habitats. |
-| EREC4 | data/habitats/host_associated/flagellum.yaml; Entire YAML | supports | The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats. |
-| EREC5 | data/habitats/host_associated/flat_warts.yaml; Entire YAML | supports | The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED) is coherently defined as a human cutaneous wart habitat under BTO:0001859 (wart) with parent_mode REPLACE and source-label exclusion for bare 'Flat warts'. |
-| EREC6 | data/habitats/host_associated/flower.yaml; Entire YAML | supports | The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa. |
-| EREC7 | data/habitats/host_associated/foot.yaml; Entire YAML | supports | The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('The terminal part of the vertebrate leg upon which an individual stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic taxa from the 107-row BacDive pool. |
-| EREC8 | data/habitats/host_associated/foraminifera.yaml; Entire YAML | supports | The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, 6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'. |
-| EREC9 | data/habitats/host_associated/forearm.yaml; Entire YAML | supports | The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the superior limb between the elbow and the wrist.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 10 displayed characteristic taxa from the 404-row PREGO pool. |
-| EREC10 | data/habitats/host_associated/foregut.yaml; Entire YAML | supports | The PREGO-attested record BTO:0000507 (foregut, EXACT/SEEDED, 92 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000507 with its vendored anatomical definition, 1 PREGO RELATED_SYNONYM ('foreguts'), and 10 displayed characteristic taxa from the 92-row PREGO pool. |
+| EREC4 | data/habitats/host_associated/flagellum.yaml; Entire YAML | supports | The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity ('Long, slender, threadlike, whiplike extension of certain cells or unicellular organisms used mainly for movements (others for signal transduction)...') as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats. |
+| EREC5 | data/habitats/host_associated/flat_warts.yaml; Entire YAML | supports | The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined as a human cutaneous wart habitat under strictly broader parent BTO:0001859 (wart) via curation/term_requests.tsv row 592 (parent_mode ADD, combining with GOLD parent 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart' which resolves to BTO:0001859) with exact synonyms ('Flat warts', 'verruca plana') matching sibling filiform_warts.yaml and common_warts.yaml. |
+| EREC6 | data/habitats/host_associated/flower.yaml; Entire YAML | supports | The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed characteristic taxa. |
+| EREC7 | data/habitats/host_associated/foot.yaml; Entire YAML | supports | The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot', EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000476 ('1: The terminal part of the vertebrate leg upon which an individual stands. 2: An invertebrate organ of locomotion or attachment; especially: a ventral muscular surface or process of a mollusk.') under BTO:0001492 (limb) with 25 displayed characteristic taxa from the 83-row BacDive pool. |
+| EREC8 | data/habitats/host_associated/foraminifera.yaml; Entire YAML | supports | The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'. |
+| EREC9 | data/habitats/host_associated/forearm.yaml; Entire YAML | supports | The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the arm between the elbow and the wrist; also: the corresponding part in other vertebrates.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 25 displayed characteristic taxa from the 404-row PREGO pool. |
+| EREC10 | data/habitats/host_associated/foregut.yaml; Entire YAML | supports | The PREGO-attested record BTO:0000507 (foregut, EXACT/SEEDED, 92 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000507 with its vendored anatomical definition, 1 PREGO RELATED_SYNONYM ('foreguts'), and 25 displayed characteristic taxa from the 92-row PREGO pool. |
 | EREC11 | data/habitats/host_associated/foregut__6bc8c43a.yaml; Entire YAML | supports | The fish foregut record habitatmech:GOLD.52f22e84ee ('Host-associated &gt; Fish &gt; Digestive system &gt; Foregut', NARROW/SEEDED) asserts the whole fish Digestive system (habitatmech:GOLD.8a68d0f6f5, 'Host-associated &gt; Fish &gt; Digestive system') in parent_habitats alongside UBERON:0001041 (foregut), conflating part_of digestive-system composition with is_a habitat subtyping, and emits mapping_predicate skos:narrowMatch on a minted source-path record (#1398). |
 | EREC12 | data/habitats/host_associated/foregut__c14450a8.yaml; Entire YAML | supports | The mammalian foregut record habitatmech:GOLD.cd6e81f421 ('Host-associated &gt; Mammals &gt; Digestive system &gt; Foregut', NARROW/SEEDED) asserts the whole mammalian Digestive system (habitatmech:GOLD.c8e85f3c84, 'Host-associated &gt; Mammals &gt; Digestive system') in parent_habitats alongside UBERON:0001041 (foregut), conflating part_of digestive-system composition with is_a habitat subtyping, and emits mapping_predicate skos:narrowMatch on a minted source-path record (#1398). |
 | EREC13 | data/habitats/host_associated/foregut__ce63e8ab.yaml; Entire YAML | supports | The insect foregut record habitatmech:GOLD.bd1664969c ('Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Foregut', NARROW/SEEDED) asserts the whole insect Digestive system (habitatmech:GOLD.d7cff86ce8, 'Host-associated &gt; Arthropoda: Insects &gt; Digestive system') in parent_habitats alongside UBERON:0001041 (foregut), conflating part_of digestive-system composition with is_a habitat subtyping, and emits mapping_predicate skos:narrowMatch on a minted source-path record (#1398). |
 | EREC14 | data/habitats/host_associated/foregut__d14a54ae.yaml; Entire YAML | supports | The myriapod foregut record habitatmech:GOLD.8997340b18 ('Host-associated &gt; Arthropoda: Myriapoda &gt; Digestive system &gt; Foregut', NARROW/SEEDED) asserts the whole myriapod Digestive system (habitatmech:GOLD.acc41d1792, 'Host-associated &gt; Arthropoda: Myriapoda &gt; Digestive system') in parent_habitats alongside UBERON:0001041 (foregut), conflating part_of digestive-system composition with is_a habitat subtyping, and emits mapping_predicate skos:narrowMatch on a minted source-path record (#1398). |
 | EREC15 | data/habitats/host_associated/foregut__ee6a8f74.yaml; Entire YAML | supports | The crustacean foregut record habitatmech:GOLD.fe78a4c113 ('Host-associated &gt; Arthropoda: Crustaceans &gt; Digestive system &gt; Foregut', NARROW/SEEDED) asserts the whole crustacean Digestive system (habitatmech:GOLD.6eecdf150d, 'Host-associated &gt; Arthropoda: Crustaceans &gt; Digestive system') in parent_habitats alongside UBERON:0001041 (foregut), conflating part_of digestive-system composition with is_a habitat subtyping, and emits mapping_predicate skos:narrowMatch on a minted source-path record (#1398). |
-| EREC16 | data/habitats/host_associated/foreleg.yaml; Entire YAML | supports | The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph node) in parent_habitats. |
+| EREC16 | data/habitats/host_associated/foreleg.yaml; Entire YAML | supports | The GOLD-attested record BTO:0006514 (foreleg, 'A front leg.', EXACT/REVIEWED) grounds GOLD path 'Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514 rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81), causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph node) in parent_habitats. |
 | EREC17 | data/habitats/host_associated/forestomach.yaml; Entire YAML | supports | The multi-source record BTO:0000480 (forestomach, attested by GOLD 'Host-associated &gt; Mammals &gt; Digestive system &gt; Stomach &gt; Forestomach' and PREGO BTO:0000480, EXACT/REVIEWED, 1 TAXON assertion) asserts the whole mammalian Stomach (habitatmech:GOLD.d3869ad37f, 'Host-associated &gt; Mammals &gt; Digestive system &gt; Stomach') in parent_habitats alongside BTO:0001307 (stomach), conflating anatomical compartment part_of composition with is_a subtyping. |
 | EREC18 | data/habitats/host_associated/fossilized_remains.yaml; Entire YAML | supports | The curated GOLD fossil-remains record habitatmech:GOLD.4af8939c1f (fossilized avian remains, 'Host-associated &gt; Birds &gt; Remains &gt; Fossilized remains', UNGROUNDED/REVIEWED) is coherently defined under ENVO:00002164 (fossil material) with parent_mode REPLACE and source-label exclusion for bare 'Fossilized remains'. |
 | EREC19 | data/habitats/host_associated/fossilized_remains__19772eb4.yaml; Entire YAML | supports | The curated GOLD fossil-remains record habitatmech:GOLD.76df031f74 (fossilized fish remains, 'Host-associated &gt; Fish &gt; Remains &gt; Fossilized remains', UNGROUNDED/REVIEWED) is coherently defined under ENVO:00002164 (fossil material) with parent_mode REPLACE and source-label exclusion for bare 'Fossilized remains'. |
@@ -131,7 +131,7 @@ No findings recorded within this review's declared scope.
 - Only the stated primary evidence and current ontology/taxonomy authorities were independently inspected; original specimen-level support for every source-bin member is not established.
 - Association counts and PREGO scores do not establish prevalence, viability, mechanism, or characteristic presence.
 - Configured label correspondence skipped 2,094 no-adapter pairs; this is not whole-corpus identifier certification.
-- Record-specific open findings (23 across 13 records: 4 blocker identity defects, 11 major grounding/hierarchy defects, 1 major nomenclature exact_synonyms defect, and 7 major #1398 mapping-endpoint contract defects) are recorded on their respective kind: record bundles in related_reviews so each issue_key has a single authoritative open owner for Stage 5 remediation.
+- Record-specific open findings (24 across 13 records: 4 blocker identity defects, 12 major grounding/hierarchy defects, 1 major nomenclature synonyms defect, and 7 major #1398 mapping-endpoint contract defects) are recorded on their respective kind: record bundles in related_reviews so each issue_key has a single authoritative open owner for Stage 5 remediation.
 - All 24 cohort target files and context inputs were captured at clean git commit 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39.
 - Each of the 24 targets has a dedicated kind: record bundle in reviews/structured/.
 
@@ -164,7 +164,7 @@ summary: 'Full 24-record category boundary and cohort review of the contiguous u
   All 24 records represent distinct anatomical-site, host-environment, cellular/organism-form,
   foregut, lymph-node, forestomach, fossil-remains, or insect-frass source concepts
   (retain decisions; no cross-record lumping or splitting). Record-level open findings
-  (23 total across 13 records) are recorded in the 24 linked kind: record bundles
+  (24 total across 13 records) are recorded in the 24 linked kind: record bundles
   for Stage 5 remediation.'
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
@@ -1480,11 +1480,13 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-11-09T18:11:00Z'
   support: supports
-  summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent
-    in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated
+  summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure
+    in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated
     bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular
-    motility organelle identity as a host-associated microbial habitat and imports
-    whole-organism form BTO:0000464 (flagellate) in parent_habitats.
+    motility organelle identity ('Long, slender, threadlike, whiplike extension of
+    certain cells or unicellular organisms used mainly for movements (others for signal
+    transduction)...') as a host-associated microbial habitat and imports whole-organism
+    form BTO:0000464 (flagellate) in parent_habitats.
   snapshot_sha256: 422b4809a97c9be0e12071ef03fde30df19bcac0c194fe51e1a7c7c1267fa079
 - evidence_id: EREC5
   kind: record_content
@@ -1493,9 +1495,13 @@ evidence:
   accessed_at: '2026-11-09T18:11:00Z'
   support: supports
   summary: 'The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart,
-    ''Host-associated > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED)
-    is coherently defined as a human cutaneous wart habitat under BTO:0001859 (wart)
-    with parent_mode REPLACE and source-label exclusion for bare ''Flat warts''.'
+    ''Host-associated > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED,
+    no assertion count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined
+    as a human cutaneous wart habitat under strictly broader parent BTO:0001859 (wart)
+    via curation/term_requests.tsv row 592 (parent_mode ADD, combining with GOLD parent
+    ''Host-associated > Mammals: Human > Benign tumor > Wart'' which resolves to BTO:0001859)
+    with exact synonyms (''Flat warts'', ''verruca plana'') matching sibling filiform_warts.yaml
+    and common_warts.yaml.'
   snapshot_sha256: 13a97a0d2adc69ecdb313de39e957504e0badf89a9f6547a22b269cad69d53f3
 - evidence_id: EREC6
   kind: record_content
@@ -1505,8 +1511,8 @@ evidence:
   support: supports
   summary: The PREGO-attested record BTO:0000469 (flower, EXACT/SEEDED, 6 TAXON assertions)
     is coherently grounded to BRENDA Tissue Ontology term BTO:0000469 ('The reproductive
-    structure of angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers') and 6 displayed
-    characteristic taxa.
+    structure of the anthophyta or angiosperms.') with 1 PREGO RELATED_SYNONYM ('flowers')
+    and 6 displayed characteristic taxa.
   snapshot_sha256: 289d9282ee2a422ce7ff1cdf687243199e3a66ff8e2484ec2138f3410faba447
 - evidence_id: EREC7
   kind: record_content
@@ -1514,11 +1520,12 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-11-09T18:11:00Z'
   support: supports
-  summary: The BacDive-attested record BTO:0000476 (foot, 'bacdive.isolation_source:foot',
+  summary: 'The BacDive-attested record BTO:0000476 (foot, ''bacdive.isolation_source:foot'',
     EXACT/REVIEWED, 114 STRAIN assertions) is coherently grounded to BRENDA Tissue
-    Ontology term BTO:0000476 ('The terminal part of the vertebrate leg upon which
-    an individual stands.') under BTO:0001492 (lower limb) with 10 displayed characteristic
-    taxa from the 107-row BacDive pool.
+    Ontology term BTO:0000476 (''1: The terminal part of the vertebrate leg upon which
+    an individual stands. 2: An invertebrate organ of locomotion or attachment; especially:
+    a ventral muscular surface or process of a mollusk.'') under BTO:0001492 (limb)
+    with 25 displayed characteristic taxa from the 83-row BacDive pool.'
   snapshot_sha256: 6351c0e6cfbc652a577e079985b1e49924d4c74889aae9abfa2fd50245458d24
 - evidence_id: EREC8
   kind: record_content
@@ -1526,12 +1533,12 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-11-09T18:11:00Z'
   support: supports
-  summary: The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
-    environment, 'Host-associated > Protists > Rhizaria > Foraminifera', UNGROUNDED/REVIEWED,
-    6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental
-    system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated
-    environment) with exact_synonym 'foraminiferal host environment' and source-label
-    exclusion for bare 'Foraminifera'.
+  summary: 'The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
+    environment, ''Host-associated > Protists > Rhizaria > Foraminifera'', UNGROUNDED/REVIEWED,
+    no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined
+    under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e
+    (rhizarian-associated environment) with exact_synonym ''foraminiferal host environment''
+    and source-label exclusion for bare ''Foraminifera''.'
   snapshot_sha256: 3b72eb77f5dbba2cd4f9c5ea7ae4c0d183a241b1aa3dfc68d6d2743c84cc523f
 - evidence_id: EREC9
   kind: record_content
@@ -1539,11 +1546,11 @@ evidence:
   locator: Entire YAML
   accessed_at: '2026-11-09T18:11:00Z'
   support: supports
-  summary: The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON
+  summary: 'The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON
     assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447
-    ('The part of the superior limb between the elbow and the wrist.') with 2 PREGO
-    RELATED_SYNONYMs ('forearmic', 'forearms') and 10 displayed characteristic taxa
-    from the 404-row PREGO pool.
+    (''The part of the arm between the elbow and the wrist; also: the corresponding
+    part in other vertebrates.'') with 2 PREGO RELATED_SYNONYMs (''forearmic'', ''forearms'')
+    and 25 displayed characteristic taxa from the 404-row PREGO pool.'
   snapshot_sha256: c35832eab7f2a07a9137b7781a0ccbcf02aa1309cc57e1206fab550f355e37ad
 - evidence_id: EREC10
   kind: record_content
@@ -1554,7 +1561,7 @@ evidence:
   summary: The PREGO-attested record BTO:0000507 (foregut, EXACT/SEEDED, 92 TAXON
     assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0000507
     with its vendored anatomical definition, 1 PREGO RELATED_SYNONYM ('foreguts'),
-    and 10 displayed characteristic taxa from the 92-row PREGO pool.
+    and 25 displayed characteristic taxa from the 92-row PREGO pool.
   snapshot_sha256: 758e75bd694555864a93bdc1030484e414142d5eebf628ed6ed1c8e5f319ddb0
 - evidence_id: EREC11
   kind: record_content
@@ -1631,7 +1638,7 @@ evidence:
     grounds GOLD path 'Host-associated > Mammals > Lymphatic system > Lymph nodes
     > Forelegs' (habitatmech:GOLD.80220dc4d4) to the whole front limb BTO:0006514
     rather than a mammalian forelimb lymph node (parallel to hind_legs.yaml habitatmech:GOLD.ca4882ca81),
-    causing BTO:0006514 to assert both BTO:0000721 (limb) and UBERON:0000029 (lymph
+    causing BTO:0006514 to assert both BTO:0000721 (leg) and UBERON:0000029 (lymph
     node) in parent_habitats.
   snapshot_sha256: f1e0b2a6ac736a093fcfd5f854ea35fd3b2480f77e5192db26bf357decd22625
 - evidence_id: EREC17
@@ -1830,8 +1837,8 @@ assessments:
   area: grounding
   topic: Cohort hierarchy, synonym, and mapping-endpoint summary
   outcome: supported
-  summary: '11 records pass with limitations; 13 records have 23 open findings (4
-    blocker identity findings, 11 major grounding findings, 1 major nomenclature finding,
+  summary: '11 records pass with limitations; 13 records have 24 open findings (4
+    blocker identity findings, 12 major grounding findings, 1 major nomenclature finding,
     and 7 major #1398 mapping-endpoint contract findings) recorded in their respective
     kind: record bundles (linked in related_reviews) and carried forward to Stage
     5 grouped remediation.'
@@ -2069,9 +2076,9 @@ limitations:
   or characteristic presence.
 - Configured label correspondence skipped 2,094 no-adapter pairs; this is not whole-corpus
   identifier certification.
-- 'Record-specific open findings (23 across 13 records: 4 blocker identity defects,
-  11 major grounding/hierarchy defects, 1 major nomenclature exact_synonyms defect,
-  and 7 major #1398 mapping-endpoint contract defects) are recorded on their respective
+- 'Record-specific open findings (24 across 13 records: 4 blocker identity defects,
+  12 major grounding/hierarchy defects, 1 major nomenclature synonyms defect, and
+  7 major #1398 mapping-endpoint contract defects) are recorded on their respective
   kind: record bundles in related_reviews so each issue_key has a single authoritative
   open owner for Stage 5 remediation.'
 notes:

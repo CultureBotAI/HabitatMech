@@ -11,7 +11,7 @@
 
 ## Summary
 
-The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, 6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'.
+The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.0a9f2ca319.
 
-The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, 6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'.
+The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated environment, 'Host-associated &gt; Protists &gt; Rhizaria &gt; Foraminifera', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated environment) with exact_synonym 'foraminiferal host environment' and source-label exclusion for bare 'Foraminifera'.
 
 ### Source counts and retained ranking
 
@@ -124,12 +124,12 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
-  environment, 'Host-associated > Protists > Rhizaria > Foraminifera', UNGROUNDED/REVIEWED,
-  6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental
-  system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated
-  environment) with exact_synonym 'foraminiferal host environment' and source-label
-  exclusion for bare 'Foraminifera'.
+summary: 'The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
+  environment, ''Host-associated > Protists > Rhizaria > Foraminifera'', UNGROUNDED/REVIEWED,
+  no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined
+  under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e
+  (rhizarian-associated environment) with exact_synonym ''foraminiferal host environment''
+  and source-label exclusion for bare ''Foraminifera''.'
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -539,12 +539,12 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
-  summary: The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
-    environment, 'Host-associated > Protists > Rhizaria > Foraminifera', UNGROUNDED/REVIEWED,
-    6 ORGANISM assertions) is coherently defined under ENVO:01001000 (environmental
-    system determined by an organism) and habitatmech:GOLD.6b259c237e (rhizarian-associated
-    environment) with exact_synonym 'foraminiferal host environment' and source-label
-    exclusion for bare 'Foraminifera'.
+  summary: 'The curated GOLD host-environment record habitatmech:GOLD.0a9f2ca319 (foraminiferan-associated
+    environment, ''Host-associated > Protists > Rhizaria > Foraminifera'', UNGROUNDED/REVIEWED,
+    no assertion count/unit; total_assertions: 0 in GOLD row 2545) is coherently defined
+    under ENVO:01001000 (environmental system determined by an organism) and habitatmech:GOLD.6b259c237e
+    (rhizarian-associated environment) with exact_synonym ''foraminiferal host environment''
+    and source-label exclusion for bare ''Foraminifera''.'
   target_ids:
   - habitatmech:GOLD.0a9f2ca319
   evidence_ids:

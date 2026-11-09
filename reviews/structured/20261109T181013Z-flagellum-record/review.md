@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats.
+The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity ('Long, slender, threadlike, whiplike extension of certain cells or unicellular organisms used mainly for movements (others for signal transduction)...') as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: concern. Targets: BTO:0002292.
 
-The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats.
+The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular motility organelle identity ('Long, slender, threadlike, whiplike extension of certain cells or unicellular organisms used mainly for movements (others for signal transduction)...') as a host-associated microbial habitat and imports whole-organism form BTO:0000464 (flagellate) in parent_habitats.
 
 ### Source counts and retained ranking
 
@@ -71,7 +71,7 @@ Missing optional parameters/graphs are not evidence deficits. Full source decisi
 
 blocker / open / confirmed; issue key: flagellum-cellular-organelle-identity.
 
-PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella to BTO:0002292 ('Long, thin, whip-like structure present in some cells...'). Under docs/CURATION.md, a subcellular motility organelle/component of the cell is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum, category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all 140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
+PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension of certain cells or unicellular organisms used mainly for movements (others for signal transduction)...'). Under docs/CURATION.md, a subcellular motility organelle/component of the cell is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum, category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all 140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
 
 ### F2: Cellular appendage BTO:0002292 (flagellum) asserts whole-organism form BTO:0000464 (flagellate) in parent_habitats
 
@@ -83,7 +83,7 @@ BTO:0002292 (flagellum) imports BTO:0000464 (flagellate, 'A flagellate protozoan
 
 ### ACT1
 
-PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella to BTO:0002292 ('Long, thin, whip-like structure present in some cells...'). Under docs/CURATION.md, a subcellular motility organelle/component of the cell is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum, category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all 140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
+PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension of certain cells or unicellular organisms used mainly for movements (others for signal transduction)...'). Under docs/CURATION.md, a subcellular motility organelle/component of the cell is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum, category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all 140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
 
 - Verify data/habitats/host_associated/flagellum.yaml resolves to habitatmech:PREGO.267811fd7a with grounding_status NOT_APPLICABLE, BTO:0002292 in xrefs, and empty parent_habitats.
 - Run just qc and just validate-products.
@@ -139,11 +139,13 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent
-  in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated
+summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure
+  in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated
   bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular
-  motility organelle identity as a host-associated microbial habitat and imports whole-organism
-  form BTO:0000464 (flagellate) in parent_habitats.
+  motility organelle identity ('Long, slender, threadlike, whiplike extension of certain
+  cells or unicellular organisms used mainly for movements (others for signal transduction)...')
+  as a host-associated microbial habitat and imports whole-organism form BTO:0000464
+  (flagellate) in parent_habitats.
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -507,11 +509,13 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: concern
-  summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:CellularComponent
-    in data/raw/prego_habitats.tsv row 497, 140 TAXON assertions across flagellated
+  summary: The PREGO-attested record BTO:0002292 (flagellum, biolink:GrossAnatomicalStructure
+    in data/raw/prego_habitats.tsv row 166, 140 TAXON assertions across flagellated
     bacteria such as Escherichia coli, Salmonella enterica, and Bacillus) uses a subcellular
-    motility organelle identity as a host-associated microbial habitat and imports
-    whole-organism form BTO:0000464 (flagellate) in parent_habitats.
+    motility organelle identity ('Long, slender, threadlike, whiplike extension of
+    certain cells or unicellular organisms used mainly for movements (others for signal
+    transduction)...') as a host-associated microbial habitat and imports whole-organism
+    form BTO:0000464 (flagellate) in parent_habitats.
   target_ids:
   - BTO:0002292
   evidence_ids:
@@ -567,12 +571,13 @@ findings:
   certainty: confirmed
   title: Subcellular motility organelle BTO:0002292 (flagellum) is used as a host-associated
     habitat identity
-  description: PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions
-    across flagellated bacteria such as Escherichia coli, Salmonella enterica, and
-    Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella
-    to BTO:0002292 ('Long, thin, whip-like structure present in some cells...'). Under
-    docs/CURATION.md, a subcellular motility organelle/component of the cell is not
-    a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
+  description: PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON
+    assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica,
+    and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility
+    flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension of certain
+    cells or unicellular organisms used mainly for movements (others for signal transduction)...').
+    Under docs/CURATION.md, a subcellular motility organelle/component of the cell
+    is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
     for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum,
     category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all
     140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
@@ -665,12 +670,13 @@ actions:
   - repository: CultureBotAI/HabitatMech
     path: data/habitats/PATHS.tsv
     role: Maintained input or generator; never patch generated habitat YAML
-  description: PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions
-    across flagellated bacteria such as Escherichia coli, Salmonella enterica, and
-    Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella
-    to BTO:0002292 ('Long, thin, whip-like structure present in some cells...'). Under
-    docs/CURATION.md, a subcellular motility organelle/component of the cell is not
-    a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
+  description: PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON
+    assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica,
+    and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility
+    flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension of certain
+    cells or unicellular organisms used mainly for movements (others for signal transduction)...').
+    Under docs/CURATION.md, a subcellular motility organelle/component of the cell
+    is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
     for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum,
     category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all
     140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.

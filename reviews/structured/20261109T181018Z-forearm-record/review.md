@@ -11,7 +11,7 @@
 
 ## Summary
 
-The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the superior limb between the elbow and the wrist.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 10 displayed characteristic taxa from the 404-row PREGO pool.
+The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the arm between the elbow and the wrist; also: the corresponding part in other vertebrates.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 25 displayed characteristic taxa from the 404-row PREGO pool.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: supported. Targets: BTO:0001447.
 
-The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the superior limb between the elbow and the wrist.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 10 displayed characteristic taxa from the 404-row PREGO pool.
+The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of the arm between the elbow and the wrist; also: the corresponding part in other vertebrates.') with 2 PREGO RELATED_SYNONYMs ('forearmic', 'forearms') and 25 displayed characteristic taxa from the 404-row PREGO pool.
 
 ### Source counts and retained ranking
 
@@ -119,11 +119,11 @@ skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
 completion: completed
 verdict: pass_with_limitations
 scientific_review: true
-summary: The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON assertions)
-  is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 ('The part of
-  the superior limb between the elbow and the wrist.') with 2 PREGO RELATED_SYNONYMs
-  ('forearmic', 'forearms') and 10 displayed characteristic taxa from the 404-row
-  PREGO pool.
+summary: 'The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON
+  assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447 (''The
+  part of the arm between the elbow and the wrist; also: the corresponding part in
+  other vertebrates.'') with 2 PREGO RELATED_SYNONYMs (''forearmic'', ''forearms'')
+  and 25 displayed characteristic taxa from the 404-row PREGO pool.'
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -438,11 +438,11 @@ assessments:
   area: identity
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
-  summary: The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON
+  summary: 'The PREGO-attested record BTO:0001447 (forearm, EXACT/SEEDED, 404 TAXON
     assertions) is coherently grounded to BRENDA Tissue Ontology term BTO:0001447
-    ('The part of the superior limb between the elbow and the wrist.') with 2 PREGO
-    RELATED_SYNONYMs ('forearmic', 'forearms') and 10 displayed characteristic taxa
-    from the 404-row PREGO pool.
+    (''The part of the arm between the elbow and the wrist; also: the corresponding
+    part in other vertebrates.'') with 2 PREGO RELATED_SYNONYMs (''forearmic'', ''forearms'')
+    and 25 displayed characteristic taxa from the 404-row PREGO pool.'
   target_ids:
   - BTO:0001447
   evidence_ids:

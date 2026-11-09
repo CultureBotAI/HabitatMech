@@ -11,7 +11,7 @@
 
 ## Summary
 
-The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED) is coherently defined as a human cutaneous wart habitat under BTO:0001859 (wart) with parent_mode REPLACE and source-label exclusion for bare 'Flat warts'.
+The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined as a human cutaneous wart habitat under strictly broader parent BTO:0001859 (wart) via curation/term_requests.tsv row 592 (parent_mode ADD, combining with GOLD parent 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart' which resolves to BTO:0001859) with exact synonyms ('Flat warts', 'verruca plana') matching sibling filiform_warts.yaml and common_warts.yaml.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Individual schema, strict 24-target validation, 876 history records, 14 inventor
 
 identity: supported. Targets: habitatmech:GOLD.79193f14f9.
 
-The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED) is coherently defined as a human cutaneous wart habitat under BTO:0001859 (wart) with parent_mode REPLACE and source-label exclusion for bare 'Flat warts'.
+The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart &gt; Flat warts', UNGROUNDED/REVIEWED, no assertion count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined as a human cutaneous wart habitat under strictly broader parent BTO:0001859 (wart) via curation/term_requests.tsv row 592 (parent_mode ADD, combining with GOLD parent 'Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Wart' which resolves to BTO:0001859) with exact synonyms ('Flat warts', 'verruca plana') matching sibling filiform_warts.yaml and common_warts.yaml.
 
 ### Source counts and retained ranking
 
@@ -122,9 +122,12 @@ completion: completed
 verdict: pass_with_limitations
 scientific_review: true
 summary: 'The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart, ''Host-associated
-  > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED) is coherently
-  defined as a human cutaneous wart habitat under BTO:0001859 (wart) with parent_mode
-  REPLACE and source-label exclusion for bare ''Flat warts''.'
+  > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED, no assertion
+  count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined as a human
+  cutaneous wart habitat under strictly broader parent BTO:0001859 (wart) via curation/term_requests.tsv
+  row 592 (parent_mode ADD, combining with GOLD parent ''Host-associated > Mammals:
+  Human > Benign tumor > Wart'' which resolves to BTO:0001859) with exact synonyms
+  (''Flat warts'', ''verruca plana'') matching sibling filiform_warts.yaml and common_warts.yaml.'
 source:
   git_revision: 19d3ccb65e6b5128b9b0a5ae39cb509bf3f2bf39
   state: git_commit
@@ -480,9 +483,13 @@ assessments:
   topic: Identity, definition, hierarchy and aliases
   outcome: supported
   summary: 'The curated GOLD record habitatmech:GOLD.79193f14f9 (human flat wart,
-    ''Host-associated > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED)
-    is coherently defined as a human cutaneous wart habitat under BTO:0001859 (wart)
-    with parent_mode REPLACE and source-label exclusion for bare ''Flat warts''.'
+    ''Host-associated > Mammals: Human > Benign tumor > Wart > Flat warts'', UNGROUNDED/REVIEWED,
+    no assertion count/unit; total_assertions: 0 in GOLD row 2059) is coherently defined
+    as a human cutaneous wart habitat under strictly broader parent BTO:0001859 (wart)
+    via curation/term_requests.tsv row 592 (parent_mode ADD, combining with GOLD parent
+    ''Host-associated > Mammals: Human > Benign tumor > Wart'' which resolves to BTO:0001859)
+    with exact synonyms (''Flat warts'', ''verruca plana'') matching sibling filiform_warts.yaml
+    and common_warts.yaml.'
   target_ids:
   - habitatmech:GOLD.79193f14f9
   evidence_ids:

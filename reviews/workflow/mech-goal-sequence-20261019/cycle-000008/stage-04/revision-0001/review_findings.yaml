@@ -789,19 +789,17 @@ new_open_findings:
   status: open
   title: Bare host clade name 'Fish' is asserted as an exact synonym of fish-associated
     environment
-  description: Remove bare host clade label 'Fish' from exact_synonym in curation/term_requests.tsv
-    row 9 for habitatmech:GOLD.3d529a667e (retaining 'fish host environment') and
-    add a guarded row in curation/definition_source_label_exclusions.tsv so the displaced
-    GOLD source label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated
-    environment.
+  description: Replace bare host clade label 'Fish' in exact_synonym of curation/term_requests.tsv
+    row 9 for habitatmech:GOLD.3d529a667e with 'fish host environment' and add a guarded
+    row in curation/definition_source_label_exclusions.tsv so the displaced GOLD source
+    label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated environment.
   summary: Bare host clade name 'Fish' is asserted as an exact synonym of fish-associated
-    environment — Remove bare host clade label 'Fish' from exact_synonym in curation/term_requests.tsv
-    row 9 for habitatmech:GOLD.3d529a667e (retaining 'fish host environment') and
-    add a guarded row in curation/definition_source_label_exclusions.tsv so the displaced
-    GOLD source label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated
-    environment.
+    environment — Replace bare host clade label 'Fish' in exact_synonym of curation/term_requests.tsv
+    row 9 for habitatmech:GOLD.3d529a667e with 'fish host environment' and add a guarded
+    row in curation/definition_source_label_exclusions.tsv so the displaced GOLD source
+    label 'Fish' is not retained as an EXACT_SYNONYM on fish-associated environment.
   field_paths:
-  - exact_synonyms
+  - synonyms
   evidence_ids:
   - E1
   - ERULE
@@ -934,21 +932,23 @@ new_open_findings:
   status: open
   title: Subcellular motility organelle BTO:0002292 (flagellum) is used as a host-associated
     habitat identity
-  description: PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140 TAXON assertions
-    across flagellated bacteria such as Escherichia coli, Salmonella enterica, and
-    Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility flagella
-    to BTO:0002292 ('Long, thin, whip-like structure present in some cells...'). Under
-    docs/CURATION.md, a subcellular motility organelle/component of the cell is not
-    a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
+  description: PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure, 140 TAXON
+    assertions across flagellated bacteria such as Escherichia coli, Salmonella enterica,
+    and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic motility
+    flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension of certain
+    cells or unicellular organisms used mainly for movements (others for signal transduction)...').
+    Under docs/CURATION.md, a subcellular motility organelle/component of the cell
+    is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE row in curation/decisions.tsv
     for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292, object_label=flagellum,
     category=HOST_ASSOCIATED), preserving BTO:0002292 as an xref and retaining all
     140 PREGO taxon rows on the minted concept, and update data/habitats/PATHS.tsv.
   summary: Subcellular motility organelle BTO:0002292 (flagellum) is used as a host-associated
-    habitat identity — PREGO row 497 (BTO:0002292, biolink:CellularComponent, 140
-    TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella
+    habitat identity — PREGO row 166 (BTO:0002292, biolink:GrossAnatomicalStructure,
+    140 TAXON assertions across flagellated bacteria such as Escherichia coli, Salmonella
     enterica, and Bacillus) maps genome/isolate mentions of bacterial and eukaryotic
-    motility flagella to BTO:0002292 ('Long, thin, whip-like structure present in
-    some cells...'). Under docs/CURATION.md, a subcellular motility organelle/component
+    motility flagella to BTO:0002292 ('Long, slender, threadlike, whiplike extension
+    of certain cells or unicellular organisms used mainly for movements (others for
+    signal transduction)...'). Under docs/CURATION.md, a subcellular motility organelle/component
     of the cell is not a microbial habitat identity. Add an ITEM-level NOT_APPLICABLE
     row in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (object_id=BTO:0002292,
     object_label=flagellum, category=HOST_ASSOCIATED), preserving BTO:0002292 as an
@@ -1528,14 +1528,14 @@ new_open_findings:
     (lymph node) as a parent of foreleg
   description: Because habitatmech:GOLD.80220dc4d4 ('Host-associated > Mammals > Lymphatic
     system > Lymph nodes > Forelegs') is grounded to BTO:0006514 (foreleg), the generated
-    record combines BTO subclass parent BTO:0000721 (limb) with GOLD path parent UBERON:0000029
+    record combines BTO subclass parent BTO:0000721 (leg) with GOLD path parent UBERON:0000029
     (lymph node), falsely asserting that a foreleg is a subtype of lymph node. Resolving
     F1 by ungrounding habitatmech:GOLD.80220dc4d4 to 'mammalian forelimb lymph node'
     under UBERON:0000029 eliminates this parent collision.
   summary: Grounding forelimb lymph node to BTO:0006514 (foreleg) asserts UBERON:0000029
     (lymph node) as a parent of foreleg — Because habitatmech:GOLD.80220dc4d4 ('Host-associated
     > Mammals > Lymphatic system > Lymph nodes > Forelegs') is grounded to BTO:0006514
-    (foreleg), the generated record combines BTO subclass parent BTO:0000721 (limb)
+    (foreleg), the generated record combines BTO subclass parent BTO:0000721 (leg)
     with GOLD path parent UBERON:0000029 (lymph node), falsely asserting that a foreleg
     is a subtype of lymph node. Resolving F1 by ungrounding habitatmech:GOLD.80220dc4d4
     to 'mammalian forelimb lymph node' under UBERON:0000029 eliminates this parent
