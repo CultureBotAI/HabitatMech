@@ -121,19 +121,23 @@ checked byte-for-byte.
 **Do not edit any claw-governed vendored file here.** The governed files are
 every artifact that claw's `src/kg_microbe_governance/vendored_artifacts.json`,
 at the commit pinned in `scripts/.vendored_canon_ref`, lists for `habitatmech`.
-That set grows as claw governs more files, so it is not copied here; print it
-with:
+That set grows as claw governs more files, so it is not copied here; print it,
+from anywhere inside the checkout, with:
 
 ```bash
-gh api "repos/CultureBotAI/culturebotai-claw/contents/src/kg_microbe_governance/vendored_artifacts.json?ref=$(cat scripts/.vendored_canon_ref)" \
-  -H "Accept: application/vnd.github.raw+json" \
-  --jq '.artifacts[] | select(.consumers == "all" or any(.consumers[]?; . == "habitatmech")) | .target'
+ref="$(cat "$(git rev-parse --show-toplevel)/scripts/.vendored_canon_ref")" &&
+  gh api "repos/CultureBotAI/culturebotai-claw/contents/src/kg_microbe_governance/vendored_artifacts.json?ref=$ref" \
+    -H "Accept: application/vnd.github.raw+json" \
+    --jq '.artifacts[] | select(.consumers == "all" or any(.consumers[]?; . == "habitatmech")) | .target'
 ```
+
+The `&&` matters: without it an unreadable pin file leaves `ref` empty and
+GitHub answers from claw's default branch instead of the pinned commit.
 
 `{package_path}` in a target is `src/habitatmech`. The files are vendored
 byte-identically, and `just check-vendored-sync` (and CI) fails on any local
-edit and names the file. Fix upstream in claw, then re-sync and bump the pin. The older note below about `mech_shared.yaml` still applies: it is vendored
-byte-identically across the Mech repositories and sha-pinned by the schema tests.
+edit and names the file. Fix upstream in claw, then re-sync and bump the pin.
+`mech_shared.yaml` is additionally sha-pinned by `tests/test_schema.py`.
 
 ## Safe corpus workflow
 
