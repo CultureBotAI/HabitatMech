@@ -38,7 +38,88 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cyanobacterial Far-Red-Light Photoacclimation (FaRLiP) gene cluster encoding chlorophyll
       f synthase, apcE2, and paralogous photosystem I/II and phycobilisome subunits, UV-inducible scytonemin
-      biosynthesis gene scyB, and Chloroflexota high-affinity uptake hydrogenases.
+      biosynthesis gene scyB, and Chloroflexota high-affinity uptake hydrogenases, exemplified by verified
+      UniProtKB Chroococcidiopsis thermalis PCC 7203 chlorophyll f synthase (UniProtKB:K9TUP0, Chro_1030),
+      FaRLiP phycobiliprotein ApcE2 (UniProtKB:K9TUP3, Chro_1035), FaRLiP allophycocyanin beta subunit
+      (UniProtKB:K9TVG8, Chro_1033), and Chloroflexota NiFe uptake hydrogenase small subunit HydA in Roseiflexus
+      castenholzii DSM 13941 (UniProtKB:A7NNQ8, Rcas_3148).
+    protein_examples:
+    - accession: UniProtKB:K9TUP0
+      entry_name: K9TUP0_CHRTP
+      recommended_name: Light-dependent chlorophyll f synthase
+      locus_tag: Chro_1030
+      taxon_id: NCBITaxon:251229
+      taxon_name: Chroococcidiopsis thermalis (strain PCC 7203)
+      role_in_node: family_member
+      sequence_length: 376
+      crc64: 570C733CA43F195B
+      evidence:
+      - reference: PMID:35744716
+        snippet: The metagenome-assembled genomes of these isolates encoded chlorophyll f synthase and
+          all the genes required to implement the FaRLiP response.
+        notes: Reference-proteome Chroococcidiopsis light-dependent chlorophyll f synthase (ChlF, Chro_1030,
+          K9TUP0_CHRTP) in Chroococcidiopsis thermalis PCC 7203; desert endolithic Chroococcidiopsis MAGs
+          and strain CCMEE 010 have no active strain-specific accessions in UniProtKB.
+      - reference: PMID:35992689
+        snippet: A total of 15 FaRLiP genes were identified, encoding paralogous subunits of photosystem
+          I, photosystem II, and the phycobilisome, along with three regulatory elements.
+        notes: Chlorophyll f synthase is a core component of the Chroococcidiopsis FaRLiP gene cluster
+          (PMID:35992689).
+    - accession: UniProtKB:K9TUP3
+      entry_name: K9TUP3_CHRTP
+      recommended_name: Phycobiliprotein ApcE
+      locus_tag: Chro_1035
+      taxon_id: NCBITaxon:251229
+      taxon_name: Chroococcidiopsis thermalis (strain PCC 7203)
+      role_in_node: subunit
+      sequence_length: 780
+      crc64: 160CDC9334361D7D
+      evidence:
+      - reference: PMID:35992689
+        snippet: The analysis of their growth capacity, photosynthetic pigments, and apcE2-gene presence
+          revealed that only Chroococcidiopsis sp. CCMEE 010 was capable of far-red light photoacclimation
+          (FaRLiP).
+        notes: Reference-proteome Chroococcidiopsis FaRLiP two-domain phycobilisome core-membrane linker
+          ApcE2 (Chro_1035, 780 aa, K9TUP3_CHRTP) in the Chro_1018-Chro_1038 FaRLiP gene cluster of Chroococcidiopsis
+          thermalis PCC 7203.
+      - reference: PMID:35744716
+        snippet: We also present evidence of FRL-induced changes to the major light-harvesting complexes
+          of a Chroococcidiopsis isolate.
+        notes: Far-red light induces remodeling of phycobilisome light-harvesting complexes in Chroococcidiopsis
+          (PMID:35744716).
+    - accession: UniProtKB:K9TVG8
+      entry_name: K9TVG8_CHRTP
+      recommended_name: Allophycocyanin beta subunit apoprotein
+      locus_tag: Chro_1033
+      taxon_id: NCBITaxon:251229
+      taxon_name: Chroococcidiopsis thermalis (strain PCC 7203)
+      role_in_node: subunit
+      sequence_length: 161
+      crc64: D6530AFF9691B303
+      evidence:
+      - reference: PMID:35992689
+        snippet: A total of 15 FaRLiP genes were identified, encoding paralogous subunits of photosystem
+          I, photosystem II, and the phycobilisome, along with three regulatory elements.
+        notes: FaRLiP-cluster paralogous allophycocyanin beta subunit apoprotein (Chro_1033, K9TVG8_CHRTP)
+          in Chroococcidiopsis thermalis PCC 7203.
+    - accession: UniProtKB:A7NNQ8
+      entry_name: A7NNQ8_ROSCS
+      recommended_name: Hydrogenase (NiFe) small subunit HydA
+      locus_tag: Rcas_3148
+      taxon_id: NCBITaxon:383372
+      taxon_name: Roseiflexus castenholzii (strain DSM 13941 / HLO8)
+      role_in_node: subunit
+      sequence_length: 417
+      crc64: 2578E3BBE80862E0
+      evidence:
+      - reference: PMID:38372512
+        snippet: The majority of MAGs encode the capacity for trace gas oxidation using high-affinity
+          uptake hydrogenases, which could provide energy and metabolic water required for survival and
+          persistence.
+        notes: Reference-proteome Chloroflexota NiFe uptake hydrogenase small subunit HydA (Rcas_3148,
+          A7NNQ8_ROSCS) in Roseiflexus castenholzii DSM 13941; Antarctic Dry Valley Chloroflexota MAGs
+          (Candidatus Spiritibacteria, Martimicrobia, Tarhunnaeia, Uliximicrobia) and uncultured Atacama
+          Halothece sp. scyB amplicons have no active accessions in UniProtKB.
   - node_id: far_red_oxygenic_photosynthesis_scytonemin_uv_shielding_and_trace_gas_chemosynthesis
     label: chlorophyll f-mediated far-red photoacclimation, scytonemin UV-A photoprotection, and H2/CO
       atmospheric chemosynthesis
@@ -133,4 +214,11 @@ curation_history:
   changes: Added rock_dwelling_endoliths_far_red_uv_desiccation_chroococcidiopsis_halothece_farlip_scyb_h2_oxidation
     mechanism graph for rock_dwelling_endoliths (habitatmech:GOLD.9de4a94da3) backed by PMID:33142998,
     PMID:35744716, PMID:35992689, and PMID:38372512.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:K9TUP0, UniProtKB:K9TUP3, UniProtKB:K9TVG8,
+    and UniProtKB:A7NNQ8) to GENE_OR_PROTEIN node endolithic_chlorophyll_f_synthase_apce2_farlip_scyb_and_uptake_hydrogenase_genes
+    backed by PMID:35744716, PMID:35992689, and PMID:38372512.
   llm_assisted: true

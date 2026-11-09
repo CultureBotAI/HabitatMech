@@ -70,6 +70,140 @@ causal_graphs:
       blaVIM, blaOXA-48, blaGES), class 1 integron integrase gene intI1, ISKpn19 insertion
       sequences, and Klebsiella pneumoniae outer-membrane pore proteins OmpK35 and
       OmpK36.
+    protein_examples:
+    - accession: UniProtKB:C7C422
+      entry_name: BLAN1_KLEPN
+      recommended_name: Metallo-beta-lactamase type 2
+      gene_symbol: blaNDM-1
+      taxon_id: NCBITaxon:573
+      taxon_name: Klebsiella pneumoniae
+      role_in_node: family_member
+      sequence_length: 270
+      crc64: 1B6009120B945F14
+      evidence:
+      - reference: PMID:38114055
+        snippet: The majority of the isolates harbored blaNDM-1 (76.0%), followed
+          by blaOXA (36.0%) and blaKPC (20.0%) genes.
+        notes: Reviewed Klebsiella pneumoniae New Delhi metallo-beta-lactamase NDM-1
+          (blaNDM-1; 270 aa), the predominant carbapenemase detected in 76.0% of hospital
+          wastewater carbapenem-resistant bacteria (PMID:38114055).
+      - reference: PMID:30530220
+        snippet: In vitro transformation assays evidenced the presence of blaVIM and
+          blaNDM on plasmids with the blaVIM harboring 80 Kb plasmid having conjugative
+          capacity.
+        notes: Plasmid-borne blaNDM is transferred by hospital sewer-pipe biofilm
+          bacteria (PMID:30530220).
+    - accession: UniProtKB:J7LFC7
+      entry_name: J7LFC7_CITFR
+      recommended_name: beta-lactamase
+      gene_symbol: blaNDM-1
+      locus_tag: p112298NDM_022
+      taxon_id: NCBITaxon:546
+      taxon_name: Citrobacter freundii
+      role_in_node: strain_exemplar
+      sequence_length: 270
+      crc64: 1B6009120B945F14
+      evidence:
+      - reference: PMID:27465241
+        snippet: The strain carried nine genes encoding β-lactamases including two
+          carbapenemase genes, blaNDM-1 and blaKPC-2. blaNDM-1 was carried on an IncX3
+          plasmid, which was identical to a plasmid found in a local Escherichia coli,
+          suggesting interspecies horizontal transfer.
+        notes: Plasmid-borne NDM-1 metallo-beta-lactamase (blaNDM-1, p112298NDM_022;
+          270 aa) in Citrobacter freundii, representing the IncX3 plasmid-encoded
+          NDM-1 coexisting with blaKPC-2 in hospital sewage Citrobacter freundii (PMID:27465241).
+    - accession: UniProtKB:Q9F663
+      entry_name: BLKPC_KLEPN
+      recommended_name: Carbapenem-hydrolyzing beta-lactamase KPC-2
+      gene_symbol: KPC-2
+      taxon_id: NCBITaxon:573
+      taxon_name: Klebsiella pneumoniae
+      role_in_node: family_member
+      sequence_length: 293
+      crc64: 13EB2FC28005EE5F
+      evidence:
+      - reference: PMID:37195919
+        snippet: Some antibiotic resistance genes were detected, the most prevalent
+          carbapenemase gene was blaKPC, and 16 resistance genes were associated with
+          other antibiotics.
+        notes: Reviewed Klebsiella pneumoniae carbapenemase KPC-2 (blaKPC-2; 293 aa),
+          the most prevalent carbapenemase in hospital sewage CRKP isolates (PMID:37195919).
+      - reference: PMID:27465241
+        snippet: blaKPC-2 was bracketed by two copies of insertion sequence ISKpn19,
+          which could form a composite transposon with the potential to mobilize blaKPC-2,
+          on a new type of plasmid.
+        notes: KPC-2 is mobilized by an ISKpn19 composite transposon alongside blaNDM-1
+          in hospital sewage Citrobacter freundii (PMID:27465241).
+    - accession: UniProtKB:Q6XEC0
+      entry_name: BLO48_KLEPN
+      recommended_name: Beta-lactamase OXA-48
+      gene_symbol: OXA-48
+      locus_tag: KPE71T_00045
+      taxon_id: NCBITaxon:573
+      taxon_name: Klebsiella pneumoniae
+      role_in_node: family_member
+      sequence_length: 265
+      crc64: 4EB4F122BF58EA7F
+      evidence:
+      - reference: PMID:38114055
+        snippet: The majority of the isolates harbored blaNDM-1 (76.0%), followed
+          by blaOXA (36.0%) and blaKPC (20.0%) genes.
+        notes: Reviewed Klebsiella pneumoniae carbapenem-hydrolyzing class D beta-lactamase
+          OXA-48 (blaOXA-48, KPE71T_00045; 265 aa) representing blaOXA carbapenemase
+          genes detected in 36.0% of hospital wastewater CRB isolates (PMID:38114055)
+          and in hospital sewer-pipe biofilms (PMID:30530220).
+    - accession: UniProtKB:A0A0F7KYQ8
+      entry_name: BLBV1_PSEAE
+      recommended_name: Metallo-beta-lactamase VIM-1
+      gene_symbol: VIM-1
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 266
+      crc64: A66F26460536D235
+      evidence:
+      - reference: PMID:30530220
+        snippet: In vitro transformation assays evidenced the presence of blaVIM and
+          blaNDM on plasmids with the blaVIM harboring 80 Kb plasmid having conjugative
+          capacity.
+        notes: Reviewed Pseudomonas aeruginosa metallo-beta-lactamase VIM-1 (blaVIM;
+          266 aa) representing the conjugative 80-kb plasmid-borne blaVIM carbapenemase
+          disseminated in hospital sewer-pipe biofilms (PMID:30530220).
+    - accession: UniProtKB:Q48473
+      entry_name: OMPC_KLEPN
+      recommended_name: Outer membrane porin C
+      gene_symbol: ompC
+      taxon_id: NCBITaxon:573
+      taxon_name: Klebsiella pneumoniae
+      role_in_node: family_member
+      sequence_length: 363
+      crc64: 9DE45546F01F116C
+      evidence:
+      - reference: PMID:37195919
+        snippet: In addition, 3 (3.23%) CRKP isolates demonstrated loss of OmpK-35
+          and 2 (2.15%) demonstrated loss of OmpK-36.
+        notes: Reviewed Klebsiella pneumoniae outer membrane porin OmpK36 (ompC /
+          ompK36; 363 aa) whose loss in 2.15% of hospital wastewater CRKP isolates
+          contributes to carbapenem and disinfectant resistance (PMID:37195919).
+    - accession: UniProtKB:A6T721
+      entry_name: A6T721_KLEP7
+      recommended_name: Outer membrane protein 1a
+      gene_symbol: ompF
+      locus_tag: KPN_00956
+      taxon_id: NCBITaxon:272620
+      taxon_name: Klebsiella pneumoniae subsp. pneumoniae (strain ATCC 700721 / MGH
+        78578)
+      role_in_node: family_member
+      sequence_length: 308
+      crc64: F6BB48988A3909DA
+      evidence:
+      - reference: PMID:37195919
+        snippet: In addition, 3 (3.23%) CRKP isolates demonstrated loss of OmpK-35
+          and 2 (2.15%) demonstrated loss of OmpK-36.
+        notes: Klebsiella pneumoniae outer membrane porin OmpK35 (ompF / ompK35, KPN_00956;
+          308 aa) whose loss in 3.23% of hospital wastewater CRKP isolates reduces
+          outer-membrane permeability to carbapenems (PMID:37195919).
   - node_id: conjugative_carbapenemase_plasmid_transfer_and_disinfectant_resistant_biofilm_persistence
     label: interspecies conjugative carbapenemase plasmid transfer, elevated carbapenem
       MICs, and chlorine-resistant biofilm persistence
@@ -196,4 +330,11 @@ curation_history:
   changes: Added hospital_wastewater_sub_mic_carbapenem_disinfectant_enterobacterales_blakpc_blandm_blavim_transfer
     mechanism graph for hospital_wastewater (habitatmech:GOLD.242c0c0793) backed by
     PMID:30530220, PMID:27465241, PMID:37195919, and PMID:38114055.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:C7C422 NDM-1, UniProtKB:J7LFC7
+    Citrobacter freundii NDM-1, UniProtKB:Q9F663 KPC-2, UniProtKB:Q6XEC0 OXA-48, UniProtKB:A0A0F7KYQ8
+    VIM-1, UniProtKB:Q48473 OmpK36, and UniProtKB:A6T721 OmpK35) to plasmid_blandm1_blakpc2_blavim_blaoxa48_inti1_and_ompk35_ompk36_porin_system.
   llm_assisted: true

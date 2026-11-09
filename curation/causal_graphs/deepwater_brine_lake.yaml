@@ -42,7 +42,98 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Functional marker genes mcrA and dsrA, nitrate and nitrite reductases, reductive TCA
       cycle carbon-fixation enzymes, and ectoine/hydroxyectoine and proline/glutamate osmoprotectant biosynthesis
-      pathways.
+      pathways, exemplified by verified UniProtKB Methanohalophilus mahii McrA (UniProtKB:A7BK26), Nitrospina
+      gracilis 3/211 NxrB and NirK1 (UniProtKB:M1YGC7, UniProtKB:M1Z892), Sulfurimonas denitrificans AclA
+      (UniProtKB:Q52VR3), and Sulfurimonas autotrophica AclB (UniProtKB:Q32SK1).
+    protein_examples:
+    - accession: UniProtKB:A7BK26
+      entry_name: A7BK26_9EURY
+      recommended_name: coenzyme-B sulfoethylthiotransferase
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:2176
+      taxon_name: Methanohalophilus mahii
+      role_in_node: subunit
+      sequence_length: 259
+      crc64: 98CE48144F6F61DF
+      evidence:
+      - reference: PMID:32847782
+        snippet: Phylogenetic analysis based on 16S rRNA gene and mcrA gene sequences indicated that strain
+          SLHTYROT was affiliated to genus Methanohalophilus within the order Methanosarcinales.
+        notes: Methanohalophilus mahii methyl-coenzyme M reductase alpha subunit (mcrA, A7BK26_9EURY);
+          the Tyro DHAB isolate Methanohalophilus profundi SLHTYROT has no active protein entries in UniProtKB.
+      - reference: PMID:26192212
+        snippet: Here, we evaluated the relative abundance of Bacteria and Archaea using quantitative
+          PCR and conducted phylogenetic analyses of nearly full-length 16S rRNA genes as well as functional
+          marker genes encoding the alpha subunits of methyl-coenzyme M reductase (mcrA) and dissimilatory
+          sulfite reductase (dsrA).
+        notes: Methyl-coenzyme M reductase alpha subunit (mcrA) is a primary functional marker of methanogenic
+          archaea across deep hypersaline anoxic basins (PMID:26192212).
+    - accession: UniProtKB:M1YGC7
+      entry_name: M1YGC7_NITG3
+      recommended_name: Nitrite oxidoreductase, beta subunit (C-terminal)
+      gene_symbol: nxrB
+      locus_tag: NITGR_1090001
+      taxon_id: NCBITaxon:1266370
+      taxon_name: Nitrospina gracilis (strain 3/211)
+      role_in_node: subunit
+      sequence_length: 165
+      crc64: 41DB376835083432
+      evidence:
+      - reference: PMID:26657763
+        snippet: Comparative pan-genome analyses revealed that less than half of the predicted proteome
+          of Ca. Nitromaritima RS is shared with N. gracilis. Interestingly, the capacity for nitrite
+          oxidation is also conserved in both genomes.
+        notes: Nitrite oxidoreductase beta subunit NxrB (NITGR_1090001) from the marine reference species
+          Nitrospina gracilis 3/211 directly compared with uncultured Candidatus Nitromaritima RS (which
+          has no active UniProtKB entries) in PMID:26657763.
+    - accession: UniProtKB:M1Z892
+      entry_name: M1Z892_NITG3
+      recommended_name: Copper-containing nitrite reductase
+      gene_symbol: nirK1
+      locus_tag: NITGR_100028
+      taxon_id: NCBITaxon:1266370
+      taxon_name: Nitrospina gracilis (strain 3/211)
+      role_in_node: family_member
+      sequence_length: 336
+      crc64: 39676D77DE7ADBFC
+      evidence:
+      - reference: PMID:26657763
+        snippet: Although both lack acidic proteomes synonymous with extreme halophiles, the pangenome
+          of Ca. Nitromaritima RS specifically encodes enzymes with osmoregulatory and thermoprotective
+          roles (i.e., ectoine/hydroxyectoine biosynthesis) and of thermodynamic importance (i.e., nitrate
+          and nitrite reductases).
+        notes: Copper-containing nitrite reductase NirK1 (NITGR_100028) in Nitrospina gracilis 3/211 representing
+          Nitrospina-lineage nitrite reductase enzymes analyzed in Red Sea brine interfaces.
+    - accession: UniProtKB:Q52VR3
+      entry_name: Q52VR3_9BACT
+      recommended_name: ATP citrate lyase alpha subunit
+      gene_symbol: aclA
+      taxon_id: NCBITaxon:39766
+      taxon_name: Sulfurimonas denitrificans
+      role_in_node: subunit
+      sequence_length: 339
+      crc64: C0EFA2696832FEC6
+      evidence:
+      - reference: PMID:39910644
+        snippet: They are stratified along the BSI and utilise the reductive tricarboxylic acid cycle
+          to fix carbon dioxide, acting as primary producers.
+        notes: Sulfurimonas denitrificans reductive TCA cycle ATP citrate lyase alpha subunit (aclA, Q52VR3_9BACT);
+          novel Kebrit Deep Sulfurimonas and Sulfurovum MAGs from PMID:39910644 are not indexed in UniProtKB.
+    - accession: UniProtKB:Q32SK1
+      entry_name: Q32SK1_9BACT
+      recommended_name: ATP citrate lyase beta subunit
+      gene_symbol: aclB
+      taxon_id: NCBITaxon:202747
+      taxon_name: Sulfurimonas autotrophica
+      role_in_node: subunit
+      sequence_length: 306
+      crc64: E0827975177B9974
+      evidence:
+      - reference: PMID:39910644
+        snippet: They are stratified along the BSI and utilise the reductive tricarboxylic acid cycle
+          to fix carbon dioxide, acting as primary producers.
+        notes: Sulfurimonas autotrophica reductive TCA cycle ATP citrate lyase beta subunit (aclB, Q32SK1_9BACT)
+          representing rTCA carbon-fixation enzymes in Sulfurimonas primary producers.
   - node_id: halocline_chemolithoautotrophic_c_n_s_cycling_and_methylotrophic_methanogenesis
     label: halocline chemolithoautotrophic sulfide/nitrite oxidation, rTCA CO2 fixation, methylotrophic
       methanogenesis, and osmoprotection
@@ -140,4 +231,11 @@ curation_history:
   changes: Added deepwater_brine_lake_halocline_sulfurimonas_nitromaritima_methanohalophilus_mcra_dsra_ectoine_cycling
     mechanism graph for deepwater_brine_lake (habitatmech:GOLD.35b68dbb27) backed by PMID:39910644, PMID:26657763,
     PMID:26192212, and PMID:32847782.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 5 verified UniProtKB protein_examples (UniProtKB:A7BK26, UniProtKB:M1YGC7, UniProtKB:M1Z892,
+    UniProtKB:Q52VR3, and UniProtKB:Q32SK1) to GENE_OR_PROTEIN node dhab_mcra_dsra_nitrite_oxidoreductase_rtca_and_ectoine_biosynthesis_enzymes
+    backed by PMID:39910644, PMID:26657763, PMID:26192212, and PMID:32847782.
   llm_assisted: true

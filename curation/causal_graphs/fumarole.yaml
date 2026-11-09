@@ -41,7 +41,112 @@ causal_graphs:
     description: Methylacidiphilum fumariolicum SolV lanthanide-dependent methanol dehydrogenase (XoxF-MDH)
       and electron acceptor cytochrome cGJ, C3-induced monooxygenase PMO3, and sulfide-insensitive ba3-type
       terminal oxidase alongside Acidianus/Sulfolobus sulfur oxidation enzymes, respiratory heme-copper
-      oxidase, membrane-bound hydrogenase, and sulfur reductase.
+      oxidase, membrane-bound hydrogenase, and sulfur reductase, exemplified by verified UniProtKB Methylacidiphilum
+      fumariolicum SolV XoxF (UniProtKB:I0JWN7) and PMO3 subunits PmoB3/PmoA3/PmoC3 (UniProtKB:A9Q6D0,
+      UniProtKB:A9Q6C9, UniProtKB:A9Q6C8) and Acidianus ambivalens sulfur oxygenase/reductase Sor (UniProtKB:P29082)
+      and sulfur reductase molybdopterin subunit SreA (UniProtKB:Q8NKK1).
+    protein_examples:
+    - accession: UniProtKB:I0JWN7
+      entry_name: XOXF_METFB
+      recommended_name: Lanthanide-dependent methanol dehydrogenase
+      gene_symbol: xoxF
+      locus_tag: MFUM_190005
+      taxon_id: NCBITaxon:1156937
+      taxon_name: Methylacidiphilum fumariolicum (strain SolV)
+      role_in_node: family_member
+      sequence_length: 611
+      crc64: 73132B1BA41AE84D
+      evidence:
+      - reference: PMID:38269599
+        snippet: Herein, we report the cultivation of Ln-dependent methanotroph Methylacidiphilum fumariolicum
+          SolV with nine different Lns, the isolation of the respective MDHs and the assessment of the
+          enzyme activity using the dye-coupled assay. We compare these results with a protein-coupled
+          assay using its physiological electron acceptor cytochrome cGJ (cyt cGJ ).
+        notes: Reviewed Swiss-Prot lanthanide-dependent methanol dehydrogenase XoxF (MFUM_190005, XOXF_METFB)
+          from Methylacidiphilum fumariolicum strain SolV.
+    - accession: UniProtKB:A9Q6D0
+      entry_name: A9Q6D0_9BACT
+      recommended_name: Methane monooxygenase subunit alpha
+      gene_symbol: pmoB3
+      locus_tag: MFUM_1604
+      taxon_id: NCBITaxon:591154
+      taxon_name: Candidatus Methylacidiphilum fumarolicum
+      role_in_node: subunit
+      sequence_length: 413
+      crc64: A679BE75A28B4AFA
+      evidence:
+      - reference: PMID:40626421
+        snippet: Transcriptomic analysis of these cultures showed that a gene cluster including a novel
+          acetone monooxygenase (PMO3), previously identified in the closely related species Methylacidiphilum
+          caldifontis, was highly upregulated under growth on C3 substrates.
+        notes: PMO3 operon subunit PmoB3 (MFUM_1604, A9Q6D0_9BACT) in Methylacidiphilum fumariolicum SolV
+          (indexed under Candidatus Methylacidiphilum fumarolicum NCBITaxon:591154 in UniProtKB).
+    - accession: UniProtKB:A9Q6C9
+      entry_name: A9Q6C9_9BACT
+      recommended_name: Methane monooxygenase subunit beta
+      gene_symbol: pmoA3
+      locus_tag: MFUM_1605
+      taxon_id: NCBITaxon:591154
+      taxon_name: Candidatus Methylacidiphilum fumarolicum
+      role_in_node: subunit
+      sequence_length: 249
+      crc64: 59EB8DD57FB78AAC
+      evidence:
+      - reference: PMID:40626421
+        snippet: Transcriptomic analysis of these cultures showed that a gene cluster including a novel
+          acetone monooxygenase (PMO3), previously identified in the closely related species Methylacidiphilum
+          caldifontis, was highly upregulated under growth on C3 substrates.
+        notes: PMO3 operon catalytic subunit PmoA3 (MFUM_1605, A9Q6C9_9BACT) in Methylacidiphilum fumariolicum
+          SolV upregulated during growth on 2-propanol and acetone.
+    - accession: UniProtKB:A9Q6C8
+      entry_name: A9Q6C8_9BACT
+      recommended_name: Methane monooxygenase subunit gamma
+      gene_symbol: pmoC3
+      locus_tag: MFUM_1606
+      taxon_id: NCBITaxon:591154
+      taxon_name: Candidatus Methylacidiphilum fumarolicum
+      role_in_node: subunit
+      sequence_length: 287
+      crc64: 2E9519B87835ABB5
+      evidence:
+      - reference: PMID:40626421
+        snippet: Transcriptomic analysis of these cultures showed that a gene cluster including a novel
+          acetone monooxygenase (PMO3), previously identified in the closely related species Methylacidiphilum
+          caldifontis, was highly upregulated under growth on C3 substrates.
+        notes: PMO3 operon gamma subunit PmoC3 (MFUM_1606, A9Q6C8_9BACT) in Methylacidiphilum fumariolicum
+          SolV.
+    - accession: UniProtKB:P29082
+      entry_name: SOR_ACIAM
+      recommended_name: Sulfur oxygenase/reductase
+      gene_symbol: sor
+      taxon_id: NCBITaxon:2283
+      taxon_name: Acidianus ambivalens
+      role_in_node: family_member
+      sequence_length: 309
+      crc64: 95C0EEBF0AD079A6
+      evidence:
+      - reference: PMID:15168612
+        snippet: Elemental sulfur is the electron donor in aerobic archaea like Acidianus and Sulfolobus.
+          It is oxidized via sulfite and thiosulfate in a pathway involving both soluble and membrane-bound
+          enzymes.
+        notes: Reviewed Swiss-Prot soluble sulfur oxygenase/reductase Sor (SOR_ACIAM, P29082) from the
+          solfataric thermoacidophilic archaeon Acidianus ambivalens reviewed in PMID:15168612.
+    - accession: UniProtKB:Q8NKK1
+      entry_name: Q8NKK1_ACIAM
+      recommended_name: Sulfur reductase molybdopterin subunit
+      gene_symbol: sreA
+      taxon_id: NCBITaxon:2283
+      taxon_name: Acidianus ambivalens
+      role_in_node: subunit
+      sequence_length: 1018
+      crc64: 1A0F43F4088F08D4
+      evidence:
+      - reference: PMID:15168612
+        snippet: In contrast, elemental sulfur is the electron acceptor in a short electron transport
+          chain consisting of a membrane-bound hydrogenase and a sulfur reductase in (facultatively) anaerobic
+          chemolithotrophic archaea Acidianus and Pyrodictium species.
+        notes: Membrane-bound sulfur reductase molybdopterin catalytic subunit SreA (Q8NKK1_ACIAM) from
+          Acidianus ambivalens reviewed in PMID:15168612.
   - node_id: simultaneous_thermoacidophilic_ch4_c3_and_h2s_s0_chemolithotrophic_oxidation
     label: simultaneous thermoacidophilic methane/C3-substrate oxidation, H2S detoxification to S0, and
       dissimilatory elemental sulfur redox cycling
@@ -142,4 +247,11 @@ curation_history:
   changes: Added fumarole_acidic_geothermal_gas_methylacidiphilum_acidianus_xoxf_pmo3_ba3_sulfur_oxidation
     mechanism graph for fumarole (ENVO:00000216) backed by PMID:40626421, PMID:37221165, PMID:38269599,
     and PMID:15168612.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 6 verified UniProtKB protein_examples (UniProtKB:I0JWN7, UniProtKB:A9Q6D0, UniProtKB:A9Q6C9,
+    UniProtKB:A9Q6C8, UniProtKB:P29082, and UniProtKB:Q8NKK1) to GENE_OR_PROTEIN node solv_xoxf_mdh_cytochrome_cgj_pmo3_ba3_oxidase_and_archaeal_sulfur_oxidoreductases
+    backed by PMID:40626421, PMID:38269599, and PMID:15168612.
   llm_assisted: true

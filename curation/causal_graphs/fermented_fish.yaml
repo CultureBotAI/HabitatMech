@@ -42,6 +42,77 @@ causal_graphs:
       antiporter genes (gadA, gadB, gadB1, gadB2, gadC, gadC1, gadC2), Lactobacillus plantarum LPL-1 class
       IIa bacteriocin plantaricin LPL-1 (4347.85 Da YGNGV-motif peptide), and weakly activated biogenic-amine
       decarboxylase genes in Tetragenococcus halophilus A003.
+    protein_examples:
+    - accession: UniProtKB:A0A0B5GI57
+      entry_name: A0A0B5GI57_LEVBR
+      recommended_name: Glutamate decarboxylase
+      gene_symbol: gadA
+      taxon_id: NCBITaxon:1580
+      taxon_name: Levilactobacillus brevis
+      role_in_node: isoprotein
+      sequence_length: 316
+      crc64: 6C9B5757DBCA87F8
+      evidence:
+      - reference: PMID:37171680
+        snippet: Additionally, the genome analysis of P. acidilactici LSF1-1 consists of gadA, gadB, and
+          gadC, which respond to controlling GABA production and export.
+        notes: Levilactobacillus brevis glutamate decarboxylase GadA (gadA; 316 aa) catalyzing pyridoxal
+          5'-phosphate-dependent decarboxylation of glutamate to gamma-aminobutyric acid (GABA) in fermented
+          fish cake (som-fak) LAB isolates (PMID:37171680).
+    - accession: UniProtKB:A9ZM78
+      entry_name: A9ZM78_LEVBR
+      recommended_name: Glutamate decarboxylase
+      gene_symbol: gadB
+      taxon_id: NCBITaxon:1580
+      taxon_name: Levilactobacillus brevis
+      role_in_node: isoprotein
+      sequence_length: 480
+      crc64: DB43826B74722492
+      evidence:
+      - reference: PMID:37171680
+        snippet: Gene and genome analysis revealed that L. brevis LSF9-1 has multiple gad genes in the
+          genome, such as gadB1, gadB2, gadC1, and gadC2, making it the potential strain for GABA production.
+        notes: Levilactobacillus brevis glutamate decarboxylase GadB (gadB; 480 aa) representing the gadB1/gadB2
+          glutamate decarboxylase paralogs that drive high-yield (16.935 g/L) GABA production in L. brevis
+          LSF9-1 isolated from Thai fermented fish (PMID:37171680).
+    - accession: UniProtKB:A9ZM79
+      entry_name: A9ZM79_LEVBR
+      recommended_name: Glutamate/GABA antiporter
+      gene_symbol: gadC
+      taxon_id: NCBITaxon:1580
+      taxon_name: Levilactobacillus brevis
+      role_in_node: family_member
+      sequence_length: 444
+      crc64: 1B96ACAB2E588F8E
+      evidence:
+      - reference: PMID:37171680
+        snippet: Gene and genome analysis revealed that L. brevis LSF9-1 has multiple gad genes in the
+          genome, such as gadB1, gadB2, gadC1, and gadC2, making it the potential strain for GABA production.
+          Additionally, the genome analysis of P. acidilactici LSF1-1 consists of gadA, gadB, and gadC,
+          which respond to controlling GABA production and export.
+        notes: Levilactobacillus brevis glutamate/GABA antiporter GadC (gadC; 444 aa) encoded adjacent
+          to gadB (gadC1/gadC2 in L. brevis LSF9-1 and gadC in Pediococcus acidilactici LSF1-1) to export
+          GABA in exchange for extracellular glutamate during fish fermentation (PMID:37171680).
+    - accession: UniProtKB:P80214
+      entry_name: PLNA_LACPL
+      recommended_name: Bacteriocin plantaricin-A
+      gene_symbol: plnA
+      locus_tag: lp_0415
+      taxon_id: NCBITaxon:220668
+      taxon_name: Lactiplantibacillus plantarum (strain ATCC BAA-793 / NCIMB 8826 / WCFS1)
+      role_in_node: family_member
+      sequence_length: 48
+      crc64: 6C584810DE50D3F5
+      evidence:
+      - reference: PMID:30323792
+        snippet: A novel bacteriocin, plantaricin LPL-1 was determined as a class IIa bacteriocin according
+          to the YGNGV motif, and producer strain Lactobacillus plantarum LPL-1 was identified based on
+          physio-biochemical characteristics and 16S rDNA sequence.
+        notes: Reviewed Lactiplantibacillus plantarum WCFS1 bacteriocin plantaricin-A precursor (plnA,
+          lp_0415; 48 aa) included as the reviewed L. plantarum plantaricin family exemplar because the
+          42-aa class IIa YGNGV-motif plantaricin LPL-1 peptide (VIADKYYGNGVSCGKHTCTVDWGEAFSCSVSHLANFGHGKC,
+          4347.85 Da) sequenced by Edman degradation and MALDI-TOF-MS in L. plantarum LPL-1 from fermented
+          fish (PMID:30323792) has no active accession in UniProtKB.
   - node_id: gaba_biosynthesis_membrane_permeabilizing_biopreservation_and_biogenic_amine_repression
     label: GABA accumulation, plantaricin LPL-1 membrane permeabilization of spoilage pathogens, and histamine/tyramine/cadaverine
       repression
@@ -142,4 +213,10 @@ curation_history:
   changes: Added fermented_fish_salted_proteolysis_lab_tetragenococcus_gadb_gadc_plantaricin_lpl1_gaba_biogenic_amine_control
     mechanism graph for fermented_fish (habitatmech:GOLD.87da4c5e8b) backed by PMID:37171680, PMID:30323792,
     and PMID:41183495.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:A0A0B5GI57 GadA, UniProtKB:A9ZM78 GadB,
+    UniProtKB:A9ZM79 GadC, and UniProtKB:P80214 PlnA) to lab_gada_gadb_gadc_glutamate_decarboxylase_and_plantaricin_lpl1_bacteriocin_system.
   llm_assisted: true
