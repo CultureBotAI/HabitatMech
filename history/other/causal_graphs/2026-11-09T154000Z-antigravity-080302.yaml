@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-09T154000Z-antigravity-080302
+  timestamp: '2026-11-09T15:40:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2330
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct node_ids, taxa, PMIDs, and gene/locus labels for 4 Cycle 8 Stage 3 overlays in provenance referencing 2026-11-09T114500Z-antigravity-080301.yaml
+  details: 'Corrects the provenance description in history/other/causal_graphs/2026-11-09T114500Z-antigravity-080301.yaml (per issue #2330 and history/README.md append-only rule) for 4 of the 10 Cycle 8 Stage 3 causal-graph overlays whose UniProtKB accessions were paired with outdated node_ids, taxa, PMIDs, and gene/locus labels in that session record while the underlying overlays in curation/causal_graphs/ were already accurate: (1) oil_seep.yaml (node seep_mcra_dsrab_fumarate_alkane_addition_and_alkb_enzymes for Acidisphaera sp. C197 NCBITaxon:301143, Desulfosarcina variabilis NCBITaxon:2300, and Desulfosarcina alkanivorans NCBITaxon:571177, backed by PMID:16204508, PMID:20090951, and PMID:17882164: UniProtKB:Q5RLH8 Q5RLH8_9PROT alkB 185 aa crc64:FF52484096C040B9, UniProtKB:Q93QV2 Q93QV2_9BACT dsrA 371 aa crc64:CFF608781DD52DA7, UniProtKB:Q93QV1 Q93QV1_9BACT dsrB 265 aa crc64:3BD606EE9FF484B3, and UniProtKB:B6F287 B6F287_9BACT dsrA 221 aa crc64:0F3FED761DF8C162); (2) deepwater_brine_lake.yaml (node dhab_mcra_dsra_nitrite_oxidoreductase_rtca_and_ectoine_biosynthesis_enzymes for Methanohalophilus mahii NCBITaxon:2176, Nitrospina gracilis strain 3/211 NCBITaxon:1266370, Sulfurimonas denitrificans NCBITaxon:39766, and Sulfurimonas autotrophica NCBITaxon:202747, backed by PMID:32847782, PMID:26192212, PMID:26657763, and PMID:39910644: UniProtKB:A7BK26 A7BK26_9EURY mcrA 259 aa crc64:98CE48144F6F61DF, UniProtKB:M1YGC7 M1YGC7_NITG3 nxrB NITGR_1090001 165 aa crc64:41DB376835083432, UniProtKB:M1Z892 M1Z892_NITG3 nirK1 NITGR_100028 336 aa crc64:39676D77DE7ADBFC, UniProtKB:Q52VR3 Q52VR3_9BACT aclA 339 aa crc64:C0EFA2696832FEC6, and UniProtKB:Q32SK1 Q32SK1_9BACT aclB 306 aa crc64:E0827975177B9974); (3) rock_dwelling_endoliths.yaml (node endolithic_chlorophyll_f_synthase_apce2_farlip_scyb_and_uptake_hydrogenase_genes for Chroococcidiopsis thermalis PCC 7203 NCBITaxon:251229 and Roseiflexus castenholzii DSM 13941 NCBITaxon:383372, backed by PMID:35744716, PMID:35992689, and PMID:38372512: UniProtKB:K9TUP0 K9TUP0_CHRTP Chro_1030 light-dependent chlorophyll f synthase 376 aa crc64:570C733CA43F195B, UniProtKB:K9TUP3 K9TUP3_CHRTP Chro_1035 phycobiliprotein ApcE 780 aa crc64:160CDC9334361D7D, UniProtKB:K9TVG8 K9TVG8_CHRTP Chro_1033 allophycocyanin beta subunit apoprotein 161 aa crc64:D6530AFF9691B303, and UniProtKB:A7NNQ8 A7NNQ8_ROSCS Rcas_3148 NiFe hydrogenase small subunit HydA 417 aa crc64:2578E3BBE80862E0); and (4) fumarole.yaml (node solv_xoxf_mdh_cytochrome_cgj_pmo3_ba3_oxidase_and_archaeal_sulfur_oxidoreductases for Methylacidiphilum fumariolicum SolV NCBITaxon:1156937, Candidatus Methylacidiphilum fumarolicum NCBITaxon:591154, and Acidianus ambivalens NCBITaxon:2283, backed by PMID:38269599, PMID:40626421, and PMID:15168612: UniProtKB:I0JWN7 XOXF_METFB xoxF MFUM_190005 611 aa crc64:73132B1BA41AE84D, UniProtKB:A9Q6D0 A9Q6D0_9BACT pmoB3 MFUM_1604 413 aa crc64:A679BE75A28B4AFA, UniProtKB:A9Q6C9 A9Q6C9_9BACT pmoA3 MFUM_1605 249 aa crc64:59EB8DD57FB78AAC, UniProtKB:A9Q6C8 A9Q6C8_9BACT pmoC3 MFUM_1606 287 aa crc64:2E9519B87835ABB5, UniProtKB:P29082 SOR_ACIAM sor 309 aa crc64:95C0EEBF0AD079A6, and UniProtKB:Q8NKK1 Q8NKK1_ACIAM sreA sulfur reductase molybdopterin subunit 1018 aa crc64:1A0F43F4088F08D4). The remaining 6 overlays in 2026-11-09T114500Z-antigravity-080301.yaml (carbonate.yaml, sputum__6045ff33.yaml, phyllosphere.yaml, subgingival_dental_plaque.yaml, hospital_wastewater.yaml, and fermented_fish.yaml) were already exact.'
