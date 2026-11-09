@@ -43,9 +43,9 @@ RESEARCH_DIR = REPO_ROOT / "research"
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Za-z0-9]+")
 
 CROSSREF = "https://api.crossref.org/works/"
-# Crossref asks for a contact address and gives the polite pool in return, which
-# is the difference between working and being 429'd off the service.
-USER_AGENT = "HabitatMech-citation-check/1.0 (mailto:mjoachimiak@lbl.gov)"
+# Call Crossref anonymously without disclosing a personal or institutional email
+# address in User-Agent; linear backoff in check() handles 429 rate-limiting.
+USER_AGENT = "HabitatMech-citation-check/1.0"
 
 
 def _repo_relative(path: Path) -> str:

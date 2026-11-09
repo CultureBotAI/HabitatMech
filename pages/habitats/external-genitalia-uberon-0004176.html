@@ -36,11 +36,10 @@
   <code class="curie">UBERON:0004176</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/UBERON_0004176">resolve</a>  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>The external genitalia are the outer sex organs, such as the penis or vulva in mammals.  <span class="meta">— UBERON</span></p>
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -68,8 +67,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0003133">reproductive organ</a>      <code class="curie">UBERON:0003133</code></li>
-  <li><a href="../habitats/reproductive-system-habitatmech-gold-29feb6867b.html">Reproductive system</a>      <code class="curie">habitatmech:GOLD.29feb6867b</code></li>
-  <li><a href="../habitats/reproductive-system-habitatmech-gold-abc827a582.html">Reproductive system</a>      <code class="curie">habitatmech:GOLD.abc827a582</code></li>
 </ul>
 
 
@@ -84,9 +81,29 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
+    <span class="pill">SOURCE_SYNONYM_SCOPED</span>
+    <span class="meta">2026-10-07 · seed_from_sources</span>
+    <p>Retained GOLD label &#39;External genitalia/Vulva&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">REVIEW</span>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass (<a href="https://github.com/CultureBotAI/HabitatMech/issues/2305):" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2305):</a> GOLD &#39;Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia&#39; matches UBERON:0004176 &#39;external genitalia&#39; directly; reviewed at ITEM depth so both source concepts feeding UBERON:0004176 are reviewed. (source concept habitatmech:GOLD.2ab65bac9e)</p>
+  </li>
+  <li>
     <span class="pill">GROUND</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>Grounded to UBERON:0004176 &#39;external genitalia&#39; (EXACT). Slash alternative; vulva is the female instance. Path: Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External geni (source concept habitatmech:GOLD.97989ecf5e)</p>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Grounded to UBERON:0004176 &#39;external genitalia&#39; (CLOSE). Slash-disjunction label &#39;External genitalia/Vulva&#39; combines sex-neutral external genitalia (UBERON:0004176) with female vulva; CLOSE preserves the merged grounding while emitting &#39;External genitalia/Vulva&#39; as RELATED_SYNONYM (<a href="https://github.com/CultureBotAI/HabitatMech/issues/2305" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2305</a>). Path: Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva (source concept habitatmech:GOLD.97989ecf5e)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.29feb6867b for habitatmech:GOLD.2ab65bac9e (Host-associated &gt; Mammals &gt; Reproductive system &gt; External genitalia). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2304" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2304</a> : Crustacean and annelid excretory system are organ systems, not subtypes of the whole crustacean- or annelid-associated host environment; external genitalia is an anatomical reproductive organ structure, not a subtype of the entire mammalian or human reproductive system; external soft tissue zone is a soft-tissue anatomical region, not a subtype of the mammalian Multiple systems GOLD classification bucket; mammalian, piscine, and human eye are sense organs and ciliary body and vitreous chamber are intraocular structures/compartments, not subtypes of the entire visual system; human and mammalian fallopian tube are oviductal reproductive organs, not subtypes of the entire reproductive system; mammalian and human fascia are connective tissue sheets, not subtypes of the host-scoped connective tissue assemblage; insect fat body is an adipose organ/tissue, not a subtype of the whole insect-associated environment; feather is an avian epidermal appendage, not a subtype of the whole avian skin organ. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0004176. Shared mapping endpoints #1398 remain separate.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.abc827a582 for habitatmech:GOLD.97989ecf5e (Host-associated &gt; Mammals: Human &gt; Reproductive system &gt; External genitalia/Vulva). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2304" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2304</a> : Crustacean and annelid excretory system are organ systems, not subtypes of the whole crustacean- or annelid-associated host environment; external genitalia is an anatomical reproductive organ structure, not a subtype of the entire mammalian or human reproductive system; external soft tissue zone is a soft-tissue anatomical region, not a subtype of the mammalian Multiple systems GOLD classification bucket; mammalian, piscine, and human eye are sense organs and ciliary body and vitreous chamber are intraocular structures/compartments, not subtypes of the entire visual system; human and mammalian fallopian tube are oviductal reproductive organs, not subtypes of the entire reproductive system; mammalian and human fascia are connective tissue sheets, not subtypes of the host-scoped connective tissue assemblage; insect fat body is an adipose organ/tissue, not a subtype of the whole insect-associated environment; feather is an avian epidermal appendage, not a subtype of the whole avian skin organ. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target UBERON:0004176. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

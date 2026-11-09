@@ -1,0 +1,208 @@
+identifier: UBERON:0002535
+causal_graphs:
+- graph_id: gill_bathymodiolus_bacteriocyte_pmoa_cbbl_dual_chemosymbiosis_and_lysozyme_regulation
+  title: Mussel gill bacteriocyte CH4/H2S interface, Bathymodiolus methanotrophic (MOX) and thiotrophic
+    (SOX) endosymbiont selection, and pmoA/cbbL chemosynthesis and host i-type lysozyme regulation mechanism
+  description: Gills of deep-sea hydrothermal vent and cold-seep mussels (Bathymodiolus azoricus, B. heckerae,
+    B. brooksi, and B. childressi) house specialized epithelial bacteriocytes at the interface of methane-
+    and sulfide-rich vent/seep fluids and oxygenated seawater. This gill bacteriocyte niche selects for
+    dual or monospecific Gammaproteobacteria endosymbionts comprising methane-oxidizing (MOX, Methylobacter-clade)
+    and sulfide-oxidizing (SOX, Mytilidae thiotrophic clade) bacteria. The gill endosymbionts express
+    particulate methane monooxygenase (pmoA) and form I ribulose-1,5-bisphosphate carboxylase/oxygenase
+    (RuBisCO cbbL) to fix methane- and CO2-derived carbon for host nutrition, while host gill cells express
+    six i-type lysozyme paralogs (Ba-lysozymes) whose transcription and bactericidal activity are modulated
+    during symbiont loss and re-acquisition to regulate endosymbiont density.
+  nodes:
+  - node_id: gill__8d87864f
+    label: gill
+    node_type: HABITAT
+    grounding: UBERON:0002535
+    description: Respiratory and filter-feeding organ of aquatic animals whose specialized epithelial
+      bacteriocytes in chemosymbiotic bivalves house dense intracellular bacterial symbionts.
+  - node_id: gill_bacteriocyte_hydrothermal_seep_methane_and_sulfide_flux
+    label: gill bacteriocyte methane (CH4), hydrogen sulfide (H2S), and dissolved CO2/O2 interface
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hydrothermal vent and cold-seep fluid fluxes of methane and sulfide delivered across
+      specialized Bathymodiolus gill bacteriocyte epithelia.
+  - node_id: bathymodiolus_gill_gammaproteobacterial_mox_and_sox_endosymbiont_guild
+    label: Bathymodiolus gill Gammaproteobacteria methanotrophic (MOX) and thiotrophic (SOX) endosymbiont
+      guild
+    node_type: COMMUNITY
+    description: Intracellular Gammaproteobacteria endosymbionts residing in Bathymodiolus gill bacteriocytes,
+      including Methylobacter-related methanotrophs (MOX) and Mytilidae-clade sulfide-oxidizing thioautotrophs
+      (SOX).
+  - node_id: endosymbiont_pmoa_rubisco_cbbl_and_host_gill_ba_lysozyme_paralogs
+    label: symbiont particulate methane monooxygenase (pmoA), form I RuBisCO (cbbL), and Bathymodiolus
+      gill i-type lysozyme paralogs
+    node_type: GENE_OR_PROTEIN
+    description: Symbiont particulate methane monooxygenase subunit A (pmoA, EC 1.14.13.25; UniProtKB:A0JHL4,
+      UniProtKB:A0JHL7) and form I ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (cbbL,
+      EC 4.1.1.39; UniProtKB:A0ACA8ZQT1) alongside six host Bathymodiolus azoricus i-type lysozyme paralogs
+      (Ba-lysozymes; represented by UniProtKB:Q8ITU1).
+    protein_examples:
+    - accession: UniProtKB:A0JHL4
+      entry_name: A0JHL4_UNCXX
+      recommended_name: Particulate methane monooxygenase alpha subunit
+      gene_symbol: pmoA
+      taxon_id: NCBITaxon:377145
+      taxon_name: bacteria endosymbiont of Bathymodiolus brooksi
+      role_in_node: subunit
+      sequence_length: 147
+      crc64: BFCF94056ADFF90A
+      evidence:
+      - reference: PMID:17504480
+        snippet: A gene characteristic of methane-oxidzing bacteria, pmoA, was identified in all three mussel
+          species confirming the methanotrophic potential of their symbionts.
+        notes: PMID:17504480 directly deposited the 147-aa Particulate methane monooxygenase alpha subunit
+          (pmoA, UniProtKB:A0JHL4) from the gill endosymbiont of Bathymodiolus brooksi.
+    - accession: UniProtKB:A0JHL7
+      entry_name: A0JHL7_UNCXX
+      recommended_name: Particulate methane monooxygenase alpha subunit
+      gene_symbol: pmoA
+      taxon_id: NCBITaxon:377147
+      taxon_name: bacteria endosymbiont of Bathymodiolus childressi
+      role_in_node: subunit
+      sequence_length: 159
+      crc64: D19D9E6AD837349D
+      evidence:
+      - reference: PMID:17504480
+        snippet: A gene characteristic of methane-oxidzing bacteria, pmoA, was identified in all three mussel
+          species confirming the methanotrophic potential of their symbionts.
+        notes: PMID:17504480 directly deposited the 159-aa Particulate methane monooxygenase alpha subunit
+          (pmoA, UniProtKB:A0JHL7) from the gill endosymbiont of Bathymodiolus childressi.
+    - accession: UniProtKB:A0ACA8ZQT1
+      entry_name: A0ACA8ZQT1_9GAMM
+      recommended_name: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      locus_tag: AZO1586R_1069
+      taxon_id: NCBITaxon:235205
+      taxon_name: Bathymodiolus azoricus thioautotrophic gill symbiont
+      role_in_node: subunit
+      sequence_length: 472
+      crc64: 5857F55DCB82B098
+      evidence:
+      - reference: PMID:16761196
+        snippet: Fluorescence in situ hybridization demonstrated simultaneous occurrence of the symbiont-specific
+          16S rDNA, cbbL and pmoA, but not sopT, in the mussel gill. This is the first molecular and visual
+          evidence for a methanotrophic bacterial endosymbiont that bears the RuBisCO cbbL gene relevant
+          to autotrophic CO(2) fixation.
+        notes: Representative Bathymodiolus azoricus gill symbiont form I RuBisCO large chain (cbbL, AZO1586R_1069,
+          UniProtKB:A0ACA8ZQT1; 472 aa) for autotrophic CO2 fixation in Bathymodiolus gills (PMID:16761196,
+          PMID:26882089).
+    - accession: UniProtKB:Q8ITU1
+      entry_name: Q8ITU1_BATAZ
+      recommended_name: lysozyme
+      taxon_id: NCBITaxon:150808
+      taxon_name: Bathymodiolus azoricus
+      role_in_node: isoprotein
+      sequence_length: 163
+      crc64: E10573CB277D7692
+      evidence:
+      - reference: PMID:26882089
+        snippet: Results show the presence of 6 paralogs in B. azoricus. In absence of symbionts, 3 paralogs
+          are up-regulated while others are not differentially expressed. Moreover the global activity of
+          lysozyme is increasing with the loss of symbiont.
+        notes: Bathymodiolus azoricus encodes the 163-aa i-type lysozyme (UniProtKB:Q8ITU1) among the Ba-lysozyme
+          paralogs regulating gill endosymbiont plasticity (PMID:26882089).
+  - node_id: gill_methanotrophic_thioautotrophic_carbon_nutrition_and_lysozyme_symbiont_homeostasis
+    label: gill methanotrophic and chemoautotrophic carbon fixation and lysozyme-mediated endosymbiont
+      plasticity
+    node_type: COMMUNITY_PROCESS
+    description: Symbiont methane oxidation and RuBisCO-mediated autotrophic CO2 fixation supplying host
+      lipid and tissue carbon nutrition, coupled with host i-type lysozyme regulation of gill symbiont
+      populations.
+  edges:
+  - edge_id: gill_maintains_bacteriocyte_methane_and_sulfide_chemosymbiotic_interface
+    subject: gill__8d87864f
+    predicate: maintains
+    object: gill_bacteriocyte_hydrothermal_seep_methane_and_sulfide_flux
+    description: Gills of deep-sea Bathymodiolus mussels at hydrothermal vents and cold seeps maintain
+      specialized gill cells exposed to hydrothermal and seep fluids.
+    evidence:
+    - reference: PMID:17504480
+      snippet: Cold seeps in the Gulf of Mexico are often dominated by mussels of the genus Bathymodiolus
+        that harbour symbiotic bacteria in their gills.
+      notes: Bathymodiolus mussels at cold seeps maintain specialized gill habitats for chemosynthetic
+        bacterial endosymbionts (PMID:17504480).
+    - reference: PMID:26882089
+      snippet: 'B. azoricus is a bivalve that lives close to hydrothermal chimney in the Mid-Atlantic
+        Ridge (MAR). They harbour in specialized gill cells two types of endosymbiont (gram-bacteria):
+        sulphide oxidizing bacteria (SOX) and methanotrophic bacteria (MOX).'
+      notes: Bathymodiolus azoricus near hydrothermal chimneys harbors sulfide-oxidizing (SOX) and methanotrophic
+        (MOX) endosymbionts inside specialized gill cells (PMID:26882089).
+  - edge_id: gill_bacteriocyte_flux_selects_for_gammaproteobacterial_mox_and_sox_symbionts
+    subject: gill_bacteriocyte_hydrothermal_seep_methane_and_sulfide_flux
+    predicate: selects for
+    object: bathymodiolus_gill_gammaproteobacterial_mox_and_sox_endosymbiont_guild
+    description: Hydrothermal vent and cold-seep methane and sulfide fluxes select for Gammaproteobacteria
+      methanotrophic (MOX) and thioautotrophic (SOX) endosymbionts in Bathymodiolus gills.
+    evidence:
+    - reference: PMID:17205805
+      snippet: Phylogenetic analysis of the pmoA placed this endosymbiont within the Gammaproteobacteria,
+        in a cluster including the methanotrophic bacterial genus Methylobacter and other methanotrophic
+        Bathymodiolus gill symbionts. These results provide evidence for the existence of two types of
+        endosymbionts (thioautotrophic and methanotrophic) in the gills of B. azoricus and demonstrate
+        that, apart from the phylogenetic analysis of 16S rRNA genes, parallel analysis of functional
+        genes is essential.
+      notes: Bathymodiolus azoricus gills harbor both Mytilidae-cluster thioautotrophic and Methylobacter-cluster
+        methanotrophic Gammaproteobacteria endosymbionts (PMID:17205805).
+    - reference: PMID:17504480
+      snippet: Comparative 16S rRNA sequence analysis confirmed a single methanotroph-related symbiont
+        in 'B.' childressi and a dual symbiosis with a methanotroph- and thiotroph-related symbiont in
+        B. brooksi.
+      notes: Gulf of Mexico cold-seep Bathymodiolus gills select for methanotrophic and thiotrophic endosymbionts
+        whose densities vary across seep sites (PMID:17504480).
+  - edge_id: gill_holobiont_expresses_pmoa_cbbl_and_ba_lysozyme_paralogs
+    subject: bathymodiolus_gill_gammaproteobacterial_mox_and_sox_endosymbiont_guild
+    predicate: expresses
+    object: endosymbiont_pmoa_rubisco_cbbl_and_host_gill_ba_lysozyme_paralogs
+    description: Bathymodiolus gill endosymbionts carry and express particulate methane monooxygenase
+      (pmoA) and form I RuBisCO (cbbL), while the mussel gill expresses six i-type lysozyme paralogs (Ba-lysozymes).
+    evidence:
+    - reference: PMID:16761196
+      snippet: Fluorescence in situ hybridization demonstrated simultaneous occurrence of the symbiont-specific
+        16S rDNA, cbbL and pmoA, but not sopT, in the mussel gill. This is the first molecular and visual
+        evidence for a methanotrophic bacterial endosymbiont that bears the RuBisCO cbbL gene relevant
+        to autotrophic CO(2) fixation.
+      notes: FISH and gene sequencing demonstrate co-occurrence of pmoA and form I RuBisCO cbbL in Bathymodiolus
+        gill methanotrophic endosymbionts (PMID:16761196).
+    - reference: PMID:26882089
+      snippet: Results show the presence of 6 paralogs in B. azoricus. In absence of symbionts, 3 paralogs
+        are up-regulated while others are not differentially expressed. Moreover the global activity of
+        lysozyme is increasing with the loss of symbiont.
+      notes: Bathymodiolus azoricus gills express six i-type lysozyme paralogs (Ba-lysozymes) that are
+        differentially regulated according to endosymbiont presence (PMID:26882089).
+  - edge_id: pmoa_cbbl_and_lysozymes_catalyze_host_carbon_nutrition_and_symbiont_regulation
+    subject: endosymbiont_pmoa_rubisco_cbbl_and_host_gill_ba_lysozyme_paralogs
+    predicate: catalyzes
+    object: gill_methanotrophic_thioautotrophic_carbon_nutrition_and_lysozyme_symbiont_homeostasis
+    description: Symbiont pmoA and RuBisCO cbbL drive methanotrophy and autotrophic CO2 fixation for mussel
+      carbon nutrition, while host i-type lysozymes regulate gill endosymbiont abundance.
+    evidence:
+    - reference: PMID:17504480
+      snippet: A gene characteristic of methane-oxidzing bacteria, pmoA, was identified in all three mussel
+        species confirming the methanotrophic potential of their symbionts. Stable isotope analyses of
+        lipids and whole tissue also confirmed the importance of methanotrophy in the carbon nutrition
+        of all of the mussels.
+      notes: pmoA-mediated methanotrophy in gill endosymbionts supplies carbon nutrition to Bathymodiolus
+        lipids and tissues (PMID:17504480).
+    - reference: PMID:26882089
+      snippet: Moreover the global activity of lysozyme is increasing with the loss of symbiont. All together
+        these results suggest that lysozyme may play a crucial role in symbiont regulation.
+      notes: Host gill i-type lysozyme activity regulates endosymbiont dynamics in Bathymodiolus azoricus
+        (PMID:26882089).
+curation_history:
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added gill_bathymodiolus_bacteriocyte_pmoa_cbbl_dual_chemosymbiosis_and_lysozyme_regulation
+    mechanism graph for gill__8d87864f (UBERON:0002535) backed by PMID:17504480, PMID:17205805, PMID:16761196,
+    and PMID:26882089.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:A0JHL4, UniProtKB:A0JHL7, UniProtKB:A0ACA8ZQT1,
+    UniProtKB:Q8ITU1) for Bathymodiolus gill endosymbiont pmoA and cbbL and host Bathymodiolus azoricus
+    lysozyme.
+  llm_assisted: true

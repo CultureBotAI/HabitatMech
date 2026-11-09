@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-06T065500Z-antigravity-060201
+  timestamp: '2026-11-06T06:55:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 6 Stage 2 habitats
+  details: 'Reviewed all 73 existing causal-graph overlays in curation/causal_graphs/ and
+    authored 10 new snippet-verified causal-graph overlays (73 -> 83 total): coral_reef.yaml
+    (ENVO:00000150, PMID:19346350, PMID:27602265, PMID:36683362, PMID:37992165), tidal_mudflat.yaml
+    (ENVO:00000241, PMID:31427514, PMID:39173361, PMID:39629215), hypersaline_soda_lake.yaml
+    (habitatmech:GOLD.3098ee8fe8, PMID:21073490, PMID:21984678, PMID:30837958), soil_crust.yaml
+    (habitatmech:GOLD.b1b5044bde, PMID:23739051, PMID:39673195, PMID:41900302, PMID:42460988),
+    glacier_forefield.yaml (habitatmech:GOLD.fa0932d6fe, PMID:21326352, PMID:29901729, PMID:37245808),
+    fungus_garden_fungus_gallery.yaml (habitatmech:GOLD.98c192f558, PMID:19965433, PMID:22378535,
+    PMID:23584789, PMID:26543788), light_organ.yaml (habitatmech:GOLD.200051736e, PMID:10913092,
+    PMID:17087775, PMID:38270381, PMID:39695176), accessory_nidamental_gland_ang.yaml
+    (habitatmech:GOLD.453b1756ab, PMID:22504817, PMID:27660622, PMID:31662458, PMID:36656023),
+    sourdough.yaml (habitatmech:GOLD.3153798c1a, PMID:12450844, PMID:15735966, PMID:30172443,
+    PMID:42195949), and anaerobic_digester_sludge.yaml (ENVO:00003965, PMID:41242256, PMID:41654532,
+    PMID:42954465).'

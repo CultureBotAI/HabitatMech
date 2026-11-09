@@ -31,6 +31,231 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 1
   assertion_unit: ORGANISM
+causal_graphs:
+- graph_id: xylem_vessel_xylella_fastidiosa_pgla_engxca_pit_membrane_digestion_and_rpff_dsf_signaling
+  title: Plant xylem vessel pit membrane pectin/xyloglucan barrier, Xylella fastidiosa
+    colonization, and PglA polygalacturonase / EngXCA1-EngXCA2 endoglucanase / RpfF-DSF
+    systemic movement mechanism
+  description: Plant xylem vessels transport water and mineral sap across vascular
+    networks partitioned by intervessel pit membranes (PMs) composed of homogalacturonan
+    pectins and fucosylated xyloglucan/cellulosic polymers. This xylem-limited vascular
+    niche selects for specialized vascular bacteria including Xylella fastidiosa,
+    the causal agent of Pierce's disease in Vitis vinifera grapevines. Xylella fastidiosa
+    encodes and secretes polygalacturonase PglA (pglA) and beta-1,4-endoglucanases
+    EngXCA1 and EngXCA2 under the regulation of the diffusible signal factor (DSF)
+    synthase RpfF (rpfF). PglA and EngXCA1/EngXCA2 enzymatically digest intervessel
+    pit membrane pectins and fucosylated xyloglucans, breaching pit pore membranes
+    to enable vessel-to-vessel systemic colonization while reducing stem hydraulic
+    conductivity and air-seeding thresholds.
+  nodes:
+  - node_id: xylem_vessel
+    label: xylem vessel
+    node_type: HABITAT
+    grounding: PO:0025417
+    description: Tube-like series of plant tracheary vessel elements transporting
+      xylem sap and connected through intervessel pit membranes.
+  - node_id: intervessel_pit_membrane_pectic_and_fucosylated_xyloglucan_matrix
+    label: intervessel pit membrane pectic and fucosylated xyloglucan/cellulosic cell-wall
+      barrier
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Pit membranes separating adjacent xylem vessels and xylem parenchyma
+      cells, composed of homogalacturonan pectins and fucosylated xyloglucan/cellulose
+      networks.
+  - node_id: xylem_limited_xylella_fastidiosa_vascular_colonizer_guild
+    label: xylem-limited Xylella fastidiosa vascular bacterial population
+    node_type: COMMUNITY
+    description: Xylem-dwelling fastidious Gammaproteobacteria (Xylella fastidiosa)
+      colonizing plant vascular networks and pit membrane surfaces.
+  - node_id: xylella_pgla_polygalacturonase_engxca1_engxca2_and_rpff_dsf_synthase
+    label: Xylella fastidiosa polygalacturonase PglA (pglA), beta-1,4-endoglucanases
+      EngXCA1 and EngXCA2, and DSF synthase RpfF (rpfF)
+    node_type: GENE_OR_PROTEIN
+    description: Cell-wall-degrading polygalacturonase PglA (pglA; Pierce's disease
+      reference proteome Xylella fastidiosa strain M23 XfasM23_1570 UniProtKB:B2I701,
+      100% sequence-identical via UniParc UPI0000007D1C to retired Temecula1 Q87BG8)
+      and beta-1,4-endoglucanases EngXCA1 (XfasM23_1953 UniProtKB:B2I997, 100% identical
+      via UPI0000007E74 to retired Temecula1 Q87AH4) and EngXCA2 (XfasM23_2164 UniProtKB:B2IAC4,
+      100% identical via UPI0000007F39 to retired Temecula1 Q879X8) together with
+      the RpfF (rpfF) synthase producing diffusible signal factor (DSF) in Xylella
+      fastidiosa (citrus strain 9a5c XF_1115 UniProtKB:Q9PEB3 and Pierce's disease
+      strain M23 XfasM23_0401 UniProtKB:B2I851 / UPI0000007928).
+    protein_examples:
+    - accession: UniProtKB:B2I701
+      entry_name: B2I701_XYLF2
+      recommended_name: Glycoside hydrolase family 28
+      locus_tag: XfasM23_1570
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: strain_exemplar
+      sequence_length: 544
+      crc64: 6CBBD32CB16F2322
+      evidence:
+      - reference: PMID:17427811
+        snippet: These genes include several beta-1,4 endoglucanases, several xylanases,
+          several xylosidases, and one polygalacturonase (PG). In this study, we demonstrated
+          that the pglA gene encodes a functional PG.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2I701
+          (XfasM23_1570; 544 aa, crc64 6CBBD32CB16F2322) has 100% sequence identity
+          in UniParc (UPI0000007D1C) to the retired Temecula1 pglA TrEMBL entry Q87BG8
+          characterized in PMID:17427811.
+    - accession: UniProtKB:B2I997
+      entry_name: B2I997_XYLF2
+      recommended_name: Endoglucanase
+      locus_tag: XfasM23_1953
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: family_member
+      sequence_length: 614
+      crc64: 29EC67E42F4BC3F7
+      evidence:
+      - reference: PMID:31216219
+        snippet: Here, we demonstrate that two X. fastidiosa β-1,4-endoglucanases
+          (EGases), EngXCA1 and EngXCA2, also play a role in how X. fastidiosa interfaces
+          with grapevine PMs.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2I997
+          (XfasM23_1953; 614 aa, crc64 29EC67E42F4BC3F7) has 100% sequence identity
+          in UniParc (UPI0000007E74) to the retired Temecula1 EngXCA1 TrEMBL entry
+          Q87AH4 (PMID:31216219).
+    - accession: UniProtKB:B2IAC4
+      entry_name: B2IAC4_XYLF2
+      recommended_name: Endoglucanase
+      locus_tag: XfasM23_2164
+      taxon_id: NCBITaxon:405441
+      taxon_name: Xylella fastidiosa (strain M23)
+      role_in_node: family_member
+      sequence_length: 356
+      crc64: BEA75D2F5D3D332F
+      evidence:
+      - reference: PMID:31216219
+        snippet: Here, we demonstrate that two X. fastidiosa β-1,4-endoglucanases
+          (EGases), EngXCA1 and EngXCA2, also play a role in how X. fastidiosa interfaces
+          with grapevine PMs.
+        notes: Active Pierce's disease Xylella fastidiosa M23 entry UniProtKB:B2IAC4
+          (XfasM23_2164; 356 aa, crc64 BEA75D2F5D3D332F) has 100% sequence identity
+          in UniParc (UPI0000007F39) to the retired Temecula1 EngXCA2 TrEMBL entry
+          Q879X8 (PMID:31216219).
+    - accession: UniProtKB:Q9PEB3
+      entry_name: Q9PEB3_XYLFA
+      recommended_name: Regulator of pathogenicity factors
+      locus_tag: XF_1115
+      taxon_id: NCBITaxon:160492
+      taxon_name: Xylella fastidiosa (strain 9a5c)
+      role_in_node: strain_exemplar
+      sequence_length: 290
+      crc64: DAA5F075E6AA6CB5
+      evidence:
+      - reference: PMID:28777044
+        snippet: Expression of genes contributing to xylem colonization are suppressed,
+          while those necessary for insect vector acquisition are increased with increasing
+          concentrations of diffusible signal factor (DSF), whose production is dependent
+          on RpfF.
+        notes: Citrus Xylella fastidiosa subsp. pauca strain 9a5c encodes the 290-aa
+          Regulator of pathogenicity factors RpfF (XF_1115, UniProtKB:Q9PEB3) studied
+          in transgenic citrus/tobacco DSF signaling (PMID:28777044).
+  - node_id: pit_membrane_dissolution_intervessel_migration_and_hydraulic_conductivity_loss
+    label: enzymatic pit membrane dissolution, systemic intervessel movement, and
+      stem hydraulic conductivity reduction
+    node_type: COMMUNITY_PROCESS
+    description: Hydrolysis of pit membrane pectins and fucosylated xyloglucans allowing
+      Xylella fastidiosa to breach intervessel pit membranes, alter air-seeding thresholds,
+      reduce stem hydraulic conductivity, and Regulated adhesiveness vs motility via
+      DSF.
+  edges:
+  - edge_id: xylem_vessel_maintains_pectic_and_xyloglucan_pit_membranes
+    subject: xylem_vessel
+    predicate: maintains
+    object: intervessel_pit_membrane_pectic_and_fucosylated_xyloglucan_matrix
+    description: Xylem vessels are separated from adjacent vessels and parenchyma
+      cells by pit membranes composed of pectic and fucosylated xyloglucan/cellulosic
+      substrates.
+    evidence:
+    - reference: PMID:31216219
+      snippet: X. fastidiosa is xylem-limited and interfaces primarily with pit membranes
+        (PMs) that separate xylem vessels from one another and from adjacent xylem
+        parenchyma cells. PMs are composed of both pectic and cellulosic substrates,
+        and dissolution of PMs is facilitated by X. fastidiosa cell wall-degrading
+        enzymes.
+      notes: Intervessel pit membranes separating xylem vessels consist of pectic
+        and cellulosic/fucosylated xyloglucan substrates (PMID:31216219).
+  - edge_id: pit_membrane_vascular_niche_selects_for_xylem_limited_xylella_fastidiosa
+    subject: intervessel_pit_membrane_pectic_and_fucosylated_xyloglucan_matrix
+    predicate: selects for
+    object: xylem_limited_xylella_fastidiosa_vascular_colonizer_guild
+    description: The xylem vessel network and pit membrane surfaces support colonization
+      and biofilm formation by the xylem-limited bacterium Xylella fastidiosa.
+    evidence:
+    - reference: PMID:17427811
+      snippet: X. fastidiosa systemically colonizes the xylem elements of grapevines
+        and is able to breach the pit pore membranes separating xylem vessels by unknown
+        mechanisms.
+      notes: Xylella fastidiosa is a specialized colonizer of grapevine xylem vessel
+        elements (PMID:17427811).
+    - reference: PMID:33905519
+      snippet: Xylella fastidiosa (Xf) is the xylem-dwelling bacterial agent associated
+        with Pierce's disease (PD), which leads to significant declines in productivity
+        in agriculturally important species like grapevine (Vitis vinifera). Xf spreads
+        through the xylem network by digesting the pit membranes (PMs) between adjacent
+        vessels, thereby potentially changing the hydraulic properties of the stem.
+      notes: Xylella fastidiosa dwells in the xylem network and forms biofilms on
+        intervessel pit membrane surfaces (PMID:33905519).
+  - edge_id: xylella_fastidiosa_expresses_pgla_engxca1_engxca2_and_rpff
+    subject: xylem_limited_xylella_fastidiosa_vascular_colonizer_guild
+    predicate: expresses
+    object: xylella_pgla_polygalacturonase_engxca1_engxca2_and_rpff_dsf_synthase
+    description: Xylella fastidiosa expresses the pglA polygalacturonase gene, beta-1,4-endoglucanases
+      EngXCA1 and EngXCA2, and RpfF (rpfF)-dependent diffusible signal factor (DSF).
+    evidence:
+    - reference: PMID:17427811
+      snippet: These genes include several beta-1,4 endoglucanases, several xylanases,
+        several xylosidases, and one polygalacturonase (PG). In this study, we demonstrated
+        that the pglA gene encodes a functional PG.
+      notes: Xylella fastidiosa encodes a functional polygalacturonase via the pglA
+        gene alongside beta-1,4-endoglucanases (PMID:17427811).
+    - reference: PMID:31216219
+      snippet: Here, we demonstrate that two X. fastidiosa β-1,4-endoglucanases (EGases),
+        EngXCA1 and EngXCA2, also play a role in how X. fastidiosa interfaces with
+        grapevine PMs.
+      notes: Xylella fastidiosa produces the beta-1,4-endoglucanases EngXCA1 and EngXCA2
+        targeting fucosylated xyloglucans in pit membranes (PMID:31216219).
+    - reference: PMID:28777044
+      snippet: Expression of genes contributing to xylem colonization are suppressed,
+        while those necessary for insect vector acquisition are increased with increasing
+        concentrations of diffusible signal factor (DSF), whose production is dependent
+        on RpfF.
+      notes: RpfF (rpfF) synthesizes diffusible signal factor (DSF) that regulates
+        adhesiveness and motility gene expression in xylem-colonizing Xylella fastidiosa
+        (PMID:28777044).
+  - edge_id: pgla_and_engxca_catalyze_pit_membrane_digestion_and_systemic_xylem_spread
+    subject: xylella_pgla_polygalacturonase_engxca1_engxca2_and_rpff_dsf_synthase
+    predicate: catalyzes
+    object: pit_membrane_dissolution_intervessel_migration_and_hydraulic_conductivity_loss
+    description: PglA and EngXCA1/EngXCA2 hydrolyze pit membrane pectins and fucosylated
+      xyloglucans to enable systemic xylem colonization and reduce stem hydraulic
+      conductivity, while RpfF-produced DSF modulates adhesiveness vs dispersal.
+    evidence:
+    - reference: PMID:17427811
+      snippet: A mutant in pglA lost pathogenicity and was compromised in its ability
+        to systemically colonize Vitis vinifera grapevines. The results indicate that
+        PG is required for X. fastidiosa to successfully infect grapevines and is
+        a critical virulence factor for X. fastidiosa pathogenesis in grapevine.
+      notes: Loss of pglA abolishes systemic xylem vessel colonization and pathogenicity
+        of Xylella fastidiosa in grapevine (PMID:17427811).
+    - reference: PMID:31216219
+      snippet: The loss of EngXCA1 and EngXCA2 in tandem reduces both X. fastidiosa
+        virulence and population size and slows the rate of PD symptom development
+        and progression.
+      notes: Tandem deletion of EngXCA1 and EngXCA2 impairs pit membrane xyloglucan
+        dissolution, xylem population size, and disease progression (PMID:31216219).
+    - reference: PMID:33905519
+      snippet: PM damage only occurred in stems perfused with polygalacturonase. Although
+        the damaged PM area was small (2%-9% of the total pit aperture area), membrane
+        digestion led to significant changes in the median air-seeding thresholds,
+        and most importantly, shifted frequency distribution. Finally, enzyme perfusion
+        also resulted in a universal reduction in stem hydraulic conductivity, suggesting
+        the development of tyloses may not be the only contributing factor to reduced
+        hydraulic conductivity in infected grapevine.
+      notes: Polygalacturonase digestion of intervessel pit membranes alters air-seeding
+        thresholds and reduces stem hydraulic conductivity (PMID:33905519).
 curation_history:
 - timestamp: '2026-08-14T00:00:00Z'
   curator: claude-opus-5
@@ -44,3 +269,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added xylem_vessel_xylella_fastidiosa_pgla_engxca_pit_membrane_digestion_and_rpff_dsf_signaling
+    mechanism graph for xylem_vessel (PO:0025417) backed by PMID:17427811, PMID:31216219,
+    PMID:33905519, and PMID:28777044.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:B2I701, UniProtKB:B2I997,
+    UniProtKB:B2IAC4, UniProtKB:Q9PEB3) and documented 100% sequence-identical UniParc
+    mappings (UPI0000007D1C, UPI0000007E74, UPI0000007F39, UPI0000007928) for retired
+    Temecula1 TrEMBL entries.
+  llm_assisted: true

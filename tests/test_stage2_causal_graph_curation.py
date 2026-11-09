@@ -1061,4 +1061,290 @@ def test_cycle5_stage3_protein_examples_and_source_limited_notes_are_present():
         assert expected_substr in node.get("description", "")
 
 
+def test_cycle6_stage2_ten_new_causal_graph_overlays_are_present_and_grounded():
+    expected = {
+        "coral_reef": (
+            "ENVO:00000150",
+            "coral_reef_holobiont_dmsp_dddd_lyase_and_pseudovibrio_tda_defense",
+            {
+                "PMID:19346350",
+                "PMID:27602265",
+                "PMID:36683362",
+                "PMID:37992165",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "coral_reef.yaml",
+        ),
+        "tidal_mudflat": (
+            "ENVO:00000241",
+            "tidal_mudflat_cable_bacteria_esox_and_desulfobulbaceae_srb_redox_connector",
+            {
+                "PMID:31427514",
+                "PMID:39173361",
+                "PMID:39629215",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "tidal_mudflat.yaml",
+        ),
+        "hypersaline_soda_lake": (
+            "habitatmech:GOLD.3098ee8fe8",
+            "hypersaline_soda_lake_thioalkalivibrio_halorhodospira_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_cycling",
+            {
+                "PMID:21073490",
+                "PMID:21984678",
+                "PMID:30837958",
+            },
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "hypersaline_soda_lake.yaml",
+        ),
+        "soil_crust": (
+            "habitatmech:GOLD.b1b5044bde",
+            "soil_crust_microcoleus_vaginatus_eps_filtering_and_uc_ah_cyanosphere_urea_mutualism",
+            {
+                "PMID:23739051",
+                "PMID:39673195",
+                "PMID:41900302",
+                "PMID:42460988",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "soil_crust.yaml",
+        ),
+        "glacier_forefield": (
+            "habitatmech:GOLD.fa0932d6fe",
+            "glacier_forefield_chronosequence_nifh_cluster_i_iii_diazotrophy_and_asynchronous_cn_accumulation",
+            {
+                "PMID:21326352",
+                "PMID:29901729",
+                "PMID:37245808",
+            },
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "glacier_forefield.yaml",
+        ),
+        "fungus_garden_fungus_gallery": (
+            "habitatmech:GOLD.98c192f558",
+            "fungus_garden_leucoagaricus_lac1lg_cellulase_and_enterobacteriaceae_n2_fixation_symbiosis",
+            {
+                "PMID:19965433",
+                "PMID:22378535",
+                "PMID:23584789",
+                "PMID:26543788",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "terrestrial"
+            / "fungus_garden_fungus_gallery.yaml",
+        ),
+        "light_organ": (
+            "habitatmech:GOLD.200051736e",
+            "squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis",
+            {
+                "PMID:10913092",
+                "PMID:17087775",
+                "PMID:38270381",
+                "PMID:39695176",
+            },
+            REPO_ROOT / "data" / "habitats" / "host_associated" / "light_organ.yaml",
+        ),
+        "accessory_nidamental_gland_ang": (
+            "habitatmech:GOLD.453b1756ab",
+            "accessory_nidamental_gland_leisingera_indigoidine_and_antifungal_egg_defense",
+            {
+                "PMID:22504817",
+                "PMID:27660622",
+                "PMID:31662458",
+                "PMID:36656023",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "host_associated"
+            / "accessory_nidamental_gland_ang.yaml",
+        ),
+        "sourdough": (
+            "habitatmech:GOLD.3153798c1a",
+            "sourdough_fructilactobacillus_sanfranciscensis_levansucrase_and_adi_acidification",
+            {
+                "PMID:12450844",
+                "PMID:15735966",
+                "PMID:30172443",
+                "PMID:42195949",
+            },
+            REPO_ROOT / "data" / "habitats" / "food" / "sourdough.yaml",
+        ),
+        "anaerobic_digester_sludge": (
+            "ENVO:00003965",
+            "anaerobic_digester_sludge_syntrophic_vfa_oxidation_and_methanothrix_methanogenesis",
+            {
+                "PMID:41242256",
+                "PMID:41654532",
+                "PMID:42954465",
+            },
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "engineered"
+            / "anaerobic_digester_sludge.yaml",
+        ),
+    }
+    assert len(list(CAUSAL_GRAPHS_DIR.glob("*.yaml"))) >= 83
+    for slug, (expected_id, expected_graph_id, expected_refs, hab_path) in expected.items():
+        overlay_path = CAUSAL_GRAPHS_DIR / f"{slug}.yaml"
+        assert overlay_path.exists(), f"{slug}.yaml missing"
+        assert hab_path.exists(), f"{hab_path} missing"
+        doc = yaml.safe_load(overlay_path.read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(hab_path.read_text(encoding="utf-8"))
+        assert doc["identifier"] == expected_id
+        assert hab_doc["identifier"] == expected_id
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        graphs = doc["causal_graphs"]
+        assert len(graphs) == 1
+        graph = graphs[0]
+        assert graph["graph_id"] == expected_graph_id
+        nodes = {n["node_id"]: n for n in graph["nodes"]}
+        assert nodes[slug]["node_type"] == "HABITAT"
+        assert nodes[slug]["grounding"] == expected_id
+        refs = {
+            ev["reference"]
+            for edge in graph["edges"]
+            for ev in edge.get("evidence", [])
+        }
+        assert refs == expected_refs
+        assert doc["curation_history"][0]["action"] == "ADD_CAUSAL_GRAPH"
+        for edge in graph["edges"]:
+            for ev in edge.get("evidence", []):
+                snippet = ev.get("snippet", "")
+                ref = ev["reference"]
+                assert ref.startswith("PMID:")
+                pmid = ref.split(":", 1)[1]
+                cache_path = REPO_ROOT / "references_cache" / f"PMID_{pmid}.md"
+                assert cache_path.exists(), f"{cache_path} missing"
+                cache_text = cache_path.read_text(encoding="utf-8")
+                assert "<i>" not in snippet and "</i>" not in snippet
+                for ch in ("\u00a0", "\u2009", "\u200a"):
+                    assert ch not in snippet
+                    assert ch not in cache_text
+                assert snippet in cache_text, f"Snippet not verbatim in {cache_path}: {snippet!r}"
+
+
+def test_cycle6_stage3_protein_examples_and_source_limited_notes_are_present():
+    habitat_paths = {
+        "coral_reef": REPO_ROOT / "data" / "habitats" / "aquatic" / "coral_reef.yaml",
+        "tidal_mudflat": REPO_ROOT / "data" / "habitats" / "aquatic" / "tidal_mudflat.yaml",
+        "hypersaline_soda_lake": (
+            REPO_ROOT / "data" / "habitats" / "aquatic" / "hypersaline_soda_lake.yaml"
+        ),
+        "soil_crust": REPO_ROOT / "data" / "habitats" / "terrestrial" / "soil_crust.yaml",
+        "glacier_forefield": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "glacier_forefield.yaml"
+        ),
+        "fungus_garden_fungus_gallery": (
+            REPO_ROOT / "data" / "habitats" / "terrestrial" / "fungus_garden_fungus_gallery.yaml"
+        ),
+        "light_organ": REPO_ROOT / "data" / "habitats" / "host_associated" / "light_organ.yaml",
+        "accessory_nidamental_gland_ang": (
+            REPO_ROOT
+            / "data"
+            / "habitats"
+            / "host_associated"
+            / "accessory_nidamental_gland_ang.yaml"
+        ),
+        "sourdough": REPO_ROOT / "data" / "habitats" / "food" / "sourdough.yaml",
+        "anaerobic_digester_sludge": (
+            REPO_ROOT / "data" / "habitats" / "engineered" / "anaerobic_digester_sludge.yaml"
+        ),
+    }
+    expected_protein_nodes = {
+        "coral_reef": {
+            "endozoicomonas_dddd_dmsp_lyase_dsyb_and_pseudovibrio_tda_gene_clusters": [
+                "UniProtKB:B7U9V7",
+                "UniProtKB:B7U9V8",
+                "UniProtKB:B7U9V6",
+                "UniProtKB:B7U9V5",
+            ],
+        },
+        "tidal_mudflat": {
+            "cable_bacterial_periplasmic_cytochromes_reversed_dsr_and_wood_ljungdahl_genes": [
+                "UniProtKB:A0A191KRT4",
+                "UniProtKB:A0A192W3X1",
+                "UniProtKB:A0A3S3QW80",
+                "UniProtKB:A0A3S3QHY2",
+                "UniProtKB:A0A444J3A3",
+                "UniProtKB:A0A521G5H7",
+            ],
+        },
+        "hypersaline_soda_lake": {
+            "haloalkaliphilic_fcc_sox_soe_hdr_dsr_and_cbbl_cbbm_aclb_enzymes": [
+                "UniProtKB:B8GQP8",
+                "UniProtKB:B8GQP7",
+                "UniProtKB:B8GUE5",
+                "UniProtKB:B8GUE6",
+                "UniProtKB:B8GN83",
+            ],
+        },
+        "light_organ": {
+            "vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system": [
+                "UniProtKB:Q5E0Y9",
+                "UniProtKB:Q5DYP3",
+                "UniProtKB:Q5DZ05",
+                "UniProtKB:P35328",
+                "UniProtKB:P35327",
+            ],
+        },
+        "sourdough": {
+            "fructilactobacillus_sanfranciscensis_levansucrase_and_adi_otc_ck_enzymes": [
+                "UniProtKB:Q70XJ9",
+            ],
+        },
+    }
+    new_examples = 0
+    for slug, node_map in expected_protein_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        for node_id, expected_ids in node_map.items():
+            node = nodes[node_id]
+            assert node["node_type"] == "GENE_OR_PROTEIN"
+            examples = node.get("protein_examples", [])
+            assert [ex["accession"] for ex in examples] == expected_ids
+            for ex in examples:
+                assert ex.get("crc64") and len(ex["crc64"]) == 16
+                assert ex.get("sequence_length", 0) > 0
+                assert ex.get("evidence")
+            new_examples += len(examples)
+    assert new_examples == 21
+
+    expected_documented_nodes = {
+        "soil_crust": (
+            "microcoleus_uc_ah_urea_carboxylase_eps_synthesis_and_desiccation_repair_genes",
+            "GENE_OR_PROTEIN",
+            "UPI00020D1071",
+        ),
+        "glacier_forefield": (
+            "proglacial_nifh_cluster_i_iii_nirs_and_chronosequence_c_s_fe_metabolic_genes",
+            "GENE_OR_PROTEIN",
+            "Source-limited for UniProtKB protein_examples: PMID:21326352",
+        ),
+        "fungus_garden_fungus_gallery": (
+            "leucoagaricus_cellulase_lac1lg_and_enterobacterial_gh_n2_fixation_biosynthetic_proteins",
+            "GENE_OR_PROTEIN",
+            "UPI000181409B",
+        ),
+        "accessory_nidamental_gland_ang": (
+            "leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways",
+            "GENE_OR_PROTEIN",
+            "UPI0008034E33",
+        ),
+        "anaerobic_digester_sludge": (
+            "syntrophic_vfa_oxidation_glycine_cleavage_and_methanothrix_methanogenesis_pathways",
+            "GENE_OR_PROTEIN",
+            "Source-limited for UniProtKB protein_examples: PMID:42954465",
+        ),
+    }
+    for slug, (node_id, expected_type, expected_substr) in expected_documented_nodes.items():
+        doc = yaml.safe_load((CAUSAL_GRAPHS_DIR / f"{slug}.yaml").read_text(encoding="utf-8"))
+        hab_doc = yaml.safe_load(habitat_paths[slug].read_text(encoding="utf-8"))
+        assert hab_doc["causal_graphs"] == doc["causal_graphs"]
+        assert doc["curation_history"][-1]["action"] == "REVISE_CAUSAL_GRAPH"
+        nodes = {n["node_id"]: n for n in doc["causal_graphs"][0]["nodes"]}
+        node = nodes[node_id]
+        assert node["node_type"] == expected_type
+        assert expected_substr in node.get("description", "")
 

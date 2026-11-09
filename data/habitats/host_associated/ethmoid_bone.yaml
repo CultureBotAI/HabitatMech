@@ -6,11 +6,11 @@ definition: A bone in the skull that separates the nasal cavity from the brain. 
   bones that makes up the orbit of the eye[WP].
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
+grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: 'Scull: Ethmoid'
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: ethmoid
   synonym_type: EXACT_SYNONYM
@@ -25,24 +25,50 @@ parent_habitats:
 - UBERON:0002513
 - UBERON:0003462
 - UBERON:0011164
-- habitatmech:GOLD.67f49f8b15
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5312
   source_label: 'Scull: Ethmoid'
   source_path: 'Host-associated > Mammals: Human > Skeletal system > Bone > Scull:
     Ethmoid'
-  mapping_predicate: skos:exactMatch
+  mapping_predicate: skos:closeMatch
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
-  changes: 'Grounded to UBERON:0001679 ''ethmoid bone'' (EXACT). Variant-match review
+  changes: 'Grounded to UBERON:0001679 ''ethmoid bone'' (CLOSE). Variant-match review
     (#12): the seeder grounds on exact labels only, so GOLD''s slash and plural conventions
     hid a term that says exactly this. GOLD writes ''Scull: Ethmoid''; the path is
-    Skeletal system > Bone, so the ethmoid bone is meant. Path: Host-associated >
-    Mammals: Human > Skeletal system > Bone > Scull: Ethmoid (source concept habitatmech:GOLD.55cb603eb1)'
+    Skeletal system > Bone, so the ethmoid bone is meant; CLOSE (#2296) keeps the
+    compound misspelled leaf ''Scull: Ethmoid'' as RELATED_SYNONYM (skos:closeMatch)
+    rather than EXACT_SYNONYM. Path: Host-associated > Mammals: Human > Skeletal system
+    > Bone > Scull: Ethmoid (source concept habitatmech:GOLD.55cb603eb1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Scull: Ethmoid'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-11-05T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.67f49f8b15
+    for habitatmech:GOLD.55cb603eb1 (Host-associated > Mammals: Human > Skeletal system
+    > Bone > Scull: Ethmoid). Review https://github.com/CultureBotAI/HabitatMech/issues/2295
+    : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype
+    of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory
+    mucosal surface liquid, not the entire human respiratory system; erythrocyte is
+    a circulating red blood cell, not the entire human blood tissue; esophageal ulcer
+    is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus;
+    crustacean, piscine, avian, human and mammalian esophagus are tubular digestive
+    organs, not subtypes of the entire foregut or digestive system; ethmoid bone is
+    a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian
+    tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect
+    excretory system is an organ system, not a subtype of the whole insect-associated
+    environment. Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target UBERON:0001679. Shared
+    mapping endpoints #1398 remain separate.'

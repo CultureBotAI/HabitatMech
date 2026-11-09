@@ -1,0 +1,233 @@
+identifier: habitatmech:GOLD.b22544c1b5
+causal_graphs:
+- graph_id: soy_sauce_koji_moromi_aspergillus_tetragenococcus_zygosaccharomyces_hydrolase_gapdh_fermentation
+  title: Soy sauce high-salt koji/moromi brine and heptelidic acid gradient, Aspergillus oryzae / Tetragenococcus
+    halophilus / Zygosaccharomyces rouxii succession, and protease/glutaminase/GAPDH/TCA umami fermentation
+    mechanism
+  description: Brewed soy sauce fermentation progresses from solid-state soybean/wheat koji to a prolonged
+    120-day high-salt liquid moromi mash containing mold-derived secondary metabolites including the sesquiterpene
+    lactone heptelidic acid (HA). This high-salt moromi environment selects for a halophilic microbial
+    succession dominated by the koji mold Aspergillus oryzae (or A. sojae), the salt-tolerant lactic acid
+    bacterium Tetragenococcus halophilus (alongside Weissella spp.), and the osmotolerant yeast Zygosaccharomyces
+    rouxii. Aspergillus oryzae and Zygosaccharomyces rouxii secrete proteases, peptidases, glutaminases,
+    aspartate aminotransferase, citrate synthase, aconitase, and isocitrate dehydrogenase to hydrolyze
+    soybean proteins and synthesize umami flavor amino acids, while adapted Tetragenococcus halophilus
+    strains carry resistance mutations in glyceraldehyde-3-phosphate dehydrogenase (GAPDH) that overcome
+    A. oryzae heptelidic acid inhibition to sustain lactic acid fermentation under high-salt moromi conditions.
+  nodes:
+  - node_id: soy_sauce
+    label: soy sauce
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.b22544c1b5
+    description: High-salt fermented condiment brewed from soybeans, wheat, water, and salt through sequential
+      solid-state koji and liquid-state moromi fermentation.
+  - node_id: high_salt_soy_sauce_moromi_and_koji_heptelidic_acid_matrix
+    label: high-salt soy sauce moromi brine, soybean/wheat protein matrix, and Aspergillus heptelidic
+      acid
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High-salinity soy sauce moromi fermentation mash containing soybean/wheat proteins and
+      the GAPDH inhibitor heptelidic acid (HA) produced by Aspergillus oryzae.
+  - node_id: soy_sauce_aspergillus_oryzae_tetragenococcus_halophilus_and_zygosaccharomyces_rouxii_guild
+    label: Aspergillus oryzae, Tetragenococcus halophilus, and Zygosaccharomyces rouxii soy sauce fermentation
+      guild
+    node_type: COMMUNITY
+    description: Dominant halophilic soy sauce microbiota comprising koji molds Aspergillus oryzae and
+      A. sojae, salt-tolerant lactic acid bacteria Tetragenococcus halophilus and Weissella spp., and
+      osmotolerant yeast Zygosaccharomyces rouxii.
+  - node_id: koji_protease_peptidase_glutaminase_umami_tca_enzymes_and_ha_resistant_gapdh
+    label: proteases, peptidases, glutaminases, aspartate aminotransferase, citrate synthase/aconitase/IDH,
+      and Tetragenococcus GAPDH
+    node_type: GENE_OR_PROTEIN
+    description: Soybean-hydrolyzing proteases (alp1, UniProtKB:P12547), peptidases, and glutaminases
+      (gtaA, UniProtKB:Q2U4L7), umami amino-acid metabolic enzymes (aspartate aminotransferase UniProtKB:Q2UBR3,
+      citrate synthase UniProtKB:C5DXE7, aconitase, isocitrate dehydrogenase) from Aspergillus oryzae
+      and Zygosaccharomyces rouxii, and glyceraldehyde-3-phosphate dehydrogenase (GAPDH; gap, UniProtKB:A0A2H6DA72)
+      in Tetragenococcus halophilus.
+    protein_examples:
+    - accession: UniProtKB:P12547
+      entry_name: ORYZ_ASPOR
+      recommended_name: Alkaline protease 1
+      gene_symbol: alp1
+      locus_tag: AO090003001036
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 403
+      crc64: 39A8AC8B8790E010
+      evidence:
+      - reference: PMID:25073685
+        snippet: Several key hydrolases in soy sauce fermentation such as proteases, peptidases, and glutaminases
+          are supplied by Aspergillus sojae or Aspergillus oryzae.
+        notes: Aspergillus oryzae RIB40 encodes the Swiss-Prot reviewed Alkaline protease 1 (alp1, AO090003001036,
+          UniProtKB:P12547; 403 aa) supplying proteolytic activity in soy sauce fermentation (PMID:25073685).
+    - accession: UniProtKB:Q2U4L7
+      entry_name: GTAA_ASPOR
+      recommended_name: Glutaminase A
+      gene_symbol: gtaA
+      locus_tag: AO090020000289
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 690
+      crc64: E3D0B17841EEA00D
+      evidence:
+      - reference: PMID:25073685
+        snippet: Several key hydrolases in soy sauce fermentation such as proteases, peptidases, and glutaminases
+          are supplied by Aspergillus sojae or Aspergillus oryzae.
+        notes: Aspergillus oryzae RIB40 encodes the Swiss-Prot reviewed Glutaminase A (gtaA, AO090020000289,
+          UniProtKB:Q2U4L7; 690 aa) supplying glutaminase activity in soy sauce fermentation (PMID:25073685).
+    - accession: UniProtKB:Q2UBR3
+      entry_name: Q2UBR3_ASPOR
+      recommended_name: Aspartate aminotransferase
+      locus_tag: AO090012000899
+      taxon_id: NCBITaxon:510516
+      taxon_name: Aspergillus oryzae (strain ATCC 42149 / RIB 40)
+      role_in_node: family_member
+      sequence_length: 415
+      crc64: 10FAEF4054CBFE24
+      evidence:
+      - reference: PMID:38024365
+        snippet: Kyoto Encyclopedia of Genes and Genomes analysis revealed that the main enzymes involved
+          in the metabolism of umami amino acids were aspartate aminotransferase, citrate synthase, aconitase,
+          and isocitrate dehydrogenase, which were produced by Z. rouxii and A. oryzae during early fermentation
+          (0-15 d) and the middle fermentation stage (60-90 d).
+        notes: Representative Aspergillus oryzae RIB40 Aspartate aminotransferase (AO090012000899, UniProtKB:Q2UBR3;
+          415 aa) for umami amino acid biosynthesis in soy sauce (PMID:38024365).
+    - accession: UniProtKB:C5DXE7
+      entry_name: C5DXE7_ZYGRC
+      recommended_name: Citrate synthase
+      locus_tag: ZYRO0F04444g
+      taxon_id: NCBITaxon:4956
+      taxon_name: Zygosaccharomyces rouxii
+      role_in_node: family_member
+      sequence_length: 490
+      crc64: 5BA9803844CF7D45
+      evidence:
+      - reference: PMID:38024365
+        snippet: Kyoto Encyclopedia of Genes and Genomes analysis revealed that the main enzymes involved
+          in the metabolism of umami amino acids were aspartate aminotransferase, citrate synthase, aconitase,
+          and isocitrate dehydrogenase, which were produced by Z. rouxii and A. oryzae during early fermentation
+          (0-15 d) and the middle fermentation stage (60-90 d).
+        notes: Representative Zygosaccharomyces rouxii Citrate synthase (ZYRO0F04444g, UniProtKB:C5DXE7;
+          490 aa) active in umami amino acid metabolism during soy sauce fermentation (PMID:38024365).
+    - accession: UniProtKB:A0A2H6DA72
+      entry_name: A0A2H6DA72_TETHA
+      recommended_name: Glyceraldehyde-3-phosphate dehydrogenase
+      gene_symbol: gap
+      locus_tag: TEHN7118_1500
+      taxon_id: NCBITaxon:1513897
+      taxon_name: Tetragenococcus halophilus subsp. halophilus
+      role_in_node: strain_exemplar
+      sequence_length: 333
+      crc64: EE07BBEA80AEFF93
+      evidence:
+      - reference: PMID:29629630
+        snippet: The difference in the susceptibility to HA among various strains of T. halophilus was caused
+          by the mutations in the gene encoding GAPDH.
+        notes: Tetragenococcus halophilus subsp. halophilus encodes the 333-aa Glyceraldehyde-3-phosphate
+          dehydrogenase (gap, TEHN7118_1500, UniProtKB:A0A2H6DA72) targeted by Aspergillus oryzae heptelidic
+          acid in soy sauce moromi (PMID:29629630).
+  - node_id: soy_protein_hydrolysis_umami_amino_acid_biosynthesis_and_moromi_lactic_fermentation
+    label: soy protein hydrolysis, umami amino acid biosynthesis, and heptelidic acid-tolerant lactic
+      acid fermentation
+    node_type: COMMUNITY_PROCESS
+    description: Enzymatic hydrolysis of soy/wheat proteins into peptides and glutamate, TCA/transaminase-driven
+      synthesis of umami flavor amino acids across 0-120 days of fermentation, and GAPDH-dependent lactic
+      acid fermentation in high-salt moromi.
+  edges:
+  - edge_id: soy_sauce_maintains_high_salt_moromi_and_heptelidic_acid_environment
+    subject: soy_sauce
+    predicate: maintains
+    object: high_salt_soy_sauce_moromi_and_koji_heptelidic_acid_matrix
+    description: Soy sauce brewing creates a prolonged high-salt moromi fermentation environment where
+      Aspergillus oryzae RIB40 produces heptelidic acid under high-salt conditions.
+    evidence:
+    - reference: PMID:29629630
+      snippet: We isolated and identified heptelidic acid (HA), an inhibitor of glyceraldehyde-3-phosphate
+        dehydrogenase (GAPDH), produced by A. oryzae RIB40 as the growth inhibitor of the salt-tolerant
+        lactic acid bacteria. The growth inhibition of T. halophilus D10 by HA was suggested to be associated
+        with the direct inhibition of GAPDH activity under high salt environment.
+      notes: Soy sauce moromi brewed with Aspergillus oryzae contains heptelidic acid under a high-salt
+        environment (PMID:29629630).
+  - edge_id: moromi_matrix_selects_for_aspergillus_tetragenococcus_and_zygosaccharomyces_succession
+    subject: high_salt_soy_sauce_moromi_and_koji_heptelidic_acid_matrix
+    predicate: selects for
+    object: soy_sauce_aspergillus_oryzae_tetragenococcus_halophilus_and_zygosaccharomyces_rouxii_guild
+    description: Soy sauce fermentation selects for a staged succession of Aspergillus oryzae, Tetragenococcus
+      halophilus, Weissella spp., and Zygosaccharomyces rouxii across early (0-15 d), mid (60-90 d), and
+      late (90-120 d) moromi stages.
+    evidence:
+    - reference: PMID:38024365
+      snippet: Metagenomic analysis revealed that Tetragenococcus halophilus, Weissella confusa, Weissella
+        paramesenteroides, Enterobacter hormaechei, and Aspergillus oryzae were the dominant microbiota.
+      notes: Tetragenococcus halophilus, Weissella spp., and Aspergillus oryzae dominate the Cantonese
+        soy sauce metagenome alongside Zygosaccharomyces rouxii (PMID:38024365).
+    - reference: PMID:38024365
+      snippet: Among them, early fermentation (0-15d) was dominated by A. oryzae and T. halophilus, mid-term
+        fermentation (60-90d) was dominated by Z. rouxii, A. oryzae, and T. halophilus, and late fermentation
+        (90-120d) was dominated by A. oryzae, Z. rouxii, and T. halophilus.
+      notes: Aspergillus oryzae, Tetragenococcus halophilus, and Zygosaccharomyces rouxii dominate sequential
+        0-120 d fermentation stages of soy sauce (PMID:38024365).
+  - edge_id: soy_sauce_guild_expresses_hydrolases_umami_enzymes_and_mutant_gapdh
+    subject: soy_sauce_aspergillus_oryzae_tetragenococcus_halophilus_and_zygosaccharomyces_rouxii_guild
+    predicate: expresses
+    object: koji_protease_peptidase_glutaminase_umami_tca_enzymes_and_ha_resistant_gapdh
+    description: Aspergillus oryzae, A. sojae, and Zygosaccharomyces rouxii supply proteases, peptidases,
+      glutaminases, aspartate aminotransferase, citrate synthase, aconitase, and isocitrate dehydrogenase,
+      while Tetragenococcus halophilus strains carry GAPDH variants.
+    evidence:
+    - reference: PMID:25073685
+      snippet: Several key hydrolases in soy sauce fermentation such as proteases, peptidases, and glutaminases
+        are supplied by Aspergillus sojae or Aspergillus oryzae. The genes encoding these hydrolases were
+        successfully expressed in salt-tolerant yeast Zygosaccharomyces rouxii.
+      notes: Aspergillus sojae and Aspergillus oryzae supply key proteases, peptidases, and glutaminases
+        in soy sauce fermentation (PMID:25073685).
+    - reference: PMID:38024365
+      snippet: Kyoto Encyclopedia of Genes and Genomes analysis revealed that the main enzymes involved
+        in the metabolism of umami amino acids were aspartate aminotransferase, citrate synthase, aconitase,
+        and isocitrate dehydrogenase, which were produced by Z. rouxii and A. oryzae during early fermentation
+        (0-15 d) and the middle fermentation stage (60-90 d).
+      notes: Metaproteomics identified aspartate aminotransferase, citrate synthase, aconitase, and isocitrate
+        dehydrogenase secreted by Z. rouxii and A. oryzae during soy sauce fermentation (PMID:38024365).
+    - reference: PMID:29629630
+      snippet: The difference in the susceptibility to HA among various strains of T. halophilus was caused
+        by the mutations in the gene encoding GAPDH.
+      notes: Mutations in the Tetragenococcus halophilus GAPDH gene determine strain resistance to A.
+        oryzae heptelidic acid in soy sauce moromi (PMID:29629630).
+  - edge_id: hydrolases_and_gapdh_catalyze_umami_amino_acid_and_lactic_acid_fermentation
+    subject: koji_protease_peptidase_glutaminase_umami_tca_enzymes_and_ha_resistant_gapdh
+    predicate: catalyzes
+    object: soy_protein_hydrolysis_umami_amino_acid_biosynthesis_and_moromi_lactic_fermentation
+    description: Secreted hydrolases and TCA/aminotransferase enzymes drive umami flavor amino acid formation
+      while heptelidic-acid-resistant GAPDH enables Tetragenococcus halophilus growth and lactic acid
+      fermentation in soy sauce moromi.
+    evidence:
+    - reference: PMID:38024365
+      snippet: Using the Top 15 dominant microbiota identified by metagenomics as the database, LTQ Orbitrap
+        Velos Pro ETD mass spectrometry was used to obtain metaproteomic information about the microbes
+        in the soy sauce, and the results indicated that the active enzymes involved in the metabolism
+        of amino acids were secreted by microorganisms such as A. oryzae, T. halophilus, and Zygosaccharomyces
+        rouxii.
+      notes: Active enzymes secreted by A. oryzae, T. halophilus, and Z. rouxii drive flavor and umami
+        amino acid metabolism in soy sauce (PMID:38024365).
+    - reference: PMID:29629630
+      snippet: In soy sauce brewing, the results of the fermentation of lactic acid greatly affect the
+        quality of soy sauce. The soy sauce moromi produced with Aspergillus oryzae RIB40 allows the growth
+        of Tetragenococcus halophilus NBRC 12172 but not T. halophilus D10.
+      notes: Heptelidic acid-tolerant GAPDH in Tetragenococcus halophilus NBRC 12172 sustains lactic acid
+        fermentation essential for soy sauce quality in A. oryzae moromi (PMID:29629630).
+curation_history:
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added soy_sauce_koji_moromi_aspergillus_tetragenococcus_zygosaccharomyces_hydrolase_gapdh_fermentation
+    mechanism graph for soy_sauce (habitatmech:GOLD.b22544c1b5) backed by PMID:25073685, PMID:29629630,
+    and PMID:38024365.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:P12547, UniProtKB:Q2U4L7, UniProtKB:Q2UBR3,
+    UniProtKB:C5DXE7, UniProtKB:A0A2H6DA72) for Aspergillus oryzae RIB40, Zygosaccharomyces rouxii, and
+    Tetragenococcus halophilus enzymes.
+  llm_assisted: true

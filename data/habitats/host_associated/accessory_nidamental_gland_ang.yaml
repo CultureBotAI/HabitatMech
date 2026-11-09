@@ -26,6 +26,173 @@ source_attestations:
   source_path: Host-associated > Mollusca > Reproductive system > Accessory nidamental
     gland (ANG)
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: accessory_nidamental_gland_leisingera_indigoidine_and_antifungal_egg_defense
+  title: Cephalopod accessory nidamental gland tubule recruitment, Leisingera indigoidine/secondary
+    metabolite biosynthesis, and egg clutch antifungal defense mechanism
+  description: Female bobtail squids (Euprymna scolopes) and other cephalopod mollusks
+    develop a specialized reproductive organ, the accessory nidamental gland (ANG),
+    composed of morphologically heterogeneous ciliated and nonciliated epithelium-lined
+    tubules whose morphogenesis requires exposure to environmental bacteria (including
+    Verrucomicrobia). The spatially partitioned ANG tubules house dense bacterial
+    assemblages dominated by Rhodobacterales (Roseobacter clade genera Phaeobacter
+    and Leisingera sp. JC1), Rhizobiales, Verrucomicrobia, and Flavobacteria. ANG
+    symbionts such as Leisingera sp. JC1 encode the complete biosynthetic gene cluster
+    for the antimicrobial pigment indigoidine alongside siderophore, acyl-homoserine
+    lactone quorum-sensing, and antifungal secondary metabolite pathways (producing
+    lincomycin, mycinamicin-like compounds, and glycerophosphocholines), which are
+    deposited into the egg jelly coat to inhibit marine vibrios and pathogenic fungal
+    biofouling by Fusarium keratoplasticum.
+  nodes:
+  - node_id: accessory_nidamental_gland_ang
+    label: cephalopod accessory nidamental gland (ANG) environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.453b1756ab
+    description: Female-specific reproductive organ in squid and cuttlefish composed
+      of a dense network of epithelium-lined tubules that house defensive symbiotic
+      bacteria deposited into egg jelly coats.
+  - node_id: ang_epithelium_lined_tubule_network_and_egg_jelly_coat_secretion
+    label: spatially partitioned ANG epithelium-lined tubules and egg jelly coat secretion
+      matrix
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Morphologically heterogeneous ciliated and nonciliated epithelium-lined
+      tubules of the female cephalopod accessory nidamental gland that recruit environmental
+      microbiota during development and deposit symbionts into the jelly coat of freshly
+      laid eggs.
+  - node_id: ang_roseobacter_leisingera_phaeobacter_and_verrucomicrobia_consortium
+    label: ANG Rhodobacterales (Phaeobacter, Leisingera sp. JC1), Verrucomicrobia,
+      and Flavobacteria consortium
+    node_type: COMMUNITY
+    description: Taxon-partitioned bacterial consortium of the Euprymna scolopes accessory
+      nidamental gland dominated by Rhodobacterales (Phaeobacter and Leisingera sp.
+      JC1), Rhizobiales, Verrucomicrobia, and Flavobacteria.
+  - node_id: leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways
+    label: Leisingera indigoidine biosynthetic gene cluster, acyl-HSL/siderophore
+      pathways, and ANG antifungal secondary metabolite enzymes
+    node_type: GENE_OR_PROTEIN
+    description: 'Complete biosynthetic gene cluster for the antimicrobial pigment
+      indigoidine as well as siderophore and acyl-homoserine lactone quorum-sensing
+      genes in Leisingera sp. JC1, alongside ANG bacterial pathways producing lincomycin
+      and mycinamicin-like antifungal secondary metabolites. Source-limited for UniProtKB
+      protein_examples: the Euprymna scolopes ANG symbiont Leisingera sp. JC1 (NCBITaxon:1855282)
+      genome proteome sequenced in PMID:27660622 (locus prefix A9D60_, GenBank WGS
+      LYUZ01) is archived in UniParc (e.g., peptide synthetase A9D60_24190, former
+      UniProtKB:A0A1B8RVT2 -> UPI0008034E33, 1521 aa; adenylation domain protein WP_083194217.1
+      -> UPI0009F1E898, 1313 aa; peptide synthetase A9D60_12425, former UniProtKB:A0A1B8S5S3
+      -> UPI00031486F3, 200 aa) without active UniProtKB cross-references, and the
+      antifungal metabolite network in PMID:31662458 was characterized by untargeted
+      mass spectrometry without deposited UniProtKB protein accessions.'
+  - node_id: egg_jelly_coat_deposition_and_antifungal_antibacterial_embryo_protection
+    label: bacterial deposition into egg jelly coat and antimicrobial defense against
+      Fusarium keratoplasticum and marine vibrios
+    node_type: COMMUNITY_PROCESS
+    description: Maternal transmission of ANG bacteria and antimicrobial metabolites
+      (indigoidine, lincomycin, mycinamicin-like compounds) into the squid egg jelly
+      coat, inhibiting marine vibrios and preventing lethal Fusarium keratoplasticum
+      fungal biofouling during embryogenesis.
+  edges:
+  - edge_id: ang_maintains_epithelium_lined_tubules_for_microbial_recruitment_and_egg_coating
+    subject: accessory_nidamental_gland_ang
+    predicate: maintains
+    object: ang_epithelium_lined_tubule_network_and_egg_jelly_coat_secretion
+    description: The female bobtail squid accessory nidamental gland develops epithelium-lined
+      tubules in response to environmental bacteria and deposits its symbionts into
+      the egg jelly coat.
+    evidence:
+    - reference: PMID:22504817
+      snippet: Transmission electron microscopy (TEM) analysis of the ANG revealed
+        dense bacterial assemblages of rod- and coccus-shaped cells segregated by
+        morphology into separate, epithelium-lined tubules. The host epithelium was
+        morphologically heterogeneous, containing ciliated and nonciliated cells with
+        various brush border thicknesses.
+      notes: Collins et al. 2012 (PMID:22504817) characterized the ciliated and nonciliated
+        epithelium-lined tubule architecture of the Euprymna scolopes ANG.
+    - reference: PMID:36656023
+      snippet: Under conditions where hosts were exposed to depleted environmental
+        bacteria, ANGs were completely absent or stunted, a result independent of
+        the presence of the light organ symbiont V. fischeri. When squid were raised
+        in the laboratory with substrate from the host's natural environment containing
+        the native microbiota, normal ANG development was observed, and the bacterial
+        communities were similar to wild-caught animals.
+      notes: Exposure to environmental microbiota is required for mature morphogenesis
+        of the accessory nidamental gland in Euprymna scolopes (PMID:36656023).
+  - edge_id: ang_tubules_select_for_roseobacter_leisingera_and_verrucomicrobia_consortium
+    subject: ang_epithelium_lined_tubule_network_and_egg_jelly_coat_secretion
+    predicate: selects for
+    object: ang_roseobacter_leisingera_phaeobacter_and_verrucomicrobia_consortium
+    description: ANG tubules selectively recruit and spatially partition Rhodobacterales
+      (Phaeobacter and Leisingera sp. JC1), Rhizobiales, Verrucomicrobia, and Flavobacteria.
+    evidence:
+    - reference: PMID:22504817
+      snippet: A census of 16S rRNA genes suggested that Rhodobacterales, Rhizobiales,
+        and Verrucomicrobia bacteria were prevalent, with members of the genus Phaeobacter
+        dominating the consortium. Analysis of 454-shotgun sequencing data confirmed
+        the presence of members of these taxa and revealed members of a fourth, Flavobacteria
+        of the Bacteroidetes phylum. 16S rRNA fluorescent in situ hybridization (FISH)
+        revealed that many ANG tubules were dominated by members of specific taxa,
+        namely, Rhodobacterales, Verrucomicrobia, or Cytophaga-Flavobacteria-Bacteroidetes,
+        suggesting symbiont partitioning to specific host tubules.
+      notes: 16S rRNA, 454-shotgun metagenomics, and FISH demonstrated tubule-partitioned
+        dominance of Rhodobacterales (Phaeobacter), Rhizobiales, Verrucomicrobia,
+        and Flavobacteria in the Euprymna scolopes ANG (PMID:22504817).
+    - reference: PMID:36656023
+      snippet: Squid raised with natural substrate supplemented with a specific ANG
+        bacterial strain, Leisingera sp. JC1, had high proportions of this strain
+        in the ANG, suggesting that once ANG development is initiated, specific strains
+        can be introduced and subsequently colonize the organ.
+      notes: Leisingera sp. JC1 colonizes developing Euprymna scolopes ANG tubules
+        to high relative abundance (PMID:36656023).
+  - edge_id: ang_consortium_encodes_indigoidine_and_antifungal_secondary_metabolite_pathways
+    subject: ang_roseobacter_leisingera_phaeobacter_and_verrucomicrobia_consortium
+    predicate: expresses
+    object: leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways
+    description: ANG symbiont Leisingera sp. JC1 encodes and expresses the indigoidine
+      biosynthetic gene cluster, siderophores, and quorum-sensing acyl-HSLs, while
+      the ANG consortium produces lincomycin and mycinamicin-like antifungal metabolites.
+    evidence:
+    - reference: PMID:27660622
+      snippet: Genome and biochemical analyses revealed the potential for and production
+        of a number of secondary metabolites, including siderophores and acyl-homoserine
+        lactones involved with quorum sensing. The complete biosynthetic gene cluster
+        for the pigment indigoidine was detected in the genome and mass spectrometry
+        confirmed the production of this compound.
+      notes: Whole-genome sequencing and mass spectrometry of ANG symbiont Leisingera
+        sp. JC1 confirmed the complete indigoidine biosynthetic gene cluster and siderophore/acyl-HSL
+        production (PMID:27660622).
+    - reference: PMID:31662458
+      snippet: Several secondary metabolites were identified from ANG/JC bacteria
+        and egg clutches, including the known antimicrobial lincomycin as well as
+        a suite of glycerophosphocholines and mycinamicin-like compounds.
+      notes: Mass spectral network analyses identified lincomycin, glycerophosphocholines,
+        and mycinamicin-like antimicrobial compounds produced by ANG and egg jelly
+        coat bacteria (PMID:31662458).
+  - edge_id: indigoidine_and_ang_metabolites_protect_squid_eggs_from_vibrios_and_fungal_fouling
+    subject: leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways
+    predicate: catalyzes
+    object: egg_jelly_coat_deposition_and_antifungal_antibacterial_embryo_protection
+    description: Indigoidine and antifungal secondary metabolites secreted with ANG
+      bacteria into the egg jelly coat inhibit marine vibrios and protect developing
+      squid embryos from Fusarium keratoplasticum biofouling.
+    evidence:
+    - reference: PMID:27660622
+      snippet: Finally, both Leisingera sp. JC1 and secondary metabolite extracts
+        of this strain had differential antimicrobial activity against a number of
+        marine vibrios, suggesting that Leisingera sp. JC1 may play a role in host
+        defense against other marine bacteria either in the eggs and/or ANG.
+      notes: Leisingera sp. JC1 and its indigoidine-containing extracts inhibit competing
+        marine vibrios (PMID:27660622).
+    - reference: PMID:31662458
+      snippet: Eggs treated with an antibiotic cocktail developed a microbial biomass
+        primarily composed of the pathogenic fungus Fusarium keratoplasticum that
+        infiltrated the JC, resulting in severely reduced hatch rates. Experimental
+        manipulation of the eggs demonstrated that the JC was protective against this
+        fungal fouling. A large proportion of the bacterial strains isolated from
+        the ANG or JC inhibited F. keratoplasticum in culture (87.5%), while a similar
+        proportion of extracts from these strains also exhibited antifungal activity
+        against F. keratoplasticum and/or the human-pathogenic yeast Candida albicans
+        (72.7%).
+      notes: ANG bacteria deposited into the egg jelly coat inhibit Fusarium keratoplasticum
+        (87.5% of isolates) and prevent lethal fungal egg fouling (PMID:31662458).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -70,3 +237,18 @@ curation_history:
     Exclude only this exact immediate GOLD source-path contribution with expected-parent
     guard; retain source nodes, verbatim path, count/unit semantics and unrelated
     parents.'
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added accessory_nidamental_gland_leisingera_indigoidine_and_antifungal_egg_defense
+    mechanism graph for accessory_nidamental_gland_ang (habitatmech:GOLD.453b1756ab)
+    backed by PMID:22504817, PMID:27660622, PMID:31662458, and PMID:36656023.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Audited leisingera_indigoidine_biosynthetic_gene_cluster_and_ang_antifungal_pathways
+    for UniProtKB protein_examples; documented UniParc-only status for the Leisingera
+    sp. JC1 (NCBITaxon:1855282) proteome (UPI0008034E33, UPI0009F1E898, UPI00031486F3;
+    PMID:27660622) and metabolomic source-limited status for PMID:31662458.'
+  llm_assisted: true

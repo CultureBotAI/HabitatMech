@@ -17,6 +17,264 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis
+  title: Squid light organ V-type ATPase acidic mucus recruitment, Vibrio fischeri
+    RscS-Syp biofilm aggregation, and LuxR-LuxI-LuxA bioluminescence morphogenesis
+    mechanism
+  description: Juvenile Hawaiian bobtail squid (Euprymna scolopes) hatch aposymbiotically
+    and recruit their specific bacterial symbiont Vibrio (Aliivibrio) fischeri from
+    seawater across juvenile-specific ciliated epithelial fields whose V-type ATPase
+    (VHA) proton pump creates an acidic mucus microenvironment containing low-pH-optima
+    antimicrobials. Directed to surface quiet zones by ciliary movements, V. fischeri
+    uses the sensor kinase RscS (rscS) to activate transcription of the symbiosis
+    polysaccharide (syp) gene locus (including sypN) alongside cellulose polysaccharide
+    and the LapV adhesin, forming a transient surface biofilm aggregate before dispersing
+    into deep crypt spaces. Inside the crypts, V. fischeri induces the luminescence
+    regulatory and enzymatic proteins LuxR, LuxI, and LuxA (luxA, luxI, luxR), catalyzing
+    bioluminescence and oxygen consumption that induce swelling of host crypt epithelial
+    cells and sustain full colonization density.
+  nodes:
+  - node_id: light_organ
+    label: cephalopod symbiotic light organ environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.200051736e
+    description: Specialized ventral mantle cavity photophore organ of sepiolid squids
+      (such as Euprymna scolopes) and other marine animals that houses dense extracellular
+      populations of bioluminescent bacterial symbionts in epithelium-lined crypts.
+  - node_id: nascent_light_organ_mucus_ciliated_field_and_crypt_microenvironment
+    label: V-type ATPase-acidified ciliated recruitment mucus and deep crypt microenvironment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Juvenile-specific ciliated epithelial fields on the Euprymna scolopes
+      light organ surface acidified by host V-type ATPase (VHA) activity and antimicrobials,
+      leading into epithelium-lined crypt spaces.
+  - node_id: vibrio_fischeri_monospecific_light_organ_symbiont_population
+    label: monospecific Vibrio (Aliivibrio) fischeri light organ symbiont population
+    node_type: COMMUNITY
+    description: Extracellular monospecific population of the bioluminescent marine
+      bacterium Vibrio (Aliivibrio) fischeri colonizing the light organ surface aggregates
+      and deep crypts of Euprymna scolopes.
+  - node_id: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
+    label: Vibrio fischeri RscS sensor kinase, syp polysaccharide locus (sypN), LapV
+      adhesin, and LuxA/LuxI/LuxR bioluminescence system
+    node_type: GENE_OR_PROTEIN
+    description: 'Symbiosis sensor kinase RscS (rscS), symbiosis polysaccharide (syp)
+      locus including glycosyltransferase sypN, LapV adhesin, and the luminescence
+      enzymatic and regulatory proteins LuxA, LuxI, and LuxR (luxA, luxI, luxR) in
+      Vibrio (Aliivibrio) fischeri, interacting with host V-type ATPase (VHA). Verified
+      protein_examples are attached for the squid light organ symbiont Aliivibrio
+      (Vibrio) fischeri strain ATCC 700601 / ES114 (NCBITaxon:312309): symbiosis sensor
+      histidine kinase RscS (UniProtKB:Q5E0Y9, rscS, VF_A0237; PMID:17087775), symbiosis
+      polysaccharide glycosyltransferase SypN (UniProtKB:Q5DYP3, sypN, VF_A1033; PMID:17087775,
+      PMID:38270381), luciferase alpha chain LuxA (UniProtKB:Q5DZ05, luxA, VF_A0921;
+      PMID:10913092), acyl-homoserine-lactone synthase LuxI (UniProtKB:P35328, luxI,
+      VF_A0924; PMID:10913092), and transcriptional activator LuxR (UniProtKB:P35327,
+      luxR, VF_A0925; PMID:10913092).'
+    protein_examples:
+    - accession: UniProtKB:Q5E0Y9
+      entry_name: Q5E0Y9_ALIF1
+      recommended_name: histidine kinase
+      gene_symbol: rscS
+      locus_tag: VF_A0237
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 927
+      crc64: 9EE0659CB2E8BF8B
+      evidence:
+      - reference: PMID:17087775
+        snippet: Previously, we identified in Vibrio fischeri a putative sensor kinase,
+          RscS, required for initiating symbiotic colonization of its squid host Euprymna
+          scolopes. Here, we analysed the role of rscS by isolating an allele, rscS1,
+          with increased activity. Multicopy rscS1 activated transcription of genes
+          within the recently identified symbiosis polysaccharide (syp) cluster.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) sensor
+          histidine kinase RscS (rscS, locus tag VF_A0237, UniProtKB:Q5E0Y9, 927 aa)
+          activates syp cluster transcription and surface biofilm aggregation during
+          Euprymna scolopes light organ colonization (PMID:17087775).
+    - accession: UniProtKB:Q5DYP3
+      entry_name: Q5DYP3_ALIF1
+      recommended_name: Glycosyltransferase
+      gene_symbol: sypN
+      locus_tag: VF_A1033
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 378
+      crc64: BEC6D0246251B031
+      evidence:
+      - reference: PMID:17087775
+        snippet: Finally, multicopy rscS1 provided a colonization advantage over control
+          cells and substantially enhanced the ability of wild-type cells to aggregate
+          on the surface of the symbiotic organ of E. scolopes; this latter phenotype
+          similarly depended upon an intact syp locus.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) glycosyltransferase
+          SypN (sypN, locus tag VF_A1033, UniProtKB:Q5DYP3, 378 aa) is a core enzyme
+          of the syp symbiosis polysaccharide locus required for biofilm aggregation
+          on the squid light organ (PMID:17087775, PMID:38270381).
+    - accession: UniProtKB:Q5DZ05
+      entry_name: Q5DZ05_ALIF1
+      recommended_name: Alkanal monooxygenase
+      gene_symbol: luxA
+      locus_tag: VF_A0921
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: subunit
+      sequence_length: 355
+      crc64: 7D6B22DB5D32DB54
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) bacterial
+          luciferase alpha subunit LuxA (luxA, locus tag VF_A0921, UniProtKB:Q5DZ05,
+          355 aa) is required for bioluminescence, crypt epithelial swelling, and
+          full light organ colonization (PMID:10913092).
+    - accession: UniProtKB:P35328
+      entry_name: LUXJ_ALIF1
+      recommended_name: Acyl-homoserine-lactone synthase
+      gene_symbol: luxI
+      locus_tag: VF_A0924
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 193
+      crc64: A300D104637AF801
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) acyl-homoserine-lactone
+          synthase LuxI (luxI, locus tag VF_A0924, reviewed Swiss-Prot UniProtKB:P35328,
+          193 aa) synthesizes the quorum-sensing autoinducer required for crypt luminescence
+          and persistence (PMID:10913092).
+    - accession: UniProtKB:P35327
+      entry_name: LUXS_ALIF1
+      recommended_name: Transcriptional activator protein LuxR
+      gene_symbol: luxR
+      locus_tag: VF_A0925
+      taxon_id: NCBITaxon:312309
+      taxon_name: Aliivibrio fischeri (strain ATCC 700601 / ES114)
+      role_in_node: family_member
+      sequence_length: 250
+      crc64: 42AC06375E28A34F
+      evidence:
+      - reference: PMID:10913092
+        snippet: While the luminescence (lux) genes of symbiotic V. fischeri have
+          been shown to be highly induced within the crypts, the role of these genes
+          in the initiation and persistence of the symbiosis has not been rigorously
+          examined. We have constructed and examined three mutants (luxA, luxI, and
+          luxR), defective in either luciferase enzymatic or regulatory proteins.
+        notes: Aliivibrio (Vibrio) fischeri strain ES114 (NCBITaxon:312309) transcriptional
+          activator protein LuxR (luxR, locus tag VF_A0925, reviewed Swiss-Prot UniProtKB:P35327,
+          250 aa) activates lux operon expression in the squid light organ crypts
+          (PMID:10913092).
+  - node_id: syp_biofilm_aggregation_crypt_epithelial_remodeling_and_bioluminescent_symbiosis
+    label: Syp-dependent surface biofilm aggregation, crypt dispersal, and Lux-induced
+      crypt epithelial swelling and persistence
+    node_type: COMMUNITY_PROCESS
+    description: Transient SYP-matrix biofilm aggregation on the nascent light organ
+      surface, dispersal into deep crypts, and LuxA/LuxI/LuxR-dependent bioluminescence
+      that induces host crypt epithelial cell swelling and sustains 3-to-4-fold higher
+      colonization levels.
+  edges:
+  - edge_id: light_organ_maintains_selective_recruitment_surface_and_crypt_niche
+    subject: light_organ
+    predicate: maintains
+    object: nascent_light_organ_mucus_ciliated_field_and_crypt_microenvironment
+    description: The juvenile Euprymna scolopes light organ uses V-type ATPase (VHA)
+      proton pump activity on its ciliated epithelial fields to create an acidic,
+      antimicrobial mucus microenvironment that promotes specific symbiont recruitment.
+    evidence:
+    - reference: PMID:39695176
+      snippet: Recruitment of V. fischeri from the surrounding seawater is mediated
+        by juvenile-specific ciliated fields on the organ's surface. These epithelia
+        produce acidic mucus containing antimicrobials with low-pH optima, creating
+        a chemical environment fostering specific recruitment of V. fischeri. We provide
+        evidence that this critical acidic landscape is created by activity of VHA.
+      notes: Hargadon et al. 2024 (PMID:39695176) demonstrated that host V-type ATPase
+        (VHA) creates the acidic mucus landscape on the juvenile Euprymna scolopes
+        light organ surface.
+  - edge_id: light_organ_recruitment_niche_selects_for_vibrio_fischeri
+    subject: nascent_light_organ_mucus_ciliated_field_and_crypt_microenvironment
+    predicate: selects for
+    object: vibrio_fischeri_monospecific_light_organ_symbiont_population
+    description: Ciliary movements and VHA-acidified mucus on the nascent light organ
+      surface selectively recruit Vibrio fischeri from ambient seawater into surface
+      biofilm aggregates and deep crypt spaces.
+    evidence:
+    - reference: PMID:38270381
+      snippet: Juvenile squid hatch aposymbiotically and selectively acquire their
+        symbiont from natural seawater containing diverse environmental microbes.
+        Successful pairing is facilitated by ciliary movements that direct bacteria
+        to quiet zones on the surface of the squid's symbiotic light organ where V.
+        fischeri forms a small aggregate or biofilm. Subsequently, the bacteria disperse
+        from that aggregate to enter the organ, ultimately reaching and colonizing
+        deep crypt spaces.
+      notes: Ciliary currents and surface quiet zones selectively recruit Vibrio fischeri
+        from seawater into transient aggregates that disperse into deep crypt spaces
+        (PMID:38270381).
+  - edge_id: vibrio_fischeri_expresses_rscs_syp_lapv_and_luxa_luxi_luxr_genes
+    subject: vibrio_fischeri_monospecific_light_organ_symbiont_population
+    predicate: expresses
+    object: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
+    description: Vibrio fischeri expresses the sensor kinase RscS to activate transcription
+      of the syp polysaccharide locus (including sypN) and LapV adhesin during surface
+      aggregation and induces luxA, luxI, and luxR inside the light organ crypts.
+    evidence:
+    - reference: PMID:17087775
+      snippet: Previously, we identified in Vibrio fischeri a putative sensor kinase,
+        RscS, required for initiating symbiotic colonization of its squid host Euprymna
+        scolopes. Here, we analysed the role of rscS by isolating an allele, rscS1,
+        with increased activity. Multicopy rscS1 activated transcription of genes
+        within the recently identified symbiosis polysaccharide (syp) cluster.
+      notes: RscS activates transcription of the symbiosis polysaccharide (syp) gene
+        cluster in Vibrio fischeri (PMID:17087775).
+    - reference: PMID:38270381
+      snippet: Some of the most well-characterized matrix factors include the symbiosis
+        polysaccharide (SYP), cellulose polysaccharide, and LapV adhesin.
+      notes: Vibrio fischeri biofilm matrix assembly involves SYP polysaccharide,
+        cellulose polysaccharide, and the LapV adhesin (PMID:38270381).
+    - reference: PMID:10913092
+      snippet: While the luminescence (lux) genes of symbiotic V. fischeri have been
+        shown to be highly induced within the crypts, the role of these genes in the
+        initiation and persistence of the symbiosis has not been rigorously examined.
+        We have constructed and examined three mutants (luxA, luxI, and luxR), defective
+        in either luciferase enzymatic or regulatory proteins.
+      notes: Symbiotic Vibrio fischeri highly induces the luxA, luxI, and luxR luminescence
+        genes within the light organ crypts (PMID:10913092).
+  - edge_id: syp_and_lux_systems_drive_biofilm_aggregation_crypt_swelling_and_persistent_colonization
+    subject: vibrio_fischeri_rscs_syp_lapv_and_luxa_luxi_luxr_bioluminescence_system
+    predicate: catalyzes
+    object: syp_biofilm_aggregation_crypt_epithelial_remodeling_and_bioluminescent_symbiosis
+    description: RscS-activated syp transcription drives surface biofilm aggregation
+      on the light organ, while LuxA/LuxI/LuxR-catalyzed bioluminescence induces host
+      crypt epithelial cell swelling and maintains 3-to-4-fold higher crypt colonization
+      levels.
+    evidence:
+    - reference: PMID:17087775
+      snippet: Finally, multicopy rscS1 provided a colonization advantage over control
+        cells and substantially enhanced the ability of wild-type cells to aggregate
+        on the surface of the symbiotic organ of E. scolopes; this latter phenotype
+        similarly depended upon an intact syp locus.
+      notes: RscS-mediated transcription of an intact syp locus drives symbiotic aggregation
+        on the Euprymna scolopes light organ surface (PMID:17087775).
+    - reference: PMID:10913092
+      snippet: All three are unable to induce normal luminescence levels in the host
+        and, 2 days after initiating the association, had a three- to fourfold defect
+        in the extent of colonization. Surprisingly, these lux mutants also were unable
+        to induce swelling in the crypt epithelial cells. Complementing, in trans,
+        the defect in light emission restored both normal colonization capability
+        and induction of swelling.
+      notes: Loss of luxA, luxI, or luxR causes a 3-to-4-fold colonization defect
+        and abolishes host crypt epithelial cell swelling in the Euprymna scolopes
+        light organ (PMID:10913092).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -52,3 +310,18 @@ curation_history:
     ambiguous, or names a host/disease/process rather than the defined habitat 'molluscan
     light organ'; suppress automatic exact-synonym retention while preserving verbatim
     source provenance.
+- timestamp: '2026-11-06T06:30:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added squid_light_organ_vha_acidic_mucus_vibrio_fischeri_rscs_syp_lapv_biofilm_and_lux_symbiosis
+    mechanism graph for light_organ (habitatmech:GOLD.200051736e) backed by PMID:10913092,
+    PMID:17087775, PMID:38270381, and PMID:39695176.
+  llm_assisted: true
+- timestamp: '2026-11-06T15:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Cycle 6 Stage 3: Added 5 verified Aliivibrio fischeri ES114 (NCBITaxon:312309)
+    protein_examples (UniProtKB:Q5E0Y9 rscS VF_A0237, UniProtKB:Q5DYP3 sypN VF_A1033,
+    UniProtKB:Q5DZ05 luxA VF_A0921, UniProtKB:P35328 luxI VF_A0924, and UniProtKB:P35327
+    luxR VF_A0925) backed by PMID:10913092, PMID:17087775, and PMID:38270381.'
+  llm_assisted: true

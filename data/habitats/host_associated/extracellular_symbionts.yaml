@@ -1,13 +1,14 @@
 identifier: habitatmech:GOLD.28f9330745
 label: annelid digestive tract extracellular symbiont environment
-definition: A digestive tract lumen or mucosal surface of an annelid worm inhabited
-  by extracellular symbiotic microorganisms.
+definition: An environment associated with an animal part or small animal consisting
+  of the digestive tract lumen or mucosal surface of an annelid worm inhabited by
+  extracellular symbiotic microorganisms.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
-- UBERON:0001555
+- ENVO:01001055
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4329
@@ -32,11 +33,13 @@ curation_history:
   curator: antigravity
   action: DEFINED
   changes: 'Defined as ''annelid digestive tract extracellular symbiont environment''
-    under UBERON:0001555 ''digestive tract''. ITEM curation: GOLD ''Host-associated
-    > Annelida > Digestive system > Digestive tube > Extracellular symbionts'' denotes
-    the digestive tract environment of an annelid hosting extracellular symbionts
-    (PMID 26243915; DOI:10.1038/ismej.2015.134). Path: Host-associated > Annelida
-    > Digestive system > Digestive tube > Extracellular symbionts'
+    under ENVO:01001055 ''environment associated with an animal part or small animal''.
+    ITEM curation: GOLD ''Host-associated > Annelida > Digestive system > Digestive
+    tube > Extracellular symbionts'' denotes the digestive tract environment of an
+    annelid hosting extracellular symbionts (PMID 26243915; DOI:10.1038/ismej.2015.134).
+    Path: Host-associated > Annelida > Digestive system > Digestive tube > Extracellular
+    symbionts; parent_mode REPLACE under ENVO:01001055 excludes anatomical organ parent
+    Digestive tube (https://github.com/CultureBotAI/HabitatMech/issues/2304).'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

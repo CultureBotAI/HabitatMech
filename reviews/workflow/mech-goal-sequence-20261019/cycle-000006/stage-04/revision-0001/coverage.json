@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 6,
+  "stage": 4,
+  "revision": 1,
+  "source_revision": "355eb4a23118506c83a76cf22c6332d04decffec",
+  "cohort_id": "excretory_system__22ee753c_to_fecal",
+  "selection_basis": "Frozen lexical slice data/habitats/host_associated/excretory_system__22ee753c.yaml through data/habitats/host_associated/fecal.yaml (next 24 unreviewed host_associated records at indices 482..505 immediately following Cycle 5 Stage 4 slice ending at excretory_system.yaml)",
+  "eligible_record_count": 24,
+  "reviewed_record_count": 24,
+  "pass_with_limitations_count": 2,
+  "needs_curation_count": 22,
+  "new_open_finding_count": 36,
+  "carried_deferred_finding_count": 38,
+  "total_carry_forward_finding_count": 74,
+  "category_review_bundle": {
+    "review_id": "20261106T194900Z-excretory_system__22ee753c_to_fecal-category",
+    "yaml_path": "reviews/structured/20261106T194900Z-excretory_system__22ee753c_to_fecal-category/review.yaml",
+    "yaml_sha256": "0adcf22601eca57e55493eb285aee0ba2bb6d202aa74756d9f6e7b2cd661c6e5",
+    "md_path": "reviews/structured/20261106T194900Z-excretory_system__22ee753c_to_fecal-category/review.md",
+    "md_sha256": "82e0219c32661bbc2e0ffca84608dd95ed36ef39d6201099a81318401f7fad76",
+    "verdict": "pass_with_limitations"
+  },
+  "record_review_bundles": [
+    {
+      "review_id": "20261106T194810Z-excretory_system__22ee753c-record",
+      "target_path": "data/habitats/host_associated/excretory_system__22ee753c.yaml",
+      "target_id": "habitatmech:GOLD.d0a97e09fe",
+      "target_label": "Excretory system",
+      "target_sha256": "bbf5d8ad1733d9f22bcf1da9fab714a194cde611972cd776fa022657cd50342a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "excretory-system--22ee753c-context-parent",
+        "excretory-system--22ee753c-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194810Z-excretory_system__22ee753c-record/review.yaml",
+      "yaml_sha256": "af92e5eff33007e0edaa28a19b2cc403d29197e06bc01f208e1df6bb81cc795d",
+      "md_path": "reviews/structured/20261106T194810Z-excretory_system__22ee753c-record/review.md",
+      "md_sha256": "4457cbaf3794adab2040108e9d2dfe7296373728860b119480545c9cc0b8c497"
+    },
+    {
+      "review_id": "20261106T194811Z-excretory_system__37f93bb9-record",
+      "target_path": "data/habitats/host_associated/excretory_system__37f93bb9.yaml",
+      "target_id": "habitatmech:GOLD.a37f187bfe",
+      "target_label": "Excretory system",
+      "target_sha256": "643875d93dc27d2e5fed218dd5fe6286d31c0cad0d1ae838c3a534cce525961e",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "excretory-system--37f93bb9-context-parent",
+        "excretory-system--37f93bb9-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194811Z-excretory_system__37f93bb9-record/review.yaml",
+      "yaml_sha256": "80422546f919f08ee04ee0327459b85bd1f1812e8f529e089348bfe841a22dc9",
+      "md_path": "reviews/structured/20261106T194811Z-excretory_system__37f93bb9-record/review.md",
+      "md_sha256": "07de2aec17e827cf97d115316b4118dfd9fc05670e67f33fc1f5b4b882258322"
+    },
+    {
+      "review_id": "20261106T194812Z-exoskeleton-record",
+      "target_path": "data/habitats/host_associated/exoskeleton.yaml",
+      "target_id": "BTO:0004659",
+      "target_label": "exoskeleton",
+      "target_sha256": "88468a1fba8d141c1edf3e69e08b72e4060b6522f40172449eac0f96400d275c",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261106T194812Z-exoskeleton-record/review.yaml",
+      "yaml_sha256": "cbf74a74d3183a2aa8be2f88a315bc76986e9af2188672442c2f8e94709a9f60",
+      "md_path": "reviews/structured/20261106T194812Z-exoskeleton-record/review.md",
+      "md_sha256": "3236ff29e6b0cf1268d85d60150a1bdb106b109360fc1ce63f72b4e5df2bf88a"
+    },
+    {
+      "review_id": "20261106T194813Z-external_genitalia-record",
+      "target_path": "data/habitats/host_associated/external_genitalia.yaml",
+      "target_id": "UBERON:0004176",
+      "target_label": "external genitalia",
+      "target_sha256": "772e6d20a4551fa06ab29f3be3d1020ac8eef2d941cd74c3c3e774f2d9d7b972",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "external-genitalia-context-parent",
+        "external-genitalia-vulva-exact-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261106T194813Z-external_genitalia-record/review.yaml",
+      "yaml_sha256": "873a9c7f2930c607e09fdf82cfc9fa60dfcc0ef9b2fc6ac7739dba791a0cd8f4",
+      "md_path": "reviews/structured/20261106T194813Z-external_genitalia-record/review.md",
+      "md_sha256": "93d9a46f2af989ed244972ea71388a29d1f9f9f0e2a2e887fff76b37d884a4eb"
+    },
+    {
+      "review_id": "20261106T194814Z-external_organs-record",
+      "target_path": "data/habitats/host_associated/external_organs.yaml",
+      "target_id": "habitatmech:GOLD.5c89d5e294",
+      "target_label": "human external reproductive organ environment",
+      "target_sha256": "411a3706630fb867f5b7306c8c4fac8b7d7484678a9b94c97589672122c112df",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "external-organs-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194814Z-external_organs-record/review.yaml",
+      "yaml_sha256": "5ea4b67adef11c56cf6ef9ac780f0e8c74e1a3305bba5f2308e2f4d8886314b5",
+      "md_path": "reviews/structured/20261106T194814Z-external_organs-record/review.md",
+      "md_sha256": "834560dbeda820ccc99c467c496a57ed2d8500e8f29bbdb484c948cc7dfc4107"
+    },
+    {
+      "review_id": "20261106T194815Z-external_organs__aed6edb3-record",
+      "target_path": "data/habitats/host_associated/external_organs__aed6edb3.yaml",
+      "target_id": "habitatmech:GOLD.9bfd135cfa",
+      "target_label": "mammalian external reproductive organ environment",
+      "target_sha256": "6f949c2f7fdff153e56c4d2611bfb52bbc2f8e6d5acfb45e5e5360f82475799c",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "external-organs--aed6edb3-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194815Z-external_organs__aed6edb3-record/review.yaml",
+      "yaml_sha256": "f3eb0f3322053da12b6e8f394908266188240eb22822de47db3e35529b521c93",
+      "md_path": "reviews/structured/20261106T194815Z-external_organs__aed6edb3-record/review.md",
+      "md_sha256": "4f893d13b45e07fbf41722cbe28a95735ba53552bfb5befa6cfd7067774b19b8"
+    },
+    {
+      "review_id": "20261106T194816Z-external_soft_tissue_zone-record",
+      "target_path": "data/habitats/host_associated/external_soft_tissue_zone.yaml",
+      "target_id": "UBERON:0034929",
+      "target_label": "external soft tissue zone",
+      "target_sha256": "650a682ac2bed4df0c332ada09c4f39d4a9459ced13ef03de87d4b338174b41e",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "external-soft-tissue-zone-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194816Z-external_soft_tissue_zone-record/review.yaml",
+      "yaml_sha256": "deed394d59180fb3cfbfaf4facb7e2770a3ed15c3cbfb2572b869bea675268f5",
+      "md_path": "reviews/structured/20261106T194816Z-external_soft_tissue_zone-record/review.md",
+      "md_sha256": "b4ae5e0a91bc01bfd2180d81f7293d842b9515eb26d5e1c90dfccbd2da88322c"
+    },
+    {
+      "review_id": "20261106T194817Z-extracellular-record",
+      "target_path": "data/habitats/host_associated/extracellular.yaml",
+      "target_id": "habitatmech:GOLD.0a69f87c03",
+      "target_label": "annelid egg capsule albuminous fluid",
+      "target_sha256": "e3bcc862cbc8d211c66d7687f5d7dddab1624cde1ddf4bcf076c3cec553fa8b8",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "extracellular-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194817Z-extracellular-record/review.yaml",
+      "yaml_sha256": "46602629be3bc2dfd9c57ff8846950a6d8213177e485b0d60ee4bfb067c002cf",
+      "md_path": "reviews/structured/20261106T194817Z-extracellular-record/review.md",
+      "md_sha256": "9e683f7fa509b041b699ac2f7dce0c6ea74800369bf5d629d18cb9ade72dd9d2"
+    },
+    {
+      "review_id": "20261106T194818Z-extracellular__3f7afaf4-record",
+      "target_path": "data/habitats/host_associated/extracellular__3f7afaf4.yaml",
+      "target_id": "habitatmech:GOLD.6c8238add0",
+      "target_label": "molluscan gill extracellular environment",
+      "target_sha256": "64387e99da12fcf827c91d71dc484a74da229fabe691013bd820b4af08a9deb3",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "extracellular--3f7afaf4-displaced-source-synonym"
+      ],
+      "yaml_path": "reviews/structured/20261106T194818Z-extracellular__3f7afaf4-record/review.yaml",
+      "yaml_sha256": "432cf03898942d5a96ee9a0262deebe7b713263486cb5d1ab5c8c9c20ea32696",
+      "md_path": "reviews/structured/20261106T194818Z-extracellular__3f7afaf4-record/review.md",
+      "md_sha256": "cd3dc9135c1670a6106aecb508e283d718da4c1b7cd1bf65e3951862def2184e"
+    },
+    {
+      "review_id": "20261106T194819Z-extracellular_symbionts-record",
+      "target_path": "data/habitats/host_associated/extracellular_symbionts.yaml",
+      "target_id": "habitatmech:GOLD.28f9330745",
+      "target_label": "annelid digestive tract extracellular symbiont environment",
+      "target_sha256": "22bf299d845091520d2152c8c7533d6ac73ca7ef211ee8dcc4e72863e753f50b",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "extracellular-symbionts-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194819Z-extracellular_symbionts-record/review.yaml",
+      "yaml_sha256": "e5b0ac9b2a0f7af94032b4f814ee9679d448ad3652e12020c97eaec5facf6c3d",
+      "md_path": "reviews/structured/20261106T194819Z-extracellular_symbionts-record/review.md",
+      "md_sha256": "32ade540fb60473680ad203385f117f554d61d76f72849636a08fcd77c91ee07"
+    },
+    {
+      "review_id": "20261106T194820Z-eye-record",
+      "target_path": "data/habitats/host_associated/eye.yaml",
+      "target_id": "habitatmech:GOLD.4b46114446",
+      "target_label": "Eye",
+      "target_sha256": "d6382178cad2ca1ec2cb83f22ac5774f2e1ba7bb592f564067874606e2278001",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye-context-parent",
+        "eye-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194820Z-eye-record/review.yaml",
+      "yaml_sha256": "e6b96de4b8c2eb334c24cd63967c515f0f8c335d947eb12a279f4efd2db16e3b",
+      "md_path": "reviews/structured/20261106T194820Z-eye-record/review.md",
+      "md_sha256": "be50a5fa5424f47775f902c8fe306832f080e05fc0f74e35fb3868346cfa509d"
+    },
+    {
+      "review_id": "20261106T194821Z-eye__59a4c665-record",
+      "target_path": "data/habitats/host_associated/eye__59a4c665.yaml",
+      "target_id": "habitatmech:GOLD.7f217d034e",
+      "target_label": "Eye",
+      "target_sha256": "b42052577506c7eb15f571e243c6bb8d4ac73ab7525d65721857a7409a13299f",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye--59a4c665-context-parent",
+        "eye--59a4c665-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194821Z-eye__59a4c665-record/review.yaml",
+      "yaml_sha256": "08c79e63024c11d7e12df2af8389fe021d83ac1fd824a15bbc98338ea78f6651",
+      "md_path": "reviews/structured/20261106T194821Z-eye__59a4c665-record/review.md",
+      "md_sha256": "a350417a154238bc806321bc6ec41fa12ede02032fca434cd40fdcc28c8b8d45"
+    },
+    {
+      "review_id": "20261106T194822Z-eye__810dedbb-record",
+      "target_path": "data/habitats/host_associated/eye__810dedbb.yaml",
+      "target_id": "habitatmech:GOLD.b7f1694b87",
+      "target_label": "Eye",
+      "target_sha256": "35f141174e45187a97e456128360eb0321daeb0234bf24dc15f6fa20381c063b",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye--810dedbb-context-parent",
+        "eye--810dedbb-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194822Z-eye__810dedbb-record/review.yaml",
+      "yaml_sha256": "6b60881c1a1f77e5b91c76671ee38b29e4c7502d8ca8c54665dde28da5832264",
+      "md_path": "reviews/structured/20261106T194822Z-eye__810dedbb-record/review.md",
+      "md_sha256": "3e694fe8e46bf6f2ca2a158010190d6ab1b7245cbdd3bddb4126623f6c061f57"
+    },
+    {
+      "review_id": "20261106T194823Z-eye_ciliary_body-record",
+      "target_path": "data/habitats/host_associated/eye_ciliary_body.yaml",
+      "target_id": "habitatmech:GOLD.4d81fdaa51",
+      "target_label": "Eye: Ciliary body",
+      "target_sha256": "0bd81183eefd67e436df088e0ac01860d59ba6526c36f12701e00a5f45e13277",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye-ciliary-body-context-parent",
+        "eye-ciliary-body-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194823Z-eye_ciliary_body-record/review.yaml",
+      "yaml_sha256": "190a0b10547bfdec5470d05763dbf4e0c86e9f87185c418ce0285eac743b3127",
+      "md_path": "reviews/structured/20261106T194823Z-eye_ciliary_body-record/review.md",
+      "md_sha256": "116aa33ab69e2ae22006be89725d369779cd62a3d88c58144e00c00c7fdbafef"
+    },
+    {
+      "review_id": "20261106T194824Z-eye_ciliary_body__832768c5-record",
+      "target_path": "data/habitats/host_associated/eye_ciliary_body__832768c5.yaml",
+      "target_id": "habitatmech:GOLD.aceda5f881",
+      "target_label": "Eye: Ciliary body",
+      "target_sha256": "03a788fedb67fb7bbf5cb95019f0187714df42b36d43e195f46d0541bb8d7e7a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye-ciliary-body--832768c5-context-parent",
+        "eye-ciliary-body--832768c5-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194824Z-eye_ciliary_body__832768c5-record/review.yaml",
+      "yaml_sha256": "e079d0d8569ca9f60c9e30941607153f21d7949f904a6015333e33a3753dfe62",
+      "md_path": "reviews/structured/20261106T194824Z-eye_ciliary_body__832768c5-record/review.md",
+      "md_sha256": "b7f0026ecfb6f6da9a3ebc3c8e47e41286b071cf5986098803477bb6066a67d0"
+    },
+    {
+      "review_id": "20261106T194825Z-eye_vitreous_chamber-record",
+      "target_path": "data/habitats/host_associated/eye_vitreous_chamber.yaml",
+      "target_id": "habitatmech:GOLD.5d27b319ee",
+      "target_label": "Eye: Vitreous chamber",
+      "target_sha256": "0723b53c229149dfe75d1bbb052e3957ccb0c1b411af58a4175e37177220c500",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye-vitreous-chamber-context-parent",
+        "eye-vitreous-chamber-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194825Z-eye_vitreous_chamber-record/review.yaml",
+      "yaml_sha256": "8639717e14c0cf05af8476aa55765349e3d3ad0dbfdde9c44c925448847c5263",
+      "md_path": "reviews/structured/20261106T194825Z-eye_vitreous_chamber-record/review.md",
+      "md_sha256": "0a9e315abc9b06adc222b90cdac6c304c6314f3217e0c289e125a1e1dc854e34"
+    },
+    {
+      "review_id": "20261106T194826Z-eye_vitreous_chamber__b4eddfc1-record",
+      "target_path": "data/habitats/host_associated/eye_vitreous_chamber__b4eddfc1.yaml",
+      "target_id": "habitatmech:GOLD.b84283af7d",
+      "target_label": "Eye: Vitreous chamber",
+      "target_sha256": "5518f127655e4a6b25e57c23f301c2c0e1123a901b3c386fd4c792187bdaaf7c",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "eye-vitreous-chamber--b4eddfc1-context-parent",
+        "eye-vitreous-chamber--b4eddfc1-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194826Z-eye_vitreous_chamber__b4eddfc1-record/review.yaml",
+      "yaml_sha256": "c78d16ab5fd822fb53b6871b1312f652f52cdd449b048cd825d74203111f773b",
+      "md_path": "reviews/structured/20261106T194826Z-eye_vitreous_chamber__b4eddfc1-record/review.md",
+      "md_sha256": "097bf8eea57276f2de8363273622b4604ab05d798146e90083007828850862e0"
+    },
+    {
+      "review_id": "20261106T194827Z-fallopian_tubes-record",
+      "target_path": "data/habitats/host_associated/fallopian_tubes.yaml",
+      "target_id": "habitatmech:GOLD.a179efbe4f",
+      "target_label": "Fallopian tubes",
+      "target_sha256": "cab272cbb83ab53c8c8f2d2bcd5d9c5bd3fe351f1e741d0fa6fcade16cc8af6a",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fallopian-tubes-context-parent",
+        "fallopian-tubes-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194827Z-fallopian_tubes-record/review.yaml",
+      "yaml_sha256": "bb8ecaa9e948fa3430eba189b3e137be8939f1721d044e8dc8e901775c0bcda2",
+      "md_path": "reviews/structured/20261106T194827Z-fallopian_tubes-record/review.md",
+      "md_sha256": "6934b3a595f10146896599361e46c701c0500ee2107046f3b5bbc4a877fb8d19"
+    },
+    {
+      "review_id": "20261106T194828Z-fallopian_tubes__c41e0038-record",
+      "target_path": "data/habitats/host_associated/fallopian_tubes__c41e0038.yaml",
+      "target_id": "habitatmech:GOLD.fe591e2cb7",
+      "target_label": "Fallopian tubes",
+      "target_sha256": "fb4b89ab0eab5c767c8f2fcd81bf790ab1b15e7fcf4ba4c6181953d5ba847202",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fallopian-tubes--c41e0038-context-parent",
+        "fallopian-tubes--c41e0038-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194828Z-fallopian_tubes__c41e0038-record/review.yaml",
+      "yaml_sha256": "6c70ea03e70997a4d1a3c3df3b1ec1429e0701c2a615324ec5e48dc7ea28ee14",
+      "md_path": "reviews/structured/20261106T194828Z-fallopian_tubes__c41e0038-record/review.md",
+      "md_sha256": "5d00d2601a0600ec5a20c48e45ee8ced6cdc73c0405f57a6b279de625b1df4e9"
+    },
+    {
+      "review_id": "20261106T194829Z-fascia-record",
+      "target_path": "data/habitats/host_associated/fascia.yaml",
+      "target_id": "habitatmech:GOLD.b64b241c4b",
+      "target_label": "Fascia",
+      "target_sha256": "4950f79d8393c524272dac18d10f4d1f228353f2363376e9923042becde6d693",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fascia-context-parent",
+        "fascia-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194829Z-fascia-record/review.yaml",
+      "yaml_sha256": "a89e0061e993fb1586addc2d2201b54fb2e4f0083bb046c482ecac2d2c3b7527",
+      "md_path": "reviews/structured/20261106T194829Z-fascia-record/review.md",
+      "md_sha256": "01a9dcb21a9d75c66866162ebb0322f912506e84683cf2ab83d6af47e7864166"
+    },
+    {
+      "review_id": "20261106T194830Z-fascia__1f6c9c1a-record",
+      "target_path": "data/habitats/host_associated/fascia__1f6c9c1a.yaml",
+      "target_id": "habitatmech:GOLD.f74ba58314",
+      "target_label": "Fascia",
+      "target_sha256": "d358ce374bba9192522787b9ae5a0874e6ab34ab0f78f7e6c07f590100fa2334",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fascia--1f6c9c1a-context-parent",
+        "fascia--1f6c9c1a-mapping-endpoint-contract"
+      ],
+      "yaml_path": "reviews/structured/20261106T194830Z-fascia__1f6c9c1a-record/review.yaml",
+      "yaml_sha256": "b3b8f2323770dc6969d9561af2f6d3c70a12ffce7317f207675810fc754da04d",
+      "md_path": "reviews/structured/20261106T194830Z-fascia__1f6c9c1a-record/review.md",
+      "md_sha256": "853754ba27ee8255790a872d7cd09fa0ad6e156e1098daa1c745bb8238ed3bd6"
+    },
+    {
+      "review_id": "20261106T194831Z-fat_body-record",
+      "target_path": "data/habitats/host_associated/fat_body.yaml",
+      "target_id": "BTO:0000442",
+      "target_label": "fat body",
+      "target_sha256": "8f3a2ea9da5e5af5c8f18cf70b021809a3851a98d5cd7b8cf8ea967869809c88",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "fat-body-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194831Z-fat_body-record/review.yaml",
+      "yaml_sha256": "d63b405f3862773fb856f02275b5a21bc1696453e5d287854a6e467ba3f1988d",
+      "md_path": "reviews/structured/20261106T194831Z-fat_body-record/review.md",
+      "md_sha256": "63a7b8972abb6e1ffa5ec16868123ce0efef2651cea7e927780a51166694e8c6"
+    },
+    {
+      "review_id": "20261106T194832Z-feather-record",
+      "target_path": "data/habitats/host_associated/feather.yaml",
+      "target_id": "BTO:0000447",
+      "target_label": "feather",
+      "target_sha256": "ea6a184f33e7c795b38edfe6107000ae02c3ccbdfc79b16feee0caccb0527d5b",
+      "verdict": "needs_curation",
+      "open_finding_ids": [
+        "feather-context-parent"
+      ],
+      "yaml_path": "reviews/structured/20261106T194832Z-feather-record/review.yaml",
+      "yaml_sha256": "9f502bc25bf08cf64fefec4839bb289049340cca488ff51316d334afba1aeb59",
+      "md_path": "reviews/structured/20261106T194832Z-feather-record/review.md",
+      "md_sha256": "4b7e4e8d6b51782d835a2acaed5a4c878db12a41e9d49e33f5726779bddf01f9"
+    },
+    {
+      "review_id": "20261106T194833Z-fecal-record",
+      "target_path": "data/habitats/host_associated/fecal.yaml",
+      "target_id": "habitatmech:GOLD.227b8ef4a5",
+      "target_label": "fish feces",
+      "target_sha256": "df3138e9f2794a49535d3df6c5b9a04006f755ac2cf9296e2027bc7714766a37",
+      "verdict": "pass_with_limitations",
+      "open_finding_ids": [],
+      "yaml_path": "reviews/structured/20261106T194833Z-fecal-record/review.yaml",
+      "yaml_sha256": "625c7c2f1f55b14fdf6b93364f7bd987ca3189daa148568a02f4c4c3933640b8",
+      "md_path": "reviews/structured/20261106T194833Z-fecal-record/review.md",
+      "md_sha256": "90254dddcb2e4c1e2716a33da09b4503fb0b9cb36d2ea95b5940222b6ad4ea81"
+    }
+  ]
+}

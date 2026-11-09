@@ -19,6 +19,191 @@ source_attestations:
   source_label: Cryoconite
   source_path: Environmental > Terrestrial > Glacier > Cryoconite
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: cryoconite_phormidesmis_wzy_abc_eps_granulation_and_redox_stratified_n_cycling
+  title: Glacier cryoconite mineral sediment and radial O2 stratification, Phormidesmis
+    priestleyi and nitrifier/denitrifier selection, and Wzy/ABC-dependent EPS granulation
+    and coupled N cycling mechanism
+  description: Supraglacial cryoconite holes accumulate dark mineral dust and rock
+    particles on glacier ice surfaces under extreme cold and oligotrophic meltwater
+    conditions. Gliding filamentous cyanobacteria including Phormidesmis priestleyi
+    (such as Greenland Ice Sheet isolate BC1401) colonize the mineral particles and
+    express Wzy- and ABC-dependent exopolysaccharide (EPS) biosynthesis pathways and
+    Wps-homologous biofilm gene clusters. Secreted cyanobacterial EPS binds mineral
+    grains into millimeter-scale oval cryoconite granules with a photosynthetically
+    oxic cyanobacterial surface layer and an anoxic inner core enriched in organic
+    carbon and ammonium from degrading biomass, driving active core nitrification
+    and granule-wide denitrification while lowering glacier surface albedo.
+  nodes:
+  - node_id: cryoconite
+    label: glacier cryoconite environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.2e404ba6a0
+    description: Dark windblown mineral and biogenic sediment deposited in meltwater-filled
+      cryoconite holes and surfaces on glaciers and ice sheets.
+  - node_id: supraglacial_mineral_dust_and_granule_oxic_anoxic_stratification
+    label: supraglacial mineral sediment particles and radial O2/NH4+/NO2-/NO3- redox
+      stratification
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Glacial mineral dust substrata and fine-scale radial redox stratification
+      between an oxic photosynthetic granule surface and an anoxic, substrate-rich
+      inner core.
+  - node_id: cryoconite_phormidesmis_priestleyi_and_core_nitrifier_denitrifier_guild
+    label: Phormidesmis priestleyi filamentous cyanobacteria and cryoconite core nitrifier
+      and denitrifier guild
+    node_type: COMMUNITY
+    description: Gliding oscillatorialean cyanobacteria including Phormidesmis priestleyi
+      BC1401 at the granule surface paired with heterotrophic nitrifiers and denitrifiers
+      in the anoxic granule interior.
+  - node_id: phormidesmis_wzy_abc_eps_wps_biofilm_and_granule_nitrification_denitrification_genes
+    label: Phormidesmis priestleyi Wzy- and ABC-dependent EPS biosynthesis, Wps biofilm
+      cluster, and granule nitrification/denitrification transcripts
+    node_type: GENE_OR_PROTEIN
+    description: Wzy- and ABC-dependent exopolysaccharide (EPS) biosynthetic pathways
+      and Wps-homologous biofilm gene cluster in Phormidesmis priestleyi (represented
+      in active UniProtKB by polar Phormidesmis priestleyi ULC007 polysaccharide export
+      protein UniProtKB:A0A2T1DNA1 and glycosyltransferase UniProtKB:A0A2T1DEC3; Greenland
+      Ice Sheet cryoconite isolate P. priestleyi BC1401 NCBITaxon:1850361 draft genome
+      proteins in PMID:27485510 are archived in UniParc/RefSeq without active UniProtKB
+      accessions, including UPI0009ED003B/WP_082906463, UPI00083A4580/WP_068816785,
+      UPI00083B8902/WP_068816784, and UPI00083B5BEB/WP_068816783) alongside unbinned
+      metatranscriptomically active nitrification and denitrification transcripts
+      in cryoconite granules (PMID:32990745).
+    protein_examples:
+    - accession: UniProtKB:A0A2T1DNA1
+      entry_name: A0A2T1DNA1_9CYAN
+      recommended_name: Polysaccharide export protein
+      locus_tag: C7B65_00675
+      taxon_id: NCBITaxon:1920490
+      taxon_name: Phormidesmis priestleyi ULC007
+      role_in_node: strain_exemplar
+      sequence_length: 425
+      crc64: C4A2336BF3518AEE
+      evidence:
+      - reference: PMID:27485510
+        snippet: Genes involved in EPS biosynthesis were identified from the Wzy-
+          and ABC-dependent pathways.
+        notes: Phormidesmis priestleyi encodes Wzy- and ABC-dependent EPS export and
+          biosynthesis genes, represented in active UniProtKB by P. priestleyi ULC007
+          Polysaccharide export protein (C7B65_00675, UniProtKB:A0A2T1DNA1; 425 aa)
+          while isolate BC1401 is UniParc/RefSeq-only (UPI0009ED003B) (PMID:27485510).
+    - accession: UniProtKB:A0A2T1DEC3
+      entry_name: A0A2T1DEC3_9CYAN
+      recommended_name: Glycosyltransferase
+      locus_tag: C7B65_13580
+      taxon_id: NCBITaxon:1920490
+      taxon_name: Phormidesmis priestleyi ULC007
+      role_in_node: strain_exemplar
+      sequence_length: 337
+      crc64: 6F1A1E18838EC42A
+      evidence:
+      - reference: PMID:37572353
+        snippet: Moreover, all examined strains were confirmed to produce extracellular
+          polymeric substances (EPS), which suggests that cryoconite granulation is
+          most likely due to EPS secretion by gliding cyanobacteria.
+        notes: Representative Phormidesmis priestleyi ULC007 Glycosyltransferase (C7B65_13580,
+          UniProtKB:A0A2T1DEC3; 337 aa) supporting cyanobacterial EPS biosynthesis
+          in glacier cryoconite granulation (PMID:27485510, PMID:37572353).
+  - node_id: cryoconite_mineral_granulation_albedo_reduction_and_stratified_n_cycling
+    label: EPS-mediated mineral granule aggregation, glacier albedo darkening, and
+      redox-stratified nitrification/denitrification
+    node_type: COMMUNITY_PROCESS
+    description: Biogenic binding of glacial mineral particles into dark cryoconite
+      granules that lower glacier albedo, buffer extreme cold, and partition aerobic
+      surface photosynthesis from anoxic core nitrification and denitrification.
+  edges:
+  - edge_id: cryoconite_maintains_mineral_substrata_and_radial_redox_stratification
+    subject: cryoconite
+    predicate: maintains
+    object: supraglacial_mineral_dust_and_granule_oxic_anoxic_stratification
+    description: Glacier cryoconite environments accumulate dark mineral sediment
+      particles that develop fine-scale O2, NH4+, NO2-, and NO3- redox stratification
+      between an oxic surface layer and an anoxic inner core.
+    evidence:
+    - reference: PMID:32990745
+      snippet: Based on microsensor measurements for O2, NH4+, NO2- and NO3-, we identified
+        the presence of fine-scale redox stratification within cryoconite granules.
+        Cyanobacteria at the surface layer of the granules created oxic conditions,
+        whereas the inner core of the granules was anoxic.
+      notes: Microsensor profiles of O2, NH4+, NO2-, and NO3- demonstrate fine-scale
+        oxic-surface to anoxic-core redox stratification within glacier cryoconite
+        granules (PMID:32990745).
+    - reference: PMID:37572353
+      snippet: Cryoconite, the dark sediment on the surface of glaciers, often aggregates
+        into oval or irregular granules serving as biogeochemical factories.
+      notes: Cryoconite sediments on glacier surfaces aggregate mineral particles
+        into biogeochemically active granules (PMID:37572353).
+  - edge_id: mineral_and_redox_gradients_select_for_phormidesmis_and_n_cycling_guild
+    subject: supraglacial_mineral_dust_and_granule_oxic_anoxic_stratification
+    predicate: selects for
+    object: cryoconite_phormidesmis_priestleyi_and_core_nitrifier_denitrifier_guild
+    description: Glacial mineral particles and cold supraglacial conditions select
+      for gliding oscillatorialean cyanobacteria including Phormidesmis priestleyi
+      on granule surfaces and nitrifiers/denitrifiers in the anoxic core.
+    evidence:
+    - reference: PMID:27485510
+      snippet: Phormidesmis priestleyi is a cyanobacterium found throughout the cold
+        biosphere (Arctic, Antarctic and alpine habitats). Genome sequencing of P.
+        priestleyi BC1401, an isolate from a cryoconite hole on the Greenland Ice
+        Sheet, has allowed for the examination of genes involved in cold shock response
+        and production of extracellular polymeric substances (EPS).
+      notes: Phormidesmis priestleyi BC1401 thrives in cryoconite holes on the Greenland
+        Ice Sheet and across polar and alpine glaciers (PMID:27485510).
+    - reference: PMID:32990745
+      snippet: Cyanobacteria in the inner core of the granules were inactive, and
+        likely dead and being degraded, providing carbon and nitrogen to support nitrifiers
+        and denitrifiers.
+      notes: Degrading cyanobacterial biomass in the anoxic inner core of cryoconite
+        granules supports active nitrifier and denitrifier populations (PMID:32990745).
+  - edge_id: cryoconite_guild_expresses_wzy_abc_eps_wps_and_n_cycling_genes
+    subject: cryoconite_phormidesmis_priestleyi_and_core_nitrifier_denitrifier_guild
+    predicate: expresses
+    object: phormidesmis_wzy_abc_eps_wps_biofilm_and_granule_nitrification_denitrification_genes
+    description: Phormidesmis priestleyi BC1401 encodes Wzy- and ABC-dependent EPS
+      biosynthesis genes and a Wps-homologous biofilm cluster, while granule core
+      and surface communities express nitrification and denitrification transcripts.
+    evidence:
+    - reference: PMID:27485510
+      snippet: Genes involved in EPS biosynthesis were identified from the Wzy- and
+        ABC-dependent pathways. The numbers of genes involved in cell wall and membrane
+        biogenesis in P. priestleyi BC1401 were typical relative to the genome size.
+        A gene cluster implicated in biofilm formation was found homologous to the
+        Wps system, although the intracellular signalling pathways by which this could
+        be regulated remain unclear.
+      notes: Genome sequencing of cryoconite isolate Phormidesmis priestleyi BC1401
+        identified Wzy- and ABC-dependent EPS biosynthesis genes and a Wps-homologous
+        biofilm formation gene cluster (PMID:27485510).
+    - reference: PMID:32990745
+      snippet: Metatranscriptomic analyses indicated the active occurrences of nitrification
+        in the inner core, whereas denitrification actively occurred both in the inner
+        core and the surface layer of the granules.
+      notes: Metatranscriptomics of cryoconite granules revealed active expression
+        of nitrification transcripts in the inner core and denitrification transcripts
+        across both core and surface layers (PMID:32990745).
+  - edge_id: eps_and_n_genes_catalyze_cryoconite_granulation_and_redox_n_cycling
+    subject: phormidesmis_wzy_abc_eps_wps_biofilm_and_granule_nitrification_denitrification_genes
+    predicate: catalyzes
+    object: cryoconite_mineral_granulation_albedo_reduction_and_stratified_n_cycling
+    description: Cyanobacterial EPS secretion binds mineral dust into albedo-lowering
+      cryoconite granules and buffers extreme cold, while core nitrification and granule
+      denitrification drive supraglacial nitrogen cycling.
+    evidence:
+    - reference: PMID:37572353
+      snippet: Moreover, all examined strains were confirmed to produce extracellular
+        polymeric substances (EPS), which suggests that cryoconite granulation is
+        most likely due to EPS secretion by gliding cyanobacteria.
+      notes: Empirical incubation experiments confirm that EPS secretion by gliding
+        oscillatorialean cyanobacteria binds mineral substrata into cryoconite granules
+        (PMID:37572353).
+    - reference: PMID:32990745
+      snippet: Quantities of nitrification genes/transcripts were greater in large
+        cryoconite granules than small ones, most likely because nitrogen substrates
+        were more abundantly present in the inner core of large granules due to distinct
+        redox stratification. Our results suggest that the development of a granular
+        structure of cryoconite granules can largely affect carbon and nitrogen cycling
+        on glaciers.
+      notes: Granule growth and redox stratification enhance core nitrification and
+        couple carbon and nitrogen cycling on glacier surfaces (PMID:32990745).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -52,3 +237,19 @@ curation_history:
     ambiguous, or names a host/disease/process rather than the defined habitat 'glacier
     cryoconite environment'; suppress automatic exact-synonym retention while preserving
     verbatim source provenance.
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added cryoconite_phormidesmis_wzy_abc_eps_granulation_and_redox_stratified_n_cycling
+    mechanism graph for cryoconite (habitatmech:GOLD.2e404ba6a0) backed by PMID:37572353,
+    PMID:27485510, and PMID:32990745.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified species-representative Phormidesmis priestleyi ULC007 UniProtKB
+    protein_examples (UniProtKB:A0A2T1DNA1, UniProtKB:A0A2T1DEC3) and documented UniParc/RefSeq-only
+    status for Greenland Ice Sheet isolate P. priestleyi BC1401 (UPI0009ED003B, UPI00083A4580,
+    UPI00083B8902, UPI00083B5BEB) and metatranscriptomic scope for granule N-cycling
+    transcripts (PMID:32990745).
+  llm_assisted: true

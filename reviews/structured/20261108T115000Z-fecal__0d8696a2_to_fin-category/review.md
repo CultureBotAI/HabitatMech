@@ -1,0 +1,1967 @@
+# Category cohort review: host_associated slice fecal__0d8696a2 through fin (24 records)
+
+- Review: 20261108T115000Z-fecal__0d8696a2_to_fin-category
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-11-08T11:41:00Z
+- Finished UTC: 2026-11-08T11:50:00Z
+- Reviewer: antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full 24-record category boundary and cohort review of the contiguous unreviewed host_associated slice (fecal__0d8696a2.yaml through fin.yaml) at commit 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e. All 24 records represent distinct host-clade fecal, host-environment, reproductive-system, fetal-tissue, life-stage, cellular, cartilage-subtype, lesion, midgut-specialization, or appendage concepts (retain decisions). Record-level open findings (11 total across 9 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.
+
+## Scope And Provenance
+
+Contiguous 24-record cohort boundary review of previously unreviewed records in data/habitats/host_associated/ (indices 506-529 in path order).
+
+Selection: Next 24 unreviewed records in data/habitats/host_associated/ immediately following 20261106T194833Z-fecal-record.
+Coverage: full; 24 reviewed / 24 in the declared population.
+Source: git_commit at Git base 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.e60074d642 | data/habitats/host_associated/fecal__0d8696a2.yaml | generated | mollusc feces |
+| habitatmech:GOLD.51a8d52cec | data/habitats/host_associated/fecal__0e10427f.yaml | generated | cephalochordate feces |
+| habitatmech:GOLD.8ac00537bc | data/habitats/host_associated/fecal__69dad039.yaml | generated | crustacean feces |
+| habitatmech:GOLD.ee5582c64e | data/habitats/host_associated/fecal__89494a72.yaml | generated | reptile feces |
+| habitatmech:GOLD.db419db455 | data/habitats/host_associated/fecal__c047ee1e.yaml | generated | amphibian feces |
+| habitatmech:GOLD.48d5963d27 | data/habitats/host_associated/fecal__ceae17b6.yaml | generated | insect nymph feces |
+| habitatmech:GOLD.d43c16754a | data/habitats/host_associated/fecal__d12909cd.yaml | generated | myriapod feces |
+| habitatmech:GOLD.e381535c08 | data/habitats/host_associated/fecal__e9f04eec.yaml | generated | insect feces |
+| UBERON:0001988 | data/habitats/host_associated/feces.yaml | generated | feces |
+| habitatmech:BACDIVE.e6b73de092 | data/habitats/host_associated/felidae_cat.yaml | generated | felid-associated environment |
+| BTO:0000083 | data/habitats/host_associated/female_reproductive_system.yaml | generated | female reproductive system |
+| habitatmech:GOLD.1ad500c492 | data/habitats/host_associated/fetal_tissue.yaml | generated | human fetal tissue |
+| habitatmech:GOLD.baffd7f6c7 | data/habitats/host_associated/fetal_tissue__610eb0c8.yaml | generated | mammalian fetal tissue |
+| habitatmech:GOLD.c8a2e380c1 | data/habitats/host_associated/fetus.yaml | generated | Fetus |
+| habitatmech:GOLD.f2a6418a5c | data/habitats/host_associated/fetus__250e9844.yaml | generated | Fetus |
+| BTO:0000450 | data/habitats/host_associated/fiber.yaml | generated | fiber |
+| BTO:0000452 | data/habitats/host_associated/fibroblast.yaml | generated | fibroblast |
+| habitatmech:GOLD.6e80125d90 | data/habitats/host_associated/fibrocartilage.yaml | generated | Fibrocartilage |
+| habitatmech:GOLD.763577f3ae | data/habitats/host_associated/fibrocartilage__9cc92423.yaml | generated | Fibrocartilage |
+| habitatmech:GOLD.fb56a964a6 | data/habitats/host_associated/fibroma.yaml | generated | Fibroma |
+| BTO:0000463 | data/habitats/host_associated/filament.yaml | generated | filament |
+| habitatmech:GOLD.06c04be03f | data/habitats/host_associated/filiform_warts.yaml | generated | human filiform wart |
+| habitatmech:GOLD.6e59a6cbb1 | data/habitats/host_associated/filter_chamber.yaml | generated | hemipteran midgut filter chamber |
+| UBERON:0008897 | data/habitats/host_associated/fin.yaml | generated | fin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:10Z. No issues found. |
+| validate-strict | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:35Z. Validated 24 files; files with ERROR: 0; total ERROR rows: 0. |
+| validate-history | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:40Z. No issues found; 870 history record(s) valid against src/habitatmech/schema/history.yaml. |
+| provenance-check | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:42Z. provenance current: 14 committed inventories, 2 GOLD sources. |
+| verify-corpus | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:45Z. expected 3209 records, found 3209 on disk; missing: 0, extra: 0, differing: 0; corpus reproduces exactly from data/raw/. |
+| validate-causal-all | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:48Z. validated 93 causal-graph curation file(s) with 93 graph(s). |
+| term-requests-check | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:48:55Z. term-request table is current (671 terms). |
+| validate-products | passed | True | habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897 | Completed 2026-11-08T11:57:10Z. OK_CANONICAL: 1209, OK_SYNONYM: 1, OK_EXCEPTION: 5, SKIPPED_NO_ADAPTER: 2088. All id&lt;-&gt;label pairs correspond. |
+
+## Scientific And Domain Assessments
+
+### Cohort native validity and reproduction
+
+schema: supported. Targets: habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897.
+
+All 24 cohort target records pass LinkML validation and closed-schema strict validation; full-corpus history (870), provenance (14+2), reproduction (3,209), causal graphs (93), term requests (671), and OAK label correspondence pass.
+
+### Cohort boundary and lumping/splitting evaluation
+
+scope: supported. Targets: habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897.
+
+All 24 records represent distinct host-clade fecal, host-environment, reproductive-system, fetal-tissue, life-stage, cellular, cartilage-subtype, lesion, midgut-specialization, or appendage bins; no lumping or splitting is warranted across the cohort.
+
+### Cohort hierarchy, synonym, and mapping-endpoint summary
+
+grounding: supported. Targets: habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988, habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c, BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, habitatmech:GOLD.fb56a964a6, BTO:0000463, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897.
+
+15 records pass with limitations; 9 records have 11 open major findings recorded in their respective kind: record bundles (linked in related_reviews) and carried forward to Stage 5 grouped remediation.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+- retain: habitatmech:GOLD.e60074d642, habitatmech:GOLD.51a8d52cec, habitatmech:GOLD.8ac00537bc, habitatmech:GOLD.ee5582c64e, habitatmech:GOLD.db419db455, habitatmech:GOLD.48d5963d27, habitatmech:GOLD.d43c16754a, habitatmech:GOLD.e381535c08, UBERON:0001988. Retain cross-species feces (UBERON:0001988) and the 8 host-clade/life-stage GOLD Fecal records (mollusc, cephalochordate, crustacean, reptile, amphibian, insect nymph, myriapod, and insect feces) as distinct fecal habitat concepts under UBERON:0001988.
+- retain: habitatmech:BACDIVE.e6b73de092, BTO:0000083, habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7, habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c. Retain felid-associated environment (habitatmech:BACDIVE.e6b73de092), female reproductive system (BTO:0000083), human and mammalian fetal tissue (habitatmech:GOLD.1ad500c492, habitatmech:GOLD.baffd7f6c7), and mammalian and human Fetus host bins (habitatmech:GOLD.c8a2e380c1, habitatmech:GOLD.f2a6418a5c) as distinct host-associated, reproductive, fetal-tissue, and life-stage bins.
+- retain: BTO:0000450, BTO:0000452, habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae, BTO:0000463. Retain fiber (BTO:0000450), fibroblast (BTO:0000452), mammalian and human Fibrocartilage (habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae), and filament (BTO:0000463) as distinct cellular, connective-tissue, and structural concepts.
+- retain: habitatmech:GOLD.fb56a964a6, habitatmech:GOLD.06c04be03f, habitatmech:GOLD.6e59a6cbb1, UBERON:0008897. Retain human Fibroma (habitatmech:GOLD.fb56a964a6), human filiform wart (habitatmech:GOLD.06c04be03f), hemipteran midgut filter chamber (habitatmech:GOLD.6e59a6cbb1), and fin (UBERON:0008897) as distinct lesion, wart-subtype, insect-midgut, and aquatic-appendage habitats.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ERULE | docs/CURATION.md; Host identity, strict broader hierarchy, bodily fluids, and source ownership | supports | Anatomical sites may identify habitats; whole-host taxon and life-stage organism terms cannot substitute for associated environments; parent_habitats must be strictly broader across all contributing routes. |
+| ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon | supports | The declared mapping endpoint is the emitted record; contextual xrefs are not equivalence; parent_habitats requires strictly broader habitat classes. |
+| ESEED | src/habitatmech/seed.py; Executed native resolution routes and generated source fields | supports | Seed generator resolution routes and parent/synonym assembly verified across all 24 cohort records. |
+| EREC1 | data/habitats/host_associated/fecal__0d8696a2.yaml; Entire YAML | supports | habitatmech:GOLD.e60074d642 (mollusc feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC2 | data/habitats/host_associated/fecal__0e10427f.yaml; Entire YAML | supports | habitatmech:GOLD.51a8d52cec (cephalochordate feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC3 | data/habitats/host_associated/fecal__69dad039.yaml; Entire YAML | supports | habitatmech:GOLD.8ac00537bc (crustacean feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC4 | data/habitats/host_associated/fecal__89494a72.yaml; Entire YAML | supports | habitatmech:GOLD.ee5582c64e (reptile feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC5 | data/habitats/host_associated/fecal__c047ee1e.yaml; Entire YAML | supports | habitatmech:GOLD.db419db455 (amphibian feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC6 | data/habitats/host_associated/fecal__ceae17b6.yaml; Entire YAML | supports | habitatmech:GOLD.48d5963d27 (insect nymph feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC7 | data/habitats/host_associated/fecal__d12909cd.yaml; Entire YAML | supports | habitatmech:GOLD.d43c16754a (myriapod feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC8 | data/habitats/host_associated/fecal__e9f04eec.yaml; Entire YAML | supports | habitatmech:GOLD.e381535c08 (insect feces): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"]. |
+| EREC9 | data/habitats/host_associated/feces.yaml; Entire YAML | supports | UBERON:0001988 (feces): grounding_status=EXACT, mapping_status=REVIEWED, parent_habitats=["ENVO:00002276", "UBERON:0000174", "UBERON:0001555", "habitatmech:GOLD.5b0aa7456c", "habitatmech:GOLD.6bda0871e2", "habitatmech:GOLD.b091b80314"]. |
+| EREC10 | data/habitats/host_associated/felidae_cat.yaml; Entire YAML | supports | habitatmech:BACDIVE.e6b73de092 (felid-associated environment): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["ENVO:01001002"]. |
+| EREC11 | data/habitats/host_associated/female_reproductive_system.yaml; Entire YAML | supports | BTO:0000083 (female reproductive system): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["BTO:0000081"]. |
+| EREC12 | data/habitats/host_associated/fetal_tissue.yaml; Entire YAML | supports | habitatmech:GOLD.1ad500c492 (human fetal tissue): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.f2a6418a5c"]. |
+| EREC13 | data/habitats/host_associated/fetal_tissue__610eb0c8.yaml; Entire YAML | supports | habitatmech:GOLD.baffd7f6c7 (mammalian fetal tissue): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0000479"]. |
+| EREC14 | data/habitats/host_associated/fetus.yaml; Entire YAML | supports | habitatmech:GOLD.c8a2e380c1 (Fetus): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0000449", "habitatmech:GOLD.e889967f4f"]. |
+| EREC15 | data/habitats/host_associated/fetus__250e9844.yaml; Entire YAML | supports | habitatmech:GOLD.f2a6418a5c (Fetus): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["BTO:0000449", "habitatmech:GOLD.cd0b0940e5"]. |
+| EREC16 | data/habitats/host_associated/fiber.yaml; Entire YAML | supports | BTO:0000450 (fiber): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[]. |
+| EREC17 | data/habitats/host_associated/fibroblast.yaml; Entire YAML | supports | BTO:0000452 (fibroblast): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["BTO:0000421"]. |
+| EREC18 | data/habitats/host_associated/fibrocartilage.yaml; Entire YAML | supports | habitatmech:GOLD.6e80125d90 (Fibrocartilage): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001995", "habitatmech:GOLD.d8b9309d5e"]. |
+| EREC19 | data/habitats/host_associated/fibrocartilage__9cc92423.yaml; Entire YAML | supports | habitatmech:GOLD.763577f3ae (Fibrocartilage): grounding_status=NARROW, mapping_status=SEEDED, parent_habitats=["UBERON:0001995", "habitatmech:GOLD.53fd337784"]. |
+| EREC20 | data/habitats/host_associated/fibroma.yaml; Entire YAML | supports | habitatmech:GOLD.fb56a964a6 (Fibroma): grounding_status=UNGROUNDED, mapping_status=SEEDED, parent_habitats=["habitatmech:GOLD.333c18201f"]. |
+| EREC21 | data/habitats/host_associated/filament.yaml; Entire YAML | supports | BTO:0000463 (filament): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[]. |
+| EREC22 | data/habitats/host_associated/filiform_warts.yaml; Entire YAML | supports | habitatmech:GOLD.06c04be03f (human filiform wart): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["BTO:0001859"]. |
+| EREC23 | data/habitats/host_associated/filter_chamber.yaml; Entire YAML | supports | habitatmech:GOLD.6e59a6cbb1 (hemipteran midgut filter chamber): grounding_status=UNGROUNDED, mapping_status=REVIEWED, parent_habitats=["UBERON:0001045", "habitatmech:GOLD.67c565f695"]. |
+| EREC24 | data/habitats/host_associated/fin.yaml; Entire YAML | supports | UBERON:0008897 (fin): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000026", "habitatmech:GOLD.92e3c832eb"]. |
+
+## Limits And Additional Notes
+
+- Only the stated primary evidence and current ontology/taxonomy authorities were independently inspected; original specimen-level support for every source-bin member is not established.
+- Association counts and PREGO scores do not establish prevalence, viability, mechanism or characteristic presence.
+- Configured label correspondence skipped 2,088 no-adapter pairs; this is not whole-corpus identifier certification.
+- Record-specific open findings (11 across 9 records: 6 grounding/hierarchy defects, 1 nomenclature exact_synonyms defect, and 4 #1398 mapping-endpoint contract defects) are recorded on their respective kind: record bundles in related_reviews so each issue_key has a single authoritative open owner for Stage 5 remediation.
+- All 24 cohort target files and context inputs were captured at clean git commit 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e.
+- Each of the 24 targets has a dedicated kind: record bundle in reviews/structured/.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261108T115000Z-fecal__0d8696a2_to_fin-category
+repository: CultureBotAI/HabitatMech
+kind: category
+title: 'Category cohort review: host_associated slice fecal__0d8696a2 through fin
+  (24 records)'
+started_at: '2026-11-08T11:41:00Z'
+finished_at: '2026-11-08T11:50:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Same agent inspected all 24 cohort target records and source
+    evidence; not independent human or second-agent approval.
+skill: .claude/skills/review-yaml-category/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Full 24-record category boundary and cohort review of the contiguous unreviewed
+  host_associated slice (fecal__0d8696a2.yaml through fin.yaml) at commit 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e.
+  All 24 records represent distinct host-clade fecal, host-environment, reproductive-system,
+  fetal-tissue, life-stage, cellular, cartilage-subtype, lesion, midgut-specialization,
+  or appendage concepts (retain decisions). Record-level open findings (11 total across
+  9 records) are recorded in the 24 linked kind: record bundles for Stage 5 remediation.'
+source:
+  git_revision: 6a699ab5f6f775ca0c18be7a12d7af2e2645f31e
+  state: git_commit
+  inputs:
+  - path: curation/decisions.tsv
+    sha256: 7e0e28eeca775e7795d3f72384794f392fcf287f7f972fa57042234a64d3ce40
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 596d59ab03fafa4c1fcdcb6446c87b7c72c04305e9d516047e661060710e86d4
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 913f1ece5224bbed33b736f78cc8e1244155e91f390fe8e790d6f91a24b3b796
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: c1207270bb0ae2031e42de6cb8220b20f98886f65e40d48793bfd7e9d757d83a
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: f86df360f54cb00d3062ae27a9196828113219c06cfd9cfc9830a0e08603d069
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/engineered/animal_waste_material.yaml
+    sha256: 2ad8d7faa1132d2403bc1d7596521fb659304ff5013b808249bc1fe5b35404c6
+    role: context
+  - path: data/habitats/host_associated/adult.yaml
+    sha256: 91c41fc8a4d72c43682756d0e29562fbf92e27e198d386fc5847a6c8961e4e04
+    role: context
+  - path: data/habitats/host_associated/benign_tumor.yaml
+    sha256: b3790a29cf132d738552651b146b7cdc79a9da4345088af5156865aed41c683d
+    role: context
+  - path: data/habitats/host_associated/canidae_dog.yaml
+    sha256: 87552b6a21a0c1b436ff9e38322f21fa5c657e3c23eb4b0aaf56e62b32c03172
+    role: context
+  - path: data/habitats/host_associated/cartilage.yaml
+    sha256: 8bbbd28f76d7998af9776f8a3dd45f3a1bfb656f83dcefcb4099028bb9a0f2e3
+    role: context
+  - path: data/habitats/host_associated/cartilage__c54322c6.yaml
+    sha256: 503b89c7ec74677cc7557a81b450392b825009a1c0db535bc5be3d72cbb0e638
+    role: context
+  - path: data/habitats/host_associated/common_warts.yaml
+    sha256: 6d4d4f270a24f5f350a14370ff41f97fd5c4489d53792e88f8e3233c906703d4
+    role: context
+  - path: data/habitats/host_associated/connective_tissue.yaml
+    sha256: a9bdb03f9861db9efde176fa4d7eaa4daedce57096e99bf6064de8ce62b556e9
+    role: context
+  - path: data/habitats/host_associated/digestive_tract.yaml
+    sha256: aa541fcf31b790e80858a864c6e8284ac07fce811a48fc288c3f58244edac287
+    role: context
+  - path: data/habitats/host_associated/elastic__846c7f5c.yaml
+    sha256: 3e38c03357639e8c2feae4031cd6638ad0cb992b25251d9f3a58963f49c764b7
+    role: context
+  - path: data/habitats/host_associated/equidae_horse.yaml
+    sha256: ae6e646baf0a68a68a1c29c09e7202810fc6a0c656dd1d23f6742adef673cd2f
+    role: context
+  - path: data/habitats/host_associated/feather.yaml
+    sha256: 3f4cc8e939f689b41c9f84474dd6af35acaec98855baeab7e38a7423af16a460
+    role: context
+  - path: data/habitats/host_associated/fecal.yaml
+    sha256: df3138e9f2794a49535d3df6c5b9a04006f755ac2cf9296e2027bc7714766a37
+    role: context
+  - path: data/habitats/host_associated/fecal__0d8696a2.yaml
+    sha256: 67f1694100c5caec45e311155198921fe59680be2242e7671a45f679b5396bd9
+    role: target
+  - path: data/habitats/host_associated/fecal__0e10427f.yaml
+    sha256: 653ec0f5cb4dd6205e1ec06b1016787b052f11bdcbcc3ad4fd6d84748eb6623b
+    role: target
+  - path: data/habitats/host_associated/fecal__69dad039.yaml
+    sha256: 4c5eef70c7d51e303be28a60f12b4757f1ab2877093dcb477d7b45f51002c680
+    role: target
+  - path: data/habitats/host_associated/fecal__89494a72.yaml
+    sha256: 68506f47c23dabab6c751a9faa2e4e9fea9309f9ce2a89b933cf11e7e53d612b
+    role: target
+  - path: data/habitats/host_associated/fecal__c047ee1e.yaml
+    sha256: ea151cb158e3708a9eba04a6b563e0cc7863ee266cdfb399903297d3a6b48f96
+    role: target
+  - path: data/habitats/host_associated/fecal__ceae17b6.yaml
+    sha256: 0283b2de6546ce66a554e8499a897aab3226999a7af29cee42b9a97d96c542c1
+    role: target
+  - path: data/habitats/host_associated/fecal__d12909cd.yaml
+    sha256: b40aeb69f9d74e8b0c47dc7aef1e75b5dca1170cb93573e5e08340620cf65a4e
+    role: target
+  - path: data/habitats/host_associated/fecal__e9f04eec.yaml
+    sha256: a0b23051acf8bc3d58db1f4db466cf20caf3b378d6fde6308e6932d3600c3911
+    role: target
+  - path: data/habitats/host_associated/feces.yaml
+    sha256: 8fc3ef983646fb278130da29b370d5448ac99af2762f66746aad06d187d3fddb
+    role: target
+  - path: data/habitats/host_associated/felidae_cat.yaml
+    sha256: 3dd7a088e391125221029b4f8261bb34523c522885c0e510e085c6fb3b0ecd53
+    role: target
+  - path: data/habitats/host_associated/female_reproductive_system.yaml
+    sha256: 5864f583e48bca17f6d1b1a9c6022b952f70f915299bd2bfebaa0a5f4b2b6689
+    role: target
+  - path: data/habitats/host_associated/fetal_tissue.yaml
+    sha256: 05d9bd20f215501935d6bb2e631497f1f9bac637a08b0782bd44b8dabc37aeb0
+    role: target
+  - path: data/habitats/host_associated/fetal_tissue__610eb0c8.yaml
+    sha256: b800c1c5b8c80447e3702fe0ccc36d31fab4c33ade6204048f3ff42221691b03
+    role: target
+  - path: data/habitats/host_associated/fetus.yaml
+    sha256: cda704d0cd49b4dbd5fa4e7bf2c6e6e0e4f8ee23c52ffcaa639c16c4e441c247
+    role: target
+  - path: data/habitats/host_associated/fetus__250e9844.yaml
+    sha256: 1de36aaf5d6ba77a218d90b8733c18252b8935c2bf9a855c1bd24c8890d7a60d
+    role: target
+  - path: data/habitats/host_associated/fiber.yaml
+    sha256: dfa40a66ade495444259818c2bd14f0cbb0d3af607013bc35a56857ab1b9c4d4
+    role: target
+  - path: data/habitats/host_associated/fibroblast.yaml
+    sha256: fa6aff5fc022ecf64c5a27724d25336cc54c3b9880b249f5b519a13c998e37b7
+    role: target
+  - path: data/habitats/host_associated/fibrocartilage.yaml
+    sha256: eb6bbd8fd1447dfd697fa70773bd6d10cd37c3f0982fd740ba66e9ceae6e3353
+    role: target
+  - path: data/habitats/host_associated/fibrocartilage__9cc92423.yaml
+    sha256: fda34f53a1a05545a9685c02254585834e9dd743c8addf8581caa7c3de580634
+    role: target
+  - path: data/habitats/host_associated/fibroma.yaml
+    sha256: 8b83ff1248778ec4471664c24f5385d1e17cb23be7b7e31605e0e62559444dfe
+    role: target
+  - path: data/habitats/host_associated/filament.yaml
+    sha256: 366154d88a6566c3749a3b9a619c0049c39c881ce99a3147e5670dbd24be05db
+    role: target
+  - path: data/habitats/host_associated/filiform_warts.yaml
+    sha256: b50e8b4837fd41762346756e167d4eefe6782f08238de1d806f14f99c1bef315
+    role: target
+  - path: data/habitats/host_associated/filter_chamber.yaml
+    sha256: ae353e187ed065b52f5b95d5efa59d923fa5b00f198533425cc818b99fde3f80
+    role: target
+  - path: data/habitats/host_associated/fin.yaml
+    sha256: c069ed80cee42d1a4f05b28203be3b08fbc78971f140c39aa84c568fe87d62f2
+    role: target
+  - path: data/habitats/host_associated/gastric_caeca.yaml
+    sha256: ef03bef1ca1dc6ce4524e4b2f6232651c9fd27e22ddd3e96e8302129554d0735
+    role: context
+  - path: data/habitats/host_associated/granuloma.yaml
+    sha256: 374bbedbee52c867ebc5cbc17153024e00a8a7eaa504409296fd7312648a0950
+    role: context
+  - path: data/habitats/host_associated/large_intestine__65b4f112.yaml
+    sha256: 2d44a35bc5550a8bc65a76972a8e1958f1abdc8b0be8fadff277d57a2948ab94
+    role: context
+  - path: data/habitats/host_associated/large_intestine__834e53c8.yaml
+    sha256: 2c086c4115cc2a0b04df48cb9b989c051c96d6625a64dbe26cef1ac90e6d4d15
+    role: context
+  - path: data/habitats/host_associated/large_intestine__deeaad00.yaml
+    sha256: 851eb7ca7fc4cf40d64b53ffd33908b892db4ba5314293e12c33993d071a11c7
+    role: context
+  - path: data/habitats/host_associated/mammals.yaml
+    sha256: e070a7aa0a880df14e2cbee12da0375cf135cef30266fc1a3c81f41af4dd4943
+    role: context
+  - path: data/habitats/host_associated/mammals_human.yaml
+    sha256: 6d3fba8ddf0a933b0e22f94b17e2df356eb2d297b1d96a7f960575e81d50d4d1
+    role: context
+  - path: data/habitats/host_associated/midgut__7677107b.yaml
+    sha256: 9c571b883d0c28d1a414756615f8b67adbfdbc1a791a9e693ee510b6475b13a4
+    role: context
+  - path: data/habitats/host_associated/mixed_segment.yaml
+    sha256: d5fbb10ed673f15196b1714dcbf8dd5525a0b1f78bcb385f43bfb98601972b52
+    role: context
+  - path: data/habitats/host_associated/pyogenic_granuloma.yaml
+    sha256: 93b2b41931fc5c827261edb93a7476a5a9f29a7628b9823b806fc406499449b0
+    role: context
+  - path: data/habitats/host_associated/reproductive_system.yaml
+    sha256: 45f5f1778c8ac247a3c41977ab5589ca414905925405b1df2d6dd90d1ca801bb
+    role: context
+  - path: data/habitats/host_associated/skin__9a5d285e.yaml
+    sha256: edc7b8f13b76bc7d0cc3692eb5f59d4c9e678fa86e3074cd21457a5d7293c5bb
+    role: context
+  - path: data/habitats/host_associated/wart.yaml
+    sha256: 8dfbd965bef25cc428f75623bf410a7697050bbdb8609f8ec5e636eb45b1e559
+    role: context
+  - path: data/habitats/other/animal_associated_environment.yaml
+    sha256: a1cf41f43f9bece44dfb3e5d6ab0ca86858df67b88ee25d6ada260cccac69e16
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: habitatmech:GOLD.e60074d642
+  path: data/habitats/host_associated/fecal__0d8696a2.yaml
+  label: mollusc feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.51a8d52cec
+  path: data/habitats/host_associated/fecal__0e10427f.yaml
+  label: cephalochordate feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.8ac00537bc
+  path: data/habitats/host_associated/fecal__69dad039.yaml
+  label: crustacean feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.ee5582c64e
+  path: data/habitats/host_associated/fecal__89494a72.yaml
+  label: reptile feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.db419db455
+  path: data/habitats/host_associated/fecal__c047ee1e.yaml
+  label: amphibian feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.48d5963d27
+  path: data/habitats/host_associated/fecal__ceae17b6.yaml
+  label: insect nymph feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.d43c16754a
+  path: data/habitats/host_associated/fecal__d12909cd.yaml
+  label: myriapod feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.e381535c08
+  path: data/habitats/host_associated/fecal__e9f04eec.yaml
+  label: insect feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: UBERON:0001988
+  path: data/habitats/host_associated/feces.yaml
+  label: feces
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:BACDIVE.e6b73de092
+  path: data/habitats/host_associated/felidae_cat.yaml
+  label: felid-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000083
+  path: data/habitats/host_associated/female_reproductive_system.yaml
+  label: female reproductive system
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.1ad500c492
+  path: data/habitats/host_associated/fetal_tissue.yaml
+  label: human fetal tissue
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.baffd7f6c7
+  path: data/habitats/host_associated/fetal_tissue__610eb0c8.yaml
+  label: mammalian fetal tissue
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.c8a2e380c1
+  path: data/habitats/host_associated/fetus.yaml
+  label: Fetus
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.f2a6418a5c
+  path: data/habitats/host_associated/fetus__250e9844.yaml
+  label: Fetus
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000450
+  path: data/habitats/host_associated/fiber.yaml
+  label: fiber
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000452
+  path: data/habitats/host_associated/fibroblast.yaml
+  label: fibroblast
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.6e80125d90
+  path: data/habitats/host_associated/fibrocartilage.yaml
+  label: Fibrocartilage
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.763577f3ae
+  path: data/habitats/host_associated/fibrocartilage__9cc92423.yaml
+  label: Fibrocartilage
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.fb56a964a6
+  path: data/habitats/host_associated/fibroma.yaml
+  label: Fibroma
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: BTO:0000463
+  path: data/habitats/host_associated/filament.yaml
+  label: filament
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.06c04be03f
+  path: data/habitats/host_associated/filiform_warts.yaml
+  label: human filiform wart
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.6e59a6cbb1
+  path: data/habitats/host_associated/filter_chamber.yaml
+  label: hemipteran midgut filter chamber
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: UBERON:0008897
+  path: data/habitats/host_associated/fin.yaml
+  label: fin
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Contiguous 24-record cohort boundary review of previously unreviewed
+    records in data/habitats/host_associated/ (indices 506-529 in path order).
+  selection: Next 24 unreviewed records in data/habitats/host_associated/ immediately
+    following 20261106T194833Z-fecal-record.
+  coverage: full
+  population_size: 24
+  reviewed_target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  exclusions:
+  - target: Other habitat records outside indices 506-529 of data/habitats/host_associated/
+    reason: Bounded 24-record cohort slice for Cycle 7 Stage 4 record/category review;
+      direct parents and relevant siblings are inspected as context.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: .venv/bin/python -m linkml.validator.cli -s src/habitatmech/schema/habitatmech.yaml
+    --target-class HabitatRecord data/habitats/host_associated/fecal__0d8696a2.yaml
+    data/habitats/host_associated/fecal__0e10427f.yaml data/habitats/host_associated/fecal__69dad039.yaml
+    data/habitats/host_associated/fecal__89494a72.yaml data/habitats/host_associated/fecal__c047ee1e.yaml
+    data/habitats/host_associated/fecal__ceae17b6.yaml data/habitats/host_associated/fecal__d12909cd.yaml
+    data/habitats/host_associated/fecal__e9f04eec.yaml data/habitats/host_associated/feces.yaml
+    data/habitats/host_associated/felidae_cat.yaml data/habitats/host_associated/female_reproductive_system.yaml
+    data/habitats/host_associated/fetal_tissue.yaml data/habitats/host_associated/fetal_tissue__610eb0c8.yaml
+    data/habitats/host_associated/fetus.yaml data/habitats/host_associated/fetus__250e9844.yaml
+    data/habitats/host_associated/fiber.yaml data/habitats/host_associated/fibroblast.yaml
+    data/habitats/host_associated/fibrocartilage.yaml data/habitats/host_associated/fibrocartilage__9cc92423.yaml
+    data/habitats/host_associated/fibroma.yaml data/habitats/host_associated/filament.yaml
+    data/habitats/host_associated/filiform_warts.yaml data/habitats/host_associated/filter_chamber.yaml
+    data/habitats/host_associated/fin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: Completed 2026-11-08T11:48:10Z. No issues found.
+  scope_note: Individual schema; strict command covers the 24 named cohort targets;
+    other documented gates have full-corpus scope.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py data/habitats/host_associated/fecal__0d8696a2.yaml
+    data/habitats/host_associated/fecal__0e10427f.yaml data/habitats/host_associated/fecal__69dad039.yaml
+    data/habitats/host_associated/fecal__89494a72.yaml data/habitats/host_associated/fecal__c047ee1e.yaml
+    data/habitats/host_associated/fecal__ceae17b6.yaml data/habitats/host_associated/fecal__d12909cd.yaml
+    data/habitats/host_associated/fecal__e9f04eec.yaml data/habitats/host_associated/feces.yaml
+    data/habitats/host_associated/felidae_cat.yaml data/habitats/host_associated/female_reproductive_system.yaml
+    data/habitats/host_associated/fetal_tissue.yaml data/habitats/host_associated/fetal_tissue__610eb0c8.yaml
+    data/habitats/host_associated/fetus.yaml data/habitats/host_associated/fetus__250e9844.yaml
+    data/habitats/host_associated/fiber.yaml data/habitats/host_associated/fibroblast.yaml
+    data/habitats/host_associated/fibrocartilage.yaml data/habitats/host_associated/fibrocartilage__9cc92423.yaml
+    data/habitats/host_associated/fibroma.yaml data/habitats/host_associated/filament.yaml
+    data/habitats/host_associated/filiform_warts.yaml data/habitats/host_associated/filter_chamber.yaml
+    data/habitats/host_associated/fin.yaml --out .temp/c7s4_24_strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: 'Completed 2026-11-08T11:48:35Z. Validated 24 files; files with ERROR:
+    0; total ERROR rows: 0.'
+  scope_note: Closed-schema strict validation across all 24 cohort target files (and
+    3,209 full-corpus files).
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: Completed 2026-11-08T11:48:40Z. No issues found; 870 history record(s)
+    valid against src/habitatmech/schema/history.yaml.
+  scope_note: Full-corpus curation history validation.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/check_provenance.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: 'Completed 2026-11-08T11:48:42Z. provenance current: 14 committed inventories,
+    2 GOLD sources.'
+  scope_note: Full-corpus raw inventory provenance verification.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: 'Completed 2026-11-08T11:48:45Z. expected 3209 records, found 3209 on disk;
+    missing: 0, extra: 0, differing: 0; corpus reproduces exactly from data/raw/.'
+  scope_note: Full-corpus deterministic reproduction from raw inventories and curation
+    tables.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_causal_graph_curations.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: Completed 2026-11-08T11:48:48Z. validated 93 causal-graph curation file(s)
+    with 93 graph(s).
+  scope_note: Full-corpus causal-graph overlay validation.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/build_term_requests.py --check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: Completed 2026-11-08T11:48:55Z. term-request table is current (671 terms).
+  scope_note: Full-corpus term-request table currency check.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  summary: 'Completed 2026-11-08T11:57:10Z. OK_CANONICAL: 1209, OK_SYNONYM: 1, OK_EXCEPTION:
+    5, SKIPPED_NO_ADAPTER: 2088. All id<->label pairs correspond.'
+  scope_note: Configured OAK identifier-label correspondence check across corpus and
+    products.
+evidence:
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Host identity, strict broader hierarchy, bodily fluids, and source ownership
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: Anatomical sites may identify habitats; whole-host taxon and life-stage
+    organism terms cannot substitute for associated environments; parent_habitats
+    must be strictly broader across all contributing routes.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate, parent_habitats, xrefs, CharacteristicTaxon
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: The declared mapping endpoint is the emitted record; contextual xrefs are
+    not equivalence; parent_habitats requires strictly broader habitat classes.
+  snapshot_sha256: 2ff26d07ea5a311fbe3b517c63b33e09443cb8d19947ff9e3b7627d453de1a60
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed native resolution routes and generated source fields
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: Seed generator resolution routes and parent/synonym assembly verified across
+    all 24 cohort records.
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: EREC1
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__0d8696a2.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.e60074d642 (mollusc feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: 67f1694100c5caec45e311155198921fe59680be2242e7671a45f679b5396bd9
+- evidence_id: EREC2
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__0e10427f.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.51a8d52cec (cephalochordate feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: 653ec0f5cb4dd6205e1ec06b1016787b052f11bdcbcc3ad4fd6d84748eb6623b
+- evidence_id: EREC3
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__69dad039.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.8ac00537bc (crustacean feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: 4c5eef70c7d51e303be28a60f12b4757f1ab2877093dcb477d7b45f51002c680
+- evidence_id: EREC4
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__89494a72.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.ee5582c64e (reptile feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: 68506f47c23dabab6c751a9faa2e4e9fea9309f9ce2a89b933cf11e7e53d612b
+- evidence_id: EREC5
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__c047ee1e.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.db419db455 (amphibian feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: ea151cb158e3708a9eba04a6b563e0cc7863ee266cdfb399903297d3a6b48f96
+- evidence_id: EREC6
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__ceae17b6.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.48d5963d27 (insect nymph feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: 0283b2de6546ce66a554e8499a897aab3226999a7af29cee42b9a97d96c542c1
+- evidence_id: EREC7
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__d12909cd.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.d43c16754a (myriapod feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: b40aeb69f9d74e8b0c47dc7aef1e75b5dca1170cb93573e5e08340620cf65a4e
+- evidence_id: EREC8
+  kind: record_content
+  reference: data/habitats/host_associated/fecal__e9f04eec.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.e381535c08 (insect feces): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001988"].'
+  snapshot_sha256: a0b23051acf8bc3d58db1f4db466cf20caf3b378d6fde6308e6932d3600c3911
+- evidence_id: EREC9
+  kind: record_content
+  reference: data/habitats/host_associated/feces.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'UBERON:0001988 (feces): grounding_status=EXACT, mapping_status=REVIEWED,
+    parent_habitats=["ENVO:00002276", "UBERON:0000174", "UBERON:0001555", "habitatmech:GOLD.5b0aa7456c",
+    "habitatmech:GOLD.6bda0871e2", "habitatmech:GOLD.b091b80314"].'
+  snapshot_sha256: 8fc3ef983646fb278130da29b370d5448ac99af2762f66746aad06d187d3fddb
+- evidence_id: EREC10
+  kind: record_content
+  reference: data/habitats/host_associated/felidae_cat.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:BACDIVE.e6b73de092 (felid-associated environment): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["ENVO:01001002"].'
+  snapshot_sha256: 3dd7a088e391125221029b4f8261bb34523c522885c0e510e085c6fb3b0ecd53
+- evidence_id: EREC11
+  kind: record_content
+  reference: data/habitats/host_associated/female_reproductive_system.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'BTO:0000083 (female reproductive system): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000081"].'
+  snapshot_sha256: 5864f583e48bca17f6d1b1a9c6022b952f70f915299bd2bfebaa0a5f4b2b6689
+- evidence_id: EREC12
+  kind: record_content
+  reference: data/habitats/host_associated/fetal_tissue.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.1ad500c492 (human fetal tissue): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0000479", "habitatmech:GOLD.f2a6418a5c"].'
+  snapshot_sha256: 05d9bd20f215501935d6bb2e631497f1f9bac637a08b0782bd44b8dabc37aeb0
+- evidence_id: EREC13
+  kind: record_content
+  reference: data/habitats/host_associated/fetal_tissue__610eb0c8.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.baffd7f6c7 (mammalian fetal tissue): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0000479"].'
+  snapshot_sha256: b800c1c5b8c80447e3702fe0ccc36d31fab4c33ade6204048f3ff42221691b03
+- evidence_id: EREC14
+  kind: record_content
+  reference: data/habitats/host_associated/fetus.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.c8a2e380c1 (Fetus): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000449", "habitatmech:GOLD.e889967f4f"].'
+  snapshot_sha256: cda704d0cd49b4dbd5fa4e7bf2c6e6e0e4f8ee23c52ffcaa639c16c4e441c247
+- evidence_id: EREC15
+  kind: record_content
+  reference: data/habitats/host_associated/fetus__250e9844.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.f2a6418a5c (Fetus): grounding_status=NARROW, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000449", "habitatmech:GOLD.cd0b0940e5"].'
+  snapshot_sha256: 1de36aaf5d6ba77a218d90b8733c18252b8935c2bf9a855c1bd24c8890d7a60d
+- evidence_id: EREC16
+  kind: record_content
+  reference: data/habitats/host_associated/fiber.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'BTO:0000450 (fiber): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=[].'
+  snapshot_sha256: dfa40a66ade495444259818c2bd14f0cbb0d3af607013bc35a56857ab1b9c4d4
+- evidence_id: EREC17
+  kind: record_content
+  reference: data/habitats/host_associated/fibroblast.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'BTO:0000452 (fibroblast): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=["BTO:0000421"].'
+  snapshot_sha256: fa6aff5fc022ecf64c5a27724d25336cc54c3b9880b249f5b519a13c998e37b7
+- evidence_id: EREC18
+  kind: record_content
+  reference: data/habitats/host_associated/fibrocartilage.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.6e80125d90 (Fibrocartilage): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001995", "habitatmech:GOLD.d8b9309d5e"].'
+  snapshot_sha256: eb6bbd8fd1447dfd697fa70773bd6d10cd37c3f0982fd740ba66e9ceae6e3353
+- evidence_id: EREC19
+  kind: record_content
+  reference: data/habitats/host_associated/fibrocartilage__9cc92423.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.763577f3ae (Fibrocartilage): grounding_status=NARROW,
+    mapping_status=SEEDED, parent_habitats=["UBERON:0001995", "habitatmech:GOLD.53fd337784"].'
+  snapshot_sha256: fda34f53a1a05545a9685c02254585834e9dd743c8addf8581caa7c3de580634
+- evidence_id: EREC20
+  kind: record_content
+  reference: data/habitats/host_associated/fibroma.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.fb56a964a6 (Fibroma): grounding_status=UNGROUNDED, mapping_status=SEEDED,
+    parent_habitats=["habitatmech:GOLD.333c18201f"].'
+  snapshot_sha256: 8b83ff1248778ec4471664c24f5385d1e17cb23be7b7e31605e0e62559444dfe
+- evidence_id: EREC21
+  kind: record_content
+  reference: data/habitats/host_associated/filament.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'BTO:0000463 (filament): grounding_status=EXACT, mapping_status=SEEDED,
+    parent_habitats=[].'
+  snapshot_sha256: 366154d88a6566c3749a3b9a619c0049c39c881ce99a3147e5670dbd24be05db
+- evidence_id: EREC22
+  kind: record_content
+  reference: data/habitats/host_associated/filiform_warts.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.06c04be03f (human filiform wart): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["BTO:0001859"].'
+  snapshot_sha256: b50e8b4837fd41762346756e167d4eefe6782f08238de1d806f14f99c1bef315
+- evidence_id: EREC23
+  kind: record_content
+  reference: data/habitats/host_associated/filter_chamber.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'habitatmech:GOLD.6e59a6cbb1 (hemipteran midgut filter chamber): grounding_status=UNGROUNDED,
+    mapping_status=REVIEWED, parent_habitats=["UBERON:0001045", "habitatmech:GOLD.67c565f695"].'
+  snapshot_sha256: ae353e187ed065b52f5b95d5efa59d923fa5b00f198533425cc818b99fde3f80
+- evidence_id: EREC24
+  kind: record_content
+  reference: data/habitats/host_associated/fin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-11-08T11:50:00Z'
+  support: supports
+  summary: 'UBERON:0008897 (fin): grounding_status=EXACT, mapping_status=SEEDED, parent_habitats=["UBERON:0000026",
+    "habitatmech:GOLD.92e3c832eb"].'
+  snapshot_sha256: c069ed80cee42d1a4f05b28203be3b08fbc78971f140c39aa84c568fe87d62f2
+assessments:
+- assessment_id: A1
+  area: schema
+  topic: Cohort native validity and reproduction
+  outcome: supported
+  summary: All 24 cohort target records pass LinkML validation and closed-schema strict
+    validation; full-corpus history (870), provenance (14+2), reproduction (3,209),
+    causal graphs (93), term requests (671), and OAK label correspondence pass.
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  evidence_ids:
+  - ERULE
+  - ESCHEMA
+  - ESEED
+- assessment_id: A2
+  area: scope
+  topic: Cohort boundary and lumping/splitting evaluation
+  outcome: supported
+  summary: All 24 records represent distinct host-clade fecal, host-environment, reproductive-system,
+    fetal-tissue, life-stage, cellular, cartilage-subtype, lesion, midgut-specialization,
+    or appendage bins; no lumping or splitting is warranted across the cohort.
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - EREC9
+  - EREC10
+  - EREC11
+  - EREC12
+  - EREC13
+  - EREC14
+  - EREC15
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC20
+  - EREC21
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+- assessment_id: A3
+  area: grounding
+  topic: Cohort hierarchy, synonym, and mapping-endpoint summary
+  outcome: supported
+  summary: '15 records pass with limitations; 9 records have 11 open major findings
+    recorded in their respective kind: record bundles (linked in related_reviews)
+    and carried forward to Stage 5 grouped remediation.'
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - habitatmech:GOLD.fb56a964a6
+  - BTO:0000463
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - EREC9
+  - EREC10
+  - EREC11
+  - EREC12
+  - EREC13
+  - EREC14
+  - EREC15
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC20
+  - EREC21
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+  - ESCHEMA
+  - ESEED
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - habitatmech:GOLD.e60074d642
+  - habitatmech:GOLD.51a8d52cec
+  - habitatmech:GOLD.8ac00537bc
+  - habitatmech:GOLD.ee5582c64e
+  - habitatmech:GOLD.db419db455
+  - habitatmech:GOLD.48d5963d27
+  - habitatmech:GOLD.d43c16754a
+  - habitatmech:GOLD.e381535c08
+  - UBERON:0001988
+  rationale: Retain cross-species feces (UBERON:0001988) and the 8 host-clade/life-stage
+    GOLD Fecal records (mollusc, cephalochordate, crustacean, reptile, amphibian,
+    insect nymph, myriapod, and insect feces) as distinct fecal habitat concepts under
+    UBERON:0001988.
+  evidence_ids:
+  - EREC1
+  - EREC2
+  - EREC3
+  - EREC4
+  - EREC5
+  - EREC6
+  - EREC7
+  - EREC8
+  - EREC9
+  - ERULE
+- action: retain
+  target_ids:
+  - habitatmech:BACDIVE.e6b73de092
+  - BTO:0000083
+  - habitatmech:GOLD.1ad500c492
+  - habitatmech:GOLD.baffd7f6c7
+  - habitatmech:GOLD.c8a2e380c1
+  - habitatmech:GOLD.f2a6418a5c
+  rationale: Retain felid-associated environment (habitatmech:BACDIVE.e6b73de092),
+    female reproductive system (BTO:0000083), human and mammalian fetal tissue (habitatmech:GOLD.1ad500c492,
+    habitatmech:GOLD.baffd7f6c7), and mammalian and human Fetus host bins (habitatmech:GOLD.c8a2e380c1,
+    habitatmech:GOLD.f2a6418a5c) as distinct host-associated, reproductive, fetal-tissue,
+    and life-stage bins.
+  evidence_ids:
+  - EREC10
+  - EREC11
+  - EREC12
+  - EREC13
+  - EREC14
+  - EREC15
+  - ERULE
+- action: retain
+  target_ids:
+  - BTO:0000450
+  - BTO:0000452
+  - habitatmech:GOLD.6e80125d90
+  - habitatmech:GOLD.763577f3ae
+  - BTO:0000463
+  rationale: Retain fiber (BTO:0000450), fibroblast (BTO:0000452), mammalian and human
+    Fibrocartilage (habitatmech:GOLD.6e80125d90, habitatmech:GOLD.763577f3ae), and
+    filament (BTO:0000463) as distinct cellular, connective-tissue, and structural
+    concepts.
+  evidence_ids:
+  - EREC16
+  - EREC17
+  - EREC18
+  - EREC19
+  - EREC21
+  - ERULE
+- action: retain
+  target_ids:
+  - habitatmech:GOLD.fb56a964a6
+  - habitatmech:GOLD.06c04be03f
+  - habitatmech:GOLD.6e59a6cbb1
+  - UBERON:0008897
+  rationale: Retain human Fibroma (habitatmech:GOLD.fb56a964a6), human filiform wart
+    (habitatmech:GOLD.06c04be03f), hemipteran midgut filter chamber (habitatmech:GOLD.6e59a6cbb1),
+    and fin (UBERON:0008897) as distinct lesion, wart-subtype, insect-midgut, and
+    aquatic-appendage habitats.
+  evidence_ids:
+  - EREC20
+  - EREC22
+  - EREC23
+  - EREC24
+  - ERULE
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114910Z-fecal__0d8696a2-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114911Z-fecal__0e10427f-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114912Z-fecal__69dad039-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114913Z-fecal__89494a72-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114914Z-fecal__c047ee1e-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114915Z-fecal__ceae17b6-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114916Z-fecal__d12909cd-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114917Z-fecal__e9f04eec-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114918Z-feces-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114919Z-felidae_cat-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114920Z-female_reproductive_system-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114921Z-fetal_tissue-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114922Z-fetal_tissue__610eb0c8-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114923Z-fetus-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114924Z-fetus__250e9844-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114925Z-fiber-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114926Z-fibroblast-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114927Z-fibrocartilage-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114928Z-fibrocartilage__9cc92423-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114929Z-fibroma-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114930Z-filament-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114931Z-filiform_warts-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114932Z-filter_chamber-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261108T114933Z-fin-record
+  relationship: Component individual record review in this 24-record Cycle-7 Stage-4
+    cohort.
+limitations:
+- Only the stated primary evidence and current ontology/taxonomy authorities were
+  independently inspected; original specimen-level support for every source-bin member
+  is not established.
+- Association counts and PREGO scores do not establish prevalence, viability, mechanism
+  or characteristic presence.
+- Configured label correspondence skipped 2,088 no-adapter pairs; this is not whole-corpus
+  identifier certification.
+- 'Record-specific open findings (11 across 9 records: 6 grounding/hierarchy defects,
+  1 nomenclature exact_synonyms defect, and 4 #1398 mapping-endpoint contract defects)
+  are recorded on their respective kind: record bundles in related_reviews so each
+  issue_key has a single authoritative open owner for Stage 5 remediation.'
+notes:
+- All 24 cohort target files and context inputs were captured at clean git commit
+  6a699ab5f6f775ca0c18be7a12d7af2e2645f31e.
+- 'Each of the 24 targets has a dedicated kind: record bundle in reviews/structured/.'
+tags:
+- category-cohort-review
+- host-associated
+```

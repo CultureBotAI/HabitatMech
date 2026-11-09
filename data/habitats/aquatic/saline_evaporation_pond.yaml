@@ -115,6 +115,202 @@ characteristic_taxa:
   score: 3.0
   rank: 8
   candidate_pool: 8
+causal_graphs:
+- graph_id: saline_evaporation_pond_haloquadratum_squarebop_and_salinibacter_xanthorhodopsin_phototrophy
+  title: Saline evaporation pond NaCl-saturated brine selection, Haloquadratum walsbyi
+    and Salinibacter ruber enrichment, and Squarebop I bacteriorhodopsin / salinixanthin-xanthorhodopsin
+    proton pumping mechanism
+  description: Solar saline evaporation and saltern crystallizer ponds maintain NaCl-saturated
+    hypersaline brines (20-30% salt, ~309 g salts L-1) under intense solar irradiance.
+    These extreme osmotic and light regimes select for dense halophilic communities
+    dominated by the square-shaped haloarchaeon Haloquadratum walsbyi (50-60% of the
+    crystallizer microbial population) and the extremely halophilic bacterium Salinibacter
+    ruber alongside beta-carotene-rich Dunaliella. Haloquadratum walsbyi and Salinibacter
+    ruber express retinal-based light-driven proton pumps — Squarebop I bacteriorhodopsin
+    and salinixanthin-antenna xanthorhodopsin paired with salinixanthin-retaining
+    outer-membrane beta-barrel porins — that generate light-driven proton motive force
+    and compete directly with aerobic respiration for bioenergetic charge balance
+    in hypersaline crystallizer brines.
+  nodes:
+  - node_id: saline_evaporation_pond
+    label: saline evaporation pond
+    node_type: HABITAT
+    grounding: ENVO:00000055
+    description: Man-made solar salt-pan and saltern crystallizer pond where seawater
+      or brine evaporates to NaCl saturation.
+  - node_id: nacl_saturated_crystallizer_brine_and_solar_irradiance
+    label: NaCl-saturated saltern crystallizer brine (20-30% salt, ~309 g L-1) and
+      solar irradiance
+    node_type: ENVIRONMENTAL_FACTOR
+    description: NaCl-saturated hypersaline brines (~309 g salts L-1, 20-30% salinity)
+      exposed to high solar illumination in coastal saltern crystallizer ponds.
+  - node_id: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    label: Haloquadratum walsbyi and Salinibacter ruber extreme halophile crystallizer
+      guild
+    node_type: COMMUNITY
+    description: Hypersaline saltern crystallizer community dominated by the square-shaped
+      archaeon Haloquadratum walsbyi and the red-orange pigmented extremely halophilic
+      Bacteroidetes bacterium Salinibacter ruber.
+  - node_id: squarebop_i_bacteriorhodopsin_xanthorhodopsin_and_salinixanthin_porin
+    label: Haloquadratum walsbyi Squarebop I bacteriorhodopsin and Salinibacter ruber
+      salinixanthin-xanthorhodopsin and outer-membrane porin
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-embedded retinal proton pumps Squarebop I bacteriorhodopsin
+      (bop1, UniProtKB:Q18DH8) and Squarebop II bacteriorhodopsin-like protein (bop2,
+      UniProtKB:Q18DH5) in Haloquadratum walsbyi and salinixanthin/retinal-cofactor
+      xanthorhodopsin (SRU_1500, UniProtKB:Q2S2F8) plus the 8-stranded beta-barrel
+      salinixanthin-retaining outer-membrane porin in Salinibacter ruber (source-limited
+      in PMID:36229623 abstract as an unknown protein without a named locus tag).
+    protein_examples:
+    - accession: UniProtKB:Q18DH8
+      entry_name: BACR1_HALWD
+      recommended_name: Bacteriorhodopsin-I
+      gene_symbol: bop1
+      locus_tag: HQ_1014A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: family_member
+      sequence_length: 254
+      crc64: 110CC901DDF50298
+      evidence:
+      - reference: PMID:22580037
+        snippet: Squarebop I bacteriorhodopsin is a light-activated proton pump present
+          in the membranes of the archeon Haloquadratum walsbyi, a square-shaped organism
+          representing 50-60% of microbial population in the crystallizer ponds of
+          the coastal salterns.
+        notes: Haloquadratum walsbyi DSM 16790 / HBSQ001 encodes Squarebop I bacteriorhodopsin
+          (bop1, HQ_1014A, UniProtKB:Q18DH8; 254 aa) isolated from saltern crystallizer
+          pond biomass (PMID:22580037).
+    - accession: UniProtKB:Q18DH5
+      entry_name: BACRM_HALWD
+      recommended_name: Bacteriorhodopsin-II-like protein
+      gene_symbol: bop2
+      locus_tag: HQ_1017A
+      taxon_id: NCBITaxon:362976
+      taxon_name: Haloquadratum walsbyi (strain DSM 16790 / HBSQ001)
+      role_in_node: isoprotein
+      sequence_length: 246
+      crc64: 5839F73BE76F4090
+      evidence:
+      - reference: PMID:26507954
+        snippet: We estimated a concentration of bacteriorhodopsin and bacteriorhodopsin-like
+          pigments of 3.6 nmol l(-1).
+        notes: Haloquadratum walsbyi DSM 16790 / HBSQ001 encodes Bacteriorhodopsin-II-like
+          protein (bop2, HQ_1017A, UniProtKB:Q18DH5; 246 aa) alongside Bacteriorhodopsin-I
+          in saltern crystallizer brines (PMID:26507954).
+    - accession: UniProtKB:Q2S2F8
+      entry_name: Q2S2F8_SALRD
+      recommended_name: Xanthorhodopsin
+      locus_tag: SRU_1500
+      taxon_id: NCBITaxon:309807
+      taxon_name: Salinibacter ruber (strain DSM 13855 / M31)
+      role_in_node: family_member
+      sequence_length: 273
+      crc64: DFA5CF3DE0A15207
+      evidence:
+      - reference: PMID:23373661
+        snippet: Salinibacter produces an unusual carotenoid, salinixanthin that forms
+          a light antenna and transfers energy to the retinal group of xanthorhodopsin,
+          a light-driven proton pump.
+        notes: Salinibacter ruber DSM 13855 / M31 encodes the 273-aa salinixanthin-bound
+          light-driven proton pump xanthorhodopsin (SRU_1500, UniProtKB:Q2S2F8) (PMID:23373661).
+  - node_id: retinal_proton_pumping_phototrophy_and_respiratory_chain_competition
+    label: light-driven retinal proton pumping, respiratory-chain competition, and
+      hypersaline charge homeostasis
+    node_type: COMMUNITY_PROCESS
+    description: Photoactive retinal proton translocation across halophilic cell membranes
+      that supplies light energy, suppresses dark respiratory oxygen consumption by
+      40-43% under illumination, and maintains KCl/charge homeostasis.
+  edges:
+  - edge_id: saline_evaporation_pond_maintains_nacl_saturated_crystallizer_brine
+    subject: saline_evaporation_pond
+    predicate: maintains
+    object: nacl_saturated_crystallizer_brine_and_solar_irradiance
+    description: Saline evaporation and saltern crystallizer ponds maintain NaCl-saturated
+      brines (~309 g salts L-1, 20-30% salt) under solar illumination.
+    evidence:
+    - reference: PMID:23373661
+      snippet: The existence of large number of a member of the Bacteroidetes in NaCl-saturated
+        brines in saltern crystallizer ponds was first documented in 1999 based on
+        fluorescence in situ hybridization studies.
+      notes: Saltern crystallizer ponds maintain NaCl-saturated brines (20-30% salt)
+        (PMID:23373661).
+    - reference: PMID:26507954
+      snippet: The biota of the hypersaline (~309 g salts l(-1)) brine consisted of
+        ~2200 β-carotene-rich Dunaliella cells and ~3.5 × 10(7) prokaryotes ml(-1),
+        most of which were flat, square or rectangular Haloquadratum-like archaea.
+      notes: Saltern crystallizer ponds in Eilat maintain hypersaline (~309 g salts
+        L-1) brines (PMID:26507954).
+  - edge_id: crystallizer_brine_selects_for_haloquadratum_walsbyi_and_salinibacter_ruber
+    subject: nacl_saturated_crystallizer_brine_and_solar_irradiance
+    predicate: selects for
+    object: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    description: NaCl-saturated saltern crystallizer brines select for dense populations
+      of Haloquadratum walsbyi (50-60% of microbial cells) and Salinibacter ruber.
+    evidence:
+    - reference: PMID:22580037
+      snippet: Squarebop I bacteriorhodopsin is a light-activated proton pump present
+        in the membranes of the archeon Haloquadratum walsbyi, a square-shaped organism
+        representing 50-60% of microbial population in the crystallizer ponds of the
+        coastal salterns.
+      notes: Haloquadratum walsbyi represents 50-60% of the microbial population in
+        coastal saltern crystallizer ponds (PMID:22580037).
+    - reference: PMID:23373661
+      snippet: Isolation of the organism and its description as Salinibacter ruber
+        followed soon. It is a rod-shaped, red-orange pigmented, extreme halophile
+        that grows optimally at 20-30% salt.
+      notes: Salinibacter ruber is an extreme halophile thriving at 20-30% salt in
+        saltern crystallizer ponds alongside Halobacteriaceae archaea (PMID:23373661).
+  - edge_id: crystallizer_guild_expresses_squarebop_bacteriorhodopsin_and_xanthorhodopsin
+    subject: haloquadratum_walsbyi_and_salinibacter_ruber_crystallizer_guild
+    predicate: expresses
+    object: squarebop_i_bacteriorhodopsin_xanthorhodopsin_and_salinixanthin_porin
+    description: Haloquadratum walsbyi expresses Squarebop I bacteriorhodopsin (~3.6
+      nmol L-1 in crystallizer brines) while Salinibacter ruber expresses salinixanthin-bound
+      xanthorhodopsin and a salinixanthin-retaining outer-membrane porin.
+    evidence:
+    - reference: PMID:23373661
+      snippet: Salinibacter produces an unusual carotenoid, salinixanthin that forms
+        a light antenna and transfers energy to the retinal group of xanthorhodopsin,
+        a light-driven proton pump.
+      notes: Salinibacter ruber produces salinixanthin as a light-harvesting antenna
+        coupled to the retinal proton pump xanthorhodopsin (PMID:23373661).
+    - reference: PMID:36229623
+      snippet: Two of these pigment molecules, salinixanthin and retinal, are reported
+        to be essential cofactors of the xanthorhodopsin, a light-driven proton pump
+        unique to this bacterium. Here, we isolate and characterize an outer membrane
+        porin-like protein that retains salinixanthin.
+      notes: Salinibacter ruber expresses xanthorhodopsin and a main 8-stranded beta-barrel
+        outer-membrane porin that retains salinixanthin (PMID:36229623).
+    - reference: PMID:26507954
+      snippet: We estimated a concentration of bacteriorhodopsin and bacteriorhodopsin-like
+        pigments of 3.6 nmol l(-1).
+      notes: Haloquadratum-dominated saltern crystallizer brines contain 3.6 nmol
+        L-1 of bacteriorhodopsin and retinal pigments (PMID:26507954).
+  - edge_id: retinal_pumps_catalyze_phototrophic_proton_pumping_and_respiratory_competition
+    subject: squarebop_i_bacteriorhodopsin_xanthorhodopsin_and_salinixanthin_porin
+    predicate: catalyzes
+    object: retinal_proton_pumping_phototrophy_and_respiratory_chain_competition
+    description: Light-activated Squarebop I bacteriorhodopsin and xanthorhodopsin
+      pump protons across the cell membrane, competing with the respiratory chain
+      to reduce community respiration by 40-43% under illumination while the outer-membrane
+      porin balances charge perturbations.
+    evidence:
+    - reference: PMID:26507954
+      snippet: 'When illuminated, the community respiration activity of the brine
+        samples in which oxygenic photosynthesis was inhibited by 3-(3-4-dichlorophenyl)-1,1-dimethylurea,
+        decreased by 40-43 %. This effect was interpreted to be the result of competition
+        between two energy yielding systems: the bacteriorhodopsin proton pump and
+        the respiratory chain.'
+      notes: Illumination of bacteriorhodopsin proton pumps in saltern crystallizer
+        brines decreases community dark respiration by 40-43% through bioenergetic
+        competition with the respiratory chain (PMID:26507954).
+    - reference: PMID:36229623
+      snippet: Finally, also a possible involvement in balancing the charge perturbation
+        associated with the xanthorhodopsin and ATP synthase activities is considered.
+      notes: The salinixanthin-binding outer-membrane porin of Salinibacter ruber
+        participates in nutrient uptake, homeostatic balance, and balancing charge
+        perturbations from xanthorhodopsin and ATP synthase activities (PMID:36229623).
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -161,3 +357,18 @@ curation_history:
     independently justified parents. Original occurrence membership remains unrecovered.
     Shared mapping endpoints and typed ontology synonyms are separate open work, not
     SSSOM/KGX certification.
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added saline_evaporation_pond_haloquadratum_squarebop_and_salinibacter_xanthorhodopsin_phototrophy
+    mechanism graph for saline_evaporation_pond (ENVO:00000055) backed by PMID:23373661,
+    PMID:22580037, PMID:26507954, and PMID:36229623.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:Q18DH8, UniProtKB:Q18DH5,
+    UniProtKB:Q2S2F8) to squarebop_i_bacteriorhodopsin_xanthorhodopsin_and_salinixanthin_porin
+    and documented abstract-level source limitation for the unnamed Salinibacter ruber
+    outer-membrane porin (PMID:36229623).
+  llm_assisted: true

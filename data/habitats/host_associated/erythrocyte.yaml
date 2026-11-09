@@ -33,7 +33,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - BTO:0000574
-- habitatmech:GOLD.d25ff4a586
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6603
@@ -137,3 +136,22 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-11-05T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d25ff4a586
+    for habitatmech:GOLD.6ee13ba963 (Host-associated > Mammals: Human > Circulatory
+    system > Blood > Erythrocytes). Review https://github.com/CultureBotAI/HabitatMech/issues/2295
+    : Epicuticular wax is the outer cuticular wax layer on a leaf surface, not a subtype
+    of the whole leaf organ (PO:0025034); epithelial lining fluid is the respiratory
+    mucosal surface liquid, not the entire human respiratory system; erythrocyte is
+    a circulating red blood cell, not the entire human blood tissue; esophageal ulcer
+    is a mucosal lesion/disease concept, not a subtype of the anatomical human esophagus;
+    crustacean, piscine, avian, human and mammalian esophagus are tubular digestive
+    organs, not subtypes of the entire foregut or digestive system; ethmoid bone is
+    a cranial bone, not the human-scoped bone assemblage; mammalian and human Eustachian
+    tube are pharyngotympanic tubes, not subtypes of the middle ear cavity; insect
+    excretory system is an organ system, not a subtype of the whole insect-associated
+    environment. Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target BTO:0000424. Shared
+    mapping endpoints #1398 remain separate.'

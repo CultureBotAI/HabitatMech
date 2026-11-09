@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-11-05T151510Z-antigravity-229601
+  timestamp: '2026-11-05T15:15:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2296
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  - decisions
+  summary: Repair exact_synonyms and grounding scope across equidae_horse and ethmoid_bone in epicuticular_wax to excretory_system cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-epicuticular-wax-to-excretory-system-synonym-scope-repairs
+    (2 findings from Stage 4 cohort review 20261105T051600Z-epicuticular_wax_to_excretory_system-category,
+    Issue #2296). Updated curation/term_requests.tsv and curation/term_requests/envo_robot_template.tsv
+    for habitatmech:BACDIVE.09c3544e85 (equidae_horse, equid-associated environment)
+    to clear bare host-taxon label Equidae-Horse from exact_synonym and added a guarded
+    exclusion row in curation/definition_source_label_exclusions.tsv so automatic retention
+    of displaced BacDive label Equidae-Horse as EXACT_SYNONYM is omitted from synonyms
+    (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim BacDive source_attestations,
+    matching sibling BacDive host-bucket records (bovinae_cow_cattle, canidae_dog,
+    caprinae_sheep_goat). Also updated curation/decisions.tsv for habitatmech:GOLD.55cb603eb1
+    (ethmoid_bone / UBERON:0001679) from grounding_status EXACT to CLOSE so the compound
+    misspelled GOLD leaf Scull: Ethmoid is emitted with synonym_type RELATED_SYNONYM
+    (skos:closeMatch) rather than EXACT_SYNONYM.'

@@ -220,6 +220,247 @@ characteristic_taxa:
   score: 1.05584
   rank: 25
   candidate_pool: 65
+causal_graphs:
+- graph_id: saline_marsh_spartina_rhizosphere_thiodiazotropha_dsrab_nifhdk_and_mcra_cycling
+  title: Saline marsh Spartina alterniflora rhizosphere sulfidic redox gradient, Candidatus
+    Thiodiazotropha and SRB/methanogen guild selection, and coupled oxidative-dsrAB/nifHDK/mcrA
+    cycling mechanism
+  description: Tidal saline marshes vegetated by the foundation cordgrass Spartina
+    alterniflora maintain steep rhizosphere and bulk-sediment redox gradients combining
+    sulfidic, reduced sediment conditions with plant-derived organic substrates in
+    the oxidized root zone. These gradients select for a core root and sediment microbiome
+    dominated by sulfur-oxidizing symbionts of the genus Candidatus Thiodiazotropha
+    alongside sulfate-reducing bacteria (Desulfobacteraceae and Desulfobulbaceae)
+    and hydrogenotrophic/acetoclastic methanogens (Methanomicrobiales, Methanococcales,
+    Methanosaeta). These guilds express oxidative and reductive dissimilatory sulfite
+    reductase (oxidative-dsrAB, dsrA, dsrB), nitrogenase (nifHDK, nifK), ribulose-1,5-bisphosphate
+    carboxylase/oxygenase (RuBisCO), and methyl coenzyme M reductase A (mcrA) to couple
+    chemolithoautotrophic sulfide oxidation with carbon and nitrogen fixation in stressed
+    roots while driving sediment sulfate reduction and methanogenesis.
+  nodes:
+  - node_id: saline_marsh
+    label: saline marsh
+    node_type: HABITAT
+    grounding: ENVO:00000054
+    description: Coastal intertidal saline marsh wetland vegetated by salt-tolerant
+      macrophytes such as Spartina alterniflora and Phragmites australis.
+  - node_id: spartina_rhizosphere_sulfidic_redox_and_root_carbon_gradient
+    label: Spartina alterniflora sulfidic sediment redox gradient and oxidized root-zone
+      carbon substrates
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Sulfidic, reduced estuarine marsh sediment conditions coupled with
+      plant-derived carbon substrates in the oxidized Spartina alterniflora root zone.
+  - node_id: salt_marsh_thiodiazotropha_desulfobacteraceae_and_methanogen_guild
+    label: Candidatus Thiodiazotropha, Desulfobacteraceae/Desulfobulbaceae SRB, and
+      Methanomicrobiales/Methanosaeta guild
+    node_type: COMMUNITY
+    description: Salt marsh root, rhizosphere, and sediment prokaryotic community
+      comprising Candidatus Thiodiazotropha sulfur-oxidizing diazotrophs, Desulfobacteraceae
+      and Desulfobulbaceae sulfate-reducing bacteria, and Methanomicrobiales, Methanococcales,
+      and Methanosaeta methanogens.
+  - node_id: marsh_oxidative_dsrab_nifhdk_rubisco_and_mcra_enzymes
+    label: oxidative and reductive dissimilatory sulfite reductase (dsrAB, dsrB),
+      nitrogenase (nifHDK), RuBisCO, and methyl coenzyme M reductase A (mcrA)
+    node_type: GENE_OR_PROTEIN
+    description: Chemolithoautotrophic sulfur-oxidation genes (oxidative-dsrAB, dsrA;
+      represented by Candidatus Thiodiazotropha endolucinida UniProtKB:A0A7Z0VL60),
+      nitrogen-fixation genes (nifHDK, nifK; UniProtKB:A0A7Z0VLY7), and carbon-fixation
+      RuBisCO (cbbL1; UniProtKB:A0A7Z0VJ95) in root-associated Candidatus Thiodiazotropha
+      alongside sediment Desulfobacteraceae sulfate-reducing dsrB (UniProtKB:A0A850T8A4)
+      and Methanosaeta methanogenic mcrA (UniProtKB:H3K2E3) genes.
+    protein_examples:
+    - accession: UniProtKB:A0A7Z0VL60
+      entry_name: A0A7Z0VL60_9GAMM
+      recommended_name: Sulfite reductase, dissimilatory-type subunit beta
+      gene_symbol: dsvB_1
+      locus_tag: CODIS_24930
+      taxon_id: NCBITaxon:1655433
+      taxon_name: Candidatus Thiodiazotropha endolucinida
+      role_in_node: subunit
+      sequence_length: 356
+      crc64: B9B43D1F4A97F7A3
+      evidence:
+      - reference: PMID:38684658
+        snippet: Close relatives of marine symbionts from the Candidatus Thiodiazotropha
+          genus contributed ~30% and ~20% of all sulfur-oxidizing dsrA and nitrogen-fixing
+          nifK transcripts in stressed roots, respectively.
+        notes: Representative Candidatus Thiodiazotropha endolucinida dissimilatory-type
+          sulfite reductase subunit (dsvB_1, CODIS_24930, UniProtKB:A0A7Z0VL60; 356
+          aa) for the Ca. Thiodiazotropha oxidative-dsrAB guild in Spartina alterniflora
+          roots (PMID:38684658).
+    - accession: UniProtKB:A0A7Z0VLY7
+      entry_name: A0A7Z0VLY7_9GAMM
+      recommended_name: Nitrogenase molybdenum-iron protein beta chain
+      gene_symbol: nifK
+      locus_tag: CODIS_20460
+      taxon_id: NCBITaxon:1655433
+      taxon_name: Candidatus Thiodiazotropha endolucinida
+      role_in_node: subunit
+      sequence_length: 523
+      crc64: 8E129CA6C6842C80
+      evidence:
+      - reference: PMID:38684658
+        snippet: Close relatives of marine symbionts from the Candidatus Thiodiazotropha
+          genus contributed ~30% and ~20% of all sulfur-oxidizing dsrA and nitrogen-fixing
+          nifK transcripts in stressed roots, respectively.
+        notes: Representative Candidatus Thiodiazotropha endolucinida nitrogenase
+          beta chain NifK (nifK, CODIS_20460, UniProtKB:A0A7Z0VLY7; 523 aa) for root-associated
+          Ca. Thiodiazotropha diazotrophs (PMID:38684658).
+    - accession: UniProtKB:A0A7Z0VJ95
+      entry_name: A0A7Z0VJ95_9GAMM
+      recommended_name: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL1
+      locus_tag: CODIS_32490
+      taxon_id: NCBITaxon:1655433
+      taxon_name: Candidatus Thiodiazotropha endolucinida
+      role_in_node: subunit
+      sequence_length: 472
+      crc64: 51D2B6B9C28FD25D
+      evidence:
+      - reference: PMID:38684658
+        snippet: Abundant sulfur-oxidizing bacteria encode and highly express genes
+          for carbon fixation (RuBisCO), nitrogen fixation (nifHDK) and sulfur oxidation
+          (oxidative-dsrAB), especially in roots stressed by sulfidic and reduced
+          sediment conditions.
+        notes: Representative Candidatus Thiodiazotropha endolucinida RuBisCO large
+          chain (cbbL1, CODIS_32490, UniProtKB:A0A7Z0VJ95; 472 aa) supporting chemolithoautotrophic
+          carbon fixation in salt marsh roots (PMID:35227326, PMID:38684658).
+    - accession: UniProtKB:A0A850T8A4
+      entry_name: A0A850T8A4_9BACT
+      recommended_name: Dissimilatory-type sulfite reductase subunit beta
+      gene_symbol: dsrB
+      locus_tag: HXW94_01065
+      taxon_id: NCBITaxon:2292
+      taxon_name: Desulfobacter latus
+      role_in_node: subunit
+      sequence_length: 382
+      crc64: 811D886E0C037B4E
+      evidence:
+      - reference: PMID:23986751
+        snippet: In SRB, sequences closely related to the families Desulfobacteraceae
+          and Desulfobulbaceae dominated in the salt marsh, although they displayed
+          minimal changes with the S. alterniflora invasion.
+        notes: Representative Desulfobacteraceae dsrB subunit from Desulfobacter latus
+          (dsrB, HXW94_01065, UniProtKB:A0A850T8A4; 382 aa) for salt marsh sediment
+          SRB (PMID:23986751).
+    - accession: UniProtKB:H3K2E3
+      entry_name: H3K2E3_9EURY
+      recommended_name: coenzyme-B sulfoethylthiotransferase
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:1110545
+      taxon_name: Methanosaeta pelagica
+      role_in_node: subunit
+      sequence_length: 383
+      crc64: 633A1609A371A922
+      evidence:
+      - reference: PMID:23986751
+        snippet: Methanosarcina, the metabolically diverse methanogens, did not vary
+          with the invasion of, but Methanosaeta, the exclusive acetate utilizers,
+          appeared to increase with S. alterniflora invasion.
+        notes: Representative marine Methanosaeta pelagica mcrA protein (UniProtKB:H3K2E3;
+          383 aa) for acetoclastic Methanosaeta methanogens in Spartina alterniflora
+          marsh sediments (PMID:23986751).
+  - node_id: rhizosphere_sulfide_detoxification_coupled_cn_fixation_and_marsh_ch4_flux
+    label: rhizosphere sulfide detoxification, chemolithotrophic C/N fixation, and
+      estuarine marsh methane flux
+    node_type: COMMUNITY_PROCESS
+    description: Coupling of chemolithotrophic sulfur oxidation with carbon and nitrogen
+      fixation that detoxifies sulfide in the Spartina alterniflora root zone alongside
+      sediment sulfate reduction and methane emission.
+  edges:
+  - edge_id: saline_marsh_maintains_spartina_rhizosphere_sulfidic_redox_gradient
+    subject: saline_marsh
+    predicate: maintains
+    object: spartina_rhizosphere_sulfidic_redox_and_root_carbon_gradient
+    description: Saline marshes vegetated by Spartina alterniflora maintain sulfidic,
+      reduced sediment conditions alongside available carbon substrates in the oxidized
+      root zone.
+    evidence:
+    - reference: PMID:35227326
+      snippet: The S. alterniflora root microbiome is dominated by highly active and
+        competitive species taking advantage of available carbon substrates in the
+        oxidized root zone.
+      notes: Spartina alterniflora salt marshes provide available carbon substrates
+        in the oxidized root zone across sediment redox gradients (PMID:35227326).
+    - reference: PMID:38684658
+      snippet: Abundant sulfur-oxidizing bacteria encode and highly express genes
+        for carbon fixation (RuBisCO), nitrogen fixation (nifHDK) and sulfur oxidation
+        (oxidative-dsrAB), especially in roots stressed by sulfidic and reduced sediment
+        conditions.
+      notes: Coastal salt marshes dominated by Spartina alterniflora subject plant
+        roots to sulfidic and reduced sediment conditions (PMID:38684658).
+  - edge_id: spartina_redox_gradient_selects_for_thiodiazotropha_srb_and_methanogens
+    subject: spartina_rhizosphere_sulfidic_redox_and_root_carbon_gradient
+    predicate: selects for
+    object: salt_marsh_thiodiazotropha_desulfobacteraceae_and_methanogen_guild
+    description: Sulfidic marsh sediments and Spartina alterniflora roots enrich Candidatus
+      Thiodiazotropha, Desulfobacteraceae and Desulfobulbaceae sulfate-reducing bacteria,
+      and Methanomicrobiales/Methanosaeta methanogens.
+    evidence:
+    - reference: PMID:35227326
+      snippet: Core microbiome bacteria from the Candidatus Thiodiazotropha genus,
+        with the metabolic potential to couple S oxidation with C and N fixation,
+        were shown to be highly abundant in the root and rhizosphere of S. alterniflora.
+      notes: Candidatus Thiodiazotropha is enriched in the core root and rhizosphere
+        microbiome of salt marsh Spartina alterniflora (PMID:35227326).
+    - reference: PMID:23986751
+      snippet: In SRB, sequences closely related to the families Desulfobacteraceae
+        and Desulfobulbaceae dominated in the salt marsh, although they displayed
+        minimal changes with the S. alterniflora invasion.
+      notes: Desulfobacteraceae and Desulfobulbaceae dominate the sulfate-reducing
+        bacterial community alongside Methanomicrobiales, Methanococcales, and Methanosaeta
+        in estuarine salt marsh sediments (PMID:23986751).
+  - edge_id: salt_marsh_guild_expresses_dsrab_nifhdk_rubisco_and_mcra
+    subject: salt_marsh_thiodiazotropha_desulfobacteraceae_and_methanogen_guild
+    predicate: expresses
+    object: marsh_oxidative_dsrab_nifhdk_rubisco_and_mcra_enzymes
+    description: Salt marsh Candidatus Thiodiazotropha, sulfate-reducing bacteria,
+      and methanogens encode and express RuBisCO, nifHDK/nifK, oxidative-dsrAB/dsrA,
+      reductive dsrB, and mcrA.
+    evidence:
+    - reference: PMID:38684658
+      snippet: Close relatives of marine symbionts from the Candidatus Thiodiazotropha
+        genus contributed ~30% and ~20% of all sulfur-oxidizing dsrA and nitrogen-fixing
+        nifK transcripts in stressed roots, respectively.
+      notes: Candidatus Thiodiazotropha relatives contribute ~30% of sulfur-oxidizing
+        dsrA and ~20% of nitrogen-fixing nifK transcripts in stressed Spartina alterniflora
+        roots alongside RuBisCO and nifHDK (PMID:38684658).
+    - reference: PMID:23986751
+      snippet: The community structures of methanogens and sulfate-reducing bacteria
+        (SRB) as a function of Spartina alterniflora invasion in Phragmites australis-vegetated
+        sediments of the Dongtan wetland in the Yangtze River estuary, China, were
+        investigated using 454 pyrosequencing and quantitative real-time PCR (qPCR)
+        of the methyl coenzyme M reductase A (mcrA) and dissimilatory sulfite-reductase
+        (dsrB) genes.
+      notes: Estuarine salt marsh methanogens and sulfate-reducing bacteria harbor
+        mcrA and dsrB genes in Spartina alterniflora and Phragmites australis stands
+        (PMID:23986751).
+  - edge_id: marsh_enzymes_catalyze_sulfide_detoxification_cn_fixation_and_methane_flux
+    subject: marsh_oxidative_dsrab_nifhdk_rubisco_and_mcra_enzymes
+    predicate: catalyzes
+    object: rhizosphere_sulfide_detoxification_coupled_cn_fixation_and_marsh_ch4_flux
+    description: Oxidative-dsrAB, nifHDK, and RuBisCO couple sulfide-detoxifying sulfur
+      oxidation with carbon and nitrogen fixation in the Spartina root zone while
+      mcrA and dsrB drive sediment methane production and sulfate reduction.
+    evidence:
+    - reference: PMID:35227326
+      snippet: 'Two microbially mediated mechanisms are proposed to stimulate S. alterniflora
+        primary productivity: (i) enhanced microbial activity replenishes nutrients
+        and terminal electron acceptors in higher biomass stands, and (ii) coupling
+        of chemolithotrophic S oxidation with carbon (C) and nitrogen (N) fixation
+        by root- and rhizosphere-associated prokaryotes detoxifies sulfide in the
+        root zone while potentially transferring fixed C and N to the host plant.'
+      notes: Coupled chemolithotrophic sulfur oxidation and C/N fixation detoxifies
+        root-zone sulfide and supports Spartina alterniflora primary productivity
+        (PMID:35227326).
+    - reference: PMID:23986751
+      snippet: qPCR analysis revealed higher copy numbers of mcrA genes in sediments
+        from S. alterniflora stands than P. australis stands (5- and 7.5-fold more
+        in the spring and summer, respectively), which is consistent with the higher
+        methane flux rates measured in the S. alterniflora stands (up to 8.01 ± 5.61
+        mg m(-2) h(-1)).
+      notes: Elevated mcrA gene copy numbers correspond to elevated methane flux rates
+        in Spartina alterniflora salt marsh sediments (PMID:23986751).
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -266,3 +507,17 @@ curation_history:
     preserve identity, source paths/nodes/counts/units, omitted counts and independent
     genera. Original occurrence membership remains unavailable. No source-scope, endpoint
     or SSSOM/KGX certification is implied.
+- timestamp: '2026-11-07T22:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added saline_marsh_spartina_rhizosphere_thiodiazotropha_dsrab_nifhdk_and_mcra_cycling
+    mechanism graph for saline_marsh (ENVO:00000054) backed by PMID:35227326, PMID:38684658,
+    and PMID:23986751.
+  llm_assisted: true
+- timestamp: '2026-11-08T07:05:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified guild-representative UniProtKB protein_examples (UniProtKB:A0A7Z0VL60,
+    UniProtKB:A0A7Z0VLY7, UniProtKB:A0A7Z0VJ95, UniProtKB:A0A850T8A4, UniProtKB:H3K2E3)
+    to marsh_oxidative_dsrab_nifhdk_rubisco_and_mcra_enzymes.
+  llm_assisted: true

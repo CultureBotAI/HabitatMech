@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.9bfd135cfa
 label: mammalian external reproductive organ environment
-definition: A reproductive system anatomical surface comprising the external genitalia
-  of a non-human or general mammalian host (including vulvar, preputial, and penile
-  surfaces), colonized by urogenital and cutaneous microbiota.
+definition: An external genitalia anatomical surface of a non-human or general mammalian
+  host (including vulvar, preputial, and penile surfaces), colonized by urogenital
+  and cutaneous microbiota.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -12,8 +12,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:0000990
-- habitatmech:GOLD.29feb6867b
+- UBERON:0004176
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6469
@@ -28,16 +27,18 @@ curation_history:
   curator: antigravity
   action: CONFIRM_UNGROUNDED
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined mammalian
-    external reproductive organ environment under UBERON:0000990 ''reproductive system'';
-    supported by mammalian reproductive tract microbiome studies (PMID 28529509).
-    (source concept habitatmech:GOLD.9bfd135cfa)'
+    external reproductive organ environment under UBERON:0004176 ''external genitalia''
+    with parent_mode REPLACE to exclude whole-system GOLD parent Reproductive system
+    (https://github.com/CultureBotAI/HabitatMech/issues/2304); supported by mammalian
+    reproductive tract microbiome studies (PMID 28529509). (source concept habitatmech:GOLD.9bfd135cfa)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'mammalian external reproductive organ environment' under UBERON:0000990
-    'reproductive system'. Defined mammalian external reproductive organ environment
-    under UBERON:0000990 'reproductive system'; supported by mammalian reproductive
-    tract microbiome studies (PMID 28529509).
+  changes: Defined as 'mammalian external reproductive organ environment' under UBERON:0004176
+    'external genitalia'. Defined mammalian external reproductive organ environment
+    under UBERON:0004176 'external genitalia' with parent_mode REPLACE to exclude
+    whole-system GOLD parent Reproductive system (https://github.com/CultureBotAI/HabitatMech/issues/2304);
+    supported by mammalian reproductive tract microbiome studies (PMID 28529509).
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

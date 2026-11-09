@@ -102,10 +102,6 @@ synonyms:
 parent_habitats:
 - ENVO:00002276
 - UBERON:0000174
-- UBERON:0001555
-- habitatmech:GOLD.5b0aa7456c
-- habitatmech:GOLD.6bda0871e2
-- habitatmech:GOLD.b091b80314
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:feces-stool
@@ -362,3 +358,50 @@ curation_history:
   changes: 'Retained GOLD label ''Guano'' as RELATED_SYNONYM: a BROAD source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1769).'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6bda0871e2
+    for habitatmech:GOLD.3671b973b2 (Host-associated > Mammals > Digestive system
+    > Large intestine > Fecal). Review https://github.com/CultureBotAI/HabitatMech/issues/2318
+    : Feces and earthworm casts are egested digestive waste material, not subtypes
+    of the digestive tract or of the human, mammalian, or avian large intestine organ;
+    a fish fin is a locomotory appendage, not a subtype of the whole fish skin organ.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0001988. Shared mapping
+    endpoints #1398 remain separate.'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b091b80314
+    for habitatmech:GOLD.515763f493 (Host-associated > Birds > Digestive system >
+    Large intestine > Fecal). Review https://github.com/CultureBotAI/HabitatMech/issues/2318
+    : Feces and earthworm casts are egested digestive waste material, not subtypes
+    of the digestive tract or of the human, mammalian, or avian large intestine organ;
+    a fish fin is a locomotory appendage, not a subtype of the whole fish skin organ.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0001988. Shared mapping
+    endpoints #1398 remain separate.'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution UBERON:0001555 for habitatmech:GOLD.53337a753d
+    (Host-associated > Annelida > Digestive system > Digestive tube > Cast). Review
+    https://github.com/CultureBotAI/HabitatMech/issues/2318 : Feces and earthworm
+    casts are egested digestive waste material, not subtypes of the digestive tract
+    or of the human, mammalian, or avian large intestine organ; a fish fin is a locomotory
+    appendage, not a subtype of the whole fish skin organ. Exclude only exact guarded
+    GOLD source-path contributions, preserving independent genera and all source observations.
+    Exact target UBERON:0001988. Shared mapping endpoints #1398 remain separate.'
+- timestamp: '2026-11-08T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.d11c365b20 (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Fecal). Review https://github.com/CultureBotAI/HabitatMech/issues/2318
+    : Feces and earthworm casts are egested digestive waste material, not subtypes
+    of the digestive tract or of the human, mammalian, or avian large intestine organ;
+    a fish fin is a locomotory appendage, not a subtype of the whole fish skin organ.
+    Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target UBERON:0001988. Shared mapping
+    endpoints #1398 remain separate.'

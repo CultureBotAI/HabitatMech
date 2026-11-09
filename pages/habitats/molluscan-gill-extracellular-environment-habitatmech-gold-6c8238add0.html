@@ -73,9 +73,6 @@ a grounding.</p>
   <li><a href="http://purl.obolibrary.org/obo/GO_0005615">extracellular space</a><code class="curie">GO:0005615</code></li>
 </ul>
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Extracellular <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -90,6 +87,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-09-18 · codex-gpt-5</span>
     <p>Defined as &#39;molluscan gill extracellular environment&#39; under ENVO:01001055 &#39;environment associated with an animal part or small animal&#39;. Definition authored from the existing item-level #108 decision and the committed Mollusca and Bivalves reports under research/habitats/; no new paid research was commissioned. GOLD&#39;s Host-associated &gt; Mollusca &gt; Respiratory system &gt; Gills &gt; Extracellular source denotes the extracellular compartment of molluscan gill tissue, not GO:0005615 &#39;extracellular space&#39; as a habitat identity, the whole gill, the gill surface without the extracellular qualifier, the intracellular compartment of a symbiont-bearing gill cell, or annelid egg-capsule extracellular habitats. ENVO:01001055 &#39;environment associated with an animal part or small animal&#39; is the tightest safe vendored genus because ENVO lacks a general extracellular host environment or molluscan gill extracellular environment class; unlike whole-host invertebrate term requests that avoid importing an animal-part restriction, that restriction is true here because the determinant is molluscan gill tissue. parent_mode=REPLACE drops the source-inherited Gills parent because the extracellular environment is determined by gill tissue but is not a kind of whole gill.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-11-06 · antigravity</span>
+    <p>Omitted automatic retention of displaced source label &#39;Extracellular&#39; when defining habitatmech:GOLD.6c8238add0 as &#39;molluscan gill extracellular environment&#39;. Verbatim source attestations are preserved. Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2305" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2305</a> : The displaced GOLD leaf label Extracellular is context-dependent outside Host-associated &gt; Mollusca &gt; Respiratory system &gt; Gills &gt; Extracellular and collides with the sibling annelid egg-capsule Extracellular path (habitatmech:GOLD.0a69f87c03). Suppress automatic exact-alias fallback while preserving verbatim source provenance, definition, genus, GO:0005615 xref and native status.</p>
   </li>
 </ol>
 

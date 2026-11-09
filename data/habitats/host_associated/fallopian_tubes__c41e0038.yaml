@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0003889
-- habitatmech:GOLD.29feb6867b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7632
@@ -18,3 +17,24 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-11-06T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.29feb6867b
+    for habitatmech:GOLD.fe591e2cb7 (Host-associated > Mammals > Reproductive system
+    > Fallopian tubes). Review https://github.com/CultureBotAI/HabitatMech/issues/2304
+    : Crustacean and annelid excretory system are organ systems, not subtypes of the
+    whole crustacean- or annelid-associated host environment; external genitalia is
+    an anatomical reproductive organ structure, not a subtype of the entire mammalian
+    or human reproductive system; external soft tissue zone is a soft-tissue anatomical
+    region, not a subtype of the mammalian Multiple systems GOLD classification bucket;
+    mammalian, piscine, and human eye are sense organs and ciliary body and vitreous
+    chamber are intraocular structures/compartments, not subtypes of the entire visual
+    system; human and mammalian fallopian tube are oviductal reproductive organs,
+    not subtypes of the entire reproductive system; mammalian and human fascia are
+    connective tissue sheets, not subtypes of the host-scoped connective tissue assemblage;
+    insect fat body is an adipose organ/tissue, not a subtype of the whole insect-associated
+    environment; feather is an avian epidermal appendage, not a subtype of the whole
+    avian skin organ. Exclude only exact guarded GOLD source-path contributions, preserving
+    independent genera and all source observations. Exact target habitatmech:GOLD.fe591e2cb7.
+    Shared mapping endpoints #1398 remain separate.'
