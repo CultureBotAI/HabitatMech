@@ -1,0 +1,138 @@
+identifier: habitatmech:GOLD.7406232b7e
+causal_graphs:
+- graph_id: phyllosphere_diurnal_stress_methanol_succinate_methylobacterium_phyr_prs_cstr_colonization
+  title: Phyllosphere fluctuating methanol/succinate and oxidative-desiccation stress regime, Methylobacterium/Methylorubrum
+    extorquens guild selection, and PhyR/Prs/CstR epiphytic colonization and stress-metabolic balancing
+    mechanism
+  description: Aerial plant surfaces (the phyllosphere) expose epiphytic microorganisms to low and fluctuating
+    concentrations of plant-emitted one-carbon (methanol) and multi-carbon (succinate) substrates alongside
+    diurnal heat, desiccation, oxidative, and pH stresses. These conditions select for pink-pigmented
+    facultative methylotrophs of the genera Methylobacterium and Methylorubrum (such as M. extorquens
+    AM1 and PA1). During epiphytic growth on leaves, M. extorquens upregulates the two-domain sigma-factor-like
+    response regulator PhyR and its downstream oxidative stress regulon (KatE, SodA, AhpC, Ohr, Trx, Dps),
+    modulates phosphoribosylpyrophosphate synthetase (Prs) as a metabolic valve to channel scarce C1 carbon
+    through the phosphoketolase pathway into biomass, and employs the orphan response receiver CstR (alongside
+    EfgA and TtmR) to coordinate NAD+/NADH balance, formaldehyde tolerance, and stress resilience across
+    succinate-to-methanol transitions.
+  nodes:
+  - node_id: phyllosphere
+    label: phyllosphere environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.7406232b7e
+    description: Above-ground aerial plant surface habitat (primarily leaf surfaces) colonized by epiphytic
+      microbial communities.
+  - node_id: phyllosphere_fluctuating_methanol_succinate_and_oxidative_desiccation_stress
+    label: fluctuating leaf-emitted methanol and succinate availability with oxidative, desiccation, heat,
+      and pH stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Aerial plant-surface regime characterized by limited and shifting plant-derived methanol
+      and succinate carbon sources coupled with UV/oxidative stress, desiccation, thermal fluctuations,
+      and pH shifts.
+  - node_id: phyllosphere_methylobacterium_methylorubrum_extorquens_epiphytic_guild
+    label: epiphytic Methylobacterium and Methylorubrum extorquens guild
+    node_type: COMMUNITY
+    description: Phyllosphere-colonizing facultative methylotrophic Alphaproteobacteria of the Methylobacterium/Methylorubrum
+      extorquens clade.
+  - node_id: methylobacterium_phyr_kate_soda_ahpc_prs_and_cstr_efga_ttmr_system
+    label: response regulator PhyR, oxidative stress enzymes (KatE, SodA, AhpC, Ohr, Trx, Dps), phosphoribosylpyrophosphate
+      synthetase (Prs), and carbon source transition regulator CstR (cstR, efgA, ttmR)
+    node_type: GENE_OR_PROTEIN
+    description: Methylobacterium/Methylorubrum extorquens two-domain response regulator PhyR and PhyR-regulated
+      oxidative stress proteins (KatE, SodA, AhpC, Ohr, Trx, Dps), phosphoribosylpyrophosphate synthetase
+      metabolic valve, and orphan response receiver CstR with formaldehyde-transition factors EfgA and
+      TtmR.
+  - node_id: epiphytic_oxidative_stress_protection_c1_biomass_redirect_and_plant_growth_promotion
+    label: epiphytic oxidative stress resilience, phosphoketolase C1-to-biomass redirection, rapid succinate-methanol
+      transition, and plant colonization
+    node_type: COMMUNITY_PROCESS
+    description: PhyR-dependent leaf colonization and reactive oxygen species detoxification, Prs/phosphoketolase-driven
+      biomass synthesis under low methanol that promotes host plant growth, and CstR-coordinated metabolic
+      switching between succinate and methanol.
+  edges:
+  - edge_id: phyllosphere_maintains_fluctuating_methanol_succinate_and_stress_regime
+    subject: phyllosphere
+    predicate: maintains
+    object: phyllosphere_fluctuating_methanol_succinate_and_oxidative_desiccation_stress
+    description: The phyllosphere subjects epiphytic bacteria to continual shifts between plant-derived
+      methanol and organic acids such as succinate alongside heat, desiccation, oxidative, and pH stresses.
+    evidence:
+    - reference: PMID:42427639
+      snippet: 'Methylotrophs capable of growth on reduced single-carbon compounds are prevalent in the
+        phyllosphere (aerial plant surfaces), where they face continual and predictable shifts in the
+        availability of different plant-produced carbon sources. We examined the ability of the methylotroph
+        Methylobacterium extorquens PA1 to adapt to repeated shifts between two different carbon and energy
+        sources: the one-carbon compound methanol and the multi-carbon organic acid succinate, both present
+        in the phyllosphere.'
+      notes: Aerial plant surfaces provide shifting supplies of methanol and succinate to phyllosphere
+        bacteria (PMID:42427639).
+    - reference: PMID:39013920
+      snippet: The proficiency of phyllosphere microbiomes in efficiently utilizing plant-provided nutrients
+        is pivotal for their successful colonization of plants.
+      notes: Phyllosphere colonization depends on efficient utilization of limited plant-provided methanol
+        and nutrients (PMID:39013920).
+  - edge_id: phyllosphere_regime_selects_for_methylobacterium_methylorubrum_guild
+    subject: phyllosphere_fluctuating_methanol_succinate_and_oxidative_desiccation_stress
+    predicate: selects for
+    object: phyllosphere_methylobacterium_methylorubrum_extorquens_epiphytic_guild
+    description: Plant-emitted methanol and aerial surface conditions select for ubiquitous Methylobacterium
+      and Methylorubrum extorquens epiphytes.
+    evidence:
+    - reference: PMID:16926146
+      snippet: Aerial plant surfaces are colonized by diverse bacteria such as the ubiquitous Methylobacterium
+        spp.
+      notes: Methylobacterium spp. ubiquitously colonize aerial plant surfaces (PMID:16926146).
+    - reference: PMID:39013920
+      snippet: The methylotrophic capabilities of Methylobacterium/Methylorubrum play a crucial role in
+        this process.
+      notes: Methylotrophic capabilities select for Methylobacterium/Methylorubrum in the plant phyllosphere
+        (PMID:39013920).
+  - edge_id: phyllosphere_methylobacterium_expresses_phyr_regulon_prs_and_cstr
+    subject: phyllosphere_methylobacterium_methylorubrum_extorquens_epiphytic_guild
+    predicate: expresses
+    object: methylobacterium_phyr_kate_soda_ahpc_prs_and_cstr_efga_ttmr_system
+    description: Leaf-colonizing Methylobacterium/Methylorubrum extorquens induces PhyR and oxidative
+      stress proteins (KatE, SodA, AhpC, Ohr, Trx, Dps) in planta and utilizes phosphoribosylpyrophosphate
+      synthetase and CstR regulatory networks.
+    evidence:
+    - reference: PMID:16926146
+      snippet: In addition, we detected a previously undescribed type of two-domain response regulator,
+        named PhyR, that consists of an N-terminal sigma factor (RpoE)-like domain and a C-terminal receiver
+        domain and is predicted to be present in essentially all Alphaproteobacteria. The importance of
+        PhyR was demonstrated through phenotypic tests of a deletion mutant strain shown to be deficient
+        in plant colonization. Among PhyR-regulated gene products, we found a number of general stress
+        proteins and, in particular, proteins known to be involved in the oxidative stress response such
+        as KatE, SodA, AhpC, Ohr, Trx, and Dps.
+      notes: Methylobacterium extorquens induces PhyR and PhyR-regulated oxidative stress enzymes KatE,
+        SodA, AhpC, Ohr, Trx, and Dps during epiphytic leaf growth (PMID:16926146).
+    - reference: PMID:39013920
+      snippet: A mutation in the phosphoribosylpyrophosphate synthetase gene is identified, which converts
+        it into a metabolic valve. This valve redirects limited C1-carbon resources towards the synthesis
+        of biomass by up-regulating a non-essential phosphoketolase pathway.
+      notes: Phosphoribosylpyrophosphate synthetase acts as a metabolic valve controlling C1-carbon flux
+        and phosphoketolase pathway expression in Methylorubrum extorquens AM1 (PMID:39013920).
+  - edge_id: phyr_prs_cstr_catalyze_epiphytic_colonization_and_stress_metabolic_balance
+    subject: methylobacterium_phyr_kate_soda_ahpc_prs_and_cstr_efga_ttmr_system
+    predicate: catalyzes
+    object: epiphytic_oxidative_stress_protection_c1_biomass_redirect_and_plant_growth_promotion
+    description: PhyR, Prs, and CstR govern epiphytic leaf colonization, low-methanol biomass accumulation
+      and plant growth promotion, and stress-resilient transitions between succinate and methanol.
+    evidence:
+    - reference: PMID:39013920
+      snippet: These newly acquired bacterial traits demonstrate superior colonization capabilities, even
+        at low abundance, leading to increased growth of inoculated plants.
+      notes: Prs metabolic-valve redirection of C1 carbon enhances phyllosphere colonization and promotes
+        host plant growth (PMID:39013920).
+    - reference: PMID:42427639
+      snippet: Altered levels of NAD+/NADH across conditions, improved growth under acidic pH, and diminished
+        ATP and increased mortality under heightened pH together support a model where CstR is responsible
+        for coordinating cell signaling to manage the balance between growth and maintaining stress resilience.
+      notes: CstR coordinates cellular NAD+/NADH balance, carbon-source transition dynamics, and stress
+        resilience in phyllosphere Methylobacterium extorquens PA1 (PMID:42427639).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added phyllosphere_diurnal_stress_methanol_succinate_methylobacterium_phyr_prs_cstr_colonization
+    mechanism graph for phyllosphere (habitatmech:GOLD.7406232b7e) backed by PMID:16926146, PMID:39013920,
+    and PMID:42427639.
+  llm_assisted: true
