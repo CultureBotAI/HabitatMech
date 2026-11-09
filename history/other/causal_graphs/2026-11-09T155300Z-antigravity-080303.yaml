@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/subgingival_dental_plaque.yaml
+  slug: subgingival_dental_plaque
+session:
+  id: 2026-11-09T155300Z-antigravity-080303
+  timestamp: '2026-11-09T15:53:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2331
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Replace PMID:14683427 snippet on UniProtKB:B2RLK2 in subgingival_dental_plaque.yaml with verbatim abstract quote
+  details: 'Replaced the non-verbatim PMID:14683427 snippet on UniProtKB:B2RLK2 (KGP_PORG3, $.causal_graphs[0].nodes[3].protein_examples[2].evidence[0]) in curation/causal_graphs/subgingival_dental_plaque.yaml with the exact verbatim sentence from references_cache/PMID_14683427.md ("Kgp proteolytic activity is essential for rapid hydrolysis of hemoglobin and it is suggested therefore that a major role of the RgpA-Kgp complexes is in vascular disruption and the binding and rapid degradation of hemoglobin for heme assimilation by P. gingivalis."), regenerated data/habitats/host_associated/subgingival_dental_plaque.yaml and pages/habitats/subgingival-dental-plaque-uberon-0016484.html, and verified with kg_microbe_evidence --strict (issue #2331).'
