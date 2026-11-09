@@ -1,0 +1,138 @@
+identifier: habitatmech:GOLD.242c0c0793
+causal_graphs:
+- graph_id: hospital_wastewater_sub_mic_carbapenem_disinfectant_enterobacterales_blakpc_blandm_blavim_transfer
+  title: Hospital wastewater sub-MIC carbapenem and chlorine disinfectant regime, carbapenem-resistant
+    Enterobacterales and sewer-biofilm guild selection, and blaNDM/blaKPC/blaVIM/blaOXA-48/intI1/OmpK35-36
+    resistance dissemination mechanism
+  description: Hospital wastewater and sewer-pipe effluents combine clinical pathogen loads with sub-inhibitory
+    concentrations of beta-lactam and carbapenem antibiotics (such as imipenem) and chlorine-containing
+    hospital disinfectants. This selective regime enriches multidrug-resistant and carbapenem-resistant
+    Enterobacterales (Klebsiella pneumoniae including ST11, Escherichia coli, and Citrobacter freundii)
+    as well as sewer-pipe biofilm colonizers (Aeromonas, Pseudomonas, Stenotrophomonas, and Acinetobacter).
+    These populations carry and express acquired carbapenemase genes (blaNDM-1, blaKPC-2, blaVIM, blaOXA-48,
+    blaGES) alongside class 1 integron integrase (intI1) on conjugative IncX3, IncFII, and 80-kb plasmids
+    and ISKpn19 composite transposons, often combined with outer-membrane porin OmpK35 and OmpK36 loss,
+    driving elevated carbapenem minimum inhibitory concentrations, disinfectant-tolerant biofilm persistence,
+    and interspecies horizontal plasmid transfer.
+  nodes:
+  - node_id: hospital_wastewater
+    label: hospital wastewater
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.242c0c0793
+    description: Untreated or partially treated liquid effluent and sewer-pipe drainage discharged from
+      clinical hospital facilities.
+  - node_id: hospital_effluent_sub_mic_carbapenem_and_chlorine_disinfectant_selection
+    label: sub-MIC carbapenem (imipenem/meropenem) and chlorine-containing disinfectant selective regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hospital sewage and pipe-biofilm chemical milieu containing sub-inhibitory concentrations
+      of carbapenems and residual chlorine-containing hospital disinfectants.
+  - node_id: hospital_sewage_carbapenem_resistant_enterobacterales_and_sewer_biofilm_guild
+    label: carbapenem-resistant Klebsiella pneumoniae, Escherichia coli, Citrobacter freundii, and Aeromonas/Pseudomonas
+      biofilm guild
+    node_type: COMMUNITY
+    description: Hospital wastewater microbial assemblage enriched in carbapenem-resistant Enterobacterales
+      (Klebsiella pneumoniae, Escherichia coli, Citrobacter freundii) and imipenem-resistant pipe-biofilm
+      Aeromonas, Pseudomonas, Stenotrophomonas, and Acinetobacter.
+  - node_id: plasmid_blandm1_blakpc2_blavim_blaoxa48_inti1_and_ompk35_ompk36_porin_system
+    label: carbapenemases blaNDM-1, blaKPC-2, blaVIM, and blaOXA-48, class 1 integron integrase intI1,
+      ISKpn19 transposon, and outer-membrane porins OmpK35/OmpK36
+    node_type: GENE_OR_PROTEIN
+    description: Plasmid- and transposon-borne carbapenemase genes (blaNDM-1, blaKPC-2, blaVIM, blaOXA-48,
+      blaGES), class 1 integron integrase gene intI1, ISKpn19 insertion sequences, and Klebsiella pneumoniae
+      outer-membrane pore proteins OmpK35 and OmpK36.
+  - node_id: conjugative_carbapenemase_plasmid_transfer_and_disinfectant_resistant_biofilm_persistence
+    label: interspecies conjugative carbapenemase plasmid transfer, elevated carbapenem MICs, and chlorine-resistant
+      biofilm persistence
+    node_type: COMMUNITY_PROCESS
+    description: Horizontal conjugative dissemination of carbapenemase-encoding plasmids across sewage
+      bacteria coupled with high-level carbapenem resistance and chlorine-disinfectant-tolerant biofilm
+      formation.
+  edges:
+  - edge_id: hospital_wastewater_maintains_sub_mic_carbapenem_and_disinfectant_regime
+    subject: hospital_wastewater
+    predicate: maintains
+    object: hospital_effluent_sub_mic_carbapenem_and_chlorine_disinfectant_selection
+    description: Hospital effluents expose sewer-pipe biofilms and sewage bacteria to sub-MIC carbapenem
+      concentrations and chlorine-containing hospital disinfectants.
+    evidence:
+    - reference: PMID:30530220
+      snippet: The predicted environmental concentration of imipenem in the hospital effluent was 3.16
+        μg/L, suggesting that biofilm bacteria are subjected to sub-MICs of imipenem within the effluent.
+      notes: Hospital effluent subjects sewer-pipe biofilm bacteria to sub-MIC concentrations of imipenem
+        with a resistance hazard quotient >1.0 (PMID:30530220).
+    - reference: PMID:37195919
+      snippet: The results of the study showed that antibiotic-resistant isolates, especially CRKP, could
+        resist disinfectants in hospital wastewater, and improper treatment of hospital wastewater may
+        lead to the spread of drug-resistant bacteria and their genes.
+      notes: Hospital sewage exposes carbapenem-resistant Klebsiella pneumoniae to chlorine-containing
+        disinfectants (PMID:37195919).
+  - edge_id: hospital_effluent_regime_selects_for_cre_and_sewer_biofilm_bacteria
+    subject: hospital_effluent_sub_mic_carbapenem_and_chlorine_disinfectant_selection
+    predicate: selects for
+    object: hospital_sewage_carbapenem_resistant_enterobacterales_and_sewer_biofilm_guild
+    description: Hospital wastewater selects for carbapenem-resistant Escherichia coli, Klebsiella pneumoniae,
+      Citrobacter freundii, and imipenem-resistant Aeromonas, Pseudomonas, Stenotrophomonas, and Acinetobacter
+      in sewer biofilms.
+    evidence:
+    - reference: PMID:30530220
+      snippet: Selective growth of bacteria from 14-day old biofilms formed in the pipe sewer showed that
+        22.1% of the isolates were imipenem-resistant and identified as Aeromonas (n = 23), Pseudomonas
+        (n = 10), Stenotrophomonas (n = 4) and Acinetobacter (n = 1).
+      notes: Hospital sewer-pipe biofilms select for imipenem-resistant Aeromonas, Pseudomonas, Stenotrophomonas,
+        and Acinetobacter isolates (PMID:30530220).
+    - reference: PMID:38114055
+      snippet: From 68 grab wastewater samples, CRB were detected only in 16 samples, which included eight
+        hospital wastewater, and four each from untreated municipal sewage and river water. A total of
+        25 CRB isolates were detected with dominance of E. coli (44.0%) and K. pneumoniae (24.0%).
+      notes: Hospital wastewater is the primary reservoir selecting for carbapenem-resistant Escherichia
+        coli and Klebsiella pneumoniae (PMID:38114055).
+  - edge_id: hospital_sewage_guild_expresses_blandm_blakpc_blavim_inti1_and_ompk_loss
+    subject: hospital_sewage_carbapenem_resistant_enterobacterales_and_sewer_biofilm_guild
+    predicate: expresses
+    object: plasmid_blandm1_blakpc2_blavim_blaoxa48_inti1_and_ompk35_ompk36_porin_system
+    description: Hospital wastewater isolates carry and express blaNDM-1, blaKPC-2, blaVIM, blaOXA-48,
+      and intI1 on conjugative plasmids and transposons alongside OmpK35/OmpK36 porin loss.
+    evidence:
+    - reference: PMID:38114055
+      snippet: The majority of the isolates harbored blaNDM-1 (76.0%), followed by blaOXA (36.0%) and
+        blaKPC (20.0%) genes. Hospital wastewater majorly contributed to the presence of blaNDM-1, blaKPC,
+        and blaOXA along with intI1 genes compared to river water and untreated municipal sewage, especially
+        during the winter season.
+      notes: Hospital wastewater isolates harbor blaNDM-1, blaOXA, blaKPC, and class 1 integron integrase
+        intI1 genes (PMID:38114055).
+    - reference: PMID:37195919
+      snippet: Some antibiotic resistance genes were detected, the most prevalent carbapenemase gene was
+        blaKPC, and 16 resistance genes were associated with other antibiotics. In addition, 3 (3.23%)
+        CRKP isolates demonstrated loss of OmpK-35 and 2 (2.15%) demonstrated loss of OmpK-36.
+      notes: Hospital sewage CRKP isolates harbor blaKPC on IncFII replicons and exhibit loss of outer-membrane
+        porins OmpK35 and OmpK36 (PMID:37195919).
+  - edge_id: carbapenemase_plasmids_catalyze_conjugative_transfer_and_high_level_resistance
+    subject: plasmid_blandm1_blakpc2_blavim_blaoxa48_inti1_and_ompk35_ompk36_porin_system
+    predicate: catalyzes
+    object: conjugative_carbapenemase_plasmid_transfer_and_disinfectant_resistant_biofilm_persistence
+    description: Plasmid-borne blaNDM-1, blaKPC-2, and blaVIM mediate interspecies conjugative transfer
+      and high-level carbapenem resistance in disinfectant-tolerant hospital sewage biofilms.
+    evidence:
+    - reference: PMID:27465241
+      snippet: The strain carried nine genes encoding β-lactamases including two carbapenemase genes,
+        blaNDM-1 and blaKPC-2. blaNDM-1 was carried on an IncX3 plasmid, which was identical to a plasmid
+        found in a local Escherichia coli, suggesting interspecies horizontal transfer. blaKPC-2 was bracketed
+        by two copies of insertion sequence ISKpn19, which could form a composite transposon with the
+        potential to mobilize blaKPC-2, on a new type of plasmid. The coexistence of blaNDM-1 and blaKPC-2
+        conferred higher levels of resistance to carbapenems compared with blaNDM-1 or blaKPC-2 alone.
+      notes: Coexisting IncX3 plasmid-borne blaNDM-1 and ISKpn19-bracketed blaKPC-2 in hospital sewage
+        Citrobacter freundii drive interspecies horizontal transfer and elevated carbapenem resistance
+        (PMID:27465241).
+    - reference: PMID:30530220
+      snippet: In vitro transformation assays evidenced the presence of blaVIM and blaNDM on plasmids
+        with the blaVIM harboring 80 Kb plasmid having conjugative capacity.
+      notes: Plasmid-borne blaVIM and blaNDM in hospital sewer biofilm isolates undergo horizontal plasmid
+        transfer (PMID:30530220).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added hospital_wastewater_sub_mic_carbapenem_disinfectant_enterobacterales_blakpc_blandm_blavim_transfer
+    mechanism graph for hospital_wastewater (habitatmech:GOLD.242c0c0793) backed by PMID:30530220, PMID:27465241,
+    PMID:37195919, and PMID:38114055.
+  llm_assisted: true

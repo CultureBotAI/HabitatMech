@@ -1,0 +1,130 @@
+identifier: UBERON:0007311
+causal_graphs:
+- graph_id: sputum_cf_bronchiectasis_airway_mucus_pseudomonas_muca_algu_algd_lasr_lasb_biofilm_viscoelasticity
+  title: Sputum chronic airway mucus and iron-limited inflammatory milieu, mucoid and MDR Pseudomonas
+    aeruginosa selection, and mucA/algU/algD/lasR/lasB/toxA alginate-protease-pyoverdine viscoelastic
+    biofilm mechanism
+  description: Expectorated and lower-respiratory-tract sputum in patients with cystic fibrosis (CF) and
+    non-CF bronchiectasis constitutes a nutrient-rich yet iron-restricted, neutrophil-infiltrated, antibiotic-exposed
+    mucus matrix. Chronic residence in this sputum niche selects for persistent and multidrug-resistant
+    Pseudomonas aeruginosa populations, including mucoid variants carrying loss-of-function mutations
+    in the anti-sigma factor gene mucA. Derepression of the alternative sigma factor algU (sigma22) together
+    with quorum-sensing regulation via lasR drives co-accumulation of alginate biosynthesis transcripts
+    (algD), elastase (lasB), LasA protease (lasA), exotoxin A (toxA), and pyoverdine (PVD) siderophore
+    biosynthesis, generating alginate-encased biofilms that increase sputum elasticity, viscosity, and
+    stiffness and impair mucociliary clearance.
+  nodes:
+  - node_id: sputum__6045ff33
+    label: sputum
+    node_type: HABITAT
+    grounding: UBERON:0007311
+    description: Respiratory tract mucus secretion expectorated or sampled from the lower airways, comprising
+      mucins, host inflammatory cells, extracellular DNA, and airway microbiota.
+  - node_id: chronic_airway_sputum_iron_restriction_neutrophil_and_antibiotic_selection_milieu
+    label: chronic airway mucus iron-restricted, inflammatory, and antibiotic-exposed sputum milieu
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Persistent lower-airway mucus environment in cystic fibrosis and bronchiectasis characterized
+      by iron limitation for bacterial growth, neutrophil inflammation, and recurrent antibiotic exposure.
+  - node_id: sputum_mucoid_muca_mutant_and_mdr_pseudomonas_aeruginosa_populations
+    label: mucoid (mucA-mutant) and multidrug-resistant Pseudomonas aeruginosa sputum populations
+    node_type: COMMUNITY
+    description: Chronic respiratory sputum populations of Pseudomonas aeruginosa enriched for mucA-mutated
+      mucoid phenotypes and multidrug-resistant biofilm-forming clinical strains.
+  - node_id: pseudomonas_muca_algu_algd_lasr_lasb_lasa_toxa_and_pyoverdine_system
+    label: anti-sigma factor MucA (mucA), AlgU (algU), GDP-mannose dehydrogenase AlgD (algD), quorum-sensing
+      regulator LasR (lasR), elastase LasB (lasB), protease LasA (lasA), exotoxin A (toxA), and pyoverdine
+    node_type: GENE_OR_PROTEIN
+    description: Pseudomonas aeruginosa alginate regulatory and biosynthetic proteins (mucA, algU, algD),
+      quorum-sensing transcriptional activator LasR (lasR), secreted proteases LasB (lasB) and LasA (lasA),
+      exotoxin A (toxA), and siderophore pyoverdine (PVD).
+  - node_id: alginate_exopolysaccharide_overproduction_iron_scavenging_and_sputum_viscoelastic_stiffening
+    label: alginate biofilm overproduction, LasB/LasA/pyoverdine virulence, and increased sputum viscoelasticity
+      and stiffness
+    node_type: COMMUNITY_PROCESS
+    description: Alginate operon overexpression, siderophore-mediated iron uptake, and coordinated protease
+      expression that establish chronic mucoid biofilms and elevate sputum elasticity, viscosity, and
+      stiffness.
+  edges:
+  - edge_id: sputum_maintains_chronic_airway_iron_restricted_inflammatory_milieu
+    subject: sputum__6045ff33
+    predicate: maintains
+    object: chronic_airway_sputum_iron_restriction_neutrophil_and_antibiotic_selection_milieu
+    description: Sputum in chronic pulmonary infections presents an iron-demanding, inflammatory airway
+      mucus environment under strong antimicrobial selection.
+    evidence:
+    - reference: PMID:36466220
+      snippet: In cystic fibrosis individuals, chronic lung infections and hospital-acquired pneumonia
+        are caused by Pseudomonas aeruginosa. P. aeruginosa generates siderophores such as pyoverdine
+        (PVD) as iron uptake systems to cover its needs of iron ions for growth and infection.
+      notes: Pulmonary sputum infections require siderophore-mediated iron acquisition by Pseudomonas
+        aeruginosa to support bacterial growth (PMID:36466220).
+    - reference: PMID:9317008
+      snippet: Pseudomonas aeruginosa causes a chronic infection in the lungs of individuals with cystic
+        fibrosis.
+      notes: Cystic fibrosis lower-airway sputum sustains chronic Pseudomonas aeruginosa colonization
+        (PMID:9317008).
+  - edge_id: sputum_milieu_selects_for_mucoid_muca_mutant_and_mdr_pseudomonas_aeruginosa
+    subject: chronic_airway_sputum_iron_restriction_neutrophil_and_antibiotic_selection_milieu
+    predicate: selects for
+    object: sputum_mucoid_muca_mutant_and_mdr_pseudomonas_aeruginosa_populations
+    description: Chronic sputum colonization in cystic fibrosis and bronchiectasis selects for mucoid
+      P. aeruginosa strains carrying mucA mutations as well as multidrug-resistant clinical isolates.
+    evidence:
+    - reference: PMID:22842599
+      snippet: In our study, 119 strains of P. aeruginosa were isolated from sputa of 96 cystic fibrosis
+        patients and 84/119 showed nonmucoid phenotype, while 35/119 showed mucoid phenotypes. mucA gene
+        was amplified and sequenced in all strains revealing mutations in 29/35 mucoid strains (82%) and
+        in one non-mucoid strain.
+      notes: Sputum of cystic fibrosis patients selects for mucoid P. aeruginosa strains, 82% of which
+        carry mutations in mucA (PMID:22842599).
+    - reference: PMID:31212120
+      snippet: Pseudomonas aeruginosa could acquire a mucoid phenotype due to mutations in mucA (mucoid
+        Pseudomonas aeruginosa - mPA) that is a hallmark of poor prognosis in patients with bronchiectasis.
+      notes: Mutations in mucA generate the mucoid P. aeruginosa phenotype isolated from bronchiectasis
+        sputum (PMID:31212120).
+  - edge_id: sputum_pseudomonas_expresses_algu_algd_lasr_lasb_lasa_and_toxa
+    subject: sputum_mucoid_muca_mutant_and_mdr_pseudomonas_aeruginosa_populations
+    predicate: expresses
+    object: pseudomonas_muca_algu_algd_lasr_lasb_lasa_toxa_and_pyoverdine_system
+    description: Sputum P. aeruginosa populations express algU-regulated alginate synthesis genes, co-accumulate
+      algD, lasB, lasA, and toxA transcripts in situ, and harbor lasR to produce pyoverdine.
+    evidence:
+    - reference: PMID:9317008
+      snippet: We measured the transcript accumulation of algD, a marker of alginate, toxA, the structural
+        gene for exotoxin A, lasB, the structural gene for elastase, and lasA, the structural gene for
+        LasA protease, from the sputum bacterial populations of 23 patients. In the 131 samples tested,
+        we frequently detected transcripts from the four genes.
+      notes: Sputum P. aeruginosa populations actively accumulate algD, toxA, lasB, and lasA transcripts
+        in vivo with positive correlation between algD and lasB/lasA (PMID:9317008).
+    - reference: PMID:36466220
+      snippet: Virulence factors of ten multidrug resistant isolates of P. aeruginosa, such as biofilm
+        generation, PVD production, and lasR gene were detected. From results, all 10P. aeruginosa isolates
+        can produce biofilm, PVD, and contain lasR gene.
+      notes: Multidrug-resistant sputum P. aeruginosa isolates harbor the lasR quorum-sensing gene and
+        produce pyoverdine and biofilms (PMID:36466220).
+  - edge_id: sputum_pseudomonas_genes_catalyze_alginate_overproduction_and_viscoelastic_stiffening
+    subject: pseudomonas_muca_algu_algd_lasr_lasb_lasa_toxa_and_pyoverdine_system
+    predicate: catalyzes
+    object: alginate_exopolysaccharide_overproduction_iron_scavenging_and_sputum_viscoelastic_stiffening
+    description: Loss-of-function mucA mutations and algU/algD activation drive alginate exopolysaccharide
+      overproduction, increasing sputum elasticity, viscosity, and stiffness.
+    evidence:
+    - reference: PMID:22842599
+      snippet: Alginate biosynthesis in Pseudomonas aeruginosa is a highly regulated process in which
+        algU and mucA genes are key elements. Mutations in mucA gene determine alginate operon overexpression
+        and exopolysaccharide overproduction.
+      notes: Mutations in mucA alter algU expression and drive alginate operon overexpression and exopolysaccharide
+        overproduction enabling survival in CF lungs (PMID:22842599).
+    - reference: PMID:31212120
+      snippet: Compared with the NOR group, the mPA group showed higher elasticity (median 10.30 vs. 5.70,
+        p = 0.023), viscosity (2.40 vs. 1.50, p = 0.039), and stiffness (10.70 vs. 6.00, p = 0.024).
+      notes: Mucoid P. aeruginosa colonization significantly increases the elasticity, viscosity, and
+        stiffness of expectorated sputum (PMID:31212120).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added sputum_cf_bronchiectasis_airway_mucus_pseudomonas_muca_algu_algd_lasr_lasb_biofilm_viscoelasticity
+    mechanism graph for sputum__6045ff33 (UBERON:0007311) backed by PMID:22842599, PMID:9317008, PMID:36466220,
+    and PMID:31212120.
+  llm_assisted: true

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-09T064500Z-antigravity-080201
+  timestamp: '2026-11-09T06:45:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 8 Stage 2 habitats
+  details: 'Reviewed all 93 existing causal-graph overlays in curation/causal_graphs/ and
+    authored 10 new snippet-verified causal-graph overlays (93 -> 103 total): carbonate.yaml
+    (habitatmech:GOLD.1208484062, PMID:20080654, PMID:21791580, PMID:26379636, PMID:35950875),
+    oil_seep.yaml (ENVO:00002063, PMID:17882164, PMID:20090951, PMID:16204508),
+    deepwater_brine_lake.yaml (habitatmech:GOLD.35b68dbb27, PMID:39910644, PMID:26657763,
+    PMID:26192212, PMID:32847782), rock_dwelling_endoliths.yaml (habitatmech:GOLD.9de4a94da3,
+    PMID:33142998, PMID:35744716, PMID:35992689, PMID:38372512), fumarole.yaml
+    (ENVO:00000216, PMID:40626421, PMID:37221165, PMID:38269599, PMID:15168612),
+    sputum__6045ff33.yaml (UBERON:0007311, PMID:22842599, PMID:9317008, PMID:36466220,
+    PMID:31212120), phyllosphere.yaml (habitatmech:GOLD.7406232b7e, PMID:16926146,
+    PMID:39013920, PMID:42427639), subgingival_dental_plaque.yaml (UBERON:0016484,
+    PMID:14683427, PMID:19114547, PMID:25353706, PMID:14553921), hospital_wastewater.yaml
+    (habitatmech:GOLD.242c0c0793, PMID:30530220, PMID:27465241, PMID:37195919,
+    PMID:38114055), and fermented_fish.yaml (habitatmech:GOLD.87da4c5e8b, PMID:37171680,
+    PMID:30323792, PMID:41183495).'

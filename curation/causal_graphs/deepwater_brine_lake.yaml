@@ -1,0 +1,143 @@
+identifier: habitatmech:GOLD.35b68dbb27
+causal_graphs:
+- graph_id: deepwater_brine_lake_halocline_sulfurimonas_nitromaritima_methanohalophilus_mcra_dsra_ectoine_cycling
+  title: Deep-sea brine pool hypersaline anoxic halocline gradient, Sulfurimonas/Sulfurovum, Candidatus
+    Nitromaritima, and Methanohalophilus guild selection, and mcrA/dsrA/ectoine/rTCA biogeochemical cycling
+    mechanism
+  description: Oceanic deep hypersaline anoxic basins (DHABs, or deep-sea brine pools) in the Red Sea
+    and Eastern Mediterranean Sea feature sharp brine-seawater interfaces (haloclines) with extreme salinity
+    (up to 155 PSU or 240 g L-1 NaCl), hydrostatic pressure (up to 35 MPa), elevated temperature (up to
+    52 degrees C in Atlantis II Deep), deoxygenation, and high dissolved sulfide. These physicochemical
+    gradients select for stratified chemolithoautotrophic sulfide-oxidizing Campylobacterota (Sulfurimonas
+    and Sulfurovum), halotolerant nitrite-oxidizing Candidatus Nitromaritima RS, Deltaproteobacteria sulfate-reducing
+    bacteria, and piezophilic methylotrophic methanogens such as Methanohalophilus profundi. These guilds
+    encode and express methyl-coenzyme M reductase (mcrA), dissimilatory sulfite reductase (dsrA), nitrate
+    and nitrite reductases, reductive tricarboxylic acid (rTCA) cycle enzymes, and ectoine/hydroxyectoine
+    biosynthesis enzymes to couple sulfide and nitrite oxidation with carbon fixation, methylotrophic
+    methanogenesis, sulfate reduction, and compatible-solute osmoprotection across the brine-seawater
+    interface.
+  nodes:
+  - node_id: deepwater_brine_lake
+    label: deep-sea brine pool
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.35b68dbb27
+    description: Seafloor depression filled with dense hypersaline anoxic brine separated from overlying
+      seawater by a steep physicochemical halocline (deep hypersaline anoxic basin, DHAB).
+  - node_id: brine_seawater_interface_hypersaline_sulfidic_anoxic_halocline
+    label: brine-seawater interface hypersaline, sulfidic, high-pressure oxycline and halocline gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Steep transition zone from overlying seawater to anoxic hypersaline brine characterized
+      by salinities of 91-155 PSU (up to 240 g L-1 NaCl), elevated hydrostatic pressure, low oxygen, and
+      high sulfide.
+  - node_id: dhab_sulfurimonas_sulfurovum_nitromaritima_and_methanohalophilus_guild
+    label: Sulfurimonas/Sulfurovum, Candidatus Nitromaritima RS, Deltaproteobacteria SRB, and Methanohalophilus
+      profundi guild
+    node_type: COMMUNITY
+    description: Stratified brine-seawater interface and brine community comprising sulfide-oxidizing
+      Sulfurimonas and Sulfurovum, nitrite-oxidizing Candidatus Nitromaritima RS, Deltaproteobacteria
+      sulfate reducers, and methylotrophic Methanohalophilus methanogens.
+  - node_id: dhab_mcra_dsra_nitrite_oxidoreductase_rtca_and_ectoine_biosynthesis_enzymes
+    label: methyl-coenzyme M reductase (mcrA), dissimilatory sulfite reductase (dsrA), nitrate/nitrite
+      reductases, rTCA enzymes, and ectoine/hydroxyectoine synthases
+    node_type: GENE_OR_PROTEIN
+    description: Functional marker genes mcrA and dsrA, nitrate and nitrite reductases, reductive TCA
+      cycle carbon-fixation enzymes, and ectoine/hydroxyectoine and proline/glutamate osmoprotectant biosynthesis
+      pathways.
+  - node_id: halocline_chemolithoautotrophic_c_n_s_cycling_and_methylotrophic_methanogenesis
+    label: halocline chemolithoautotrophic sulfide/nitrite oxidation, rTCA CO2 fixation, methylotrophic
+      methanogenesis, and osmoprotection
+    node_type: COMMUNITY_PROCESS
+    description: Coupled aerobic/nitrate-dependent sulfide oxidation and rTCA carbon fixation, nitrite
+      oxidation, sulfate reduction, methylamine/methanol methanogenesis, and ectoine-mediated osmoregulation
+      across deep-sea brine interfaces.
+  edges:
+  - edge_id: deepwater_brine_lake_maintains_hypersaline_sulfidic_halocline
+    subject: deepwater_brine_lake
+    predicate: maintains
+    object: brine_seawater_interface_hypersaline_sulfidic_anoxic_halocline
+    description: Deep-sea brine pools maintain steep brine-seawater interface gradients in salinity, oxygen,
+      temperature, hydrostatic pressure, and sulfide.
+    evidence:
+    - reference: PMID:26192212
+      snippet: Oceanic deep hypersaline anoxic basins (DHABs) are characterized by drastic changes in
+        physico-chemical conditions in the transition from overlaying seawater to brine body.
+      notes: Deep-sea anoxic brines maintain sharp physicochemical transitions across the brine-seawater
+        interface (PMID:26192212).
+    - reference: PMID:39910644
+      snippet: Metabolic reconstructions from metagenome-assembled genomes (MAGs) of sulfide-oxidizing
+        Campylobacterota were conducted at 10 cm spatial resolution within the halocline of the brine-seawater
+        interface (BSI, salinity 91-155 PSU) of the 1466 m deep sulfidic Kebrit Deep in the Red Sea.
+      notes: The brine-seawater interface of Kebrit Deep spans a 91-155 PSU sulfidic halocline at 1466
+        m depth (PMID:39910644).
+  - edge_id: halocline_selects_for_sulfurimonas_nitromaritima_and_methanohalophilus
+    subject: brine_seawater_interface_hypersaline_sulfidic_anoxic_halocline
+    predicate: selects for
+    object: dhab_sulfurimonas_sulfurovum_nitromaritima_and_methanohalophilus_guild
+    description: Hypersaline sulfidic brine-seawater interfaces select for specialized Sulfurimonas, Sulfurovum,
+      Candidatus Nitromaritima RS, Deltaproteobacteria SRB, and Methanohalophilus profundi.
+    evidence:
+    - reference: PMID:26657763
+      snippet: Using phylogenetics, single-cell genomics and metagenomic fragment recruitment approaches,
+        we document here that these Nitrospina-like bacteria, designated as Candidatus Nitromaritima RS,
+        are not only highly diverged from the type species Nitrospina gracilis (pairwise genome identity
+        of 69%) but are also ubiquitous in the deeper, highly saline interface layers (up to 11.2% salinity)
+        with temperatures of up to 52 °C.
+      notes: High-salinity, warm brine-seawater interfaces of Atlantis II Deep select for Candidatus Nitromaritima
+        RS constituting up to one-third of bacterial 16S rRNA sequences (PMID:26657763).
+    - reference: PMID:32847782
+      snippet: A novel anaerobic methylotrophic halophilic methanogen strain SLHTYROT was isolated from
+        a deep hypersaline anoxic basin called "Tyro" located in the Eastern Mediterranean Sea.
+      notes: Deep hypersaline anoxic basins select for halophilic piezophilic Methanohalophilus profundi
+        (PMID:32847782).
+  - edge_id: dhab_guild_expresses_mcra_dsra_reductases_and_ectoine_genes
+    subject: dhab_sulfurimonas_sulfurovum_nitromaritima_and_methanohalophilus_guild
+    predicate: expresses
+    object: dhab_mcra_dsra_nitrite_oxidoreductase_rtca_and_ectoine_biosynthesis_enzymes
+    description: Brine interface communities encode mcrA, dsrA, nitrate/nitrite reductases, rTCA carbon-fixation
+      genes, and ectoine/hydroxyectoine biosynthesis genes.
+    evidence:
+    - reference: PMID:26192212
+      snippet: Here, we evaluated the relative abundance of Bacteria and Archaea using quantitative PCR
+        and conducted phylogenetic analyses of nearly full-length 16S rRNA genes as well as functional
+        marker genes encoding the alpha subunits of methyl-coenzyme M reductase (mcrA) and dissimilatory
+        sulfite reductase (dsrA).
+      notes: Red Sea brine-seawater interface communities harbor diverse mcrA and dsrA functional marker
+        genes (PMID:26192212).
+    - reference: PMID:26657763
+      snippet: Although both lack acidic proteomes synonymous with extreme halophiles, the pangenome of
+        Ca. Nitromaritima RS specifically encodes enzymes with osmoregulatory and thermoprotective roles
+        (i.e., ectoine/hydroxyectoine biosynthesis) and of thermodynamic importance (i.e., nitrate and
+        nitrite reductases).
+      notes: Candidatus Nitromaritima RS encodes ectoine/hydroxyectoine biosynthesis enzymes and nitrate/nitrite
+        reductases (PMID:26657763).
+  - edge_id: dhab_enzymes_catalyze_halocline_c_n_s_cycling_and_methanogenesis
+    subject: dhab_mcra_dsra_nitrite_oxidoreductase_rtca_and_ectoine_biosynthesis_enzymes
+    predicate: catalyzes
+    object: halocline_chemolithoautotrophic_c_n_s_cycling_and_methylotrophic_methanogenesis
+    description: rTCA, sulfide-oxidizing, ectoine-synthesizing, and mcrA enzymes drive primary production,
+      nitrate/oxygen-coupled sulfide oxidation, osmoprotection, and methylotrophic methanogenesis in deep-sea
+      brine pools.
+    evidence:
+    - reference: PMID:39910644
+      snippet: They are stratified along the BSI and utilise the reductive tricarboxylic acid cycle to
+        fix carbon dioxide, acting as primary producers. Their energy generation processes include aerobic
+        or anaerobic-nitrate-dependent sulfide oxidation, as well as hydrogen oxidation. In addition to
+        the osmoprotectant pathways commonly observed in Campylobacterota, such as the synthesis and uptake
+        of proline and glutamate, the two Kebrit Deep Sulfurovum species exhibit genomic signatures for
+        ectoine synthesis, further aiding their adaptation to high salinity.
+      notes: Kebrit Deep Sulfurimonas and Sulfurovum fix CO2 via the rTCA cycle driven by sulfide and
+        hydrogen oxidation while synthesizing proline, glutamate, and ectoine for osmoprotection (PMID:39910644).
+    - reference: PMID:32847782
+      snippet: Strain SLHTYROT was methylotrophic methanogen able to use methylated compounds (trimethylamine,
+        dimethylamine, monomethylamine and methanol). Strain SLHTYROT was able to grow at in situ hydrostatic
+        pressure and temperature conditions (35 MPa, 14 °C).
+      notes: Methanohalophilus profundi catalyzes methylotrophic methanogenesis from methylated amines
+        and methanol under in situ DHAB pressure and salinity (PMID:32847782).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added deepwater_brine_lake_halocline_sulfurimonas_nitromaritima_methanohalophilus_mcra_dsra_ectoine_cycling
+    mechanism graph for deepwater_brine_lake (habitatmech:GOLD.35b68dbb27) backed by PMID:39910644, PMID:26657763,
+    PMID:26192212, and PMID:32847782.
+  llm_assisted: true

@@ -1,0 +1,141 @@
+identifier: UBERON:0016484
+causal_graphs:
+- graph_id: subgingival_dental_plaque_crevicular_heme_porphyromonas_treponema_rgpa_kgp_fima_dentilisin_periodontitis
+  title: Subgingival dental plaque anaerobic crevicular heme/iron and matrix-protein niche, Porphyromonas
+    gingivalis and Treponema denticola guild selection, and RgpA-Kgp/RgpB/FimA/dentilisin coaggregation
+    and tissue-destruction mechanism
+  description: Subgingival dental plaque in the periodontal pocket is an anaerobic biofilm habitat bathed
+    in gingival crevicular fluid and blood-derived hemoglobin that imposes an obligate requirement for
+    iron and protoporphyrin IX on proteolytic periodontal pathobionts. This subgingival microenvironment
+    selects for the keystone periodontal pathogen Porphyromonas gingivalis (predominantly fimA genotype
+    II paired with kgp biotypes 381, HG66, and W83) coaggregating with the spirochete Treponema denticola.
+    Porphyromonas gingivalis expresses Arg- and Lys-specific cysteine proteinases encoded by rgpA, rgpB,
+    and kgp that assemble into cell-surface RgpA-Kgp proteinase-adhesin complexes (containing adhesin
+    domains A1 and A3) alongside major fimbriae (fimA), while Treponema denticola expresses the chymotrypsin-like
+    surface proteinase dentilisin. FimA binding to dentilisin and RgpA-Kgp adhesin binding mediate interspecies
+    subgingival plaque coaggregation and epithelial attachment, while Kgp and RgpA/B proteolysis hydrolyzes
+    hemoglobin for heme assimilation, penetrates gingival connective tissue along a concentration gradient,
+    dysregulates IL-8/IL-6/sICAM-1/MCP-1 cytokine signaling, and induces host epithelial and fibroblast
+    apoptosis and alveolar bone resorption.
+  nodes:
+  - node_id: subgingival_dental_plaque
+    label: subgingival dental plaque
+    node_type: HABITAT
+    grounding: UBERON:0016484
+    description: Microbial biofilm adhering to the tooth root surface within the gingival sulcus and periodontal
+      pocket below the gumline.
+  - node_id: subgingival_crevicular_hemoglobin_heme_and_extracellular_matrix_milieu
+    label: anaerobic subgingival sulcus hemoglobin/protoporphyrin IX iron source and crevicular epithelial/matrix
+      interface
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Subgingival sulcus and periodontal pocket interface enriched in host extracellular matrix
+      proteins (fibrinogen, laminin, collagen type V, fibronectin) and vascular hemoglobin supplying iron
+      and protoporphyrin IX.
+  - node_id: subgingival_porphyromonas_gingivalis_and_treponema_denticola_consortium
+    label: Porphyromonas gingivalis (fimA II / kgp biotypes) and Treponema denticola subgingival consortium
+    node_type: COMMUNITY
+    description: Coaggregating subgingival biofilm consortium of Porphyromonas gingivalis and Treponema
+      denticola localized in matured subgingival dental plaque.
+  - node_id: gingipain_rgpa_rgpb_kgp_adhesin_complex_fima_and_dentilisin_proteinases
+    label: Arg-gingipains RgpA/RgpB (rgpA, rgpB), Lys-gingipain Kgp (kgp), major fimbrial subunit FimA
+      (fimA), and Treponema denticola dentilisin
+    node_type: GENE_OR_PROTEIN
+    description: Porphyromonas gingivalis cell-surface cysteine proteinase-adhesin complexes RgpA-Kgp
+      (with adhesin domains A1 and A3), RgpB, and FimA fimbriae together with Treponema denticola chymotrypsin-like
+      proteinase dentilisin.
+  - node_id: interspecies_plaque_coaggregation_hemoglobin_heme_capture_and_gingival_tissue_apoptosis
+    label: FimA-dentilisin coaggregation, Kgp-mediated hemoglobin hydrolysis for heme assimilation, and
+      concentration-dependent gingival cytokine dysregulation and apoptosis
+    node_type: COMMUNITY_PROCESS
+    description: Coaggregation and colonization of subgingival plaque coupled with vascular disruption,
+      hemoglobin degradation for heme acquisition, and concentration-gradient-dependent proinflammatory
+      cytokine modulation and host cell apoptosis.
+  edges:
+  - edge_id: subgingival_plaque_maintains_crevicular_hemoglobin_and_matrix_interface
+    subject: subgingival_dental_plaque
+    predicate: maintains
+    object: subgingival_crevicular_hemoglobin_heme_and_extracellular_matrix_milieu
+    description: Subgingival dental plaque interfaces directly with crevicular epithelial cells, subjacent
+      gingival connective tissue matrix proteins, and hemoglobin-derived iron/protoporphyrin IX.
+    evidence:
+    - reference: PMID:14683427
+      snippet: P. gingivalis has an obligate growth requirement for iron and protoporphyrin IX, which
+        it preferentially utilizes in the form of hemoglobin.
+      notes: Subgingival colonization by P. gingivalis depends on host hemoglobin as the preferred source
+        of iron and protoporphyrin IX (PMID:14683427).
+    - reference: PMID:19114547
+      snippet: The RgpA-Kgp proteinase-adhesin complexes of Porphyromonas gingivalis were observed, using
+        immunostaining, in human gingival tissue associated with periodontitis but not in healthy tissue.
+        The staining pattern suggested a concentration gradient from the subgingival plaque into the subjacent
+        gingival connective tissue.
+      notes: Subgingival dental plaque establishes a direct interface and proteinase concentration gradient
+        into subjacent gingival connective tissue (PMID:19114547).
+  - edge_id: subgingival_milieu_selects_for_porphyromonas_gingivalis_and_treponema_denticola
+    subject: subgingival_crevicular_hemoglobin_heme_and_extracellular_matrix_milieu
+    predicate: selects for
+    object: subgingival_porphyromonas_gingivalis_and_treponema_denticola_consortium
+    description: Matured subgingival plaque selects for coaggregating Porphyromonas gingivalis (predominantly
+      fimA II genotype with kgp biotypes 381, HG66, and W83) and Treponema denticola.
+    evidence:
+    - reference: PMID:25353706
+      snippet: Our findings demonstrate that all of the P. gingivalis kgp biotypes detected in this study
+        were predominantly associated with the fimA II genotype. Dominance of kgp biotypes 381 or HG66
+        combined with fimA II fimbriae could imply an adaptive strategy by P. gingivalis to generate the
+        fittest strains for survival in the host environment.
+      notes: Human subgingival dental plaque samples select for P. gingivalis strains combining fimA II
+        fimbriae with kgp biotypes 381, HG66, and W83 (PMID:25353706).
+    - reference: PMID:14553921
+      snippet: Treponema denticola has been reported to coaggregate with Porphyromonas gingivalis and
+        localize closely together in matured subgingival plaque.
+      notes: Porphyromonas gingivalis and Treponema denticola co-localize in matured subgingival dental
+        plaque (PMID:14553921).
+  - edge_id: subgingival_consortium_expresses_rgpa_rgpb_kgp_fima_and_dentilisin
+    subject: subgingival_porphyromonas_gingivalis_and_treponema_denticola_consortium
+    predicate: expresses
+    object: gingipain_rgpa_rgpb_kgp_adhesin_complex_fima_and_dentilisin_proteinases
+    description: Porphyromonas gingivalis and Treponema denticola express rgpA, rgpB, kgp, fimA, and the
+      fimbria-binding chymotrypsin-like proteinase dentilisin.
+    evidence:
+    - reference: PMID:14683427
+      snippet: The proteinases are encoded by three genes designated rgpA, rgpB and kgp. Arg-specific
+        proteolytic activity is encoded by rgpA/B and the Lys-specific activity by kgp. RgpA and Kgp are
+        polyproteins comprising proteinases with C-terminal adhesin domains that are proteolytically processed.
+      notes: Porphyromonas gingivalis expresses rgpA, rgpB, and kgp encoding cell-surface Arg- and Lys-gingipain
+        proteinase-adhesin complexes (PMID:14683427).
+    - reference: PMID:14553921
+      snippet: In this study of the interaction of T. denticola with P. gingivalis, the P. gingivalis
+        fimbria-binding protein of T. denticola was identified by two-dimensional electrophoresis followed
+        by a ligand overlay assay with P. gingivalis fimbriae, and was determined to be dentilisin, a
+        chymotrypsin-like proteinase of T. denticola.
+      notes: Treponema denticola expresses the chymotrypsin-like proteinase dentilisin that directly binds
+        P. gingivalis fimbriae (PMID:14553921).
+  - edge_id: gingipains_fima_and_dentilisin_catalyze_coaggregation_heme_capture_and_apoptosis
+    subject: gingipain_rgpa_rgpb_kgp_adhesin_complex_fima_and_dentilisin_proteinases
+    predicate: catalyzes
+    object: interspecies_plaque_coaggregation_hemoglobin_heme_capture_and_gingival_tissue_apoptosis
+    description: RgpA-Kgp complexes, FimA fimbriae, and dentilisin mediate interspecies plaque coaggregation,
+      hydrolyze hemoglobin for heme assimilation, and drive concentration-dependent cytokine modulation
+      and host cell apoptosis.
+    evidence:
+    - reference: PMID:14683427
+      snippet: The RgpA-Kgp proteinase-adhesin complexes, through the adhesin domains A1 and A3, have
+        been implicated in colonization of P. gingivalis by binding to other bacteria in subgingival plaque
+        and also binding to crevicular epithelial cells. The RgpA-Kgp complexes also bind to fibrinogen,
+        laminin, collagen type V, fibronectin and hemoglobin.
+      notes: RgpA-Kgp adhesin domains A1 and A3 bind subgingival plaque bacteria, crevicular epithelial
+        cells, extracellular matrix proteins, and hemoglobin for Kgp-mediated heme assimilation (PMID:14683427).
+    - reference: PMID:19114547
+      snippet: These data suggest that the RgpA-Kgp complexes penetrate the gingival connective tissue;
+        at low concentrations distal from the plaque the complexes stimulate the secretion of proinflammatory
+        mediators, while at high concentrations proximal to the plaque they induce apoptosis and attenuate
+        the secretion of proinflammatory mediators.
+      notes: RgpA-Kgp complexes penetrate gingival tissue from subgingival plaque to induce distal proinflammatory
+        cytokine secretion and proximal epithelial/fibroblast apoptosis (PMID:19114547).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added subgingival_dental_plaque_crevicular_heme_porphyromonas_treponema_rgpa_kgp_fima_dentilisin_periodontitis
+    mechanism graph for subgingival_dental_plaque (UBERON:0016484) backed by PMID:14683427, PMID:19114547,
+    PMID:25353706, and PMID:14553921.
+  llm_assisted: true

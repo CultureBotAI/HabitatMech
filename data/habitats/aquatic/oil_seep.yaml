@@ -21,6 +21,148 @@ source_attestations:
   assertion_count: 7
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: oil_seep_hydrocarbon_sulfate_flux_anme_desulfosarcina_mcra_dsrab_alkb_oxidation
+  title: Oil seep hydrocarbon and sulfate flux, ANME/Desulfosarcina-Desulfococcus
+    and acidophilic alkane-degrader guild selection, and mcrA/dsrAB/alkB hydrocarbon
+    oxidation mechanism
+  description: Marine and terrestrial hydrocarbon (oil) seeps discharge subsurface
+    fluids enriched in methane, short-chain n-alkanes (ethane, propane, n-butane),
+    and longer saturated acyclic and branched alkanes (C15-C30, pristane, phytane)
+    into sulfate-bearing sediments and soils. These hydrocarbon and sulfate gradients
+    select for anaerobic methane-oxidizing archaea (ANME-1 and ANME-2) and sulfate-reducing
+    Deltaproteobacteria (Desulfosarcina/Desulfococcus clade including strain BuS5,
+    Desulfobacteraceae, and Desulfobulbaceae) beneath Beggiatoa mats in marine seeps,
+    as well as aerobic alkane-degrading heterotrophs (Acidisphaera and Acidiphilium)
+    in acidic terrestrial seeps. These guilds express methyl coenzyme M reductase
+    (mcrA), dissimilatory sulfite reductase (dsrAB), fumarate-activating alkylsuccinate
+    pathway enzymes, and alkane monooxygenase (alkB) to catalyze anaerobic methane
+    and short-chain alkane oxidation coupled to sulfate reduction alongside aerobic
+    medium- and long-chain alkane mineralization.
+  nodes:
+  - node_id: oil_seep
+    label: oil seep
+    node_type: HABITAT
+    grounding: ENVO:00002063
+    description: Natural marine or terrestrial hydrocarbon seep where subsurface petroleum,
+      short-chain gaseous alkanes, and longer-chain liquid or solid hydrocarbons migrate
+      to the sediment or soil surface.
+  - node_id: seep_methane_short_and_long_chain_alkane_and_sulfate_flux
+    label: subsurface methane, C2-C4 short-chain alkane, C15-C30 saturated alkane,
+      and sulfate flux
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Advective upward flux of methane, ethane, propane, n-butane, and
+      C15-C30 acyclic and branched alkanes intersecting high sulfate concentrations
+      in seep sediments and soils.
+  - node_id: oil_seep_anme_desulfosarcina_desulfobacteraceae_and_alkane_degrader_guild
+    label: ANME-1/ANME-2 archaea, Desulfosarcina/Desulfococcus (strain BuS5) and Desulfobulbaceae
+      SRB, and Acidisphaera/Acidiphilium guild
+    node_type: COMMUNITY
+    description: Hydrocarbon seep microbial community comprising ANME-1 and ANME-2
+      archaea, Desulfobacteraceae (Desulfosarcina/Desulfococcus cluster including
+      propane/butane-oxidizing strain BuS5) and Desulfobulbaceae sulfate-reducing
+      bacteria underlying Beggiatoa mats, and acidophilic alkane-degrading Acidisphaera/Acidiphilium
+      populations.
+  - node_id: seep_mcra_dsrab_fumarate_alkane_addition_and_alkb_enzymes
+    label: methyl coenzyme M reductase (mcrA), dissimilatory sulfite reductase (dsrAB),
+      fumarate-addition propylsuccinate pathway enzymes, and alkane monooxygenase
+      (alkB)
+    node_type: GENE_OR_PROTEIN
+    description: Archaeal methyl coenzyme M reductase (mcrA) and bacterial dissimilatory
+      sulfite reductase (dsrAB) transcripts together with fumarate-dependent terminal/subterminal
+      alkane-activating enzymes and alkane 1-monooxygenase (alkB).
+  - node_id: anaerobic_methane_and_alkane_oxidation_coupled_to_sulfate_reduction
+    label: anaerobic methane and short-chain alkane oxidation, sulfide production,
+      and hexadecane mineralization to CO2
+    node_type: COMMUNITY_PROCESS
+    description: Complete oxidation of methane, propane, n-butane, and longer-chain
+      alkanes to CO2 coupled to dissimilatory sulfate reduction and sulfide generation
+      in hydrocarbon seep sediments and soils.
+  edges:
+  - edge_id: oil_seep_maintains_hydrocarbon_and_sulfate_flux
+    subject: oil_seep
+    predicate: maintains
+    object: seep_methane_short_and_long_chain_alkane_and_sulfate_flux
+    description: Oil and hydrocarbon seeps deliver subsurface methane, short-chain
+      alkanes, and C15-C30 saturated alkanes into sulfate-rich surface sediments and
+      soils.
+    evidence:
+    - reference: PMID:20090951
+      snippet: Subsurface fluids from deep-sea hydrocarbon seeps undergo methane-
+        and sulfur-cycling microbial transformations near the sediment surface.
+      notes: Deep-sea hydrocarbon seeps supply subsurface methane and sulfur species
+        to surface sediments (PMID:20090951).
+    - reference: PMID:16204508
+      snippet: The hydrocarbon composition of the seep soils consisted almost entirely
+        of saturated, acyclic alkanes (e.g., n-alkanes with chain lengths of C15 to
+        C30, as well as branched alkanes, predominately pristane and phytane).
+      notes: Natural hydrocarbon seep soils contain high sulfate concentrations and
+        C15-C30 n-alkanes plus pristane and phytane (PMID:16204508).
+  - edge_id: hydrocarbon_flux_selects_for_anme_desulfosarcina_and_alkane_degraders
+    subject: seep_methane_short_and_long_chain_alkane_and_sulfate_flux
+    predicate: selects for
+    object: oil_seep_anme_desulfosarcina_desulfobacteraceae_and_alkane_degrader_guild
+    description: Seep alkane and methane availability selects for Desulfosarcina/Desulfococcus
+      (strain BuS5), Desulfobulbaceae, ANME-1/ANME-2 archaea, and acidophilic alkane-degrading
+      bacteria.
+    evidence:
+    - reference: PMID:17882164
+      snippet: Isolation experiments resulted in a mesophilic pure culture (strain
+        BuS5) that used only propane and n-butane (methane, isobutane, alcohols or
+        carboxylic acids did not support growth).
+      notes: Propane and n-butane in marine hydrocarbon seeps select for specialized
+        sulfate-reducing bacteria including Desulfosarcina/Desulfococcus strain BuS5
+        (PMID:17882164).
+    - reference: PMID:16204508
+      snippet: The majority of the sequences recovered (>75%) were related to sequences
+        of heterotrophic acidophilic bacteria, including Acidisphaera spp. and Acidiphilium
+        spp. of the alpha-Proteobacteria.
+      notes: Acidic hydrocarbon seep soils select for heterotrophic acidophilic Acidisphaera
+        and Acidiphilium populations alongside Acidithiobacillus (PMID:16204508).
+  - edge_id: oil_seep_guild_expresses_mcra_dsrab_and_alkb_enzymes
+    subject: oil_seep_anme_desulfosarcina_desulfobacteraceae_and_alkane_degrader_guild
+    predicate: expresses
+    object: seep_mcra_dsrab_fumarate_alkane_addition_and_alkb_enzymes
+    description: Hydrocarbon seep microbial guilds transcribe dsrAB and mcrA in active
+      seep sediments and harbor alkB gene homologs and fumarate-activating alkane
+      oxidation enzymes.
+    evidence:
+    - reference: PMID:20090951
+      snippet: Likewise, 16S ribosomal rRNA, dsrAB (dissimilatory sulfite reductase)
+        and mcrA (methyl coenzyme M reductase) mRNA transcripts of sulfate-reducing
+        bacteria (Desulfobacteraceae and Desulfobulbaceae) and methane-cycling archaea
+        (ANME-1 and ANME-2) were prevalent at the sediment surface under the mat and
+        at its edge.
+      notes: Desulfobacteraceae, Desulfobulbaceae, and ANME-1/ANME-2 actively transcribe
+        dsrAB and mcrA mRNA in Gulf of Mexico hydrocarbon seep sediments (PMID:20090951).
+    - reference: PMID:16204508
+      snippet: This and the presence of an alkB gene homolog in this isolate confirmed
+        the alkane degradation capability of one population indigenous to acidic hydrocarbon
+        seep soils.
+      notes: Indigenous hydrocarbon seep bacterial isolates harbor an alkB alkane
+        monooxygenase gene homolog (PMID:16204508).
+  - edge_id: seep_enzymes_catalyze_hydrocarbon_oxidation_and_sulfate_reduction
+    subject: seep_mcra_dsrab_fumarate_alkane_addition_and_alkb_enzymes
+    predicate: catalyzes
+    object: anaerobic_methane_and_alkane_oxidation_coupled_to_sulfate_reduction
+    description: Seep mcrA, dsrAB, fumarate-addition enzymes, and alkB catalyze anaerobic
+      oxidation of methane, propane, and n-butane via propylsuccinate intermediates
+      coupled to sulfate reduction as well as hexadecane mineralization to CO2.
+    evidence:
+    - reference: PMID:17882164
+      snippet: Complete hydrocarbon oxidation to CO2 and the preferential oxidation
+        of 12C-enriched alkanes were observed with strain BuS5 and other cultures.
+        Metabolites of propane included iso- and n-propylsuccinate, indicating a subterminal
+        as well as an unprecedented terminal alkane activation with involvement of
+        fumarate.
+      notes: Desulfosarcina/Desulfococcus strain BuS5 activates propane with fumarate
+        to form iso- and n-propylsuccinate and oxidizes short-chain hydrocarbons completely
+        to CO2 coupled to sulfide production (PMID:17882164).
+    - reference: PMID:16204508
+      snippet: Approximately 50% of the [14C]hexadecane added was recovered as 14CO2
+        during an 80-day incubation, and this was accompanied by detection of heterotrophic
+        acidophile-related sequences as dominant DGGE bands.
+      notes: Indigenous hydrocarbon seep bacteria mineralize hexadecane to CO2 (PMID:16204508).
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -46,3 +188,10 @@ curation_history:
     source nodes/path/counts/units and independently justified parents. Original occurrence
     membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
     are separate open work, not SSSOM/KGX certification.
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added oil_seep_hydrocarbon_sulfate_flux_anme_desulfosarcina_mcra_dsrab_alkb_oxidation
+    mechanism graph for oil_seep (ENVO:00002063) backed by PMID:17882164, PMID:20090951,
+    and PMID:16204508.
+  llm_assisted: true

@@ -1,0 +1,145 @@
+identifier: habitatmech:GOLD.87da4c5e8b
+causal_graphs:
+- graph_id: fermented_fish_salted_proteolysis_lab_tetragenococcus_gadb_gadc_plantaricin_lpl1_gaba_biogenic_amine_control
+  title: Fermented fish salted amino-acid-rich matrix, Levilactobacillus/Lactiplantibacillus/Pediococcus
+    and Tetragenococcus halophilus guild selection, and gadABC/plantaricin LPL-1/low-decarboxylase GABA
+    synthesis and biogenic amine suppression mechanism
+  description: Traditional fermented fish products (such as Thai som-fak fermented fish cake and East
+    Asian high-salt fish sauces) combine fish muscle proteins and free amino acids (including glutamate)
+    with elevated sodium chloride levels. This salted, amino-acid-rich fermentation matrix selects for
+    lactic acid bacteria (Levilactobacillus brevis, Lactiplantibacillus plantarum, Lactiplantibacillus
+    pentosus, Pediococcus acidilactici, and Pediococcus pentosaceus) and halophilic Tetragenococcus halophilus
+    and Staphylococcus. Levilactobacillus brevis and Pediococcus acidilactici express glutamate decarboxylase
+    and glutamate/GABA antiporter genes (gadA, gadB, gadB1, gadB2, gadC, gadC1, gadC2) to convert glutamate
+    into gamma-aminobutyric acid (GABA), Lactiplantibacillus plantarum LPL-1 produces the YGNGV-motif
+    class IIa bacteriocin plantaricin LPL-1 to permeabilize and kill foodborne spoilage and pathogenic
+    bacteria, and low-decarboxylase Tetragenococcus halophilus A003 outcompetes high amine producers to
+    repress cadaverine, histamine, and tyramine accumulation.
+  nodes:
+  - node_id: fermented_fish
+    label: fermented fish product
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.87da4c5e8b
+    description: Salted and microbially fermented fish matrices including fermented whole fish, fish cakes
+      (som-fak), fish pastes, and fermented fish sauces.
+  - node_id: salted_proteolytic_glutamate_and_free_amino_acid_fish_fermentation_matrix
+    label: salted fish muscle proteolytic free amino acid and glutamate fermentation matrix
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High-salt fish tissue and brine matrix rich in fish muscle proteins, peptides, monosodium
+      glutamate, and free amino acid precursors.
+  - node_id: fermented_fish_levilactobacillus_lactiplantibacillus_pediococcus_and_tetragenococcus_guild
+    label: Levilactobacillus brevis, Lactiplantibacillus plantarum, Pediococcus acidilactici, and Tetragenococcus
+      halophilus guild
+    node_type: COMMUNITY
+    description: Fermented fish lactic acid bacterial and halophilic coccal community comprising Levilactobacillus
+      brevis, Lactiplantibacillus plantarum, Lactiplantibacillus pentosus, Pediococcus acidilactici, Tetragenococcus
+      halophilus, and Staphylococcus.
+  - node_id: lab_gada_gadb_gadc_glutamate_decarboxylase_and_plantaricin_lpl1_bacteriocin_system
+    label: glutamate decarboxylase and antiporter genes (gadA, gadB1, gadB2, gadC1, gadC2), class IIa
+      bacteriocin plantaricin LPL-1, and suppressed amino acid decarboxylases
+    node_type: GENE_OR_PROTEIN
+    description: Levilactobacillus brevis and Pediococcus acidilactici glutamate decarboxylase and GABA
+      antiporter genes (gadA, gadB, gadB1, gadB2, gadC, gadC1, gadC2), Lactobacillus plantarum LPL-1 class
+      IIa bacteriocin plantaricin LPL-1 (4347.85 Da YGNGV-motif peptide), and weakly activated biogenic-amine
+      decarboxylase genes in Tetragenococcus halophilus A003.
+  - node_id: gaba_biosynthesis_membrane_permeabilizing_biopreservation_and_biogenic_amine_repression
+    label: GABA accumulation, plantaricin LPL-1 membrane permeabilization of spoilage pathogens, and histamine/tyramine/cadaverine
+      repression
+    node_type: COMMUNITY_PROCESS
+    description: Conversion of glutamate to bioactive gamma-aminobutyric acid (GABA), bactericidal membrane
+      permeabilization of foodborne pathogens, and competitive suppression of histamine, tyramine, and
+      cadaverine accumulation during fish fermentation.
+  edges:
+  - edge_id: fermented_fish_maintains_salted_glutamate_and_amino_acid_matrix
+    subject: fermented_fish
+    predicate: maintains
+    object: salted_proteolytic_glutamate_and_free_amino_acid_fish_fermentation_matrix
+    description: Fermented fish cakes and fish sauces provide a salted, amino-acid- and glutamate-rich
+      substrate that supports halotolerant lactic acid fermentation but risks biogenic amine formation.
+    evidence:
+    - reference: PMID:41183495
+      snippet: Fish sauce, a seasoning commonly utilized in East Asian cuisine, is produced from fish
+        combined with a substantial quantity of salt. However, biogenic amines (BAs) accumulation poses
+        safety concerns in fermented fish sauce during fermentation.
+      notes: Salted fish fermentation creates a high-salt, amino-acid-rich matrix susceptible to biogenic
+        amine accumulation (PMID:41183495).
+    - reference: PMID:37171680
+      snippet: GABA production in som-fak, a traditional fermented fish of Thailand, has been attributed
+        to the activity of lactic acid bacteria (LAB).
+      notes: Traditional fermented fish (som-fak) provides glutamate substrates converted to GABA by lactic
+        acid bacteria (PMID:37171680).
+  - edge_id: salted_fish_matrix_selects_for_lab_and_tetragenococcus_halophilus
+    subject: salted_proteolytic_glutamate_and_free_amino_acid_fish_fermentation_matrix
+    predicate: selects for
+    object: fermented_fish_levilactobacillus_lactiplantibacillus_pediococcus_and_tetragenococcus_guild
+    description: Salted fermented fish matrices select for Levilactobacillus brevis, Lactiplantibacillus
+      pentosus, Lactiplantibacillus plantarum, Pediococcus acidilactici, and halophilic Tetragenococcus
+      halophilus and Staphylococcus.
+    evidence:
+    - reference: PMID:37171680
+      snippet: 'Seven isolates (group I: LSF3-3, LSF8-3, LSF9-1, LSF9-3, LSF9-6, LSF9-7, and LSF10-14)
+        were identified as Levilactobacillus brevis with 99.78-100% similarity. LSF2-1, LSF3-2, LSF5-4,
+        and LSF6-5 (group II) were identified as Lactiplantibacillus pentosus with 99.86-100% similarity.
+        Strain LSF1-1 (group III) was identified as Pediococcus acidilactici (99.47%), and LSF10-4 (group
+        IV) was identified as Pediococcus pentosaceus with 99.93% similarity.'
+      notes: Fermented fish cake selects for GABA-producing Levilactobacillus brevis, Lactiplantibacillus
+        pentosus, Pediococcus acidilactici, and Pediococcus pentosaceus (PMID:37171680).
+    - reference: PMID:41183495
+      snippet: Metagenomic analysis revealed an enrichment of low BA-producing taxa, notably Tetragenococcus
+        and Staphylococcus, comprising 97.91% of the community.
+      notes: Salted fish sauce fermentation enriches Tetragenococcus and Staphylococcus to 97.91% of the
+        microbial community (PMID:41183495).
+  - edge_id: fermented_fish_guild_expresses_gadabc_and_plantaricin_lpl1
+    subject: fermented_fish_levilactobacillus_lactiplantibacillus_pediococcus_and_tetragenococcus_guild
+    predicate: expresses
+    object: lab_gada_gadb_gadc_glutamate_decarboxylase_and_plantaricin_lpl1_bacteriocin_system
+    description: Fermented fish LAB isolates harbor gadB1/gadB2/gadC1/gadC2 and gadA/gadB/gadC, secrete
+      class IIa bacteriocin plantaricin LPL-1, and exhibit low biogenic-amine decarboxylase activation
+      in Tetragenococcus halophilus A003.
+    evidence:
+    - reference: PMID:37171680
+      snippet: Gene and genome analysis revealed that L. brevis LSF9-1 has multiple gad genes in the genome,
+        such as gadB1, gadB2, gadC1, and gadC2, making it the potential strain for GABA production. Additionally,
+        the genome analysis of P. acidilactici LSF1-1 consists of gadA, gadB, and gadC, which respond
+        to controlling GABA production and export.
+      notes: Levilactobacillus brevis LSF9-1 and Pediococcus acidilactici LSF1-1 from fermented fish encode
+        gadB1/gadB2/gadC1/gadC2 and gadA/gadB/gadC (PMID:37171680).
+    - reference: PMID:30323792
+      snippet: A novel bacteriocin, plantaricin LPL-1 was determined as a class IIa bacteriocin according
+        to the YGNGV motif, and producer strain Lactobacillus plantarum LPL-1 was identified based on
+        physio-biochemical characteristics and 16S rDNA sequence.
+      notes: Lactobacillus plantarum LPL-1 isolated from fermented fish produces the 4347.85 Da YGNGV-motif
+        class IIa bacteriocin plantaricin LPL-1 (PMID:30323792).
+  - edge_id: gadabc_and_plantaricin_catalyze_gaba_synthesis_and_biogenic_amine_suppression
+    subject: lab_gada_gadb_gadc_glutamate_decarboxylase_and_plantaricin_lpl1_bacteriocin_system
+    predicate: catalyzes
+    object: gaba_biosynthesis_membrane_permeabilizing_biopreservation_and_biogenic_amine_repression
+    description: Glutamate decarboxylases produce GABA up to 16.935 g/L, plantaricin LPL-1 kills spoilage
+      and pathogenic bacteria by membrane permeabilization, and Tetragenococcus halophilus A003 suppresses
+      cadaverine, histamine, and tyramine accumulation.
+    evidence:
+    - reference: PMID:37171680
+      snippet: The GABA production of isolates ranged from 0.087 to 16.935 g/L. The maximum production
+        of 16.935 g/L from 3% monosodium glutamate was obtained from strain LSF9-1.
+      notes: Levilactobacillus brevis LSF9-1 converts monosodium glutamate into 16.935 g/L GABA (PMID:37171680).
+    - reference: PMID:30323792
+      snippet: Plantaricin LPL-1 possessed the merits of easy degradation by proteases, wide pH stability
+        (2-10), high thermal stability (121°C, 20 min), surfactants stability and bactericidal activity
+        against foodborne spoilage and pathogens bacteria. The mode action and membrane permeabilization
+        of plantaricin was identified.
+      notes: Plantaricin LPL-1 exerts bactericidal activity against foodborne spoilage and pathogenic
+        bacteria via membrane permeabilization (PMID:30323792).
+    - reference: PMID:41183495
+      snippet: Cadaverine levels were substantially lower (19.1 ± 1.49 mg/l) than those in sauce fermented
+        without a starter or with T. halophilus BCRC12250. Histamine and tyramine were undetectable in
+        isolate A003-inoculated samples.
+      notes: Low-decarboxylase Tetragenococcus halophilus A003 reduces cadaverine and eliminates detectable
+        histamine and tyramine accumulation in fermented fish sauce (PMID:41183495).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added fermented_fish_salted_proteolysis_lab_tetragenococcus_gadb_gadc_plantaricin_lpl1_gaba_biogenic_amine_control
+    mechanism graph for fermented_fish (habitatmech:GOLD.87da4c5e8b) backed by PMID:37171680, PMID:30323792,
+    and PMID:41183495.
+  llm_assisted: true

@@ -1,0 +1,145 @@
+identifier: habitatmech:GOLD.1208484062
+causal_graphs:
+- graph_id: carbonate_chimney_serpentinization_h2_ch4_methanosarcinales_sulfate_reducer_mcra_dsrb_syntrophy
+  title: Serpentinization-hosted carbonate chimney alkaline H2/CH4/formate fluid flux, Lost City and Prony
+    Bay Methanosarcinales and Thermodesulfovibrionales guild selection, and mcrA/dsrB/acs/nif/fdh syntrophic
+    cycling mechanism
+  description: Serpentinization of uplifted mantle peridotite generates warm, hyperalkaline (pH 9-11),
+    dissolved-inorganic-carbon-depleted hydrothermal fluids highly enriched in molecular hydrogen (H2),
+    methane (CH4), and formate that mix with cold seawater to precipitate porous carbonate hydrothermal
+    vent chimneys such as those at the Lost City and Prony Bay hydrothermal fields. Flow of these H2-
+    and CH4-rich fluids through interior chimney walls selects for dense archaeal biofilms dominated by
+    serpentinite-specialist Methanosarcinales (Lost City and Prony Bay phylotypes) alongside sulfate-reducing
+    Thermodesulfovibrionales (Nitrospirota), Desulfovibrionales/Desulfobacterales, Firmicutes, Chloroflexi,
+    and Candidatus Bipolaricaulota. This syntrophic community encodes and expresses methyl coenzyme M
+    reductase A (mcrA), dissimilatory sulfite reductase subunit B (dsrB), AMP-forming acetyl-CoA synthetase
+    (acs), nitrogen fixation (nif) genes, hydrogenases, and formate dehydrogenase-like enzymes to couple
+    H2-stimulated methane production and anaerobic methane oxidation with sulfate reduction, acetate cycling,
+    and diazotrophy across the porous carbonate matrix.
+  nodes:
+  - node_id: carbonate
+    label: serpentinization-hosted carbonate hydrothermal vent chimney
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.1208484062
+    description: Porous brucite-calcite-aragonite hydrothermal vent chimney precipitated where serpentinization-derived
+      alkaline fluids mix with seawater at sites such as Lost City and Prony Bay.
+  - node_id: hyperalkaline_h2_ch4_formate_serpentinization_fluid_seawater_mixing_gradient
+    label: hyperalkaline (pH 9-11) H2-, CH4-, and formate-enriched hydrothermal fluid and seawater mixing
+      gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Serpentinization-driven warm (up to 90 degrees C), hyperalkaline (pH 9-11) hydrothermal
+      fluids enriched in molecular hydrogen (H2), methane (CH4), and formate mixing with cold sulfate-bearing
+      seawater within porous carbonate chimney walls.
+  - node_id: serpentinite_chimney_methanosarcinales_and_thermodesulfovibrionales_guild
+    label: Lost City and Prony Bay Methanosarcinales biofilm and Thermodesulfovibrionales sulfate-reducing
+      guild
+    node_type: COMMUNITY
+    description: Carbonate chimney biofilm and venting-fluid community dominated by serpentinite-associated
+      Methanosarcinales phylotypes alongside sulfate-reducing Thermodesulfovibrionales, Desulfovibrionales,
+      Firmicutes, Chloroflexi, and Candidatus Bipolaricaulota.
+  - node_id: chimney_mcra_dsrb_acetyl_coa_synthetase_nitrogenase_and_fdh_hydrogenase_system
+    label: methyl coenzyme M reductase A (mcrA), dissimilatory sulfite reductase subunit B (dsrB), AMP-forming
+      acetyl-CoA synthetase, nitrogenase, and hydrogenase/formate dehydrogenase enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Archaeal methyl coenzyme M reductase subunit alpha (mcrA), AMP-forming acetyl coenzyme
+      A synthetase, and laterally acquired nitrogen fixation genes in Methanosarcinales biofilms together
+      with bacterial dissimilatory sulfite reductase subunit B (dsrB), hydrogenases, and formate dehydrogenase-like
+      enzymes in sulfate-reducing and acetogenic chimney residents.
+  - node_id: h2_stimulated_methane_cycling_syntrophy_and_chimney_sulfate_reduction
+    label: H2-stimulated methane production/oxidation syntrophy, sulfate reduction, and acetate/nitrogen
+      cycling
+    node_type: COMMUNITY_PROCESS
+    description: Syntrophic coupling of H2-stimulated methanogenesis and methane oxidation with dissimilatory
+      sulfate reduction, formate/H2 utilization, acetate cycling, and nitrogen fixation within alkaline
+      carbonate chimney biofilms.
+  edges:
+  - edge_id: carbonate_chimney_maintains_hyperalkaline_h2_ch4_formate_mixing_gradient
+    subject: carbonate
+    predicate: maintains
+    object: hyperalkaline_h2_ch4_formate_serpentinization_fluid_seawater_mixing_gradient
+    description: Serpentinization-hosted carbonate chimneys form and operate along mixing gradients of
+      warm pH 9-11 hydrothermal fluids rich in H2, CH4, and formate with cold seawater.
+    evidence:
+    - reference: PMID:20080654
+      snippet: Previous studies have shown that its carbonate chimneys form by mixing of approximately
+        90 degrees C, pH 9-11 hydrothermal fluids and cold seawater.
+      notes: Lost City carbonate chimneys form where ~90 degrees C, pH 9-11 serpentinization fluids mix
+        with cold seawater (PMID:20080654).
+    - reference: PMID:35950875
+      snippet: In this study, we investigated hydrothermal fluids venting from Lost City chimneys as windows
+        into subseafloor environments where the products of geochemical reactions, such as molecular hydrogen
+        (H2), formate, and methane, may be the only available sources of energy for biological activity.
+      notes: Venting alkaline fluids in Lost City carbonate chimneys supply geochemically derived H2,
+        formate, and methane as primary energy and carbon sources (PMID:35950875).
+  - edge_id: hyperalkaline_h2_ch4_gradient_selects_for_methanosarcinales_and_sulfate_reducers
+    subject: hyperalkaline_h2_ch4_formate_serpentinization_fluid_seawater_mixing_gradient
+    predicate: selects for
+    object: serpentinite_chimney_methanosarcinales_and_thermodesulfovibrionales_guild
+    description: Flow of H2- and CH4-rich alkaline hydrothermal fluids through porous carbonate chimney
+      walls selects for Methanosarcinales biofilms and Thermodesulfovibrionales sulfate-reducing bacteria.
+    evidence:
+    - reference: PMID:20080654
+      snippet: Flow of methane and hydrogen-rich hydrothermal fluids in the porous interior chimney walls
+        supports archaeal biofilm communities dominated by a single phylotype of Methanosarcinales.
+      notes: Porous interior carbonate chimney walls flushed by CH4- and H2-rich fluids select for dense
+        Methanosarcinales biofilms (PMID:20080654).
+    - reference: PMID:35950875
+      snippet: We identified a population of Thermodesulfovibrionales (belonging to phylum Nitrospirota)
+        as a prevalent sulfate-reducing bacterium that may be responsible for much of the consumption
+        of H2 and sulfate in Lost City fluids.
+      notes: Thermodesulfovibrionales sulfate-reducing bacteria, Methanosarcinaceae, and Candidatus Bipolaricaulota
+        are selected in Lost City venting fluids (PMID:35950875).
+  - edge_id: chimney_guild_expresses_mcra_dsrb_acs_nif_and_fdh_hydrogenases
+    subject: serpentinite_chimney_methanosarcinales_and_thermodesulfovibrionales_guild
+    predicate: expresses
+    object: chimney_mcra_dsrb_acetyl_coa_synthetase_nitrogenase_and_fdh_hydrogenase_system
+    description: Carbonate chimney Methanosarcinales and bacterial residents harbor and express mcrA,
+      dsrB, AMP-forming acetyl-CoA synthetase, nitrogen fixation genes, hydrogenases, and formate dehydrogenase-like
+      sequences.
+    evidence:
+    - reference: PMID:26379636
+      snippet: Archaeal and bacterial communities composition was investigated using PCR-based methods
+        (clone libraries, Denaturating Gel Gradient Electrophoresis, quantitative PCR) targeting 16S rRNA
+        genes, methyl coenzyme M reductase A and dissimilatory sulfite reductase subunit B genes.
+      notes: Active serpentinizing carbonate chimneys at Prony Bay harbor methanogenic mcrA and sulfate-reducing
+        dsrB functional gene assemblages (PMID:26379636).
+    - reference: PMID:21791580
+      snippet: Metagenomic data included a sequence encoding AMP-forming acetyl coenzyme A synthetase,
+        indicating that acetate may play a role in the methane-cycling syntrophy. A wide range of nitrogen
+        fixation genes were also identified, many of which were likely acquired via lateral gene transfer
+        (LGT).
+      notes: Lost City Methanosarcinales carbonate chimney biofilms encode AMP-forming acetyl-CoA synthetase
+        and nitrogen fixation genes (PMID:21791580).
+    - reference: PMID:35950875
+      snippet: These genomes share novel hydrogenases and formate dehydrogenase-like sequences that may
+        be unique to hydrothermal environments where H2 and formate are much more abundant than carbon
+        dioxide.
+      notes: Methanosarcinaceae, Thermodesulfovibrionales, and Candidatus Bipolaricaulota genomes from
+        Lost City chimneys encode specialized hydrogenases and formate dehydrogenase-like enzymes (PMID:35950875).
+  - edge_id: chimney_enzymes_catalyze_h2_stimulated_methane_syntrophy_and_sulfate_reduction
+    subject: chimney_mcra_dsrb_acetyl_coa_synthetase_nitrogenase_and_fdh_hydrogenase_system
+    predicate: catalyzes
+    object: h2_stimulated_methane_cycling_syntrophy_and_chimney_sulfate_reduction
+    description: Chimney mcrA, dsrB, acetyl-CoA synthetase, and hydrogenase/formate dehydrogenase enzymes
+      drive syntrophic H2-stimulated methane production and oxidation coupled with sulfate reduction in
+      carbonate chimneys.
+    evidence:
+    - reference: PMID:21791580
+      snippet: Both methane production and oxidation were detected at 70 to 80°C and pH 9 to 10 in samples
+        containing the single-species biofilms. Both processes were stimulated by the presence of hydrogen
+        (H(2)), indicating that methane production and oxidation are part of a syntrophic interaction.
+      notes: Lost City carbonate chimney biofilms catalyze simultaneous H2-stimulated methane production
+        and oxidation at 70-80 degrees C and pH 9-10 (PMID:21791580).
+    - reference: PMID:26379636
+      snippet: Our study revealed diverse microbial communities in PHF ST09 related to methane and sulfur
+        compounds that share common populations with other terrestrial or submarine serpentinizing ecosystems.
+      notes: Coupled methane and sulfur compound cycling sustains the core microbial community of Prony
+        Bay carbonate chimneys (PMID:26379636).
+curation_history:
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added carbonate_chimney_serpentinization_h2_ch4_methanosarcinales_sulfate_reducer_mcra_dsrb_syntrophy
+    mechanism graph for carbonate (habitatmech:GOLD.1208484062) backed by PMID:20080654, PMID:21791580,
+    PMID:26379636, and PMID:35950875.
+  llm_assisted: true

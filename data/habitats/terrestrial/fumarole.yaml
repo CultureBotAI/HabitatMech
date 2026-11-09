@@ -110,6 +110,163 @@ characteristic_taxa:
   score: 1.01259
   rank: 12
   candidate_pool: 12
+causal_graphs:
+- graph_id: fumarole_acidic_geothermal_gas_methylacidiphilum_acidianus_xoxf_pmo3_ba3_sulfur_oxidation
+  title: Fumarole and solfatara acidic geothermal CH4/C2-C3 alkane/H2S/S0 gas emissions,
+    Methylacidiphilum fumariolicum and Acidianus/Sulfolobus guild selection, and XoxF/PMO3/ba3-oxidase/sulfur-oxidoreductase
+    cycling mechanism
+  description: Volcanic fumaroles and solfataras vent hot, extremely acidic geothermal
+    steam and gases enriched in methane (CH4), short-chain alkanes and their hydrothermal
+    oxidation products (ethane, propane, 2-propanol, acetone), hydrogen sulfide (H2S),
+    and elemental sulfur (S0). These thermoacidic, gas-rich conditions select for
+    thermoacidophilic verrucomicrobial methanotrophs such as Methylacidiphilum fumariolicum
+    SolV alongside sulfur-metabolizing thermoacidophilic Crenarchaeota of the genera
+    Acidianus and Sulfolobus. Methylacidiphilum fumariolicum SolV expresses lanthanide-dependent
+    XoxF methanol dehydrogenase and its physiological electron acceptor cytochrome
+    cGJ (cyt cGJ), acetone monooxygenase (PMO3), sulfide-oxidizing enzymes, and a
+    sulfide-insensitive ba3-type terminal oxidase, while Acidianus and Sulfolobus
+    express sulfur-oxidizing enzymes coupled to respiratory heme-copper oxidases as
+    well as membrane-bound hydrogenase and sulfur reductase to drive simultaneous
+    CH4, C3-compound, H2S, and elemental sulfur oxidation in solfataric steam vents.
+  nodes:
+  - node_id: fumarole
+    label: fumarole
+    node_type: HABITAT
+    grounding: ENVO:00000216
+    description: Volcanic steam and gas vent (including sulfur-rich solfataras) discharging
+      hot, acidic geothermal vapors enriched in H2S, S0, CO2, CH4, and short-chain
+      hydrocarbons.
+  - node_id: fumarolic_thermoacidic_ch4_short_chain_alkane_h2s_and_elemental_sulfur_emissions
+    label: thermoacidic fumarolic CH4, ethane/propane/2-propanol/acetone, H2S, and
+      elemental sulfur gas emissions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High-temperature, low-pH geothermal emissions of methane, C2-C3 alkanes
+      and ketones/alcohols, hydrogen sulfide, and elemental sulfur at volcanic fumaroles
+      and solfataras.
+  - node_id: fumarole_methylacidiphilum_fumariolicum_and_acidianus_sulfolobus_guild
+    label: Methylacidiphilum fumariolicum SolV and thermoacidophilic Acidianus/Sulfolobus
+      archaeal guild
+    node_type: COMMUNITY
+    description: Thermoacidophilic fumarole and solfatara community comprising verrucomicrobial
+      methanotrophs (Methylacidiphilum fumariolicum SolV) and sulfur-oxidizing/reducing
+      crenarchaeotes (Acidianus and Sulfolobus).
+  - node_id: solv_xoxf_mdh_cytochrome_cgj_pmo3_ba3_oxidase_and_archaeal_sulfur_oxidoreductases
+    label: lanthanide-dependent XoxF-MDH and cytochrome cGJ, PMO3 acetone monooxygenase,
+      sulfide-insensitive ba3 terminal oxidase, and archaeal sulfur-oxidizing/reducing
+      enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Methylacidiphilum fumariolicum SolV lanthanide-dependent methanol
+      dehydrogenase (XoxF-MDH) and electron acceptor cytochrome cGJ, C3-induced monooxygenase
+      PMO3, and sulfide-insensitive ba3-type terminal oxidase alongside Acidianus/Sulfolobus
+      sulfur oxidation enzymes, respiratory heme-copper oxidase, membrane-bound hydrogenase,
+      and sulfur reductase.
+  - node_id: simultaneous_thermoacidophilic_ch4_c3_and_h2s_s0_chemolithotrophic_oxidation
+    label: simultaneous thermoacidophilic methane/C3-substrate oxidation, H2S detoxification
+      to S0, and dissimilatory elemental sulfur redox cycling
+    node_type: COMMUNITY_PROCESS
+    description: Detoxifying oxidation of H2S to elemental sulfur coupled with lanthanide-dependent
+      methanotrophy, 2-propanol/acetone oxidation, and aerobic/anaerobic elemental
+      sulfur respiration in fumarolic habitats.
+  edges:
+  - edge_id: fumarole_maintains_thermoacidic_ch4_alkane_h2s_and_sulfur_emissions
+    subject: fumarole
+    predicate: maintains
+    object: fumarolic_thermoacidic_ch4_short_chain_alkane_h2s_and_elemental_sulfur_emissions
+    description: Geothermal fumaroles and solfataras emit methane, ethane, propane,
+      oxidized C3 alcohols/ketones, H2S, and elemental sulfur under thermoacidic conditions.
+    evidence:
+    - reference: PMID:40626421
+      snippet: Terrestrial and oceanic geothermal areas emit substantial amounts of
+        hydrocarbons in the form of methane and the short-chain alkanes ethane and
+        propane. Under hydrothermal conditions, these alkanes can also be oxidised
+        to their respective alcohols and ketones, with a preference for the 2-position.
+      notes: Geothermal vents and solfataras emit methane, ethane, propane, and hydrothermally
+        oxidized 2-alcohols and ketones (PMID:40626421).
+    - reference: PMID:15168612
+      snippet: The oxidation and reduction of elemental sulfur and reduced inorganic
+        sulfur species are some of the most important energy-yielding reactions for
+        microorganisms living in volcanic hot springs, solfataras, and submarine hydrothermal
+        vents, including both heterotrophic, mixotrophic, and chemolithoautotrophic,
+        carbon dioxide-fixing species.
+      notes: Solfataras and volcanic vents provide elemental sulfur and reduced inorganic
+        sulfur species as primary energy substrates (PMID:15168612).
+  - edge_id: fumarolic_emissions_select_for_methylacidiphilum_and_acidianus_sulfolobus
+    subject: fumarolic_thermoacidic_ch4_short_chain_alkane_h2s_and_elemental_sulfur_emissions
+    predicate: selects for
+    object: fumarole_methylacidiphilum_fumariolicum_and_acidianus_sulfolobus_guild
+    description: Thermoacidic hydrocarbon and sulfur emissions in solfataras select
+      for Methylacidiphilum fumariolicum SolV and sulfur-metabolizing Acidianus and
+      Sulfolobus archaea.
+    evidence:
+    - reference: PMID:40626421
+      snippet: The thermoacidophilic verrucomicrobial methanotroph Methylacidiphilum
+        fumariolicum SolV, isolated from the Solfatara volcano, was previously shown
+        to oxidise methane as well as the short-chain hydrocarbons propane and ethane.
+      notes: Solfatara fumarolic emissions select for the thermoacidophilic verrucomicrobial
+        methanotroph Methylacidiphilum fumariolicum SolV (PMID:40626421).
+    - reference: PMID:15168612
+      snippet: Elemental sulfur is the electron donor in aerobic archaea like Acidianus
+        and Sulfolobus.
+      notes: Solfatara elemental sulfur selects for thermoacidophilic Acidianus and
+        Sulfolobus archaea (PMID:15168612).
+  - edge_id: fumarole_guild_expresses_xoxf_cgj_pmo3_ba3_oxidase_and_sulfur_enzymes
+    subject: fumarole_methylacidiphilum_fumariolicum_and_acidianus_sulfolobus_guild
+    predicate: expresses
+    object: solv_xoxf_mdh_cytochrome_cgj_pmo3_ba3_oxidase_and_archaeal_sulfur_oxidoreductases
+    description: Methylacidiphilum fumariolicum SolV and solfataric archaea express
+      lanthanide-dependent XoxF-MDH and cytochrome cGJ, PMO3 acetone monooxygenase,
+      sulfide-insensitive ba3 terminal oxidase, and respiratory heme-copper oxidase/hydrogenase-sulfur
+      reductase chains.
+    evidence:
+    - reference: PMID:40626421
+      snippet: Transcriptomic analysis of these cultures showed that a gene cluster
+        including a novel acetone monooxygenase (PMO3), previously identified in the
+        closely related species Methylacidiphilum caldifontis, was highly upregulated
+        under growth on C3 substrates.
+      notes: Methylacidiphilum fumariolicum SolV strongly upregulates the PMO3 acetone
+        monooxygenase gene cluster during growth on 2-propanol and acetone (PMID:40626421).
+    - reference: PMID:37221165
+      snippet: Strain SolV adapts to increasing H2S by expressing a sulfide-insensitive
+        ba3-type terminal oxidase and grows as chemolithoautotroph using H2S as sole
+        energy source.
+      notes: Methylacidiphilum fumariolicum SolV expresses a sulfide-insensitive ba3-type
+        terminal oxidase in response to H2S (PMID:37221165).
+    - reference: PMID:38269599
+      snippet: Herein, we report the cultivation of Ln-dependent methanotroph Methylacidiphilum
+        fumariolicum SolV with nine different Lns, the isolation of the respective
+        MDHs and the assessment of the enzyme activity using the dye-coupled assay.
+        We compare these results with a protein-coupled assay using its physiological
+        electron acceptor cytochrome cGJ (cyt cGJ ).
+      notes: Methylacidiphilum fumariolicum SolV expresses lanthanide-dependent XoxF-MDH
+        and its physiological electron acceptor cytochrome cGJ (PMID:38269599).
+  - edge_id: fumarole_enzymes_catalyze_simultaneous_ch4_c3_and_sulfur_oxidation
+    subject: solv_xoxf_mdh_cytochrome_cgj_pmo3_ba3_oxidase_and_archaeal_sulfur_oxidoreductases
+    predicate: catalyzes
+    object: simultaneous_thermoacidophilic_ch4_c3_and_h2s_s0_chemolithotrophic_oxidation
+    description: SolV and archaeal oxidoreductases catalyze simultaneous CH4 and H2S
+      oxidation to elemental sulfur, C3 compound oxidation, and aerobic/anaerobic
+      elemental sulfur respiration.
+    evidence:
+    - reference: PMID:37221165
+      snippet: Here, through extensive chemostat culturing we show that a single microorganism
+        can oxidize CH4 and H2S simultaneously at equally high rates. By oxidizing
+        H2S to elemental sulfur, the thermoacidophilic methanotroph Methylacidiphilum
+        fumariolicum SolV alleviates the inhibitory effects of H2S on methanotrophy.
+      notes: Methylacidiphilum fumariolicum SolV oxidizes H2S to elemental sulfur
+        simultaneously with methane oxidation, relieving H2S inhibition of methanotrophy
+        (PMID:37221165).
+    - reference: PMID:15168612
+      snippet: It is oxidized via sulfite and thiosulfate in a pathway involving both
+        soluble and membrane-bound enzymes. This pathway was recently found to be
+        coupled to the aerobic respiratory chain, eliciting a link between sulfur
+        oxidation and oxygen reduction at the level of the respiratory heme copper
+        oxidase. In contrast, elemental sulfur is the electron acceptor in a short
+        electron transport chain consisting of a membrane-bound hydrogenase and a
+        sulfur reductase in (facultatively) anaerobic chemolithotrophic archaea Acidianus
+        and Pyrodictium species.
+      notes: Acidianus and Sulfolobus enzymes catalyze aerobic sulfur oxidation via
+        sulfite/thiosulfate to heme-copper oxidases and anaerobic H2-dependent sulfur
+        reduction (PMID:15168612).
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -131,3 +288,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added fumarole_acidic_geothermal_gas_methylacidiphilum_acidianus_xoxf_pmo3_ba3_sulfur_oxidation
+    mechanism graph for fumarole (ENVO:00000216) backed by PMID:40626421, PMID:37221165,
+    PMID:38269599, and PMID:15168612.
+  llm_assisted: true

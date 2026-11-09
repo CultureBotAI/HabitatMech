@@ -23,6 +23,152 @@ source_attestations:
   assertion_count: 88
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+causal_graphs:
+- graph_id: rock_dwelling_endoliths_far_red_uv_desiccation_chroococcidiopsis_halothece_farlip_scyb_h2_oxidation
+  title: Endolithic rock pore far-red light and UV/desiccation regime, Chroococcidiopsis,
+    Halothece, and Chloroflexota guild selection, and FaRLiP/scyB/uptake-hydrogenase
+    survival mechanism
+  description: Pore spaces and fissures within translucent desert rocks and evaporitic
+    halite or gypsum crusts in hyperarid deserts (such as the Atacama Desert and Antarctic
+    McMurdo Dry Valleys) buffer thermal and moisture extremes while filtering incident
+    solar radiation, creating a microhabitat depleted in visible light, enriched in
+    far-red light (FRL), and exposed to residual UV-A irradiation and prolonged desiccation.
+    These lithic conditions select for endolithic primary-producer cyanobacteria of
+    the genera Chroococcidiopsis and Halothece alongside heterotrophic and trace-gas-oxidizing
+    Chloroflexota bacteria. Endolithic cyanobacteria express the 15-gene Far-Red-Light
+    Photoacclimation (FaRLiP) cluster including chlorophyll f synthase and phycobilisome
+    core-membrane linker apcE2 together with the scytonemin biosynthesis gene scyB,
+    while co-occurring Chloroflexota encode high-affinity uptake hydrogenases and
+    carbon monoxide oxidation enzymes to sustain FRL oxygenic photosynthesis, extracellular
+    UV-screening scytonemin accumulation, and trace-gas-driven atmospheric chemosynthesis
+    and metabolic water production.
+  nodes:
+  - node_id: rock_dwelling_endoliths
+    label: endolithic rock environment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.9de4a94da3
+    description: Interior pore spaces, mineral grain boundaries, and structural cracks
+      within rock and evaporite substrates colonized by cryptoendolithic and chasmoendolithic
+      microbial communities.
+  - node_id: endolithic_far_red_shifted_light_uv_a_and_hyperarid_desiccation_gradient
+    label: far-red-enriched rock transmission spectrum, residual UV-A radiation, and
+      hyperarid desiccation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Lithic microclimate within rock pores and halite nodules characterized
+      by depletion of visible light, enrichment of far-red light, residual UV-A flux,
+      and extreme aridity.
+  - node_id: endolithic_chroococcidiopsis_halothece_and_chloroflexota_consortium
+    label: endolithic Chroococcidiopsis, Halothece cyanobacteria, and trace-gas-oxidizing
+      Chloroflexota consortium
+    node_type: COMMUNITY
+    description: Rock-dwelling microbial consortium dominated by oxygenic phototrophic
+      cyanobacteria (Chroococcidiopsis and Halothece) and co-inhabiting Chloroflexota
+      bacteria.
+  - node_id: endolithic_chlorophyll_f_synthase_apce2_farlip_scyb_and_uptake_hydrogenase_genes
+    label: chlorophyll f synthase, apcE2 and FaRLiP photosystem paralogs, scytonemin
+      biosynthesis gene scyB, and high-affinity uptake hydrogenases
+    node_type: GENE_OR_PROTEIN
+    description: Cyanobacterial Far-Red-Light Photoacclimation (FaRLiP) gene cluster
+      encoding chlorophyll f synthase, apcE2, and paralogous photosystem I/II and
+      phycobilisome subunits, UV-inducible scytonemin biosynthesis gene scyB, and
+      Chloroflexota high-affinity uptake hydrogenases.
+  - node_id: far_red_oxygenic_photosynthesis_scytonemin_uv_shielding_and_trace_gas_chemosynthesis
+    label: chlorophyll f-mediated far-red photoacclimation, scytonemin UV-A photoprotection,
+      and H2/CO atmospheric chemosynthesis
+    node_type: COMMUNITY_PROCESS
+    description: Remodeling of the cyanobacterial photosynthetic apparatus for far-red-light
+      primary production, extracellular sheath accumulation of UV-filtering scytonemin,
+      and trace-gas oxidation generating energy, fixed carbon, and metabolic water
+      in endolithic communities.
+  edges:
+  - edge_id: rock_dwelling_endoliths_maintains_far_red_uv_and_desiccation_regime
+    subject: rock_dwelling_endoliths
+    predicate: maintains
+    object: endolithic_far_red_shifted_light_uv_a_and_hyperarid_desiccation_gradient
+    description: Rock pore spaces in hyperarid deserts filter solar radiation and
+      retain moisture while enriching the colonization zone in far-red light and depleting
+      visible light.
+    evidence:
+    - reference: PMID:35744716
+      snippet: In hyper-arid deserts, endolithic microbial communities survive in
+        the pore spaces and cracks of rocks, an environment that enhances water retention
+        and filters UV radiation. The rock colonization zone is enriched in far-red
+        light (FRL) and depleted in visible light.
+      notes: Rock pore spaces create a far-red-enriched, visible-light-depleted endolithic
+        light environment while buffering water loss and UV radiation (PMID:35744716).
+    - reference: PMID:33142998
+      snippet: Halite nodules provide transparency to photosynthetically active radiation
+        and diminish photochemically damaging UV light.
+      notes: Evaporitic halite rock nodules transmit PAR while attenuating damaging
+        UV radiation in the Atacama Desert (PMID:33142998).
+  - edge_id: endolithic_regime_selects_for_chroococcidiopsis_halothece_and_chloroflexota
+    subject: endolithic_far_red_shifted_light_uv_a_and_hyperarid_desiccation_gradient
+    predicate: selects for
+    object: endolithic_chroococcidiopsis_halothece_and_chloroflexota_consortium
+    description: Hyperarid lithic microhabitats select for endolithic Halothece and
+      Chroococcidiopsis cyanobacteria as primary producers alongside abundant Chloroflexota
+      classes.
+    evidence:
+    - reference: PMID:33142998
+      snippet: Microbial consortia inhabiting evaporitic salt nodules at the Atacama
+        Desert are dominated by unculturable cyanobacteria from the genus Halothece.
+      notes: Endolithic evaporitic halite consortia in the Atacama Desert are dominated
+        by Halothece cyanobacteria (PMID:33142998).
+    - reference: PMID:38372512
+      snippet: Endolithic communities include lichen, algae, fungi, and a diverse
+        array of bacteria. Chloroflexota is among the most abundant bacterial phyla
+        present in these communities.
+      notes: Antarctic Dry Valley endolithic communities are enriched in specialized
+        classes of phylum Chloroflexota alongside phototrophs (PMID:38372512).
+  - edge_id: endolithic_consortium_expresses_farlip_apce2_scyb_and_uptake_hydrogenases
+    subject: endolithic_chroococcidiopsis_halothece_and_chloroflexota_consortium
+    predicate: expresses
+    object: endolithic_chlorophyll_f_synthase_apce2_farlip_scyb_and_uptake_hydrogenase_genes
+    description: Endolithic Chroococcidiopsis, Halothece, and Chloroflexota encode
+      and transcribe chlorophyll f synthase, apcE2 and FaRLiP photosystem paralogs,
+      UV-A-induced scyB, and high-affinity uptake hydrogenases.
+    evidence:
+    - reference: PMID:35744716
+      snippet: The metagenome-assembled genomes of these isolates encoded chlorophyll
+        f synthase and all the genes required to implement the FaRLiP response.
+      notes: Endolithic Chroococcidiopsis genomes encode chlorophyll f synthase and
+        the complete FaRLiP gene repertoire (PMID:35744716).
+    - reference: PMID:35992689
+      snippet: The analysis of their growth capacity, photosynthetic pigments, and
+        apcE2-gene presence revealed that only Chroococcidiopsis sp. CCMEE 010 was
+        capable of far-red light photoacclimation (FaRLiP). A total of 15 FaRLiP genes
+        were identified, encoding paralogous subunits of photosystem I, photosystem
+        II, and the phycobilisome, along with three regulatory elements.
+      notes: Endolithic Chroococcidiopsis sp. CCMEE 010 harbors apcE2 and 15 FaRLiP
+        genes encoding paralogous photosystem and phycobilisome subunits (PMID:35992689).
+    - reference: PMID:33142998
+      snippet: After 48 h under these experimental conditions, the ratio scytonemin/chlorophyll
+        a and the transcription of scyB gene increased to a maximal 1.7-fold value.
+      notes: UV-A irradiation induces a 1.7-fold increase in scyB transcription in
+        endolithic Halothece cyanobacteria (PMID:33142998).
+  - edge_id: endolithic_genes_catalyze_far_red_photosynthesis_scytonemin_shielding_and_h2_oxidation
+    subject: endolithic_chlorophyll_f_synthase_apce2_farlip_scyb_and_uptake_hydrogenase_genes
+    predicate: catalyzes
+    object: far_red_oxygenic_photosynthesis_scytonemin_uv_shielding_and_trace_gas_chemosynthesis
+    description: FaRLiP genes, scyB, and uptake hydrogenases mediate chlorophyll f
+      synthesis and light-harvesting remodeling, scytonemin UV-filtering sheath accumulation,
+      and H2/CO oxidation for energy, metabolic water, and carbon fixation.
+    evidence:
+    - reference: PMID:35744716
+      snippet: Here, we demonstrated that endolithic Chroococcidiopsis isolates from
+        deserts around the world synthesize chlorophyll f, an FRL-specialized chlorophyll
+        when FRL is the sole light source.
+      notes: Endolithic Chroococcidiopsis isolates synthesize chlorophyll f and remodel
+        light-harvesting complexes to grow under far-red light (PMID:35744716).
+    - reference: PMID:38372512
+      snippet: The majority of MAGs encode the capacity for trace gas oxidation using
+        high-affinity uptake hydrogenases, which could provide energy and metabolic
+        water required for survival and persistence. Furthermore, some MAGs encode
+        the capacity to couple the energy generated from H2 and CO oxidation to support
+        carbon fixation (atmospheric chemosynthesis).
+      notes: High-affinity uptake hydrogenases and CO oxidation in endolithic Chloroflexota
+        generate energy, metabolic water, and atmospheric chemosynthetic carbon fixation
+        (PMID:38372512).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -48,3 +194,10 @@ curation_history:
     parent_mode REPLACE (PMID 17506683; DOI:10.1146/annurev.micro.61.080706.093302;
     PMID 29452288; DOI:10.1016/j.mib.2018.01.003). Path: Environmental > Terrestrial
     > Rock-dwelling (endoliths)'
+- timestamp: '2026-11-09T06:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added rock_dwelling_endoliths_far_red_uv_desiccation_chroococcidiopsis_halothece_farlip_scyb_h2_oxidation
+    mechanism graph for rock_dwelling_endoliths (habitatmech:GOLD.9de4a94da3) backed
+    by PMID:33142998, PMID:35744716, PMID:35992689, and PMID:38372512.
+  llm_assisted: true
