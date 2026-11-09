@@ -85,7 +85,112 @@ causal_graphs:
       acetyl coenzyme A synthetase, and laterally acquired nitrogen fixation genes
       in Methanosarcinales biofilms together with bacterial dissimilatory sulfite
       reductase subunit B (dsrB), hydrogenases, and formate dehydrogenase-like enzymes
-      in sulfate-reducing and acetogenic chimney residents.
+      in sulfate-reducing and acetogenic chimney residents, exemplified by verified
+      UniProtKB Methanosarcina barkeri Fusaro and Methanosarcina acetivorans C2A McrA
+      (UniProtKB:P07962, UniProtKB:Q8THH1), Methanosarcina mazei Go1 NifH (UniProtKB:Q8PYY0),
+      and Thermodesulfovibrio yellowstonii DSM 11347 DsrB (UniProtKB:B5YIF3).
+    protein_examples:
+    - accession: UniProtKB:P07962
+      entry_name: MCRA_METBF
+      recommended_name: Methyl-coenzyme M reductase subunit alpha
+      gene_symbol: mcrA
+      locus_tag: Mbar_A0893
+      taxon_id: NCBITaxon:269797
+      taxon_name: Methanosarcina barkeri (strain Fusaro / DSM 804)
+      role_in_node: subunit
+      sequence_length: 570
+      crc64: 301E10CE7D449C76
+      evidence:
+      - reference: PMID:20080654
+        snippet: Flow of methane and hydrogen-rich hydrothermal fluids in the porous
+          interior chimney walls supports archaeal biofilm communities dominated by
+          a single phylotype of Methanosarcinales.
+        notes: Reviewed Swiss-Prot Methanosarcinales methyl-coenzyme M reductase subunit
+          alpha (McrA, Mbar_A0893) in Methanosarcina barkeri Fusaro; Lost City and
+          Prony Bay Methanosarcinales carbonate chimney biofilm mcrA amplicons and
+          MAGs have no active strain-specific accessions in UniProtKB.
+      - reference: PMID:26379636
+        snippet: Archaeal and bacterial communities composition was investigated using
+          PCR-based methods (clone libraries, Denaturating Gel Gradient Electrophoresis,
+          quantitative PCR) targeting 16S rRNA genes, methyl coenzyme M reductase
+          A and dissimilatory sulfite reductase subunit B genes.
+        notes: Prony Bay serpentinizing carbonate chimney communities harbor Methanosarcinales
+          methyl coenzyme M reductase A (mcrA) genes (PMID:26379636).
+    - accession: UniProtKB:Q8THH1
+      entry_name: MCRA_METAC
+      recommended_name: Methyl-coenzyme M reductase subunit alpha
+      gene_symbol: mcrA
+      locus_tag: MA_4546
+      taxon_id: NCBITaxon:188937
+      taxon_name: Methanosarcina acetivorans (strain ATCC 35395 / DSM 2834 / JCM 12185
+        / C2A)
+      role_in_node: isoprotein
+      sequence_length: 570
+      crc64: D7B7CCD2899E48D3
+      evidence:
+      - reference: PMID:26379636
+        snippet: Archaeal and bacterial communities composition was investigated using
+          PCR-based methods (clone libraries, Denaturating Gel Gradient Electrophoresis,
+          quantitative PCR) targeting 16S rRNA genes, methyl coenzyme M reductase
+          A and dissimilatory sulfite reductase subunit B genes.
+        notes: Reviewed Swiss-Prot marine Methanosarcinaceae methyl-coenzyme M reductase
+          subunit alpha (McrA, MA_4546) in Methanosarcina acetivorans C2A representing
+          the Methanosarcinales mcrA lineage detected in serpentinizing carbonate
+          chimneys.
+      - reference: PMID:35950875
+        snippet: Metagenome-assembled genomes (MAGs) classified as Methanosarcinaceae
+          and Candidatus Bipolaricaulota were also recovered from venting fluids and
+          represent potential methanogenic and acetogenic members of the subseafloor
+          ecosystem.
+        notes: Methanosarcinaceae MAGs recovered from Lost City carbonate chimney
+          venting fluids represent methanogenic chimney residents (PMID:35950875).
+    - accession: UniProtKB:Q8PYY0
+      entry_name: NIFH_METMA
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: MM_0719
+      taxon_id: NCBITaxon:192952
+      taxon_name: Methanosarcina mazei (strain ATCC BAA-159 / DSM 3647 / Goe1 / Go1
+        / JCM 11833 / OCM 88)
+      role_in_node: subunit
+      sequence_length: 273
+      crc64: D2D70DA0A97158D1
+      evidence:
+      - reference: PMID:21791580
+        snippet: A wide range of nitrogen fixation genes were also identified, many
+          of which were likely acquired via lateral gene transfer (LGT).
+        notes: Reviewed Swiss-Prot Methanosarcinales nitrogenase iron protein NifH
+          (MM_0719) in Methanosarcina mazei Go1 representing nitrogen fixation genes
+          identified in Lost City Methanosarcinales carbonate chimney biofilms.
+    - accession: UniProtKB:B5YIF3
+      entry_name: B5YIF3_THEYD
+      recommended_name: Sulfite reductase, dissimilatory-type beta subunit
+      gene_symbol: dsrB
+      locus_tag: THEYE_A1995
+      taxon_id: NCBITaxon:289376
+      taxon_name: Thermodesulfovibrio yellowstonii (strain ATCC 51303 / DSM 11347
+        / YP87)
+      role_in_node: subunit
+      sequence_length: 366
+      crc64: 08A98F49904EA496
+      evidence:
+      - reference: PMID:35950875
+        snippet: We identified a population of Thermodesulfovibrionales (belonging
+          to phylum Nitrospirota) as a prevalent sulfate-reducing bacterium that may
+          be responsible for much of the consumption of H2 and sulfate in Lost City
+          fluids.
+        notes: Reference-proteome Thermodesulfovibrionales dissimilatory sulfite reductase
+          beta subunit DsrB (THEYE_A1995) in Thermodesulfovibrio yellowstonii DSM
+          11347 representing sulfate-reducing Thermodesulfovibrionales in Lost City
+          carbonate chimney fluids.
+      - reference: PMID:26379636
+        snippet: Archaeal and bacterial communities composition was investigated using
+          PCR-based methods (clone libraries, Denaturating Gel Gradient Electrophoresis,
+          quantitative PCR) targeting 16S rRNA genes, methyl coenzyme M reductase
+          A and dissimilatory sulfite reductase subunit B genes.
+        notes: Dissimilatory sulfite reductase subunit B (dsrB) is a core functional
+          marker of sulfate-reducing bacteria in serpentinizing carbonate chimneys
+          (PMID:26379636).
   - node_id: h2_stimulated_methane_cycling_syntrophy_and_chimney_sulfate_reduction
     label: H2-stimulated methane production/oxidation syntrophy, sulfate reduction,
       and acetate/nitrogen cycling
@@ -225,4 +330,11 @@ curation_history:
   changes: Added carbonate_chimney_serpentinization_h2_ch4_methanosarcinales_sulfate_reducer_mcra_dsrb_syntrophy
     mechanism graph for carbonate (habitatmech:GOLD.1208484062) backed by PMID:20080654,
     PMID:21791580, PMID:26379636, and PMID:35950875.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:P07962, UniProtKB:Q8THH1,
+    UniProtKB:Q8PYY0, and UniProtKB:B5YIF3) to GENE_OR_PROTEIN node chimney_mcra_dsrb_acetyl_coa_synthetase_nitrogenase_and_fdh_hydrogenase_system
+    backed by PMID:20080654, PMID:21791580, PMID:26379636, and PMID:35950875.
   llm_assisted: true

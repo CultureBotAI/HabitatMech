@@ -37,6 +37,167 @@ causal_graphs:
     description: Pseudomonas aeruginosa alginate regulatory and biosynthetic proteins (mucA, algU, algD),
       quorum-sensing transcriptional activator LasR (lasR), secreted proteases LasB (lasB) and LasA (lasA),
       exotoxin A (toxA), and siderophore pyoverdine (PVD).
+    protein_examples:
+    - accession: UniProtKB:P38107
+      entry_name: MUCA_PSEAE
+      recommended_name: Sigma factor AlgU negative regulatory protein
+      gene_symbol: mucA
+      locus_tag: PA0763
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 194
+      crc64: 421755F4F113769B
+      evidence:
+      - reference: PMID:22842599
+        snippet: In our study, 119 strains of P. aeruginosa were isolated from sputa of 96 cystic fibrosis
+          patients and 84/119 showed nonmucoid phenotype, while 35/119 showed mucoid phenotypes. mucA
+          gene was amplified and sequenced in all strains revealing mutations in 29/35 mucoid strains
+          (82%) and in one non-mucoid strain.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 anti-sigma factor MucA (mucA, PA0763; 194 aa) whose
+          loss-of-function mutations in 82% of mucoid cystic fibrosis sputum strains derepress AlgU and
+          alginate overproduction (PMID:22842599).
+      - reference: PMID:31212120
+        snippet: Pseudomonas aeruginosa could acquire a mucoid phenotype due to mutations in mucA (mucoid
+          Pseudomonas aeruginosa - mPA) that is a hallmark of poor prognosis in patients with bronchiectasis.
+        notes: Mutations in mucA generate the mucoid P. aeruginosa phenotype that increases sputum elasticity,
+          viscosity, and stiffness in bronchiectasis (PMID:31212120).
+    - accession: UniProtKB:Q06198
+      entry_name: RPSH_PSEAE
+      recommended_name: RNA polymerase sigma-H factor
+      gene_symbol: algU
+      locus_tag: PA0762
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 193
+      crc64: 9C10419C51F29C64
+      evidence:
+      - reference: PMID:22842599
+        snippet: Alginate biosynthesis in Pseudomonas aeruginosa is a highly regulated process in which
+          algU and mucA genes are key elements. Mutations in mucA gene determine alginate operon overexpression
+          and exopolysaccharide overproduction.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 alternative sigma factor AlgU (algU / rpoE, PA0762;
+          193 aa) released upon mucA mutation to drive alginate operon overexpression in CF sputum isolates
+          (PMID:22842599).
+    - accession: UniProtKB:P11759
+      entry_name: ALGD_PSEAE
+      recommended_name: GDP-mannose 6-dehydrogenase
+      gene_symbol: algD
+      locus_tag: PA3540
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 436
+      crc64: B6F3DC2B70B04463
+      evidence:
+      - reference: PMID:9317008
+        snippet: We measured the transcript accumulation of algD, a marker of alginate, toxA, the structural
+          gene for exotoxin A, lasB, the structural gene for elastase, and lasA, the structural gene for
+          LasA protease, from the sputum bacterial populations of 23 patients. In the 131 samples tested,
+          we frequently detected transcripts from the four genes.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 GDP-mannose 6-dehydrogenase AlgD (algD, PA3540; 436
+          aa) whose transcript accumulation in sputum bacterial populations from 23 CF patients correlates
+          with lasB and lasA expression (PMID:9317008).
+    - accession: UniProtKB:P25084
+      entry_name: LASR_PSEAE
+      recommended_name: Transcriptional activator protein LasR
+      gene_symbol: lasR
+      locus_tag: PA1430
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 239
+      crc64: 28B6E06E9187924A
+      evidence:
+      - reference: PMID:36466220
+        snippet: Virulence factors of ten multidrug resistant isolates of P. aeruginosa, such as biofilm
+          generation, PVD production, and lasR gene were detected. From results, all 10P. aeruginosa isolates
+          can produce biofilm, PVD, and contain lasR gene.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 quorum-sensing transcriptional activator LasR (lasR,
+          PA1430; 239 aa) detected across all 10 multidrug-resistant biofilm- and pyoverdine-producing
+          sputum isolates (PMID:36466220).
+    - accession: UniProtKB:P14756
+      entry_name: ELAS_PSEAE
+      recommended_name: Elastase
+      gene_symbol: lasB
+      locus_tag: PA3724
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 498
+      crc64: 4B6AA96A569D9615
+      evidence:
+      - reference: PMID:9317008
+        snippet: We measured the transcript accumulation of algD, a marker of alginate, toxA, the structural
+          gene for exotoxin A, lasB, the structural gene for elastase, and lasA, the structural gene for
+          LasA protease, from the sputum bacterial populations of 23 patients. In the 131 samples tested,
+          we frequently detected transcripts from the four genes.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 pseudolysin elastase LasB (lasB, PA3724; 498 aa) whose
+          transcripts co-accumulate with algD, lasA, and toxA in CF patient sputum (PMID:9317008).
+    - accession: UniProtKB:P14789
+      entry_name: LASA_PSEAE
+      recommended_name: Protease LasA
+      gene_symbol: lasA
+      locus_tag: PA1871
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 418
+      crc64: 48E293A1EA624DC0
+      evidence:
+      - reference: PMID:9317008
+        snippet: We measured the transcript accumulation of algD, a marker of alginate, toxA, the structural
+          gene for exotoxin A, lasB, the structural gene for elastase, and lasA, the structural gene for
+          LasA protease, from the sputum bacterial populations of 23 patients. In the 131 samples tested,
+          we frequently detected transcripts from the four genes.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 protease LasA (lasA, PA1871; 418 aa) whose sputum
+          transcript accumulation correlates strongly with algD and lasB across 131 CF sputum samples
+          (PMID:9317008).
+    - accession: UniProtKB:P11439
+      entry_name: TOXA_PSEAE
+      recommended_name: Exotoxin A
+      gene_symbol: eta
+      locus_tag: PA1148
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 638
+      crc64: 7B9AAD56A27C700A
+      evidence:
+      - reference: PMID:9317008
+        snippet: We measured the transcript accumulation of algD, a marker of alginate, toxA, the structural
+          gene for exotoxin A, lasB, the structural gene for elastase, and lasA, the structural gene for
+          LasA protease, from the sputum bacterial populations of 23 patients. In the 131 samples tested,
+          we frequently detected transcripts from the four genes.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 exotoxin A (eta / toxA, PA1148; 638 aa) detected in
+          in situ sputum bacterial populations of cystic fibrosis patients (PMID:9317008).
+    - accession: UniProtKB:Q51548
+      entry_name: PVDA_PSEAE
+      recommended_name: L-ornithine N(5)-monooxygenase
+      gene_symbol: pvdA
+      locus_tag: PA2386
+      taxon_id: NCBITaxon:208964
+      taxon_name: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+        12228 / 1C / PRS 101 / PAO1)
+      role_in_node: family_member
+      sequence_length: 443
+      crc64: 3971A2B223802ACA
+      evidence:
+      - reference: PMID:36466220
+        snippet: In cystic fibrosis individuals, chronic lung infections and hospital-acquired pneumonia
+          are caused by Pseudomonas aeruginosa. P. aeruginosa generates siderophores such as pyoverdine
+          (PVD) as iron uptake systems to cover its needs of iron ions for growth and infection.
+        notes: Reviewed Pseudomonas aeruginosa PAO1 L-ornithine N(5)-monooxygenase PvdA (pvdA, PA2386;
+          443 aa) catalyzing the committed step of pyoverdine (PVD) siderophore biosynthesis in sputum
+          P. aeruginosa isolates (PMID:36466220).
   - node_id: alginate_exopolysaccharide_overproduction_iron_scavenging_and_sputum_viscoelastic_stiffening
     label: alginate biofilm overproduction, LasB/LasA/pyoverdine virulence, and increased sputum viscoelasticity
       and stiffness
@@ -127,4 +288,11 @@ curation_history:
   changes: Added sputum_cf_bronchiectasis_airway_mucus_pseudomonas_muca_algu_algd_lasr_lasb_biofilm_viscoelasticity
     mechanism graph for sputum__6045ff33 (UBERON:0007311) backed by PMID:22842599, PMID:9317008, PMID:36466220,
     and PMID:31212120.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:P38107 MucA, UniProtKB:Q06198 AlgU, UniProtKB:P11759
+    AlgD, UniProtKB:P25084 LasR, UniProtKB:P14756 LasB, UniProtKB:P14789 LasA, UniProtKB:P11439 ToxA,
+    and UniProtKB:Q51548 PvdA) to pseudomonas_muca_algu_algd_lasr_lasb_lasa_toxa_and_pyoverdine_system.
   llm_assisted: true

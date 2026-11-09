@@ -200,6 +200,138 @@ causal_graphs:
     description: Porphyromonas gingivalis cell-surface cysteine proteinase-adhesin
       complexes RgpA-Kgp (with adhesin domains A1 and A3), RgpB, and FimA fimbriae
       together with Treponema denticola chymotrypsin-like proteinase dentilisin.
+    protein_examples:
+    - accession: UniProtKB:B2RM93
+      entry_name: CPG1_PORG3
+      recommended_name: Gingipain R1
+      gene_symbol: rgpA
+      locus_tag: PGN_1970
+      taxon_id: NCBITaxon:431947
+      taxon_name: Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683
+        / JCM 12257 / NCTC 11834 / 2561)
+      role_in_node: subunit
+      sequence_length: 1703
+      crc64: A1EB26D102B2B026
+      evidence:
+      - reference: PMID:14683427
+        snippet: The proteinases are encoded by three genes designated rgpA, rgpB
+          and kgp. Arg-specific proteolytic activity is encoded by rgpA/B and the
+          Lys-specific activity by kgp. RgpA and Kgp are polyproteins comprising proteinases
+          with C-terminal adhesin domains that are proteolytically processed.
+        notes: Reviewed Porphyromonas gingivalis ATCC 33277 Arg-gingipain R1 polyprotein
+          (rgpA, PGN_1970; 1703 aa) containing catalytic and C-terminal adhesin domains
+          that assemble with Kgp into the RgpA-Kgp proteinase-adhesin complex (PMID:14683427).
+      - reference: PMID:19114547
+        snippet: The RgpA-Kgp proteinase-adhesin complexes of Porphyromonas gingivalis
+          were observed, using immunostaining, in human gingival tissue associated
+          with periodontitis but not in healthy tissue.
+        notes: RgpA-Kgp complexes penetrate gingival connective tissue along a concentration
+          gradient from subgingival plaque (PMID:19114547).
+    - accession: UniProtKB:B2RKU0
+      entry_name: CPG2_PORG3
+      recommended_name: Gingipain R2
+      gene_symbol: rgpB
+      locus_tag: PGN_1466
+      taxon_id: NCBITaxon:431947
+      taxon_name: Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683
+        / JCM 12257 / NCTC 11834 / 2561)
+      role_in_node: family_member
+      sequence_length: 736
+      crc64: EB8E64FDD148A069
+      evidence:
+      - reference: PMID:14683427
+        snippet: The proteinases are encoded by three genes designated rgpA, rgpB
+          and kgp. Arg-specific proteolytic activity is encoded by rgpA/B and the
+          Lys-specific activity by kgp.
+        notes: Reviewed Porphyromonas gingivalis ATCC 33277 Arg-specific cysteine
+          proteinase RgpB (rgpB, PGN_1466; 736 aa) contributing Arg-specific proteolytic
+          virulence in subgingival dental plaque (PMID:14683427).
+    - accession: UniProtKB:B2RLK2
+      entry_name: KGP_PORG3
+      recommended_name: Lys-gingipain
+      gene_symbol: kgp
+      locus_tag: PGN_1728
+      taxon_id: NCBITaxon:431947
+      taxon_name: Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683
+        / JCM 12257 / NCTC 11834 / 2561)
+      role_in_node: subunit
+      sequence_length: 1723
+      crc64: 5628963D251493EB
+      evidence:
+      - reference: PMID:14683427
+        snippet: The RgpA-Kgp complexes also bind to fibrinogen, laminin, collagen
+          type V, fibronectin and hemoglobin. In view of the binding of hemoglobin
+          by the RgpA-Kgp complexes, and the demonstration that a kgp-isogenic mutant
+          takes up considerably less iron/protoporphyrin IX than the wild-type strain,
+          a mechanism for iron/protoporphyrin IX (heme) assimilation was proposed
+          involving the Kgp proteinase.
+        notes: Reviewed Porphyromonas gingivalis ATCC 33277 Lys-gingipain polyprotein
+          (kgp, PGN_1728; 1723 aa) that forms the RgpA-Kgp complex and hydrolyzes
+          host hemoglobin for heme and iron assimilation (PMID:14683427).
+      - reference: PMID:25353706
+        snippet: Our findings demonstrate that all of the P. gingivalis kgp biotypes
+          detected in this study were predominantly associated with the fimA II genotype.
+        notes: Lys-gingipain (kgp) biotypes associate with fimA II in subgingival
+          dental plaque from chronic periodontitis patients (PMID:25353706).
+    - accession: UniProtKB:B2RH54
+      entry_name: FIMA1_PORG3
+      recommended_name: Major fimbrium subunit FimA type-1
+      gene_symbol: fimA
+      locus_tag: PGN_0180
+      taxon_id: NCBITaxon:431947
+      taxon_name: Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683
+        / JCM 12257 / NCTC 11834 / 2561)
+      role_in_node: subunit
+      sequence_length: 383
+      crc64: 5E99610BD45F69F1
+      evidence:
+      - reference: PMID:14553921
+        snippet: In this study of the interaction of T. denticola with P. gingivalis,
+          the P. gingivalis fimbria-binding protein of T. denticola was identified
+          by two-dimensional electrophoresis followed by a ligand overlay assay with
+          P. gingivalis fimbriae, and was determined to be dentilisin, a chymotrypsin-like
+          proteinase of T. denticola.
+        notes: Reviewed Porphyromonas gingivalis ATCC 33277 major fimbrial subunit
+          FimA type-1 (fimA, PGN_0180; 383 aa) purified from ATCC 33277 in PMID:14553921
+          to demonstrate direct binding to Treponema denticola dentilisin.
+    - accession: UniProtKB:Q51822
+      entry_name: FIMA2_PORGN
+      recommended_name: Major fimbrium subunit FimA type-2
+      gene_symbol: fimA
+      taxon_id: NCBITaxon:837
+      taxon_name: Porphyromonas gingivalis
+      role_in_node: isoprotein
+      sequence_length: 384
+      crc64: 3CB4EFC46E842F5A
+      evidence:
+      - reference: PMID:25353706
+        snippet: Dominance of kgp biotypes 381 or HG66 combined with fimA II fimbriae
+          could imply an adaptive strategy by P. gingivalis to generate the fittest
+          strains for survival in the host environment.
+        notes: Reviewed Porphyromonas gingivalis major fimbrial subunit FimA type-2
+          (fimA II; 384 aa), the dominant fimA genotype paired with kgp biotypes 381,
+          HG66, and W83 in human chronic periodontitis subgingival plaque samples
+          (PMID:25353706).
+    - accession: UniProtKB:P96091
+      entry_name: P96091_TREDN
+      recommended_name: Serine protease (Dentilisin) from Treponema denticola
+      gene_symbol: prtP
+      taxon_id: NCBITaxon:158
+      taxon_name: Treponema denticola
+      role_in_node: subunit
+      sequence_length: 722
+      crc64: A604DA078846910D
+      evidence:
+      - reference: PMID:14553921
+        snippet: In this study of the interaction of T. denticola with P. gingivalis,
+          the P. gingivalis fimbria-binding protein of T. denticola was identified
+          by two-dimensional electrophoresis followed by a ligand overlay assay with
+          P. gingivalis fimbriae, and was determined to be dentilisin, a chymotrypsin-like
+          proteinase of T. denticola.
+        notes: Treponema denticola chymotrypsin-like surface proteinase dentilisin
+          (prtP; 722 aa) identified by 2D electrophoresis and ligand overlay assay
+          as the Porphyromonas gingivalis fimbria-binding protein mediating subgingival
+          plaque coaggregation (PMID:14553921).
   - node_id: interspecies_plaque_coaggregation_hemoglobin_heme_capture_and_gingival_tissue_apoptosis
     label: FimA-dentilisin coaggregation, Kgp-mediated hemoglobin hydrolysis for heme
       assimilation, and concentration-dependent gingival cytokine dysregulation and
@@ -322,4 +454,11 @@ curation_history:
   changes: Added subgingival_dental_plaque_crevicular_heme_porphyromonas_treponema_rgpa_kgp_fima_dentilisin_periodontitis
     mechanism graph for subgingival_dental_plaque (UBERON:0016484) backed by PMID:14683427,
     PMID:19114547, PMID:25353706, and PMID:14553921.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:B2RM93 RgpA, UniProtKB:B2RKU0
+    RgpB, UniProtKB:B2RLK2 Kgp, UniProtKB:B2RH54 FimA type-1, UniProtKB:Q51822 FimA
+    type-2, and UniProtKB:P96091 dentilisin PrtP) to gingipain_rgpa_rgpb_kgp_adhesin_complex_fima_and_dentilisin_proteinases.
   llm_assisted: true

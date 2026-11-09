@@ -39,7 +39,86 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Archaeal methyl coenzyme M reductase (mcrA) and bacterial dissimilatory sulfite reductase
       (dsrAB) transcripts together with fumarate-dependent terminal/subterminal alkane-activating enzymes
-      and alkane 1-monooxygenase (alkB).
+      and alkane 1-monooxygenase (alkB), exemplified by verified UniProtKB Acidisphaera sp. C197 AlkB
+      from Rainbow Springs hydrocarbon seep soil (UniProtKB:Q5RLH8), Desulfosarcina variabilis DsrA and
+      DsrB (UniProtKB:Q93QV2, UniProtKB:Q93QV1), and Desulfosarcina alkanivorans DsrA (UniProtKB:B6F287).
+    protein_examples:
+    - accession: UniProtKB:Q5RLH8
+      entry_name: Q5RLH8_9PROT
+      recommended_name: Alkane 1-monooxygenase
+      gene_symbol: alkB
+      taxon_id: NCBITaxon:301143
+      taxon_name: Acidisphaera sp. C197
+      role_in_node: family_member
+      sequence_length: 185
+      crc64: FF52484096C040B9
+      evidence:
+      - reference: PMID:16204508
+        snippet: This and the presence of an alkB gene homolog in this isolate confirmed the alkane degradation
+          capability of one population indigenous to acidic hydrocarbon seep soils.
+        notes: Exact UniProtKB entry (Q5RLH8_9PROT) for the alkane 1-monooxygenase (alkB) sequenced from
+          the Rainbow Springs acidic hydrocarbon seep soil isolate Acidisphaera sp. C197 in PMID:16204508.
+    - accession: UniProtKB:Q93QV2
+      entry_name: Q93QV2_9BACT
+      recommended_name: Dissimilatory sulfite reductase alpha subunit
+      gene_symbol: dsrA
+      taxon_id: NCBITaxon:2300
+      taxon_name: Desulfosarcina variabilis
+      role_in_node: subunit
+      sequence_length: 371
+      crc64: CFF608781DD52DA7
+      evidence:
+      - reference: PMID:20090951
+        snippet: Likewise, 16S ribosomal rRNA, dsrAB (dissimilatory sulfite reductase) and mcrA (methyl
+          coenzyme M reductase) mRNA transcripts of sulfate-reducing bacteria (Desulfobacteraceae and
+          Desulfobulbaceae) and methane-cycling archaea (ANME-1 and ANME-2) were prevalent at the sediment
+          surface under the mat and at its edge.
+        notes: Desulfosarcina variabilis dissimilatory sulfite reductase alpha subunit (dsrA, Q93QV2_9BACT)
+          representing Desulfobacteraceae dsrAB expressed in hydrocarbon seep sediments.
+      - reference: PMID:17882164
+        snippet: According to 16S ribosomal RNA analyses, strain BuS5 affiliates with Desulfosarcina/Desulfococcus,
+          a cluster of widespread marine SRB.
+        notes: Marine hydrocarbon-seep short-chain alkane-oxidizing strain BuS5 belongs to the Desulfosarcina/Desulfococcus
+          clade but has no active strain-specific protein entries in UniProtKB.
+    - accession: UniProtKB:Q93QV1
+      entry_name: Q93QV1_9BACT
+      recommended_name: Dissimilatory sulfite reductase beta subunit
+      gene_symbol: dsrB
+      taxon_id: NCBITaxon:2300
+      taxon_name: Desulfosarcina variabilis
+      role_in_node: subunit
+      sequence_length: 265
+      crc64: 3BD606EE9FF484B3
+      evidence:
+      - reference: PMID:20090951
+        snippet: Likewise, 16S ribosomal rRNA, dsrAB (dissimilatory sulfite reductase) and mcrA (methyl
+          coenzyme M reductase) mRNA transcripts of sulfate-reducing bacteria (Desulfobacteraceae and
+          Desulfobulbaceae) and methane-cycling archaea (ANME-1 and ANME-2) were prevalent at the sediment
+          surface under the mat and at its edge.
+        notes: Desulfosarcina variabilis dissimilatory sulfite reductase beta subunit (dsrB, Q93QV1_9BACT)
+          representing Desulfobacteraceae dsrAB transcripts in marine hydrocarbon seep sediments.
+    - accession: UniProtKB:B6F287
+      entry_name: B6F287_9BACT
+      recommended_name: Dissimilatory sulfite reductase alpha subunit
+      gene_symbol: dsrA
+      taxon_id: NCBITaxon:571177
+      taxon_name: Desulfosarcina alkanivorans
+      role_in_node: isoprotein
+      sequence_length: 221
+      crc64: 0F3FED761DF8C162
+      evidence:
+      - reference: PMID:17882164
+        snippet: According to 16S ribosomal RNA analyses, strain BuS5 affiliates with Desulfosarcina/Desulfococcus,
+          a cluster of widespread marine SRB.
+        notes: Dissimilatory sulfite reductase alpha subunit (dsrA, B6F287_9BACT) from the alkane-oxidizing
+          marine sulfate-reducing bacterium Desulfosarcina alkanivorans.
+      - reference: PMID:20090951
+        snippet: Likewise, 16S ribosomal rRNA, dsrAB (dissimilatory sulfite reductase) and mcrA (methyl
+          coenzyme M reductase) mRNA transcripts of sulfate-reducing bacteria (Desulfobacteraceae and
+          Desulfobulbaceae) and methane-cycling archaea (ANME-1 and ANME-2) were prevalent at the sediment
+          surface under the mat and at its edge.
+        notes: Desulfobacteraceae dsrAB transcripts are actively expressed beneath Beggiatoa mats at Gulf
+          of Mexico hydrocarbon seeps (PMID:20090951).
   - node_id: anaerobic_methane_and_alkane_oxidation_coupled_to_sulfate_reduction
     label: anaerobic methane and short-chain alkane oxidation, sulfide production, and hexadecane mineralization
       to CO2
@@ -128,4 +207,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added oil_seep_hydrocarbon_sulfate_flux_anme_desulfosarcina_mcra_dsrab_alkb_oxidation mechanism
     graph for oil_seep (ENVO:00002063) backed by PMID:17882164, PMID:20090951, and PMID:16204508.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:50:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:Q5RLH8, UniProtKB:Q93QV2, UniProtKB:Q93QV1,
+    and UniProtKB:B6F287) to GENE_OR_PROTEIN node seep_mcra_dsrab_fumarate_alkane_addition_and_alkb_enzymes
+    backed by PMID:16204508, PMID:17882164, and PMID:20090951.
   llm_assisted: true

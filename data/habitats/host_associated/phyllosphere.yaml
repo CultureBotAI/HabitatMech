@@ -69,6 +69,93 @@ causal_graphs:
       PhyR and PhyR-regulated oxidative stress proteins (KatE, SodA, AhpC, Ohr, Trx,
       Dps), phosphoribosylpyrophosphate synthetase metabolic valve, and orphan response
       receiver CstR with formaldehyde-transition factors EfgA and TtmR.
+    protein_examples:
+    - accession: UniProtKB:Q0PEV3
+      entry_name: PHYR_METEA
+      recommended_name: Phyllosphere-induced regulator PhyR
+      gene_symbol: phyR
+      locus_tag: MexAM1_META1p3110
+      taxon_id: NCBITaxon:272630
+      taxon_name: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1)
+      role_in_node: family_member
+      sequence_length: 267
+      crc64: 7CFA51F6D09E536D
+      evidence:
+      - reference: PMID:16926146
+        snippet: In addition, we detected a previously undescribed type of two-domain
+          response regulator, named PhyR, that consists of an N-terminal sigma factor
+          (RpoE)-like domain and a C-terminal receiver domain and is predicted to
+          be present in essentially all Alphaproteobacteria. The importance of PhyR
+          was demonstrated through phenotypic tests of a deletion mutant strain shown
+          to be deficient in plant colonization. Among PhyR-regulated gene products,
+          we found a number of general stress proteins and, in particular, proteins
+          known to be involved in the oxidative stress response such as KatE, SodA,
+          AhpC, Ohr, Trx, and Dps.
+        notes: Reviewed Methylorubrum extorquens AM1 phyllosphere-induced two-domain
+          response regulator PhyR (phyR, MexAM1_META1p3110; 267 aa) directly linked
+          in UniProtKB to PMID:16926146 and required for oxidative stress protein
+          induction and aerial plant colonization.
+    - accession: UniProtKB:C5B269
+      entry_name: C5B269_METEA
+      recommended_name: Ribose-phosphate pyrophosphokinase
+      gene_symbol: prs
+      locus_tag: MexAM1_META1p4249
+      taxon_id: NCBITaxon:272630
+      taxon_name: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1)
+      role_in_node: family_member
+      sequence_length: 314
+      crc64: DA0078E1359DBCB4
+      evidence:
+      - reference: PMID:39013920
+        snippet: A mutation in the phosphoribosylpyrophosphate synthetase gene is
+          identified, which converts it into a metabolic valve. This valve redirects
+          limited C1-carbon resources towards the synthesis of biomass by up-regulating
+          a non-essential phosphoketolase pathway.
+        notes: Methylorubrum extorquens AM1 phosphoribosylpyrophosphate synthetase
+          Prs (prs, MexAM1_META1p4249; 314 aa) that functions as a metabolic valve
+          redirecting limited C1 carbon through the phosphoketolase pathway into biomass
+          during phyllosphere colonization (PMID:39013920).
+    - accession: UniProtKB:P0DX96
+      entry_name: EFGA_METEP
+      recommended_name: Formaldehyde-sensing protein EfgA
+      gene_symbol: efgA
+      locus_tag: Mext_4158
+      taxon_id: NCBITaxon:419610
+      taxon_name: Methylorubrum extorquens (strain PA1)
+      role_in_node: family_member
+      sequence_length: 144
+      crc64: 1B58CC559856A6A0
+      evidence:
+      - reference: PMID:42427639
+        snippet: 'We examined the ability of the methylotroph Methylobacterium extorquens
+          PA1 to adapt to repeated shifts between two different carbon and energy
+          sources: the one-carbon compound methanol and the multi-carbon organic acid
+          succinate, both present in the phyllosphere.'
+        notes: Reviewed Methylorubrum extorquens PA1 formaldehyde-sensing protein
+          EfgA (efgA, Mext_4158; 144 aa) that governs formaldehyde arrest and succinate-to-methanol
+          carbon transition alongside TtmR and CstR (Mext_4174, whose PA1 proteome
+          entry is obsolete in UniProtKB; PMID:42427639).
+    - accession: UniProtKB:P0DX95
+      entry_name: TTMR_METEP
+      recommended_name: HTH-type transcriptional regulator TtmR
+      gene_symbol: ttmR
+      locus_tag: Mext_0925
+      taxon_id: NCBITaxon:419610
+      taxon_name: Methylorubrum extorquens (strain PA1)
+      role_in_node: family_member
+      sequence_length: 195
+      crc64: 25EC05F08A948886
+      evidence:
+      - reference: PMID:42427639
+        snippet: 'We examined the ability of the methylotroph Methylobacterium extorquens
+          PA1 to adapt to repeated shifts between two different carbon and energy
+          sources: the one-carbon compound methanol and the multi-carbon organic acid
+          succinate, both present in the phyllosphere.'
+        notes: Reviewed Methylorubrum extorquens PA1 MarR-family transcriptional regulator
+          TtmR (ttmR, Mext_0925; 195 aa) regulating methylotrophic formaldehyde stress
+          and transition to methanol growth in phyllosphere M. extorquens PA1 (PMID:42427639).
   - node_id: epiphytic_oxidative_stress_protection_c1_biomass_redirect_and_plant_growth_promotion
     label: epiphytic oxidative stress resilience, phosphoketolase C1-to-biomass redirection,
       rapid succinate-methanol transition, and plant colonization
@@ -197,4 +284,10 @@ curation_history:
   changes: Added phyllosphere_diurnal_stress_methanol_succinate_methylobacterium_phyr_prs_cstr_colonization
     mechanism graph for phyllosphere (habitatmech:GOLD.7406232b7e) backed by PMID:16926146,
     PMID:39013920, and PMID:42427639.
+  llm_assisted: true
+- timestamp: '2026-11-09T11:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added verified UniProtKB protein_examples (UniProtKB:Q0PEV3 PhyR, UniProtKB:C5B269
+    Prs, UniProtKB:P0DX96 EfgA, and UniProtKB:P0DX95 TtmR) to methylobacterium_phyr_kate_soda_ahpc_prs_and_cstr_efga_ttmr_system.
   llm_assisted: true
