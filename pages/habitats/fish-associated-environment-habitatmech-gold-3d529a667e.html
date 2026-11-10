@@ -69,7 +69,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Fish <span class="meta">— HabitatMech curation</span></li></ul>
+<li>fish host environment <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -84,6 +84,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Defined as &#39;fish-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. The habitat is the host clade, and it is the entire content of the concept: GOLD and BacDive both organise host-associated isolates by host, and every downstream anatomical path hangs off it. HabitatMech deliberately does not ground these to animal-associated environment, because every clade would then merge onto one record and the distinction the sources are making would be lost. ENVO already has this shape at plant-, animal- and fungi-associated environment; this asks for the same pattern one level down.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-11-09 · antigravity</span>
+    <p>Omitted automatic retention of displaced source label &#39;Fish&#39; when defining habitatmech:GOLD.3d529a667e as &#39;fish-associated environment&#39;. Verbatim source attestations are preserved. Review #2336: Displaced GOLD source label &#39;Fish&#39; in path &#39;Host-associated &gt; Fish&#39; names the host clade itself rather than the defined habitat &#39;fish-associated environment&#39;; suppress automatic exact-synonym retention while preserving verbatim source provenance.</p>
   </li>
 </ol>
 

@@ -1,31 +1,55 @@
-identifier: BTO:0006514
-label: foreleg
-definition: A front leg.
-definition_source: BTO
+identifier: habitatmech:GOLD.80220dc4d4
+label: mammalian forelimb lymph node
+definition: A lymph node located in the forelimb of a non-human mammal (such as the
+  axillary or superficial cervical lymph node).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Forelegs
+- synonym_text: mammalian foreleg lymph node
   synonym_type: EXACT_SYNONYM
-  source: GOLD
+  source: HabitatMech curation
 parent_habitats:
-- BTO:0000721
 - UBERON:0000029
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6764
   source_label: Forelegs
   source_path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Forelegs
-  mapping_predicate: skos:exactMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND
-  changes: 'Grounded to BTO:0006514 ''foreleg'' (EXACT). Leaf label equals the BTO
-    label exactly and no other source concept claims it. Path: Host-associated > Mammals
-    > Lymphatic system > Lymph nodes > Forelegs (source concept habitatmech:GOLD.80220dc4d4)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term UBERON:0000029 ''lymph node'' attached as a parent. ITEM curation #2334:
+    GOLD ''Host-associated > Mammals > Lymphatic system > Lymph nodes > Forelegs''
+    denotes lymph nodes of the mammalian forelimb (such as the axillary or superficial
+    cervical/prescapular lymph node; PMID 29643885; DOI:10.3389/fimmu.2018.00682),
+    parallel to sibling hind_legs.yaml (habitatmech:GOLD.ca4882ca81 ''mammalian hindlimb
+    lymph node''), not the entire front leg (BTO:0006514 ''foreleg''). Keep the source
+    concept minted under UBERON:0000029 (''lymph node''). Path: Host-associated >
+    Mammals > Lymphatic system > Lymph nodes > Forelegs (source concept habitatmech:GOLD.80220dc4d4)'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian forelimb lymph node'' under UBERON:0000029 ''lymph
+    node''. ITEM curation #2334: GOLD ''Host-associated > Mammals > Lymphatic system
+    > Lymph nodes > Forelegs'' denotes lymph nodes of the mammalian forelimb (PMID
+    29643885; DOI:10.3389/fimmu.2018.00682), parallel to sibling habitatmech:GOLD.ca4882ca81
+    (''mammalian hindlimb lymph node''). Path: Host-associated > Mammals > Lymphatic
+    system > Lymph nodes > Forelegs'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Forelegs'' when
+    defining habitatmech:GOLD.80220dc4d4 as ''mammalian forelimb lymph node''. Verbatim
+    source attestations are preserved. Review #2334: Displaced GOLD source label ''Forelegs''
+    in path ''Host-associated > Mammals > Lymphatic system > Lymph nodes > Forelegs''
+    names the whole forelimb rather than the defined habitat ''mammalian forelimb
+    lymph node''; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.'

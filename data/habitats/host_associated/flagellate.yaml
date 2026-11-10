@@ -1,17 +1,21 @@
-identifier: BTO:0000464
-label: flagellate
-definition: A flagellate protozoan or alga.
-definition_source: BTO
+identifier: habitatmech:PREGO.ce9c3a92e9
+label: flagellate-associated environment
+definition: An environmental system determined by a flagellate protozoan or alga.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 synonyms:
+- synonym_text: flagellate host environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 - synonym_text: flagellates
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- BTO:0000720
-- BTO:0002503
+- ENVO:01001000
+xrefs:
+- BTO:0000464
 source_attestations:
 - source: PREGO
   source_id: BTO:0000464
@@ -79,4 +83,36 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: UNGROUNDED.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BTO:0000464
+    ''flagellate'' kept as an xref. ITEM organism-form review #2334: PREGO BTO:0000464
+    (''flagellate'', ''A flagellate protozoan or alga.'') names a morphological organism
+    form rather than a microbial habitat identity, and its BTO subclass parents BTO:0000720
+    (''plant form'') and BTO:0002503 (''protozoan form'') are organism-form classifications
+    rather than habitat superclasses. Keep the stable source mint habitatmech:PREGO.ce9c3a92e9
+    in HOST_ASSOCIATED with BTO:0000464 preserved as a contextual xref, and define
+    ''flagellate-associated environment'' under ENVO:01001000 (''environmental system
+    determined by an organism''). https://purl.obolibrary.org/obo/BTO_0000464 https://purl.obolibrary.org/obo/ENVO_01001000
+    (source concept habitatmech:PREGO.ce9c3a92e9)'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''flagellate-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Review #2334: define the organism-determined
+    environmental system associated with a flagellate protozoan or alga under ENVO:01001000
+    (''environmental system determined by an organism'') with parent_mode REPLACE,
+    keeping BTO:0000464 (''flagellate'') as a contextual xref and suppressing automatic
+    retention of the bare organism-form source label ''flagellate'' as an exact synonym.
+    https://purl.obolibrary.org/obo/BTO_0000464 https://purl.obolibrary.org/obo/ENVO_01001000'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''flagellate'' when
+    defining habitatmech:PREGO.ce9c3a92e9 as ''flagellate-associated environment''.
+    Verbatim source attestations are preserved. Review #2334: ''flagellate'' names
+    the organism form (BTO:0000464), not the environment associated with it. Suppress
+    automatic retention of the displaced source label while preserving verbatim PREGO
+    provenance and related source aliases.'

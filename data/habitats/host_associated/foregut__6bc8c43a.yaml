@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001041
-- habitatmech:GOLD.8a68d0f6f5
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3646
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.8a68d0f6f5
+    for habitatmech:GOLD.52f22e84ee (Host-associated > Fish > Digestive system > Foregut).
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2335 : Piscine, mammalian,
+    insect, myriapod, and crustacean foregut are anterior digestive-tract subdivisions
+    (part_of), not subtypes (is_a) of the whole host-scoped digestive system; mammalian
+    forestomach (BTO:0000480) is an anterior stomach compartment (part_of), not a
+    subtype of the whole mammalian stomach; insect larval and hindgut frass are egested
+    fecal waste materials (ENVO:00002003), not anatomical subtypes of the gut or hindgut
+    organ. Exclude only exact guarded GOLD source-path contributions, preserving independent
+    genera and all source observations. Exact target habitatmech:GOLD.52f22e84ee.
+    Shared mapping endpoints #1398 remain separate.'

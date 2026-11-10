@@ -1,14 +1,14 @@
-identifier: BTO:0001551
+identifier: habitatmech:PREGO.6c4660c2ae
 label: free-living state
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: free-living states
   synonym_type: RELATED_SYNONYM
   source: PREGO
-parent_habitats:
-- BTO:0000284
+xrefs:
+- BTO:0001551
 source_attestations:
 - source: PREGO
   source_id: BTO:0001551
@@ -40,4 +40,17 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. BTO:0001551
+    kept as an xref. ITEM organism-state review #2334: PREGO BTO:0001551 (''free-living
+    state'', child of BTO:0000284 ''organism form'', attested by 3 PREGO taxon rows
+    for Bradyrhizobium sp. DOA9, Escherichia coli str. K-12 substr. W3110, and Azorhizobium
+    caulinodans ORS 571) describes a physiological/lifestyle state of the microbe
+    itself (contrasted with the symbiotic/bacteroid state in nitrogen-fixing rhizobia)
+    rather than an external microbial habitat or anatomical host site. Mark NOT_APPLICABLE
+    on the minted concept habitatmech:PREGO.6c4660c2ae in HOST_ASSOCIATED while preserving
+    BTO:0001551 as an xref and retaining all 3 PREGO taxon rows. https://purl.obolibrary.org/obo/BTO_0001551
+    (source concept habitatmech:PREGO.6c4660c2ae)'
