@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-11-09T214520Z-antigravity-233601
+  timestamp: '2026-11-09T21:45:20Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2336
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term_requests
+  - definition_source_label_exclusions
+  summary: Replace bare host clade label 'Fish' in exact_synonym of fish-associated environment
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-finger-to-free-living-state-synonym-scope-repairs
+    (1 finding from Stage 4 review 20261109T181011Z-fish-record, Issue #2336). Updated
+    curation/term_requests.tsv row 9 for habitatmech:GOLD.3d529a667e (fish.yaml, fish-associated
+    environment) to replace bare host clade label Fish in exact_synonym with fish
+    host environment, and added a guarded exclusion row in curation/definition_source_label_exclusions.tsv
+    so automatic retention of the displaced GOLD source label Fish is omitted from
+    synonyms (SOURCE_SYNONYM_EXCLUDED) while preserving verbatim GOLD source_attestations.'

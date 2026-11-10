@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/decisions.tsv
+  slug: decisions
+session:
+  id: 2026-11-09T214500Z-antigravity-233401
+  timestamp: '2026-11-09T21:45:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2334
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - decisions
+  - term_requests
+  - definition_source_label_exclusions
+  - PATHS
+  summary: Repair non-habitat, organism-form, and limb-vs-lymph-node identity grounding across 4 records in finger..free_living_state cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-finger-to-free-living-state-identity-grounding-repairs
+    (8 findings across 4 records from Stage 4 cohort review 20261109T181100Z-finger_to_free_living_state-category,
+    Issue #2334). Added ITEM-level CONFIRM_UNGROUNDED row in curation/decisions.tsv
+    for habitatmech:PREGO.ce9c3a92e9 (flagellate.yaml, BTO:0000464 flagellate, relation=xref,
+    category=HOST_ASSOCIATED) and defined flagellate-associated environment under
+    ENVO:01001000 (environmental system determined by an organism, parent_mode=REPLACE)
+    in curation/term_requests.tsv with a guarded source-label exclusion in curation/definition_source_label_exclusions.tsv,
+    removing organism-form identity BTO:0000464 and imported organism-form parents
+    BTO:0000720 (plant form) and BTO:0002503 (protozoan form). Added ITEM-level NOT_APPLICABLE
+    rows in curation/decisions.tsv for habitatmech:PREGO.267811fd7a (flagellum.yaml,
+    BTO:0002292 flagellum, relation=xref, category=HOST_ASSOCIATED) and habitatmech:PREGO.6c4660c2ae
+    (free_living_state.yaml, BTO:0001551 free-living state, relation=xref, category=HOST_ASSOCIATED),
+    removing subcellular motility organelle BTO:0002292 and microbial physiological
+    state BTO:0001551 as habitat identities along with their imported organism-form
+    parents BTO:0000464 and BTO:0000284. Replaced GROUND (BTO:0006514 foreleg) on
+    habitatmech:GOLD.80220dc4d4 (foreleg.yaml, Host-associated > Mammals > Lymphatic
+    system > Lymph nodes > Forelegs) with ITEM-level CONFIRM_UNGROUNDED (object_id=UBERON:0000029
+    lymph node, relation=parent, category=HOST_ASSOCIATED), authored mammalian forelimb
+    lymph node under UBERON:0000029 (parent_mode=REPLACE) in curation/term_requests.tsv,
+    excluded displaced source label Forelegs in curation/definition_source_label_exclusions.tsv,
+    and updated data/habitats/PATHS.tsv.'

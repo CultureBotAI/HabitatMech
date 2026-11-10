@@ -1,29 +1,20 @@
-identifier: BTO:0002292
-label: flagellum
-definition: Long, slender, threadlike, whiplike extension of certain cells or unicellular
-  organisms used mainly for movements (others for signal transduction). In bacteria,
-  the flagella are helical filaments made up of the protein, flagellin, and rotate
-  like screws. In eukaryotes, such as in cells of animals, plants and protists, they
-  are made up of microtubules surrounded by the plasma membrane and enable the cells
-  to move in a whip-like fashion. Some flagella are not used for movement but in sensation
-  and signal transduction by various cell types, e.g. rod photoreceptor cells of the
-  eye, olfactory receptor neurons of the nose, kinocilium in cochlea of the ear.
-definition_source: BTO
+identifier: habitatmech:PREGO.267811fd7a
+label: flagella
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 synonyms:
-- synonym_text: flagella
+- synonym_text: flagellal
   synonym_type: RELATED_SYNONYM
   source: PREGO
-- synonym_text: flagellal
+- synonym_text: flagellum
   synonym_type: RELATED_SYNONYM
   source: PREGO
 - synonym_text: flagellums
   synonym_type: RELATED_SYNONYM
   source: PREGO
-parent_habitats:
-- BTO:0000464
+xrefs:
+- BTO:0002292
 source_attestations:
 - source: PREGO
   source_id: BTO:0002292
@@ -188,4 +179,18 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. BTO:0002292
+    kept as an xref. ITEM cellular-organelle review #2334: PREGO BTO:0002292 (''flagellum'',
+    ''Long, slender, threadlike, whiplike extension of certain cells or unicellular
+    organisms used mainly for movements...'') denotes a subcellular motility appendage
+    of flagellated microbes and cells (attested across 140 flagellated bacterial taxa
+    such as Escherichia coli, Salmonella enterica, and Bacillus) rather than an external
+    microbial habitat or host anatomical site, and its BTO subclass parent BTO:0000464
+    (''flagellate'') is a whole-organism form. Mark NOT_APPLICABLE on the minted concept
+    habitatmech:PREGO.267811fd7a in HOST_ASSOCIATED while preserving BTO:0002292 as
+    an xref and retaining all 140 PREGO taxon rows. https://purl.obolibrary.org/obo/BTO_0002292
+    (source concept habitatmech:PREGO.267811fd7a)'

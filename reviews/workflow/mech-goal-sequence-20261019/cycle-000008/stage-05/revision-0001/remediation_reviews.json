@@ -1,0 +1,270 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/decisions.tsv",
+      "sha256": "8e0c9ea50c453b9b0eb86e9a6cf246dbc188714ec7a8cc37b2918d5373e6d2ae"
+    },
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "21c90040f7616f5ecc103716597d65b899f433eee24e880ac3f2fd802ff624c6"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "3703ae74d7565abdfb5a1fab47718b05c4fd02447b4ed60bbeb3bde65e1d8792"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "5a02b7980f159ee02d3e9bdefc4a931e6e98bdb3fd15bcca9eee7d948366a616"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "84e5214713a21033312eb9c512fe38f44865662f934a4e679d45e827b16ff780"
+    },
+    {
+      "path": "data/habitats/PATHS.tsv",
+      "sha256": "779e0cf7e829e3ec74b5a898b6ed70d54d930b7da726c1611225902c00915388"
+    },
+    {
+      "path": "history/other/decisions/2026-11-09T214500Z-antigravity-233401.yaml",
+      "sha256": "b6347253e029b5d760e3e10bc1c927efc02c51fd69114bd920a11681c35f7ff2"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-11-09T214510Z-antigravity-233501.yaml",
+      "sha256": "f380b100705f7c7ba6f050c75996b1c13daf8d61cccb656dbd323034751b959a"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-11-09T214520Z-antigravity-233601.yaml",
+      "sha256": "e07df3b22246cf7b8e50aa31bdfb1b230058384037198795774210c4730ce970"
+    },
+    {
+      "path": "tests/test_finger_to_free_living_state_review_repairs.py",
+      "sha256": "495a506d77d0f3c2484e16b510c233a7c8b108ae96cba6b6346252c3a9d01bdb"
+    }
+  ],
+  "cycle": 8,
+  "remediation_reviews": [
+    {
+      "finding_id": "fish-host-name-exact-synonym",
+      "group_id": "G-finger-to-free-living-state-synonym-scope-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2336",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181011Z-fish-record",
+      "record_id": "habitatmech:GOLD.3d529a667e",
+      "record_path": "data/habitats/host_associated/fish.yaml",
+      "record_sha256": "204bc63c9e3e2f283936a3363246c09cae6a77281c114aeabee8f3f2fe660818",
+      "remediation_review_id": "20261109T215001Z-fish-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215001Z-fish-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ba2803afd4695b1a35042150febc4b32858781ef06d12d8e6ca7997a6409a285"
+    },
+    {
+      "finding_id": "flagellate-organism-form-identity",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181012Z-flagellate-record",
+      "record_id": "habitatmech:PREGO.ce9c3a92e9",
+      "record_path": "data/habitats/host_associated/flagellate.yaml",
+      "record_sha256": "d0d8a90198899c9c97024913bd9932e4789230c7d11407363f7af15a79a1dcdc",
+      "remediation_review_id": "20261109T215002Z-flagellate-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215002Z-flagellate-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "b471f83f431bffb7dcb246ec282cf67d9dd905baa697c331d8187797ca742c40"
+    },
+    {
+      "finding_id": "flagellate-organism-form-parents",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181012Z-flagellate-record",
+      "record_id": "habitatmech:PREGO.ce9c3a92e9",
+      "record_path": "data/habitats/host_associated/flagellate.yaml",
+      "record_sha256": "d0d8a90198899c9c97024913bd9932e4789230c7d11407363f7af15a79a1dcdc",
+      "remediation_review_id": "20261109T215002Z-flagellate-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215002Z-flagellate-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "b471f83f431bffb7dcb246ec282cf67d9dd905baa697c331d8187797ca742c40"
+    },
+    {
+      "finding_id": "flagellum-cellular-organelle-identity",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181013Z-flagellum-record",
+      "record_id": "habitatmech:PREGO.267811fd7a",
+      "record_path": "data/habitats/host_associated/flagellum.yaml",
+      "record_sha256": "728aa864450dc96b6f6f58fac79aad57a83397520dbe1f2e09a16be5b552eb0f",
+      "remediation_review_id": "20261109T215003Z-flagellum-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215003Z-flagellum-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3b6d915fce9ae9bdb21558d92e549b890f94a0c05ec838db283dd9e58cef5769"
+    },
+    {
+      "finding_id": "flagellum-organism-form-parent",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181013Z-flagellum-record",
+      "record_id": "habitatmech:PREGO.267811fd7a",
+      "record_path": "data/habitats/host_associated/flagellum.yaml",
+      "record_sha256": "728aa864450dc96b6f6f58fac79aad57a83397520dbe1f2e09a16be5b552eb0f",
+      "remediation_review_id": "20261109T215003Z-flagellum-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215003Z-flagellum-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "3b6d915fce9ae9bdb21558d92e549b890f94a0c05ec838db283dd9e58cef5769"
+    },
+    {
+      "finding_id": "foregut--6bc8c43a-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181020Z-foregut__6bc8c43a-record",
+      "record_id": "habitatmech:GOLD.52f22e84ee",
+      "record_path": "data/habitats/host_associated/foregut__6bc8c43a.yaml",
+      "record_sha256": "2010be40293aa9b0020af66f7062943799b2d7a14ba59a3176e7f685d1e3175a",
+      "remediation_review_id": "20261109T215004Z-foregut__6bc8c43a-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215004Z-foregut__6bc8c43a-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "73dfa742ceb757276922b0a67f9da082391d860a24b6353ff7c7f17ea07a123b"
+    },
+    {
+      "finding_id": "foregut--c14450a8-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181021Z-foregut__c14450a8-record",
+      "record_id": "habitatmech:GOLD.cd6e81f421",
+      "record_path": "data/habitats/host_associated/foregut__c14450a8.yaml",
+      "record_sha256": "e8e029bb353389e3bb09056321763cf179cf014d0a772aa4312edd7678fb355c",
+      "remediation_review_id": "20261109T215005Z-foregut__c14450a8-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215005Z-foregut__c14450a8-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "eec34ddeb6a37ffc3363175f445deaf24d804d7bf3e111fda15754c7d620bd5c"
+    },
+    {
+      "finding_id": "foregut--ce63e8ab-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181022Z-foregut__ce63e8ab-record",
+      "record_id": "habitatmech:GOLD.bd1664969c",
+      "record_path": "data/habitats/host_associated/foregut__ce63e8ab.yaml",
+      "record_sha256": "1f61a6defb772e7dc196363c0be2b31e061fdc796bd36becc848c09d7287d8ab",
+      "remediation_review_id": "20261109T215006Z-foregut__ce63e8ab-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215006Z-foregut__ce63e8ab-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4f59532962e0084ed6bf7742a922865223b168483ac73b6f95fcb46fd688f8e4"
+    },
+    {
+      "finding_id": "foregut--d14a54ae-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181023Z-foregut__d14a54ae-record",
+      "record_id": "habitatmech:GOLD.8997340b18",
+      "record_path": "data/habitats/host_associated/foregut__d14a54ae.yaml",
+      "record_sha256": "18654aac2deed6e1c161c0f5b19fcedba70b253fcf8910c000af464dd4539f4b",
+      "remediation_review_id": "20261109T215007Z-foregut__d14a54ae-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215007Z-foregut__d14a54ae-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "a9d663a5d7f3a875aba38ebe038d87e75bee5e5032d2d1c0f22f95c616dd8121"
+    },
+    {
+      "finding_id": "foregut--ee6a8f74-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181024Z-foregut__ee6a8f74-record",
+      "record_id": "habitatmech:GOLD.fe78a4c113",
+      "record_path": "data/habitats/host_associated/foregut__ee6a8f74.yaml",
+      "record_sha256": "2671db9850521b01c92d37b94485dcbbd1385efc41facd7b0f89d276179e30bb",
+      "remediation_review_id": "20261109T215008Z-foregut__ee6a8f74-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215008Z-foregut__ee6a8f74-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "1af81b304b1a4fd75158c6d248a6328069ecaba955b525205e16c2b5625d7bb8"
+    },
+    {
+      "finding_id": "foreleg-lymph-node-identity",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181025Z-foreleg-record",
+      "record_id": "habitatmech:GOLD.80220dc4d4",
+      "record_path": "data/habitats/host_associated/foreleg.yaml",
+      "record_sha256": "7057177ca95014cd6805eb7173f846b81c7f711396963887e500dee201be4bb5",
+      "remediation_review_id": "20261109T215009Z-foreleg-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215009Z-foreleg-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ec0e150ad666479b67e4ccea3d487c09b276fe985b11099647e8e338e591442a"
+    },
+    {
+      "finding_id": "foreleg-lymph-node-parent-collision",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181025Z-foreleg-record",
+      "record_id": "habitatmech:GOLD.80220dc4d4",
+      "record_path": "data/habitats/host_associated/foreleg.yaml",
+      "record_sha256": "7057177ca95014cd6805eb7173f846b81c7f711396963887e500dee201be4bb5",
+      "remediation_review_id": "20261109T215009Z-foreleg-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215009Z-foreleg-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "ec0e150ad666479b67e4ccea3d487c09b276fe985b11099647e8e338e591442a"
+    },
+    {
+      "finding_id": "forestomach-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181026Z-forestomach-record",
+      "record_id": "BTO:0000480",
+      "record_path": "data/habitats/host_associated/forestomach.yaml",
+      "record_sha256": "ecbea5e3ed1098ce385f04faccd406158a37dc9fcda49d21b9f62b7e113478bd",
+      "remediation_review_id": "20261109T215010Z-forestomach-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215010Z-forestomach-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "54c1c3b9e2eb88692dae569a40099bfb8a23165c1974642bd7d2449238cc41b8"
+    },
+    {
+      "finding_id": "frass--c029dd2b-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181032Z-frass__c029dd2b-record",
+      "record_id": "habitatmech:GOLD.67f3cde908",
+      "record_path": "data/habitats/host_associated/frass__c029dd2b.yaml",
+      "record_sha256": "2123796310cbaa733b6274a2ebdc88a966d5c4433c1038dfd859391263c93aaf",
+      "remediation_review_id": "20261109T215012Z-frass__c029dd2b-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215012Z-frass__c029dd2b-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9fae1fb63a8c249b3c6f7011ce48a3450de065adf7479366bcdc81af78fae255"
+    },
+    {
+      "finding_id": "frass-context-parent",
+      "group_id": "G-finger-to-free-living-state-context-parent-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2335",
+      "post_remediation_verdict": "needs_curation",
+      "predecessor_review_id": "20261109T181031Z-frass-record",
+      "record_id": "habitatmech:GOLD.319c3f351e",
+      "record_path": "data/habitats/host_associated/frass.yaml",
+      "record_sha256": "31ad1522e141bf0ca7fb9d56f58cf0b92cee828a70a215cc863e58126e6523f0",
+      "remediation_review_id": "20261109T215011Z-frass-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215011Z-frass-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "7fcee6599ed87e9db2897148cbd52a5da6eb6f022aafca820745d68b2ff1728f"
+    },
+    {
+      "finding_id": "free-living-state-organism-form-identity",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181033Z-free_living_state-record",
+      "record_id": "habitatmech:PREGO.6c4660c2ae",
+      "record_path": "data/habitats/host_associated/free_living_state.yaml",
+      "record_sha256": "136893501eba32ff41eacb0c0eeb35e411da91d8571077b6d6185aec64dfad2f",
+      "remediation_review_id": "20261109T215013Z-free_living_state-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215013Z-free_living_state-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "2767f123413dadc9d0f5724b53d6ee4aecdd42f2e3d8385f916aa1b6fb812b38"
+    },
+    {
+      "finding_id": "free-living-state-organism-form-parent",
+      "group_id": "G-finger-to-free-living-state-identity-grounding-repairs",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2334",
+      "post_remediation_verdict": "pass_with_limitations",
+      "predecessor_review_id": "20261109T181033Z-free_living_state-record",
+      "record_id": "habitatmech:PREGO.6c4660c2ae",
+      "record_path": "data/habitats/host_associated/free_living_state.yaml",
+      "record_sha256": "136893501eba32ff41eacb0c0eeb35e411da91d8571077b6d6185aec64dfad2f",
+      "remediation_review_id": "20261109T215013Z-free_living_state-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261109T215013Z-free_living_state-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "2767f123413dadc9d0f5724b53d6ee4aecdd42f2e3d8385f916aa1b6fb812b38"
+    }
+  ],
+  "run_id": "mech-goal-sequence-20261019",
+  "stage": 5
+}

@@ -6,7 +6,7 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Fish
+- synonym_text: fish host environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
@@ -44,3 +44,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-11-09T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Fish'' when defining
+    habitatmech:GOLD.3d529a667e as ''fish-associated environment''. Verbatim source
+    attestations are preserved. Review #2336: Displaced GOLD source label ''Fish''
+    in path ''Host-associated > Fish'' names the host clade itself rather than the
+    defined habitat ''fish-associated environment''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

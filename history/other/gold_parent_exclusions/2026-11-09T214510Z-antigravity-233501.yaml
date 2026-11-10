@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/gold_parent_exclusions.tsv
+  slug: gold_parent_exclusions
+session:
+  id: 2026-11-09T214510Z-antigravity-233501
+  timestamp: '2026-11-09T21:45:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2335
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - gold_parent_exclusions
+  summary: Exclude 8 GOLD context-only organ and organ-system parents in finger..free_living_state cohort
+  details: 'Stage 5 (resolve_review_findings) grouped remediation of G-finger-to-free-living-state-context-parent-repairs
+    (8 findings across 8 records from Stage 4 cohort review 20261109T181100Z-finger_to_free_living_state-category,
+    Issue #2335). Added 8 guarded exclusion rows to curation/gold_parent_exclusions.tsv:
+    (1) habitatmech:GOLD.52f22e84ee (foregut__6bc8c43a, Host-associated > Fish > Digestive
+    system > Foregut, excluding habitatmech:GOLD.8a68d0f6f5 Digestive system); (2)
+    habitatmech:GOLD.cd6e81f421 (foregut__c14450a8, Host-associated > Mammals > Digestive
+    system > Foregut, excluding habitatmech:GOLD.c8e85f3c84 Digestive system); (3)
+    habitatmech:GOLD.bd1664969c (foregut__ce63e8ab, Host-associated > Arthropoda:
+    Insects > Digestive system > Foregut, excluding habitatmech:GOLD.d7cff86ce8 Digestive
+    system); (4) habitatmech:GOLD.8997340b18 (foregut__d14a54ae, Host-associated >
+    Arthropoda: Myriapoda > Digestive system > Foregut, excluding habitatmech:GOLD.acc41d1792
+    Digestive system); (5) habitatmech:GOLD.fe78a4c113 (foregut__ee6a8f74, Host-associated
+    > Arthropoda: Crustaceans > Digestive system > Foregut, excluding habitatmech:GOLD.6eecdf150d
+    Digestive system); (6) habitatmech:GOLD.9558a262cc (forestomach / BTO:0000480,
+    Host-associated > Mammals > Digestive system > Stomach > Forestomach, excluding
+    habitatmech:GOLD.d3869ad37f Stomach); (7) habitatmech:GOLD.319c3f351e (frass,
+    Host-associated > Arthropoda: Insects > Larva > Gut > Frass, excluding habitatmech:GOLD.d4e02cf775
+    Gut); and (8) habitatmech:GOLD.67f3cde908 (frass__c029dd2b, Host-associated >
+    Arthropoda: Insects > Digestive system > Hindgut > Frass, excluding habitatmech:GOLD.50722c7871
+    Hindgut).'

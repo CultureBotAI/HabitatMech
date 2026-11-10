@@ -67,7 +67,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/stomach-bto-0001307.html">stomach</a>      <code class="curie">BTO:0001307</code></li>
-  <li><a href="../habitats/stomach-habitatmech-gold-d3869ad37f.html">Stomach</a>      <code class="curie">habitatmech:GOLD.d3869ad37f</code></li>
 </ul>
 
 
@@ -108,6 +107,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.b02ab3664a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-11-09 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.d3869ad37f for habitatmech:GOLD.9558a262cc (Host-associated &gt; Mammals &gt; Digestive system &gt; Stomach &gt; Forestomach). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2335" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2335</a> : Piscine, mammalian, insect, myriapod, and crustacean foregut are anterior digestive-tract subdivisions (part_of), not subtypes (is_a) of the whole host-scoped digestive system; mammalian forestomach (BTO:0000480) is an anterior stomach compartment (part_of), not a subtype of the whole mammalian stomach; insect larval and hindgut frass are egested fecal waste materials (ENVO:00002003), not anatomical subtypes of the gut or hindgut organ. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target BTO:0000480. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 
