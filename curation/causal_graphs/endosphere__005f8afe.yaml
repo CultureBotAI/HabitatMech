@@ -1,0 +1,147 @@
+identifier: habitatmech:GOLD.af0c4ac629
+causal_graphs:
+- graph_id: root_endosphere_drought_nitrogen_stress_streptomyces_pseudomonas_burkholderia_acds_nifh_sod_colonization
+  title: Root endosphere host-filtered interior, water-deficit, and nitrogen-limitation regime, Streptomyces/Pseudomonas/Burkholderia/Bradyrhizobium
+    endophyte guild selection, and acdS/nifH/SOD/siderophore/T6SS ethylene modulation and drought-resilience
+    mechanism
+  description: The root endosphere is a host-gated internal plant root compartment shaped by plant immune
+    and physiological filtering, soil water deficit (drought stress), and nitrogen availability. Relative
+    to the external rhizosphere, these internal root cues and abiotic stresses selectively enrich specialized
+    root-endophytic Actinobacteria (especially Streptomyces), Gammaproteobacteria (Pseudomonas), Betaproteobacteria
+    (Burkholderia-Caballeronia-Paraburkholderia), and diazotrophic Alphaproteobacteria (Bradyrhizobium,
+    Devosia, Sphingomonas, Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium). Within the root interior,
+    these endophytic guilds encode and upregulate 1-aminocyclopropane-1-carboxylate (ACC) deaminase (acdS),
+    nitrogenase (nifH), denitrification enzymes (nirS, nirK), superoxide dismutase (SOD), chitinase, siderophore
+    and spermidine/colanic acid biosynthesis clusters, and type VI secretion system (T6SS) genes to cleave
+    the plant stress-ethylene precursor ACC, scavenge reactive oxygen species, fix and transform nitrogen,
+    and promote host root and shoot biomass under drought and low-nitrogen stress.
+  nodes:
+  - node_id: endosphere__005f8afe
+    label: root endosphere
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.af0c4ac629
+    description: Internal tissue compartment of plant roots colonized by endophytic microorganisms.
+  - node_id: host_root_interior_drought_water_deficit_and_nitrogen_limitation_regime
+    label: host-gated root interior with soil water deficit (drought), stress ethylene, and reduced nitrogen
+      supply
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Internal plant root microenvironment subject to host selective filtering, soil water
+      deficit, elevated stress phytohormone ethylene precursor (ACC), and reduced nitrogen fertilization.
+  - node_id: root_endophytic_streptomyces_pseudomonas_burkholderia_and_bradyrhizobium_guild
+    label: root-endophytic Streptomyces, Pseudomonas, Burkholderia-Caballeronia-Paraburkholderia, and
+      Bradyrhizobium/Devosia guild
+    node_type: COMMUNITY
+    description: Root endosphere bacterial assemblage enriched in Actinobacteria (Streptomyces), Pseudomonas,
+      Burkholderia-Caballeronia-Paraburkholderia, and diazotrophic Alphaproteobacteria (Bradyrhizobium,
+      Devosia, Sphingomonas, Rhizobium).
+  - node_id: endosphere_acds_acc_deaminase_nifh_superoxide_dismutase_siderophore_and_t6ss_system
+    label: 1-aminocyclopropane-1-carboxylate deaminase (acdS), nitrogenase (nifH), nitrite reductases
+      (nirS/nirK), superoxide dismutase, chitinase, siderophore/spermidine clusters, and T6SS
+    node_type: GENE_OR_PROTEIN
+    description: Root endophyte 1-aminocyclopropane-1-carboxylate deaminase (acdS), nitrogenase iron protein
+      (nifH), nitrite reductases (nirS, nirK), superoxide dismutase, chitinase, siderophore/spermidine/colanic
+      acid biosynthetic enzymes, and type VI secretion system (T6SS) proteins.
+  - node_id: endophytic_ethylene_lowering_ros_scavenging_nitrogen_fixation_and_drought_stress_alleviation
+    label: ACC deaminase-mediated stress-ethylene lowering, ROS scavenging, biological nitrogen fixation,
+      and host drought/low-N resilience
+    node_type: COMMUNITY_PROCESS
+    description: Endophytic modulation of host ethylene levels via ACC deaminase, reactive oxygen species
+      detoxification, biofilm colonization, and nitrogen acquisition that sustain plant biomass under
+      drought and reduced nitrogen supply.
+  edges:
+  - edge_id: root_endosphere_maintains_host_filtered_water_deficit_and_nitrogen_stress_regime
+    subject: endosphere__005f8afe
+    predicate: maintains
+    object: host_root_interior_drought_water_deficit_and_nitrogen_limitation_regime
+    description: The root endosphere imposes strong host-compartment filtering and transmits soil water-deficit
+      and nitrogen-reduction stresses to internal root-colonizing bacteria.
+    evidence:
+    - reference: PMID:32220847
+      snippet: Compared to those of the rhizosphere, endosphere microbiomes had lower diversity but contained
+        several taxa with higher relative abundance; many of these taxa were also present in the roots
+        of other desert plants.
+      notes: The root endosphere filters rhizosphere diversity into a lower-diversity, high-abundance
+        internal endophytic microbiome in desert plants (PMID:32220847).
+    - reference: PMID:36977576
+      snippet: Slight yet significant microbial responses to irrigation treatments were observed in all
+        three microhabitats. The root endophytic bacterial community was most responsive to water stress.
+      notes: Among bulk soil, rhizosphere, and root endosphere compartments, the root endosphere microbiome
+        is the most responsive to water-deficit stress (PMID:36977576).
+  - edge_id: root_endosphere_stress_regime_selects_for_streptomyces_pseudomonas_and_burkholderia_endophytes
+    subject: host_root_interior_drought_water_deficit_and_nitrogen_limitation_regime
+    predicate: selects for
+    object: root_endophytic_streptomyces_pseudomonas_burkholderia_and_bradyrhizobium_guild
+    description: Drought and reduced nitrogen supply in the root endosphere select for Streptomyces, Pseudomonas,
+      Burkholderia-Caballeronia-Paraburkholderia, and Bradyrhizobium/Devosia endophytes.
+    evidence:
+    - reference: PMID:36977576
+      snippet: No-irrigation primarily increased the relative abundance of root endophytic Actinobacteria,
+        especially the genus Streptomyces.
+      notes: Water deficit selectively enriches Actinobacteria, particularly Streptomyces, in the root
+        endosphere (PMID:36977576).
+    - reference: PMID:36416970
+      snippet: Root endosphere bacterial communities of two rice cultivars showed different tolerance
+        to RN, but showed commonalities in the selection of bacteria taxon, such as the massive enrichment
+        of Burkholderia-Caballeronia-Paraburkholderia in the root endosphere.
+      notes: Reduced nitrogen fertilization drives massive enrichment of Burkholderia-Caballeronia-Paraburkholderia
+        in the rice root endosphere (PMID:36416970).
+    - reference: PMID:35250913
+      snippet: A linear discriminant analysis with effect size analysis of the 16S rRNA sequencing data
+        revealed that bacteria in the root endosphere of the intercropped cane proliferated profoundly,
+        primarily occupied by Devosia, Rhizobiales, Myxococcales, Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium,
+        Bradyrhizobium, and Sphingomonas.
+      notes: Root endosphere communities enrich diazotrophic Bradyrhizobium, Devosia, Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium,
+        and Sphingomonas (PMID:35250913).
+  - edge_id: root_endophyte_guild_expresses_acds_nifh_sod_siderophore_and_t6ss_genes
+    subject: root_endophytic_streptomyces_pseudomonas_burkholderia_and_bradyrhizobium_guild
+    predicate: expresses
+    object: endosphere_acds_acc_deaminase_nifh_superoxide_dismutase_siderophore_and_t6ss_system
+    description: Root endophytes encode and enrich acdS (ACC deaminase), nifH, nirS/nirK, superoxide dismutase,
+      chitinase, siderophore/spermidine/colanic acid biosynthetic genes, and T6SS genes.
+    evidence:
+    - reference: PMID:32220847
+      snippet: Complete genome sequencing of LTGT-11-2Z revealed 1-aminocyclopropane-1-carboxylate deaminases,
+        siderophore, spermidine, and colanic acid biosynthetic genes, as well as type VI secretion system
+        (T6SS) genes, which are likely involved in biofilm formation and plant-microbe interactions.
+      notes: Root-endosphere Pseudomonas strain LTGT-11-2Z encodes ACC deaminases, siderophore, spermidine,
+        colanic acid, and T6SS genes (PMID:32220847).
+    - reference: PMID:36416970
+      snippet: Additionally, the relative abundances of nifH, amoA-archaea, nirS, nirK, and acdS genes
+        in japonica rice roots were higher than those in roots of hybrid rice under THYN treatment. RN
+        significantly increased the relative abundance of acdS gene in roots of hybrid rice, alleviating
+        the decline in above-ground dry matter weight.
+      notes: Rice root endosphere communities harbor nifH, nirS, nirK, and acdS genes and significantly
+        increase acdS abundance under reduced nitrogen fertilization (PMID:36416970).
+    - reference: PMID:36977576
+      snippet: Irrigation at ≤40% ET increased the relative abundances of PICRUSt2-predicted functional
+        genes encoding 1-aminocyclopropane-1-carboxylic acid deaminase, superoxide dismutase, and chitinase
+        in root endosphere.
+      notes: Drought stress increases the relative abundance of genes encoding ACC deaminase, superoxide
+        dismutase, and chitinase in the root endosphere (PMID:36977576).
+  - edge_id: endosphere_acds_sod_and_nifh_enzymes_catalyze_ethylene_modulation_and_stress_resilience
+    subject: endosphere_acds_acc_deaminase_nifh_superoxide_dismutase_siderophore_and_t6ss_system
+    predicate: catalyzes
+    object: endophytic_ethylene_lowering_ros_scavenging_nitrogen_fixation_and_drought_stress_alleviation
+    description: ACC deaminase (acdS), superoxide dismutase, chitinase, and nitrogen-cycling enzymes modulate
+      host ethylene production, scavenge reactive oxygen species, improve nutrient acquisition, and sustain
+      plant growth under drought and reduced nitrogen.
+    evidence:
+    - reference: PMID:36977576
+      snippet: Our data suggest that the root endophytic Actinobacteria are likely the key players to
+        improve bermudagrass fitness under drought by modulating phytohormone ethylene production, scavenging
+        reactive oxygen species, or ameliorating nutrient acquisition.
+      notes: Root endosphere ACC deaminase, superoxide dismutase, and chitinase activities improve host
+        drought fitness by modulating ethylene, scavenging ROS, and enhancing nutrient acquisition (PMID:36977576).
+    - reference: PMID:32220847
+      snippet: We isolated a Pseudomonas strain (LTGT-11-2Z) that was prevalent in root endosphere microbiomes
+        of A. sparsifolia and promoted drought resistance during incubation with wheat.
+      notes: Root-endosphere Pseudomonas sp. LTGT-11-2Z directly promotes host plant drought resistance
+        (PMID:32220847).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added root_endosphere_drought_nitrogen_stress_streptomyces_pseudomonas_burkholderia_acds_nifh_sod_colonization
+    mechanism graph for endosphere__005f8afe (habitatmech:GOLD.af0c4ac629) backed by PMID:36416970, PMID:32220847,
+    PMID:36977576, and PMID:35250913.
+  llm_assisted: true

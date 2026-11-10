@@ -92,6 +92,179 @@ characteristic_taxa:
   score: 3.0
   rank: 6
   candidate_pool: 6
+causal_graphs:
+- graph_id: cave_aphotic_karst_sulfidic_co2_gradient_sulfurovum_thiobacillus_sqr_soxb_cbbl_chemolithoautotrophy
+  title: Subterranean cave aphotic oligotrophic and sulfidic/CO2 geochemical regime,
+    Sulfurovum/Thiobacillus/Nitrosomonas/Pseudonocardia guild selection, and Sqr/SoxB/AmoA/RuBisCO
+    (cbbL) dark chemolithoautotrophic primary production mechanism
+  description: Subterranean karst and sulfidic caves (such as Movile Cave, the Frasassi
+    cave system, Zhijin Cave, and Luohandu Cave) are aphotic habitats isolated from
+    photosynthetic energy input, characterized by oligotrophic carbonate rock walls
+    and sediments, elevated cave-air CO2 (~2,000 ppm), and in sulfidic systems, H2S-
+    and NH4+-bearing groundwater mixing with microoxic cave waters. Absence of light
+    and availability of inorganic electron donors (H2S, S0, NH4+) and CO2 select for
+    chemolithoautotrophic biofilms and sediment guilds including sulfide-oxidizing
+    Epsilonproteobacteria (Sulfurovum-like and Sulfuricurvum spp.), Betaproteobacteria
+    and Gammaproteobacteria sulfur oxidizers (Thiobacillus), ammonia and nitrite oxidizers
+    (Nitrosomonas, Nitrospira, Candidatus Nitrotoga), and cbbL-bearing Actinobacteria
+    (Pseudonocardia) and Alphaproteobacteria (Bradyrhizobium, Mesorhizobium). These
+    communities express sulfide-quinone oxidoreductase (Sqr), thiosulfate-oxidizing
+    Sox proteins (soxB), ammonia monooxygenase (amoA), nitrogenase (NifH), and form
+    I ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO, cbbL) alongside 4-hydroxybutyryl-CoA
+    dehydratase to drive dark inorganic carbon fixation, elemental sulfur S(0) and
+    sulfate formation, and subterranean ecosystem primary production.
+  nodes:
+  - node_id: cave
+    label: cave
+    node_type: HABITAT
+    grounding: ENVO:00000067
+    description: Subterranean aphotic karst or sulfidic bedrock cavity isolated from
+      surface photosynthetic primary production.
+  - node_id: aphotic_oligotrophic_karst_co2_and_sulfide_ammonium_redox_interface
+    label: aphotic oligotrophic karst bedrock, elevated pCO2, and dissolved sulfide/O2
+      and ammonium redox gradients
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Permanent darkness, oligotrophic carbonate rock/sediment surfaces,
+      elevated subterranean CO2 concentrations, and sulfide- and ammonium-rich groundwater
+      mixing with microoxic cave waters.
+  - node_id: cave_sulfurovum_thiobacillus_nitrosomonas_nitrospira_and_pseudonocardia_guild
+    label: chemolithoautotrophic Sulfurovum/Sulfuricurvum, Thiobacillus, Nitrosomonas/Nitrospira,
+      and karst cbbL-bearing Pseudonocardia/Bradyrhizobium guild
+    node_type: COMMUNITY
+    description: Subterranean cave biofilm and sediment community comprising Sulfurovum-like
+      and Sulfuricurvum Epsilonproteobacteria, Thiobacillus sulfur oxidizers, Nitrosomonas,
+      Nitrospira, and Candidatus Nitrotoga nitrifiers, and karst cave cbbL-harboring
+      Pseudonocardia, Bradyrhizobium, Mesorhizobium, and Variovorax.
+  - node_id: cave_sqr_soxb_amoa_nifh_and_rubisco_cbbl_chemolithoautotrophic_enzymes
+    label: sulfide-quinone oxidoreductase (Sqr), Sox pathway proteins (soxB), ammonia
+      monooxygenase (amoA), nitrogenase (NifH), 4-hydroxybutyryl-CoA dehydratase,
+      and RuBisCO (cbbL)
+    node_type: GENE_OR_PROTEIN
+    description: Sulfurovum sulfide-quinone oxidoreductase (Sqr), Gammaproteobacteria/Betaproteobacteria
+      Sox complex (soxB), Nitrosomonas ammonia monooxygenase (amoA), nitrogenase NifH,
+      4-hydroxybutyryl-CoA dehydratase, and Calvin-Benson-Bassham cycle ribulose-1,5-bisphosphate
+      carboxylase/oxygenase large subunit (cbbL/RuBisCO).
+  - node_id: subterranean_dark_co2_fixation_sulfur_oxidation_and_nitrification_primary_production
+    label: dark chemolithoautotrophic CO2 fixation, incomplete/complete sulfide oxidation
+      to S(0) and sulfate, and ammonia/nitrite oxidation
+    node_type: COMMUNITY_PROCESS
+    description: Subterranean primary production driven by Sqr- and Sox-catalyzed
+      sulfide oxidation and AmoA-catalyzed nitrification coupled to RuBisCO (cbbL)
+      and 3-hydroxypropionate/4-hydroxybutyrate dark inorganic carbon assimilation.
+  edges:
+  - edge_id: cave_maintains_aphotic_oligotrophic_and_sulfidic_co2_geochemical_regime
+    subject: cave
+    predicate: maintains
+    object: aphotic_oligotrophic_karst_co2_and_sulfide_ammonium_redox_interface
+    description: Subterranean karst and sulfidic caves maintain aphotic, nutrient-deficient
+      carbonate surfaces, elevated CO2, and high-sulfide/low-oxygen redox niches.
+    evidence:
+    - reference: PMID:32471344
+      snippet: Karst caves are considered as extreme environments with nutrition deficiency,
+        darkness, and oxygen deprivation, and they are also the sources of biodiversity
+        and metabolic pathways.
+      notes: Subterranean karst caves maintain permanent darkness, oligotrophy, and
+        localized oxygen deprivation (PMID:32471344).
+    - reference: PMID:25620962
+      snippet: The Frasassi and Acquasanta Terme cave systems in Italy host isolated
+        lithoautotrophic ecosystems characterized by sulfur-oxidizing biofilms with
+        up to 50% S(0) by mass. Filamentous Epsilonproteobacteria are among the principal
+        biofilm architects in Frasassi and Acquasanta Terme streams, colonizing high-sulfide,
+        low-oxygen niches relative to other major biofilm-forming populations.
+      notes: Sulfidic cave streams create isolated aphotic high-sulfide, low-oxygen
+        geochemical niches (PMID:25620962).
+  - edge_id: aphotic_cave_redox_regime_selects_for_chemolithoautotrophic_sulfur_and_nitrogen_guilds
+    subject: aphotic_oligotrophic_karst_co2_and_sulfide_ammonium_redox_interface
+    predicate: selects for
+    object: cave_sulfurovum_thiobacillus_nitrosomonas_nitrospira_and_pseudonocardia_guild
+    description: Dark sulfidic and oligotrophic karst cave niches select for Sulfurovum-like
+      Epsilonproteobacteria, Thiobacillus, Nitrosomonas, Nitrospira, Candidatus Nitrotoga,
+      and cbbL-bearing Pseudonocardia and Alphaproteobacteria.
+    evidence:
+    - reference: PMID:25620962
+      snippet: Metagenomic sequencing of eight biofilm samples indicated the presence
+        of diverse and abundant Epsilonproteobacteria. Populations of Sulfurovum-like
+        organisms were the most abundant Epsilonproteobacteria regardless of differences
+        in biofilm morphology, temperature, or water chemistry.
+      notes: High-sulfide, low-oxygen cave stream niches select for abundant Sulfurovum-like
+        and Sulfuricurvum Epsilonproteobacteria (PMID:25620962).
+    - reference: PMID:19474813
+      snippet: DNA-based stable-isotope probing analyses using 13C-bicarbonate showed
+        that Thiobacillus spp. were most active in assimilating CO2 and also implied
+        that ammonia and nitrite oxidizers were active during incubations. Nitrosomonas
+        spp. were detected in both 16S rRNA and amoA gene libraries from the 'heavy'
+        DNA and sequences related to nitrite-oxidizing bacteria Nitrospira and Candidatus
+        'Nitrotoga' were also detected in the 'heavy' DNA, which suggests that ammonia/nitrite
+        oxidation may be another major primary production process in this unique ecosystem.
+      notes: Dark chemolithoautotrophic conditions in Movile Cave select for active
+        CO2-assimilating Thiobacillus, Nitrosomonas, Nitrospira, and Candidatus Nitrotoga
+        (PMID:19474813).
+    - reference: PMID:42962793
+      snippet: 'High-throughput sequencing of the cbbL gene further revealed pronounced
+        habitat-specific community structures: overlying soils exhibited the highest
+        diversity and enrichments of Mesorhizobium, Variovorax, and Bradyrhizobium,
+        whereas sediments were dominated by Pseudonocardia.'
+      notes: Oligotrophic karst cave sediments select for cbbL-encoding autotrophic
+        Pseudonocardia communities (PMID:42962793).
+  - edge_id: cave_guild_expresses_sqr_soxb_amoa_nifh_and_rubisco_cbbl
+    subject: cave_sulfurovum_thiobacillus_nitrosomonas_nitrospira_and_pseudonocardia_guild
+    predicate: expresses
+    object: cave_sqr_soxb_amoa_nifh_and_rubisco_cbbl_chemolithoautotrophic_enzymes
+    description: Cave chemolithoautotrophs harbor and express sulfide-quinone oxidoreductase
+      (Sqr), Sox proteins (soxB), ammonia monooxygenase (amoA), nitrogenase NifH,
+      4-hydroxybutyryl-CoA dehydratase, and RuBisCO (cbbL).
+    evidence:
+    - reference: PMID:19474813
+      snippet: Microbial diversity in Movile Cave (Romania) was studied using bacterial
+        and archaeal 16S rRNA gene sequence and functional gene analyses, including
+        ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), soxB (sulfate thioesterase/thiohydrolase)
+        and amoA (ammonia monooxygenase). Sulfur oxidizers from both Gammaproteobacteria
+        and Betaproteobacteria were detected in 16S rRNA, soxB and RuBisCO gene libraries.
+      notes: Movile Cave sulfur- and ammonia-oxidizing guilds harbor functional RuBisCO,
+        soxB, and amoA genes (PMID:19474813).
+    - reference: PMID:25620962
+      snippet: Multiple homologs of sulfide-quinone oxidoreductase (Sqr), together
+        with incomplete or absent Sox pathways, suggest that cave Sulfurovum-like
+        Epsilonproteobacteria oxidize sulfide incompletely to S(0) using either O2
+        or nitrate as a terminal electron acceptor, consistent with previous evidence
+        that they are most successful in niches with high dissolved sulfide to oxygen
+        ratios. In contrast, we recovered homologs of the complete complement of Sox
+        proteins affiliated Gammaproteobacteria and with less abundant Sulfuricurvum
+        spp. and Arcobacter spp., suggesting that these populations are capable of
+        the complete oxidation of sulfide to sulfate.
+      notes: Cave Sulfurovum-like Epsilonproteobacteria encode multiple Sqr homologs
+        while Gammaproteobacteria, Sulfuricurvum, and Arcobacter encode complete Sox
+        enzyme complexes (PMID:25620962).
+    - reference: PMID:32471344
+      snippet: The prediction of function showed that various enzymes, including ribulose-bisphosphate
+        carboxylase, 4-hydroxybutyryl-CoA dehydratase, nitrogenase NifH, and Nitrite
+        reductase, involved in carbon and nitrogen cycles were detected in Zhijin
+        cave.
+      notes: Karst cave bacterial communities encode ribulose-bisphosphate carboxylase,
+        4-hydroxybutyryl-CoA dehydratase, nitrogenase NifH, and nitrite reductase
+        (PMID:32471344).
+  - edge_id: cave_sqr_sox_amoa_and_cbbl_enzymes_catalyze_dark_carbon_fixation_and_sulfur_cycling
+    subject: cave_sqr_soxb_amoa_nifh_and_rubisco_cbbl_chemolithoautotrophic_enzymes
+    predicate: catalyzes
+    object: subterranean_dark_co2_fixation_sulfur_oxidation_and_nitrification_primary_production
+    description: Sqr, Sox, AmoA, and RuBisCO (cbbL) enzymes catalyze sulfide oxidation
+      to elemental sulfur and sulfate, nitrification, and dark inorganic carbon assimilation
+      that sustain subterranean cave food webs.
+    evidence:
+    - reference: PMID:19474813
+      snippet: The results provided molecular biological evidence to support the hypothesis
+        that Movile Cave is driven by chemolithoautotrophy, mainly through sulfur
+        oxidation by sulfur-oxidizing bacteria and reveal that ammonia- and nitrite-oxidizing
+        bacteria may also be major primary producers in Movile Cave.
+      notes: Chemolithoautotrophic sulfur oxidation and ammonia/nitrite oxidation
+        drive primary production in Movile Cave (PMID:19474813).
+    - reference: PMID:42962793
+      snippet: Microcosm incubations under a CO2 gradient further demonstrated a nonlinear
+        response of microbial carbon fixation, with both the microbial inorganic carbon
+        incorporation rate (1.29 mg C kg-1 d-1) and cbbL abundance (1.77 × 106 copies
+        g-1) peaking at 2000 ppm CO2.
+      notes: cbbL-encoded RuBisCO drives measurable dark inorganic carbon incorporation
+        (1.29 mg C kg-1 d-1) in karst cave sediments (PMID:42962793).
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -116,3 +289,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added cave_aphotic_karst_sulfidic_co2_gradient_sulfurovum_thiobacillus_sqr_soxb_cbbl_chemolithoautotrophy
+    mechanism graph for cave (ENVO:00000067) backed by PMID:19474813, PMID:25620962,
+    PMID:32471344, and PMID:42962793.
+  llm_assisted: true

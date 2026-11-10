@@ -24,6 +24,160 @@ source_attestations:
     trenches
   assertion_count: 4
   assertion_unit: ORGANISM
+causal_graphs:
+- graph_id: hadopelagic_zone_hydrostatic_pressure_alkane_flux_alcanivorax_marinimicrobia_alkb_alma_degradation
+  title: Marine hadopelagic zone extreme hydrostatic pressure and sinking-particle
+    alkane/recalcitrant-DOM regime, Alcanivorax/Oleibacter/Marinimicrobia/Chloroflexi/Thaumarchaeota
+    guild selection, and alkB/almA alkane hydroxylation and deep-trench biogeochemical
+    cycling mechanism
+  description: The marine hadopelagic zone in ocean trenches at depths below 6,000
+    m to ~11,000 m (such as the Mariana Trench Challenger Deep) is characterized by
+    low temperature, extreme hydrostatic pressure, recalcitrant dissolved organic
+    matter (DOM), and periodic fluxes of n-alkanes released from subduction-zone serpentinization
+    and sinking particles. These extreme pelagic trench conditions select for distinctive
+    hadal planktonic communities dominated by heterotrophic Marinimicrobia, recalcitrant-DOM-degrading
+    Chloroflexi, chemolithoautotrophic Thaumarchaeota, Nitrospirae, and Rhodospirillales,
+    and a dense bloom of aliphatic hydrocarbon-degrading Gammaproteobacteria (Alcanivorax
+    including Alcanivorax jadensis, Oleibacter, and Thalassolituus) at depths >10,400
+    m. These hadopelagic guilds encode and transcribe alkane monooxygenase (alkB)
+    and flavin-binding monooxygenase (almA) genes alongside extracellular peptidases,
+    amino acid metabolism and DNA mismatch-repair systems, and nitrification/sulfur-oxidation
+    pathways to drive piezotolerant n-alkane oxidation, recalcitrant organic matter
+    mineralization, and sequential nitrification in the deepest ocean waters.
+  nodes:
+  - node_id: hadopelagic_zone_ocean_trenches
+    label: marine hadopelagic zone
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.1f80141d6a
+    description: Pelagic water column of deep-ocean subduction trenches at hadal depths
+      below 6,000 m to ~11,000 m.
+  - node_id: hadal_hydrostatic_pressure_low_temperature_and_sinking_alkane_dom_flux
+    label: extreme hydrostatic pressure (>6,000-11,000 m), low temperature, recalcitrant
+      DOM, and subduction/sinking-particle n-alkane flux
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hadal trench water-column physical-chemical regime combining extreme
+      hydrostatic pressure, low temperature, recalcitrant dissolved organic matter,
+      and n-alkane fluxes in deep trench waters.
+  - node_id: hadopelagic_alcanivorax_oleibacter_marinimicrobia_chloroflexi_and_thaumarchaeota_guild
+    label: hadopelagic Alcanivorax/Oleibacter/Thalassolituus hydrocarbon-degrading
+      and Marinimicrobia/Chloroflexi/Thaumarchaeota guild
+    node_type: COMMUNITY
+    description: Hadopelagic planktonic microbial community enriched in alkane-degrading
+      Alcanivorax (including Alcanivorax jadensis), Oleibacter, and Thalassolituus
+      alongside heterotrophic Marinimicrobia, Chloroflexi, Thaumarchaeota, Nitrospirae,
+      and Rhodospirillales.
+  - node_id: hadal_alkb_alma_alkane_monooxygenases_mismatch_repair_and_extracellular_peptidase_system
+    label: alkane monooxygenase (alkB), flavin-binding monooxygenase (almA), DNA mismatch
+      repair, and extracellular protein/DOM degradation and nitrification enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Alcanivorax and Oleibacter alkane hydroxylase (alkB) and flavin-binding
+      monooxygenase (almA) genes together with hadal Marinimicrobia amino-acid metabolism,
+      mismatch-repair, and extracellular proteolysis genes and Thaumarchaeota/Nitrospirae
+      nitrification enzymes.
+  - node_id: piezotolerant_hadopelagic_alkane_degradation_dom_proteolysis_and_sequential_nitrification
+    label: piezotolerant n-alkane oxidation, recalcitrant DOM and protein mineralization,
+      and sequential hadal nitrification
+    node_type: COMMUNITY_PROCESS
+    description: Microbial oxidation of aliphatic n-alkanes under deep-sea hydrostatic
+      pressure coupled with extracellular protein decomposition, recalcitrant DOM
+      degradation, and sequential ammonia/nitrite oxidation in the hadopelagic water
+      column.
+  edges:
+  - edge_id: hadopelagic_zone_maintains_extreme_hydrostatic_pressure_and_alkane_flux
+    subject: hadopelagic_zone_ocean_trenches
+    predicate: maintains
+    object: hadal_hydrostatic_pressure_low_temperature_and_sinking_alkane_dom_flux
+    description: Ocean trenches below 6,000 m to ~11,000 m maintain low temperature,
+      elevated hydrostatic pressure, and fluxes of sinking-particle and subduction-derived
+      n-alkanes.
+    evidence:
+    - reference: PMID:31344308
+      snippet: The low temperature and elevated hydrostatic pressure in hadal trenches
+        at water depths below 6000 m render sample collection difficult.
+      notes: Hadal trenches below 6,000 m are defined by low temperature and elevated
+        hydrostatic pressure (PMID:31344308).
+    - reference: PMID:30975208
+      snippet: Abundant n-alkanes were observed in sinking particles at 2000, 4000,
+        and 6000 m (averaged 23.5 μg/gdw) and hadal surface sediments at depths of
+        10,908, 10,909, and 10,911 m (averaged 2.3 μg/gdw).
+      notes: Sinking particles and deep trench waters deliver abundant aliphatic n-alkanes
+        to the bottom of the Mariana Trench (PMID:30975208).
+  - edge_id: hadal_pressure_and_alkane_flux_select_for_alcanivorax_oleibacter_and_marinimicrobia
+    subject: hadal_hydrostatic_pressure_low_temperature_and_sinking_alkane_dom_flux
+    predicate: selects for
+    object: hadopelagic_alcanivorax_oleibacter_marinimicrobia_chloroflexi_and_thaumarchaeota_guild
+    description: Hadal hydrostatic pressure and deep alkane/DOM fluxes select for
+      Marinimicrobia, Chloroflexi, Thaumarchaeota, Nitrospirae, and a massive proliferation
+      of Oleibacter, Thalassolituus, and Alcanivorax at depths >10,400 m.
+    evidence:
+    - reference: PMID:30975208
+      snippet: Unexpectedly, we observed an abrupt increase in the abundance of hydrocarbon-degrading
+        bacteria at depths > 10,400 m in the Challenger Deep. Indeed, the proportion
+        of hydrocarbon-degrading bacteria at > 10,400 m is the highest observed in
+        any natural environment on Earth. These bacteria were mainly Oleibacter, Thalassolituus,
+        and Alcanivorax genera, all of which include species known to consume aliphatic
+        hydrocarbons.
+      notes: Hadopelagic waters >10,400 m in the Challenger Deep select for extreme
+        enrichment of Oleibacter, Thalassolituus, and Alcanivorax (PMID:30975208).
+    - reference: PMID:31344308
+      snippet: The hadal microbial communities at different depths were revealed to
+        be consistent and were dominated by heterotrophic Marinimicrobia.
+      notes: In situ hadopelagic water samples in the Mariana Trench are consistently
+        dominated by heterotrophic Marinimicrobia alongside Thaumarchaeota, Nitrospirae,
+        Chloroflexi, and Rhodospirillales (PMID:31344308).
+  - edge_id: hadopelagic_guild_expresses_alkb_alma_and_hadal_metabolic_repair_genes
+    subject: hadopelagic_alcanivorax_oleibacter_marinimicrobia_chloroflexi_and_thaumarchaeota_guild
+    predicate: expresses
+    object: hadal_alkb_alma_alkane_monooxygenases_mismatch_repair_and_extracellular_peptidase_system
+    description: Hadopelagic Alcanivorax and Oleibacter populations enrich and transcribe
+      alkB and almA alkane-degradation genes while hadal Marinimicrobia enrich amino-acid
+      metabolism and DNA mismatch-repair genes.
+    evidence:
+    - reference: PMID:30975208
+      snippet: This community shift towards hydrocarbon degraders was accompanied
+        by increased abundance and transcription of genes involved in alkane degradation.
+      notes: Hydrocarbon-degrading bacteria at >10,400 m in the Mariana Trench exhibit
+        increased abundance and transcription of alkane-degradation genes (PMID:30975208).
+    - reference: PMID:30446553
+      snippet: The relative abundance of A. jadensis correlated with copy numbers
+        of functional almA and alkB genes, which are involved in alkane degradation.
+      notes: Deep Mariana Trench Alcanivorax jadensis populations harbor and scale
+        with copy numbers of functional almA and alkB alkane monooxygenase genes (PMID:30446553).
+    - reference: PMID:31301991
+      snippet: The MAGs from the hadal depths are distinct from those from the mesopelagic
+        and bathypelagic depths by enrichment of the genes involved in amino acids
+        metabolism and mismatch repair.
+      notes: Hadopelagic Marinimicrobia genomes are specifically enriched in genes
+        for amino acid metabolism and DNA mismatch repair relative to shallower pelagic
+        zones (PMID:31301991).
+  - edge_id: hadal_alkb_alma_and_catabolic_enzymes_catalyze_deep_alkane_and_dom_cycling
+    subject: hadal_alkb_alma_alkane_monooxygenases_mismatch_repair_and_extracellular_peptidase_system
+    predicate: catalyzes
+    object: piezotolerant_hadopelagic_alkane_degradation_dom_proteolysis_and_sequential_nitrification
+    description: Expressed alkane monooxygenases, extracellular proteases, and chemolithotrophic
+      enzymes drive n-alkane degradation under simulated deep-sea conditions alongside
+      recalcitrant DOM decomposition and sequential nitrification.
+    evidence:
+    - reference: PMID:30975208
+      snippet: Correspondingly, three Alcanivorax species that were isolated from
+        10,400 m water supplemented with hexadecane were able to efficiently degrade
+        n-alkanes under conditions simulating the deep sea, as did a reference Oleibacter
+        strain cultured at atmospheric pressure.
+      notes: Hadopelagic Alcanivorax isolates from 10,400 m water efficiently catalyze
+        n-alkane degradation under simulated deep-sea conditions (PMID:30975208).
+    - reference: PMID:31344308
+      snippet: Metabolic reconstruction indicated that a great number of the MAGs
+        participated in nitrogen and sulfur cycling, in which the nitrification process
+        was driven sequentially by Thaumarchaeota and Nitrospirae and sulfur oxidization
+        by Rhodospirillales in the Alphaproteobacteria class. Moreover, several groups
+        of hadal microbes were revealed to be potential carbon monoxide oxidizers.
+        Metatranscriptomic result highlighted the contribution of Chloroflexi in degrading
+        recalcitrant dissolved organic matter and Marinimicrobia in extracellular
+        protein decomposition.
+      notes: In situ metatranscriptomics and MAG reconstruction show sequential nitrification
+        by Thaumarchaeota and Nitrospirae, sulfur oxidation by Rhodospirillales, recalcitrant
+        DOM degradation by Chloroflexi, and extracellular protein decomposition by
+        Marinimicrobia in hadopelagic waters (PMID:31344308).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -48,3 +202,10 @@ curation_history:
     ENVO:00000208 (marine pelagic zone) (PMID 25722405; DOI:10.1073/pnas.1423854112).
     Path: Environmental > Aquatic > Marine > Pelagic zone > Hadopelagic zone/Ocean
     trenches'
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added hadopelagic_zone_hydrostatic_pressure_alkane_flux_alcanivorax_marinimicrobia_alkb_alma_degradation
+    mechanism graph for hadopelagic_zone_ocean_trenches (habitatmech:GOLD.1f80141d6a)
+    backed by PMID:31344308, PMID:30975208, PMID:30446553, and PMID:31301991.
+  llm_assisted: true

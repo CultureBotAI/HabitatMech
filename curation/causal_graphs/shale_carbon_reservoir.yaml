@@ -1,0 +1,153 @@
+identifier: habitatmech:GOLD.e3f5133829
+causal_graphs:
+- graph_id: shale_carbon_reservoir_hypersaline_fracking_fluid_halanaerobium_methanohalophilus_rhodanese_asr_souring
+  title: Shale hydrocarbon reservoir hypersaline anoxic porewater and fracturing-polymer/thiosulfate regime,
+    Halanaerobium/Methanohalophilus/Desulfohalobium guild selection, and rhodanese/anaerobic sulfite reductase
+    and methylotrophic methanogenesis reservoir-souring mechanism
+  description: Subsurface shale hydrocarbon reservoirs and hydraulically fractured black shale formations
+    (such as the Marcellus, Utica, Antrim, and Permian/Midland Basin shales) maintain anoxic, hypersaline
+    porewaters and produced fluids (up to 3,490 mM Cl-) enriched in sedimentary hydrocarbons, injected
+    polysaccharide gelling polymers (guar gum), methylated amines, and oxidized sulfur species (thiosulfate
+    and sulfate). High chlorinity inhibits acetoclastic methanogenesis above ~1,000 mM Cl- and selects
+    for persistent halophilic fermentative and sulfidogenic bacteria dominated by Halanaerobium alongside
+    Geotoga, Desulfohalobium, and halophilic methylotrophic methanogens of the genus Methanohalophilus
+    (or hydrogenotrophic Methanoplanus and Methanocorpusculum at lower salinities). Halanaerobium expresses
+    mixed-acid polymer-fermentation enzymes, conserved rhodanese-like sulfurtransferases, and anaerobic
+    sulfite reductase (Asr) complexes that reduce thiosulfate to hydrogen sulfide while generating mannose,
+    acetate, H2, and methylated substrates that fuel Desulfohalobium sulfate reduction and Methanohalophilus
+    methylotrophic methanogenesis, driving biogenic gas generation, reservoir souring, and pipeline corrosion.
+  nodes:
+  - node_id: shale_carbon_reservoir
+    label: shale hydrocarbon reservoir
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.e3f5133829
+    description: Deep subsurface organic-rich shale formation and hydraulically fractured shale hydrocarbon
+      reservoir.
+  - node_id: hypersaline_anoxic_shale_brine_guar_polymer_thiosulfate_and_methylamine_regime
+    label: hypersaline anoxic shale porewater (up to 3,490 mM Cl-), fracturing-fluid guar polymers, thiosulfate,
+      and trimethylamine substrates
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Anoxic, high-salinity subsurface shale formation brines and hydraulic fracturing fluids
+      containing polysaccharide polymers (guar gum), thiosulfate/sulfate, acetate, and trimethylamine.
+  - node_id: shale_halanaerobium_methanohalophilus_geotoga_and_desulfohalobium_guild
+    label: halophilic fermentative/thiosulfate-reducing Halanaerobium, Desulfohalobium, Geotoga, and methylotrophic
+      Methanohalophilus guild
+    node_type: COMMUNITY
+    description: Persisting subsurface shale microbial consortium dominated by Halanaerobium spp. alongside
+      Geotoga, thermohalophilic sulfate-reducing Desulfohalobium/Desulfovibrionaceae, and methylotrophic
+      Methanohalophilus methanogens.
+  - node_id: halanaerobium_rhodanese_anaerobic_sulfite_reductase_polymer_fermentation_and_methanogenesis_enzymes
+    label: Halanaerobium rhodanese-like sulfurtransferases, anaerobic sulfite reductase complexes, guar-polymer
+      mixed-acid fermentation enzymes, and methylotrophic methanogenesis enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Conserved rhodanese-like proteins, anaerobic sulfite reductase complexes, and guar-gum
+      mixed-acid fermentation enzymes in Halanaerobium together with sulfate-reduction pathways in Desulfohalobium
+      and trimethylamine-utilizing methanogenesis enzymes in Methanohalophilus.
+  - node_id: thiosulfate_sulfidogenesis_polymer_fermentation_methylotrophic_methanogenesis_and_reservoir_souring
+    label: thiosulfate- and sulfate-dependent H2S reservoir souring, guar polymer fermentation to acetate/mannose,
+      and halophilic methylotrophic methanogenesis
+    node_type: COMMUNITY_PROCESS
+    description: Biogenic hydrogen sulfide and organic acid generation from thiosulfate reduction and
+      guar polymer fermentation coupled with trimethylamine-driven methanogenesis in subsurface shale
+      reservoirs.
+  edges:
+  - edge_id: shale_carbon_reservoir_maintains_hypersaline_anoxic_brine_and_polymer_thiosulfate_regime
+    subject: shale_carbon_reservoir
+    predicate: maintains
+    object: hypersaline_anoxic_shale_brine_guar_polymer_thiosulfate_and_methylamine_regime
+    description: Organic-rich and hydraulically fractured shales maintain anoxic, high-chlorinity porewaters
+      and fracturing fluids containing guar gum polymers, thiosulfate, acetate, and methylamines.
+    evidence:
+    - reference: PMID:17468287
+      snippet: In this study, archaeal diversity was investigated along a salinity gradient spanning 8
+        to 3,490 mM Cl(-) in a subsurface shale rich in CH(4) derived from biodegradation of sedimentary
+        hydrocarbons. Shale pore waters collected from wells in the main CH(4)-producing zone lacked electron
+        acceptors such as O(2), NO(3)(-), Fe(3+), or SO(4)(2-). Acetate was detected only in high-salinity
+        waters, suggesting that acetoclastic methanogenesis is inhibited at Cl(-) concentrations above
+        approximately 1,000 mM.
+      notes: Subsurface CH4-bearing shales maintain anoxic porewaters spanning 8 to 3,490 mM Cl- where
+        high chlorinity (>1,000 mM Cl-) inhibits acetoclastic methanogenesis (PMID:17468287).
+    - reference: PMID:40202322
+      snippet: Polymers like guar gum used as gelling agents in hydraulic fracturing fluids are known
+        to be fermentable substrates, but metabolic pathways encoding these processes have not been characterized.
+      notes: Hydraulic fracturing introduces fermentable guar gum polysaccharide polymers into high-salinity
+        shale systems (PMID:40202322).
+  - edge_id: hypersaline_shale_regime_selects_for_halanaerobium_methanohalophilus_and_desulfohalobium
+    subject: hypersaline_anoxic_shale_brine_guar_polymer_thiosulfate_and_methylamine_regime
+    predicate: selects for
+    object: shale_halanaerobium_methanohalophilus_geotoga_and_desulfohalobium_guild
+    description: High-salinity shale brines and fractured-shale fluids select for dominant Halanaerobium,
+      Geotoga, Desulfohalobium, and methylotrophic Methanohalophilus populations.
+    evidence:
+    - reference: PMID:29941576
+      snippet: Collectively, our findings show that Halanaerobium, Geotoga, and Methanohalophilus strain
+        abundances predict a significant fraction of nitrogen and carbon metabolites in the field.
+      notes: Persisting microbial communities across hydraulically fractured shale wells are dominated
+        by interacting Halanaerobium, Geotoga, and Methanohalophilus strains (PMID:29941576).
+    - reference: PMID:17468287
+      snippet: Archaeal clone libraries constructed from sequences from 16S rRNA genes isolated from two
+        wells revealed phylotypes similar to a halophilic methylotrophic Methanohalophilus species and
+        a hydrogenotrophic Methanoplanus species at high salinity and a single phylotype closely related
+        to Methanocorpusculum bavaricum at low salinity.
+      notes: High-salinity shale porewaters select for halophilic methylotrophic Methanohalophilus and
+        hydrogenotrophic Methanoplanus archaea (PMID:17468287).
+    - reference: PMID:40202322
+      snippet: Sulfide production was observed in 60°C incubations, with corresponding enrichment of Desulfohalobium
+        and Desulfovibrionaceae that possess complete pathways for coupling mannose and acetate oxidation
+        to sulfate reduction.
+      notes: Subsurface reservoir temperatures (60 degrees C) and Halanaerobium fermentation intermediates
+        select for thermohalophilic sulfate-reducing Desulfohalobium and Desulfovibrionaceae (PMID:40202322).
+  - edge_id: shale_guild_expresses_rhodanese_anaerobic_sulfite_reductase_and_polymer_fermentation_genes
+    subject: shale_halanaerobium_methanohalophilus_geotoga_and_desulfohalobium_guild
+    predicate: expresses
+    object: halanaerobium_rhodanese_anaerobic_sulfite_reductase_polymer_fermentation_and_methanogenesis_enzymes
+    description: Shale-dwelling Halanaerobium strains encode and upregulate rhodanese-like sulfurtransferases,
+      anaerobic sulfite reductase complexes, and mixed-acid guar biodegradation genes.
+    evidence:
+    - reference: PMID:28685163
+      snippet: Analysis of Halanaerobium isolate genomes and reconstructed genomes from metagenomic data
+        sets revealed the conserved presence of rhodanese-like proteins and anaerobic sulfite reductase
+        complexes capable of converting thiosulfate to sulfide. Shotgun proteomics measurements using
+        a Halanaerobium isolate verified that these proteins were more abundant when thiosulfate was present
+        in the growth medium, and culture-based assays identified thiosulfate-dependent sulfide production
+        by the same isolate.
+      notes: Utica Shale Halanaerobium genomes and proteomes express conserved rhodanese-like proteins
+        and anaerobic sulfite reductase complexes upregulated in the presence of thiosulfate (PMID:28685163).
+    - reference: PMID:40202322
+      snippet: Guar metabolism coincided with Halanaerobium growing only at 30°C, revealing genes for
+        polymer biodegradation through the mixed-acid fermentation pathway in different metagenome-assembled
+        genomes (MAGs).
+      notes: Shale Halanaerobium MAGs encode polymer biodegradation through the mixed-acid fermentation
+        pathway (PMID:40202322).
+  - edge_id: shale_enzymes_catalyze_thiosulfate_reduction_souring_and_methylotrophic_methanogenesis
+    subject: halanaerobium_rhodanese_anaerobic_sulfite_reductase_polymer_fermentation_and_methanogenesis_enzymes
+    predicate: catalyzes
+    object: thiosulfate_sulfidogenesis_polymer_fermentation_methylotrophic_methanogenesis_and_reservoir_souring
+    description: Rhodanese and anaerobic sulfite reductase complexes, polymer-fermentation enzymes, and
+      methanogenic pathways catalyze H2S souring, organic acid formation, and methane production in shale
+      reservoirs.
+    evidence:
+    - reference: PMID:28685163
+      snippet: Temporal sampling of produced fluids from a well in the Utica Shale revealed the dominance
+        of Halanaerobium strains within the in situ microbial community and the potential for these microorganisms
+        to catalyze thiosulfate-dependent sulfidogenesis. Increased production of sulfide and organic
+        acids during the stationary growth phase suggests that fermentative Halanaerobium uses thiosulfate
+        to remove excess reductant.
+      notes: Halanaerobium rhodanese and anaerobic sulfite reductase complexes catalyze thiosulfate-dependent
+        sulfidogenesis and organic acid production to dispose of excess reductant in fractured shales
+        (PMID:28685163).
+    - reference: PMID:17468287
+      snippet: Most-probable-number series revealed differences in methanogen substrate utilization (acetate,
+        trimethylamine, or H(2)/CO(2)) associated with chlorinity. The greatest methane production in
+        enrichment cultures was observed for incubations with salinity at or close to the native pore
+        water salinity of the inoculum.
+      notes: Salinity-adapted shale methanogens catalyze methylotrophic (trimethylamine) and hydrogenotrophic
+        methane generation at native porewater chlorinities (PMID:17468287).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added shale_carbon_reservoir_hypersaline_fracking_fluid_halanaerobium_methanohalophilus_rhodanese_asr_souring
+    mechanism graph for shale_carbon_reservoir (habitatmech:GOLD.e3f5133829) backed by PMID:28685163,
+    PMID:29941576, PMID:17468287, and PMID:40202322.
+  llm_assisted: true

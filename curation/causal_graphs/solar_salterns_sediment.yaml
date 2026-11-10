@@ -1,0 +1,165 @@
+identifier: habitatmech:GOLD.d9d8c58a7b
+causal_graphs:
+- graph_id: solar_saltern_sediment_hypersaline_anoxic_gradient_srb_haloarchaea_dsrab_methylotrophic_methanogenesis
+  title: Solar saltern sediment thalassohaline hypersaline anoxic and heavy-metal gradient, sulfate-reducing
+    bacteria and halophilic Euryarchaeota guild selection, and dsrAB/methylamine-methanogenesis/metal-ATPase
+    benthic cycling mechanism
+  description: Benthic sediments underlying solar saltern evaporation and crystallizer ponds experience
+    extreme thalassohaline sodium and chloride concentrations (up to 97-148 ppt Cl- and crystallizer saturation),
+    anoxia, methylated amine accumulation, and localized heavy-metal enrichment. This hypersaline anoxic
+    regime selects for a stratified benthic community combining diverse sulfate-reducing bacteria (including
+    Desulfovermiculus and Deltaproteobacteria), sulfur-oxidizing Thioalkalispira, halophilic Halobacteriaceae
+    (Halobacterium salinarum, Natronomonas, Haloarcula, Halorubrum), and methylotrophic methanogenic archaea
+    (Methanosarcinaceae such as Candidatus Methanosalis and MBSL-1 candidate division euryarchaeota).
+    These benthic guilds express dissimilatory (bi)sulfite reductase (dsrAB), trimethylamine and dimethylamine
+    methylotrophic methanogenesis enzymes, potassium-uptake and compatible-solute synthesis/transport
+    genes, and heavy-metal resistance transporters (copper-translocating P-type ATPases and cobalt-zinc-cadmium
+    resistance proteins) to drive benthic sulfate reduction, methylotrophic methane emission, and osmotic
+    and metal-stress homeostasis.
+  nodes:
+  - node_id: solar_salterns_sediment
+    label: solar saltern sediment
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.d9d8c58a7b
+    description: Hypersaline anoxic benthic sediment underlying solar saltern evaporation and crystallizer
+      ponds.
+  - node_id: thalassohaline_hypersaline_anoxic_sulfate_methylamine_and_metal_sediment_regime
+    label: thalassohaline hypersaline (Na+/Cl-) anoxic benthic regime with sulfate, methylated amines,
+      and heavy metals
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Steep sodium and chloride salinity gradients (including 97-148 ppt Cl- and crystallizer-pond
+      saturation), benthic anoxia, sulfate, compatible-solute-derived methylamines, and heavy-metal loads
+      in solar saltern sediments.
+  - node_id: saltern_sediment_srb_halobacteriaceae_and_methanosarcinaceae_guild
+    label: benthic sulfate-reducing bacteria (Desulfovermiculus), Halobacteriaceae (Halobacterium salinarum,
+      Natronomonas), and methylotrophic Methanosarcinaceae guild
+    node_type: COMMUNITY
+    description: Solar saltern sediment prokaryotic assemblage enriched in diverse sulfate-reducing Deltaproteobacteria
+      (Desulfovermiculus), Thioalkalispira, sediment-adapted Halobacterium and Natronomonas, and halophilic
+      methylotrophic Methanosarcinaceae (Candidatus Methanosalis) and MBSL-1 euryarchaeota.
+  - node_id: benthic_dsrab_methylamine_methanogenesis_compatible_solute_and_metal_atpase_system
+    label: dissimilatory (bi)sulfite reductase (dsrAB), trimethylamine/dimethylamine methanogenesis pathway
+      enzymes, compatible-solute/K+-uptake systems, and copper P-type ATPase/czc resistance proteins
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial dissimilatory (bi)sulfite reductase genes (dsrAB), Methanosarcinaceae methylotrophic
+      methanogenesis enzymes for trimethylamine and dimethylamine utilization, compatible-solute synthesis
+      and potassium-uptake/sodium-efflux proteins, and Halobacterium salinarum copper-translocating P-type
+      ATPases and cobalt-zinc-cadmium resistance proteins.
+  - node_id: hypersaline_benthic_sulfate_reduction_methylotrophic_methanogenesis_and_osmotic_metal_homeostasis
+    label: hypersaline benthic dissimilatory sulfate reduction, methylotrophic methane production, and
+      osmotic/heavy-metal stress tolerance
+    node_type: COMMUNITY_PROCESS
+    description: Coupled anaerobic sulfate reduction and non-competitive methylamine-driven methanogenesis
+      alongside compatible-solute/ion-transport osmoregulation and heavy-metal detoxification in solar
+      saltern sediments.
+  edges:
+  - edge_id: solar_saltern_sediment_maintains_thalassohaline_anoxic_sulfate_and_metal_regime
+    subject: solar_salterns_sediment
+    predicate: maintains
+    object: thalassohaline_hypersaline_anoxic_sulfate_methylamine_and_metal_sediment_regime
+    description: Solar saltern sediments beneath evaporation and crystallizer ponds maintain extreme thalassohaline
+      Na+/Cl- concentrations, benthic anoxia, and heavy-metal-enriched porewater conditions.
+    evidence:
+    - reference: PMID:23766077
+      snippet: The samples studied here represent one of the most hypersaline anoxic environments sampled
+        worldwide that harbour a highly diverse microbial community different from those previously reported
+        in other hypersaline sediments.
+      notes: Sediments beneath solar saltern crystallizer ponds form extreme hypersaline anoxic benthic
+        habitats (PMID:23766077).
+    - reference: PMID:33013726
+      snippet: Elemental analysis of the brine samples showed high concentration of sodium (Na+) and chloride
+        (Cl-) ions thereby indicating its thalassohaline nature.
+      notes: Solar saltern brines and underlying sediments are governed by high thalassohaline sodium
+        and chloride ion concentrations across salt harvesting phases (PMID:33013726).
+    - reference: PMID:34681003
+      snippet: The genome is derived from sediments of a hypersaline (97-148 ppt chloride) unrestored
+        industrial saltern that has been observed to be a significant methane source.
+      notes: Hypersaline solar saltern sediments contain 97-148 ppt chloride and support active benthic
+        methanogenesis (PMID:34681003).
+  - edge_id: thalassohaline_anoxic_sediment_selects_for_srb_halobacteriaceae_and_methanosarcinaceae
+    subject: thalassohaline_hypersaline_anoxic_sulfate_methylamine_and_metal_sediment_regime
+    predicate: selects for
+    object: saltern_sediment_srb_halobacteriaceae_and_methanosarcinaceae_guild
+    description: Hypersaline anoxic saltern sediments select for diverse sulfate-reducing bacteria (including
+      Desulfovermiculus), Thioalkalispira, Halobacterium, Natronomonas, and methylotrophic Methanosarcinaceae.
+    evidence:
+    - reference: PMID:23766077
+      snippet: Molecular analyses indicated that the bacterial fraction is highly diverse and mostly composed
+        by groups related to sulfate-reducing bacteria (SRB).
+      notes: Anaerobic crystallizer-pond sediments select for a diverse bacterial assemblage dominated
+        by sulfate-reducing bacteria alongside candidate division MBSL-1 euryarchaeota (PMID:23766077).
+    - reference: PMID:33013726
+      snippet: Occurence of Halobacterium and Natronomonas were exclusive to sediments while Halonotius
+        was exclusive to brine. Among the bacterial genera, phylotypes belonging to Rubricoccus and Halomonas
+        were widely detected in both brine and sediment while Thioalkalispira, Desulfovermiculus, and
+        Marinobacter were selectively present in sediments.
+      notes: Solar saltern sediments selectively enrich Halobacterium, Natronomonas, Thioalkalispira,
+        Desulfovermiculus, and Marinobacter relative to overlying brines (PMID:33013726).
+    - reference: PMID:34681003
+      snippet: Here we present the first draft metagenome-assembled genome (MAG) sequence of an unclassified
+        Methanosarcinaceae methanogen phylogenetically placed adjacent to the Methanolobus and Methanomethylovorans
+        genera that appears to be a distinct genus and species.
+      notes: Hypersaline saltern sediments select for specialized halophilic Methanosarcinaceae (Candidatus
+        Methanosalis SBSPR1A) (PMID:34681003).
+  - edge_id: saltern_sediment_guild_expresses_dsrab_methylamine_methanogenesis_and_metal_atpase_genes
+    subject: saltern_sediment_srb_halobacteriaceae_and_methanosarcinaceae_guild
+    predicate: expresses
+    object: benthic_dsrab_methylamine_methanogenesis_compatible_solute_and_metal_atpase_system
+    description: Saltern sediment SRB, Methanosarcinaceae, and Halobacterium salinarum harbor and express
+      dsrAB, trimethylamine/dimethylamine methanogenesis genes, compatible-solute/ion transporters, and
+      heavy-metal resistance proteins.
+    evidence:
+    - reference: PMID:23766077
+      snippet: The prokaryotic communities inhabiting hypersaline sediments underlying a crystallizer
+        pond of a Mediterranean solar saltern have been studied in a polyphasic approach including 16S
+        rRNA and dsrAB gene libraries analysis [the last encoding for dissimilatory (bi)sulfite reductase],
+        most probable number of cultivable counts, and metabolic measurements of sulfate reduction.
+      notes: Hypersaline solar saltern sediment SRB communities harbor diverse dissimilatory (bi)sulfite
+        reductase (dsrAB) genes (PMID:23766077).
+    - reference: PMID:34681003
+      snippet: The genome contains pathways for methylotrophic methanogenesis from trimethylamine and
+        dimethylamine, as well as genes for the synthesis and transport of compatible solutes.
+      notes: Saltern sediment Methanosarcinaceae MAG SBSPR1A encodes methylotrophic methanogenesis pathways
+        for trimethylamine and dimethylamine as well as compatible-solute synthesis and transport genes
+        (PMID:34681003).
+    - reference: PMID:35842547
+      snippet: 'Growth under osmotic stress is possible by genes coding for potassium uptake, sodium efflux,
+        and kinases, as well as stress proteins, DNA repair systems, and proteasomal components. These
+        strains harbor many genes responsible for metal transport/resistance, such as: copper-translocating
+        P-type ATPases, ABC transporter, and cobalt-zinc-cadmium resistance protein.'
+      notes: Halobacterium salinarum strains from Sfax solar saltern sediments encode potassium uptake,
+        sodium efflux, copper-translocating P-type ATPases, and cobalt-zinc-cadmium resistance proteins
+        (PMID:35842547).
+  - edge_id: benthic_dsrab_and_methanogenesis_enzymes_catalyze_sulfate_reduction_and_methane_emission
+    subject: benthic_dsrab_methylamine_methanogenesis_compatible_solute_and_metal_atpase_system
+    predicate: catalyzes
+    object: hypersaline_benthic_sulfate_reduction_methylotrophic_methanogenesis_and_osmotic_metal_homeostasis
+    description: Dissimilatory sulfite reductase, methylotrophic methanogenesis enzymes, and ion/metal
+      transporters drive active sulfate reduction, methane emissions, and extreme osmotic and heavy-metal
+      resistance in solar saltern sediments.
+    evidence:
+    - reference: PMID:23766077
+      snippet: In good agreement with this, sulfate-reducing activity was detected in the sediment, as
+        well as the metabolic diversity within SRB (as indicated by the use of different electron donors
+        in enrichments).
+      notes: dsrAB-harboring SRB catalyze active dissimilatory sulfate reduction across diverse electron
+        donors in anoxic crystallizer-pond sediments (PMID:23766077).
+    - reference: PMID:34681003
+      snippet: The MAG was more abundant in two former industrial salterns than in a nearby reference
+        wetland and a restored wetland, both of which have much lower salinity levels, as well as significantly
+        lower methane emissions than the salterns.
+      notes: Methylamine-utilizing Methanosarcinaceae in hypersaline saltern sediments drive elevated
+        methane emissions (PMID:34681003).
+    - reference: PMID:35842547
+      snippet: The results show strain AS1, as compared to the other strains, is more adapted to heavy
+        metals and may be used in the bioremediation of multi-metal contaminated environments.
+      notes: Metal-transport and osmotic-stress gene repertoires enable Halobacterium salinarum survival
+        in multi-metal-polluted hypersaline saltern sediments (PMID:35842547).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added solar_saltern_sediment_hypersaline_anoxic_gradient_srb_haloarchaea_dsrab_methylotrophic_methanogenesis
+    mechanism graph for solar_salterns_sediment (habitatmech:GOLD.d9d8c58a7b) backed by PMID:23766077,
+    PMID:35842547, PMID:34681003, and PMID:33013726.
+  llm_assisted: true

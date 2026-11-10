@@ -95,6 +95,170 @@ characteristic_taxa:
   association_count: 1
   rank: 12
   candidate_pool: 12
+causal_graphs:
+- graph_id: plant_gall_wound_signal_agrobacterium_pantoea_vird2_vire2_iaam_ipt_t3ss_tumorigenesis
+  title: Plant gall host-wound signal and vascular parenchymal niche, Agrobacterium
+    tumefaciens and Pantoea agglomerans gall-inducing guild selection, and Ti-plasmid
+    VirD2/VirE2/iaaM/ipt/6b and pPATH T3SS phytohormone- and opine-driven gall morphogenesis
+    mechanism
+  description: Plant galls (such as crown galls and bacterial stem/root galls) develop
+    at wounded plant surfaces where host phenolic and sugar wound signals and vascular
+    parenchyma cells interface with plasmid-bearing phytobacteria. These plant wound
+    signals are recognized by two-component regulatory systems that select for and
+    activate tumorigenic Rhizobiaceae (Agrobacterium tumefaciens / Agrobacterium radiobacter
+    carrying the tumor-inducing Ti plasmid) and gall-forming Erwiniaceae (Pantoea
+    agglomerans pv. gypsophilae and pv. betae carrying the pPATH pathogenicity plasmid).
+    Agrobacterium expresses the Ti-plasmid vir regulon, delivering single-stranded
+    T-DNA escorted by endonuclease VirD2 and ssDNA-binding protein VirE2 through a
+    type IV secretion system (T4SS) into the host nucleus (via VirD2-importin alpha
+    and VirE2-nucleoporin CG1 interactions) to integrate and express the oncogenes
+    iaaM, ipt, and 6b alongside opine synthases, while Pantoea agglomerans expresses
+    pPATH-encoded type III secretion system (T3SS) effectors, ShcV/CesT chaperones,
+    and auxin/cytokinin biosynthetic enzymes, driving localized auxin and cytokinin
+    overproduction, opine synthesis, and hyperplastic plant gall tumor development.
+  nodes:
+  - node_id: plant_gall
+    label: plant gall
+    node_type: HABITAT
+    grounding: PO:0025626
+    description: Hyperplastic and hypertrophic plant tumor structure induced on stems,
+      crowns, leaves, or roots by gall-forming bacteria and maintained as an opine-
+      and nutrient-rich microbial habitat.
+  - node_id: host_wound_phenolic_signal_and_vascular_parenchyma_transformation_niche
+    label: host plant wound signals, nuclear import machinery (importin alpha and
+      nucleoporin CG1), and vascular parenchyma interface
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Plant wound-site chemical signals recognized by bacterial two-component
+      sensors together with host cell membrane and nuclear pore import machinery (importin
+      alpha and nucleoporin CG1).
+  - node_id: tumorigenic_agrobacterium_ti_plasmid_and_pantoea_agglomerans_ppath_guild
+    label: Ti-plasmid-bearing Agrobacterium tumefaciens and pPATH-bearing Pantoea
+      agglomerans pv. gypsophilae/pv. betae gall-inducing guild
+    node_type: COMMUNITY
+    description: Gall-inducing and gall-colonizing bacterial assemblage comprising
+      Ti-plasmid-harboring Agrobacterium tumefaciens (strains C58, A281) and pPATH-plasmid-harboring
+      Pantoea agglomerans pv. gypsophilae and pv. betae.
+  - node_id: ti_plasmid_vird2_vire2_t4ss_iaam_ipt_6b_and_ppath_t3ss_phytohormone_system
+    label: Ti-plasmid VirD2 endonuclease, VirE2 ssDNA-binding protein, T4SS, T-DNA
+      oncogenes (iaaM, ipt, 6b) and opine synthases, and pPATH T3SS/ShcV/CesT and
+      auxin/cytokinin enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Agrobacterium Ti-plasmid virulence proteins VirD2 and VirE2, type
+      IV secretion system (T4SS), T-DNA-encoded auxin (iaaM), cytokinin (ipt), 6b,
+      and opine synthesis enzymes, and Pantoea agglomerans pPATH type III secretion
+      system (T3SS), ShcV/CesT chaperones, and auxin/cytokinin biosynthetic enzymes.
+  - node_id: t_dna_nuclear_integration_auxin_cytokinin_opine_biosynthesis_and_gall_hyperplasia
+    label: T-complex nuclear import and chromosomal integration, auxin/cytokinin overproduction,
+      opine synthesis, and crown/stem gall tumorigenesis
+    node_type: COMMUNITY_PROCESS
+    description: Delivery and nuclear integration of T-DNA and translocation of T3SS
+      effectors that drive autonomous auxin, cytokinin, and opine biosynthesis and
+      induce hyperplastic plant gall tumors as a specialized bacterial nutritional
+      niche.
+  edges:
+  - edge_id: plant_gall_niche_maintains_host_wound_signals_and_nuclear_import_interface
+    subject: plant_gall
+    predicate: maintains
+    object: host_wound_phenolic_signal_and_vascular_parenchyma_transformation_niche
+    description: Plant wound sites and developing gall tissues present host chemical
+      signals and nuclear-pore import machinery (importin alpha and nucleoporin CG1)
+      required for bacterial virulence activation and T-complex entry.
+    evidence:
+    - reference: PMID:25610442
+      snippet: The genes associated with T-strand formation and transfer (vir) map
+        to the Ti plasmid and are only expressed when the bacteria are in close association
+        with a plant. Plant signals are recognized by a two-component regulatory system
+        which activates vir genes.
+      notes: Close association with the host plant provides the plant wound signals
+        recognized by the Agrobacterium two-component system to activate Ti-plasmid
+        vir genes (PMID:25610442).
+    - reference: PMID:33020260
+      snippet: In contrast with VirD2 that binds to plant importin α for nuclear import,
+        VirE2 directly interacts with the host nuclear pore complex component nucleoporin
+        CG1 to facilitate its nuclear uptake and the transformation process.
+      notes: Host plant cells provide importin alpha and nuclear pore complex nucleoporin
+        CG1 that interact with bacterial VirD2 and VirE2 during crown gall transformation
+        (PMID:33020260).
+  - edge_id: host_wound_niche_selects_for_tumorigenic_agrobacterium_and_pantoea_pathovars
+    subject: host_wound_phenolic_signal_and_vascular_parenchyma_transformation_niche
+    predicate: selects for
+    object: tumorigenic_agrobacterium_ti_plasmid_and_pantoea_agglomerans_ppath_guild
+    description: Plant wound and host tissue niches select for Ti-plasmid-bearing
+      Agrobacterium tumefaciens and pPATH-plasmid-bearing Pantoea agglomerans pv.
+      gypsophilae and pv. betae.
+    evidence:
+    - reference: PMID:25610442
+      snippet: Agrobacterium was identified as the agent causing the plant tumor,
+        crown gall over 100 years ago. The T-DNA encodes enzymes of auxin, cytokinin,
+        and opine synthesis, the latter a food source for Agrobacterium.
+      notes: Crown gall tumors are induced by Agrobacterium and synthesize opines
+        as a dedicated nutritional source for the colonizing bacterium (PMID:25610442).
+    - reference: PMID:37583594
+      snippet: Acquisition of the pathogenicity plasmid pPATH that encodes a type
+        III secretion system (T3SS) and effectors (T3Es) has likely led to the transition
+        of a non-pathogenic bacterium into the tumorigenic pathogen Pantoea agglomerans.
+        P. agglomerans pv. gypsophilae (Pag) forms galls on gypsophila (Gypsophila
+        paniculata) and triggers immunity on sugar beet (Beta vulgaris), while P.
+        agglomerans pv. betae (Pab) causes galls on both gypsophila and sugar beet.
+      notes: Acquisition of pathogenicity plasmid pPATH selects for host-specific
+        gall-forming Pantoea agglomerans pathovars on gypsophila and sugar beet (PMID:37583594).
+  - edge_id: gall_guild_expresses_vird2_vire2_t4ss_iaam_ipt_6b_and_ppath_t3ss_genes
+    subject: tumorigenic_agrobacterium_ti_plasmid_and_pantoea_agglomerans_ppath_guild
+    predicate: expresses
+    object: ti_plasmid_vird2_vire2_t4ss_iaam_ipt_6b_and_ppath_t3ss_phytohormone_system
+    description: Gall-inducing Agrobacterium and Pantoea agglomerans express Ti-plasmid
+      VirD2, VirE2, T4SS, and T-DNA oncogenes (ipt, iaaM, 6b) as well as pPATH-encoded
+      T3SS, ShcV/CesT chaperones, and auxin/cytokinin biosynthetic clusters.
+    evidence:
+    - reference: PMID:33020260
+      snippet: Transferred DNA (T-DNA) has been proposed to be escorted by two virulence
+        proteins, VirD2 and VirE2, as a nucleoprotein complex (T-complex) that targets
+        the host nucleus.
+      notes: Agrobacterium tumefaciens expresses and delivers virulence proteins VirD2
+        and VirE2 escorting single-stranded T-DNA (PMID:33020260).
+    - reference: PMID:28449201
+      snippet: In this study, two vectors with short-length chimeric transgenes were
+        used to produce Prunus rootstocks resistant to crown gall disease through
+        RNA-interference-mediated gene silencing of the Agrobacterium tumefaciens
+        oncogenes ipt and iaaM. The infection of apricot plants with a binary vector
+        containing only the 6b oncogene demonstrated that the expression of this gene
+        is involved in the induction of tumours in the apricot species.
+      notes: Agrobacterium tumefaciens T-DNA expresses the oncogenes ipt, iaaM, and
+        6b during crown gall tumor induction (PMID:28449201).
+    - reference: PMID:37583594
+      snippet: In both plasmids, we confirmed the presence of highly similar gene
+        clusters encoding a T3SS, as well as auxin and cytokinins biosynthetic enzymes.
+        Among T3SS-associated proteins encoded by Pag and Pab, we identified two novel
+        chaperons of the ShcV and CesT families that are present in both pathovars
+        with high similarity.
+      notes: Pantoea agglomerans pPATHpag and pPATHpab plasmids encode a T3SS, ShcV
+        and CesT chaperones, and auxin and cytokinin biosynthetic enzymes (PMID:37583594).
+  - edge_id: vir_and_oncogene_enzymes_catalyze_t_dna_integration_hormone_synthesis_and_gall_formation
+    subject: ti_plasmid_vird2_vire2_t4ss_iaam_ipt_6b_and_ppath_t3ss_phytohormone_system
+    predicate: catalyzes
+    object: t_dna_nuclear_integration_auxin_cytokinin_opine_biosynthesis_and_gall_hyperplasia
+    description: VirD2/VirE2-guided T-DNA nuclear import and integration, iaaM/ipt/6b
+      oncogene expression, and pPATH T3SS/phytohormone enzymes drive auxin, cytokinin,
+      and opine synthesis and plant gall tumor development.
+    evidence:
+    - reference: PMID:25610442
+      snippet: The single-strand DNA (T-DNA) with the endonuclease attached is transferred
+        through a type IV secretion system into the host cell where it is likely coated
+        and protected from nucleases by a bacterial secreted protein to form the T-complex.
+        A nuclear localization signal in the endonuclease guides the transferred strand
+        (T-strand), into the nucleus where it is integrated randomly into the host
+        chromosome.
+      notes: T4SS transfer and endonuclease-guided nuclear import integrate T-DNA
+        into the host chromosome to drive auxin, cytokinin, and opine synthesis in
+        crown gall cells (PMID:25610442).
+    - reference: PMID:28449201
+      snippet: Five transgenic plum lines, expressing transgene-derived small interfering
+        RNA (siRNA) and low levels of transgene hairpin RNA (hpRNA), showed a significant
+        reduction in the development of the disease after infection with Agrobacterium
+        strains C58 and A281 under greenhouse conditions.
+      notes: Silencing ipt and iaaM suppresses crown gall development in plum while
+        6b expression induces tumors in apricot, confirming causal oncogene requirement
+        for gall morphogenesis (PMID:28449201).
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -117,3 +281,10 @@ curation_history:
   action: SOURCE_ATTESTATION_CORRECTED
   changes: Corrected bacdive.isolation_source:gall provenance wording to distinguish
     the declined automatic mapping from the final curator override (#1889).
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added plant_gall_wound_signal_agrobacterium_pantoea_vird2_vire2_iaam_ipt_t3ss_tumorigenesis
+    mechanism graph for plant_gall (PO:0025626) backed by PMID:25610442, PMID:33020260,
+    PMID:28449201, and PMID:37583594.
+  llm_assisted: true

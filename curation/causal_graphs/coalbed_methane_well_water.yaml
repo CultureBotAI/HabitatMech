@@ -1,0 +1,143 @@
+identifier: habitatmech:GOLD.1b19e33e8c
+causal_graphs:
+- graph_id: coalbed_methane_well_water_trace_element_acetate_methanobacterium_methanosarcina_mcra_methanogenesis
+  title: Coalbed methane well water anoxic coal-derived aromatics/acetate and trace-element cofactor regime,
+    Methanobacterium/Methanosarcina/Acetobacterium/Pseudomonas guild selection, and mcrA-driven biogenic
+    coalbed methanogenesis mechanism
+  description: Subsurface formation and produced waters from coalbed methane (CBM) wells constitute closed,
+    anoxic, bicarbonate-buffered hydrological systems rich in coal-derived polycyclic aromatic hydrocarbons
+    (such as naphthalene) and acetate but constrained by trace-element micronutrient (Co, Cu, Mo, Ni,
+    Fe) availability. This subsurface coal-seam aqueous regime selects for syntrophic bacterial degraders
+    and acetogens (Pseudomonas stutzeri, Acetobacterium, Geobacter, and sulfate-reducing bacteria) paired
+    with hydrogenotrophic (Methanobacterium subterraneum, Methanobacterium formicicum) and acetoclastic
+    (Methanosaeta, Methanosarcina) methanogenic archaea. In response to coal organics and trace-element
+    enzyme cofactors, these communities transcribe methyl-coenzyme M reductase subunit alpha (mcrA) alongside
+    bacterial naphthalene-degradation and nitrogen-fixation pathways to convert coal-derived aromatics,
+    acetate, and H2/CO2 into biogenic coalbed methane.
+  nodes:
+  - node_id: coalbed_methane_well_water
+    label: coalbed methane well water
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.1b19e33e8c
+    description: Subsurface formation water and produced water pumped from coalbed methane extraction
+      wells.
+  - node_id: anoxic_coal_aromatic_acetate_and_trace_element_cofactor_well_water_regime
+    label: anoxic coal-seam formation water with coal-derived aromatics, acetate, and limiting trace-element
+      enzyme cofactors (Co, Cu, Mo, Fe, Ni)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Closed subsurface coalbed produced-water environment containing coal-derived aromatic
+      hydrocarbons and acetate where trace elements (Co, Cu, Mo, Fe, Ni, Zn, Mn, B) control metalloenzyme
+      cofactor availability.
+  - node_id: cbm_well_methanobacterium_methanosarcina_acetobacterium_and_pseudomonas_guild
+    label: hydrogenotrophic Methanobacterium, acetoclastic Methanosaeta/Methanosarcina, Acetobacterium,
+      and coal-degrading Pseudomonas stutzeri/Geobacter guild
+    node_type: COMMUNITY
+    description: Coalbed methane well produced-water consortium comprising hydrogenotrophic Methanobacterium
+      subterraneum and M. formicicum, acetoclastic Methanosaeta and Methanosarcina, homoacetogenic Acetobacterium,
+      Geobacter, and aromatic-degrading Pseudomonas stutzeri.
+  - node_id: coalbed_mcra_methyl_coenzyme_m_reductase_and_naphthalene_nif_pathway_enzymes
+    label: methyl-coenzyme M reductase (mcrA) and bacterial naphthalene degradation and nitrogen fixation
+      pathway enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Archaeal methyl-coenzyme M reductase alpha subunit (mcrA) transcripts in Methanobacterium,
+      Methanosarcina, and Methanosaeta together with upper and lower naphthalene degradation and nitrogen
+      fixation pathway enzymes in coalbed Pseudomonas stutzeri.
+  - node_id: syntrophic_coal_aromatic_and_acetate_biogenic_methane_generation
+    label: trace-element-stimulated syntrophic coal biofragmentation, acetogenesis, and hydrogenotrophic/acetoclastic
+      methanogenesis
+    node_type: COMMUNITY_PROCESS
+    description: Syntrophic conversion of coal aromatics and acetate coupled with trace-element-stimulated
+      mcrA transcription to generate biogenic methane in subsurface coalbed well waters.
+  edges:
+  - edge_id: coalbed_methane_well_water_maintains_anoxic_coal_organic_and_trace_element_regime
+    subject: coalbed_methane_well_water
+    predicate: maintains
+    object: anoxic_coal_aromatic_acetate_and_trace_element_cofactor_well_water_regime
+    description: Subsurface coalbed methane well waters surround microbial communities with coal carbon
+      substrates and acetate while limiting replenishment of trace-element enzyme cofactors.
+    evidence:
+    - reference: PMID:22590465
+      snippet: We hypothesized that in these closed systems, trace elements (as micronutrients) are a
+        limiting factor for methanogenic growth and activity. Trace elements are essential components
+        of enzymes or cofactors of metabolic pathways associated with methanogenesis.
+      notes: Closed subsurface coalbed produced waters are limited by micronutrient trace elements required
+        as cofactors in methanogenic pathways (PMID:22590465).
+    - reference: PMID:30323265
+      snippet: Evidence is presented that sulfate reducing bacteria are energy limited whilst methanogenic
+        archaea are nutrient limited.
+      notes: In situ coal formation water studies show nutrient limitation of methanogenic archaea and
+        acetate serving as a major methanogenic precursor (PMID:30323265).
+  - edge_id: coalbed_well_water_regime_selects_for_methanobacterium_methanosarcina_and_syntrophs
+    subject: anoxic_coal_aromatic_acetate_and_trace_element_cofactor_well_water_regime
+    predicate: selects for
+    object: cbm_well_methanobacterium_methanosarcina_acetobacterium_and_pseudomonas_guild
+    description: Coalbed produced water and trace-element/acetate availability select for Methanobacterium
+      subterraneum, Methanobacterium formicicum, Methanosaeta, Methanosarcina, Acetobacterium, Geobacter,
+      and Pseudomonas stutzeri.
+    evidence:
+    - reference: PMID:22590465
+      snippet: Metabolically active methanogens, identified by clone sequences of mcrA mRNA retrieved
+        from enrichment cultures, were closely related to Methanobacterium subterraneum and Methanobacterium
+        formicicum.
+      notes: Coalbed methane well produced water enrichments select for metabolically active Methanobacterium
+        subterraneum and Methanobacterium formicicum (PMID:22590465).
+    - reference: PMID:38236038
+      snippet: Phylogenetic analysis of the mcrA cDNA library demonstrated compositional shifts of the
+        active methanogenic community and increase of their diversity, particularly of hydrogenotrophic
+        methanogens. High-throughput sequencing of cDNA obtained from 16S rRNA demonstrated active and
+        abundant bacterial groups in response to trace element amendments. Active Acetobacterium members
+        increased in response to Co, Cu, and Mo additions.
+      notes: Co, Cu, and Mo trace-element cofactor replenishment in CBM produced water selects for active
+        hydrogenotrophic methanogens and Acetobacterium spp. (PMID:38236038).
+    - reference: PMID:30323265
+      snippet: Acetoclastic methanogenic archaea of the Methanosaeta and Methanosarcina genera increased
+        with methane concentration.
+      notes: Biostimulated coal formation water selects for acetoclastic Methanosaeta and Methanosarcina
+        alongside Geobacter and sulfate-reducing bacteria incorporating acetate (PMID:30323265).
+  - edge_id: cbm_well_guild_expresses_mcra_and_naphthalene_nitrogen_fixation_pathways
+    subject: cbm_well_methanobacterium_methanosarcina_acetobacterium_and_pseudomonas_guild
+    predicate: expresses
+    object: coalbed_mcra_methyl_coenzyme_m_reductase_and_naphthalene_nif_pathway_enzymes
+    description: Coalbed methane well archaea and bacteria express elevated levels of mcrA transcripts
+      and encode complete naphthalene-degradation and nitrogen-fixation pathways.
+    evidence:
+    - reference: PMID:22590465
+      snippet: After 7 days of incubation, the levels of mcrA transcripts in enrichment cultures with
+        trace element amendment were much higher than in cultures without amendment.
+      notes: Methanobacterium populations in CBM well produced water strongly upregulate mcrA mRNA transcription
+        upon trace-element cofactor supply (PMID:22590465).
+    - reference: PMID:27795237
+      snippet: The draft genome sequence of Pseudomonas stutzeri strain K35 was separated from a metagenome
+        derived from a produced water microbial community of a coalbed methane well. The genome encodes
+        a complete nitrogen fixation pathway and the upper and lower naphthalene degradation pathways.
+      notes: Pseudomonas stutzeri strain K35 from coalbed methane well produced water encodes complete
+        nitrogen fixation and upper/lower naphthalene degradation pathways (PMID:27795237).
+  - edge_id: coalbed_mcra_and_aromatic_enzymes_catalyze_biogenic_methane_production
+    subject: coalbed_mcra_methyl_coenzyme_m_reductase_and_naphthalene_nif_pathway_enzymes
+    predicate: catalyzes
+    object: syntrophic_coal_aromatic_and_acetate_biogenic_methane_generation
+    description: Elevated mcrA transcription coupled with bacterial aromatic/acetate conversion drives
+      enhanced biogenic methane production in coalbed methane well waters.
+    evidence:
+    - reference: PMID:22590465
+      snippet: Addition of trace elements at concentrations optimized for standard media enhanced methane
+        production by 37%. After 7 days of incubation, the levels of mcrA transcripts in enrichment cultures
+        with trace element amendment were much higher than in cultures without amendment. Transcript levels
+        of mcrA correlated positively with elevated rates of methane production in supplemented enrichments
+        (R(2) = 0.95).
+      notes: mcrA transcript abundance correlates directly (R2 = 0.95) with enhanced methane production
+        rates in CBM produced water (PMID:22590465).
+    - reference: PMID:38236038
+      snippet: In initial pilot experiments with eight different trace elements, individual amendments
+        of Co, Cu, and Mo lead to significantly higher methane production. Transcript levels of mcrA,
+        the key marker gene for methanogenesis, positively correlated with increased methane production.
+      notes: Co, Cu, and Mo cofactor stimulation of mcrA transcription drives significantly higher biogenic
+        methane production in CBM well water microcosms (PMID:38236038).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added coalbed_methane_well_water_trace_element_acetate_methanobacterium_methanosarcina_mcra_methanogenesis
+    mechanism graph for coalbed_methane_well_water (habitatmech:GOLD.1b19e33e8c) backed by PMID:22590465,
+    PMID:38236038, PMID:30323265, and PMID:27795237.
+  llm_assisted: true
