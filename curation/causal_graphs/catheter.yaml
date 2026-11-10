@@ -1,0 +1,157 @@
+identifier: NCIT:C50344
+causal_graphs:
+- graph_id: catheter_polymer_fibrinogen_urea_proteus_staphylococcus_enterococcus_mrph_urease_icaadbc_ebpa_encrustation
+  title: Indwelling catheter polymer surface, deposited host fibrinogen, and urinary urea regime, Proteus
+    mirabilis/Staphylococcus epidermidis/Enterococcus faecalis biofilm guild selection, and MrpH/urease/icaADBC/EbpA
+    crystalline encrustation and biofilm mechanism
+  description: Indwelling medical catheters (such as urethral and intravascular catheters) present abiotic
+    silicone/polymer luminal surfaces coated with host-released fibrinogen and flushed by urea- and ion-bearing
+    urine as well as sub-inhibitory antibiotic or external stresses. These foreign-body surface conditions
+    select for polymicrobial and monospecies catheter biofilm colonizers including urease-producing Proteus
+    mirabilis, coagulase-negative Staphylococcus epidermidis, and multiantibiotic-resistant Enterococcus
+    faecalis. On the catheter surface, Proteus mirabilis expresses mannose-resistant Proteus-like (MR/P)
+    fimbriae with tip adhesin MrpH and cytoplasmic urease, Enterococcus faecalis expresses the endocarditis-
+    and biofilm-associated pilus (Ebp) tip adhesin EbpA (binding host fibrinogen via its N-terminal domain
+    EbpA(NTD)), and Staphylococcus epidermidis expresses the icaADBC operon (subject to IS256-mediated
+    phase variation in icaC) synthesizing polysaccharide intercellular adhesin (PIA). Together these adhesins,
+    polysaccharides, and urease drive fibrinogen- and polymer-dependent biofilm accumulation, urea hydrolysis
+    that elevates urinary pH, and precipitation of calcium phosphate and magnesium ammonium phosphate
+    (struvite/apatite) crystals that encrust and occlude the catheter lumen.
+  nodes:
+  - node_id: catheter
+    label: Catheter Device
+    node_type: HABITAT
+    grounding: NCIT:C50344
+    description: Indwelling polymeric medical tube (such as a urinary or vascular catheter) providing
+      an abiotic luminal and external surface for microbial biofilm colonization.
+  - node_id: catheter_polymer_surface_deposited_fibrinogen_and_urinary_urea_regime
+    label: indwelling polymer lumen surface, catheter-deposited host fibrinogen, and urinary urea/mineral
+      flow regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Foreign-body polymer surface coated with host-released fibrinogen upon catheterization
+      and exposed to flowing urine containing urea, calcium, and magnesium ions.
+  - node_id: catheter_proteus_mirabilis_staphylococcus_epidermidis_and_enterococcus_faecalis_biofilm_guild
+    label: catheter-colonizing Proteus mirabilis, Staphylococcus epidermidis, and Enterococcus faecalis
+      polymicrobial biofilm guild
+    node_type: COMMUNITY
+    description: Catheter-associated biofilm community comprising crystalline-biofilm-forming Proteus
+      mirabilis, slime-producing Staphylococcus epidermidis, and fibrinogen-adherent Enterococcus faecalis.
+  - node_id: proteus_mrph_fimbriae_urease_staphylococcus_icaadbc_and_enterococcus_ebpa_pilus_system
+    label: Proteus mirabilis MR/P fimbrial adhesin MrpH and urease, Staphylococcus epidermidis icaADBC
+      (icaC) operon, and Enterococcus faecalis Ebp pilus tip adhesin EbpA
+    node_type: GENE_OR_PROTEIN
+    description: Proteus mirabilis MR/P fimbriae and tip adhesin MrpH together with urease, Staphylococcus
+      epidermidis icaADBC intercellular adhesion operon (including IS256-modulated icaC), and Enterococcus
+      faecalis endocarditis- and biofilm-associated pilus tip subunit EbpA (EbpA(NTD)).
+  - node_id: fibrinogen_and_pia_catheter_biofilm_formation_urine_alkalinization_and_crystalline_lumen_encrustation
+    label: EbpA-fibrinogen and icaADBC-PIA catheter biofilm accumulation, urease-driven urine alkalinization,
+      and calcium/magnesium phosphate crystalline catheter encrustation
+    node_type: COMMUNITY_PROCESS
+    description: Attachment to catheter-deposited fibrinogen and polymer surfaces, polysaccharide biofilm
+      matrix assembly, and urease-catalyzed urea hydrolysis that raises urinary pH and precipitates calcium
+      and magnesium phosphate crystals occluding the catheter lumen.
+  edges:
+  - edge_id: catheter_maintains_polymer_surface_deposited_fibrinogen_and_urea_regime
+    subject: catheter
+    predicate: maintains
+    object: catheter_polymer_surface_deposited_fibrinogen_and_urinary_urea_regime
+    description: Indwelling catheters provide an abiotic polymer surface onto which host fibrinogen is
+      released and deposited within the urea-rich catheterized urinary tract.
+    evidence:
+    - reference: PMID:18852707
+      snippet: 'Bacteria have a basic survival strategy: to colonize surfaces and grow as biofilm communities
+        embedded in a gel-like polysaccharide matrix. The catheterized urinary tract provides ideal conditions
+        for the development of enormous biofilm populations.'
+      notes: Indwelling urinary catheters provide an ideal surface and luminal environment for dense biofilm
+        development (PMID:18852707).
+    - reference: PMID:25232179
+      snippet: We show that EbpA is an adhesin that mediates bacterial attachment to host fibrinogen,
+        which is released and deposited on catheters after introduction of the catheter into the mouse
+        bladder.
+      notes: Catheter placement induces host fibrinogen release and deposition onto the catheter surface
+        (PMID:25232179).
+  - edge_id: catheter_surface_and_fibrinogen_select_for_proteus_staphylococcus_and_enterococcus
+    subject: catheter_polymer_surface_deposited_fibrinogen_and_urinary_urea_regime
+    predicate: selects for
+    object: catheter_proteus_mirabilis_staphylococcus_epidermidis_and_enterococcus_faecalis_biofilm_guild
+    description: Catheter surfaces and deposited host proteins select for biofilm-forming Proteus mirabilis,
+      Staphylococcus epidermidis, and multiantibiotic-resistant Enterococcus faecalis.
+    evidence:
+    - reference: PMID:29424333
+      snippet: Proteus mirabilis, a Gram-negative rod-shaped bacterium most noted for its swarming motility
+        and urease activity, frequently causes catheter-associated urinary tract infections (CAUTIs) that
+        are often polymicrobial.
+      notes: Indwelling urinary catheters select for polymicrobial CAUTI biofilms frequently dominated
+        by Proteus mirabilis (PMID:29424333).
+    - reference: PMID:25232179
+      snippet: Enterococci bacteria are a frequent cause of catheter-associated urinary tract infections,
+        the most common type of hospital-acquired infection. Treatment has become increasingly challenging
+        because of the emergence of multiantibiotic-resistant enterococcal strains and their ability to
+        form biofilms on catheters.
+      notes: Indwelling catheters select for biofilm-forming, multiantibiotic-resistant Enterococcus faecalis
+        strains (PMID:25232179).
+  - edge_id: catheter_guild_expresses_mrph_urease_icaadbc_and_ebpa_adhesins
+    subject: catheter_proteus_mirabilis_staphylococcus_epidermidis_and_enterococcus_faecalis_biofilm_guild
+    predicate: expresses
+    object: proteus_mrph_fimbriae_urease_staphylococcus_icaadbc_and_enterococcus_ebpa_pilus_system
+    description: Catheter-colonizing Proteus mirabilis, Staphylococcus epidermidis, and Enterococcus faecalis
+      express MR/P fimbriae (MrpH) and urease, the icaADBC operon (icaC), and the Ebp pilus tip adhesin
+      EbpA.
+    evidence:
+    - reference: PMID:29424333
+      snippet: Adherence of the bacterium to epithelial and catheter surfaces is mediated by 17 different
+        fimbriae, most notably MR/P fimbriae.
+      notes: Proteus mirabilis expresses 17 fimbrial types, most notably MR/P fimbriae, to adhere to epithelial
+        and catheter surfaces (PMID:29424333).
+    - reference: PMID:29424333
+      snippet: Vaccines, using MR/P fimbria and its adhesin, MrpH, have been shown to be efficacious in
+        the murine model.
+      notes: Proteus mirabilis MR/P fimbriae express the tip adhesin MrpH targeted by protective CAUTI
+        vaccines (PMID:29424333).
+    - reference: PMID:12135850
+      snippet: Biofilm production in Staphylococcus epidermidis is an important virulence factor that
+        is mediated by the expression of the icaADBC operon. In this study 41 S. epidermidis isolates
+        obtained from catheter-related urinary tract infections were analyzed for the presence of the
+        icaADBC operon and biofilm formation.
+      notes: Catheter-associated Staphylococcus epidermidis isolates carry and express the icaADBC operon
+        to mediate polymer biofilm production (PMID:12135850).
+    - reference: PMID:25232179
+      snippet: In the murine model, formation of catheter-associated biofilms by Enterococcus faecalis
+        depends on EbpA, which is the minor subunit at the tip of a heteropolymeric surface fiber known
+        as the endocarditis- and biofilm-associated pilus (Ebp).
+      notes: Enterococcus faecalis expresses the Ebp pilus tip subunit EbpA containing an N-terminal fibrinogen-binding
+        domain EbpA(NTD) (PMID:25232179).
+  - edge_id: mrph_urease_icaadbc_and_ebpa_catalyze_crystalline_encrustation_and_catheter_biofilm_occlusion
+    subject: proteus_mrph_fimbriae_urease_staphylococcus_icaadbc_and_enterococcus_ebpa_pilus_system
+    predicate: catalyzes
+    object: fibrinogen_and_pia_catheter_biofilm_formation_urine_alkalinization_and_crystalline_lumen_encrustation
+    description: EbpA-fibrinogen binding, icaADBC polysaccharide matrix synthesis, and Proteus mirabilis
+      urease-catalyzed urea hydrolysis drive catheter biofilm accumulation, urinary alkalinization, and
+      calcium/magnesium phosphate crystal encrustation that blocks the catheter lumen.
+    evidence:
+    - reference: PMID:18852707
+      snippet: The most troublesome complications are the crystalline biofilms that can occlude the catheter
+        lumen and trigger episodes of pyelonephritis and septicemia. The crystalline biofilms result from
+        infection by urease-producing bacteria, particularly Proteus mirabilis. Urease raises the urinary
+        pH and drives the formation of calcium phosphate and magnesium phosphate crystals in the biofilm.
+      notes: Proteus mirabilis urease hydrolyzes urea to raise urinary pH and precipitate calcium phosphate
+        and magnesium phosphate crystals that encrust and occlude the catheter lumen (PMID:18852707).
+    - reference: PMID:29424333
+      snippet: These infections may be accompanied by urolithiasis, the development of bladder or kidney
+        stones due to alkalinization of urine from urease-catalyzed urea hydrolysis.
+      notes: Urease-catalyzed urea hydrolysis alkalinizes urine and drives mineral stone precipitation
+        during Proteus mirabilis CAUTI (PMID:29424333).
+    - reference: PMID:25232179
+      snippet: Fibrinogen-binding activity resides in the amino-terminal domain of EbpA (EbpA(NTD)), and
+        vaccination with EbpA and EbpA(NTD), but not its carboxyl-terminal domain or other Ebp subunits,
+        inhibited biofilm formation in vivo and protected against catheter-associated urinary tract infection.
+      notes: EbpA(NTD) binding to catheter-deposited fibrinogen directly drives fibrinogen-dependent Enterococcus
+        faecalis biofilm formation on catheters in vivo (PMID:25232179).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added catheter_polymer_fibrinogen_urea_proteus_staphylococcus_enterococcus_mrph_urease_icaadbc_ebpa_encrustation
+    mechanism graph for catheter (NCIT:C50344) backed by PMID:29424333, PMID:18852707, PMID:12135850,
+    and PMID:25232179.
+  llm_assisted: true

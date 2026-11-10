@@ -1,0 +1,145 @@
+identifier: habitatmech:GOLD.4020b8821e
+causal_graphs:
+- graph_id: landfill_leachate_free_ammonia_salinity_zn_kuenenia_brocadia_hzsa_hdh_nirk_czca_anammox
+  title: Landfill leachate high free-ammonia, salinity, and Zn(II) heavy-metal regime, Candidatus Kuenenia/Candidatus
+    Brocadia/n-DAMO/denitrifier guild selection, and hzsAB/hdh/amoA/nirKS/mcrA/czcABC nitrogen removal
+    and metal-efflux mechanism
+  description: Mature and fresh landfill leachates are high-strength engineered wastewaters characterized
+    by elevated ammoniacal nitrogen and free ammonia (FA), high salinity, recalcitrant organic carbon,
+    nitrite/nitrate fluctuations, and toxic divalent heavy metals such as Zn(II) (50-150 mg/L). In leachate
+    treatment bioreactors and biofilms, long-term free-ammonia, salinity, and heavy-metal pressures select
+    for salt- and FA-tolerant anaerobic ammonium-oxidizing (anammox) Planctomycetes (Candidatus Kuenenia,
+    including Candidatus Kuenenia stuttgartiensis, and Candidatus Brocadia), ammonia-oxidizing bacteria,
+    heterotrophic denitrifiers (Proteobacteria and Bacteroidetes), and nitrate/nitrite-dependent anaerobic
+    methane-oxidizing (n-DAMO) archaea and bacteria. These guilds express hydrazine synthase (hzsA, hzsB),
+    hydrazine dehydrogenase (hdh), hydroxylamine oxidoreductase (hao), ammonia monooxygenase (amoA), nitrate
+    and nitrite reductases (narG, napA, nirK, nirS), methyl-coenzyme M reductase (mcrA), and RND heavy-metal
+    efflux pumps (czcA, czcB, czcC) to couple partial nitrification, anammox, heterotrophic denitrification,
+    and n-DAMO with active Zn(II) export.
+  nodes:
+  - node_id: landfill_leachate
+    label: landfill leachate
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.4020b8821e
+    description: High-strength liquid percolate and treatment effluent draining from municipal and industrial
+      solid-waste landfills.
+  - node_id: leachate_high_free_ammonia_salinity_organic_carbon_and_zn2_metal_stress
+    label: high free ammonia (FA), salinity, dissolved organic carbon, nitrite/nitrate, and Zn(II) heavy-metal
+      stress regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Landfill leachate chemical milieu combining high concentrations of ammonium/free ammonia,
+      salinity, organic carbon (COD), oxidized nitrogen species (NO2-, NO3-), and cytotoxic Zn(II) ions.
+  - node_id: leachate_candidatus_kuenenia_brocadia_n_damo_and_denitrifying_guild
+    label: Candidatus Kuenenia, Candidatus Brocadia, n-DAMO archaea/bacteria, and Proteobacteria/Bacteroidetes
+      denitrifying guild
+    node_type: COMMUNITY
+    description: Landfill leachate biofilm and sludge consortium dominated by FA- and salt-tolerant Planctomycetes
+      anammox bacteria (Candidatus Kuenenia stuttgartiensis and Candidatus Brocadia), ammonia oxidizers,
+      Proteobacteria and Bacteroidetes denitrifiers, and n-DAMO archaea and bacteria.
+  - node_id: leachate_hzsab_hdh_amoa_hao_narg_napa_nirks_mcra_and_czcabc_efflux_system
+    label: hydrazine synthase (hzsA/hzsB), hydrazine dehydrogenase (hdh), amoA, hao, narG/napA, nirK/nirS,
+      mcrA, and RND heavy-metal efflux pumps (czcA/czcB/czcC)
+    node_type: GENE_OR_PROTEIN
+    description: Anammox hydrazine synthase (hzsA, hzsB) and hydrazine dehydrogenase (hdh), ammonia monooxygenase
+      (amoA), hydroxylamine oxidoreductase (hao), nitrate/nitrite reductases (narG, napA, nirK, nirS),
+      n-DAMO archaeal methyl-coenzyme M reductase (mcrA), and Candidatus Kuenenia stuttgartiensis RND
+      efflux genes (czcA, czcB, czcC, kustd1923, kuste2279).
+  - node_id: coupled_anammox_denitrification_n_damo_nitrogen_removal_and_zn2_efflux_homeostasis
+    label: coupled partial nitritation/anammox, heterotrophic denitrification, n-DAMO methane/nitrogen
+      removal, and RND-mediated Zn(II) homeostasis
+    node_type: COMMUNITY_PROCESS
+    description: High-efficiency inorganic nitrogen and methane removal (88-98% TIN removal) via coupled
+      anammox, denitrification, and n-DAMO sustained under leachate Zn(II) toxicity by active CzcABC heavy-metal
+      efflux.
+  edges:
+  - edge_id: landfill_leachate_maintains_free_ammonia_salinity_and_zn2_heavy_metal_regime
+    subject: landfill_leachate
+    predicate: maintains
+    object: leachate_high_free_ammonia_salinity_organic_carbon_and_zn2_metal_stress
+    description: Mature and high-strength landfill leachates maintain elevated free ammonia, salinity,
+      organic carbon, and cytotoxic Zn(II) concentrations.
+    evidence:
+    - reference: PMID:36049709
+      snippet: The oxic zone, particularly oxic biofilm, was the key zone for anammox pathway, where Candidatus_Kuenenia
+        (from 1.6 % to 8.3 %) with high tolerance to FA and salinity stress outcompeted Candidatus_Brocadia
+        (from 18.3 % to 0.1 %) as the dominant anammox bacteria.
+      notes: Mature landfill leachate imposes sustained free ammonia (FA) and salinity stress across treatment
+        biofilms (PMID:36049709).
+    - reference: PMID:31901527
+      snippet: Zn(II) is frequently detected in biological nitrogen removal systems treating high-strength
+        wastewater (e.g., landfill leachate), yet the cellular defense strategies of anammox bacteria
+        against Zn(II) cytotoxicity is largely unknown.
+      notes: High-strength landfill leachate frequently exposes nitrogen-removing consortia to cytotoxic
+        Zn(II) levels (PMID:31901527).
+  - edge_id: leachate_regime_selects_for_candidatus_kuenenia_brocadia_n_damo_and_denitrifiers
+    subject: leachate_high_free_ammonia_salinity_organic_carbon_and_zn2_metal_stress
+    predicate: selects for
+    object: leachate_candidatus_kuenenia_brocadia_n_damo_and_denitrifying_guild
+    description: Free ammonia, salinity, nitrite/nitrate, and organic carbon in landfill leachate select
+      for Candidatus Kuenenia, Candidatus Brocadia, Proteobacteria/Bacteroidetes denitrifiers, and n-DAMO
+      archaea and bacteria.
+    evidence:
+    - reference: PMID:32506042
+      snippet: 16S rRNA amplicon sequencing revealed Proteobacteria (36-56%), Planctomycetes (10-31%),
+        and Bacteroidetes (6-39%) as dominant phyla in the reactor. Candidatus brocadia was observed as
+        the most abundant genus representing anammox community.
+      notes: Single-stage landfill leachate nitrogen management selects for Proteobacteria, Planctomycetes
+        (dominated by Candidatus Brocadia), and Bacteroidetes (PMID:32506042).
+    - reference: PMID:32259754
+      snippet: Microbial community analysis revealed n-DAMO archaea, n-DAMO bacteria and Anammox bacteria
+        jointly dominated the biofilm, and their relative abundance dynamically shifted with feeding regime.
+      notes: Nitrite-, nitrate-, and ammonium-bearing landfill leachate selects for biofilms jointly dominated
+        by n-DAMO archaea, n-DAMO bacteria, and anammox bacteria (PMID:32259754).
+  - edge_id: leachate_guild_expresses_hzsab_hdh_amoa_nirks_mcra_and_czcabc_genes
+    subject: leachate_candidatus_kuenenia_brocadia_n_damo_and_denitrifying_guild
+    predicate: expresses
+    object: leachate_hzsab_hdh_amoa_hao_narg_napa_nirks_mcra_and_czcabc_efflux_system
+    description: Landfill leachate anammox, denitrifying, and n-DAMO guilds enrich and transcribe hzsA,
+      hzsB, hdh, amoA, hao, narG, napA, nirK, nirS, mcrA, and Zn(II)-inducible RND efflux genes czcA,
+      czcB, and czcC.
+    evidence:
+    - reference: PMID:36049709
+      snippet: The employed integrated fixed-film activated sludge technology favored the enrichment of
+        hzsA, hzsB, hdh, amoA, hao, narG, and napA functional genes.
+      notes: Mature landfill leachate biofilms enrich hzsA, hzsB, hdh, amoA, hao, narG, and napA nitrogen-cycling
+        genes (PMID:36049709).
+    - reference: PMID:32506042
+      snippet: mRNA based functional expressions of nitrite reductase (nirK and nirS) and hydrazine synthase
+        (hzsA) suggested simultaneous active heterotrophic denitrification and anammox, respectively.
+      notes: Landfill leachate consortia actively transcribe nirK, nirS, and hzsA mRNAs (PMID:32506042).
+    - reference: PMID:31901527
+      snippet: Particularly, in order to maintain Zn(II) homeostasis, Candidatus 'K. stuttgartiensis'
+        upregulated genes encoding RND efflux family (czcA, czcB, czcC, kustd1923 and kuste2279) for exporting
+        Zn(II) actively.
+      notes: Candidatus Kuenenia stuttgartiensis upregulates RND heavy-metal efflux genes czcA, czcB,
+        and czcC under Zn(II) exposure (PMID:31901527).
+  - edge_id: leachate_nitrogen_and_efflux_enzymes_catalyze_anammox_n_damo_and_zn2_tolerance
+    subject: leachate_hzsab_hdh_amoa_hao_narg_napa_nirks_mcra_and_czcabc_efflux_system
+    predicate: catalyzes
+    object: coupled_anammox_denitrification_n_damo_nitrogen_removal_and_zn2_efflux_homeostasis
+    description: Hydrazine synthase, hydrazine dehydrogenase, nitrite/nitrate reductases, mcrA, and CzcABC
+      efflux pumps drive 88-98% inorganic nitrogen removal coupled with anaerobic methane oxidation and
+      Zn(II) export in landfill leachate.
+    evidence:
+    - reference: PMID:36049709
+      snippet: 97.9 %-98.1 % of inorganic nitrogen was removed when the nitrogen loading rate was maintained
+        at 0.33-0.36 kg N/m3/d, and a high anammox contribution to nitrogen removal (89.8 %-92.4 %) was
+        achieved.
+      notes: Enriched hzsA/hzsB/hdh/amoA/hao/narG/napA pathways achieve 97.9-98.1% inorganic nitrogen
+        removal from mature landfill leachate with 89.8-92.4% anammox contribution (PMID:36049709).
+    - reference: PMID:32259754
+      snippet: Detailed investigations of interactions among n-DAMO and Anammox microorganisms confirmed
+        that extra addition of nitrite into MBfR fed with nitrate and ammonium not only stimulated the
+        activities of Anammox bacteria, but also enhanced the activities of n-DAMO archaea from 172.3
+        to 356.9 mg NO3--N L-1 d-1. Functional gene analysis also indicated that mcrA and hzsA genes increased
+        after nitrite addition.
+      notes: Increased mcrA and hzsA gene abundances drive coupled n-DAMO and anammox nitrogen removal
+        from landfill leachate up to 6.1 kg N m-3 d-1 (PMID:32259754).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added landfill_leachate_free_ammonia_salinity_zn_kuenenia_brocadia_hzsa_hdh_nirk_czca_anammox
+    mechanism graph for landfill_leachate (habitatmech:GOLD.4020b8821e) backed by PMID:36049709, PMID:32506042,
+    PMID:32259754, and PMID:31901527.
+  llm_assisted: true

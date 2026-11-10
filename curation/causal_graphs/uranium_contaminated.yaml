@@ -1,0 +1,152 @@
+identifier: habitatmech:GOLD.d722422e31
+causal_graphs:
+- graph_id: uranium_contaminated_soil_hexavalent_uranyl_geobacter_ppca_ppcb_cytochrome_pili_u6_bioreduction
+  title: Uranium-contaminated soil soluble hexavalent U(VI) and heavy-metal/nutrient-limitation regime,
+    Geotalea/Geobacter uraniireducens and uranium-tolerant Bacillus/Arthrobacter guild selection, and
+    triheme c-type cytochrome (PpcA/PpcB) and conductive-pili U(VI)-to-U(IV) bioreduction mechanism
+  description: Uranium-contaminated soils and subsurface aquifer sediments (such as at the Rifle, Colorado
+    uranium-bioremediation site and uranium-tailings soils) expose soil and subsurface microbiota to mobile,
+    toxic hexavalent uranium [U(VI)] alongside heavy-metal stress and nitrogen and phosphate limitation.
+    These radioactive and redox-selective soil conditions enrich dissimilatory metal-reducing bacteria
+    dominated by Geotalea uraniireducens (formerly Geobacter uraniireducens), Geobacter sulfurreducens,
+    and Shewanella together with uranium-tolerant soil bacteria and fungi (Bacillus subtilis, Priestia
+    megaterium, Priestia aryabhattai, Arthrobacter woluwensis, and Mucor spp.). During growth in uranium-contaminated
+    sediments and soils, Geotalea/Geobacter uraniireducens upregulates 34 c-type cytochrome genes—including
+    abundant periplasmic triheme c-type cytochromes PpcA and PpcB—and conductive pili for extracellular
+    electron transfer (EET), while uranium-tolerant soil consortia upregulate nirS3, phnK, urease, and
+    dehydrogenase activities, catalyzing the directional electron transfer that reduces soluble hexavalent
+    U(VI) into insoluble tetravalent U(IV) and immobilizes acid-soluble soil uranium.
+  nodes:
+  - node_id: uranium_contaminated
+    label: uranium-contaminated soil
+    node_type: HABITAT
+    grounding: habitatmech:GOLD.d722422e31
+    description: Soil and subsurface sediment habitat contaminated with mobile hexavalent uranium [U(VI)]
+      from uranium mining, milling, or nuclear waste.
+  - node_id: soluble_hexavalent_uranium_heavy_metal_stress_and_nutrient_limitation_regime
+    label: soluble hexavalent uranium [U(VI)], heavy-metal stress, and nitrogen/phosphate limitation regime
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Edaphic and subsurface sediment chemical regime characterized by mobile hexavalent uranium
+      [U(VI)], heavy-metal toxicity, and nitrogen and phosphate limitation.
+  - node_id: uranium_soil_geotalea_geobacter_shewanella_and_bacillus_arthrobacter_guild
+    label: dissimilatory metal-reducing Geotalea/Geobacter uraniireducens and uranium-tolerant Bacillus/Priestia/Arthrobacter
+      soil guild
+    node_type: COMMUNITY
+    description: Uranium-contaminated soil and sediment microbial community enriched in dissimilatory
+      metal-reducing Geotalea uraniireducens (Geobacter uraniireducens), Geobacter sulfurreducens, and
+      Shewanella alongside uranium-tolerant Bacillus subtilis, Priestia aryabhattai, Priestia megaterium,
+      Arthrobacter woluwensis, and Mucor spp.
+  - node_id: geobacter_triheme_cytochromes_ppca_ppcb_conductive_pili_and_soil_nirs3_phnk_urease_system
+    label: periplasmic triheme c-type cytochromes PpcA and PpcB, multiheme c-type cytochromes, conductive
+      pili, and soil nirS3/phnK/urease/dehydrogenase enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Geotalea/Geobacter uraniireducens periplasmic triheme c-type cytochromes PpcA and PpcB,
+      34 sediment-upregulated c-type cytochromes, and extracellular conductive pili together with nirS3,
+      phnK, urease, and dehydrogenase enzymes in uranium-tolerant soil consortia.
+  - node_id: extracellular_electron_transfer_u6_to_u4_bioreduction_and_uranium_immobilization
+    label: extracellular and periplasmic U(VI)-to-U(IV) bioreduction, biosorption, and soil uranium immobilization
+    node_type: COMMUNITY_PROCESS
+    description: Directional electron flow across periplasmic and outer-membrane c-type cytochromes and
+      conductive pili that reduces soluble hexavalent U(VI) into insoluble U(IV) and converts acid-soluble
+      soil uranium into immobilized residual fractions.
+  edges:
+  - edge_id: uranium_contaminated_soil_maintains_soluble_u6_and_heavy_metal_nutrient_stress
+    subject: uranium_contaminated
+    predicate: maintains
+    object: soluble_hexavalent_uranium_heavy_metal_stress_and_nutrient_limitation_regime
+    description: Uranium-contaminated soils and subsurface sediments expose resident microbes to soluble
+      hexavalent U(VI), heavy-metal stress, and nitrogen and phosphate limitation.
+    evidence:
+    - reference: PMID:18843300
+      snippet: Sediment-grown cells also had higher levels of transcripts, indicative of such physiological
+        states as nitrogen limitation, phosphate limitation and heavy metal stress.
+      notes: Uranium-contaminated subsurface sediments impose nitrogen limitation, phosphate limitation,
+        and heavy-metal stress on resident Geobacter populations (PMID:18843300).
+    - reference: PMID:39675718
+      snippet: The bacterium Geotalea uraniireducens, commonly found in uranium-contaminated environments,
+        plays a key role in bioremediation strategies by converting the soluble hexavalent form of uranium
+        (U(VI)) into less soluble forms (e.g., U(IV)).
+      notes: Uranium-contaminated habitats contain mobile, soluble hexavalent uranium [U(VI)] as a terminal
+        electron acceptor and toxicant (PMID:39675718).
+  - edge_id: soluble_u6_and_metal_stress_select_for_geobacter_and_uranium_tolerant_soil_consortia
+    subject: soluble_hexavalent_uranium_heavy_metal_stress_and_nutrient_limitation_regime
+    predicate: selects for
+    object: uranium_soil_geotalea_geobacter_shewanella_and_bacillus_arthrobacter_guild
+    description: Uranium-contaminated soils and sediments select for dissimilatory metal-reducing Geotalea/Geobacter
+      uraniireducens and uranium-tolerant Bacillus, Priestia, Arthrobacter, and Mucor guilds.
+    evidence:
+    - reference: PMID:18843300
+      snippet: To learn more about the physiological state of Geobacter species living in subsurface sediments,
+        heat-sterilized sediments from a uranium-contaminated aquifer in Rifle, Colorado, were inoculated
+        with Geobacter uraniireducens, a pure culture representative of the Geobacter species that predominates
+        during in situ uranium bioremediation at this site.
+      notes: Geobacter (Geotalea) uraniireducens predominates during in situ uranium bioremediation in
+        uranium-contaminated sediments (PMID:18843300).
+    - reference: PMID:42214860
+      snippet: This study isolated and screened four uranium-tolerant bacterial strains (Priestia aryabhattai,
+        Priestia megaterium, Bacillus subtilis, Arthrobacter woluwensis) and a group of uranium-tolerant
+        symbiotic fungi (Mucor lusitanicus, Mucor ambiguus, Mucor circinelloides, Mucor plumbeus, Rhizopus
+        arrhizus, Parasitella parasitica) from uranium-contaminated soil, based on which a Fungal-Bacterial
+        Consortia (FBC) was constructed.
+      notes: Uranium-contaminated soil selects for uranium-tolerant Priestia aryabhattai, Priestia megaterium,
+        Bacillus subtilis, Arthrobacter woluwensis, and Mucor spp. (PMID:42214860).
+  - edge_id: uranium_guild_expresses_ppca_ppcb_cytochromes_conductive_pili_and_nirs3_phnk
+    subject: uranium_soil_geotalea_geobacter_shewanella_and_bacillus_arthrobacter_guild
+    predicate: expresses
+    object: geobacter_triheme_cytochromes_ppca_ppcb_conductive_pili_and_soil_nirs3_phnk_urease_system
+    description: Geotalea/Geobacter uraniireducens upregulates 34 c-type cytochromes including triheme
+      periplasmic cytochromes PpcA and PpcB alongside conductive pili, while uranium-tolerant soil consortia
+      upregulate nirS3, phnK, urease, and dehydrogenase.
+    evidence:
+    - reference: PMID:18843300
+      snippet: Thirty-four c-type cytochrome genes were upregulated in the sediment-grown cells, including
+        several genes that are homologous to cytochromes that are required for optimal Fe(III) and U(VI)
+        reduction by G. sulfurreducens.
+      notes: Geobacter uraniireducens upregulates 34 c-type cytochrome genes during growth in uranium-contaminated
+        sediments (PMID:18843300).
+    - reference: PMID:39675718
+      snippet: In this work, a detailed functional characterization of the triheme cytochromes PpcA and
+        PpcB from G. uraniireducens was conducted using NMR and visible spectroscopy techniques.
+      notes: Geotalea uraniireducens expresses abundant periplasmic triheme c-type cytochromes PpcA and
+        PpcB for respiratory electron transport to uranium (PMID:39675718).
+    - reference: PMID:42214860
+      snippet: Further analyses demonstrated that the activities of soil urease, dehydrogenase and sucrase
+        were significantly enhanced following FBC treatment, coupled with a marked upregulation in the
+        expression of functional genes nirS3 and phnK.
+      notes: Uranium-tolerant soil consortia upregulate functional genes nirS3 and phnK together with
+        soil urease, dehydrogenase, and sucrase activities in uranium-contaminated soil (PMID:42214860).
+  - edge_id: cytochromes_and_pili_catalyze_u6_reduction_to_insoluble_u4_and_soil_immobilization
+    subject: geobacter_triheme_cytochromes_ppca_ppcb_conductive_pili_and_soil_nirs3_phnk_urease_system
+    predicate: catalyzes
+    object: extracellular_electron_transfer_u6_to_u4_bioreduction_and_uranium_immobilization
+    description: Triheme cytochromes PpcA and PpcB, outer-membrane c-type cytochromes, conductive pili,
+      and soil consortium enzymes catalyze directional electron transfer and U(VI) reduction to insoluble
+      U(IV), immobilizing uranium in soil.
+    evidence:
+    - reference: PMID:39675718
+      snippet: In these cytochromes, the reduction potential values of the three heme groups are much
+        more similar, resulting in a narrower range of values, that facilitates directional electron flow
+        from the inner membrane, thereby optimizing the uranium reduction.
+      notes: Narrowly spaced heme reduction potentials in PpcA and PpcB facilitate directional electron
+        flow from the inner membrane to optimize U(VI) reduction to U(IV) (PMID:39675718).
+    - reference: PMID:39708382
+      snippet: The cutting-edge progress on the molecular mechanism of EET-driven U(VI) reduction mediated
+        by c-type cytochromes, conductive pili, and electron mediators, is critically reviewed.
+      notes: c-type cytochromes and conductive pili mediate extracellular electron transfer (EET)-driven
+        reduction of soluble U(VI) into insoluble U(IV) (PMID:39708382).
+    - reference: PMID:42214860
+      snippet: The results showed that uranium immobilization by FBC was mainly achieved via biosorption,
+        bioreduction and bioaccumulation. Application of free FBC at 5% dosage and sodium alginate-immobilized
+        FBC beads at 3% dosage reduced the acid-soluble uranium fraction by 65% and increased the residual
+        uranium fraction by approximately 533%, with remediation performance significantly superior to
+        that of single microbial strains.
+      notes: Bioreduction, biosorption, and bioaccumulation reduce acid-soluble soil uranium by 65% and
+        increase immobilized residual uranium by ~533% (PMID:42214860).
+curation_history:
+- timestamp: '2026-11-10T16:15:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added uranium_contaminated_soil_hexavalent_uranyl_geobacter_ppca_ppcb_cytochrome_pili_u6_bioreduction
+    mechanism graph for uranium_contaminated (habitatmech:GOLD.d722422e31) backed by PMID:18843300, PMID:39675718,
+    PMID:39708382, and PMID:42214860.
+  llm_assisted: true

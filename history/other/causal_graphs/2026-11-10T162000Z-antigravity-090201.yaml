@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-10T162000Z-antigravity-090201
+  timestamp: '2026-11-10T16:20:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author 10 new evidence-backed causal-graph overlays for Cycle 9 Stage 2 habitats
+  details: 'Reviewed all 103 existing causal-graph overlays in curation/causal_graphs/ and
+    authored 10 new snippet-verified causal-graph overlays (103 -> 113 total): solar_salterns_sediment.yaml
+    (habitatmech:GOLD.d9d8c58a7b, PMID:23766077, PMID:35842547, PMID:34681003, PMID:33013726),
+    hadopelagic_zone_ocean_trenches.yaml (habitatmech:GOLD.1f80141d6a, PMID:31344308,
+    PMID:30975208, PMID:30446553, PMID:31301991), coalbed_methane_well_water.yaml
+    (habitatmech:GOLD.1b19e33e8c, PMID:22590465, PMID:38236038, PMID:30323265, PMID:27795237),
+    cave.yaml (ENVO:00000067, PMID:19474813, PMID:25620962, PMID:32471344, PMID:42962793),
+    shale_carbon_reservoir.yaml (habitatmech:GOLD.e3f5133829, PMID:28685163, PMID:29941576,
+    PMID:17468287, PMID:40202322), uranium_contaminated.yaml (habitatmech:GOLD.d722422e31,
+    PMID:18843300, PMID:39675718, PMID:39708382, PMID:42214860), endosphere__005f8afe.yaml
+    (habitatmech:GOLD.af0c4ac629, PMID:36416970, PMID:32220847, PMID:36977576, PMID:35250913),
+    plant_gall.yaml (PO:0025626, PMID:25610442, PMID:33020260, PMID:28449201, PMID:37583594),
+    landfill_leachate.yaml (habitatmech:GOLD.4020b8821e, PMID:36049709, PMID:32506042,
+    PMID:32259754, PMID:31901527), and catheter.yaml (NCIT:C50344, PMID:29424333,
+    PMID:18852707, PMID:12135850, PMID:25232179).'
