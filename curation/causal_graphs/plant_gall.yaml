@@ -81,10 +81,13 @@ causal_graphs:
     evidence:
     - reference: PMID:25610442
       snippet: Agrobacterium was identified as the agent causing the plant tumor, crown gall over 100
-        years ago. The T-DNA encodes enzymes of auxin, cytokinin, and opine synthesis, the latter a food
-        source for Agrobacterium.
-      notes: Crown gall tumors are induced by Agrobacterium and synthesize opines as a dedicated nutritional
-        source for the colonizing bacterium (PMID:25610442).
+        years ago.
+      notes: Crown gall tumors are induced by colonizing Agrobacterium (PMID:25610442).
+    - reference: PMID:25610442
+      snippet: The T-DNA encodes enzymes of auxin, cytokinin, and opine synthesis, the latter a food source
+        for Agrobacterium.
+      notes: Transformed crown gall cells synthesize opines as a dedicated nutritional food source selecting
+        for Agrobacterium (PMID:25610442).
     - reference: PMID:37583594
       snippet: Acquisition of the pathogenicity plasmid pPATH that encodes a type III secretion system
         (T3SS) and effectors (T3Es) has likely led to the transition of a non-pathogenic bacterium into
@@ -109,16 +112,19 @@ causal_graphs:
     - reference: PMID:28449201
       snippet: In this study, two vectors with short-length chimeric transgenes were used to produce Prunus
         rootstocks resistant to crown gall disease through RNA-interference-mediated gene silencing of
-        the Agrobacterium tumefaciens oncogenes ipt and iaaM. The infection of apricot plants with a binary
-        vector containing only the 6b oncogene demonstrated that the expression of this gene is involved
-        in the induction of tumours in the apricot species.
-      notes: Agrobacterium tumefaciens T-DNA expresses the oncogenes ipt, iaaM, and 6b during crown gall
-        tumor induction (PMID:28449201).
+        the Agrobacterium tumefaciens oncogenes ipt and iaaM.
+      notes: Agrobacterium tumefaciens T-DNA expresses the oncogenes ipt and iaaM during crown gall disease
+        (PMID:28449201).
+    - reference: PMID:28449201
+      snippet: The infection of apricot plants with a binary vector containing only the 6b oncogene demonstrated
+        that the expression of this gene is involved in the induction of tumours in the apricot species.
+      notes: Agrobacterium tumefaciens T-DNA expresses the 6b oncogene involved in tumor induction in
+        apricot (PMID:28449201).
     - reference: PMID:37583594
       snippet: In both plasmids, we confirmed the presence of highly similar gene clusters encoding a
-        T3SS, as well as auxin and cytokinins biosynthetic enzymes. Among T3SS-associated proteins encoded
-        by Pag and Pab, we identified two novel chaperons of the ShcV and CesT families that are present
-        in both pathovars with high similarity.
+        T3SS, as well as auxin and cytokinins biosynthetic enzymes. Three putative novel T3Es were identified
+        in Pab and one in Pag. Among T3SS-associated proteins encoded by Pag and Pab, we identified two
+        novel chaperons of the ShcV and CesT families that are present in both pathovars with high similarity.
       notes: Pantoea agglomerans pPATHpag and pPATHpab plasmids encode a T3SS, ShcV and CesT chaperones,
         and auxin and cytokinin biosynthetic enzymes (PMID:37583594).
   - edge_id: vir_and_oncogene_enzymes_catalyze_t_dna_integration_hormone_synthesis_and_gall_formation
