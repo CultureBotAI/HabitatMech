@@ -40,9 +40,87 @@ causal_graphs:
     label: Halanaerobium rhodanese-like sulfurtransferases, anaerobic sulfite reductase complexes, guar-polymer
       mixed-acid fermentation enzymes, and methylotrophic methanogenesis enzymes
     node_type: GENE_OR_PROTEIN
-    description: Conserved rhodanese-like proteins, anaerobic sulfite reductase complexes, and guar-gum
-      mixed-acid fermentation enzymes in Halanaerobium together with sulfate-reduction pathways in Desulfohalobium
-      and trimethylamine-utilizing methanogenesis enzymes in Methanohalophilus.
+    description: Conserved rhodanese-like thiosulfate sulfurtransferases and anaerobic sulfite reductase
+      (AsrABC) complexes in shale-dominant Halanaerobium (exemplified by Halanaerobium congolense thiosulfate
+      sulfurtransferase UniProtKB:Q6Q1E2 and anaerobic sulfite reductase subunit A UniProtKB:A0A1G6KZ57),
+      dissimilatory sulfite reductase in thermohalophilic Desulfohalobium (exemplified by Desulfohalobium
+      retbaense DsrA UniProtKB:C8WZS1), and methylotrophic methanogenesis enzymes in halophilic Methanohalophilus
+      (exemplified by Methanohalophilus mahii McrA UniProtKB:D5EAD6).
+    protein_examples:
+    - accession: UniProtKB:Q6Q1E2
+      entry_name: Q6Q1E2_9FIRM
+      recommended_name: thiosulfate sulfurtransferase
+      locus_tag: BY453_11716
+      taxon_id: NCBITaxon:54121
+      taxon_name: Halanaerobium congolense
+      role_in_node: strain_exemplar
+      sequence_length: 306
+      crc64: CCA35AA41A25A0AC
+      evidence:
+      - reference: PMID:28685163
+        snippet: Analysis of Halanaerobium isolate genomes and reconstructed genomes from metagenomic
+          data sets revealed the conserved presence of rhodanese-like proteins and anaerobic sulfite reductase
+          complexes capable of converting thiosulfate to sulfide. Shotgun proteomics measurements using
+          a Halanaerobium isolate verified that these proteins were more abundant when thiosulfate was
+          present in the growth medium, and culture-based assays identified thiosulfate-dependent sulfide
+          production by the same isolate.
+        notes: Shale Halanaerobium genomes and proteomes express conserved rhodanese-like sulfurtransferases
+          and anaerobic sulfite reductase complexes (PMID:28685163).
+    - accession: UniProtKB:A0A1G6KZ57
+      entry_name: A0A1G6KZ57_9FIRM
+      recommended_name: Anaerobic sulfite reductase subunit A
+      locus_tag: SAMN04488598_12516
+      taxon_id: NCBITaxon:54121
+      taxon_name: Halanaerobium congolense
+      role_in_node: subunit
+      sequence_length: 342
+      crc64: DC1DC8A119C48DC3
+      evidence:
+      - reference: PMID:28685163
+        snippet: Analysis of Halanaerobium isolate genomes and reconstructed genomes from metagenomic
+          data sets revealed the conserved presence of rhodanese-like proteins and anaerobic sulfite reductase
+          complexes capable of converting thiosulfate to sulfide.
+        notes: Halanaerobium genomes encode conserved anaerobic sulfite reductase complexes that convert
+          thiosulfate-derived sulfite to sulfide (PMID:28685163).
+    - accession: UniProtKB:C8WZS1
+      entry_name: C8WZS1_DESRD
+      recommended_name: Dissimilatory sulfite reductase, alpha subunit
+      gene_symbol: dsrA
+      locus_tag: Dret_0244
+      taxon_id: NCBITaxon:485915
+      taxon_name: Desulfohalobium retbaense (strain ATCC 49708 / DSM 5692 / JCM 16813 / HR100)
+      role_in_node: subunit
+      sequence_length: 437
+      crc64: 76CBDD30633BC033
+      evidence:
+      - reference: PMID:40202322
+        snippet: Sulfide production was observed in 60°C incubations, with corresponding enrichment of
+          Desulfohalobium and Desulfovibrionaceae that possess complete pathways for coupling mannose
+          and acetate oxidation to sulfate reduction.
+        notes: Desulfohalobium enriched in 60 degrees C fractured-shale incubations encodes complete pathways
+          for sulfate reduction to sulfide (PMID:40202322).
+    - accession: UniProtKB:D5EAD6
+      entry_name: D5EAD6_METMS
+      recommended_name: Methyl-coenzyme M reductase subunit alpha
+      locus_tag: Mmah_0612
+      taxon_id: NCBITaxon:547558
+      taxon_name: Methanohalophilus mahii (strain ATCC 35705 / DSM 5219 / SLP)
+      role_in_node: subunit
+      sequence_length: 573
+      crc64: 5443D9053A526118
+      evidence:
+      - reference: PMID:17468287
+        snippet: Archaeal clone libraries constructed from sequences from 16S rRNA genes isolated from
+          two wells revealed phylotypes similar to a halophilic methylotrophic Methanohalophilus species
+          and a hydrogenotrophic Methanoplanus species at high salinity and a single phylotype closely
+          related to Methanocorpusculum bavaricum at low salinity.
+        notes: High-salinity shale porewaters select for halophilic methylotrophic Methanohalophilus methanogens
+          (PMID:17468287).
+      - reference: PMID:29941576
+        snippet: Collectively, our findings show that Halanaerobium, Geotoga, and Methanohalophilus strain
+          abundances predict a significant fraction of nitrogen and carbon metabolites in the field.
+        notes: Methanohalophilus strains co-dominate hydraulically fractured shale wells alongside Halanaerobium
+          (PMID:29941576).
   - node_id: thiosulfate_sulfidogenesis_polymer_fermentation_methylotrophic_methanogenesis_and_reservoir_souring
     label: thiosulfate- and sulfate-dependent H2S reservoir souring, guar polymer fermentation to acetate/mannose,
       and halophilic methylotrophic methanogenesis
@@ -152,4 +230,11 @@ curation_history:
   changes: Added shale_carbon_reservoir_hypersaline_fracking_fluid_halanaerobium_methanohalophilus_rhodanese_asr_souring
     mechanism graph for shale_carbon_reservoir (habitatmech:GOLD.e3f5133829) backed by PMID:28685163,
     PMID:29941576, PMID:17468287, and PMID:40202322.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:Q6Q1E2, UniProtKB:A0A1G6KZ57, UniProtKB:C8WZS1,
+    UniProtKB:D5EAD6) to GENE_OR_PROTEIN node halanaerobium_rhodanese_anaerobic_sulfite_reductase_polymer_fermentation_and_methanogenesis_enzymes
+    backed by PMID:17468287, PMID:28685163, PMID:29941576, PMID:40202322.
   llm_assisted: true
