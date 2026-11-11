@@ -40,9 +40,85 @@ causal_graphs:
     label: Proteus mirabilis MR/P fimbrial adhesin MrpH and urease, Staphylococcus epidermidis icaADBC
       (icaC) operon, and Enterococcus faecalis Ebp pilus tip adhesin EbpA
     node_type: GENE_OR_PROTEIN
-    description: Proteus mirabilis MR/P fimbriae and tip adhesin MrpH together with urease, Staphylococcus
-      epidermidis icaADBC intercellular adhesion operon (including IS256-modulated icaC), and Enterococcus
-      faecalis endocarditis- and biofilm-associated pilus tip subunit EbpA (EbpA(NTD)).
+    description: Proteus mirabilis MR/P fimbrial tip adhesin MrpH (UniProtKB:B4EUK6, PMI0270) and cytoplasmic
+      urease subunit alpha UreC (UniProtKB:P17086, PMI3685), Staphylococcus epidermidis icaADBC intercellular
+      adhesion operon (exemplified by IcaC UniProtKB:Q5HKP7, SERP2296), and Enterococcus faecalis endocarditis-
+      and biofilm-associated pilus tip adhesin EbpA (UniProtKB:Q836M0, EF_1091).
+    protein_examples:
+    - accession: UniProtKB:B4EUK6
+      entry_name: B4EUK6_PROMH
+      recommended_name: Fimbrial adhesin
+      gene_symbol: mrpH
+      locus_tag: PMI0270
+      taxon_id: NCBITaxon:529507
+      taxon_name: Proteus mirabilis (strain HI4320)
+      role_in_node: subunit
+      sequence_length: 275
+      crc64: F943766ED82EFF81
+      evidence:
+      - reference: PMID:29424333
+        snippet: Adherence of the bacterium to epithelial and catheter surfaces is mediated by 17 different
+          fimbriae, most notably MR/P fimbriae.
+        notes: Proteus mirabilis adherence to catheter surfaces is mediated most notably by MR/P fimbriae
+          (PMID:29424333).
+      - reference: PMID:29424333
+        snippet: Vaccines, using MR/P fimbria and its adhesin, MrpH, have been shown to be efficacious
+          in the murine model.
+        notes: MrpH is the functional adhesin of Proteus mirabilis MR/P fimbriae (PMID:29424333).
+    - accession: UniProtKB:P17086
+      entry_name: URE1_PROMH
+      recommended_name: Urease subunit alpha
+      gene_symbol: ureC
+      locus_tag: PMI3685
+      taxon_id: NCBITaxon:529507
+      taxon_name: Proteus mirabilis (strain HI4320)
+      role_in_node: subunit
+      sequence_length: 567
+      crc64: E7747728624EC549
+      evidence:
+      - reference: PMID:18852707
+        snippet: The crystalline biofilms result from infection by urease-producing bacteria, particularly
+          Proteus mirabilis. Urease raises the urinary pH and drives the formation of calcium phosphate
+          and magnesium phosphate crystals in the biofilm.
+        notes: Proteus mirabilis urease raises urinary pH and drives crystalline biofilm encrustation
+          of catheters (PMID:18852707).
+    - accession: UniProtKB:Q5HKP7
+      entry_name: ICAC_STAEQ
+      recommended_name: Probable poly-beta-1,6-N-acetyl-D-glucosamine export protein
+      gene_symbol: icaC
+      locus_tag: SERP2296
+      taxon_id: NCBITaxon:176279
+      taxon_name: Staphylococcus epidermidis (strain ATCC 35984 / DSM 28319 / BCRC 17069 / CCUG 31568
+        / BM 3577 / RP62A)
+      role_in_node: subunit
+      sequence_length: 355
+      crc64: 7C847887B91894E3
+      evidence:
+      - reference: PMID:12135850
+        snippet: Biofilm production in Staphylococcus epidermidis is an important virulence factor that
+          is mediated by the expression of the icaADBC operon. In this study 41 S. epidermidis isolates
+          obtained from catheter-related urinary tract infections were analyzed for the presence of the
+          icaADBC operon and biofilm formation.
+        notes: Catheter-related Staphylococcus epidermidis isolates rely on the icaADBC operon (including
+          icaC) for biofilm formation (PMID:12135850).
+    - accession: UniProtKB:Q836M0
+      entry_name: Q836M0_ENTFA
+      recommended_name: von Willebrand factor type A domain protein
+      locus_tag: EF_1091
+      taxon_id: NCBITaxon:226185
+      taxon_name: Enterococcus faecalis (strain ATCC 700802 / V583)
+      role_in_node: subunit
+      sequence_length: 1103
+      crc64: 8E59597DA26CBAB2
+      evidence:
+      - reference: PMID:25232179
+        snippet: In the murine model, formation of catheter-associated biofilms by Enterococcus faecalis
+          depends on EbpA, which is the minor subunit at the tip of a heteropolymeric surface fiber known
+          as the endocarditis- and biofilm-associated pilus (Ebp). We show that EbpA is an adhesin that
+          mediates bacterial attachment to host fibrinogen, which is released and deposited on catheters
+          after introduction of the catheter into the mouse bladder.
+        notes: Enterococcus faecalis EbpA pilus tip subunit binds catheter-deposited fibrinogen to drive
+          catheter biofilm formation (PMID:25232179).
   - node_id: fibrinogen_and_pia_catheter_biofilm_formation_urine_alkalinization_and_crystalline_lumen_encrustation
     label: EbpA-fibrinogen and icaADBC-PIA catheter biofilm accumulation, urease-driven urine alkalinization,
       and calcium/magnesium phosphate crystalline catheter encrustation
@@ -154,4 +230,11 @@ curation_history:
   changes: Added catheter_polymer_fibrinogen_urea_proteus_staphylococcus_enterococcus_mrph_urease_icaadbc_ebpa_encrustation
     mechanism graph for catheter (NCIT:C50344) backed by PMID:29424333, PMID:18852707, PMID:12135850,
     and PMID:25232179.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:B4EUK6, UniProtKB:P17086, UniProtKB:Q5HKP7,
+    UniProtKB:Q836M0) to GENE_OR_PROTEIN node proteus_mrph_fimbriae_urease_staphylococcus_icaadbc_and_enterococcus_ebpa_pilus_system
+    backed by PMID:12135850, PMID:18852707, PMID:25232179, PMID:29424333.
   llm_assisted: true

@@ -140,10 +140,96 @@ causal_graphs:
       monooxygenase (amoA), nitrogenase (NifH), 4-hydroxybutyryl-CoA dehydratase,
       and RuBisCO (cbbL)
     node_type: GENE_OR_PROTEIN
-    description: Sulfurovum sulfide-quinone oxidoreductase (Sqr), Gammaproteobacteria/Betaproteobacteria
-      Sox complex (soxB), Nitrosomonas ammonia monooxygenase (amoA), nitrogenase NifH,
-      4-hydroxybutyryl-CoA dehydratase, and Calvin-Benson-Bassham cycle ribulose-1,5-bisphosphate
-      carboxylase/oxygenase large subunit (cbbL/RuBisCO).
+    description: Sulfurovum sulfide-quinone oxidoreductase Sqr (exemplified by Sulfurovum
+      lithotrophicum Sqr UniProtKB:A0A7U4M2R2), Sulfuricurvum and Thiobacillus Sox
+      thiosulfate-oxidation proteins (soxB) and form I RuBisCO large chain CbbL (exemplified
+      by Thiobacillus denitrificans CbbL UniProtKB:Q56259), Nitrosomonas ammonia monooxygenase
+      subunit alpha AmoA (exemplified by Nitrosomonas europaea AmoA1 UniProtKB:Q04507),
+      nitrogenase NifH, 4-hydroxybutyryl-CoA dehydratase, and karst cave Pseudonocardia
+      RuBisCO CbbL (exemplified by Pseudonocardia dioxanivorans CbbL UniProtKB:F4CQ77).
+    protein_examples:
+    - accession: UniProtKB:A0A7U4M2R2
+      entry_name: A0A7U4M2R2_9BACT
+      recommended_name: Sulfide:quinone reductase
+      locus_tag: YH65_10440
+      taxon_id: NCBITaxon:206403
+      taxon_name: Sulfurovum lithotrophicum
+      role_in_node: family_member
+      sequence_length: 491
+      crc64: 0E8B0598151FDF1B
+      evidence:
+      - reference: PMID:25620962
+        snippet: Multiple homologs of sulfide-quinone oxidoreductase (Sqr), together
+          with incomplete or absent Sox pathways, suggest that cave Sulfurovum-like
+          Epsilonproteobacteria oxidize sulfide incompletely to S(0) using either
+          O2 or nitrate as a terminal electron acceptor, consistent with previous
+          evidence that they are most successful in niches with high dissolved sulfide
+          to oxygen ratios.
+        notes: Cave Sulfurovum-like Epsilonproteobacteria use sulfide-quinone oxidoreductase
+          (Sqr) homologs to oxidize sulfide to S(0) (PMID:25620962).
+    - accession: UniProtKB:Q56259
+      entry_name: RBL1_THIDA
+      recommended_name: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      locus_tag: Tbd_2624
+      taxon_id: NCBITaxon:292415
+      taxon_name: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      role_in_node: strain_exemplar
+      sequence_length: 473
+      crc64: 470DC11519D580A7
+      evidence:
+      - reference: PMID:19474813
+        snippet: DNA-based stable-isotope probing analyses using 13C-bicarbonate showed
+          that Thiobacillus spp. were most active in assimilating CO2 and also implied
+          that ammonia and nitrite oxidizers were active during incubations.
+        notes: 13C-bicarbonate stable-isotope probing shows Thiobacillus spp. are
+          the most active CO2 assimilators in Movile Cave (PMID:19474813).
+      - reference: PMID:19474813
+        snippet: Microbial diversity in Movile Cave (Romania) was studied using bacterial
+          and archaeal 16S rRNA gene sequence and functional gene analyses, including
+          ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), soxB (sulfate
+          thioesterase/thiohydrolase) and amoA (ammonia monooxygenase).
+        notes: Chemolithoautotrophic cave sulfur oxidizers harbor RuBisCO and soxB
+          genes (PMID:19474813).
+    - accession: UniProtKB:Q04507
+      entry_name: AMOA_NITEU
+      recommended_name: Ammonia monooxygenase alpha subunit
+      gene_symbol: amoA1
+      locus_tag: NE0944
+      taxon_id: NCBITaxon:228410
+      taxon_name: Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705
+        / NBRC 14298)
+      role_in_node: strain_exemplar
+      sequence_length: 276
+      crc64: CE4CF5879DE3682A
+      evidence:
+      - reference: PMID:19474813
+        snippet: Nitrosomonas spp. were detected in both 16S rRNA and amoA gene libraries
+          from the 'heavy' DNA and sequences related to nitrite-oxidizing bacteria
+          Nitrospira and Candidatus 'Nitrotoga' were also detected in the 'heavy'
+          DNA, which suggests that ammonia/nitrite oxidation may be another major
+          primary production process in this unique ecosystem.
+        notes: Active CO2-incorporating Nitrosomonas spp. in Movile Cave are detected
+          in amoA gene libraries from 13C heavy DNA (PMID:19474813).
+    - accession: UniProtKB:F4CQ77
+      entry_name: RBL_PSEUX
+      recommended_name: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      locus_tag: Psed_6249
+      taxon_id: NCBITaxon:675635
+      taxon_name: Pseudonocardia dioxanivorans (strain ATCC 55486 / DSM 44775 / JCM
+        13855 / CB1190)
+      role_in_node: family_member
+      sequence_length: 476
+      crc64: 7CD92F1F43816FA0
+      evidence:
+      - reference: PMID:42962793
+        snippet: 'High-throughput sequencing of the cbbL gene further revealed pronounced
+          habitat-specific community structures: overlying soils exhibited the highest
+          diversity and enrichments of Mesorhizobium, Variovorax, and Bradyrhizobium,
+          whereas sediments were dominated by Pseudonocardia.'
+        notes: Karst cave sediment cbbL autotrophic communities are dominated by Pseudonocardia
+          (PMID:42962793).
   - node_id: subterranean_dark_co2_fixation_sulfur_oxidation_and_nitrification_primary_production
     label: dark chemolithoautotrophic CO2 fixation, incomplete/complete sulfide oxidation
       to S(0) and sulfate, and ammonia/nitrite oxidation
@@ -299,4 +385,11 @@ curation_history:
   changes: Added cave_aphotic_karst_sulfidic_co2_gradient_sulfurovum_thiobacillus_sqr_soxb_cbbl_chemolithoautotrophy
     mechanism graph for cave (ENVO:00000067) backed by PMID:19474813, PMID:25620962,
     PMID:32471344, and PMID:42962793.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:A0A7U4M2R2, UniProtKB:Q56259,
+    UniProtKB:Q04507, UniProtKB:F4CQ77) to GENE_OR_PROTEIN node cave_sqr_soxb_amoa_nifh_and_rubisco_cbbl_chemolithoautotrophic_enzymes
+    backed by PMID:19474813, PMID:25620962, PMID:42962793.
   llm_assisted: true

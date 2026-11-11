@@ -67,10 +67,107 @@ causal_graphs:
     label: periplasmic triheme c-type cytochromes PpcA and PpcB, multiheme c-type
       cytochromes, conductive pili, and soil nirS3/phnK/urease/dehydrogenase enzymes
     node_type: GENE_OR_PROTEIN
-    description: Geotalea/Geobacter uraniireducens periplasmic triheme c-type cytochromes
-      PpcA and PpcB, 34 sediment-upregulated c-type cytochromes, and extracellular
-      conductive pili together with nirS3, phnK, urease, and dehydrogenase enzymes
-      in uranium-tolerant soil consortia.
+    description: Geotalea uraniireducens (Geobacter uraniireducens Rf4) and Geobacter
+      sulfurreducens periplasmic triheme c-type cytochromes PpcA and PpcB, 34 sediment-upregulated
+      c-type cytochromes, and conductive pili (exemplified by Geotalea uraniireducens
+      Rf4 class III triheme cytochrome c UniProtKB:A5G8Z6 and Geobacter sulfurreducens
+      PCA PpcA UniProtKB:G5EBD6 and PpcB UniProtKB:Q74G83) together with nirS3, phnK,
+      urease, and dehydrogenase enzymes in uranium-tolerant soil consortia (exemplified
+      by Bacillus subtilis urease subunit alpha UreC UniProtKB:P77837).
+    protein_examples:
+    - accession: UniProtKB:A5G8Z6
+      entry_name: A5G8Z6_GEOUR
+      recommended_name: Class III cytochrome C domain-containing protein
+      locus_tag: Gura_4121
+      taxon_id: NCBITaxon:351605
+      taxon_name: Geotalea uraniireducens (strain Rf4)
+      role_in_node: strain_exemplar
+      sequence_length: 90
+      crc64: 3BD81EAE5A025555
+      evidence:
+      - reference: PMID:39675718
+        snippet: In this work, a detailed functional characterization of the triheme
+          cytochromes PpcA and PpcB from G. uraniireducens was conducted using NMR
+          and visible spectroscopy techniques.
+        notes: Geotalea uraniireducens expresses periplasmic triheme c-type cytochromes
+          PpcA and PpcB that optimize directional electron flow for uranium reduction
+          (PMID:39675718).
+      - reference: PMID:18843300
+        snippet: Thirty-four c-type cytochrome genes were upregulated in the sediment-grown
+          cells, including several genes that are homologous to cytochromes that are
+          required for optimal Fe(III) and U(VI) reduction by G. sulfurreducens.
+        notes: Geobacter uraniireducens Rf4 upregulates 34 c-type cytochrome genes
+          during growth in uranium-contaminated Rifle sediments (PMID:18843300).
+    - accession: UniProtKB:G5EBD6
+      entry_name: G5EBD6_GEOSL
+      recommended_name: Cytochrome c
+      gene_symbol: ppcA
+      locus_tag: GSU0612
+      taxon_id: NCBITaxon:243231
+      taxon_name: Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA)
+      role_in_node: family_member
+      sequence_length: 91
+      crc64: C87AB91F7834E086
+      evidence:
+      - reference: PMID:39675718
+        snippet: Despite sharing high amino acid sequence identity and structural
+          homology with their counterparts from Geobacter sulfurreducens, the results
+          showed that the heme reduction potential values are less negative, the order
+          of oxidation of the hemes is distinct, and the redox and redox-Bohr network
+          of interactions revealed unprecedented functional mechanisms in the cytochromes
+          of G. uraniireducens.
+        notes: Geobacter sulfurreducens PpcA and PpcB are the direct structural and
+          functional counterparts of the Geotalea uraniireducens triheme cytochromes
+          (PMID:39675718).
+    - accession: UniProtKB:Q74G83
+      entry_name: Q74G83_GEOSL
+      recommended_name: Cytochrome c
+      gene_symbol: ppcB
+      locus_tag: GSU0364
+      taxon_id: NCBITaxon:243231
+      taxon_name: Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA)
+      role_in_node: family_member
+      sequence_length: 91
+      crc64: 89A955A007DBB929
+      evidence:
+      - reference: PMID:39675718
+        snippet: In this work, a detailed functional characterization of the triheme
+          cytochromes PpcA and PpcB from G. uraniireducens was conducted using NMR
+          and visible spectroscopy techniques. Despite sharing high amino acid sequence
+          identity and structural homology with their counterparts from Geobacter
+          sulfurreducens, the results showed that the heme reduction potential values
+          are less negative, the order of oxidation of the hemes is distinct, and
+          the redox and redox-Bohr network of interactions revealed unprecedented
+          functional mechanisms in the cytochromes of G. uraniireducens.
+        notes: PpcB is one of the two principal periplasmic triheme cytochromes characterized
+          in Geotalea uraniireducens and Geobacter sulfurreducens (PMID:39675718).
+    - accession: UniProtKB:P77837
+      entry_name: URE1_BACSU
+      recommended_name: Urease subunit alpha
+      gene_symbol: ureC
+      locus_tag: BSU36640
+      taxon_id: NCBITaxon:224308
+      taxon_name: Bacillus subtilis (strain 168)
+      role_in_node: subunit
+      sequence_length: 569
+      crc64: A2712A6172DA5BE7
+      evidence:
+      - reference: PMID:42214860
+        snippet: This study isolated and screened four uranium-tolerant bacterial
+          strains (Priestia aryabhattai, Priestia megaterium, Bacillus subtilis, Arthrobacter
+          woluwensis) and a group of uranium-tolerant symbiotic fungi (Mucor lusitanicus,
+          Mucor ambiguus, Mucor circinelloides, Mucor plumbeus, Rhizopus arrhizus,
+          Parasitella parasitica) from uranium-contaminated soil, based on which a
+          Fungal-Bacterial Consortia (FBC) was constructed.
+        notes: Uranium-tolerant Bacillus subtilis is a core bacterial member of the
+          uranium-remediating soil consortium (PMID:42214860).
+      - reference: PMID:42214860
+        snippet: Further analyses demonstrated that the activities of soil urease,
+          dehydrogenase and sucrase were significantly enhanced following FBC treatment,
+          coupled with a marked upregulation in the expression of functional genes
+          nirS3 and phnK.
+        notes: FBC bioaugmentation significantly enhances soil urease activity and
+          nirS3/phnK expression during uranium immobilization (PMID:42214860).
   - node_id: extracellular_electron_transfer_u6_to_u4_bioreduction_and_uranium_immobilization
     label: extracellular and periplasmic U(VI)-to-U(IV) bioreduction, biosorption,
       and soil uranium immobilization
@@ -225,4 +322,11 @@ curation_history:
   changes: Added uranium_contaminated_soil_hexavalent_uranyl_geobacter_ppca_ppcb_cytochrome_pili_u6_bioreduction
     mechanism graph for uranium_contaminated (habitatmech:GOLD.d722422e31) backed
     by PMID:18843300, PMID:39675718, PMID:39708382, and PMID:42214860.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:A5G8Z6, UniProtKB:G5EBD6,
+    UniProtKB:Q74G83, UniProtKB:P77837) to GENE_OR_PROTEIN node geobacter_triheme_cytochromes_ppca_ppcb_conductive_pili_and_soil_nirs3_phnk_urease_system
+    backed by PMID:18843300, PMID:39675718, PMID:42214860.
   llm_assisted: true

@@ -67,10 +67,87 @@ causal_graphs:
     label: methyl-coenzyme M reductase (mcrA) and bacterial naphthalene degradation
       and nitrogen fixation pathway enzymes
     node_type: GENE_OR_PROTEIN
-    description: Archaeal methyl-coenzyme M reductase alpha subunit (mcrA) transcripts
-      in Methanobacterium, Methanosarcina, and Methanosaeta together with upper and
-      lower naphthalene degradation and nitrogen fixation pathway enzymes in coalbed
-      Pseudomonas stutzeri.
+    description: Archaeal methyl-coenzyme M reductase alpha subunit (mcrA) in hydrogenotrophic
+      Methanobacterium subterraneum and Methanobacterium formicicum and acetoclastic
+      Methanosarcina and Methanosaeta/Methanothrix (exemplified by Methanobacterium
+      subterraneum McrA UniProtKB:D2KZX2, Methanobacterium formicicum McrA UniProtKB:A0A090I2G6,
+      and Methanosarcina barkeri McrA UniProtKB:P07962) together with upper/lower
+      naphthalene degradation and nitrogen fixation pathway enzymes in coalbed Pseudomonas
+      (Stutzerimonas) stutzeri (exemplified by NifH UniProtKB:A4VJ70).
+    protein_examples:
+    - accession: UniProtKB:D2KZX2
+      entry_name: D2KZX2_9EURY
+      recommended_name: coenzyme-B sulfoethylthiotransferase
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:59277
+      taxon_name: Methanobacterium subterraneum
+      role_in_node: strain_exemplar
+      sequence_length: 382
+      crc64: 2FB11936B265C3B8
+      evidence:
+      - reference: PMID:22590465
+        snippet: Metabolically active methanogens, identified by clone sequences of
+          mcrA mRNA retrieved from enrichment cultures, were closely related to Methanobacterium
+          subterraneum and Methanobacterium formicicum.
+        notes: Active mcrA mRNA transcripts in coalbed methane well water enrichments
+          belong to Methanobacterium subterraneum and M. formicicum (PMID:22590465).
+    - accession: UniProtKB:A0A090I2G6
+      entry_name: A0A090I2G6_METFO
+      recommended_name: Methyl-coenzyme M reductase subunit alpha
+      gene_symbol: mcrA
+      locus_tag: MB9_1989
+      taxon_id: NCBITaxon:2162
+      taxon_name: Methanobacterium formicicum
+      role_in_node: strain_exemplar
+      sequence_length: 550
+      crc64: D01AA774BE293303
+      evidence:
+      - reference: PMID:22590465
+        snippet: Metabolically active methanogens, identified by clone sequences of
+          mcrA mRNA retrieved from enrichment cultures, were closely related to Methanobacterium
+          subterraneum and Methanobacterium formicicum.
+        notes: Methanobacterium formicicum is a primary metabolically active mcrA-expressing
+          methanogen in CBM well water (PMID:22590465).
+    - accession: UniProtKB:P07962
+      entry_name: MCRA_METBF
+      recommended_name: Methyl-coenzyme M reductase subunit alpha
+      gene_symbol: mcrA
+      locus_tag: Mbar_A0893
+      taxon_id: NCBITaxon:269797
+      taxon_name: Methanosarcina barkeri (strain Fusaro / DSM 804)
+      role_in_node: family_member
+      sequence_length: 570
+      crc64: 301E10CE7D449C76
+      evidence:
+      - reference: PMID:30323265
+        snippet: Acetoclastic methanogenic archaea of the Methanosaeta and Methanosarcina
+          genera increased with methane concentration.
+        notes: Acetoclastic Methanosarcina methanogens increase with methane production
+          in coal formation water (PMID:30323265).
+      - reference: PMID:38236038
+        snippet: Transcript levels of mcrA, the key marker gene for methanogenesis,
+          positively correlated with increased methane production.
+        notes: mcrA transcript levels positively correlate with methane production
+          in CBM produced water (PMID:38236038).
+    - accession: UniProtKB:A4VJ70
+      entry_name: NIFH_STUS1
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: PST_1326
+      taxon_id: NCBITaxon:379731
+      taxon_name: Stutzerimonas stutzeri (strain A1501)
+      role_in_node: family_member
+      sequence_length: 293
+      crc64: 2E203336CEA52663
+      evidence:
+      - reference: PMID:27795237
+        snippet: The draft genome sequence of Pseudomonas stutzeri strain K35 was
+          separated from a metagenome derived from a produced water microbial community
+          of a coalbed methane well. The genome encodes a complete nitrogen fixation
+          pathway and the upper and lower naphthalene degradation pathways.
+        notes: Coalbed methane well produced-water Pseudomonas stutzeri encodes a
+          complete nitrogen fixation pathway and naphthalene degradation pathways
+          (PMID:27795237).
   - node_id: syntrophic_coal_aromatic_and_acetate_biogenic_methane_generation
     label: trace-element-stimulated syntrophic coal biofragmentation, acetogenesis,
       and hydrogenotrophic/acetoclastic methanogenesis
@@ -203,4 +280,11 @@ curation_history:
   changes: Added coalbed_methane_well_water_trace_element_acetate_methanobacterium_methanosarcina_mcra_methanogenesis
     mechanism graph for coalbed_methane_well_water (habitatmech:GOLD.1b19e33e8c) backed
     by PMID:22590465, PMID:38236038, PMID:30323265, and PMID:27795237.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:D2KZX2, UniProtKB:A0A090I2G6,
+    UniProtKB:P07962, UniProtKB:A4VJ70) to GENE_OR_PROTEIN node coalbed_mcra_methyl_coenzyme_m_reductase_and_naphthalene_nif_pathway_enzymes
+    backed by PMID:22590465, PMID:27795237, PMID:30323265, PMID:38236038.
   llm_assisted: true

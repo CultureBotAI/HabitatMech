@@ -2,8 +2,8 @@ identifier: PO:0025626
 causal_graphs:
 - graph_id: plant_gall_wound_signal_agrobacterium_pantoea_vird2_vire2_iaam_ipt_t3ss_tumorigenesis
   title: Plant gall host-wound signal and vascular parenchymal niche, Agrobacterium tumefaciens and Pantoea
-    agglomerans gall-inducing guild selection, and Ti-plasmid VirD2/VirE2/iaaM/ipt/6b and pPATH T3SS phytohormone- and
-    opine-driven gall morphogenesis mechanism
+    agglomerans gall-inducing guild selection, and Ti-plasmid VirD2/VirE2/iaaM/ipt/6b and pPATH T3SS phytohormone-
+    and opine-driven gall morphogenesis mechanism
   description: Plant galls (such as crown galls and bacterial stem/root galls) develop at wounded plant
     surfaces where host phenolic and sugar wound signals and vascular parenchyma cells interface with
     plasmid-bearing phytobacteria. These plant wound signals are recognized by two-component regulatory
@@ -40,10 +40,89 @@ causal_graphs:
     label: Ti-plasmid VirD2 endonuclease, VirE2 ssDNA-binding protein, T4SS, T-DNA oncogenes (iaaM, ipt,
       6b) and opine synthases, and pPATH T3SS/ShcV/CesT and auxin/cytokinin enzymes
     node_type: GENE_OR_PROTEIN
-    description: Agrobacterium Ti-plasmid virulence proteins VirD2 and VirE2, type IV secretion system
-      (T4SS), T-DNA-encoded auxin (iaaM), cytokinin (ipt), 6b, and opine synthesis enzymes, and Pantoea
-      agglomerans pPATH type III secretion system (T3SS), ShcV/CesT chaperones, and auxin/cytokinin biosynthetic
-      enzymes.
+    description: Agrobacterium tumefaciens (Agrobacterium fabrum C58) Ti-plasmid virulence proteins VirD2
+      (UniProtKB:P18592) and VirE2 (UniProtKB:P08062), type IV secretion system (T4SS), and T-DNA-encoded
+      tryptophan 2-monooxygenase IaaM/Tms1 (UniProtKB:P0A3V3), adenylate dimethylallyltransferase (ipt),
+      and protein 6b together with Pantoea agglomerans pv. gypsophilae pPATH-encoded T3SS, ShcV/CesT chaperones,
+      and auxin and cytokinin biosynthetic enzymes (exemplified by adenylate dimethylallyltransferase
+      Ipt UniProtKB:Q47851).
+    protein_examples:
+    - accession: UniProtKB:P18592
+      entry_name: VIRD2_AGRFC
+      recommended_name: T-DNA border endonuclease VirD2
+      gene_symbol: virD2
+      locus_tag: Atu6182
+      taxon_id: NCBITaxon:176299
+      taxon_name: Agrobacterium fabrum (strain C58 / ATCC 33970)
+      role_in_node: strain_exemplar
+      sequence_length: 447
+      crc64: 4BDB702F2EE894AC
+      evidence:
+      - reference: PMID:33020260
+        snippet: Transferred DNA (T-DNA) has been proposed to be escorted by two virulence proteins, VirD2
+          and VirE2, as a nucleoprotein complex (T-complex) that targets the host nucleus.
+        notes: VirD2 and VirE2 escort T-DNA into the host plant nucleus during Agrobacterium crown gall
+          transformation (PMID:33020260).
+      - reference: PMID:33020260
+        snippet: In contrast with VirD2 that binds to plant importin α for nuclear import, VirE2 directly
+          interacts with the host nuclear pore complex component nucleoporin CG1 to facilitate its nuclear
+          uptake and the transformation process.
+        notes: VirD2 binds plant importin alpha to guide nuclear import of the T-complex (PMID:33020260).
+    - accession: UniProtKB:P08062
+      entry_name: VIRE2_AGRFC
+      recommended_name: Single-strand DNA-binding protein
+      gene_symbol: virE2
+      locus_tag: Atu6190
+      taxon_id: NCBITaxon:176299
+      taxon_name: Agrobacterium fabrum (strain C58 / ATCC 33970)
+      role_in_node: strain_exemplar
+      sequence_length: 556
+      crc64: 73C267DE9F2101B6
+      evidence:
+      - reference: PMID:33020260
+        snippet: Our results demonstrate that VirE2 is targeted into the host nucleus in a VirD2- and
+          T-DNA-dependent manner. In contrast with VirD2 that binds to plant importin α for nuclear import,
+          VirE2 directly interacts with the host nuclear pore complex component nucleoporin CG1 to facilitate
+          its nuclear uptake and the transformation process.
+        notes: VirE2 coats transferred T-DNA and directly binds host nucleoporin CG1 for nuclear entry
+          (PMID:33020260).
+    - accession: UniProtKB:P0A3V3
+      entry_name: TR2M_AGRTU
+      recommended_name: Tryptophan 2-monooxygenase
+      gene_symbol: tms1
+      taxon_id: NCBITaxon:358
+      taxon_name: Agrobacterium tumefaciens
+      role_in_node: strain_exemplar
+      sequence_length: 755
+      crc64: 84D2A325594964D8
+      evidence:
+      - reference: PMID:28449201
+        snippet: In this study, two vectors with short-length chimeric transgenes were used to produce
+          Prunus rootstocks resistant to crown gall disease through RNA-interference-mediated gene silencing
+          of the Agrobacterium tumefaciens oncogenes ipt and iaaM.
+        notes: Agrobacterium tumefaciens T-DNA oncogenes iaaM and ipt drive crown gall tumor formation
+          (PMID:28449201).
+    - accession: UniProtKB:Q47851
+      entry_name: IPT_PANAY
+      recommended_name: Adenylate dimethylallyltransferase
+      gene_symbol: ipt
+      taxon_id: NCBITaxon:48984
+      taxon_name: Pantoea agglomerans pv. gypsophilae
+      role_in_node: strain_exemplar
+      sequence_length: 236
+      crc64: 0D3A853C5F7DB14B
+      evidence:
+      - reference: PMID:37583594
+        snippet: P. agglomerans pv. gypsophilae (Pag) forms galls on gypsophila (Gypsophila paniculata)
+          and triggers immunity on sugar beet (Beta vulgaris), while P. agglomerans pv. betae (Pab) causes
+          galls on both gypsophila and sugar beet.
+        notes: Pantoea agglomerans pv. gypsophilae induces hyperplastic galls on Gypsophila paniculata
+          (PMID:37583594).
+      - reference: PMID:37583594
+        snippet: In both plasmids, we confirmed the presence of highly similar gene clusters encoding
+          a T3SS, as well as auxin and cytokinins biosynthetic enzymes.
+        notes: The pPATH pathogenicity plasmid of Pantoea agglomerans pv. gypsophilae encodes auxin and
+          cytokinin biosynthetic enzymes alongside a T3SS (PMID:37583594).
   - node_id: t_dna_nuclear_integration_auxin_cytokinin_opine_biosynthesis_and_gall_hyperplasia
     label: T-complex nuclear import and chromosomal integration, auxin/cytokinin overproduction, opine
       synthesis, and crown/stem gall tumorigenesis
@@ -156,4 +235,11 @@ curation_history:
   changes: Added plant_gall_wound_signal_agrobacterium_pantoea_vird2_vire2_iaam_ipt_t3ss_tumorigenesis
     mechanism graph for plant_gall (PO:0025626) backed by PMID:25610442, PMID:33020260, PMID:28449201,
     and PMID:37583594.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:P18592, UniProtKB:P08062, UniProtKB:P0A3V3,
+    UniProtKB:Q47851) to GENE_OR_PROTEIN node ti_plasmid_vird2_vire2_t4ss_iaam_ipt_6b_and_ppath_t3ss_phytohormone_system
+    backed by PMID:28449201, PMID:33020260, PMID:37583594.
   llm_assisted: true

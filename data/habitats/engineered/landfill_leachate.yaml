@@ -66,11 +66,65 @@ causal_graphs:
     label: hydrazine synthase (hzsA/hzsB), hydrazine dehydrogenase (hdh), amoA, hao,
       narG/napA, nirK/nirS, mcrA, and RND heavy-metal efflux pumps (czcA/czcB/czcC)
     node_type: GENE_OR_PROTEIN
-    description: Anammox hydrazine synthase (hzsA, hzsB) and hydrazine dehydrogenase
-      (hdh), ammonia monooxygenase (amoA), hydroxylamine oxidoreductase (hao), nitrate/nitrite
-      reductases (narG, napA, nirK, nirS), n-DAMO archaeal methyl-coenzyme M reductase
-      (mcrA), and Candidatus Kuenenia stuttgartiensis RND efflux genes (czcA, czcB,
-      czcC, kustd1923, kuste2279).
+    description: Candidatus Kuenenia stuttgartiensis anammox hydrazine synthase subunits
+      (exemplified by HzsA UniProtKB:Q1Q0T2, kuste2861), hydrazine dehydrogenase Hdh
+      (UniProtKB:Q1PW30, kustc0694), and Zn(II)-inducible RND heavy-metal efflux proteins
+      CzcA/CzcB/CzcC (exemplified by CzcC UniProtKB:A0A2C9CAY7, KSMBR1_0334) together
+      with ammonia monooxygenase (amoA), hydroxylamine oxidoreductase (hao), denitrifier
+      narG/napA and nirK/nirS, and n-DAMO archaeal methyl-coenzyme M reductase (mcrA).
+    protein_examples:
+    - accession: UniProtKB:Q1Q0T2
+      entry_name: HZSA_KUEST
+      recommended_name: Hydrazine synthase subunit alpha
+      locus_tag: kuste2861
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 809
+      crc64: 4D60D075EB87A7CF
+      evidence:
+      - reference: PMID:36049709
+        snippet: The employed integrated fixed-film activated sludge technology favored
+          the enrichment of hzsA, hzsB, hdh, amoA, hao, narG, and napA functional
+          genes. The oxic zone, particularly oxic biofilm, was the key zone for anammox
+          pathway, where Candidatus_Kuenenia (from 1.6 % to 8.3 %) with high tolerance
+          to FA and salinity stress outcompeted Candidatus_Brocadia (from 18.3 % to
+          0.1 %) as the dominant anammox bacteria.
+        notes: Candidatus Kuenenia dominates mature landfill leachate biofilms and
+          enriches hzsA, hzsB, and hdh genes (PMID:36049709).
+    - accession: UniProtKB:Q1PW30
+      entry_name: HDH_KUEST
+      recommended_name: Hydrazine dehydrogenase
+      locus_tag: kustc0694
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: strain_exemplar
+      sequence_length: 582
+      crc64: 3006EE78AC726B96
+      evidence:
+      - reference: PMID:36049709
+        snippet: The employed integrated fixed-film activated sludge technology favored
+          the enrichment of hzsA, hzsB, hdh, amoA, hao, narG, and napA functional
+          genes.
+        notes: Anammox hydrazine dehydrogenase (hdh) is enriched alongside hzsA and
+          hzsB in landfill leachate biofilms (PMID:36049709).
+    - accession: UniProtKB:A0A2C9CAY7
+      entry_name: A0A2C9CAY7_KUEST
+      recommended_name: Heavy metal RND efflux outer membrane protein, CzcC family
+      gene_symbol: czcC_2
+      locus_tag: KSMBR1_0334
+      taxon_id: NCBITaxon:174633
+      taxon_name: Kuenenia stuttgartiensis
+      role_in_node: subunit
+      sequence_length: 449
+      crc64: 28292E0FB7A7B7AE
+      evidence:
+      - reference: PMID:31901527
+        snippet: Particularly, in order to maintain Zn(II) homeostasis, Candidatus
+          'K. stuttgartiensis' upregulated genes encoding RND efflux family (czcA,
+          czcB, czcC, kustd1923 and kuste2279) for exporting Zn(II) actively.
+        notes: Candidatus Kuenenia stuttgartiensis upregulates RND efflux genes czcA,
+          czcB, and czcC to actively export Zn(II) (PMID:31901527).
   - node_id: coupled_anammox_denitrification_n_damo_nitrogen_removal_and_zn2_efflux_homeostasis
     label: coupled partial nitritation/anammox, heterotrophic denitrification, n-DAMO
       methane/nitrogen removal, and RND-mediated Zn(II) homeostasis
@@ -198,4 +252,11 @@ curation_history:
   changes: Added landfill_leachate_free_ammonia_salinity_zn_kuenenia_brocadia_hzsa_hdh_nirk_czca_anammox
     mechanism graph for landfill_leachate (habitatmech:GOLD.4020b8821e) backed by
     PMID:36049709, PMID:32506042, PMID:32259754, and PMID:31901527.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 3 verified UniProtKB protein_examples (UniProtKB:Q1Q0T2, UniProtKB:Q1PW30,
+    UniProtKB:A0A2C9CAY7) to GENE_OR_PROTEIN node leachate_hzsab_hdh_amoa_hao_narg_napa_nirks_mcra_and_czcabc_efflux_system
+    backed by PMID:31901527, PMID:36049709.
   llm_assisted: true

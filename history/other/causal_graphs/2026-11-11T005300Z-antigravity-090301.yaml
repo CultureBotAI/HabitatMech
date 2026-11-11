@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-11-11T005300Z-antigravity-090301
+  timestamp: '2026-11-11T00:53:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Add 38 verified UniProtKB protein_examples to 10 Cycle 9 Stage 2 GENE_OR_PROTEIN mechanism nodes
+  details: 'Audited all 3,209 corpus records and all 113 causal-graph overlays (67 GENE_OR_PROTEIN
+    nodes across 66 overlays) for Cycle 9 Stage 3 (protein_examples) using add-uniprot-protein-examples.
+    Added 38 live-verified UniProtKB protein_examples (with exact primaryAccession,
+    uniProtkbId, recommended_name, gene_symbol, locus_tag, NCBITaxon ID and scientific
+    name, role_in_node, sequence_length, crc64 checksum, and contiguous verbatim PubMed
+    abstract snippets) across the 10 new GENE_OR_PROTEIN nodes authored in Cycle 9
+    Stage 2: solar_salterns_sediment.yaml (UniProtKB:Q27RV8, UniProtKB:A0AA51YMY0,
+    UniProtKB:P57684, UniProtKB:Q9HSN5), hadopelagic_zone_ocean_trenches.yaml (UniProtKB:C1J5N8,
+    UniProtKB:Q0VKZ3, UniProtKB:Q8RSS6), coalbed_methane_well_water.yaml (UniProtKB:D2KZX2,
+    UniProtKB:A0A090I2G6, UniProtKB:P07962, UniProtKB:A4VJ70), cave.yaml (UniProtKB:A0A7U4M2R2,
+    UniProtKB:Q56259, UniProtKB:Q04507, UniProtKB:F4CQ77), shale_carbon_reservoir.yaml
+    (UniProtKB:Q6Q1E2, UniProtKB:A0A1G6KZ57, UniProtKB:C8WZS1, UniProtKB:D5EAD6),
+    uranium_contaminated.yaml (UniProtKB:A5G8Z6, UniProtKB:G5EBD6, UniProtKB:Q74G83,
+    UniProtKB:P77837), endosphere__005f8afe.yaml (UniProtKB:Q51813, UniProtKB:B2TBV3,
+    UniProtKB:P06117, UniProtKB:O51917), plant_gall.yaml (UniProtKB:P18592, UniProtKB:P08062,
+    UniProtKB:P0A3V3, UniProtKB:Q47851), landfill_leachate.yaml (UniProtKB:Q1Q0T2,
+    UniProtKB:Q1PW30, UniProtKB:A0A2C9CAY7), and catheter.yaml (UniProtKB:B4EUK6,
+    UniProtKB:P17086, UniProtKB:Q5HKP7, UniProtKB:Q836M0). Populated GENE_OR_PROTEIN
+    nodes increased from 45 (177 ProteinExample entries across 44 overlays) to 55
+    (215 ProteinExample entries across 54 overlays).'

@@ -63,10 +63,100 @@ causal_graphs:
       nitrite reductases (nirS/nirK), superoxide dismutase, chitinase, siderophore/spermidine
       clusters, and T6SS
     node_type: GENE_OR_PROTEIN
-    description: Root endophyte 1-aminocyclopropane-1-carboxylate deaminase (acdS),
-      nitrogenase iron protein (nifH), nitrite reductases (nirS, nirK), superoxide
-      dismutase, chitinase, siderophore/spermidine/colanic acid biosynthetic enzymes,
-      and type VI secretion system (T6SS) proteins.
+    description: Root endophyte 1-aminocyclopropane-1-carboxylate deaminase AcdS (exemplified
+      by Pseudomonas fluorescens AcdS UniProtKB:Q51813 and Paraburkholderia phytofirmans
+      PsJN AcdS UniProtKB:B2TBV3), nitrogenase iron protein NifH (exemplified by Bradyrhizobium
+      diazoefficiens NifH UniProtKB:P06117), nitrite reductases (nirS, nirK), superoxide
+      dismutase (exemplified by Streptomyces coelicolor Fe-Zn superoxide dismutase
+      SodF1 UniProtKB:O51917), chitinase, siderophore/spermidine/colanic acid biosynthetic
+      enzymes, and type VI secretion system (T6SS) proteins.
+    protein_examples:
+    - accession: UniProtKB:Q51813
+      entry_name: 1A1D_PSEFL
+      recommended_name: 1-aminocyclopropane-1-carboxylate deaminase
+      gene_symbol: acdS
+      taxon_id: NCBITaxon:294
+      taxon_name: Pseudomonas fluorescens
+      role_in_node: family_member
+      sequence_length: 338
+      crc64: E6E98B3EB6FE6144
+      evidence:
+      - reference: PMID:32220847
+        snippet: Complete genome sequencing of LTGT-11-2Z revealed 1-aminocyclopropane-1-carboxylate
+          deaminases, siderophore, spermidine, and colanic acid biosynthetic genes,
+          as well as type VI secretion system (T6SS) genes, which are likely involved
+          in biofilm formation and plant-microbe interactions.
+        notes: Root-endosphere Pseudomonas sp. LTGT-11-2Z encodes 1-aminocyclopropane-1-carboxylate
+          deaminases that promote drought resistance (PMID:32220847).
+    - accession: UniProtKB:B2TBV3
+      entry_name: 1A1D_PARPJ
+      recommended_name: 1-aminocyclopropane-1-carboxylate deaminase
+      gene_symbol: acdS
+      locus_tag: Bphyt_5397
+      taxon_id: NCBITaxon:398527
+      taxon_name: Paraburkholderia phytofirmans (strain DSM 17436 / LMG 22146 / PsJN)
+      role_in_node: family_member
+      sequence_length: 338
+      crc64: 47C45E8E3D5EA3A3
+      evidence:
+      - reference: PMID:36416970
+        snippet: Root endosphere bacterial communities of two rice cultivars showed
+          different tolerance to RN, but showed commonalities in the selection of
+          bacteria taxon, such as the massive enrichment of Burkholderia-Caballeronia-Paraburkholderia
+          in the root endosphere.
+        notes: Reduced nitrogen fertilization drives massive enrichment of Burkholderia-Caballeronia-Paraburkholderia
+          in the root endosphere (PMID:36416970).
+      - reference: PMID:36416970
+        snippet: RN significantly increased the relative abundance of acdS gene in
+          roots of hybrid rice, alleviating the decline in above-ground dry matter
+          weight.
+        notes: Root endosphere acdS gene abundance increases significantly under reduced
+          nitrogen to sustain shoot biomass (PMID:36416970).
+    - accession: UniProtKB:P06117
+      entry_name: NIFH_BRADU
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: blr1769
+      taxon_id: NCBITaxon:224911
+      taxon_name: Bradyrhizobium diazoefficiens (strain JCM 10833 / BCRC 13528 / IAM
+        13628 / NBRC 14792 / USDA 110)
+      role_in_node: strain_exemplar
+      sequence_length: 294
+      crc64: C80095242B40CB41
+      evidence:
+      - reference: PMID:35250913
+        snippet: A linear discriminant analysis with effect size analysis of the 16S
+          rRNA sequencing data revealed that bacteria in the root endosphere of the
+          intercropped cane proliferated profoundly, primarily occupied by Devosia,
+          Rhizobiales, Myxococcales, Allorhizobium-Neorhizobium-Pararhizobium-Rhizobium,
+          Bradyrhizobium, and Sphingomonas.
+        notes: Bradyrhizobium proliferates as a dominant diazotrophic taxon in the
+          root endosphere (PMID:35250913).
+      - reference: PMID:36416970
+        snippet: Additionally, the relative abundances of nifH, amoA-archaea, nirS,
+          nirK, and acdS genes in japonica rice roots were higher than those in roots
+          of hybrid rice under THYN treatment.
+        notes: Root endosphere bacterial communities harbor abundant nifH nitrogenase
+          genes (PMID:36416970).
+    - accession: UniProtKB:O51917
+      entry_name: SODF_STRCO
+      recommended_name: Superoxide dismutase [Fe-Zn] 1
+      gene_symbol: sodF1
+      locus_tag: SCO2633
+      taxon_id: NCBITaxon:100226
+      taxon_name: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      role_in_node: family_member
+      sequence_length: 213
+      crc64: 9E2E208E1E8CF5B4
+      evidence:
+      - reference: PMID:36977576
+        snippet: No-irrigation primarily increased the relative abundance of root
+          endophytic Actinobacteria, especially the genus Streptomyces. Irrigation
+          at ≤40% ET increased the relative abundances of PICRUSt2-predicted functional
+          genes encoding 1-aminocyclopropane-1-carboxylic acid deaminase, superoxide
+          dismutase, and chitinase in root endosphere.
+        notes: Drought stress enriches root endophytic Streptomyces and increases
+          superoxide dismutase, ACC deaminase, and chitinase gene abundances (PMID:36977576).
   - node_id: endophytic_ethylene_lowering_ros_scavenging_nitrogen_fixation_and_drought_stress_alleviation
     label: ACC deaminase-mediated stress-ethylene lowering, ROS scavenging, biological
       nitrogen fixation, and host drought/low-N resilience
@@ -215,4 +305,11 @@ curation_history:
   changes: Added root_endosphere_drought_nitrogen_stress_streptomyces_pseudomonas_burkholderia_acds_nifh_sod_colonization
     mechanism graph for endosphere__005f8afe (habitatmech:GOLD.af0c4ac629) backed
     by PMID:36416970, PMID:32220847, PMID:36977576, and PMID:35250913.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 4 verified UniProtKB protein_examples (UniProtKB:Q51813, UniProtKB:B2TBV3,
+    UniProtKB:P06117, UniProtKB:O51917) to GENE_OR_PROTEIN node endosphere_acds_acc_deaminase_nifh_superoxide_dismutase_siderophore_and_t6ss_system
+    backed by PMID:32220847, PMID:35250913, PMID:36416970, PMID:36977576.
   llm_assisted: true

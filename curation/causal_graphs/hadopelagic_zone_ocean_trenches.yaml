@@ -40,9 +40,68 @@ causal_graphs:
     label: alkane monooxygenase (alkB), flavin-binding monooxygenase (almA), DNA mismatch repair, and
       extracellular protein/DOM degradation and nitrification enzymes
     node_type: GENE_OR_PROTEIN
-    description: Alcanivorax and Oleibacter alkane hydroxylase (alkB) and flavin-binding monooxygenase
-      (almA) genes together with hadal Marinimicrobia amino-acid metabolism, mismatch-repair, and extracellular
-      proteolysis genes and Thaumarchaeota/Nitrospirae nitrification enzymes.
+    description: Alcanivorax, Thalassolituus, and Oleibacter alkane 1-monooxygenase (alkB) and flavin-binding
+      monooxygenase (almA) enzymes (exemplified by Alcanivorax jadensis AlmA UniProtKB:C1J5N8, Alcanivorax
+      borkumensis SK2 AlkB1 UniProtKB:Q0VKZ3, and Thalassolituus oleivorans AlkB UniProtKB:Q8RSS6) together
+      with hadal Marinimicrobia amino-acid metabolism, DNA mismatch-repair, and extracellular proteolysis
+      systems and Thaumarchaeota/Nitrospirae nitrification enzymes.
+    protein_examples:
+    - accession: UniProtKB:C1J5N8
+      entry_name: C1J5N8_9GAMM
+      recommended_name: Flavin-binding monooxygenase
+      gene_symbol: almA
+      taxon_id: NCBITaxon:64988
+      taxon_name: Alcanivorax jadensis
+      role_in_node: strain_exemplar
+      sequence_length: 355
+      crc64: 2590E561CFA40A9B
+      evidence:
+      - reference: PMID:30446553
+        snippet: The relative abundance of A. jadensis correlated with copy numbers of functional almA
+          and alkB genes, which are involved in alkane degradation.
+        notes: Alcanivorax jadensis relative abundance correlates with functional almA and alkB copy numbers
+          in the Mariana Trench (PMID:30446553).
+    - accession: UniProtKB:Q0VKZ3
+      entry_name: ALKB1_ALCBS
+      recommended_name: Alkane 1-monooxygenase 1
+      gene_symbol: alkB1
+      locus_tag: ABO_2707
+      taxon_id: NCBITaxon:393595
+      taxon_name: Alcanivorax borkumensis (strain ATCC 700651 / DSM 11573 / NCIMB 13689 / SK2)
+      role_in_node: family_member
+      sequence_length: 404
+      crc64: DE255FD5DDE5B5E2
+      evidence:
+      - reference: PMID:30975208
+        snippet: These bacteria were mainly Oleibacter, Thalassolituus, and Alcanivorax genera, all of
+          which include species known to consume aliphatic hydrocarbons.
+        notes: Hadopelagic waters >10,400 m in the Challenger Deep are enriched in alkane-degrading Alcanivorax
+          and Thalassolituus (PMID:30975208).
+      - reference: PMID:30446553
+        snippet: The relative abundance of A. jadensis correlated with copy numbers of functional almA
+          and alkB genes, which are involved in alkane degradation.
+        notes: Alcanivorax populations in the Mariana Trench carry functional alkB and almA genes for
+          alkane degradation (PMID:30446553).
+    - accession: UniProtKB:Q8RSS6
+      entry_name: Q8RSS6_9GAMM
+      recommended_name: Alkane-1-monooxygenase
+      gene_symbol: alkB
+      taxon_id: NCBITaxon:187493
+      taxon_name: Thalassolituus oleivorans
+      role_in_node: family_member
+      sequence_length: 186
+      crc64: 896960902BB75822
+      evidence:
+      - reference: PMID:30975208
+        snippet: These bacteria were mainly Oleibacter, Thalassolituus, and Alcanivorax genera, all of
+          which include species known to consume aliphatic hydrocarbons.
+        notes: Thalassolituus is one of the three principal hydrocarbon-degrading genera blooming at >10,400
+          m in the Challenger Deep (PMID:30975208).
+      - reference: PMID:30975208
+        snippet: This community shift towards hydrocarbon degraders was accompanied by increased abundance
+          and transcription of genes involved in alkane degradation.
+        notes: Hadopelagic hydrocarbon degraders increase the abundance and transcription of alkane-degradation
+          genes (PMID:30975208).
   - node_id: piezotolerant_hadopelagic_alkane_degradation_dom_proteolysis_and_sequential_nitrification
     label: piezotolerant n-alkane oxidation, recalcitrant DOM and protein mineralization, and sequential
       hadal nitrification
@@ -65,8 +124,8 @@ causal_graphs:
         (PMID:31344308).
     - reference: PMID:30975208
       snippet: Abundant n-alkanes were observed in sinking particles at 2000, 4000, and 6000 m (averaged
-        23.5 μg/gdw) and hadal surface sediments at depths of 10,908, 10,909, and 10,911 m (averaged
-        2.3 μg/gdw).
+        23.5 μg/gdw) and hadal surface sediments at depths of 10,908, 10,909, and 10,911 m (averaged 2.3
+        μg/gdw).
       notes: Sinking particles and deep trench waters deliver abundant aliphatic n-alkanes to the bottom
         of the Mariana Trench (PMID:30975208).
   - edge_id: hadal_pressure_and_alkane_flux_select_for_alcanivorax_oleibacter_and_marinimicrobia
@@ -144,4 +203,11 @@ curation_history:
   changes: Added hadopelagic_zone_hydrostatic_pressure_alkane_flux_alcanivorax_marinimicrobia_alkb_alma_degradation
     mechanism graph for hadopelagic_zone_ocean_trenches (habitatmech:GOLD.1f80141d6a) backed by PMID:31344308,
     PMID:30975208, PMID:30446553, and PMID:31301991.
+  llm_assisted: true
+- timestamp: '2026-11-11T00:45:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Added 3 verified UniProtKB protein_examples (UniProtKB:C1J5N8, UniProtKB:Q0VKZ3, UniProtKB:Q8RSS6)
+    to GENE_OR_PROTEIN node hadal_alkb_alma_alkane_monooxygenases_mismatch_repair_and_extracellular_peptidase_system
+    backed by PMID:30446553, PMID:30975208.
   llm_assisted: true
